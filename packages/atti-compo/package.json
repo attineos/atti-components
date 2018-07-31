@@ -5,18 +5,26 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
-    "build:watch": "babel src -w -d lib"
+    "build:watch": "babel src -w -d lib",
+    "lint": "eslint --cache src"
   },
   "repository": "git@gitlab.com:attineos/atti-components.git",
   "author": "Attineos <contact@attineos.com>",
   "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-wildcard": "^5.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0"
   }
 }

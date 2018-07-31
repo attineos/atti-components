@@ -1,0 +1,22 @@
+{
+  "name": "atti-components",
+  "version": "0.0.1",
+  "description": "A set of fully customizable React components made with <3 with styled-components",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "build:watch": "babel src -w -d lib"
+  },
+  "repository": "git@gitlab.com:attineos/atti-components.git",
+  "author": "Attineos <contact@attineos.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-wildcard": "^5.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}

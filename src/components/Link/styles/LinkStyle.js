@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const LinkStyle = styled(a)`
+const LinkStyle = styled.a`
   color: yellow;
   text-decoration: none;
 

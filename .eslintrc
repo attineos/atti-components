@@ -1,0 +1,41 @@
+{
+  "extends": "airbnb",
+
+  "rules": {
+    "semi": [2, "never"],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "static-methods",
+          "/^_.+$/",
+          "state",
+          "constructor",
+          "lifecycle",
+          "/^(on|handle).+$/",
+          "/^(get|set).+$/",
+          "/^is.+$/",
+          "everything-else",
+          "/^render.+$/",
+          "render"
+        ],
+        "groups": {
+          "lifecycle": [
+            "getDerivedStateFromProps",
+            "componentWillMount",
+            "componentDidMount",
+            "componentWillReceiveProps",
+            "shouldComponentUpdate",
+            "componentWillUpdate",
+            "componentDidUpdate",
+            "componentWillUnmount"
+          ]
+        }
+      }
+    ],
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0
+  }
+}

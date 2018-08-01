@@ -1,8 +1,10 @@
 import React from 'react'
 
+import LinkStyle from './styles/LinkStyle'
+
 const Link = () => (
-  <a href="https://www.test.com">
+  <LinkStyle href="https://www.test.com">
 This is a link
-  </a>
+  </LinkStyle>
 )
 export default Link

@@ -18,5 +18,8 @@
     "babel-preset-react": "^6.24.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
+  },
+  "dependencies": {
+    "styled-components": "^3.3.3"
   }
 }

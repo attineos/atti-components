@@ -1,6 +1,8 @@
 import React from 'react'
 
+import LinkStyle from './styles/LinkStyle'
+
 const Link = () => (
-    <a href="#">This is a link</a>
+    <LinkStyle href="#">This is a link</LinkStyle>
 )
 export default Link

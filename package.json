@@ -7,13 +7,9 @@
     "build": "babel src -d lib",
     "build:watch": "babel src -w -d lib",
     "lint": "eslint --cache src",
+    "precommit": "npm run prettier",
     "prettier": "prettier --write \"src/**/*.?(js|json)\"",
     "start:styleguidist": "styleguidist server"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm prettier"
-    }
   },
   "repository": "git@gitlab.com:attineos/atti-components.git",
   "author": "Attineos <contact@attineos.com>",

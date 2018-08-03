@@ -22,7 +22,7 @@ Run `yarn start:styleguidist` to start the styleguidist server, and see the docu
 
 ## Contribution
 
-If you want to contribute to `atti-components`, please (see the contributing file)[CONTRIBUTING.md].
+If you want to contribute to `atti-components`, please [see the contributing file](CONTRIBUTING.md).
 
 ## Useful links
 

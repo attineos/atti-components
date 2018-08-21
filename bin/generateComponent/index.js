@@ -13,7 +13,7 @@ const COMPONENTS_FOLDER = 'components'
 const STYLES_FOLDER = 'styles'
 const TESTS_FOLDER = 'tests'
 const ALL_FOLDERS = [CONFIG_FOLDER, COMPONENTS_FOLDER, STYLES_FOLDER, TESTS_FOLDER]
-const FOLDERS_WITH_INDEX = [ COMPONENTS_FOLDER, STYLES_FOLDER ]
+const FOLDERS_WITH_INDEX = [COMPONENTS_FOLDER, STYLES_FOLDER]
 
 // Component folder.
 const componentDir = 'src/components'
@@ -35,10 +35,10 @@ const questions = [
   },
   {
     choices: [
-      {title: CONFIG_FOLDER, value: 'config'},
-      {title: COMPONENTS_FOLDER, value: 'components'},
-      {title: STYLES_FOLDER, value: 'styles', selected: true},
-      {title: TESTS_FOLDER, value: 'tests'},
+      { title: CONFIG_FOLDER, value: 'config' },
+      { title: COMPONENTS_FOLDER, value: 'components' },
+      { title: STYLES_FOLDER, value: 'styles', selected: true },
+      { title: TESTS_FOLDER, value: 'tests' },
     ],
     hint: '- Space to select. Return to submit',
     initial: 1,
@@ -60,7 +60,7 @@ const questions = [
  * Verify the provided answers.
  */
 async function verifyAnswers(answers) {
-  const {folders, name} = answers
+  const { folders, name } = answers
 
   if (!name) {
     console.log(`Incorrect name for the component : ${name}`)
@@ -79,7 +79,7 @@ async function verifyAnswers(answers) {
  * Create the folders for the new component.
  */
 async function createFolders(payload) {
-  const {componentName, folders} = payload
+  const { componentName, folders } = payload
 
   const compoDir = `${componentDir}/${componentName}`
 
@@ -92,12 +92,12 @@ async function createFolders(payload) {
   // Create the component directory.
   fs.mkdirSync(compoDir)
   // Create all subfolders.
-  folders.forEach((folder) => {
+  folders.forEach(folder => {
     fs.mkdirSync(`${compoDir}/${folder}`)
 
     // If the folder requires an index.js, create one.
-    if (FOLDERS_WITH_INDEX.includes(folders)) {
-      fs.writeFileSync(`${compoDir}/${folder}/index.js`, templateSubFolderIndexFile(), (err) => {
+    if (FOLDERS_WITH_INDEX.includes(folder)) {
+      fs.writeFileSync(`${compoDir}/${folder}/index.js`, templateSubFolderIndexFile(), err => {
         if (err) {
           console.error(err)
         }
@@ -106,7 +106,7 @@ async function createFolders(payload) {
   })
 
   // Create the index.js file.
-  fs.writeFileSync(`${compoDir}/index.js`, templateMainFile(componentName), (err) => {
+  fs.writeFileSync(`${compoDir}/index.js`, templateMainFile(componentName), err => {
     if (err) {
       console.error(err)
     }
@@ -115,11 +115,16 @@ async function createFolders(payload) {
   return true
 }
 
+/**
+ * Sort the key of an object using alphabetical order.
+ */
 function sortObject(obj) {
   const sortedObj = {}
-  Object.keys(obj).sort().forEach((key) => {
-    sortedObj[key] = obj[key]
-  })
+  Object.keys(obj)
+    .sort()
+    .forEach(key => {
+      sortedObj[key] = obj[key]
+    })
 
   return sortedObj
 }
@@ -128,7 +133,7 @@ function sortObject(obj) {
  * Add the new component to the theme.
  */
 async function addToTheme(payload) {
-  const {componentName} = payload
+  const { componentName } = payload
 
   if (!fs.existsSync(themeDir)) {
     // Create the theme directory if it doesn't exist.
@@ -137,7 +142,7 @@ async function addToTheme(payload) {
 
   if (!fs.existsSync(themeComponentsFile)) {
     // Create the components theme file.
-    fs.writeFileSync(themeComponentsFile, templateComponentsThemeFile(JSON.stringify({})), (err) => {
+    fs.writeFileSync(themeComponentsFile, templateComponentsThemeFile(JSON.stringify({})), err => {
       if (err) {
         console.error(err)
       }
@@ -165,9 +170,12 @@ async function addToTheme(payload) {
   componentsTheme[componentName] = templateComponentTheme()
   // Sort the theme.
   const sortedComponentsTheme = sortObject(componentsTheme)
-  const componentsThemeToStr = JSON.stringify(sortedComponentsTheme).replace(/\"([^(\")"]+)\":/g, '$1:')
+  const componentsThemeToStr = JSON.stringify(sortedComponentsTheme).replace(
+    /\"([^(\")"]+)\":/g,
+    '$1:',
+  )
 
-  fs.writeFileSync(themeComponentsFile, templateComponentsThemeFile(componentsThemeToStr), (err) => {
+  fs.writeFileSync(themeComponentsFile, templateComponentsThemeFile(componentsThemeToStr), err => {
     if (err) {
       console.error(err)
     }
@@ -179,23 +187,26 @@ async function addToTheme(payload) {
 /**
  * Launch the component generation.
  */
-(async function generate() {
+;(async function generate() {
   // Get the details about the component to create.
   const answers = await prompts(questions)
 
   // Verify the answers.
-  if (!await verifyAnswers(answers)) {
+  if (!(await verifyAnswers(answers))) {
     process.exit(1)
   }
 
-  const {confirmation, folders, name} = answers
+  const { confirmation, folders, name } = answers
 
   if (confirmation) {
     // Create the folders and modify the theme to add the new component.
-    const created = await createFolders({componentName: name, folders})
-      && await addToTheme({componentName: name})
+    const created =
+      (await createFolders({ componentName: name, folders })) &&
+      (await addToTheme({ componentName: name }))
     if (created) {
       console.log('Component created.')
+    } else {
+      process.exit(1)
     }
   } else {
     // No confirmation for user, cancel the creation.
@@ -203,4 +214,4 @@ async function addToTheme(payload) {
   }
 
   process.exit(0)
-}())
+})()

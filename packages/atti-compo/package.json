@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel src -d lib",
     "build:watch": "babel src -w -d lib",
+    "build:documentation": "styleguidist build",
     "gen": "babel-node --presets es2015 ./bin/generateComponent && yarn run prettier",
     "lint": "eslint --cache src",
     "precommit": "npm run prettier",

@@ -2,6 +2,8 @@
 
 Reusable React components, using the styled-components library.
 
+[See the live demo/documentation](https://atti-components.netlify.com/).
+
 ## Installation
 
 ```
@@ -12,7 +14,7 @@ yarn install
 
 ## Usage
 
-Run `yarn build` to build your components.
+Run `yarn start` so you can start contributing/testing right away (alias of `yarn start:styleguidist`)
 
 Run `yarn build:watch` to set a watcher on your file and automatically build them on save.
 

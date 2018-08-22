@@ -11,6 +11,7 @@
     "lint": "eslint --cache src",
     "precommit": "npm run prettier",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json)\"",
+    "start": "yarn run start:styleguidist",
     "start:styleguidist": "styleguidist server"
   },
   "repository": "git@gitlab.com:attineos/atti-components.git",

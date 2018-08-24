@@ -10,15 +10,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = require('styled-components');
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _lodash = require('lodash');
+
+var _styledComponents = require('styled-components');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -112,8 +110,6 @@ var ThemeProvider = function (_React$Component) {
           propTheme = _props2.theme;
       var theme = this.state.theme;
 
-
-      console.log('THEME', theme);
 
       return _react2.default.createElement(
         _styledComponents.ThemeProvider,

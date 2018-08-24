@@ -9,7 +9,7 @@
     "build:documentation": "styleguidist build",
     "gen": "babel-node --presets es2015 ./bin/generateComponent && yarn run prettier",
     "lint": "eslint --cache src",
-    "precommit": "npm run prettier",
+    "precommit": "npm run prettier && npm run lint",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
     "start": "yarn run start:styleguidist",
     "start:styleguidist": "styleguidist server"
@@ -18,6 +18,7 @@
   "author": "Attineos <contact@attineos.com>",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -26,7 +27,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.5",
+    "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-wildcard": "^5.0.0",
     "babel-preset-env": "^1.7.0",
@@ -34,6 +37,7 @@
     "babel-preset-react": "^6.24.1",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",

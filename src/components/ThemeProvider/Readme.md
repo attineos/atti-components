@@ -31,10 +31,9 @@ const colorOverride = {
   components: {
     square: {
       border: 'red',
-    }
-  }
+    },
+  },
 }
-
 ;<ThemeProvider theme={theme}>
   <Fragment>
     <Square />

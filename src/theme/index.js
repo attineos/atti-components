@@ -7,8 +7,10 @@ import forms from './forms'
 import opacities from './opacities'
 import sizes from './sizes'
 import spaces from './spaces'
+import breakpoints from './breakpoints'
 
 export default {
+  breakpoints,
   animations,
   borders,
   colors,

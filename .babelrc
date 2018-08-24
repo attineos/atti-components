@@ -7,5 +7,5 @@
     }], 
     "react"
   ],
-  "plugins": ["wildcard"]
+  "plugins": ["wildcard", "transform-class-properties"]
 }

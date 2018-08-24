@@ -2,7 +2,7 @@
  * Base colors.
  */
 const colors = {
-  primaryColor: 'green',
+  primary: 'green',
   secondary: 'pink',
   grey: 'grey',
   black: 'black',

@@ -19,9 +19,13 @@ const fonts = {
     xl: '24px',
     xxl: '30px',
   },
-  // fontWeight: reduce(range(0, 10), (acc, cur) => { ...acc, [`fw${cur}`]: `${100 + cur * 100}` }, {}),
+  fontWeight: reduce(
+    range(0, 10),
+    (acc, cur) => ({ ...acc, [`fw${cur}`]: `${100 + cur * 100}` }),
+    {},
+  ),
   fontFamily: fontFamilyPrimary,
-  // lineHeight: reduce(range(0, 20), (acc, cur) => { ...acc, [`lh${cur}`]: `${10 + cur * 2}` }, {}),
+  lineHeight: reduce(range(0, 20), (acc, cur) => ({ ...acc, [`lh${cur}`]: `${10 + cur * 2}` }), {}),
 }
 
 export default fonts

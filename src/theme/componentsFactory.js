@@ -1,4 +1,4 @@
-import link from '../components/Link/theme/index'
+import link from '../components/Link/theme'
 
 export default constants => ({
   link: link(constants),

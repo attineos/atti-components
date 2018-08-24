@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { isFunction, keys, merge, reduce, replace } from 'lodash'
 import { ThemeProvider as TP, withTheme } from 'styled-components'

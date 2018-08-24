@@ -1,5 +1,10 @@
 module.exports = {
   components: 'src/components/**/index.js',
+  compilerConfig: {
+    transforms: {
+      dangerousTaggedTemplateString: true,
+    },
+  },
   webpackConfig: {
     module: {
       rules: [

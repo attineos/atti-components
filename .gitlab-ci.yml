@@ -1,0 +1,26 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+    - .yarn
+
+stages:
+  - prettier
+  - lint
+
+Prettier:
+  stage: prettier
+  before_script: 
+    - yarn config set cache-folder .yarn
+    - yarn install 
+  script:
+    - yarn run prettier
+    
+Lint:
+  stage: lint
+  before_script: 
+    - yarn config set cache-folder .yarn
+    - yarn install 
+  script:
+    - yarn run lint

@@ -5,7 +5,9 @@
         "browsers": ["last 2 versions"]
       }
     }], 
-    "react"
+    "react",
+    "es2015",
+    "stage-0"
   ],
   "plugins": ["wildcard", "transform-class-properties"]
 }

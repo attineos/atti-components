@@ -3,5 +3,5 @@ node_modules
 *.log
 .idea
 .eslintcache
-lib/styleguide
-
+./styleguide
+./lib

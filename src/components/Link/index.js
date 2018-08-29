@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import LinkStyle from './styles/LinkStyle'
+import StyledLink from './styles/StyledLink'
 
 /**
  * A link, nothing special for the moment.
@@ -11,9 +11,9 @@ import LinkStyle from './styles/LinkStyle'
  * @author Thomas Capet
  */
 const Link = ({ href, onClick }) => (
-  <LinkStyle href={href} onClick={onClick}>
+  <StyledLink href={href} onClick={onClick}>
     This is a link
-  </LinkStyle>
+  </StyledLink>
 )
 
 Link.defaultProps = {

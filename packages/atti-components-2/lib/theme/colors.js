@@ -1,18 +1,20 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = void 0;
+
 /**
  * Base colors.
  */
 var colors = {
-  primary: 'yellow',
+  primary: 'green',
   secondary: 'pink',
   grey: 'grey',
   black: 'black',
   white: 'white',
   transparent: 'transparent'
 };
-
-exports.default = colors;
+var _default = colors;
+exports.default = _default;

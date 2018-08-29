@@ -129,6 +129,10 @@ function (_React$Component) {
 
 _defineProperty(ThemeProvider, "propTypes", {
   /**
+   * The child node
+   */
+  children: _propTypes2.default.node.isRequired,
+  /**
    * Overload a part of the theme. Will be merged to the actual theme.
    * The overload can be constants, or functions taking the constant part of the theme as parameter.
    */

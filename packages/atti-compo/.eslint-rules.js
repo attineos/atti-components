@@ -66,11 +66,8 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/href-no-hash': 0,
     'jsx-a11y/iframe-has-title': 0,
-    'jsx-a11y/label-has-for': 0,
-    'jsx-a11y/mouse-events-have-key-events': 0,
     'jsx-a11y/no-autofocus': 0,
     'jsx-a11y/no-noninteractive-element-interactions': 0,
-    'jsx-a11y/no-noninteractive-tabindex': 0,
     'jsx-a11y/no-static-element-interactions': 0,
 
     "react/destructuring-assignment": 0,
@@ -92,8 +89,6 @@ module.exports = {
     'react/no-multi-comp': 0,
     'react/prefer-es6-class': 2,
     'react/prefer-stateless-function': 0,
-    'react/prop-types': 0,
-    'react/require-default-props': 0,
 
     "react/sort-comp": [
       2,

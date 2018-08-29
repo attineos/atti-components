@@ -26,13 +26,12 @@ const Select = ({ id, isMulti, name, onChange, options, size, sort }) => {
   )
 }
 
-Select.defaultPropsSelect = {
+Select.defaultProps = {
   isMulti: false,
   name: '',
   onChange: null,
   size: 3,
   sort: Sort.NONE,
-  value: null,
 }
 
 Select.propTypes = {

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const LinkStyle = styled.a`
+const StyledLink = styled.a`
   color: ${({ theme }) => theme.components.link.colors.text};
   text-decoration: none;
 
@@ -9,4 +9,4 @@ const LinkStyle = styled.a`
   }
 `
 
-export default LinkStyle
+export default StyledLink

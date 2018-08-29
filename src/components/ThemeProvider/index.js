@@ -6,7 +6,7 @@ import { ThemeProvider as TP, withTheme } from 'styled-components'
 class ThemeProvider extends React.Component {
   static propTypes = {
     /**
-     * The child node
+     * The child node.
      */
     children: PropTypes.node.isRequired,
     /**

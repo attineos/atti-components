@@ -8,7 +8,7 @@ import ThemeProvider from '../components/ThemeProvider'
 class Wrapper extends React.Component {
   static propTypes = {
     /**
-     * The child node
+     * The child node.
      */
     children: PropTypes.node.isRequired,
   }

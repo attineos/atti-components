@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Link from '..';
+import TextArea from '..';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Link renders correctly', () => {
+it('TextArea renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Link href="Atticomponents" onClick={mock} ></Link>
+        <TextArea id="Atticomponents" label="Atticomponents" name="Atticomponents" placeholder="Atticomponents" ></TextArea>
       </Wrapper>
       )
     .toJSON();

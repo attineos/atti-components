@@ -22,6 +22,12 @@ Run `yarn prettier` to run prettier on all your files. It will automatically fix
 
 Run `yarn start:styleguidist` to start the styleguidist server, and see the documentation of yours components.
 
+Run `yarn snapshots` to create automatically all snapshot tests of the components.
+
+Run `yarn test` to run the tests.
+
+Run `yarn test -u` to run and update the snapshot tests if the update is validated and expected.
+
 ## Contribution
 
 If you want to contribute to `atti-components`, please [see the contributing file](CONTRIBUTING.md).

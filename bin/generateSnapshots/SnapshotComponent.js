@@ -49,13 +49,13 @@ class SnapshotComponent {
   toString = () =>
     `/* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Link from '${this.getPath()}';
-import Wrapper from '../../../styleguide/Wrapper'
+import ${this.name} from '${this.getPath()}';
+import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Link renders correctly', () => {
+it('${this.name} renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>

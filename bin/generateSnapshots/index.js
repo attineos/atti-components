@@ -10,7 +10,7 @@ import { extractProps, extractKey, extractValue } from './extractor'
 /*
  * Folders to ignore.
  */
-const ignoreList = 'types|config|tests|theme|__snapshots__|ThemeProvider|'
+const ignoreList = 'types|config|tests|theme|__snapshots__|'
 /*
  * Add this annotation in your file to prevent the script to generate snapshot for this file.
  */
@@ -26,17 +26,34 @@ const componentsDir = 'src/components'
  */
 const isIndex = componentPath => includes(componentPath, 'index.js')
 
+/*
+ * Returns the component's name.
+ */
 const getComponentName = componentPath => trim(path.basename(componentPath), '.js')
 
+/*
+ * Returns the component type (components or styles).
+ */
 const getComponentType = componentPath => path.basename(path.dirname(componentPath))
 
+/*
+ * Returns the component folder.
+ */
 const getComponentFolder = componentPath => getComponentType(path.dirname(componentPath))
 
-const logComponentSkipped = name =>
-  console.log('[info] Component skipped (Abstract, CSS-only, Exception) : ', name)
+/*
+ * Logs info about the component skipped.
+ */
+const logComponentSkipped = name => console.log('[info] Component skipped: ', name)
 
+/*
+ * Logs the error that occured for the component.
+ */
 const logError = (e, name) => console.log(`[error] with: ${name}. Trace: ${e}`)
 
+/*
+ * Log info about the test created for the component.
+ */
 const logSuccess = name => console.log(`[info] Snapshot created with success for ${name}.`)
 
 /*
@@ -46,23 +63,36 @@ const logSuccess = name => console.log(`[info] Snapshot created with success for
 const writeSnapshotTestInFile = snapshotComponent => {
   const name = snapshotComponent.getName()
   const testsDir = path.join(componentsDir, `${snapshotComponent.getFolder()}/tests`)
-  const testsPath = path.join(testsDir, `${name}-snapshot.test.js`)
+  const testPath = path.join(testsDir, `${name}-snapshot.test.js`)
   !fs.existsSync(testsDir) && fs.mkdirSync(testsDir)
-  fs.writeFile(testsPath, snapshotComponent.toString(), err => {
+  fs.writeFile(testPath, snapshotComponent.toString(), err => {
     if (err) {
-      printError(err, name)
+      logError(err, name)
     } else {
-      console.log(`[info] Snapshot created with success for ${name}.`)
+      logSuccess(name)
     }
   })
 }
 
+/*
+ * Returns the concatened props in a string.
+ */
 const addProp = (props, key, value) => `${props}${key}=${value} `
 
+/*
+ * Returns the extracted string prop's key.
+ */
 const getKey = propContent => trim(extractKey(propContent), ':')
 
+/*
+ * Returns the extracted string prop's value.
+ */
 const getValue = propContent => trim(extractValue(propContent), ',')
 
+/*
+ * Extracts the props from the raw file content, extracts the keys/values and
+ * sets the props and children properties of snapshotComponent object.
+ */
 const setPropsAndChildren = (snapshotComponent, fileContent) => {
   const propsContent = extractProps(fileContent)
   let props = ''
@@ -87,7 +117,7 @@ const setPropsAndChildren = (snapshotComponent, fileContent) => {
  */
 glob(`${componentsDir}/**/!(${ignoreList})/*.js`, (err, files) => {
   forEach(files, file => {
-    let snapshotComponent = isIndex(file)
+    const snapshotComponent = isIndex(file)
       ? new SnapshotComponent('index', getComponentType(file))
       : new SnapshotComponent(
           getComponentType(file),

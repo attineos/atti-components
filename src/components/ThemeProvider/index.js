@@ -6,6 +6,10 @@ import { ThemeProvider as TP, withTheme } from 'styled-components'
 class ThemeProvider extends React.Component {
   static propTypes = {
     /**
+     * The child node.
+     */
+    children: PropTypes.node.isRequired,
+    /**
      * Overload a part of the theme. Will be merged to the actual theme.
      * The overload can be constants, or functions taking the constant part of the theme as parameter.
      */

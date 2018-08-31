@@ -2,7 +2,7 @@
  * Style of the borders.
  */
 const border = {
-  width: {
+  widths: {
     bw0: '0px',
     bw1: '1px',
     bw2: '2px',

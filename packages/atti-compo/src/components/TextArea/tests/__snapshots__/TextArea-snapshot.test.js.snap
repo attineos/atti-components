@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders correctly 1`] = `
+Array [
+  <label
+    className="sc-bwzfXH hyHwLe"
+    htmlFor="Atticomponents"
+  >
+    Atticomponents
+  </label>,
+  <textarea
+    className="sc-bdVaJa cBCVGy"
+    id="Atticomponents"
+    name="Atticomponents"
+    placeholder="Atticomponents"
+  />,
+]
+`;

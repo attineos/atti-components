@@ -11,8 +11,10 @@
     "lint": "eslint --cache src",
     "precommit": "npm run prettier && npm run lint",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
+    "snapshots": "babel-node ./bin/generateSnapshots",
     "start": "yarn run start:styleguidist",
-    "start:styleguidist": "styleguidist server"
+    "start:styleguidist": "styleguidist server",
+    "test": "jest"
   },
   "repository": "git@gitlab.com:attineos/atti-components.git",
   "author": "Attineos <contact@attineos.com>",
@@ -46,9 +48,12 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
     "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0",
     "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-wildcard": "^5.0.0",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
@@ -57,10 +62,12 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "husky": "^0.14.3",
+    "jest": "^23.5.0",
     "path": "^0.12.7",
     "prettier": "^1.14.0",
     "prompts": "^0.1.13",
     "react-styleguidist": "^7.1.3",
+    "react-test-renderer": "^16.4.2",
     "webpack": "^4.16.3"
   }
 }

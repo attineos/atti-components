@@ -56,16 +56,15 @@ const onChangeMultipleValue = () => {
   const options = document.getElementById('multiple')
   setState({
     values: reduce(
-        options,
-        (acc, { selected, value }) => {
-          if (selected) {
-            acc.push(value)
-          }
-          return acc
-        },
-        [],
-      )
-      .join(', '),
+      options,
+      (acc, { selected, value }) => {
+        if (selected) {
+          acc.push(value)
+        }
+        return acc
+      },
+      [],
+    ).join(', '),
   })
 }
 ;<div>

@@ -8,19 +8,28 @@ cache:
 stages:
   - prettier
   - lint
+  - test
 
 Prettier:
   stage: prettier
-  before_script: 
+  before_script:
     - yarn config set cache-folder .yarn
-    - yarn install 
+    - yarn install
   script:
     - yarn run prettier
-    
+
 Lint:
   stage: lint
-  before_script: 
+  before_script:
     - yarn config set cache-folder .yarn
-    - yarn install 
+    - yarn install
   script:
     - yarn run lint
+
+Test:
+  stage: test
+  before_script:
+    - yarn config set cache-folder .yarn
+    - yarn install
+  script:
+    - yarn run test

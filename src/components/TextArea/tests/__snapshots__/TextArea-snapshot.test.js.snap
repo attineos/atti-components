@@ -3,13 +3,13 @@
 exports[`TextArea renders correctly 1`] = `
 Array [
   <label
-    className="sc-bwzfXH hyHwLe"
+    className="sc-bwzfXH kahRmC"
     htmlFor="Atticomponents"
   >
     Atticomponents
   </label>,
   <textarea
-    className="sc-bdVaJa cBCVGy"
+    className="sc-bdVaJa iKaxuW"
     id="Atticomponents"
     name="Atticomponents"
     placeholder="Atticomponents"

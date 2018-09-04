@@ -30,7 +30,7 @@ Select.defaultProps = {
   isMulti: false,
   name: '',
   onChange: null,
-  size: 3,
+  size: 0,
   sort: Sort.NONE,
 }
 

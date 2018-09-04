@@ -1,5 +1,7 @@
 # Atti Component
 
+![pipelines](https://gitlab.com/attineos/atti-components/badges/develop/build.svg)
+
 Reusable React components, using the styled-components library.
 
 [See the live demo/documentation](https://atti-components.netlify.com/).

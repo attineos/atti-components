@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 const border = css`
   border-radius: ${({ theme }) => theme.components.textarea.border.radius};
-  border-width: ${({ theme }) => theme.components.textarea.border.width};
+  border-width: ${({ theme }) => theme.components.textarea.border.widths};
 `
 
 const colors = css`

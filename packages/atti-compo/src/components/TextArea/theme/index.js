@@ -1,8 +1,8 @@
 export default ({ border, colors, spaces }) => ({
   border: {
-    width: border.width.bw1,
+    widths: border.widths.bw1,
     radius: border.radius.br4,
-    labelBorder: border.width.bw0,
+    labelBorder: border.widths.bw0,
   },
   colors: {
     text: colors.primary,

@@ -2,7 +2,7 @@
  * Different sizes values
  */
 const sizes = {
-  height: {
+  heights: {
     h0: '0px',
     h1: '1px',
     h2: '2px',
@@ -29,7 +29,7 @@ const sizes = {
     h23: '450px',
     h24: '500px',
   },
-  width: {
+  widths: {
     w0: '0px',
     w1: '1px',
     w2: '2px',

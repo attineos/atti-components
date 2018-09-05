@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import InputStyle from './styles/InputStyle'
+import StyledLabelInput from './styles/StyledLabelInput'
 
 /**
  * An input field.
@@ -9,22 +10,26 @@ import InputStyle from './styles/InputStyle'
  * @version 0.1
  * @author Joseph Lefevre
  */
-const Input = ({ id, form, name, onChange, pattern, placeholder, size, type, value }) => (
-  <InputStyle
-    id={id}
-    form={form}
-    name={name}
-    onChange={onChange}
-    pattern={pattern}
-    placeholder={placeholder}
-    size={size}
-    type={type}
-    value={value}
-  />
+const Input = ({ id, form, label, name, onChange, pattern, placeholder, size, type, value }) => (
+  <React.Fragment>
+    <StyledLabelInput htmlFor={id}>{label}</StyledLabelInput>
+    <InputStyle
+      id={id}
+      form={form}
+      name={name}
+      onChange={onChange}
+      pattern={pattern}
+      placeholder={placeholder}
+      size={size}
+      type={type}
+      value={value}
+    />
+  </React.Fragment>
 )
 
 Input.defaultProps = {
   form: '',
+  label: '',
   name: '',
   onChange: undefined,
   pattern: '',
@@ -42,6 +47,10 @@ Input.propTypes = {
    * One or more forms the Input element belongs to.
    */
   form: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  /**
+   * A label associated to the input field.
+   */
+  label: PropTypes.string,
   /**
    * Name of the input element.
    */

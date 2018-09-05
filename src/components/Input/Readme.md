@@ -1,9 +1,3 @@
-Normal Input type password:
-
-```js
-<Input id="inputTest" name="inputTest" placeholder="Password" type="password" />
-```
-
 Normal Input type text :
 
 ```js
@@ -12,18 +6,25 @@ onChangeFunction = e => {
   setState({ value: e.target.value })
 }
 ;<div>
-  <div>Value Selected : {state.value}</div>
-  <div>
+  <p>Value Selected : {state.value}</p>
+  <p>
     <Input
       id="inputTestTxt"
+      label="Input type text :"
       name="inputTestTxt"
       onChange={onChangeFunction}
       placeholder="input text"
       type="text"
       value={state.value}
     />
-  </div>
+  </p>
 </div>
+```
+
+Normal Input type password:
+
+```js
+<Input id="inputTest" name="inputTest" placeholder="Password" type="password" />
 ```
 
 Normal Input type tel:

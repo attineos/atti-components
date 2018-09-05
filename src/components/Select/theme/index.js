@@ -1,6 +1,6 @@
 export default ({ border, colors, fonts, spaces }) => ({
   border: {
-    outterBorder: border.width.bw0,
+    outterBorder: border.widths.bw0,
   },
   colors: {
     background: colors.secondary,

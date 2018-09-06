@@ -37,6 +37,7 @@ export const mockProp = prop => {
     case 'PropTypes.oneOf':
       return nullMock
     case 'PropTypes.node':
+    case 'PropTypes.element':
       return reactNodeMock
     default:
       return boolMock

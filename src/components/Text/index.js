@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import Typography from '../Typography'
+import getFontStyle from '../../helpers/Typography/getFontStyle'
 
 /**
  * Text.
@@ -10,18 +10,18 @@ import Typography from '../Typography'
  */
 
 const Text = styled.p`
-  ${Typography('text')};
+  ${getFontStyle('text')};
 `
 
 Text.propTypes = {
   /**
-   * Content of Header1.
+   * Content of Text.
    */
   children: PropTypes.node.isRequired,
   /**
-   * String to determine the align of content.
+   * String to determine the alignment of content.
    */
-  textAlign: PropTypes.oneOf(['left', 'right', 'center', 'justify', 'initial', 'inherit']),
+  textAlign: PropTypes.oneOf(['center', 'initial', 'inherit', 'justify', 'left', 'right']),
 }
 
 // @component

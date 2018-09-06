@@ -16,7 +16,7 @@ const Button = ({ label, onClick }) => (
 )
 
 Button.defaultProps = {
-  onClick: noop,
+  onClick: noop(),
 }
 
 Button.propTypes = {
@@ -26,7 +26,7 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
 
   /**
-   * Method when user click on Buton.
+   * This function is called when the user clicks on the Button.
    */
   onClick: PropTypes.func,
 }

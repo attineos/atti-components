@@ -1,4 +1,4 @@
-export default ({ fonts, colors }) => ({
+export default ({ colors, fonts }) => ({
   colors: {
     text: colors.primary,
   },

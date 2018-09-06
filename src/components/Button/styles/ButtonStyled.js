@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
 import Text from '../../Text'
 
-const BorderCSS = css`
+const border = css`
   border-radius: ${({ theme }) => theme.components.button.border.borderRadius};
   border-width: ${({ theme }) => theme.components.button.border.borderWidth};
 `
-const colorsCSS = css`
+const colors = css`
   background-color: ${({ theme }) => theme.components.button.colors.background};
   border-color: ${({ theme }) => theme.components.button.colors.border};
   color: ${({ theme }) => theme.components.button.colors.text};
@@ -15,14 +15,14 @@ const colorsCSS = css`
   }
 `
 
-const spacesCSS = css`
+const spaces = css`
   padding: ${({ theme }) => theme.components.button.spaces.padding};
 `
 
 const ButtonStyled = styled(Text.withComponent('button'))`
-  ${BorderCSS};
-  ${colorsCSS};
-  ${spacesCSS};
+  ${border};
+  ${colors};
+  ${spaces};
   cursor: pointer;
   box-shadow: none;
   box-sizing: border-box;

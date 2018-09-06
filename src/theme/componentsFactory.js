@@ -8,15 +8,15 @@ import image from '../components/Image/theme'
 import link from '../components/Link/theme'
 import radio from '../components/Radio/theme'
 import select from '../components/Select/theme'
-import smallText from '../components/smallText/theme'
+import smallText from '../components/SmallText/theme'
 import text from '../components/Text/theme'
 import textarea from '../components/TextArea/theme'
 
 export default constants => ({
   bigText: bigText(constants),
   button: button(constants),
-    checkbox: checkbox(constants),
-    header1: header1(constants),
+  checkbox: checkbox(constants),
+  header1: header1(constants),
   header2: header2(constants),
   header3: header3(constants),
   img: image(constants),

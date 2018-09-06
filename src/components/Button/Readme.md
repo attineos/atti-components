@@ -1,5 +1,5 @@
 Button :
 
 ```js
-<Button label="label" onClick={() => console.log('Hello !')} />
+<Button label="Button" onClick={() => console.log('Hello !')} />
 ```

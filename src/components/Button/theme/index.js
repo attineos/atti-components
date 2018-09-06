@@ -4,9 +4,9 @@ export default ({ border, colors, spaces }) => ({
     borderRadius: border.radius.br3,
   },
   colors: {
-    background: colors.secondary,
-    backgroundHover: colors.grey,
-    border: colors.black,
+    background: colors.blue,
+    backgroundHover: colors.lightBlue,
+    border: colors.transparent,
     text: colors.white,
   },
   spaces: {

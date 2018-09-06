@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Typography from '../Typography'
+import getFontStyle from '../../helpers/Typography/getFontStyle'
 
 /**
  * Header2.
@@ -10,18 +10,18 @@ import Typography from '../Typography'
  */
 
 const Header2 = styled.h2`
-  ${Typography('header2')};
+  ${getFontStyle('header2')};
 `
 
 Header2.propTypes = {
   /**
-   * Content of Header1.
+   * Content of Header2.
    */
   children: PropTypes.node.isRequired,
   /**
-   * String to determine the align of content.
+   * String to determine the alignment of content.
    */
-  textAlign: PropTypes.oneOf(['left', 'right', 'center', 'justify', 'initial', 'inherit']),
+  textAlign: PropTypes.oneOf(['center', 'initial', 'inherit', 'justify', 'left', 'right']),
 }
 
 // @component

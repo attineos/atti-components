@@ -1,14 +1,34 @@
-export default ({ border, colors, spaces }) => ({
-  border: {
-    widths: border.widths.bw1,
-    radius: border.radius.br4,
-    labelBorder: border.widths.bw0,
+export default ({ border, colors, fonts, spaces }) => ({
+  label: {
+    colors: {
+      text: colors.black,
+      background: colors.transparent,
+    },
+    fonts: {
+      fontFamily: fonts.fontFamily,
+      fontSize: fonts.fontSize.m,
+      fontWeight: fonts.fontWeight.fw400,
+    },
+    spaces: {
+      marginBottom: spaces.s5,
+    },
   },
-  colors: {
-    text: colors.primary,
-    background: colors.secondary,
-  },
-  spaces: {
-    marginBottom: spaces.s3,
+  textarea: {
+    border: {
+      width: border.widths.bw1,
+      color: colors.black,
+    },
+    colors: {
+      text: colors.grey,
+      background: colors.transparent,
+    },
+    fonts: {
+      fontFamily: fonts.fontFamily,
+      fontSize: fonts.fontSize.m,
+      fontWeight: fonts.fontWeight.fw400,
+    },
+    spaces: {
+      padding: spaces.s4,
+    },
   },
 })

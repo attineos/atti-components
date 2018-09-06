@@ -2,7 +2,7 @@
 
 exports[`Select renders correctly 1`] = `
 <select
-  className="sc-bdVaJa byAOUp"
+  className="sc-bdVaJa XZXiS"
   id="Atticomponents"
   multiple={true}
   name="Atticomponents"

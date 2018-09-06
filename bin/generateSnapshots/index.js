@@ -5,7 +5,7 @@ import glob from 'glob'
 
 import SnapshotComponent from './SnapshotComponent'
 import { mockProp } from './mocks'
-import { extractProps, extractKey, extractValue } from './extractor'
+import { extractProps, extractKey, extractChildrenValue, extractValue } from './extractor'
 
 /*
  * Folders to ignore.
@@ -100,8 +100,9 @@ const setPropsAndChildren = (snapshotComponent, fileContent) => {
   propsContent &&
     forEach(propsContent, propContent => {
       const key = getKey(propContent)
+      const value = mockProp(getValue(propContent))
       if (key === 'children') {
-        children = mockProp('children')
+        children = extractChildrenValue(value)
       } else {
         props = addProp(props, key, mockProp(getValue(propContent)))
       }

@@ -3,7 +3,7 @@ export default ({ border, colors, fonts, spaces }) => ({
     outterBorder: border.widths.bw0,
   },
   colors: {
-    background: colors.secondary,
+    background: colors.transparent,
     text: colors.primary,
   },
   fonts: {

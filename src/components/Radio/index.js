@@ -13,24 +13,14 @@ import LabelRadio from './styles/LabelRadio'
  * @author Joseph Lefevre
  */
 class Radio extends React.Component {
-  state = {
-    checked: this.props.checked,
-  }
-
-  changeState = () => {
-    this.setState(prevState => ({
-      checked: !prevState.checked,
-    }))
-  }
-
-  defaultProps = {
+  static defaultProps = {
     checked: false,
     label: '',
     onChange: null,
     style: {},
   }
 
-  propTypes = {
+  static propTypes = {
     /**
      * Whether or not the radio is checked.
      */
@@ -64,10 +54,20 @@ class Radio extends React.Component {
     value: PropTypes.string.isRequired,
   }
 
+  state = {
+    checked: this.props.checked,
+  }
+
+  handleToggleChecked = () => {
+    this.setState(prevState => ({
+      checked: !prevState.checked,
+    }))
+  }
+
   render() {
     const { id, label, name, onChange, style, value } = this.props
     return (
-      <ContainerRadio style={style} onClick={this.changeState}>
+      <ContainerRadio style={style} onClick={this.handleToggleChecked}>
         <HiddenInputRadio
           id={id}
           checked={this.state.checked}

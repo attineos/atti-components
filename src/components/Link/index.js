@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import StyledLink from './styles/StyledLink'
 
 /**
  * A link, nothing special for the moment.
  *
- * @version 0.2
- * @author Victor Gosse
+ * @version 0.3
+ * @author Joseph Lefevre
  * @author Thomas Capet
+ * @author Victor Gosse
  */
-const Link = ({ href, onClick }) => (
+const Link = ({ children, href, onClick }) => (
   <StyledLink href={href} onClick={onClick}>
-    This is a link
+    {children}
   </StyledLink>
 )
 
@@ -21,6 +21,10 @@ Link.defaultProps = {
 }
 
 Link.propTypes = {
+  /**
+   * Text of the link.
+   */
+  children: PropTypes.string.isRequired,
   /**
    * The location of the external resource.
    */

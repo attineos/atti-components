@@ -5,7 +5,5 @@ exports[`Link renders correctly 1`] = `
   className="sc-bdVaJa iENXin"
   href="Atticomponents"
   onClick={[Function]}
->
-  This is a link
-</a>
+/>
 `;

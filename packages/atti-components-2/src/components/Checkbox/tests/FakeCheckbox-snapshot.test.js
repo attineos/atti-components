@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Link from '..';
+import FakeCheckbox from '../styles/FakeCheckbox';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Link renders correctly', () => {
+it('FakeCheckbox renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Link href="Atticomponents" onClick={mock} text="Atticomponents" ></Link>
+        <FakeCheckbox ></FakeCheckbox>
       </Wrapper>
       )
     .toJSON();

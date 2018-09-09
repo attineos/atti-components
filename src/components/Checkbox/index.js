@@ -13,24 +13,14 @@ import LabelCheckbox from './styles/LabelCheckbox'
  * @author Joseph Lefevre
  */
 class Checkbox extends React.Component {
-  state = {
-    checked: this.props.checked,
-  }
-
-  changeState = () => {
-    this.setState(prevState => ({
-      checked: !prevState.checked,
-    }))
-  }
-
-  defaultProps = {
+  static defaultProps = {
     checked: false,
     label: '',
     onChange: null,
     style: {},
   }
 
-  propTypes = {
+  static propTypes = {
     /**
      * Whether or not the checkbox is checked.
      */
@@ -64,10 +54,20 @@ class Checkbox extends React.Component {
     value: PropTypes.string.isRequired,
   }
 
+  state = {
+    checked: this.props.checked,
+  }
+
+  handleToggleChecked = () => {
+    this.setState(prevState => ({
+      checked: !prevState.checked,
+    }))
+  }
+
   render() {
     const { id, label, name, onChange, style, value } = this.props
     return (
-      <ContainerCheckbox style={style} onClick={this.changeState}>
+      <ContainerCheckbox style={style} onClick={this.handleToggleChecked}>
         <HiddenInputCheckbox
           id={id}
           checked={this.state.checked}

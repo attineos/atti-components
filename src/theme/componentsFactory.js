@@ -6,6 +6,7 @@ import header2 from '../components/Header2/theme'
 import header3 from '../components/Header3/theme'
 import image from '../components/Image/theme'
 import link from '../components/Link/theme'
+import menu from '../components/Menu/theme'
 import radio from '../components/Radio/theme'
 import select from '../components/Select/theme'
 import smallText from '../components/SmallText/theme'
@@ -21,6 +22,7 @@ export default constants => ({
   header3: header3(constants),
   img: image(constants),
   link: link(constants),
+  menu: menu(constants),
   radio: radio(constants),
   select: select(constants),
   smallText: smallText(constants),

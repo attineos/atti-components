@@ -12,3 +12,8 @@ export const extractKey = prop => prop.match(/[\S]+:/g)
  * Returns the prop's value.
  */
 export const extractValue = prop => prop.match(/PropTypes.[\S]+/g)
+
+/*
+ * Returns children prop's value.
+ */
+export const extractChildrenValue = rawValue => rawValue.match(/[^{"}]+/g)

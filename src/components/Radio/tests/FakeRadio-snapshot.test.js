@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Link from '..';
+import FakeRadio from '../styles/FakeRadio';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Link renders correctly', () => {
+it('FakeRadio renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Link href="Atticomponents" onClick={mock} text="Atticomponents" ></Link>
+        <FakeRadio ></FakeRadio>
       </Wrapper>
       )
     .toJSON();

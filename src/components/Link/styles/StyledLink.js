@@ -1,25 +1,25 @@
 import styled, { css } from 'styled-components'
+import PropTypes from 'prop-types'
 import Text from '../../Text'
 
 const colors = css`
   color: ${({ theme }) => theme.components.link.colors.text};
 `
 
-// TODO: should inherit its font values when other components (like Paragraph) will be ready
-const fonts = css`
-  font-size: ${({ theme }) => theme.components.link.fonts.fontSize};
-  font-weight: ${({ theme }) => theme.components.link.fonts.fontWeight};
-  font-family: ${({ theme }) => theme.components.link.fonts.fontFamily};
-`
-
 const StyledLink = styled(Text.withComponent('a'))`
   ${colors};
-  ${fonts};
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
 `
+
+StyledLink.propTypes = {
+  /**
+   * Text of the link.
+   */
+  children: PropTypes.string.isRequired,
+}
 
 export default StyledLink

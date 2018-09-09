@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { noop } from 'lodash'
-import ButtonStyled from './styles/ButtonStyled'
+import StyledButton from './styles/StyledButton'
 /**
  * A Simple Button.
  *
@@ -9,10 +9,10 @@ import ButtonStyled from './styles/ButtonStyled'
  * @author Alexandre
  */
 
-const Button = ({ label, onClick }) => (
-  <ButtonStyled type="button" onClick={onClick}>
-    {label}
-  </ButtonStyled>
+const Button = ({ children, onClick }) => (
+  <StyledButton type="button" onClick={onClick}>
+    {children}
+  </StyledButton>
 )
 
 Button.defaultProps = {
@@ -21,9 +21,9 @@ Button.defaultProps = {
 
 Button.propTypes = {
   /**
-   * Label of Button.
+   * Content of the component. Only text for now.
    */
-  label: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
 
   /**
    * This function is called when the user clicks on the Button.

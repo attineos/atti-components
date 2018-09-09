@@ -7,7 +7,7 @@ const getFontStyle = fontType => css`
   font-size: ${({ theme }) => get(theme, `components.${fontType}.fonts.fontSize`)};
   font-weight: ${({ theme }) => get(theme, `components.${fontType}.fonts.fontWeight`)};
   line-height: ${({ theme }) => get(theme, `components.${fontType}.fonts.lineHeight`)};
-  text-align: ${({ textAlign }) => textAlign || 'inherit'};
+  text-align: ${({ textAlign }) => textAlign};
 `
 
 export default getFontStyle

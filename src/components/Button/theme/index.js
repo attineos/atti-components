@@ -1,13 +1,15 @@
-export default ({ border, colors, spaces }) => ({
+export default ({ border, colors, opacities, spaces }) => ({
   border: {
     borderWidth: border.widths.bw2,
     borderRadius: border.radius.br3,
   },
   colors: {
-    background: colors.blue,
-    backgroundHover: colors.lightBlue,
-    border: colors.transparent,
+    background: colors.primary,
+    border: colors.grey,
     text: colors.white,
+  },
+  opacities: {
+    hover: opacities.o8,
   },
   spaces: {
     padding: spaces.s5,

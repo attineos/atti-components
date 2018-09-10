@@ -10,7 +10,7 @@ it('StyledLink renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <StyledLink ></StyledLink>
+        <StyledLink >Atticomponents</StyledLink>
       </Wrapper>
       )
     .toJSON();

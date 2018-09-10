@@ -5,7 +5,7 @@ export default ({ border, colors, sizes }) => ({
   colors: {
     background: colors.secondary,
     backgroundHover: colors.primary,
-    text: colors.primary,
+    text: colors.black,
   },
   sizes: {
     heights: sizes.heights.h8,

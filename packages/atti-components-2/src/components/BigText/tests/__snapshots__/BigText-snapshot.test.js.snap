@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BigText renders correctly 1`] = `
+<p
+  className="sc-bdVaJa bIYtbH"
+>
+  <div />
+</p>
+`;

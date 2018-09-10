@@ -4,7 +4,7 @@ export default ({ border, colors, fonts, spaces }) => ({
   },
   colors: {
     background: colors.transparent,
-    text: colors.primary,
+    text: colors.black,
   },
   fonts: {
     fontFamily: fonts.fontFamily,

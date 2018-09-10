@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledButton renders correctly 1`] = `
+<button
+  className="sc-htpNat dTUftW sc-bwzfXH fFShiM"
+>
+  Atticomponents
+</button>
+`;

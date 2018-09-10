@@ -2,6 +2,6 @@
 
 exports[`FakeCheckbox renders correctly 1`] = `
 <span
-  className="sc-bdVaJa jFOjTs"
+  className="sc-bdVaJa OGDIV"
 />
 `;

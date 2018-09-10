@@ -2,6 +2,6 @@
 
 exports[`StyledTextArea renders correctly 1`] = `
 <textarea
-  className="sc-bdVaJa iKaxuW"
+  className="sc-bdVaJa kBfxQZ"
 />
 `;

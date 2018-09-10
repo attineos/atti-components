@@ -2,6 +2,8 @@
 
 exports[`StyledLink renders correctly 1`] = `
 <a
-  className="sc-bdVaJa iENXin"
-/>
+  className="sc-htpNat euuGKk sc-bwzfXH fFShiM"
+>
+  Atticomponents
+</a>
 `;

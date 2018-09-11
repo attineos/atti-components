@@ -1,7 +1,6 @@
 Theme declaration :
 
 ```js
-const { Fragment } = require('react')
 const styled = require('styled-components')
 
 const Square = styled.default.div`
@@ -35,11 +34,11 @@ const colorOverride = {
   },
 }
 ;<ThemeProvider theme={theme}>
-  <Fragment>
+  <>
     <Square />
     <ThemeProvider otherTheme={colorOverride}>
       <Square />
     </ThemeProvider>
-  </Fragment>
+  </>
 </ThemeProvider>
 ```

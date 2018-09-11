@@ -96,11 +96,15 @@ async function createFolders(payload) {
 
     // If the folder requires an index.js, create one.
     if (FOLDERS_WITH_INDEX.includes(folder)) {
-      fs.writeFileSync(`${compoDir}/${folder}/index.js`, TEMPLATES_FOR_INDEX[folder](componentName), err => {
-        if (err) {
-          console.error(err)
-        }
-      })
+      fs.writeFileSync(
+        `${compoDir}/${folder}/index.js`,
+        TEMPLATES_FOR_INDEX[folder](componentName),
+        err => {
+          if (err) {
+            console.error(err)
+          }
+        },
+      )
     }
   })
 
@@ -132,7 +136,9 @@ async function createFolders(payload) {
     // Create the folders and modify the theme to add the new component.
     const created = await createFolders({ componentName: name, folders })
     if (created) {
-      console.log('Component created. Don\'t forget to add your component theme into src/theme/componentsFactory.js.')
+      console.log(
+        "Component created. Don't forget to add your component theme into src/theme/componentsFactory.js.",
+      )
     } else {
       process.exit(1)
     }

@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import ContainerCheckbox from '../styles/ContainerCheckbox';
+import CheckboxBox from '../styles/CheckboxBox';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('ContainerCheckbox renders correctly', () => {
+it('CheckboxBox renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <ContainerCheckbox ></ContainerCheckbox>
+        <CheckboxBox ></CheckboxBox>
       </Wrapper>
       )
     .toJSON();

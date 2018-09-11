@@ -6,9 +6,9 @@ Checkbox Button :
     id="checkboxTest"
     name="checkboxTestGroup"
     label="My checkbox button"
-    style={{ marginBottom: '8px' }}
     value="ImChecked"
   />
+  <br />
   <Checkbox
     id="checkboxTest2"
     name="checkboxTestGroup"

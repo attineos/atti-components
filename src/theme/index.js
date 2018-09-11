@@ -20,4 +20,5 @@ export default {
   opacities,
   sizes,
   spaces,
+  border,
 }

@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  components: 'src/components/!(theme)/index.js',
+  components: 'src/components/**/index.js',
   compilerConfig: {
     transforms: {
       dangerousTaggedTemplateString: true,

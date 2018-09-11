@@ -1,7 +1,7 @@
 export default componentName => `import React from 'react'
 import PropTypes from 'prop-types'
 
-class ${componentName} extends React {
+class ${componentName} extends React.Component {
   static defaultProps = {
     // To fill.
   }

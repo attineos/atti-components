@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders correctly 1`] = `
+<select
+  className="sc-bdVaJa bgfxoH"
+  id="Atticomponents"
+  multiple={true}
+  name="Atticomponents"
+  onChange={[Function]}
+  size={42}
+/>
+`;

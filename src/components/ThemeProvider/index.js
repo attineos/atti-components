@@ -1,3 +1,5 @@
+// @noSnapshot
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { isFunction, keys, merge, reduce, replace } from 'lodash'

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+<a
+  className="sc-htpNat euuGKk sc-bwzfXH fFShiM"
+  href="Atticomponents"
+  onClick={[Function]}
+>
+  Atticomponents
+</a>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HiddenInputRadio renders correctly 1`] = `
+<input
+  className="sc-bdVaJa loudNo"
+/>
+`;

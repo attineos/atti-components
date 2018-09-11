@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders correctly 1`] = `
+<label
+  className="sc-htpNat hBDbF"
+  htmlFor="Atticomponents"
+>
+  <input
+    checked={true}
+    className="sc-bwzfXH ixbXeA"
+    id="Atticomponents"
+    name="Atticomponents"
+    onChange={[Function]}
+    type="checkbox"
+    value="Atticomponents"
+  />
+  <span
+    className="sc-bdVaJa eIkynw"
+  />
+  Atticomponents
+</label>
+`;

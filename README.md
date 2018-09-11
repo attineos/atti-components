@@ -1,5 +1,7 @@
 # Atti Component
 
+![pipelines](https://gitlab.com/attineos/atti-components/badges/develop/build.svg)
+
 Reusable React components, using the styled-components library.
 
 [See the live demo/documentation](https://atti-components.netlify.com/).
@@ -21,6 +23,12 @@ Run `yarn build:watch` to set a watcher on your file and automatically build the
 Run `yarn prettier` to run prettier on all your files. It will automatically fix them if necessary.
 
 Run `yarn start:styleguidist` to start the styleguidist server, and see the documentation of yours components.
+
+Run `yarn snapshots` to create automatically all snapshot tests of the components.
+
+Run `yarn test` to run the tests.
+
+Run `yarn test -u` to run and update the snapshot tests if the update is validated and expected.
 
 ## Contribution
 

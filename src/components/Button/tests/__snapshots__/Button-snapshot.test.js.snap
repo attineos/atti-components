@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<button
+  className="sc-htpNat dTUftW sc-bwzfXH fFShiM"
+  onClick={[Function]}
+  type="button"
+>
+  Atticomponents
+</button>
+`;

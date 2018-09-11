@@ -1,6 +1,6 @@
 export default ({ border, colors }) => ({
   border: {
-    labelBorder: border.width.bw1,
+    labelBorder: border.widths.bw1,
   },
   colors: {
     text: colors.primary,

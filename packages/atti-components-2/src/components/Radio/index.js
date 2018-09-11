@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import ContainerRadio from './styles/ContainerRadio'
-import FakeRadio from './styles/FakeRadio'
+import RadioButton from './styles/RadioButton'
 import HiddenInputRadio from './styles/HiddenInputRadio'
 import LabelRadio from './styles/LabelRadio'
 
@@ -15,9 +14,7 @@ import LabelRadio from './styles/LabelRadio'
 class Radio extends React.Component {
   static defaultProps = {
     checked: false,
-    label: '',
     onChange: null,
-    style: {},
   }
 
   static propTypes = {
@@ -32,7 +29,7 @@ class Radio extends React.Component {
     /**
      * Content of the label of the radio.
      */
-    label: PropTypes.string,
+    label: PropTypes.string.isRequired,
     /**
      * The name attribute is used to reference form data after a form is submitted.
      * Numerous radio with the same name value will be in the same group.
@@ -45,10 +42,6 @@ class Radio extends React.Component {
      */
     onChange: PropTypes.func,
     /**
-     * Style inline which is given to modify the container
-     */
-    style: PropTypes.object,
-    /**
      * The value attribute of the radio. This attribute has meaning when submitting a form.
      */
     value: PropTypes.string.isRequired,
@@ -59,26 +52,33 @@ class Radio extends React.Component {
   }
 
   handleToggleChecked = () => {
-    this.setState(prevState => ({
-      checked: !prevState.checked,
-    }))
+    const { onChange } = this.props
+
+    this.setState(
+      prevState => ({
+        checked: !prevState.checked,
+      }),
+      () => {
+        onChange && onChange()
+      },
+    )
   }
 
   render() {
-    const { id, label, name, onChange, style, value } = this.props
+    const { id, label, name, value } = this.props
     return (
-      <ContainerRadio style={style} onClick={this.handleToggleChecked}>
+      <LabelRadio htmlFor={id}>
         <HiddenInputRadio
           id={id}
           checked={this.state.checked}
           name={name}
-          onChange={onChange}
+          onChange={this.handleToggleChecked}
           type="radio"
           value={value}
         />
-        <FakeRadio />
-        {label && <LabelRadio htmlFor={id}>{label}</LabelRadio>}
-      </ContainerRadio>
+        <RadioButton />
+        {label}
+      </LabelRadio>
     )
   }
 }

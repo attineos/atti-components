@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import ContainerCheckbox from './styles/ContainerCheckbox'
-import FakeCheckbox from './styles/FakeCheckbox'
+import CheckboxBox from './styles/CheckboxBox'
 import HiddenInputCheckbox from './styles/HiddenInputCheckbox'
 import LabelCheckbox from './styles/LabelCheckbox'
 
@@ -15,9 +14,7 @@ import LabelCheckbox from './styles/LabelCheckbox'
 class Checkbox extends React.Component {
   static defaultProps = {
     checked: false,
-    label: '',
     onChange: null,
-    style: {},
   }
 
   static propTypes = {
@@ -32,7 +29,7 @@ class Checkbox extends React.Component {
     /**
      * Content of the label of the checkbox.
      */
-    label: PropTypes.string,
+    label: PropTypes.string.isRequired,
     /**
      * The name attribute is used to reference form data after a form is submitted.
      * Numerous checkbox with the same name value will be in the same group.
@@ -45,10 +42,6 @@ class Checkbox extends React.Component {
      */
     onChange: PropTypes.func,
     /**
-     * Style inline which is given to modify the container
-     */
-    style: PropTypes.object,
-    /**
      * The value attribute of the checkbox. This attribute has meaning when submitting a form.
      */
     value: PropTypes.string.isRequired,
@@ -59,26 +52,33 @@ class Checkbox extends React.Component {
   }
 
   handleToggleChecked = () => {
-    this.setState(prevState => ({
-      checked: !prevState.checked,
-    }))
+    const { onChange } = this.props
+
+    this.setState(
+      prevState => ({
+        checked: !prevState.checked,
+      }),
+      () => {
+        onChange && onChange()
+      },
+    )
   }
 
   render() {
-    const { id, label, name, onChange, style, value } = this.props
+    const { id, label, name, value } = this.props
     return (
-      <ContainerCheckbox style={style} onClick={this.handleToggleChecked}>
+      <LabelCheckbox htmlFor={id}>
         <HiddenInputCheckbox
           id={id}
           checked={this.state.checked}
           name={name}
-          onChange={onChange}
+          onChange={this.handleToggleChecked}
           type="checkbox"
           value={value}
         />
-        <FakeCheckbox />
-        {label && <LabelCheckbox htmlFor={id}>{label}</LabelCheckbox>}
-      </ContainerCheckbox>
+        <CheckboxBox />
+        {label}
+      </LabelCheckbox>
     )
   }
 }

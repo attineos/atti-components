@@ -2,6 +2,6 @@
 
 exports[`HiddenInputRadio renders correctly 1`] = `
 <input
-  className="sc-bdVaJa jYIoSJ"
+  className="sc-bdVaJa loudNo"
 />
 `;

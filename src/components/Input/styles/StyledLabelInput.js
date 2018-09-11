@@ -7,7 +7,6 @@ const colors = css`
 
 const StyledLabelInput = styled.label`
   ${colors};
-  border: ${({ theme }) => theme.components.input.border.labelBorder};
   display: block;
 `
 

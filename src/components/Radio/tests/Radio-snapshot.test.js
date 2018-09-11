@@ -10,7 +10,7 @@ it('Radio renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Radio checked={true} id="Atticomponents" label="Atticomponents" name="Atticomponents" onChange={mock} style={{}} value="Atticomponents" ></Radio>
+        <Radio checked={true} id="Atticomponents" label="Atticomponents" name="Atticomponents" onChange={mock} value="Atticomponents" ></Radio>
       </Wrapper>
       )
     .toJSON();

@@ -1,14 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox renders correctly 1`] = `
-<div
-  className="sc-htpNat iVixWq"
-  onClick={[Function]}
-  style={Object {}}
+<label
+  className="sc-htpNat hBDbF"
+  htmlFor="Atticomponents"
 >
   <input
     checked={true}
-    className="sc-bwzfXH jhdZxT"
+    className="sc-bwzfXH ixbXeA"
     id="Atticomponents"
     name="Atticomponents"
     onChange={[Function]}
@@ -16,13 +15,8 @@ exports[`Checkbox renders correctly 1`] = `
     value="Atticomponents"
   />
   <span
-    className="sc-bdVaJa OGDIV"
+    className="sc-bdVaJa eIkynw"
   />
-  <label
-    className="sc-bxivhb iXNIiY"
-    htmlFor="Atticomponents"
-  >
-    Atticomponents
-  </label>
-</div>
+  Atticomponents
+</label>
 `;

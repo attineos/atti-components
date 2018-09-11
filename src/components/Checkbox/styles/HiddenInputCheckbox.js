@@ -1,17 +1,6 @@
-import styled, { css } from 'styled-components'
-
-const border = css`
-  border-width: ${({ theme }) => theme.components.checkbox.border.outterBorder};
-`
-
-const sizes = css`
-  height: ${({ theme }) => theme.components.checkbox.sizes.heights};
-  width: ${({ theme }) => theme.components.checkbox.sizes.widths};
-`
+import styled from 'styled-components'
 
 const HiddenInputCheckbox = styled.input`
-  ${border};
-  ${sizes};
   position: absolute;
   top: 0;
   left: 0;

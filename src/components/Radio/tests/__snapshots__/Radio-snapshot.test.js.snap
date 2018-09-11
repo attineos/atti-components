@@ -1,14 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio renders correctly 1`] = `
-<div
-  className="sc-htpNat dPWKHr"
-  onClick={[Function]}
-  style={Object {}}
+<label
+  className="sc-htpNat gJYcBm"
+  htmlFor="Atticomponents"
 >
   <input
     checked={true}
-    className="sc-bwzfXH jhdZxT"
+    className="sc-bwzfXH ixbXeA"
     id="Atticomponents"
     name="Atticomponents"
     onChange={[Function]}
@@ -16,13 +15,8 @@ exports[`Radio renders correctly 1`] = `
     value="Atticomponents"
   />
   <span
-    className="sc-bdVaJa ZbgbY"
+    className="sc-bdVaJa fVGYww"
   />
-  <label
-    className="sc-bxivhb iXNIiY"
-    htmlFor="Atticomponents"
-  >
-    Atticomponents
-  </label>
-</div>
+  Atticomponents
+</label>
 `;

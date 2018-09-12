@@ -10,7 +10,7 @@ it('BigText renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <BigText textAlign={null} ><div/></BigText>
+        <BigText textAlign='center' ><div/></BigText>
       </Wrapper>
       )
     .toJSON();

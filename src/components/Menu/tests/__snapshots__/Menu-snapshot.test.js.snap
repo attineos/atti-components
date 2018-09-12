@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders correctly 1`] = `
+<nav
+  className="sc-bxivhb itBESa"
+>
+  <a
+    className="sc-htpNat euuGKk sc-bwzfXH fFShiM"
+    onClick={null}
+  />
+</nav>
+`;

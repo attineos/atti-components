@@ -4,8 +4,8 @@ import path from 'path'
 import glob from 'glob'
 
 import SnapshotComponent from './SnapshotComponent'
-import { mockProp } from './mocks'
-import { extractProps, extractKey, extractChildrenValue, extractValue } from './extractor'
+import { mockArrayProp, mockProp } from './mocks'
+import { extractArrayOfValue,  extractChildrenValue, extractKey, extractOneOfValue, extractProps, extractValue, isArrayOfProp, isOneOfProp } from './extractor'
 
 /*
  * Folders to ignore.
@@ -89,6 +89,10 @@ const getKey = propContent => trim(extractKey(propContent), ':')
  */
 const getValue = propContent => trim(extractValue(propContent), ',')
 
+const getArrayOfValue = propContent => trim(propContent, '()')
+
+const getOneOfValue = propContent => trim(propContent, '[')
+
 /*
  * Extracts the props from the raw file content, extracts the keys/values and
  * sets the props and children properties of snapshotComponent object.
@@ -100,11 +104,19 @@ const setPropsAndChildren = (snapshotComponent, fileContent) => {
   propsContent &&
     forEach(propsContent, propContent => {
       const key = getKey(propContent)
-      const value = mockProp(getValue(propContent))
-      if (key === 'children') {
-        children = extractChildrenValue(value)
+      if (isArrayOfProp(propContent)) {
+        props = addProp(props, key, mockArrayProp(
+          getArrayOfValue(extractArrayOfValue(propContent)))
+        )
+      } else if (isOneOfProp(propContent)) {
+        props = addProp(props, key, getOneOfValue(extractOneOfValue(propContent)))
       } else {
-        props = addProp(props, key, mockProp(getValue(propContent)))
+        const value = mockProp(getValue(propContent))
+        if (key === 'children') {
+          children = extractChildrenValue(value)
+        } else {
+          props = addProp(props, key, mockProp(getValue(propContent)))
+        }
       }
     })
   snapshotComponent.setProps(props)

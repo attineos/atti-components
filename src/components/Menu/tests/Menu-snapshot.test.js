@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Header1 from '..';
+import Menu from '..';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Header1 renders correctly', () => {
+it('Menu renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Header1 textAlign='center' ><div/></Header1>
+        <Menu values={[{}]} ></Menu>
       </Wrapper>
       )
     .toJSON();

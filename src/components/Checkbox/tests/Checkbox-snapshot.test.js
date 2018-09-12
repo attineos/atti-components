@@ -10,7 +10,7 @@ it('Checkbox renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Checkbox checked={true} id="Atticomponents" label="Atticomponents" name="Atticomponents" onChange={mock} value="Atticomponents" ></Checkbox>
+        <Checkbox checked={true} id={"Atticomponents"} label={"Atticomponents"} name={"Atticomponents"} onChange={mock} value={"Atticomponents"} ></Checkbox>
       </Wrapper>
       )
     .toJSON();

@@ -10,7 +10,7 @@ it('Image renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Image alt="Atticomponents" height="Atticomponents" src="Atticomponents" width="Atticomponents" ></Image>
+        <Image alt={"Atticomponents"} height={"Atticomponents"} src={"Atticomponents"} width={"Atticomponents"} ></Image>
       </Wrapper>
       )
     .toJSON();

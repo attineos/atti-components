@@ -10,7 +10,7 @@ it('SmallText renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <SmallText textAlign={null} ><div/></SmallText>
+        <SmallText textAlign='center' ><div/></SmallText>
       </Wrapper>
       )
     .toJSON();

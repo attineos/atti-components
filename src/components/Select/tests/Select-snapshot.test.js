@@ -10,7 +10,7 @@ it('Select renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Select id="Atticomponents" isMulti={true} name="Atticomponents" onChange={mock} options={new Array()} size={42} sort={null} ></Select>
+        <Select id={"Atticomponents"} isMulti={true} name={"Atticomponents"} onChange={mock} options={new Array()} size={42} sort=Sort.ASC ></Select>
       </Wrapper>
       )
     .toJSON();

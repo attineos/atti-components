@@ -10,7 +10,7 @@ it('Header2 renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Header2 textAlign={null} ><div/></Header2>
+        <Header2 textAlign='center' ><div/></Header2>
       </Wrapper>
       )
     .toJSON();

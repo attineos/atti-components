@@ -10,14 +10,15 @@ import StyledLink from './styles/StyledLink'
  * @author Thomas Capet
  * @author Victor Gosse
  */
-const Link = ({ children, href, onClick }) => (
-  <StyledLink href={href} onClick={onClick}>
+const Link = ({ children, href, onClick, target }) => (
+  <StyledLink href={href} onClick={onClick} target={target}>
     {children}
   </StyledLink>
 )
 
 Link.defaultProps = {
   onClick: null,
+  target: null,
 }
 
 Link.propTypes = {
@@ -29,6 +30,12 @@ Link.propTypes = {
    * The location of the external resource.
    */
   href: PropTypes.string.isRequired,
+
+  /**
+   * Where to open the link.
+   */
+  target: PropTypes.string,
+
   /**
    * Gets called when the user clicks on the link.
    *

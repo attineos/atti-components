@@ -16,7 +16,9 @@ const Menu = ({ values }) => (
   <StyledMenu>
     {map(values, (elt, ind) => (
       <React.Fragment key={elt.href}>
-        <Link href={elt.href}>{elt.text}</Link>
+        <Link href={elt.href} target={elt.target}>
+          {elt.text}
+        </Link>
         {ind < values.length - 1 && ' / '}
       </React.Fragment>
     ))}

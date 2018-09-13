@@ -67,7 +67,7 @@ class Radio extends React.Component {
   render() {
     const { id, label, name, value } = this.props
     return (
-      <LabelRadio htmlFor={id}>
+      <LabelRadio>
         <HiddenInputRadio
           id={id}
           checked={this.state.checked}

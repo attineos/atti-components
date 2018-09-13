@@ -5,6 +5,7 @@ exports[`Link renders correctly 1`] = `
   className="sc-htpNat euuGKk sc-bwzfXH fFShiM"
   href="Atticomponents"
   onClick={[Function]}
+  target="Atticomponents"
 >
   Atticomponents
 </a>

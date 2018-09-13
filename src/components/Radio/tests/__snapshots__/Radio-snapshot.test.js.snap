@@ -3,7 +3,6 @@
 exports[`Radio renders correctly 1`] = `
 <label
   className="sc-htpNat gJYcBm"
-  htmlFor="Atticomponents"
 >
   <input
     checked={true}

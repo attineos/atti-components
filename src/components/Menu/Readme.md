@@ -3,9 +3,9 @@ Menu :
 ```js
 <Menu
   values={[
-    { href: 'www.google.fr', text: 'Google' },
-    { href: 'www.w3.org', text: 'W3C' },
-    { href: 'www.gitlab.com', text: 'Gitlab' },
+    { href: 'http://www.google.fr', text: 'Google', target: '_blank' },
+    { href: 'http://www.w3.org', text: 'W3C', target: '_blank' },
+    { href: 'http://www.gitlab.com', text: 'Gitlab', target: '_blank' },
   ]}
 />
 ```

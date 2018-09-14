@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+<div
+  className="sc-bdVaJa fPxwVt"
+  color="Atticomponents"
+  type={null}
+/>
+`;

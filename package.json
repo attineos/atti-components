@@ -24,8 +24,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "styled-components": "^3.3.3",
-    "uppercamelcase": "^3.0.0"
+    "styled-components": "^3.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",

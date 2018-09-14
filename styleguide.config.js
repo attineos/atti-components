@@ -1,7 +1,46 @@
+const { camelCase, upperFirst } = require('lodash')
 const path = require('path')
-const upperCamelCase = require('uppercamelcase')
 
 const TITLE = 'atti-components'
+
+const listSections = [
+  {
+    name: 'Input components',
+    components: () => {
+      const listComponents = ['Button', 'Checkbox', 'Radio', 'Select', 'Textarea']
+      return [`src/components/+(${listComponents.join('|')})/index.js`]
+    },
+    sectionDepth: 1
+  },
+  {
+    name: 'Links',
+    components: () => {
+      const listComponents = ['Link', 'Menu']
+      return [`src/components/+(${listComponents.join('|')})/index.js`]
+    },
+    sectionDepth: 1
+  },
+  {
+    name: 'Tools', components: () => {
+      const listComponents = ['ThemeProvider']
+      return [`src/components/+(${listComponents.join('|')})/index.js`]
+    },
+    sectionDepth: 1
+  },
+  {
+    name: 'Typographies',
+    components: () => {
+      const listComponents = ['BigText', 'Header1', 'Header2', 'Header3', 'SmallText', 'Text']
+      return [`src/components/+(${listComponents.join('|')})/index.js`]
+    },
+    sectionDepth: 1
+  },
+  {
+    name:'Theme',
+    content: 'src/styleguide/Theme.md',
+    sectionDepth: 1
+  },
+]
 
 module.exports = {
   title: `${TITLE} - Documentation`,
@@ -15,26 +54,19 @@ module.exports = {
   theme: {
     color: {
       linkHover: '#fe5f55',
-      baseBackground: '#bdd5ea',
-      sidebarBackground: '#577399',
       link: '#f7f7ff',
     }
   },
   getComponentPathLine(filePath) {
     const componentDirName = path.dirname(filePath);
     const componentSourcesFilesName = componentDirName.split(path.sep).pop();
-    const componentName = upperCamelCase(componentSourcesFilesName);
+    const componentName = upperFirst(camelCase(componentSourcesFilesName));
     return `import ${componentName} from '${TITLE}'`
   },
-  sections: [
-    {name: 'Input components', components: () => ['src/components/+(Button|Checkbox|Radio|Select|Textarea)/index.js'], sectionDepth: 1},
-    {name: 'Links', components: () => ['src/components/+(Link|Menu)/index.js'], sectionDepth: 1},
-    {name: 'Tools', components: () => ['src/components/+(ThemeProvider)/index.js'], sectionDepth: 1},
-    {name: 'Typographies', components: () => ['src/components/+(BigText|Header1|Header2|Header3|SmallText|Text)/index.js'], sectionDepth: 1},
-    {name:'Theme', content: 'src/styleguide/Theme.md', sectionDepth: 1},
-  ],
+  sections: listSections,
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
+    StyleGuideRenderer: path.join(__dirname, 'src/styleguide/StyleGuideRenderer'),
   },
   template: {
     favicon: 'favicon.png',
@@ -59,14 +91,3 @@ module.exports = {
     },
   },
 }
-/*
-other theme that we could use :
-theme: {
-    color: {
-      linkHover: '#3a76fd',
-      baseBackground: '#bffff1',
-      sidebarBackground: '#379634',
-      link: '#74F2ce',
-    }
-  },
- */

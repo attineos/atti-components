@@ -1,6 +1,6 @@
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import getFontStyle from '../../helpers/Typography/getFontStyle'
+import StyledText from './styles/index'
 
 /**
  * Text.
@@ -8,8 +8,10 @@ import getFontStyle from '../../helpers/Typography/getFontStyle'
  * @version 0.1
  * @author Alexandre DEVE
  */
+// eslint-disable-next-line no-console
+console.warn('test', getFontStyle('text'))
 
-const Text = styled.p`
+const Text = StyledText`
   ${getFontStyle('text')};
 `
 

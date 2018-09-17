@@ -94,7 +94,7 @@ async function createFolders(payload) {
   folders.forEach(folder => {
     fs.mkdirSync(`${compoDir}/${folder}`)
 
-    // If the folder requires an index.js, create one.
+    // If the folder requires an Readme.md, create one.
     if (FOLDERS_WITH_INDEX.includes(folder)) {
       fs.writeFileSync(
         `${compoDir}/${folder}/index.js`,
@@ -108,7 +108,7 @@ async function createFolders(payload) {
     }
   })
 
-  // Create the index.js file.
+  // Create the Readme.md file.
   fs.writeFileSync(`${compoDir}/index.js`, templateMainFile(componentName), err => {
     if (err) {
       console.error(err)

@@ -1,38 +1,35 @@
 const { camelCase, upperFirst } = require('lodash')
 const path = require('path')
+const fs = require('fs')
+const { differenceWith, flatten } = require('lodash')
 
 const TITLE = 'atti-components'
+
+// You have to modify the object below if you want to add a component in a section.
+const listComponents = {"input": ['Button', 'Checkbox', 'Radio', 'Select', 'Textarea'],
+    "links": ['Link', 'Menu'],
+    "tools": ['ThemeProvider'],
+    "typographies": ['BigText', 'Header1', 'Header2', 'Header3', 'SmallText', 'Text']
+}
 
 const listSections = [
   {
     name: 'Input components',
-    components: () => {
-      const listComponents = ['Button', 'Checkbox', 'Radio', 'Select', 'Textarea']
-      return [`src/components/+(${listComponents.join('|')})/index.js`]
-    },
+    components: () => [`src/components/+(${listComponents["input"].join('|')})/index.js`],
     sectionDepth: 1
   },
   {
     name: 'Links',
-    components: () => {
-      const listComponents = ['Link', 'Menu']
-      return [`src/components/+(${listComponents.join('|')})/index.js`]
-    },
+    components: () => [`src/components/+(${listComponents["links"].join('|')})/index.js`],
     sectionDepth: 1
   },
   {
-    name: 'Tools', components: () => {
-      const listComponents = ['ThemeProvider']
-      return [`src/components/+(${listComponents.join('|')})/index.js`]
-    },
+    name: 'Tools', components: () => [`src/components/+(${listComponents["tools"].join('|')})/index.js`],
     sectionDepth: 1
   },
   {
     name: 'Typographies',
-    components: () => {
-      const listComponents = ['BigText', 'Header1', 'Header2', 'Header3', 'SmallText', 'Text']
-      return [`src/components/+(${listComponents.join('|')})/index.js`]
-    },
+    components: () => [`src/components/+(${listComponents["typographies"].join('|')})/index.js`],
     sectionDepth: 1
   },
   {
@@ -42,10 +39,24 @@ const listSections = [
   },
 ]
 
+function addUnclassifiedComponents(sections) {
+  let data = fs.readFileSync(path.join(__dirname, 'src/styleguide/listComponents.txt'), "utf8")
+  const components = data.split("\n")
+  const keys = Object.keys(listComponents)
+  const alreadyClassifiedComponents = flatten(keys.map(elt => listComponents[elt]))
+  const difference = differenceWith(components, alreadyClassifiedComponents, (a,b) => a === b)
+  if (difference.length > 0){
+    sections.push({name: 'unclassified', components: () => [`src/components/+(${difference.join('|')})/index.js`], sectionDepth: 1})
+  }
+  return sections
+}
+
+const sectionsWithUnclassified = addUnclassifiedComponents(listSections)
+
 module.exports = {
   title: `${TITLE} - Documentation`,
   pagePerSection: true,
-  components: 'src/components/!(theme)/index.js',
+  components: 'src/components/!(theme)/Readme.md',
   compilerConfig: {
     transforms: {
       dangerousTaggedTemplateString: true,
@@ -63,7 +74,7 @@ module.exports = {
     const componentName = upperFirst(camelCase(componentSourcesFilesName));
     return `import ${componentName} from '${TITLE}'`
   },
-  sections: listSections,
+  sections: sectionsWithUnclassified,
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
     StyleGuideRenderer: path.join(__dirname, 'src/styleguide/StyleGuideRenderer'),

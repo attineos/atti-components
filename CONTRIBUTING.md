@@ -157,7 +157,7 @@ Component
 |-- styles
 |-- tests
 |-- types
-|-- index.js
+|-- Readme.md
 ```
 With :
 * `config` :  contains the internal configuration of the component
@@ -166,4 +166,4 @@ React component, no styled-components.
 * `styles` : contains all styled-components reserved for this component
 * `tests` : contains the tests for this component
 * `types` : contains the declarations of Flow types used by this component internally, if they 
-are too big to be put in the `index.js` or if they are used in multiples sub components
+are too big to be put in the `Readme.md` or if they are used in multiples sub components

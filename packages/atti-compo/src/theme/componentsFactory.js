@@ -1,3 +1,4 @@
+import alert from '../components/Alert/theme'
 import bigText from '../components/BigText/theme'
 import button from '../components/Button/theme'
 import checkbox from '../components/Checkbox/theme'
@@ -15,6 +16,7 @@ import text from '../components/Text/theme'
 import textarea from '../components/TextArea/theme'
 
 export default constants => ({
+  alert: alert(constants),
   bigText: bigText(constants),
   button: button(constants),
   checkbox: checkbox(constants),

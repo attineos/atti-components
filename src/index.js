@@ -9,7 +9,7 @@ import Loader from './components/Loader'
 import Select from './components/Select'
 import SmallText from './components/SmallText'
 import Text from './components/Text'
-import TextArea from './components/Textarea'
+import TextArea from './components/TextArea'
 import ThemeProvider from './components/ThemeProvider'
 
 module.exports = {

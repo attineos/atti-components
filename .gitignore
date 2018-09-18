@@ -4,4 +4,4 @@ node_modules
 .idea
 .eslintcache
 ./styleguide
-./lib/*
+lib/*

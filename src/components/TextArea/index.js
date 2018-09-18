@@ -11,10 +11,10 @@ import StyledLabelTextArea from './styles/StyledLabelTextArea'
  * @author Joseph Lefevre
  */
 const TextArea = ({ id, label, name, placeholder }) => (
-  <>
+  <React.Fragment>
     <StyledLabelTextArea htmlFor={id}>{label}</StyledLabelTextArea>
     <StyledTextArea id={id} placeholder={placeholder} name={name} />
-  </>
+  </React.Fragment>
 )
 
 TextArea.defaultProps = {

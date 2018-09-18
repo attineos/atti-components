@@ -1,11 +1,11 @@
 import fs from 'fs'
-import templateComponentNavigable from './templateComponentNavigable'
-import templateIndex from './templateIndex'
 import remark from 'remark'
 import path from 'path'
 import { escape, forEach, includes, reduce, replace, trim } from 'lodash'
 import mdToAst from '@textlint/markdown-to-ast'
 import is from 'unist-util-is'
+import templateIndex from './templateIndex'
+import templateComponentNavigable from './templateComponentNavigable'
 
 const REGEX = {
   MD: /^.+\.md(x)?$/,
@@ -28,7 +28,7 @@ function genUUID() {
 }
 
 function parseMD() {
-  let renders = []
+  const renders = []
 
   function visitParagraph(p) {
     forEach(p.children, child => {
@@ -84,7 +84,7 @@ function readMDFile(componentName, src) {
           resolve(
             templateComponentNavigable({
               component: componentName,
-              pathToCompo: '../' + replace(path.dirname(src, '.md'), /\\\\*/g, '/'), // Windows is <3
+              pathToCompo: `../${  replace(path.dirname(src, '.md'), /\\\\*/g, '/')}`, // Windows is <3
               renders: res.renders,
             }),
           )

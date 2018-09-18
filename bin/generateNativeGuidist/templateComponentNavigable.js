@@ -5,31 +5,31 @@ export default ({ component, pathToCompo, renders }) => `import React from 'reac
 import ${component} from '${pathToCompo}'
 
 class ${component}Nav extends React.Component {
-	${renders &&
+  ${renders &&
     renders.length > 0 &&
     reduce(
       renders,
       (acc, render) =>
-        acc +
-        '\n' +
+        `${acc
+        }\n${
         templateCompoRender({
           render: render.render,
           id: render.id,
           beforeRender: render.beforeRender,
-        }),
+        })}`,
       '',
     )}
-	
-	
-	render() {
-		return (
-			<React.Fragment>
-			${renders &&
+
+
+  render() {
+    return (
+      <React.Fragment>
+      ${renders &&
         renders.length > 0 &&
-        reduce(renders, (acc, render) => acc + '\n' + `{this.render${render.id}()}`, '')}
-			</React.Fragment>
-		)
-	}
+        reduce(renders, (acc, render) => `${acc  }\n` + `{this.render${render.id}()}`, '')}
+      </React.Fragment>
+    )
+  }
 
 }
 

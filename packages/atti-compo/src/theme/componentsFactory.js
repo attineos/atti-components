@@ -6,6 +6,7 @@ import header1 from '../components/Header1/theme'
 import header2 from '../components/Header2/theme'
 import header3 from '../components/Header3/theme'
 import image from '../components/Image/theme'
+import input from '../components/Input/theme'
 import link from '../components/Link/theme'
 import loader from '../components/Loader/theme'
 import menu from '../components/Menu/theme'
@@ -24,6 +25,7 @@ export default constants => ({
   header2: header2(constants),
   header3: header3(constants),
   img: image(constants),
+  input: input(constants),
   link: link(constants),
   loader: loader(constants),
   menu: menu(constants),

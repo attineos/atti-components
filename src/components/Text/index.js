@@ -8,8 +8,6 @@ import StyledText from './styles/index'
  * @version 0.1
  * @author Alexandre DEVE
  */
-// eslint-disable-next-line no-console
-console.warn('test', getFontStyle('text'))
 
 const Text = StyledText`
   ${getFontStyle('text')};

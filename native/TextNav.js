@@ -3,14 +3,14 @@ import Text from '../src/components/Text'
 
 class TextNav extends React.Component {
 	
-	renderem1hfepax2w0 = () => {
+	render8h4cckaioxo0 = () => {
 		const Text = require('react-native').Text
 		return (
 			<Text>Text :</Text>
 		)
 	}
 
-	renderayq6t0eriew0 = () => {
+	render60jdvhsip7s0 = () => {
 		
 		return (
 			<Text>This is a Text</Text>
@@ -23,8 +23,8 @@ class TextNav extends React.Component {
 		return (
 			<React.Fragment>
 			
-{this.renderem1hfepax2w0()}
-{this.renderayq6t0eriew0()}
+{this.render8h4cckaioxo0()}
+{this.render60jdvhsip7s0()}
 			</React.Fragment>
 		)
 	}

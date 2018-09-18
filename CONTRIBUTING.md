@@ -129,6 +129,16 @@ Feature 562: button component
 BREAKING CHANGE : old button should be removed as it will now throw an exception.
 ```
 
+Before each commit it is mandatory to run the command `yarn preparecommit`. The command will :
+
+- Create all snapshots.
+- Fix the style of all files.
+- Check the code quality.
+- Run all tests.
+
+The option `-u` can be added to also update all tests before launching them.
+
+
 ## JS conventions
 
 This project follow the W3Schools JS conventions (https://www.w3schools.com/js/js_conventions.asp),

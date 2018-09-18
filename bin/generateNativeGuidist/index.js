@@ -84,7 +84,7 @@ function readMDFile(componentName, src) {
           resolve(
             templateComponentNavigable({
               component: componentName,
-              pathToCompo: `../${  replace(path.dirname(src, '.md'), /\\\\*/g, '/')}`, // Windows is <3
+              pathToCompo: `../${replace(path.dirname(src, '.md'), /\\\\*/g, '/')}`, // Windows is <3
               renders: res.renders,
             }),
           )

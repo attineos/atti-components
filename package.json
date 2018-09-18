@@ -2,9 +2,9 @@
   "name": "atti-components",
   "version": "0.0.1",
   "description": "A set of fully customizable React components made with <3 with styled-components",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "cross-env rm -rf lib && babel src -d --out-dir lib --ignore node_modules",
     "build:watch": "babel src -w -d lib",
     "build:documentation": "styleguidist build",
     "gen": "babel-node --presets @babel/env ./bin/generateComponent",
@@ -16,7 +16,8 @@
     "snapshots": "babel-node ./bin/generateSnapshots",
     "start": "yarn run start:styleguidist",
     "start:styleguidist": "styleguidist server",
-    "test": "jest"
+    "test": "jest",
+    "webpack": "webpack --display-error-details --config webpack.config.js"
   },
   "repository": "git@gitlab.com:attineos/atti-components.git",
   "author": "Attineos <contact@attineos.com>",
@@ -24,8 +25,6 @@
   "dependencies": {
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
     "styled-components": "^3.3.3"
   },
   "devDependencies": {
@@ -40,10 +39,12 @@
     "babel-plugin-styled-components": "^1.7.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-wildcard": "^5.0.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^3.0.1",
@@ -55,6 +56,8 @@
     "path": "^0.12.7",
     "prettier": "^1.14.0",
     "prompts": "^0.1.13",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-styleguidist": "^7.1.3",
     "react-test-renderer": "^16.4.2",
     "remark": "^9.0.0",
@@ -63,6 +66,7 @@
     "webpack-cli": "^3.1.0"
   },
   "peerDependencies": {
+    "react": "^16.4.1",
     "react-native": "0.55.4"
   }
 }

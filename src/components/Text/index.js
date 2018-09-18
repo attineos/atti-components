@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import getFontStyle from '../../helpers/Typography/getFontStyle'
-import StyledText from './styles/index.web.js'
+import StyledText from './styles'
 
 /**
  * Text.

@@ -2,28 +2,38 @@ const path = require('path')
 
 module.exports = [
   {
-    name: "mobile",
-    output: {
-      path: path.resolve(__dirname, "./lib"),
-      filename: 'native.js'
+    entry: {
+      'dist/index': "./src/index.web.js",
+      'native/index': "./src/index.native.js"
     },
-    entry: './native/index.js',
-    mode: "development",
+    output: {
+      path: path.resolve(__dirname, ''),
+      filename: '[name].js',
+      library: '',
+      libraryTarget: 'commonjs2'
+    },
+    mode: "production",
     resolve: {
-      extensions: ['.native.js', '.js']
+      extensions: ['.js']
     },
     module: {
       rules: [
         {
           test: /\.js$/,
           loader: 'babel-loader',
-          exclude: /node_modules/
+          exclude: /node_modules/,
+          options: {
+            presets: ['env', 'react'],
+            plugins: ['babel-plugin-transform-class-properties', 'babel-plugin-styled-components']
+          }
         },
       ]
     },
     externals: {
-      react: 'react',
-      'react-native': 'react-native',
+      react: 'commonjs react',
+      'react-dom': 'commonjs react-dom',
+      'react-native': 'commonjs react-native',
+      'styled-components': 'commonjs styled-components',
     }
   }
 ]

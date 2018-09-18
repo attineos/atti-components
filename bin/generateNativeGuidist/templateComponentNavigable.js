@@ -10,9 +10,7 @@ class ${component}Nav extends React.Component {
     reduce(
       renders,
       (acc, render) =>
-        `${acc
-        }\n${
-        templateCompoRender({
+        `${acc}\n${templateCompoRender({
           render: render.render,
           id: render.id,
           beforeRender: render.beforeRender,
@@ -26,7 +24,7 @@ class ${component}Nav extends React.Component {
       <React.Fragment>
       ${renders &&
         renders.length > 0 &&
-        reduce(renders, (acc, render) => `${acc  }\n` + `{this.render${render.id}()}`, '')}
+        reduce(renders, (acc, render) => `${acc}\n` + `{this.render${render.id}()}`, '')}
       </React.Fragment>
     )
   }

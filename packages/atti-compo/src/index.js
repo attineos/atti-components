@@ -6,6 +6,8 @@ import Header2 from './components/Header2'
 import Header3 from './components/Header3'
 import Link from './components/Link'
 import Loader from './components/Loader'
+import Option from './components/Option'
+import OptionPanel from './components/OptionPanel'
 import Select from './components/Select'
 import SmallText from './components/SmallText'
 import Text from './components/Text'
@@ -21,6 +23,8 @@ module.exports = {
   Header3,
   Link,
   Loader,
+  Option,
+  OptionPanel,
   Select,
   SmallText,
   Text,

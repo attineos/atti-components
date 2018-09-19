@@ -11,6 +11,7 @@ import SmallText from './components/SmallText'
 import Text from './components/Text'
 import TextArea from './components/Textarea'
 import ThemeProvider from './components/ThemeProvider'
+import Progressbar from './components/Progressbar'
 
 module.exports = {
   BigText,
@@ -26,4 +27,5 @@ module.exports = {
   Text,
   TextArea,
   ThemeProvider,
+  Progressbar,
 }

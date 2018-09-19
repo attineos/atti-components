@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progressbar renders correctly 1`] = `
+<div
+  className="sc-bdVaJa lnANbE"
+  end={42}
+  start={42}
+>
+  <p
+    className="Text sc-bwzfXH fFShiM"
+  >
+    0%
+  </p>
+</div>
+`;

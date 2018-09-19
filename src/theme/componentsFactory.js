@@ -13,6 +13,7 @@ import select from '../components/Select/theme'
 import smallText from '../components/SmallText/theme'
 import text from '../components/Text/theme'
 import textarea from '../components/TextArea/theme'
+import progressbar from '../components/Progressbar/theme'
 
 export default constants => ({
   bigText: bigText(constants),
@@ -30,4 +31,5 @@ export default constants => ({
   smallText: smallText(constants),
   text: text(constants),
   textarea: textarea(constants),
+  progressbar: progressbar(constants),
 })

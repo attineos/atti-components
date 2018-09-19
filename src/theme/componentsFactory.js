@@ -10,6 +10,8 @@ import input from '../components/Input/theme'
 import link from '../components/Link/theme'
 import loader from '../components/Loader/theme'
 import menu from '../components/Menu/theme'
+import option from '../components/Option/theme'
+import optionPanel from '../components/OptionPanel/theme'
 import radio from '../components/Radio/theme'
 import select from '../components/Select/theme'
 import smallText from '../components/SmallText/theme'
@@ -29,6 +31,8 @@ export default constants => ({
   link: link(constants),
   loader: loader(constants),
   menu: menu(constants),
+  option: option(constants),
+  optionPanel: optionPanel(constants),
   radio: radio(constants),
   select: select(constants),
   smallText: smallText(constants),

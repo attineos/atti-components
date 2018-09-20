@@ -19,7 +19,7 @@ export default ({ border, colors, fonts, spaces }) => ({
       color: colors.black,
     },
     colors: {
-      text: colors.grey,
+      text: colors.slate,
       background: colors.transparent,
     },
     fonts: {

@@ -9,5 +9,5 @@
     "es2015",
     "stage-0"
   ],
-  "plugins": ["styled-components", "wildcard", "transform-class-properties"]
+  "plugins": ["lodash", "styled-components", "transform-class-properties", "wildcard"]
 }

@@ -4,7 +4,7 @@
   "description": "A set of fully customizable React components made with <3 with styled-components",
   "main": "dist/index.js",
   "scripts": {
-    "build": "cross-env rm -rf lib && babel src -d --out-dir lib --ignore node_modules",
+    "build": "webpack --config webpack/native.config.babel.js && webpack --config webpack/web.config.babel.js",
     "build:watch": "babel src -w -d lib",
     "build:documentation": "styleguidist build",
     "gen": "babel-node --presets @babel/env ./bin/generateComponent",
@@ -16,8 +16,7 @@
     "snapshots": "babel-node ./bin/generateSnapshots",
     "start": "yarn run start:styleguidist",
     "start:styleguidist": "styleguidist server",
-    "test": "jest",
-    "webpack": "webpack --display-error-details --config webpack.config.js"
+    "test": "jest"
   },
   "repository": "git@gitlab.com:attineos/atti-components.git",
   "author": "Attineos <contact@attineos.com>",
@@ -63,7 +62,8 @@
     "remark": "^9.0.0",
     "unist-util-is": "^2.1.2",
     "webpack": "^4.16.3",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.4"
   },
   "peerDependencies": {
     "react": "^16.4.1",

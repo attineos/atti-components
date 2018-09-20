@@ -1,4 +1,4 @@
-import Button from './components/Button/index.native.js'
+import Button from './components/Button'
 import Text from './components/Text/index.native.js'
 
 module.exports = {

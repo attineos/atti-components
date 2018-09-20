@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <label
-  className="sc-htpNat gJYcBm"
+  className="sc-htpNat bMbOqN"
 >
   <input
     checked={true}
@@ -14,7 +14,7 @@ exports[`Radio renders correctly 1`] = `
     value="Atticomponents"
   />
   <span
-    className="sc-bdVaJa fVGYww"
+    className="sc-bdVaJa fvVqop"
   />
   Atticomponents
 </label>

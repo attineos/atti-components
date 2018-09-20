@@ -2,7 +2,7 @@
 
 exports[`Loader renders correctly 1`] = `
 <div
-  className="sc-bdVaJa fPxwVt"
+  className="sc-bdVaJa giVSvz"
   color="Atticomponents"
   type={null}
 />

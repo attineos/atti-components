@@ -3,13 +3,13 @@
 exports[`Input renders correctly 1`] = `
 Array [
   <label
-    className="sc-bwzfXH hhqXtE"
+    className="sc-bwzfXH eVOdaL"
     htmlFor="Atticomponents"
   >
     Atticomponents
   </label>,
   <input
-    className="sc-bdVaJa hUvXGl"
+    className="sc-bdVaJa iZowZs"
     form={true}
     id="Atticomponents"
     name="Atticomponents"

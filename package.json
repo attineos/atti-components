@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config webpack/native.config.babel.js && webpack --config webpack/web.config.babel.js",
-    "build:watch": "babel src -w -d lib",
     "build:documentation": "styleguidist build",
     "gen": "babel-node --presets @babel/env ./bin/generateComponent",
     "gen:nat": "babel-node --presets env ./bin/generateNativeGuidist",

@@ -19,22 +19,30 @@ Button.defaultProps = {
 
 Button.propTypes = {
   /**
-   * Content of the component. Only text for now (web version).
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   * Content of the component. Only text for now.
    */
   children: PropTypes.string.isRequired,
 
   /**
-   * This function is called when the user clicks on the Button (web version).
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   * This function is called when the user clicks on the Button.
    */
   onClick: PropTypes.func,
 
   /**
-   * This function is called when the user clicks on the Button (native version).
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   * This function is called when the user clicks on the Button.
    */
   onPress: PropTypes.func,
 
   /**
-   * Content of the component. Only text for now (native version).
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   * Content of the component. Only text for now.
    */
   title: PropTypes.string.isRequired,
 }

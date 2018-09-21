@@ -30,6 +30,8 @@ Run `yarn test` to run the tests.
 
 Run `yarn test -u` to run and update the snapshot tests if the update is validated and expected.
 
+Run `yarn build` to transpile and compress your components into 2 bundles (one for the web and one for native).
+
 ## Contribution
 
 If you want to contribute to `atti-components`, please [see the contributing file](CONTRIBUTING.md).

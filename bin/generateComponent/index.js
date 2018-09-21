@@ -9,13 +9,15 @@ import templateThemeFolderIndexFile from './templateThemeFolderIndexFile'
 // Constants.
 const CONFIG_FOLDER = 'config'
 const COMPONENTS_FOLDER = 'components'
+const FACADE_FOLDER = 'facade'
 const STYLES_FOLDER = 'styles'
 const TESTS_FOLDER = 'tests'
 const THEME_FOLDER = 'theme'
-const ALL_FOLDERS = [CONFIG_FOLDER, COMPONENTS_FOLDER, STYLES_FOLDER, TESTS_FOLDER, THEME_FOLDER]
-const FOLDERS_WITH_INDEX = [COMPONENTS_FOLDER, STYLES_FOLDER, THEME_FOLDER]
+const ALL_FOLDERS = [CONFIG_FOLDER, COMPONENTS_FOLDER, FACADE_FOLDER, STYLES_FOLDER, TESTS_FOLDER, THEME_FOLDER]
+const FOLDERS_WITH_INDEX = [COMPONENTS_FOLDER, FACADE_FOLDER, STYLES_FOLDER, THEME_FOLDER]
 const TEMPLATES_FOR_INDEX = {
   [COMPONENTS_FOLDER]: templateSubFolderIndexFile,
+  [FACADE_FOLDER]: templateSubFolderIndexFile,
   [STYLES_FOLDER]: templateSubFolderIndexFile,
   [THEME_FOLDER]: templateThemeFolderIndexFile,
 }
@@ -35,6 +37,7 @@ const questions = [
     choices: [
       { title: CONFIG_FOLDER, value: CONFIG_FOLDER },
       { title: COMPONENTS_FOLDER, value: COMPONENTS_FOLDER },
+      { title: FACADE_FOLDER, value: FACADE_FOLDER },
       { title: STYLES_FOLDER, value: STYLES_FOLDER, selected: true },
       { title: TESTS_FOLDER, value: TESTS_FOLDER },
       { title: THEME_FOLDER, value: THEME_FOLDER, selected: true },

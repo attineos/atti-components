@@ -166,6 +166,7 @@ Component
 |-- components
 |-- styles
 |-- tests
+|-- theme
 |-- types
 |-- index.js
 ```
@@ -175,5 +176,11 @@ With :
 React component, no styled-components.
 * `styles` : contains all styled-components reserved for this component
 * `tests` : contains the tests for this component
+* `theme` : contains theme properties
 * `types` : contains the declarations of Flow types used by this component internally, if they 
 are too big to be put in the `index.js` or if they are used in multiples sub components
+
+You can execute the command `yarn gen`  to generate a new component minimal's files and folders. The generation is in three steps :
+* Choose the component name.
+* Pick folders, defaults are `styles` and `theme`.
+* Confirm your choice.

@@ -1,3 +1,4 @@
+// @noSnapshot
 import React from 'react'
 import Facade from './Facade'
 import StyledButton from '../styles/StyledButton'

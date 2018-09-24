@@ -10,7 +10,7 @@ it('Progressbar renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Progressbar end={42} fillingOrientation="Atticomponents" fillingSpeed={42} percentageLabel={true} showLabel={true} start={42} step={42} ></Progressbar>
+        <Progressbar end={42} fillingOrientation={null} fillingSpeed={42} percentageLabel={true} showLabel={true} start={42} step={42} ></Progressbar>
       </Wrapper>
       )
     .toJSON();

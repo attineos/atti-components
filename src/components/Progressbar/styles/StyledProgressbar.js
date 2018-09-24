@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components'
+import Text from '../../Text'
 
 const border = css`
   border: ${({ theme }) => theme.components.progressbar.border.borderWidth};
   border-color: ${({ theme }) => theme.components.progressbar.border.borderColor};
   border-radius: 25px;
-  box-sizing: content-box;
+  box-sizing: border-box;
   border-style: solid;
 `
 
@@ -13,11 +14,10 @@ const before = css`
     background: ${({ theme }) => theme.components.progressbar.colors.fill};
     border-radius: 25px;
     content: '';
-    height: ${({ theme }) => theme.components.progressbar.sizes.height};
+    height: 100%;
     position: absolute;
     transition: width ${({ fillingSpeed }) => fillingSpeed}ms;
-    width: ${({ percent, theme }) =>
-      parseInt(theme.components.progressbar.sizes.width) * percent}px;
+    width: ${({ percent }) => percent}%;
   }
 `
 
@@ -32,7 +32,7 @@ const positionFirstComponent = css`
 `
 
 const positionText = css`
-  > .Text {
+  > ${Text} {
     color: ${({ theme }) => theme.components.progressbar.colors.text};
     display: flex;
     justify-content: center;

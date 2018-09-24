@@ -18,11 +18,9 @@ const Progressbar = ({
   fillingSpeed,
   fillingOrientation,
 }) => {
-  const percent = step / (end - start)
+  const percent = parseInt((step / (end - start)) * 100, 10)
 
-  const stepLabel = percentageLabel
-    ? `${((step - start) * (end - start)) / 100}%`
-    : `${step - start}/${end - start}`
+  const stepLabel = percentageLabel ? `${percent}%` : `${step - start}/${end - start}`
 
   return (
     <StyledProgressbar
@@ -32,7 +30,7 @@ const Progressbar = ({
       percent={percent}
       start={start}
     >
-      {showLabel ? <Text className="Text">{stepLabel}</Text> : null}
+      {showLabel ? <Text>{stepLabel}</Text> : null}
     </StyledProgressbar>
   )
 }
@@ -49,14 +47,14 @@ Progressbar.defaultProps = {
 
 Progressbar.propTypes = {
   /**
-   * End of the progressbar (percent).
+   * End of the progressbar.
    */
   end: PropTypes.number,
 
   /**
-   * Tells how the progressbar will be filled.
+   * Tells how the progressbar will be filled (left, center or right).
    */
-  fillingOrientation: PropTypes.string,
+  fillingOrientation: PropTypes.oneOf(['left', 'center', 'right']),
 
   /**
    * Define the filling speed of the progressbar.
@@ -74,12 +72,12 @@ Progressbar.propTypes = {
   showLabel: PropTypes.bool,
 
   /**
-   * Beginning of the progressbar (percent).
+   * Beginning of the progressbar.
    */
   start: PropTypes.number,
 
   /**
-   * Incremental step (percent).
+   * Incremental step.
    */
   step: PropTypes.number,
 }

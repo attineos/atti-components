@@ -2,14 +2,14 @@
 
 exports[`Progressbar renders correctly 1`] = `
 <div
-  className="sc-bdVaJa lnANbE"
+  className="sc-bwzfXH lnvSxK"
   end={42}
   start={42}
 >
   <p
-    className="Text sc-bwzfXH fFShiM"
+    className="sc-bdVaJa ynlyS"
   >
-    0%
+    NaN%
   </p>
 </div>
 `;

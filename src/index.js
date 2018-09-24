@@ -6,12 +6,12 @@ import Header2 from './components/Header2'
 import Header3 from './components/Header3'
 import Link from './components/Link'
 import Loader from './components/Loader'
+import Progressbar from './components/Progressbar'
 import Select from './components/Select'
 import SmallText from './components/SmallText'
 import Text from './components/Text'
 import TextArea from './components/Textarea'
 import ThemeProvider from './components/ThemeProvider'
-import Progressbar from './components/Progressbar'
 
 module.exports = {
   BigText,
@@ -22,10 +22,10 @@ module.exports = {
   Header3,
   Link,
   Loader,
+  Progressbar,
   Select,
   SmallText,
   Text,
   TextArea,
   ThemeProvider,
-  Progressbar,
 }

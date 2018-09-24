@@ -2,7 +2,7 @@
 
 exports[`StyledLink renders correctly 1`] = `
 <a
-  className="sc-htpNat euuGKk sc-bwzfXH fFShiM"
+  className="StyledLink-kwdrvq-0 blQXAh sc-bwzfXH jldVIF"
 >
   Atticomponents
 </a>

@@ -21,6 +21,9 @@ module.exports = {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
   },
   webpackConfig: {
+    resolve: {
+      extensions: ['.web.js', '.js']
+    },
     module: {
       rules: [
         {

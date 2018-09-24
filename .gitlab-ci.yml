@@ -9,6 +9,7 @@ stages:
   - prettier
   - lint
   - test
+  - build
 
 Prettier:
   stage: prettier
@@ -33,3 +34,11 @@ Test:
     - yarn install
   script:
     - yarn run test
+
+Build:
+  stage: build
+  before_script:
+    - yarn config set cache-folder .yarn
+    - yarn install
+  script:
+    - yarn run build

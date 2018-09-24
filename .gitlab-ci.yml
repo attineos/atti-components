@@ -9,6 +9,7 @@ stages:
   - prettier
   - lint
   - test
+  - build
 
 Prettier:
   stage: prettier

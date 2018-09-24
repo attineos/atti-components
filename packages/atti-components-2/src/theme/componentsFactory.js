@@ -1,5 +1,6 @@
 import alert from '../components/Alert/theme'
 import bigText from '../components/BigText/theme'
+import breadcrumb from '../components/Breadcrumb/theme'
 import button from '../components/Button/theme'
 import checkbox from '../components/Checkbox/theme'
 import header1 from '../components/Header1/theme'
@@ -21,6 +22,7 @@ import textarea from '../components/TextArea/theme'
 export default constants => ({
   alert: alert(constants),
   bigText: bigText(constants),
+  breadcrumb: breadcrumb(constants),
   button: button(constants),
   checkbox: checkbox(constants),
   header1: header1(constants),

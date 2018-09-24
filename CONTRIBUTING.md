@@ -164,7 +164,7 @@ With :
 * `config` :  contains the internal configuration of the component
 * `components` : contains the sub components, only useful for this component. Only contains 
 React component, no styled-components.
-* `facade` : contains a maximum of 2 files ('index.web.js' and 'index.native.js') to render respectively a web and a native components.
+* `facade` : contains a maximum of 3 files ('Facade.js', 'index.web.js' and 'index.native.js'). Indexes files render respectively a web and a native component. They should extend `Facade.js` which contains the common code of both versions
 * `styles` : contains all styled-components reserved for this component
 * `tests` : contains the tests for this component
 * `types` : contains the declarations of Flow types used by this component internally, if they 
@@ -181,7 +181,7 @@ For Native components, it will resolve first `*.native.js` files and then `*.js`
 
 For Web components, it will resolve first `*.web.js` files and then `*.js` files.
 
-Let's suppose the following component:
+With the following component:
 ```
 Button
 |-- facade
@@ -197,10 +197,10 @@ Webpack will automatically know which one to retrieve for its 2 bundles.
 
 ### Properties
 
-As the purpose of this project is to be able to use the same component with the same properties for both native and web project, our components should accept properties of both versions.
+As the purpose of this project is to be able to use the same component with the same properties for both native and web project, our components should accept properties from both versions.
 The facade folder of the component is then used to dispatch / use correctly those properties.
 
-Of course, some properties may be used in only one version. This is why we should for each property indicate its compatibility in its description by the following:
+Of course, some properties may be used in only one version. This is why we should, for each property, indicate its compatibility in its description by the following:
 
 // TODO
 

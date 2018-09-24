@@ -1,7 +1,8 @@
 import React from 'react'
+import Facade from './Facade'
 import StyledButton from '../styles/StyledButton'
 
-class ButtonFacade extends React.Component {
+class ButtonFacade extends Facade {
   render() {
     // eslint-disable-next-line
     const { content, onClick, onPress, title } = this.props

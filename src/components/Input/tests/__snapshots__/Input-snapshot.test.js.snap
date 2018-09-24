@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+Array [
+  <label
+    className="StyledLabelInput-p62z0t-0 iKQagb"
+    htmlFor="Atticomponents"
+  >
+    Atticomponents
+  </label>,
+  <input
+    className="InputStyle__StyledInput-sc-3f32vx-0 eHjWIv"
+    form={true}
+    id="Atticomponents"
+    name="Atticomponents"
+    onChange={[Function]}
+    pattern="Atticomponents"
+    placeholder="Atticomponents"
+    size={42}
+    type="Atticomponents"
+    value="Atticomponents"
+  />,
+]
+`;

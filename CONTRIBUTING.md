@@ -129,6 +129,16 @@ Feature 562: button component
 BREAKING CHANGE : old button should be removed as it will now throw an exception.
 ```
 
+Before each commit it is mandatory to run the command `yarn preparecommit`. The command will :
+
+- Create all snapshots.
+- Fix the style of all files.
+- Check the code quality.
+- Run all tests.
+
+The option `-u` can be added to also update all tests before launching them.
+
+
 ## JS conventions
 
 This project follow the W3Schools JS conventions (https://www.w3schools.com/js/js_conventions.asp),
@@ -157,6 +167,7 @@ Component
 |-- facade
 |-- styles
 |-- tests
+|-- theme
 |-- types
 |-- index.js
 ```
@@ -167,9 +178,16 @@ React component, no styled-components.
 * `facade` : contains a maximum of 3 files ('Facade.js', 'index.web.js' and 'index.native.js'). Indexes files render respectively a web and a native component. They should extend `Facade.js` which contains the common code of both versions
 * `styles` : contains all styled-components reserved for this component
 * `tests` : contains the tests for this component
+* `theme` : contains theme properties
 * `types` : contains the declarations of Flow types used by this component internally, if they 
 are too big to be put in the `index.js` or if they are used in multiples sub components
 * `index.js` : is the entry point of the component. It contains the definition of all the accepted properties.
+
+You can execute the command `yarn gen`  to generate a new component minimal's files and folders. The generation is in three steps :
+* Choose the component name.
+* Pick folders, defaults are `styles` and `theme`.
+* Confirm your choice.
+
 
 ## Web and Native versions
 
@@ -203,5 +221,3 @@ The facade folder of the component is then used to dispatch / use correctly thos
 Of course, some properties may be used in only one version. This is why we should, for each property, indicate its compatibility in its description by the following:
 
 // TODO
-
-

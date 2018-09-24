@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import TextArea from '..';
+import StyledOption from '../styles/StyledOption';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('TextArea renders correctly', () => {
+it('StyledOption renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <TextArea id="Atticomponents" label="Atticomponents" name="Atticomponents" placeholder="Atticomponents" ></TextArea>
+        <StyledOption ></StyledOption>
       </Wrapper>
       )
     .toJSON();

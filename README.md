@@ -30,6 +30,8 @@ Run `yarn test` to run the tests.
 
 Run `yarn test -u` to run and update the snapshot tests if the update is validated and expected.
 
+Run `yarn preparecommit` to check if you can commit your code. The command runs `yarn snapshots`, `yarn prettier`, `yarn lint` and `yarn test` (you can add -u to run and update snapshots).
+
 Run `yarn build` to transpile and compress your components into 2 bundles (one for the web and one for native).
 
 ## Contribution

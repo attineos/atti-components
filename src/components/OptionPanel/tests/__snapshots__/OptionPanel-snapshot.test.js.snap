@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionPanel renders correctly 1`] = `
+<div
+  className="sc-bwzfXH kRVcse"
+>
+  true
+</div>
+`;

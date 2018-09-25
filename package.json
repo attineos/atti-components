@@ -7,7 +7,6 @@
     "build": "webpack --config webpack/native.config.babel.js && webpack --config webpack/web.config.babel.js",
     "build:documentation": "styleguidist build",
     "gen": "babel-node --presets @babel/env ./bin/generateComponent",
-    "gen:nat": "babel-node --presets env ./bin/generateNativeGuidist",
     "lint": "eslint --cache src",
     "preparecommit": "yarn snapshots && yarn prettier && yarn lint && yarn test",
     "precommit": "npm run prettier && npm run lint",

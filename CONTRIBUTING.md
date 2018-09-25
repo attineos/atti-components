@@ -202,14 +202,14 @@ For Web components, it will resolve first `*.web.js` files and then `*.js` files
 With the following component:
 ```
 Button
-|-- facade
-|---- index.native.js
-|---- index.web.js
+|-- styles
+|---- StyledButton.native.js
+|---- StyledButton.web.js
 |-- index.js
 ```
-If `facade/index.native.js` and `facade/index.web.js` are both exporting a `ButtonFacade` component and you do the following in `index.js`:
+If `styles/StyledButton.native.js` and `styles/StyledButton.web.js` are both exporting a `StyledButton` component and you do the following in `index.js`:
 ```
-import ButtonFacade from './facade'
+import StyledButton from './styles'
 ```
 Webpack will automatically know which one to retrieve for its 2 bundles.
 
@@ -218,6 +218,17 @@ Webpack will automatically know which one to retrieve for its 2 bundles.
 As the purpose of this project is to be able to use the same component with the same properties for both native and web project, our components should accept properties from both versions.
 The facade folder of the component is then used to dispatch / use correctly those properties.
 
-Of course, some properties may be used in only one version. This is why we should, for each property, indicate its compatibility in its description by the following:
-
-// TODO
+Of course, some properties may be used in only one version. This is why we should, for each property, indicate its compatibility in its description by adding the following in the property's description:
+* property compatible with native applications
+```
+![Native](src/images/native.png "")
+```
+* property compatible with web applications
+```
+![Web](src/images/web.png "")
+```
+* property compatible with both
+```
+![Native](src/images/native.png "")
+![Web](src/images/web.png "")
+```

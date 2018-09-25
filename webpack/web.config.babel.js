@@ -1,5 +1,7 @@
 import merge from 'webpack-merge'
 
+// import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+
 import webpackConfig from './base.config'
 
 export default merge(webpackConfig, {
@@ -9,4 +11,7 @@ export default merge(webpackConfig, {
   resolve: {
     extensions: ['.web.js', '.js']
   },
+  plugins: [
+    // new BundleAnalyzerPlugin()
+  ]
 })

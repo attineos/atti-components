@@ -181,7 +181,7 @@ React component, no styled-components.
 * `theme` : contains theme properties
 * `types` : contains the declarations of Flow types used by this component internally, if they 
 are too big to be put in the `index.js` or if they are used in multiples sub components
-* `index.js` : is the entry point of the component. It contains the definition of all the accepted properties.
+* `index.js` : is the entry point of the component, it contains the definition of all the accepted properties
 
 You can execute the command `yarn gen`  to generate a new component minimal's files and folders. The generation is in three steps :
 * Choose the component name.
@@ -193,7 +193,7 @@ You can execute the command `yarn gen`  to generate a new component minimal's fi
 
 ### Files resolution
 
-During the build process, webpack (our building tool) with resolve the files by looking for their extension.
+During the build process, webpack (our building tool) will resolve the files by looking for their extension.
 
 For Native components, it will resolve first `*.native.js` files and then `*.js` files.
 

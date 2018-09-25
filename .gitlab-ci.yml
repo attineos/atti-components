@@ -17,7 +17,7 @@ Prettier:
     - yarn config set cache-folder .yarn
     - yarn install
   script:
-    - yarn run prettier
+    - yarn prettier
 
 Lint:
   stage: lint
@@ -25,7 +25,7 @@ Lint:
     - yarn config set cache-folder .yarn
     - yarn install
   script:
-    - yarn run lint
+    - yarn lint
 
 Test:
   stage: test
@@ -33,7 +33,7 @@ Test:
     - yarn config set cache-folder .yarn
     - yarn install
   script:
-    - yarn run test
+    - yarn test
 
 Build:
   stage: build
@@ -41,4 +41,4 @@ Build:
     - yarn config set cache-folder .yarn
     - yarn install
   script:
-    - yarn run build
+    - yarn build

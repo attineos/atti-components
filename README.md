@@ -6,6 +6,9 @@ Reusable React components, using the styled-components library.
 
 [See the live demo/documentation](https://atti-components.netlify.com/).
 
+You can use the exact same code for both native and web components.
+**Just be aware that if you use a native and a web property to do the exact same action, native property will get a higher priority on native applications and web property will get the same on web applications.**
+
 ## Installation
 
 ```

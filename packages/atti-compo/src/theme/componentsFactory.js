@@ -13,6 +13,7 @@ import loader from '../components/Loader/theme'
 import menu from '../components/Menu/theme'
 import option from '../components/Option/theme'
 import optionPanel from '../components/OptionPanel/theme'
+import progressbar from '../components/Progressbar/theme'
 import radio from '../components/Radio/theme'
 import select from '../components/Select/theme'
 import smallText from '../components/SmallText/theme'
@@ -35,6 +36,7 @@ export default constants => ({
   menu: menu(constants),
   option: option(constants),
   optionPanel: optionPanel(constants),
+  progressbar: progressbar(constants),
   radio: radio(constants),
   select: select(constants),
   smallText: smallText(constants),

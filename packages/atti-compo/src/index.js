@@ -9,6 +9,7 @@ import Link from './components/Link'
 import Loader from './components/Loader'
 import Option from './components/Option'
 import OptionPanel from './components/OptionPanel'
+import Progressbar from './components/Progressbar'
 import Select from './components/Select'
 import SmallText from './components/SmallText'
 import Text from './components/Text'
@@ -27,6 +28,7 @@ module.exports = {
   Loader,
   Option,
   OptionPanel,
+  Progressbar,
   Select,
   SmallText,
   Text,

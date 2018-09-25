@@ -2,7 +2,7 @@
 
 exports[`Progressbar renders correctly 1`] = `
 <div
-  className="sc-bwzfXH lnvSxK"
+  className="sc-bwzfXH jKgCmY"
   end={42}
   start={42}
 >

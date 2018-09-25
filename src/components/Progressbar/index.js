@@ -4,19 +4,19 @@ import StyledProgressbar from './styles/StyledProgressbar'
 import Text from '../Text'
 
 /**
- * A basic progress bar, that show filling percentage.
+ * A basic progress bar, which shows filling percentage.
  *
  * @version 0.1
  * @author Pierre Lachèvre
  */
 const Progressbar = ({
-  start,
   end,
-  step,
-  showLabel,
-  percentageLabel,
-  fillingSpeed,
   fillingOrientation,
+  fillingSpeed,
+  percentageLabel,
+  showLabel,
+  start,
+  step,
 }) => {
   const percent = parseInt((step / (end - start)) * 100, 10)
 

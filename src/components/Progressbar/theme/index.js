@@ -1,4 +1,3 @@
-// Create the theme part for Progressbar. Please add a call into the componentsFactory.
 export default ({ border, colors, sizes }) => ({
   border: {
     borderColor: colors.black,

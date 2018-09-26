@@ -1,5 +1,7 @@
 Normal Link :
 
 ```js
-<Link href="www.google.fr">This is a link</Link>
+<Link href="http://www.google.fr" target="_blank">
+  This is a link
+</Link>
 ```

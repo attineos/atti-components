@@ -1,4 +1,4 @@
-import { forEach, includes, trim } from 'lodash'
+import { forEach, includes, trim, replace } from 'lodash'
 import fs from 'fs'
 import path from 'path'
 import glob from 'glob'
@@ -29,7 +29,7 @@ const isIndex = componentPath => includes(componentPath, 'index.js')
 /*
  * Returns the component's name.
  */
-const getComponentName = componentPath => trim(path.basename(componentPath), '.js')
+const getComponentName = componentPath => replace(path.basename(componentPath), '.js', '')
 
 /*
  * Returns the component type (components or styles).

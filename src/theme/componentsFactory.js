@@ -1,4 +1,5 @@
 import alert from '../components/Alert/theme'
+import badge from '../components/Badge/theme'
 import bigText from '../components/BigText/theme'
 import breadcrumb from '../components/Breadcrumb/theme'
 import button from '../components/Button/theme'
@@ -22,6 +23,7 @@ import textarea from '../components/TextArea/theme'
 
 export default constants => ({
   alert: alert(constants),
+  badge: badge(constants),
   bigText: bigText(constants),
   breadcrumb: breadcrumb(constants),
   button: button(constants),

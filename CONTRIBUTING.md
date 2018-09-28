@@ -168,7 +168,7 @@ Component
 |-- tests
 |-- theme
 |-- types
-|-- Readme.md
+|-- index.js
 ```
 With :
 * `config` :  contains the internal configuration of the component

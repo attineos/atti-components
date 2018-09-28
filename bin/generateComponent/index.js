@@ -20,6 +20,12 @@ const TEMPLATES_FOR_INDEX = {
   [THEME_FOLDER]: templateThemeFolderIndexFile,
 }
 
+//styleguide list components file.
+const styleguideListCompoFile = 'src/styleguide/listComponents.txt'
+
+//component factory file
+const componentFactoryFile = 'src/theme/componentsFactory.js'
+
 // Component folder.
 const componentDir = 'src/components'
 
@@ -94,7 +100,7 @@ async function createFolders(payload) {
   folders.forEach(folder => {
     fs.mkdirSync(`${compoDir}/${folder}`)
 
-    // If the folder requires an Readme.md, create one.
+    // If the folder requires an index.js, create one.
     if (FOLDERS_WITH_INDEX.includes(folder)) {
       fs.writeFileSync(
         `${compoDir}/${folder}/index.js`,
@@ -108,7 +114,7 @@ async function createFolders(payload) {
     }
   })
 
-  // Create the Readme.md file.
+  // Create the index.js file.
   fs.writeFileSync(`${compoDir}/index.js`, templateMainFile(componentName), err => {
     if (err) {
       console.error(err)
@@ -121,7 +127,7 @@ async function createFolders(payload) {
 /**
  * Launch the component generation.
  */
-;(async function generate() {
+;(async function() {
   // Get the details about the component to create.
   const answers = await prompts(questions)
 
@@ -136,8 +142,85 @@ async function createFolders(payload) {
     // Create the folders and modify the theme to add the new component.
     const created = await createFolders({ componentName: name, folders })
     if (created) {
+      // add the component to styleguide/listComponents.txt
+      const textResult = fs
+        .readFileSync(styleguideListCompoFile, 'utf-8', err => {
+          if (err) {
+            console.error('Error while reading components in styleguide/listComponents.txt.', err)
+          }
+        })
+        .split('\n')
+        .concat(name)
+        .sort()
+        .join('\n')
+
+      fs.writeFileSync(styleguideListCompoFile, textResult, err => {
+        if (err) {
+          console.error('Error while wrting components in styleguide/listComponents.txt.', err)
+        }
+      })
+
+      // add the component to theme/componentsFactory.js
+
+      //read the file
+
+      const fileResult = fs
+        .readFileSync(componentFactoryFile, 'utf-8', err => {
+          if (err) {
+            console.error('Error while reading components in src/theme/componentFactory.js.', err)
+          }
+        })
+        .split('\n\n')
+
+      //extract all imports, add the new import, sort the list and join it.
+
+      const importPart = fileResult[0]
+        .split('\n')
+        .concat('import ' + name.toLowerCase() + " from '../components/" + name + "/theme'")
+        .sort()
+        .join('\n')
+
+      //extract export body
+
+      const previousExportPart = fileResult[1].split('{\n')
+
+      const endExportPart = previous[1].split('}')
+
+      const bodyExportPart = endExportPart[0].split(',').map(s => s.trim().replace('\n', ''))
+
+      // add new export and sort export list
+
+      const bodyExportPartWithNewExport = bodyExportPart
+        .concat(name.toLowerCase() + ': ' + name.toLowerCase() + '(constants)')
+        .sort((a, b) => {
+          if (a === '') {
+            return 1
+          } else if (b === '') {
+            return -1
+          } else {
+            return a > b ? 1 : -1
+          }
+        })
+
+      //join previous, body and end
+
+      const exportPart =
+        previousExportPart[0] +
+        '{\n' +
+        bodyExportPartWithNewExport.join(',\n') +
+        '}' +
+        endExportPart[1]
+
+      //write componentFactory file
+
+      fs.writeFileSync(componentFactoryFile, importPart + '\n\n' + exportPart, err => {
+        if (err) {
+          console.error('Error while wrting components in src/theme/componentFactory.js.', err)
+        }
+      })
+
       console.log(
-        "Component created. Don't forget to add your component theme into src/theme/componentsFactory.js.",
+        'Component created. Your component theme was added into src/theme/componentsFactory.js.',
       )
     } else {
       process.exit(1)

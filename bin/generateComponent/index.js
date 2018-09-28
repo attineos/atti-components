@@ -184,7 +184,7 @@ async function createFolders(payload) {
 
       const previousExportPart = fileResult[1].split('{\n')
 
-      const endExportPart = previous[1].split('}')
+      const endExportPart = previousExportPart[1].split('}')
 
       const bodyExportPart = endExportPart[0].split(',').map(s => s.trim().replace('\n', ''))
 

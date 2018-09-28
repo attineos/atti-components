@@ -17,7 +17,6 @@
     "start:styleguidist": "styleguidist server",
     "test": "jest"
   },
-  
   "repository": "git@gitlab.com:attineos/atti-components.git",
   "author": "Attineos <contact@attineos.com>",
   "license": "MIT",

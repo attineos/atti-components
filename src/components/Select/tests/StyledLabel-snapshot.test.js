@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Select from '..';
+import StyledLabel from '../styles/StyledLabel';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Select renders correctly', () => {
+it('StyledLabel renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Select id="Atticomponents" isMulti={true} label="Atticomponents" name="Atticomponents" onChange={mock} options={new Array()} size={42} sort={null} ></Select>
+        <StyledLabel ></StyledLabel>
       </Wrapper>
       )
     .toJSON();

@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select renders correctly 1`] = `
-<select
-  className="sc-bdVaJa bgfxoH"
-  id="Atticomponents"
-  multiple={true}
-  name="Atticomponents"
-  onChange={[Function]}
-  size={42}
-/>
+Array [
+  <label
+    className="sc-htpNat iQRWkr sc-bwzfXH kwtsFN"
+    htmlFor="Atticomponents"
+  >
+    Atticomponents
+  </label>,
+  <select
+    className="sc-bdVaJa dxqcbs"
+    id="Atticomponents"
+    multiple={true}
+    name="Atticomponents"
+    onChange={[Function]}
+    size={42}
+  />,
+]
 `;

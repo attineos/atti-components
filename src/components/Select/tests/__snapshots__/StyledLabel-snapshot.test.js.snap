@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StyledLabelInput renders correctly 1`] = `
+exports[`StyledLabel renders correctly 1`] = `
 <label
   className="sc-bwzfXH jakGMS sc-bdVaJa ehnZHJ"
 />

@@ -2,7 +2,7 @@
 
 exports[`Checkbox renders correctly 1`] = `
 <label
-  className="sc-htpNat hBDbF"
+  className="sc-bxivhb kFlYSB sc-htpNat dMOWPP"
   htmlFor="Atticomponents"
 >
   <input

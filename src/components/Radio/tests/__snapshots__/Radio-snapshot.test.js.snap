@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <label
-  className="sc-htpNat gJYcBm"
+  className="sc-bxivhb dUqiyM sc-htpNat dMOWPP"
 >
   <input
     checked={true}

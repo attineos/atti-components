@@ -20,10 +20,10 @@ const TEMPLATES_FOR_INDEX = {
   [THEME_FOLDER]: templateThemeFolderIndexFile,
 }
 
-//styleguide list components file.
+// Styleguide list components file.
 const styleguideListCompoFile = 'src/styleguide/listComponents.txt'
 
-//component factory file
+// Component factory file.
 const componentFactoryFile = 'src/theme/componentsFactory.js'
 
 // Component folder.
@@ -142,7 +142,7 @@ async function createFolders(payload) {
     // Create the folders and modify the theme to add the new component.
     const created = await createFolders({ componentName: name, folders })
     if (created) {
-      // add the component to styleguide/listComponents.txt
+      // Add the component to styleguide/listComponents.txt.
       const textResult = fs
         .readFileSync(styleguideListCompoFile, 'utf-8', err => {
           if (err) {
@@ -156,13 +156,13 @@ async function createFolders(payload) {
 
       fs.writeFileSync(styleguideListCompoFile, textResult, err => {
         if (err) {
-          console.error('Error while wrting components in styleguide/listComponents.txt.', err)
+          console.error('Error while writing components in styleguide/listComponents.txt.', err)
         }
       })
 
-      // add the component to theme/componentsFactory.js
+      // Add the component to theme/componentsFactory.js.
 
-      //read the file
+      // Read the file
 
       const fileResult = fs
         .readFileSync(componentFactoryFile, 'utf-8', err => {
@@ -172,7 +172,7 @@ async function createFolders(payload) {
         })
         .split('\n\n')
 
-      //extract all imports, add the new import, sort the list and join it.
+      // Extract all imports, add the new import, sort the list and join it.
 
       const importPart = fileResult[0]
         .split('\n')
@@ -180,7 +180,7 @@ async function createFolders(payload) {
         .sort()
         .join('\n')
 
-      //extract export body
+      // Extract export body.
 
       const previousExportPart = fileResult[1].split('{\n')
 
@@ -188,7 +188,7 @@ async function createFolders(payload) {
 
       const bodyExportPart = endExportPart[0].split(',').map(s => s.trim().replace('\n', ''))
 
-      // add new export and sort export list
+      // Add new export and sort export list.
 
       const bodyExportPartWithNewExport = bodyExportPart
         .concat(name.toLowerCase() + ': ' + name.toLowerCase() + '(constants)')
@@ -202,7 +202,7 @@ async function createFolders(payload) {
           }
         })
 
-      //join previous, body and end
+      // Join previous, body and end.
 
       const exportPart =
         previousExportPart[0] +
@@ -211,11 +211,11 @@ async function createFolders(payload) {
         '}' +
         endExportPart[1]
 
-      //write componentFactory file
+      // Write componentFactory file.
 
       fs.writeFileSync(componentFactoryFile, importPart + '\n\n' + exportPart, err => {
         if (err) {
-          console.error('Error while wrting components in src/theme/componentFactory.js.', err)
+          console.error('Error while writing components in src/theme/componentFactory.js.', err)
         }
       })
 

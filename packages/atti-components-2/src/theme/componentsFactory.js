@@ -9,6 +9,7 @@ import header2 from '../components/Header2/theme'
 import header3 from '../components/Header3/theme'
 import image from '../components/Image/theme'
 import input from '../components/Input/theme'
+import label from '../components/Label/theme'
 import link from '../components/Link/theme'
 import loader from '../components/Loader/theme'
 import menu from '../components/Menu/theme'
@@ -33,6 +34,7 @@ export default constants => ({
   header3: header3(constants),
   img: image(constants),
   input: input(constants),
+  label: label(constants),
   link: link(constants),
   loader: loader(constants),
   menu: menu(constants),

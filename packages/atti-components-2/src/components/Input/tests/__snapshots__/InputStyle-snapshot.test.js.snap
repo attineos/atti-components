@@ -2,6 +2,6 @@
 
 exports[`InputStyle renders correctly 1`] = `
 <input
-  className="sc-bdVaJa hUvXGl"
+  className="InputStyle__StyledInput-sc-3f32vx-0 eHjWIv"
 />
 `;

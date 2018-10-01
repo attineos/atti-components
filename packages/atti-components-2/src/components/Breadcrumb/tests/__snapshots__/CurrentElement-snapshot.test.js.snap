@@ -2,6 +2,6 @@
 
 exports[`CurrentElement renders correctly 1`] = `
 <span
-  className="sc-bdVaJa gTISUG"
+  className="CurrentElement-qaw0re-0 dmcRTS"
 />
 `;

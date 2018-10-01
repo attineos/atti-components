@@ -2,6 +2,6 @@
 
 exports[`StyledImage renders correctly 1`] = `
 <img
-  className="sc-bdVaJa dMNReW"
+  className="StyledImage-sc-1w567an-0 cccOwm"
 />
 `;

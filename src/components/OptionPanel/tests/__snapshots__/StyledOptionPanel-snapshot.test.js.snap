@@ -2,6 +2,6 @@
 
 exports[`StyledOptionPanel renders correctly 1`] = `
 <div
-  className="sc-bwzfXH kRVcse"
+  className="StyledOptionPanel-y2rxr-0 fTDPQM"
 />
 `;

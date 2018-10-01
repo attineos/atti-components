@@ -2,7 +2,7 @@
 
 exports[`Link renders correctly 1`] = `
 <a
-  className="sc-htpNat euuGKk sc-bwzfXH fFShiM"
+  className="StyledLink-kwdrvq-0 blQXAh sc-bwzfXH kBpFOP"
   href="Atticomponents"
   onClick={[Function]}
   target="Atticomponents"

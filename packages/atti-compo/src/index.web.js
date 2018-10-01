@@ -17,6 +17,8 @@ import Text from './components/Text'
 import TextArea from './components/TextArea'
 import ThemeProvider from './components/ThemeProvider'
 
+import theme from './theme'
+
 module.exports = {
   BigText,
   Breadcrumb,
@@ -36,4 +38,6 @@ module.exports = {
   Text,
   TextArea,
   ThemeProvider,
+
+  theme,
 }

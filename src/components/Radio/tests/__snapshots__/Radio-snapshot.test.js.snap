@@ -2,11 +2,11 @@
 
 exports[`Radio renders correctly 1`] = `
 <label
-  className="sc-htpNat bMbOqN"
+  className="LabelRadio-wot4p6-0 jkqwwI Label-xhjve5-0 fQVHlM"
 >
   <input
     checked={true}
-    className="sc-bwzfXH ixbXeA"
+    className="HiddenInputRadio-sc-9a3euj-0 dCQjgv"
     id="Atticomponents"
     name="Atticomponents"
     onChange={[Function]}
@@ -14,7 +14,7 @@ exports[`Radio renders correctly 1`] = `
     value="Atticomponents"
   />
   <span
-    className="sc-bdVaJa fvVqop"
+    className="RadioButton-sc-8w77ik-0 iwyHQx"
   />
   Atticomponents
 </label>

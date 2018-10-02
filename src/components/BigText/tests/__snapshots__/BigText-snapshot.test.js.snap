@@ -2,7 +2,7 @@
 
 exports[`BigText renders correctly 1`] = `
 <p
-  className="sc-bdVaJa jOfQmX"
+  className="BigText-sc-1216e5t-0 pbgDU"
 >
   <div />
 </p>

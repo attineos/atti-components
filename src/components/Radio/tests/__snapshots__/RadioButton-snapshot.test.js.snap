@@ -2,6 +2,6 @@
 
 exports[`RadioButton renders correctly 1`] = `
 <span
-  className="sc-bdVaJa fvVqop"
+  className="RadioButton-sc-8w77ik-0 iwyHQx"
 />
 `;

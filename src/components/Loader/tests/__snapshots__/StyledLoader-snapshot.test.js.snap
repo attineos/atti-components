@@ -2,6 +2,6 @@
 
 exports[`StyledLoader renders correctly 1`] = `
 <div
-  className="sc-bdVaJa cGZkXm"
+  className="StyledLoader-d8og6-0 jmBNrZ"
 />
 `;

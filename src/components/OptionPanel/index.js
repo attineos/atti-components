@@ -10,17 +10,17 @@ import StyledOptionPanel from './styles/StyledOptionPanel'
  * @author Joseph Lefevre
  */
 class OptionPanel extends React.Component {
-  propTypes = {
-    /**
-     * Array of Option components.
-     */
-    children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  }
-
   render() {
     const { children } = this.props
     return <StyledOptionPanel>{children}</StyledOptionPanel>
   }
+}
+
+OptionPanel.propTypes = {
+  /**
+   * Array of Option components.
+   */
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 }
 
 export default OptionPanel

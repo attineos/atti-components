@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadcrumbElement renders correctly 1`] = `
+<a
+  className="StyledLink-kwdrvq-0 fPzYXT sc-bwzfXH hkZNed"
+  href="anUrl"
+  onClick={null}
+  target={null}
+>
+  anElement
+</a>
+`;

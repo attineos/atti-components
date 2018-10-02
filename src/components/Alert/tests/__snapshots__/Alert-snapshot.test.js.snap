@@ -2,7 +2,7 @@
 
 exports[`Alert renders correctly 1`] = `
 <div
-  className="sc-htpNat fdjrEV sc-bwzfXH fyryYs"
+  className="StyledDiv-rsh67c-0 lccXPM BigText-sc-1216e5t-0-div kMLiVF"
   type={null}
 >
   <div />

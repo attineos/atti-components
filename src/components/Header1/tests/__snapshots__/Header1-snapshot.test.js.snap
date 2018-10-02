@@ -2,7 +2,7 @@
 
 exports[`Header1 renders correctly 1`] = `
 <h1
-  className="sc-bdVaJa fkkdOw"
+  className="Header1-sc-1p249ko-0 hUtzIP"
 >
   <div />
 </h1>

@@ -1,6 +1,13 @@
-export default ({ colors }) => ({
-  colors: {
-    text: colors.primary,
-    background: colors.white,
+export default ({ colors, spaces }) => ({
+  input: {
+    colors: {
+      text: colors.primary,
+      background: colors.white,
+    },
+  },
+  label: {
+    spaces: {
+      marginBottom: spaces.s3,
+    },
   },
 })

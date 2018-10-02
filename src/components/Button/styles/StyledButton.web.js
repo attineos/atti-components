@@ -1,4 +1,3 @@
-// @noSnapshot
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import Text from '../../Text'

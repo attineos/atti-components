@@ -1,4 +1,3 @@
-// @noSnapshot
 /* eslint react/prop-types: 0 */
 import React from 'react'
 import Facade from './Facade'

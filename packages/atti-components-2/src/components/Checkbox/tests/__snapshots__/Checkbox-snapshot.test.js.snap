@@ -2,7 +2,7 @@
 
 exports[`Checkbox renders correctly 1`] = `
 <label
-  className="LabelCheckbox-sc-3x8kt7-0 khhFaj Label-xhjve5-0 esBItP"
+  className="LabelCheckbox-sc-3x8kt7-0 kdLLBq Label-xhjve5-0 fQVHlM"
   htmlFor="Atticomponents"
 >
   <input
@@ -15,7 +15,7 @@ exports[`Checkbox renders correctly 1`] = `
     value="Atticomponents"
   />
   <span
-    className="CheckboxBox-xrr36-0 flwkuA"
+    className="CheckboxBox-xrr36-0 cpOzrJ"
   />
   Atticomponents
 </label>

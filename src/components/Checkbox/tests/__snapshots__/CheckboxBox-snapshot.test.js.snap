@@ -2,6 +2,6 @@
 
 exports[`CheckboxBox renders correctly 1`] = `
 <span
-  className="sc-bdVaJa eIkynw"
+  className="CheckboxBox-xrr36-0 flwkuA"
 />
 `;

@@ -3,13 +3,13 @@
 exports[`Select renders correctly 1`] = `
 Array [
   <label
-    className="sc-htpNat iQRWkr sc-bwzfXH kwtsFN"
+    className="StyledLabel-sc-7lrvk2-0 bVnWMj Label-xhjve5-0 esBItP"
     htmlFor="Atticomponents"
   >
     Atticomponents
   </label>,
   <select
-    className="sc-bdVaJa dxqcbs"
+    className="StyledSelect-jeqzcu-0 hiXsjm"
     id="Atticomponents"
     multiple={true}
     name="Atticomponents"

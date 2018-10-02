@@ -3,7 +3,7 @@
 exports[`Image renders correctly 1`] = `
 <img
   alt="Atticomponents"
-  className="sc-bdVaJa iNEhkl"
+  className="StyledImage-sc-1w567an-0 gWgWUd"
   height="Atticomponents"
   src="Atticomponents"
   width="Atticomponents"

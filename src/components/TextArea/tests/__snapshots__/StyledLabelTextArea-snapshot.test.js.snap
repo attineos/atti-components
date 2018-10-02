@@ -2,6 +2,6 @@
 
 exports[`StyledLabelTextArea renders correctly 1`] = `
 <label
-  className="sc-bwzfXH fkbswh sc-bdVaJa ehnZHJ"
+  className="StyledLabelTextArea-f7fxws-0 jZMYWj Label-xhjve5-0 esBItP"
 />
 `;

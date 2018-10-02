@@ -2,6 +2,6 @@
 
 exports[`StyledSelect renders correctly 1`] = `
 <select
-  className="sc-bdVaJa dxqcbs"
+  className="StyledSelect-jeqzcu-0 hiXsjm"
 />
 `;

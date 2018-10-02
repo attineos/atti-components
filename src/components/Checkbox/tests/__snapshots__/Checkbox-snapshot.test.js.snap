@@ -2,12 +2,12 @@
 
 exports[`Checkbox renders correctly 1`] = `
 <label
-  className="sc-bxivhb kFlYSB sc-htpNat dMOWPP"
+  className="LabelCheckbox-sc-3x8kt7-0 khhFaj Label-xhjve5-0 esBItP"
   htmlFor="Atticomponents"
 >
   <input
     checked={true}
-    className="sc-bwzfXH ixbXeA"
+    className="HiddenInputCheckbox-sc-1exe2yb-0 AXPoO"
     id="Atticomponents"
     name="Atticomponents"
     onChange={[Function]}
@@ -15,7 +15,7 @@ exports[`Checkbox renders correctly 1`] = `
     value="Atticomponents"
   />
   <span
-    className="sc-bdVaJa eIkynw"
+    className="CheckboxBox-xrr36-0 flwkuA"
   />
   Atticomponents
 </label>

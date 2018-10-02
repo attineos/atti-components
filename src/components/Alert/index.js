@@ -10,26 +10,26 @@ import StyledDiv from './styles/StyledDiv'
  * @author Ludovic LE HENAFF
  */
 class Alert extends React.PureComponent {
-  static defaultProps = {
-    type: 'success',
-  }
-
-  static propTypes = {
-    /**
-     * Content of the Alert
-     */
-    children: PropTypes.node.isRequired,
-
-    /**
-     * Type of alert
-     */
-    type: PropTypes.oneOf(['success', 'error', 'info', 'warning']),
-  }
-
   render() {
     const { children, type } = this.props
     return <StyledDiv type={type}>{children}</StyledDiv>
   }
+}
+
+Alert.defaultProps = {
+  type: 'success',
+}
+
+Alert.propTypes = {
+  /**
+   * Content of the Alert
+   */
+  children: PropTypes.node.isRequired,
+
+  /**
+   * Type of alert
+   */
+  type: PropTypes.oneOf(['success', 'error', 'info', 'warning']),
 }
 
 export default Alert

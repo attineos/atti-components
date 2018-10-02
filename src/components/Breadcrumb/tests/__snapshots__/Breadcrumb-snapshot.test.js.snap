@@ -2,10 +2,10 @@
 
 exports[`Breadcrumb renders correctly 1`] = `
 <div
-  className="sc-EHOje cwlNUy"
+  className="StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
 >
   <a
-    className="sc-htpNat euuGKk sc-bwzfXH fFShiM"
+    className="StyledLink-kwdrvq-0 blQXAh sc-bwzfXH kBpFOP"
     href="anUrl"
     onClick={null}
     target={null}

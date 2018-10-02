@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <label
-  className="LabelRadio-wot4p6-0 bQnqxV"
+  className="LabelRadio-wot4p6-0 bQnqxV Label-xhjve5-0 esBItP"
 >
   <input
     checked={true}

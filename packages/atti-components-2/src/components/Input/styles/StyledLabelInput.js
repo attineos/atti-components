@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
+import Label from '../../Label'
 
-const colors = css`
-  color: ${({ theme }) => theme.components.input.colors.text};
-  background: ${({ theme }) => theme.components.input.colors.background};
+const spaces = css`
+  margin-bottom: ${({ theme }) => theme.components.input.label.spaces.marginBottom};
 `
 
-const StyledLabelInput = styled.label`
-  ${colors};
+const StyledLabelInput = styled(Label)`
+  ${spaces};
   display: block;
 `
 

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import RadioButton from './RadioButton'
 import HiddenInputRadio from './HiddenInputRadio'
+import Label from '../../Label'
 
-const LabelRadio = styled.label`
+const LabelRadio = styled(Label)`
   display: flex;
   align-items: center;
   cursor: pointer;

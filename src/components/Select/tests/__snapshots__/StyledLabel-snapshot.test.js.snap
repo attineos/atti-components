@@ -2,6 +2,6 @@
 
 exports[`StyledLabel renders correctly 1`] = `
 <label
-  className="StyledLabel-sc-7lrvk2-0 bVnWMj Label-xhjve5-0 esBItP"
+  className="StyledLabel-sc-7lrvk2-0 bVnWMj Label-xhjve5-0 fQVHlM"
 />
 `;

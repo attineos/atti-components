@@ -3,13 +3,13 @@
 exports[`Input renders correctly 1`] = `
 Array [
   <label
-    className="StyledLabelInput-p62z0t-0 lhgtBc Label-xhjve5-0 esBItP"
+    className="StyledLabelInput-p62z0t-0 lhgtBc Label-xhjve5-0 fQVHlM"
     htmlFor="Atticomponents"
   >
     Atticomponents
   </label>,
   <input
-    className="InputStyle__StyledInput-sc-3f32vx-0 eHjWIv"
+    className="InputStyle__StyledInput-sc-3f32vx-0 dMGIKm"
     form={true}
     id="Atticomponents"
     name="Atticomponents"

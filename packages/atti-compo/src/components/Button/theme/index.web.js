@@ -5,7 +5,7 @@ export default ({ border, colors, opacities, spaces }) => ({
   },
   colors: {
     background: colors.primary,
-    border: colors.grey,
+    border: colors.slate,
     text: colors.white,
   },
   opacities: {

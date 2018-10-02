@@ -2,7 +2,7 @@
 
 exports[`Loader renders correctly 1`] = `
 <div
-  className="StyledLoader-d8og6-0 dzKSNL"
+  className="StyledLoader-d8og6-0 brpkVH"
   color="Atticomponents"
   type={null}
 />

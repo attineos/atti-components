@@ -10,7 +10,7 @@ import { extractProps, extractKey, extractChildrenValue, extractValue } from './
 /*
  * Folders to ignore.
  */
-const ignoreList = 'types|config|tests|theme|__snapshots__|'
+const ignoreList = 'types|config|tests|theme|facade|__snapshots__|'
 /*
  * Add this annotation in your file to prevent the script to generate snapshot for this file.
  */
@@ -29,7 +29,8 @@ const isIndex = componentPath => includes(componentPath, 'index.js')
 /*
  * Returns the component's name.
  */
-const getComponentName = componentPath => replace(path.basename(componentPath), '.js', '')
+const getComponentName = componentPath =>
+  replace(path.basename(componentPath), /(.web)?(.js)?/g, '')
 
 /*
  * Returns the component type (components or styles).
@@ -116,7 +117,7 @@ const setPropsAndChildren = (snapshotComponent, fileContent) => {
  * Iterate over each component, read it, extract its props and create
  * component-snapshot.test.js file in component/tests folder.
  */
-glob(`${componentsDir}/**/!(${ignoreList})/*.js`, (err, files) => {
+glob(`${componentsDir}/**/!(${ignoreList})/!(*.native).js`, (err, files) => {
   forEach(files, file => {
     const snapshotComponent = isIndex(file)
       ? new SnapshotComponent('index', getComponentType(file))

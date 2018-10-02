@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Label from '../../Label'
 
 const colors = css`
   color: ${({ theme }) => theme.components.textarea.label.colors.text};
@@ -11,7 +12,7 @@ const fonts = css`
   font-family: ${({ theme }) => theme.components.textarea.label.fonts.fontFamily};
 `
 
-const StyledLabelTextArea = styled.label`
+const StyledLabelTextArea = styled(Label)`
   ${colors};
   ${fonts};
   margin-bottom: ${({ theme }) => theme.components.textarea.label.spaces.marginBottom};

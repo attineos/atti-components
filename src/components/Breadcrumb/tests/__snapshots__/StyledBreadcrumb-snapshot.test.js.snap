@@ -2,6 +2,6 @@
 
 exports[`StyledBreadcrumb renders correctly 1`] = `
 <div
-  className="sc-bdVaJa djsHiJ"
+  className="StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
 />
 `;

@@ -91,6 +91,9 @@ module.exports = {
     },
   },
   webpackConfig: {
+    resolve: {
+      extensions: ['.web.js', '.js']
+    },
     module: {
       rules: [
         {

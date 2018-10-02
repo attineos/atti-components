@@ -2,6 +2,6 @@
 
 exports[`LabelCheckbox renders correctly 1`] = `
 <label
-  className="sc-htpNat hBDbF"
+  className="LabelCheckbox-sc-3x8kt7-0 khhFaj"
 />
 `;

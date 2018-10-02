@@ -5,6 +5,7 @@ import Image from './components/Image'
 import Header1 from './components/Header1'
 import Header2 from './components/Header2'
 import Header3 from './components/Header3'
+import Label from './components/Label'
 import Link from './components/Link'
 import Loader from './components/Loader'
 import Option from './components/Option'
@@ -16,6 +17,8 @@ import Text from './components/Text'
 import TextArea from './components/TextArea'
 import ThemeProvider from './components/ThemeProvider'
 
+import theme from './theme'
+
 module.exports = {
   BigText,
   Breadcrumb,
@@ -24,6 +27,7 @@ module.exports = {
   Header1,
   Header2,
   Header3,
+  Label,
   Link,
   Loader,
   Option,
@@ -34,4 +38,6 @@ module.exports = {
   Text,
   TextArea,
   ThemeProvider,
+
+  theme,
 }

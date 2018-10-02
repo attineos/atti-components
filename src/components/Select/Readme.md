@@ -1,14 +1,11 @@
 Select :
 
 ```js
-initialState = { value: '' }
-const onChangeSingleValue = e => {
-  setState({ value: e.target.value })
-}
-;<div>
-  <div> Selected value : {state.value} </div>
-  <Select id="single" onChange={onChangeSingleValue} options={['value 1', 'value 2', 'value 3']} />
-</div>
+<Select
+  id="single"
+  label="Experience"
+  options={['< 1 year', 'Between 1 and 3 years', '> 3 years']}
+/>
 ```
 
 Select with alphabetical sort :

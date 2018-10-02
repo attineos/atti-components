@@ -6,8 +6,8 @@ export default ({ border, colors, fonts, spaces }) => ({
     },
     fonts: {
       fontFamily: fonts.fontFamily,
-      fontSize: fonts.fontSize.m,
-      fontWeight: fonts.fontWeight.fw400,
+      fontSize: fonts.fontSize.fs14,
+      fontWeight: fonts.fontWeight.fw500,
     },
     spaces: {
       marginBottom: spaces.s5,
@@ -19,7 +19,7 @@ export default ({ border, colors, fonts, spaces }) => ({
       color: colors.black,
     },
     colors: {
-      text: colors.grey,
+      text: colors.slate,
       background: colors.transparent,
     },
     fonts: {

@@ -1,39 +1,27 @@
-import lighten from 'polished/lib/color/lighten'
-import darken from 'polished/lib/color/darken'
-
-/**
- * Base colors.
- */
-const baseColors = {
-  black: '#222222',
-  blue: '#3498db',
-  green: '#2ecc71',
-  grey: '#bdc3c7',
-  orange: '#f39c12',
-  primary: '#f29400',
-  secondary: '#0083f2',
-  red: '#e74c3c',
-  transparent: 'transparent',
-  white: 'white',
-}
-
 const colors = {
-  ...baseColors,
-
-  lightBlue: lighten(0.3, baseColors.blue),
-  darkBlue: darken(0.3, baseColors.blue),
-
-  lightGreen: lighten(0.3, baseColors.green),
-  darkGreen: darken(0.3, baseColors.green),
-
-  lightGrey: lighten(0.3, baseColors.grey),
-  darkGrey: darken(0.3, baseColors.grey),
-
-  lightOrange: lighten(0.3, baseColors.orange),
-  darkOrange: darken(0.3, baseColors.orange),
-
-  lightRed: lighten(0.3, baseColors.red),
-  darkRed: darken(0.3, baseColors.red),
+  primary: '#7ACFD6',
+  secondary: '#479EA5',
+  tertiary: '#DB9074',
+  black: '#1F2D3D',
+  white: '#FFFFFF',
+  transparent: 'transparent',
+  steel: '#273444',
+  slate: '#3C4858',
+  silver: '#8492A6',
+  smoke: '#E0E6ED',
+  darkSmoke: '#D3DCE6',
+  extraDarkSmoke: '#C0CCDA',
+  snow: '#F9FAFC',
+  darkSnow: '#EFF2F7',
+  extraDarkSnow: '#E5E9F2',
+  info: '#1FB6FF',
+  success: '#13CE66',
+  warning: '#FFC82C',
+  danger: '#FF4949',
+  infoPastel: '#DBEDF5',
+  successPastel: '#E1F6DC',
+  warningPastel: '#FAF3E1',
+  dangerPastel: '#FBEBE8',
 }
 
 export default colors

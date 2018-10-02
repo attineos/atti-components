@@ -2,22 +2,22 @@
 export default ({ border, colors, spaces, fonts }) => ({
   colors: {
     background: {
-      error: colors.lightRed,
-      success: colors.lightGreen,
-      warning: colors.lightOrange,
-      info: colors.lightBlue,
+      error: colors.dangerPastel,
+      success: colors.successPastel,
+      warning: colors.warningPastel,
+      info: colors.infoPastel,
     },
     text: {
-      error: colors.darkRed,
-      success: colors.darkGreen,
-      warning: colors.darkOrange,
-      info: colors.darkBlue,
+      error: colors.danger,
+      success: colors.success,
+      warning: colors.warning,
+      info: colors.info,
     },
     border: {
-      error: colors.red,
-      success: colors.green,
-      warning: colors.orange,
-      info: colors.blue,
+      error: colors.danger,
+      success: colors.success,
+      warning: colors.warning,
+      info: colors.info,
     },
   },
   spaces: {

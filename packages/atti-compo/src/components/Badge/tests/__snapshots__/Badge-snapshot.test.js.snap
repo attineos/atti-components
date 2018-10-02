@@ -3,7 +3,7 @@
 exports[`Badge renders correctly 1`] = `
 <sup>
   <span
-    className="sc-htpNat kHxaTW sc-bwzfXH cBgBua"
+    className="StyledBadge-sc-14ha03a-0 hQfWIa BigText-sc-1216e5t-0-span hJsDgl"
     type={null}
   >
     <div />

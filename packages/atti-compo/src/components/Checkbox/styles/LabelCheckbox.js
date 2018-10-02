@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import CheckboxBox from './CheckboxBox'
 import HiddenInputCheckbox from './HiddenInputCheckbox'
 
-const LabelCheckbox = styled.label`
+import Label from '../../Label'
+
+const LabelCheckbox = styled(Label)`
   display: flex;
   align-items: center;
   cursor: pointer;

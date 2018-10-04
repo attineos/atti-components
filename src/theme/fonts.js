@@ -10,6 +10,7 @@ const fonts = {
     fontFamilySecondary: fontFamilySecondary,
   },
   fontSize: {
+    fs8: '8px',
     fs10: '10px',
     fs12: '12px',
     fs14: '14px',
@@ -33,6 +34,7 @@ const fonts = {
   },
   fontFamily: fontFamilyPrimary,
   lineHeight: {
+    lh8: '8px',
     lh10: '10px',
     lh12: '12px',
     lh14: '14px',

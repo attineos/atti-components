@@ -4,7 +4,7 @@ import Text from '../../Text'
 
 const border = css`
   border: ${({ theme }) =>
-    `${theme.components.button.border.borderWidth} solid ${theme.components.button.colors.border}`}
+    `${theme.components.button.border.borderWidth} solid ${theme.components.button.colors.border}`};
   border-radius: ${({ theme }) => theme.components.button.border.borderRadius};
 `
 
@@ -25,7 +25,7 @@ const StyledButton = styled(Text.withComponent('button'))`
   ${border};
   ${colors};
   ${spaces};
-  height: 36px;
+  min-height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;

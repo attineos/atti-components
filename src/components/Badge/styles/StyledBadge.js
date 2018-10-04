@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import BigText from '../../BigText'
 
 const borders = css`
   border-radius: ${({ theme }) => theme.components.badge.borders.radius};
@@ -19,9 +18,11 @@ const fonts = css`
   line-height: ${({ theme }) => theme.components.badge.fonts.lineHeight};
   font-size: ${({ theme }) => theme.components.badge.fonts.fontSize};
   font-weight: ${({ theme }) => theme.components.badge.fonts.fontWeight};
+  font-family: ${({ theme }) => theme.components.badge.fonts.fontFamily};
+  letter-spacing: ${({ theme }) => theme.components.badge.fonts.letterSpacing};
 `
 
-const StyledBadge = styled(BigText.withComponent('span'))`
+const StyledBadge = styled.span`
   ${borders}
   ${spaces}
   ${colors}

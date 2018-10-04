@@ -4,16 +4,16 @@ export default ({ border, colors, sizes, spaces }) => ({
       radius: border.radius.brCircle,
     },
     colors: {
-      background: colors.secondary,
+      background: colors.primary,
       backgroundHover: colors.primary,
       text: colors.primary,
     },
     sizes: {
-      heights: sizes.heights.h8,
-      widths: sizes.widths.w8,
+      heights: sizes.heights.h6,
+      widths: sizes.widths.w6,
     },
     spaces: {
-      marginRight: spaces.s7,
+      marginRight: spaces.s5,
     },
   },
 })

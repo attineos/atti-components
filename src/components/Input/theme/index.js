@@ -7,7 +7,7 @@ export default ({ colors, spaces }) => ({
   },
   label: {
     spaces: {
-      marginBottom: spaces.s3,
+      marginBottom: spaces.s4,
     },
   },
 })

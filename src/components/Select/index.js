@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Sort from './types/sort'
 
+import SelectContainer from './styles/SelectContainer'
 import StyledSelect from './styles/StyledSelect'
 import StyledLabel from './styles/StyledLabel'
 
@@ -23,9 +24,11 @@ const Select = ({ id, isMulti, label, name, onChange, options, size, sort }) => 
   return (
     <React.Fragment>
       {label && <StyledLabel htmlFor={id}>{label}</StyledLabel>}
-      <StyledSelect id={id} name={name} onChange={onChange} multiple={isMulti} size={size}>
-        {optionsElements}
-      </StyledSelect>
+      <SelectContainer>
+        <StyledSelect id={id} name={name} onChange={onChange} multiple={isMulti} size={size}>
+          {optionsElements}
+        </StyledSelect>
+      </SelectContainer>
     </React.Fragment>
   )
 }

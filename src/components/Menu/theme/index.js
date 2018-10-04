@@ -1,6 +1,6 @@
 export default ({ colors, fonts }) => ({
   colors: {
-    background: colors.secondary,
+    background: colors.white,
     text: colors.black,
   },
   fonts: {

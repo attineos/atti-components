@@ -9,9 +9,10 @@ const colors = css`
 const StyledLink = styled(Text.withComponent('a'))`
   ${colors};
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 
   &:hover {
-    text-decoration: underline;
+    border-color: ${({ theme }) => theme.colors.secondary};
   }
 `
 

@@ -6,12 +6,12 @@ export default ({ border, colors, fonts, spaces }) => ({
   },
   select: {
     border: {
-      width: border.widths.bw1,
-      color: colors.black,
+      width: border.widths.bw2,
+      color: colors.primary,
     },
     colors: {
-      background: colors.transparent,
-      text: colors.black,
+      background: colors.primary,
+      text: colors.white,
     },
     fonts: {
       fontFamily: fonts.fontFamily,

@@ -1,6 +1,6 @@
 export default ({ border, colors, sizes }) => ({
   border: {
-    borderColor: colors.black,
+    borderColor: colors.smoke,
     borderWidth: border.widths.bw2,
   },
 

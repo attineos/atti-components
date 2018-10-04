@@ -2,16 +2,16 @@ export default ({ colors, sizes, spaces }) => ({
   checkboxBox: {
     colors: {
       background: colors.secondary,
-      backgroundHover: colors.primary,
+      backgroundHover: colors.success,
       text: colors.primary,
     },
     sizes: {
-      heights: sizes.heights.h8,
-      widths: sizes.widths.w8,
+      heights: sizes.heights.h6,
+      widths: sizes.widths.w6,
       widthCheckSign: sizes.widths.w3,
     },
     spaces: {
-      marginRight: spaces.s7,
+      marginRight: spaces.s5,
     },
   },
 })

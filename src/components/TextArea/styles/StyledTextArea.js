@@ -25,6 +25,15 @@ const StyledTextArea = styled.textarea`
   ${colors};
   ${fonts};
   ${spaces};
+
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.extraDarkSmoke};
+  }
+
+  &:focus {
+    border-color: ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.secondary};
+  }
 `
 
 export default StyledTextArea

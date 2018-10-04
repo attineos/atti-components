@@ -18,13 +18,23 @@ const colors = css`
 `
 
 const spaces = css`
-  padding: ${({ theme }) => theme.components.button.spaces.padding};
+  padding: 0 ${({ theme }) => theme.components.button.spaces.padding};
 `
 
 const StyledButton = styled(Text.withComponent('button'))`
   ${border};
   ${colors};
   ${spaces};
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+
+  border: 0;
+  border-radius: 3px;
+
   cursor: pointer;
   box-sizing: border-box;
   user-select: none;

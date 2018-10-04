@@ -1,12 +1,12 @@
 export default ({ border, colors, spaces }) => ({
   border: {
-    color: colors.black,
+    color: colors.darkSmoke,
     style: 'solid',
     width: border.widths.bw1,
   },
   colors: {
     background: colors.white,
-    selected: colors.secondary,
+    selected: colors.successPastel,
     text: colors.primary,
   },
   spaces: {

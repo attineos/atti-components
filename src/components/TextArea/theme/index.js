@@ -6,7 +6,7 @@ export default ({ border, colors, fonts, spaces }) => ({
     },
     fonts: {
       fontFamily: fonts.fontFamily,
-      fontSize: fonts.fontSize.fs14,
+      fontSize: fonts.fontSize.fs16,
       fontWeight: fonts.fontWeight.fw500,
     },
     spaces: {
@@ -15,11 +15,11 @@ export default ({ border, colors, fonts, spaces }) => ({
   },
   textarea: {
     border: {
-      width: border.widths.bw1,
-      color: colors.black,
+      width: border.widths.bw2,
+      color: colors.extraDarkSmoke,
     },
     colors: {
-      text: colors.slate,
+      text: colors.steel,
       background: colors.transparent,
     },
     fonts: {

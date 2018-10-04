@@ -16,7 +16,17 @@ const StyledSelect = styled.select`
   ${fonts};
   border: ${({ theme }) => theme.components.select.select.border.width} solid
     ${({ theme }) => theme.components.select.select.border.color};
+  border-radius: 3px;
   margin-bottom: ${({ theme }) => theme.components.select.select.spaces.marginBottom};
+
+  height: 36px;
+  padding: 0px 30px 0 10px;
+  position: relative;
+
+  &:focus {
+    border-color: ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.secondary};
+  }
 `
 
 export default StyledSelect

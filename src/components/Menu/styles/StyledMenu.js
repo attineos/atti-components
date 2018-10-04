@@ -14,6 +14,11 @@ const fonts = css`
 const StyledMenu = styled.nav`
   ${colors};
   ${fonts};
+
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
 `
 
 export default StyledMenu

@@ -27,6 +27,9 @@ const StyledBadge = styled(BigText.withComponent('span'))`
   ${colors}
   ${fonts}
   display: ${({ theme }) => theme.components.badge.display};
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
 `
 
 export default StyledBadge

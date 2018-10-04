@@ -25,13 +25,13 @@ export default ({ border, colors, spaces, fonts }) => ({
   },
   border: {
     radius: border.radius.br3,
-    size: border.widths.bw1,
+    size: border.widths.bw2,
   },
   sizes: {
-    width: '90%',
+    width: 'auto',
   },
   fonts: {
-    fontWeight: fonts.fontWeight.fw800,
+    fontWeight: fonts.fontWeight.fw500,
     lineHeight: fonts.lineHeight.lh10,
   },
 })

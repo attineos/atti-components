@@ -1,7 +1,7 @@
-export default ({ border, colors, sizes }) => ({
-  border: {
+export default ({ borders, colors, sizes }) => ({
+  borders: {
     borderColor: colors.smoke,
-    borderWidth: border.widths.bw2,
+    borderWidth: borders.widths.bw2,
   },
 
   colors: {

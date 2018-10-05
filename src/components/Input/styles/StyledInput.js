@@ -1,20 +1,33 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const borders = css`
+  border: ${({ theme }) => theme.components.input.input.borders.width} solid
+    ${({ theme }) => theme.components.input.input.colors.border};
+  border-radius: ${({ theme }) => theme.components.input.input.borders.radius};
+`
+
+const colors = css`
+  color: ${({ theme }) => theme.components.input.input.colors.text};
+  caret-color: ${({ theme }) => theme.components.input.input.colors.caret};
+  background-color: ${({ theme }) => theme.components.input.input.colors.background};
+`
+
+const forms = css`
+  min-height: ${({ theme }) => theme.components.input.input.forms.minHeight};
+`
 
 const StyledInput = styled.input`
-  color: ${({ theme }) => theme.colors.steel};
-  caret-color: ${({ theme }) => theme.colors.steel};
-  background-color: ${({ theme }) => theme.components.input.input.colors.background};
+  ${borders};
+  ${colors};
+  ${forms};
 
-  height: 36px;
   padding: 0 10px;
-  border: 2px solid ${({ theme }) => theme.colors.extraDarkSmoke};
-  border-radius: 3px;
 
   font-size: 16px;
   font-family: Roboto;
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.extraDarkSmoke};
+    color: ${({ theme }) => theme.components.input.input.colors.placeholder};
   }
 
   &:focus {

@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
-const border = css`
-  border: ${({ theme }) => theme.components.textarea.textarea.border.width} solid
-    ${({ theme }) => theme.components.textarea.textarea.border.color};
+const borders = css`
+  border: ${({ theme }) => theme.components.textarea.textarea.borders.width} solid
+    ${({ theme }) => theme.components.textarea.textarea.borders.color};
 `
 
 const colors = css`
@@ -21,7 +21,7 @@ const spaces = css`
 `
 
 const StyledTextArea = styled.textarea`
-  ${border};
+  ${borders};
   ${colors};
   ${fonts};
   ${spaces};

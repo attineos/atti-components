@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 import Text from '../../Text'
 
-const border = css`
-  border: ${({ theme }) => theme.components.progressbar.border.borderWidth};
-  border-color: ${({ theme }) => theme.components.progressbar.border.borderColor};
+const borders = css`
+  border: ${({ theme }) => theme.components.progressbar.borders.borderWidth};
+  border-color: ${({ theme }) => theme.components.progressbar.borders.borderColor};
   border-radius: 25px;
   box-sizing: border-box;
   border-style: solid;
@@ -50,7 +50,7 @@ const size = css`
 
 const StyledProgressbar = styled.div`
   ${before};
-  ${border};
+  ${borders};
   ${colors};
   ${positionFirstComponent} ${positionText};
   ${size};

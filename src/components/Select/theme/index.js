@@ -1,12 +1,12 @@
-export default ({ border, colors, fonts, spaces }) => ({
+export default ({ borders, colors, fonts, spaces }) => ({
   label: {
     spaces: {
       marginBottom: spaces.s3,
     },
   },
   select: {
-    border: {
-      width: border.widths.bw2,
+    borders: {
+      width: borders.widths.bw2,
       color: colors.primary,
     },
     colors: {

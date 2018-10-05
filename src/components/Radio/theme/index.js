@@ -1,7 +1,7 @@
-export default ({ border, colors, sizes, spaces }) => ({
+export default ({ borders, colors, sizes, spaces }) => ({
   radioButton: {
-    border: {
-      radius: border.radius.brCircle,
+    borders: {
+      radius: borders.radius.brCircle,
     },
     colors: {
       background: colors.primary,

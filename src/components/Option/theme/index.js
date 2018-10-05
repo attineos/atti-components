@@ -1,8 +1,8 @@
-export default ({ border, colors, spaces }) => ({
-  border: {
+export default ({ borders, colors, spaces }) => ({
+  borders: {
     color: colors.darkSmoke,
     style: 'solid',
-    width: border.widths.bw1,
+    width: borders.widths.bw1,
   },
   colors: {
     background: colors.white,

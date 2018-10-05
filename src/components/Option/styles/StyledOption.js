@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components'
 
-const border = css`
-  border: ${({ theme }) => `${theme.components.option.border.width} ${
-    theme.components.option.border.style
+const borders = css`
+  border: ${({ theme }) => `${theme.components.option.borders.width} ${
+    theme.components.option.borders.style
   }
-    ${theme.components.option.border.color}`};
+    ${theme.components.option.borders.color}`};
 `
 
 const colors = css`
@@ -14,7 +14,7 @@ const colors = css`
 `
 
 const StyledOption = styled.div`
-  ${border};
+  ${borders};
   ${colors};
   padding: ${({ theme }) => theme.components.option.spaces.padding};
   font-family: ${({ theme }) => theme.fonts.global.fontFamilyPrimary};

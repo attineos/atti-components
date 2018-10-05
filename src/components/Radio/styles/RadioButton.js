@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
-const border = css`
-  border-radius: ${({ theme }) => theme.components.radio.radioButton.border.radius};
+const borders = css`
+  border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
   border: 2px solid ${({ theme }) => theme.colors.extraDarkSmoke};
 `
 
@@ -15,7 +15,7 @@ const sizes = css`
 `
 
 const RadioButton = styled.span`
-  ${border};
+  ${borders};
   ${colors};
   ${sizes};
   display: flex;
@@ -30,7 +30,7 @@ const RadioButton = styled.span`
     width: calc(${({ theme }) => theme.components.radio.radioButton.sizes.widths} / 2);
     height: calc(${({ theme }) => theme.components.radio.radioButton.sizes.heights} / 2);
     background-color: ${({ theme }) => theme.components.radio.radioButton.colors.background};
-    border-radius: ${({ theme }) => theme.components.radio.radioButton.border.radius};
+    border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
   }
 `
 

@@ -1,5 +1,5 @@
 // Create the theme part for Alert. Please add a call into the componentsFactory.
-export default ({ border, colors, spaces, fonts }) => ({
+export default ({ borders, colors, spaces, fonts }) => ({
   colors: {
     background: {
       error: colors.dangerPastel,
@@ -13,7 +13,7 @@ export default ({ border, colors, spaces, fonts }) => ({
       warning: colors.warning,
       info: colors.info,
     },
-    border: {
+    borders: {
       error: colors.danger,
       success: colors.success,
       warning: colors.warning,
@@ -23,9 +23,9 @@ export default ({ border, colors, spaces, fonts }) => ({
   spaces: {
     padding: spaces.s6,
   },
-  border: {
-    radius: border.radius.br3,
-    size: border.widths.bw2,
+  borders: {
+    radius: borders.radius.br3,
+    size: borders.widths.bw2,
   },
   sizes: {
     width: 'auto',

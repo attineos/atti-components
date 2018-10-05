@@ -22,22 +22,22 @@ const rotate360 = keyframes`
 // Return the animation
 const animation = css`
   ${({ theme }) => `
-  animation: 
-    ${rotate360}  
-    ${theme.components.loader.animations.speed} 
-    ${theme.components.loader.animations.type} 
+  animation:
+    ${rotate360}
+    ${theme.components.loader.animations.speed}
+    ${theme.components.loader.animations.type}
     infinite;
   `};
 `
 
 // Return the color
-const border = css`
+const borders = css`
   ${({ color, theme }) => `
-  border: 
-    ${theme.components.loader.borders.thickness} 
-    solid 
+  border:
+    ${theme.components.loader.borders.thickness}
+    solid
     ${theme.components.loader.colors.backgroundColor};
-  border-top: ${theme.components.loader.borders.thickness} solid; 
+  border-top: ${theme.components.loader.borders.thickness} solid;
   border-top-color: ${
     theme.colors[color]
       ? theme.colors[color]
@@ -50,7 +50,7 @@ const border = css`
 
 const StyledLoader = styled.div`
   ${animation};
-  ${border};
+  ${borders};
   ${size};
 `
 

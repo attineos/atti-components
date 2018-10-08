@@ -1,10 +1,10 @@
-export default ({ colors, fonts }) => ({
-  colors: {
-    text: colors.secondary,
+export default ({ borders, colors }) => ({
+  borders: {
+    width: borders.widths.bw1,
   },
-  fonts: {
-    fontFamily: fonts.fontFamily,
-    fontSize: fonts.fontSize.m,
-    fontWeight: fonts.fontWeight.fw400,
+  colors: {
+    border: colors.transparent,
+    borderHover: colors.secondary,
+    text: colors.secondary,
   },
 })

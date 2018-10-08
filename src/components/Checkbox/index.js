@@ -9,7 +9,6 @@ import LabelCheckbox from './styles/LabelCheckbox'
  * A checkbox button.
  *
  * @version 0.1
- * @author Joseph Lefevre
  */
 class Checkbox extends React.Component {
   static defaultProps = {
@@ -64,6 +63,7 @@ class Checkbox extends React.Component {
     )
   }
 
+  // TODO: improve by returning only the designed checkbox if there is no label
   render() {
     const { id, label, name, value } = this.props
     return (

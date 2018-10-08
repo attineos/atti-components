@@ -13,12 +13,12 @@ const LabelCheckbox = styled(Label)`
   // Modifications of the color background of the checkbox :
   &:hover ${HiddenInputCheckbox} + ${CheckboxBox} {
     background: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundHover};
-    border-color: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundHover};
+    border-color: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.borderHover};
   }
 
   ${HiddenInputCheckbox}:checked + ${CheckboxBox} {
-    background: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundHover};
-    border-color: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundHover};
+    background: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundChecked};
+    border-color: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.borderChecked};
     &:after {
       display: block;
     }

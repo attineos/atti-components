@@ -17,7 +17,7 @@ const StyledOption = styled.div`
   ${borders};
   ${colors};
   padding: ${({ theme }) => theme.components.option.spaces.padding};
-  font-family: ${({ theme }) => theme.fonts.global.fontFamilyPrimary};
+  font-family: ${({ theme }) => theme.fonts.fontFamily.primary};
 `
 
 export default StyledOption

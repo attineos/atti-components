@@ -12,7 +12,7 @@ export default ({ colors, fonts, spaces }) => ({
     },
   },
   fonts: {
-    fontFamily: fonts.fontFamily,
+    fontFamily: fonts.fontFamily.primary,
     fontSize: fonts.fontSize.fs14,
     fontWeight: fonts.fontWeight.fw100,
   },

@@ -20,7 +20,7 @@ export default ({ colors, fonts, spaces }) => ({
     fontSize: fonts.fontSize.fs8,
     lineHeight: fonts.lineHeight.lh8,
     fontWeight: fonts.fontWeight.fw600,
-    fontFamily: fonts.global.fontFamilyPrimary,
+    fontFamily: fonts.fontFamily.primary,
     letterSpacing: '1.5px',
   },
   display: 'inline-flex',

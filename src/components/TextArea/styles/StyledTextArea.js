@@ -2,17 +2,17 @@ import styled, { css } from 'styled-components'
 
 const borders = css`
   border: ${({ theme }) => theme.components.textarea.textarea.borders.width} solid
-    ${({ theme }) => theme.components.textarea.textarea.borders.color};
+    ${({ theme }) => theme.components.textarea.textarea.colors.border};
+  border-radius: ${({ theme }) => theme.components.textarea.textarea.borders.radius};
 `
 
 const colors = css`
-  background: ${({ theme }) => theme.components.textarea.textarea.colors.background};
   color: ${({ theme }) => theme.components.textarea.textarea.colors.text};
+  caret-color: ${({ theme }) => theme.components.textarea.textarea.colors.caret};
 `
 
 const fonts = css`
   font-size: ${({ theme }) => theme.components.textarea.textarea.fonts.fontSize};
-  font-weight: ${({ theme }) => theme.components.textarea.textarea.fonts.fontWeight};
   font-family: ${({ theme }) => theme.components.textarea.textarea.fonts.fontFamily};
 `
 
@@ -27,12 +27,13 @@ const StyledTextArea = styled.textarea`
   ${spaces};
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.extraDarkSmoke};
+    color: ${({ theme }) => theme.components.textarea.textarea.colors.placeholder};
   }
 
   &:focus {
-    border-color: ${({ theme }) => theme.colors.secondary};
-    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.secondary};
+    border-color: ${({ theme }) => theme.components.textarea.textarea.colors.borderFocus};
+    box-shadow: 0px 0px 2px 0px
+      ${({ theme }) => theme.components.textarea.textarea.colors.boxShadowFocus};
   }
 `
 

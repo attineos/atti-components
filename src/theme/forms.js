@@ -1,16 +1,22 @@
 /**
  * All the rules common to multiple form elements.
  */
+
+import borders from './borders'
+import colors from './colors'
+
 const forms = {
   borders: {
-    radius: '3px',
-    width: '2px',
+    radius: borders.radius.br3,
+    width: borders.widths.bw2,
   },
   colors: {
-    border: 'extraDarkSmoke',
-    caret: 'steel',
-    placeholder: 'extraDarkSmoke',
-    text: 'steel',
+    border: colors.extraDarkSmoke,
+    borderFocus: colors.secondary,
+    boxShadowFocus: colors.secondary,
+    caret: colors.steel,
+    placeholder: colors.extraDarkSmoke,
+    text: colors.steel,
   },
   sizes: {
     minHeight: '36px',

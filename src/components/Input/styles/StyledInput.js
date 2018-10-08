@@ -9,30 +9,35 @@ const borders = css`
 const colors = css`
   color: ${({ theme }) => theme.components.input.input.colors.text};
   caret-color: ${({ theme }) => theme.components.input.input.colors.caret};
-  background-color: ${({ theme }) => theme.components.input.input.colors.background};
 `
 
-const forms = css`
-  min-height: ${({ theme }) => theme.components.input.input.forms.minHeight};
+const fonts = css`
+  font-size: ${({ theme }) => theme.components.input.input.fonts.fontSize};
+  font-family: ${({ theme }) => theme.components.input.input.fonts.fontFamily};
+`
+
+const sizes = css`
+  min-height: ${({ theme }) => theme.components.input.input.sizes.minHeight};
+`
+
+const spaces = css`
+  padding: 0 ${({ theme }) => theme.components.input.input.spaces.paddingWidth};
 `
 
 const StyledInput = styled.input`
   ${borders};
   ${colors};
-  ${forms};
-
-  padding: 0 10px;
-
-  font-size: 16px;
-  font-family: Roboto;
+  ${fonts};
+  ${sizes};
+  ${spaces};
 
   ::placeholder {
     color: ${({ theme }) => theme.components.input.input.colors.placeholder};
   }
 
   &:focus {
-    border-color: ${({ theme }) => theme.colors.secondary};
-    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.colors.secondary};
+    border-color: ${({ theme }) => theme.components.input.input.colors.borderFocus};
+    box-shadow: 0px 0px 2px 0px ${({ theme }) => theme.components.input.input.colors.boxShadowFocus};
   }
 `
 

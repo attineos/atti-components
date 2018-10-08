@@ -1,14 +1,23 @@
-export default ({ colors, sizes, spaces }) => ({
+export default ({ borders, colors, forms, sizes, spaces }) => ({
   checkboxBox: {
+    borders: {
+      radius: forms.borders.radius,
+      width: forms.borders.widths,
+    },
+    checkSign: {
+      color: colors.white,
+      thickness: borders.widths.bw3,
+    },
     colors: {
-      background: colors.secondary,
       backgroundHover: colors.success,
-      text: colors.primary,
+      backgroundChecked: colors.success,
+      border: forms.colors.border,
+      borderHover: colors.success,
+      borderChecked: colors.success,
     },
     sizes: {
-      heights: sizes.heights.h6,
-      widths: sizes.widths.w6,
-      widthCheckSign: sizes.widths.w3,
+      height: sizes.heights.h6,
+      width: sizes.widths.w6,
     },
     spaces: {
       marginRight: spaces.s5,

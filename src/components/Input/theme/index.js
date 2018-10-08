@@ -1,18 +1,26 @@
-export default ({ borders, colors, forms, spaces }) => ({
+export default ({ fonts, forms, spaces }) => ({
   input: {
     borders: {
-      radius: borders.radius.br3,
-      width: borders.widths.bw2,
+      radius: forms.borders.radius,
+      width: forms.borders.width,
     },
     colors: {
-      background: colors.white,
-      border: colors.extraDarkSmoke,
-      caret: colors.steel,
-      placeholder: colors.extraDarkSmoke,
-      text: colors.steel,
+      border: forms.colors.border,
+      borderFocus: forms.colors.borderFocus,
+      boxShadowFocus: forms.colors.boxShadowFocus,
+      caret: forms.colors.caret,
+      placeholder: forms.colors.placeholder,
+      text: forms.colors.text,
     },
-    forms: {
+    fonts: {
+      fontFamily: fonts.fontFamily.primary,
+      fontSize: fonts.fontSize.fs16,
+    },
+    sizes: {
       minHeight: forms.sizes.minHeight,
+    },
+    spaces: {
+      paddingWidth: spaces.s5,
     },
   },
   label: {

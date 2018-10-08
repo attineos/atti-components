@@ -1,34 +1,28 @@
-export default ({ borders, colors, fonts, spaces }) => ({
+export default ({ fonts, forms, spaces }) => ({
   label: {
-    colors: {
-      text: colors.black,
-      background: colors.transparent,
-    },
-    fonts: {
-      fontFamily: fonts.fontFamily,
-      fontSize: fonts.fontSize.fs16,
-      fontWeight: fonts.fontWeight.fw500,
-    },
     spaces: {
       marginBottom: spaces.s5,
     },
   },
   textarea: {
     borders: {
-      width: borders.widths.bw2,
-      color: colors.extraDarkSmoke,
+      radius: forms.borders.radius,
+      width: forms.borders.width,
     },
     colors: {
-      text: colors.steel,
-      background: colors.transparent,
+      border: forms.colors.border,
+      borderFocus: forms.colors.borderFocus,
+      boxShadowFocus: forms.colors.boxShadowFocus,
+      caret: forms.colors.caret,
+      placeholder: forms.colors.placeholder,
+      text: forms.colors.text,
     },
     fonts: {
-      fontFamily: fonts.fontFamily,
-      fontSize: fonts.fontSize.m,
-      fontWeight: fonts.fontWeight.fw400,
+      fontFamily: fonts.fontFamily.primary,
+      fontSize: fonts.fontSize.fs16,
     },
     spaces: {
-      padding: spaces.s4,
+      padding: spaces.s5,
     },
   },
 })

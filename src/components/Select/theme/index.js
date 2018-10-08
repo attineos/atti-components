@@ -14,7 +14,7 @@ export default ({ borders, colors, fonts, spaces }) => ({
       text: colors.white,
     },
     fonts: {
-      fontFamily: fonts.fontFamily,
+      fontFamily: fonts.fontFamily.primary,
       fontSize: fonts.fontSize.l,
       fontWeight: fonts.fontWeight.fw100,
     },

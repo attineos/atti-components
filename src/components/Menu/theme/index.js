@@ -4,7 +4,7 @@ export default ({ colors, fonts }) => ({
     text: colors.black,
   },
   fonts: {
-    fontFamily: fonts.fontFamily,
+    fontFamily: fonts.fontFamily.primary,
     fontSize: fonts.fontSize.xl,
     fontWeight: fonts.fontWeight.fw100,
   },

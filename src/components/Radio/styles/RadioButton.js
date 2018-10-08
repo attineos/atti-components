@@ -2,11 +2,8 @@ import styled, { css } from 'styled-components'
 
 const borders = css`
   border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
-  border: 2px solid ${({ theme }) => theme.colors.extraDarkSmoke};
-`
-
-const colors = css`
-  color: ${({ theme }) => theme.components.radio.radioButton.colors.text};
+  border: ${({ theme }) => theme.components.radio.radioButton.borders.width} solid
+    ${({ theme }) => theme.colors.extraDarkSmoke};
 `
 
 const sizes = css`
@@ -16,7 +13,6 @@ const sizes = css`
 
 const RadioButton = styled.span`
   ${borders};
-  ${colors};
   ${sizes};
   display: flex;
   align-items: center;
@@ -27,9 +23,9 @@ const RadioButton = styled.span`
   &:after {
     content: ' ';
     display: none;
+    background-color: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundChecked};
     width: calc(${({ theme }) => theme.components.radio.radioButton.sizes.widths} / 2);
     height: calc(${({ theme }) => theme.components.radio.radioButton.sizes.heights} / 2);
-    background-color: ${({ theme }) => theme.components.radio.radioButton.colors.background};
     border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
   }
 `

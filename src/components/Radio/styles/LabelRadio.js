@@ -13,6 +13,7 @@ const LabelRadio = styled(Label)`
   &:hover ${HiddenInputRadio} + ${RadioButton} {
     &:after {
       display: block;
+      background-color: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundHover};
     }
   }
 

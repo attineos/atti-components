@@ -2,7 +2,7 @@ export default ({ borders, colors, forms, sizes, spaces }) => ({
   checkboxBox: {
     borders: {
       radius: forms.borders.radius,
-      width: forms.borders.widths,
+      width: forms.borders.width,
     },
     checkSign: {
       color: colors.white,

@@ -1,4 +1,4 @@
-export default ({ borders, colors, fonts, spaces }) => ({
+export default ({ colors, forms, sizes, spaces }) => ({
   label: {
     spaces: {
       marginBottom: spaces.s3,
@@ -6,20 +6,28 @@ export default ({ borders, colors, fonts, spaces }) => ({
   },
   select: {
     borders: {
-      width: borders.widths.bw2,
-      color: colors.primary,
+      radius: forms.borders.radius,
+      width: forms.borders.width,
     },
     colors: {
+      arrow: colors.white,
       background: colors.primary,
+      border: forms.colors.border,
+      borderFocus: forms.colors.borderFocus,
+      boxShadowFocus: forms.colors.boxShadowFocus,
+      separator: colors.white,
       text: colors.white,
     },
-    fonts: {
-      fontFamily: fonts.fontFamily.primary,
-      fontSize: fonts.fontSize.l,
-      fontWeight: fonts.fontWeight.fw100,
+    sizes: {
+      arrowHeight: '5px',
+      arrowWidth: '10px',
+      minHeight: forms.sizes.minHeight,
+      separatorWidth: sizes.widths.w1,
     },
     spaces: {
-      marginBottom: spaces.s3,
+      paddingHeight: spaces.s4,
+      paddingLeft: spaces.s5,
+      paddingRight: spaces.s14,
     },
   },
 })

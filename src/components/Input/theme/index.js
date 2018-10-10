@@ -1,4 +1,4 @@
-export default ({ fonts, forms, spaces }) => ({
+export default ({ forms, spaces }) => ({
   input: {
     borders: {
       radius: forms.borders.radius,
@@ -11,10 +11,6 @@ export default ({ fonts, forms, spaces }) => ({
       caret: forms.colors.caret,
       placeholder: forms.colors.placeholder,
       text: forms.colors.text,
-    },
-    fonts: {
-      fontFamily: fonts.fontFamily.primary,
-      fontSize: fonts.fontSize.fs16,
     },
     sizes: {
       minHeight: forms.sizes.minHeight,

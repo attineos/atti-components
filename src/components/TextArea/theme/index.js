@@ -1,4 +1,4 @@
-export default ({ fonts, forms, spaces }) => ({
+export default ({ forms, spaces }) => ({
   label: {
     spaces: {
       marginBottom: spaces.s5,
@@ -16,10 +16,6 @@ export default ({ fonts, forms, spaces }) => ({
       caret: forms.colors.caret,
       placeholder: forms.colors.placeholder,
       text: forms.colors.text,
-    },
-    fonts: {
-      fontFamily: fonts.fontFamily.primary,
-      fontSize: fonts.fontSize.fs16,
     },
     spaces: {
       padding: spaces.s5,

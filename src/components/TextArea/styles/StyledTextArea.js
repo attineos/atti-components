@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Text from '../../Text'
 
 const borders = css`
   border: ${({ theme }) => theme.components.textarea.textarea.borders.width} solid
@@ -11,19 +12,13 @@ const colors = css`
   caret-color: ${({ theme }) => theme.components.textarea.textarea.colors.caret};
 `
 
-const fonts = css`
-  font-size: ${({ theme }) => theme.components.textarea.textarea.fonts.fontSize};
-  font-family: ${({ theme }) => theme.components.textarea.textarea.fonts.fontFamily};
-`
-
 const spaces = css`
   padding: ${({ theme }) => theme.components.textarea.textarea.spaces.padding};
 `
 
-const StyledTextArea = styled.textarea`
+const StyledTextArea = styled(Text.withComponent('textarea'))`
   ${borders};
   ${colors};
-  ${fonts};
   ${spaces};
 
   ::placeholder {

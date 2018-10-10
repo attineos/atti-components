@@ -2,18 +2,16 @@ import styled, { css } from 'styled-components'
 import Text from '../../Text'
 
 const borders = css`
-  border: ${({ theme }) => theme.components.progressbar.borders.borderWidth};
-  border-color: ${({ theme }) => theme.components.progressbar.borders.borderColor};
+  border: ${({ theme }) => theme.components.progressbar.borders.borderWidth} solid
+    ${({ theme }) => theme.components.progressbar.borders.borderColor};
   border-radius: 25px;
-  box-sizing: border-box;
-  border-style: solid;
 `
 
 const before = css`
   &:before {
     background: ${({ theme }) => theme.components.progressbar.colors.fill};
     border-radius: 25px;
-    content: '';
+    content: ' ';
     height: 100%;
     position: absolute;
     transition: width ${({ fillingSpeed }) => fillingSpeed}ms;
@@ -43,8 +41,8 @@ const positionText = css`
 `
 const size = css`
   ${({ theme }) => `
-  height: ${theme.components.progressbar.sizes.height};
-  width: ${theme.components.progressbar.sizes.width};
+    height: ${theme.components.progressbar.sizes.height};
+    width: ${theme.components.progressbar.sizes.width};
   `};
 `
 
@@ -55,5 +53,6 @@ const StyledProgressbar = styled.div`
   ${positionFirstComponent} ${positionText};
   ${size};
   user-select: none;
+  box-sizing: border-box;
 `
 export default StyledProgressbar

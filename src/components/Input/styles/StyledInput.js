@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Text from '../../Text'
 
 const borders = css`
   border: ${({ theme }) => theme.components.input.input.borders.width} solid
@@ -11,11 +12,6 @@ const colors = css`
   caret-color: ${({ theme }) => theme.components.input.input.colors.caret};
 `
 
-const fonts = css`
-  font-size: ${({ theme }) => theme.components.input.input.fonts.fontSize};
-  font-family: ${({ theme }) => theme.components.input.input.fonts.fontFamily};
-`
-
 const sizes = css`
   min-height: ${({ theme }) => theme.components.input.input.sizes.minHeight};
 `
@@ -24,10 +20,9 @@ const spaces = css`
   padding: 0 ${({ theme }) => theme.components.input.input.spaces.paddingWidth};
 `
 
-const StyledInput = styled.input`
+const StyledInput = styled(Text.withComponent('input'))`
   ${borders};
   ${colors};
-  ${fonts};
   ${sizes};
   ${spaces};
 

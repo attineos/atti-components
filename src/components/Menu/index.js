@@ -14,14 +14,15 @@ import StyledMenu from './styles/StyledMenu'
  */
 const Menu = ({ values }) => (
   <StyledMenu>
-    {map(values, (elt, ind) => (
-      <React.Fragment key={elt.href}>
-        <Link href={elt.href} target={elt.target}>
-          {elt.text}
-        </Link>
-        {ind < values.length - 1 && ' / '}
-      </React.Fragment>
-    ))}
+    <ul>
+      {map(values, elt => (
+        <li key={elt.href}>
+          <Link href={elt.href} target={elt.target}>
+            {elt.text}
+          </Link>
+        </li>
+      ))}
+    </ul>
   </StyledMenu>
 )
 

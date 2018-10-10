@@ -5,20 +5,34 @@ const colors = css`
   color: ${({ theme }) => theme.components.menu.colors.text};
 `
 
-const fonts = css`
-  font-family: ${({ theme }) => theme.components.menu.fonts.fontFamily};
-  font-size: ${({ theme }) => theme.components.menu.fonts.fontSize};
-  font-weight: ${({ theme }) => theme.components.menu.fonts.fontWeight};
-`
-
 const StyledMenu = styled.nav`
   ${colors};
-  ${fonts};
 
   height: 50px;
-  border: 1px solid black;
   display: flex;
   align-items: center;
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    height: 100%;
+    li {
+      display: inline-block;
+      height: 100%;
+      a {
+        height: 100%;
+        padding: 0 20px;
+        display: inline-flex;
+        align-items: center;
+        color: ${({ theme }) => theme.colors.snow};
+        &:hover {
+          background-color: ${({ theme }) => theme.colors.snow};
+          color: ${({ theme }) => theme.colors.slate};
+          border-bottom: 0;
+        }
+      }
+    }
+  }
 `
 
 export default StyledMenu

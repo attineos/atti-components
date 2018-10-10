@@ -1,4 +1,4 @@
-A list of Option components (in a OptionPanel) :
+A list of Option components (in an OptionPanel) :
 
 ```js
 <OptionPanel>

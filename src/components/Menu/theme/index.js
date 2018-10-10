@@ -1,7 +1,6 @@
 export default ({ colors, fonts }) => ({
   colors: {
-    background: colors.white,
-    text: colors.black,
+    background: colors.slate,
   },
   fonts: {
     fontFamily: fonts.fontFamily.primary,

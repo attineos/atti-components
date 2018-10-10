@@ -6,10 +6,11 @@ export default ({ borders, colors, spaces }) => ({
   },
   colors: {
     background: colors.white,
-    selected: colors.successPastel,
-    text: colors.primary,
+    backgroundSelected: colors.primary,
+    text: colors.black,
+    textSelected: colors.white,
   },
   spaces: {
-    padding: spaces.s3,
+    padding: spaces.s4,
   },
 })

@@ -3,26 +3,27 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import { map } from 'lodash'
-import Link from '../Link'
+import Item from './styles/Item'
+import ItemLink from './styles/ItemLink'
+import ItemsList from './styles/ItemsList'
 import StyledMenu from './styles/StyledMenu'
 
 /**
- * The menu is a list of links.
+ * The menu is a list of Link elements.
  *
  * @version 0.1
- * @author Joseph Lefevre
  */
 const Menu = ({ values }) => (
   <StyledMenu>
-    <ul>
+    <ItemsList>
       {map(values, elt => (
-        <li key={elt.href}>
-          <Link href={elt.href} target={elt.target}>
+        <Item key={elt.href}>
+          <ItemLink href={elt.href} target={elt.target}>
             {elt.text}
-          </Link>
-        </li>
+          </ItemLink>
+        </Item>
       ))}
-    </ul>
+    </ItemsList>
   </StyledMenu>
 )
 

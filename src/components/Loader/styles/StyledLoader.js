@@ -21,9 +21,7 @@ const rotate360 = keyframes`
 
 // Return the animation
 const animation = css`
-  ${({ theme }) => `
-  animation:
-    ${rotate360}
+  ${rotate360} ${({ theme }) => `
     ${theme.components.loader.animations.speed}
     ${theme.components.loader.animations.type}
     infinite;
@@ -49,7 +47,7 @@ const borders = css`
 `
 
 const StyledLoader = styled.div`
-  ${animation};
+  animation: ${animation};
   ${borders};
   ${size};
 `

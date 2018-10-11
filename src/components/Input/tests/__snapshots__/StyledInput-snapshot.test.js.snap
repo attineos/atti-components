@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledInput renders correctly 1`] = `
+<input
+  className="StyledInput-sc-12an70a-0 iqotqH"
+/>
+`;

@@ -2,6 +2,6 @@
 
 exports[`BreadcrumbSeparator renders correctly 1`] = `
 <span
-  className="BreadcrumbSeparator-sc-5zi7iv-0 bquFXu"
+  className="BreadcrumbSeparator-sc-5zi7iv-0 cdnGIl"
 />
 `;

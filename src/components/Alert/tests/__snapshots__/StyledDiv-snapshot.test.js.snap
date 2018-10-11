@@ -2,6 +2,6 @@
 
 exports[`StyledDiv renders correctly 1`] = `
 <div
-  className="StyledDiv-rsh67c-0 lccXPM BigText-sc-1216e5t-0-div kMLiVF"
+  className="StyledDiv-rsh67c-0 gyTSNi"
 />
 `;

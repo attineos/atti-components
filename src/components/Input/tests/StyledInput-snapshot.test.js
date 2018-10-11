@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Link from '..';
+import StyledInput from '../styles/StyledInput';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Link renders correctly', () => {
+it('StyledInput renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Link className="Atticomponents" href="Atticomponents" target="Atticomponents" onClick={mock} >Atticomponents</Link>
+        <StyledInput ></StyledInput>
       </Wrapper>
       )
     .toJSON();

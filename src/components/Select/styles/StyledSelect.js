@@ -62,6 +62,7 @@ const colors = css`
       ${({ theme }) => theme.components.select.select.sizes.separatorWidth}
       calc(100% - calc(2 * ${({ theme }) => theme.components.select.select.spaces.paddingHeight}));
 
+  background-size: ${({ multiple }) => (multiple ? '0' : '')};
   background-repeat: no-repeat;
   background-color: ${({ theme }) => theme.components.select.select.colors.background};
 `

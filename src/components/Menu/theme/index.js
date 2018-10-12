@@ -14,7 +14,7 @@ export default ({ colors, sizes, spaces }) => ({
       background: colors.slate,
     },
     sizes: {
-      minHeight: sizes.heights.h12,
+      minHeight: sizes.heights.h13,
     },
   },
 })

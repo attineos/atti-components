@@ -4,6 +4,7 @@
 
 import borders from './borders'
 import colors from './colors'
+import sizes from './sizes'
 
 const forms = {
   borders: {
@@ -19,7 +20,7 @@ const forms = {
     text: colors.steel,
   },
   sizes: {
-    minHeight: '36px',
+    minHeight: sizes.h11,
   },
 }
 

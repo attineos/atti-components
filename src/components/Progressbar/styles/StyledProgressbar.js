@@ -4,13 +4,13 @@ import Text from '../../Text'
 const borders = css`
   border: ${({ theme }) => theme.components.progressbar.borders.borderWidth} solid
     ${({ theme }) => theme.components.progressbar.borders.borderColor};
-  border-radius: 25px;
+  border-radius: ${({ theme }) => theme.components.progressbar.borders.borderRadius};
 `
 
 const before = css`
   &:before {
     background: ${({ theme }) => theme.components.progressbar.colors.fill};
-    border-radius: 25px;
+    border-radius: ${({ theme }) => theme.components.progressbar.borders.borderRadius};
     content: ' ';
     height: 100%;
     position: absolute;

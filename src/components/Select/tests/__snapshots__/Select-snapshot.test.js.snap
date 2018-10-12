@@ -9,7 +9,7 @@ Array [
     Atticomponents
   </label>,
   <select
-    className="StyledSelect-jeqzcu-0 gZtug"
+    className="StyledSelect-jeqzcu-0 blcMeX"
     id="Atticomponents"
     multiple={true}
     name="Atticomponents"

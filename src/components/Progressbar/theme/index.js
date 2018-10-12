@@ -1,6 +1,7 @@
 export default ({ borders, colors, sizes }) => ({
   borders: {
     borderColor: colors.smoke,
+    borderRadius: '25px',
     borderWidth: borders.widths.bw2,
   },
 

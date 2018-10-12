@@ -2,7 +2,7 @@
 
 exports[`Button renders correctly 1`] = `
 <button
-  className="StyledButtonweb__StyledButton-djbee1-0 jnxmtk"
+  className="StyledButtonweb__StyledButton-djbee1-0 iIklUE"
   onClick={[Function]}
   type="button"
 >

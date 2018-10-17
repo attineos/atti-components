@@ -15,6 +15,8 @@ const spaces = {
   s10: '32px',
   s11: '36px',
   s12: '40px',
+  s13: '44px',
+  s14: '48px',
 }
 
 export default spaces

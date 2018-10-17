@@ -17,7 +17,7 @@ SmallText.propTypes = {
   /**
    * Content of SmallText.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * String to determine the alignment of content.
    */

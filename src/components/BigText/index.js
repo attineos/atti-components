@@ -18,7 +18,7 @@ BigText.propTypes = {
   /**
    * Content of BigText.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * String to determine the alignment of content.
    */

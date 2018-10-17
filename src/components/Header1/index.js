@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import getFontStyle from '../../helpers/Typography/getFontStyle'
+import withResetCSS from '../../hoc/withResetCSS'
 
 /**
  * Header1.
@@ -17,7 +18,7 @@ Header1.propTypes = {
   /**
    * Content of Header1.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * String to determine the alignment of content.
    */
@@ -25,4 +26,4 @@ Header1.propTypes = {
 }
 
 // @component
-export default Header1
+export default withResetCSS(Header1)

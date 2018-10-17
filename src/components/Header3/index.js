@@ -17,7 +17,7 @@ Header3.propTypes = {
   /**
    * Content of Header3.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * String to determine the alignment of content.
    */

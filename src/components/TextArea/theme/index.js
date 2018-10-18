@@ -22,6 +22,6 @@ export default ({ forms, spaces }) => ({
     },
     shadow: {
       width: forms.shadow.width,
-    }
+    },
   },
 })

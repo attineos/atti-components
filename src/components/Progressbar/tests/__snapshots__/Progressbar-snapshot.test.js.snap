@@ -7,7 +7,7 @@ exports[`Progressbar renders correctly 1`] = `
   start={42}
 >
   <p
-    className="sc-bdVaJa cZskBj"
+    className="sc-bdVaJa atti-r-css  cZskBj"
   >
     NaN%
   </p>

@@ -2,7 +2,7 @@
 
 exports[`Label renders correctly 1`] = `
 <label
-  className="Label-xhjve5-0 ebXTvW"
+  className="Label-xhjve5-0 atti-r-css  ebXTvW"
 >
   <div />
 </label>

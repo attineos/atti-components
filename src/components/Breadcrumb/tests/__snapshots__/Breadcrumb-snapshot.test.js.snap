@@ -5,7 +5,7 @@ exports[`Breadcrumb renders correctly 1`] = `
   className="StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
 >
   <a
-    className="StyledLink-kwdrvq-0 jqDHDT"
+    className="StyledLink-kwdrvq-0 atti-r-css  jqDHDT"
     href="anUrl"
     onClick={null}
     target={null}

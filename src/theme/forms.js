@@ -24,7 +24,7 @@ const forms = {
   },
   shadow: {
     width: sizes.widths.w3,
-  }
+  },
 }
 
 export default forms

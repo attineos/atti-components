@@ -1,5 +1,5 @@
 const resetCSS = {
-  className: props => (props.className ? `atti-r-css ${props.className}` : 'atti-r-css'),
+  className: props => `atti-r-css ${props.className || ''}`,
 }
 
 export default resetCSS

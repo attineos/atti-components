@@ -2,7 +2,7 @@
 
 exports[`Option renders correctly 1`] = `
 <p
-  className="StyledOption-sc-1g6h427-0 kvTwPp"
+  className="StyledOption-sc-1g6h427-0 atti-r-css  kvTwPp"
   id="Atticomponents"
   onClick={[Function]}
   selected={true}

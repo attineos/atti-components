@@ -2,6 +2,6 @@
 
 exports[`StyledInput renders correctly 1`] = `
 <input
-  className="StyledInput-sc-12an70a-0 bmjnSH"
+  className="StyledInput-sc-12an70a-0 atti-r-css  rMEup"
 />
 `;

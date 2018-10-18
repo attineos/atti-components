@@ -2,6 +2,6 @@
 
 exports[`StyledLabelTextArea renders correctly 1`] = `
 <label
-  className="StyledLabelTextArea-f7fxws-0 kDYnrc"
+  className="StyledLabelTextArea-f7fxws-0 atti-r-css  kDYnrc"
 />
 `;

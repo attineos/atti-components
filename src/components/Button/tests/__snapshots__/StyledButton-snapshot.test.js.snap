@@ -2,7 +2,7 @@
 
 exports[`StyledButton renders correctly 1`] = `
 <button
-  className="StyledButtonweb__StyledButton-djbee1-0 iIklUE"
+  className="StyledButtonweb__StyledButton-djbee1-0 atti-r-css  eEmZLz"
 >
   Atticomponents
 </button>

@@ -2,7 +2,7 @@
 
 exports[`ItemLink renders correctly 1`] = `
 <a
-  className="ItemLink-sc-10gyy0u-0 iAHWhN StyledLink-kwdrvq-0 jqDHDT"
+  className="ItemLink-sc-10gyy0u-0 iAHWhN StyledLink-kwdrvq-0 atti-r-css ItemLink-sc-10gyy0u-0 iAHWhN jqDHDT"
   onClick={null}
   target={null}
 />

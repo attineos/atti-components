@@ -2,7 +2,7 @@
 
 exports[`Header3 renders correctly 1`] = `
 <h3
-  className="Header3-eln9i6-0 kyWBeS"
+  className="Header3-eln9i6-0 atti-r-css  kyWBeS"
 >
   <div />
 </h3>

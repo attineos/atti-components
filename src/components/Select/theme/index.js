@@ -10,13 +10,13 @@ export default ({ colors, forms, sizes, spaces }) => ({
       width: forms.borders.width,
     },
     colors: {
-      arrow: colors.white,
-      background: colors.primary,
+      arrow: colors.slate,
+      background: colors.transparent,
       border: forms.colors.border,
       borderFocus: forms.colors.borderFocus,
       boxShadowFocus: forms.colors.boxShadowFocus,
-      separator: colors.white,
-      text: colors.white,
+      separator: colors.extraDarkSmoke,
+      text: colors.slate,
     },
     sizes: {
       arrowHeight: '5px',
@@ -29,5 +29,8 @@ export default ({ colors, forms, sizes, spaces }) => ({
       paddingLeft: spaces.s5,
       paddingRight: spaces.s14,
     },
+    shadow: {
+      width: forms.shadow.width,
+    }
   },
 })

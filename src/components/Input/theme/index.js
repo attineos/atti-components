@@ -18,6 +18,9 @@ export default ({ forms, spaces }) => ({
     spaces: {
       paddingWidth: spaces.s5,
     },
+    shadow: {
+      width: forms.shadow.width,
+    }
   },
   label: {
     spaces: {

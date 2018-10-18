@@ -9,12 +9,12 @@ import sizes from './sizes'
 const forms = {
   borders: {
     radius: borders.radius.br3,
-    width: borders.widths.bw2,
+    width: borders.widths.bw1,
   },
   colors: {
     border: colors.extraDarkSmoke,
-    borderFocus: colors.secondary,
-    boxShadowFocus: colors.secondary,
+    borderFocus: colors.extraDarkSmoke,
+    boxShadowFocus: colors.primary,
     caret: colors.steel,
     placeholder: colors.extraDarkSmoke,
     text: colors.steel,
@@ -22,6 +22,9 @@ const forms = {
   sizes: {
     minHeight: sizes.h11,
   },
+  shadow: {
+    width: sizes.widths.w3,
+  }
 }
 
 export default forms

@@ -2,6 +2,6 @@
 
 exports[`LabelRadio renders correctly 1`] = `
 <label
-  className="LabelRadio-wot4p6-0 jilFc"
+  className="LabelRadio-wot4p6-0 atti-r-css  jilFc"
 />
 `;

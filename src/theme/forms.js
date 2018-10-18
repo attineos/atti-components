@@ -20,11 +20,11 @@ const forms = {
     text: colors.steel,
   },
   sizes: {
-    minHeight: sizes.h11,
+    minHeight: sizes.heights.h11,
   },
   shadow: {
     width: sizes.widths.w3,
-  }
+  },
 }
 
 export default forms

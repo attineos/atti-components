@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <label
-  className="LabelRadio-wot4p6-0 jilFc"
+  className="LabelRadio-wot4p6-0 atti-r-css  jilFc"
 >
   <input
     checked={true}
@@ -14,7 +14,7 @@ exports[`Radio renders correctly 1`] = `
     value="Atticomponents"
   />
   <span
-    className="RadioButton-sc-8w77ik-0 bTdjdZ"
+    className="RadioButton-sc-8w77ik-0 dQrdBg"
   />
   Atticomponents
 </label>

@@ -10,7 +10,7 @@ Badge :
 ```js
 <BigText>
   This is a BigText with exponent badge{' '}
-  <Badge exponent="true" type="info">
+  <Badge exponent={true} type="info">
     warning
   </Badge>
 </BigText>

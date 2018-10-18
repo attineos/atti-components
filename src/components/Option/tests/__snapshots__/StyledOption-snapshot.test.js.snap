@@ -2,6 +2,6 @@
 
 exports[`StyledOption renders correctly 1`] = `
 <p
-  className="StyledOption-sc-1g6h427-0 daLKVh"
+  className="StyledOption-sc-1g6h427-0 atti-r-css  daLKVh"
 />
 `;

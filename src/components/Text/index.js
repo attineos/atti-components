@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+
 import getFontStyle from '../../helpers/Typography/getFontStyle'
 import StyledText from './styles'
 
@@ -17,7 +18,7 @@ Text.propTypes = {
   /**
    * Content of Text.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * String to determine the alignment of content.
    */

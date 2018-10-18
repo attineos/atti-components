@@ -26,8 +26,9 @@ const StyledTextArea = styled(Text.withComponent('textarea'))`
   }
 
   &:focus {
+    outline: none;
     border-color: ${({ theme }) => theme.components.textarea.textarea.colors.borderFocus};
-    box-shadow: 0px 0px 2px 0px
+    box-shadow: 0px 0px ${({ theme }) => theme.components.textarea.textarea.shadow.width} 0px
       ${({ theme }) => theme.components.textarea.textarea.colors.boxShadowFocus};
   }
 `

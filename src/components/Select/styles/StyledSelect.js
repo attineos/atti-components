@@ -89,8 +89,9 @@ const StyledSelect = styled(Text.withComponent('select'))`
   }
 
   &:focus {
+    outline: none;
     border-color: ${({ theme }) => theme.components.select.select.colors.borderFocus};
-    box-shadow: 0px 0px 2px 0px
+    box-shadow: 0px 0px ${({ theme }) => theme.components.select.select.shadow.width} 0px
       ${({ theme }) => theme.components.select.select.colors.boxShadowFocus};
   }
 `

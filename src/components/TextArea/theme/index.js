@@ -20,5 +20,8 @@ export default ({ forms, spaces }) => ({
     spaces: {
       padding: spaces.s5,
     },
+    shadow: {
+      width: forms.shadow.width,
+    }
   },
 })

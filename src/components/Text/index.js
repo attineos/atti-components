@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+
 import getFontStyle from '../../helpers/Typography/getFontStyle'
 import StyledText from './styles'
 

@@ -1,6 +1,8 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
 import getFontStyle from '../../helpers/Typography/getFontStyle'
+import resetCSS from '../../helpers/resetCSS'
 
 /**
  * SmallText.
@@ -9,7 +11,7 @@ import getFontStyle from '../../helpers/Typography/getFontStyle'
  * @author Alexandre DEVE
  */
 
-const SmallText = styled.p`
+const SmallText = styled.p.attrs(resetCSS)`
   ${getFontStyle('smallText')};
 `
 

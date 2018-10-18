@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
 import getFontStyle from '../../helpers/Typography/getFontStyle'
-import withResetCSS from '../../hoc/withResetCSS'
+import resetCSS from '../../helpers/resetCSS'
 
 /**
  * Header1.
@@ -10,7 +11,7 @@ import withResetCSS from '../../hoc/withResetCSS'
  * @author Alexandre DEVE
  */
 
-const Header1 = styled.h1`
+const Header1 = styled.h1.attrs(resetCSS)`
   ${getFontStyle('header1')};
 `
 
@@ -26,4 +27,4 @@ Header1.propTypes = {
 }
 
 // @component
-export default withResetCSS(Header1)
+export default Header1

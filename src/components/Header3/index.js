@@ -1,6 +1,8 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
 import getFontStyle from '../../helpers/Typography/getFontStyle'
+import resetCSS from '../../helpers/resetCSS'
 
 /**
  * Header3.
@@ -9,7 +11,7 @@ import getFontStyle from '../../helpers/Typography/getFontStyle'
  * @author Alexandre DEVE
  */
 
-const Header3 = styled.h3`
+const Header3 = styled.h3.attrs(resetCSS)`
   ${getFontStyle('header3')};
 `
 

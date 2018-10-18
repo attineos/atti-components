@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+
 import getFontStyle from '../../helpers/Typography/getFontStyle'
+import resetCSS from '../../helpers/resetCSS'
 
 /**
  * Label.
@@ -8,7 +10,7 @@ import getFontStyle from '../../helpers/Typography/getFontStyle'
  * @version 0.1
  */
 
-const Label = styled.label`
+const Label = styled.label.attrs(resetCSS)`
   ${getFontStyle('label')};
 `
 

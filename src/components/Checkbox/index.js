@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import CheckboxBox from './styles/CheckboxBox'
+import CheckboxBoxContainer from './styles/CheckboxBoxContainer'
 import HiddenInputCheckbox from './styles/HiddenInputCheckbox'
 import LabelCheckbox from './styles/LabelCheckbox'
 
@@ -13,6 +14,7 @@ import LabelCheckbox from './styles/LabelCheckbox'
 class Checkbox extends React.Component {
   static defaultProps = {
     checked: false,
+    label: '',
     onChange: null,
   }
 
@@ -28,7 +30,7 @@ class Checkbox extends React.Component {
     /**
      * Content of the label of the checkbox.
      */
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     /**
      * The name attribute is used to reference form data after a form is submitted.
      * Numerous checkbox with the same name value will be in the same group.
@@ -63,11 +65,10 @@ class Checkbox extends React.Component {
     )
   }
 
-  // TODO: improve by returning only the designed checkbox if there is no label
-  render() {
-    const { id, label, name, value } = this.props
+  checkBoxRenderer() {
+    const { id, name, value } = this.props
     return (
-      <LabelCheckbox htmlFor={id}>
+      <CheckboxBoxContainer>
         <HiddenInputCheckbox
           id={id}
           checked={this.state.checked}
@@ -77,8 +78,19 @@ class Checkbox extends React.Component {
           value={value}
         />
         <CheckboxBox />
+      </CheckboxBoxContainer>
+    )
+  }
+
+  render() {
+    const { id, label } = this.props
+    return label ? (
+      <LabelCheckbox htmlFor={id}>
+        {this.checkBoxRenderer()}
         {label}
       </LabelCheckbox>
+    ) : (
+      this.checkBoxRenderer()
     )
   }
 }

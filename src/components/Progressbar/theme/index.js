@@ -12,7 +12,7 @@ export default ({ borders, colors, sizes }) => ({
   },
 
   sizes: {
-    height: sizes.heights.h8,
-    width: sizes.widths.w24,
+    height: sizes.heights.h12,
+    width: sizes.widths.w27,
   },
 })

@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select renders correctly 1`] = `
-Array [
+<span
+  className="atti-box"
+>
   <label
     className="StyledLabel-sc-7lrvk2-0 atti-r-css  cgokyd"
     htmlFor="Atticomponents"
   >
     Atticomponents
-  </label>,
+  </label>
   <select
     className="StyledSelect-jeqzcu-0 atti-r-css  jBtnkJ"
     id="Atticomponents"
@@ -15,6 +17,6 @@ Array [
     name="Atticomponents"
     onChange={[Function]}
     size={42}
-  />,
-]
+  />
+</span>
 `;

@@ -20,13 +20,10 @@ const colors = css`
 const StyledOption = styled(Text.withComponent('p'))`
   ${borders};
   ${colors};
+
   padding: ${({ theme }) => theme.components.option.spaces.padding};
   font-family: ${({ theme }) => theme.fonts.fontFamily.primary};
   cursor: pointer;
-
-  // TODO: remove when reset.css will be used
-  margin-top: 0;
-  margin-bottom: 0;
 `
 
 export default StyledOption

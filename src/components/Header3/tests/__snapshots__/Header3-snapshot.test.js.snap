@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header3 renders correctly 1`] = `
-<h3
-  className="Header3-eln9i6-0 atti-r-css  kyWBeS"
+<span
+  className="atti-box"
 >
-  <div />
-</h3>
+  <h3
+    className="Header3-eln9i6-0 atti-r-css  kyWBeS"
+  >
+    <div />
+  </h3>
+</span>
 `;

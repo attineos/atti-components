@@ -5,11 +5,11 @@ export default ({ animations, borders, colors, sizes }) => ({
   },
   borders: {
     radius: borders.radius.brCircle,
-    thickness: sizes.widths.w4,
+    thickness: sizes.widths.w5,
   },
   colors: {
     colorIndicator: colors.primary,
     backgroundColor: colors.white,
   },
-  size: sizes.widths.w12,
+  size: sizes.widths.w16,
 })

@@ -43,7 +43,6 @@ const borders = css`
   };
   border-radius: ${theme.components.loader.borders.radius};
  `};
-  box-sizing: border-box;
 `
 
 const StyledLoader = styled.div`

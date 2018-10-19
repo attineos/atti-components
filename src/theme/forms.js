@@ -20,7 +20,7 @@ const forms = {
     text: colors.steel,
   },
   sizes: {
-    minHeight: sizes.heights.h11,
+    minHeight: sizes.heights.h15,
   },
   shadow: {
     width: sizes.widths.w3,

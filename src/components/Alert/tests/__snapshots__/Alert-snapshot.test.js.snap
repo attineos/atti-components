@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert renders correctly 1`] = `
-<div
-  className="StyledDiv-rsh67c-0 atti-r-css  gyTSNi"
-  type={null}
+<span
+  className="atti-box"
 >
-  <div />
-</div>
+  <div
+    className="StyledDiv-rsh67c-0 atti-r-css  gyTSNi"
+    type={null}
+  >
+    <div />
+  </div>
+</span>
 `;

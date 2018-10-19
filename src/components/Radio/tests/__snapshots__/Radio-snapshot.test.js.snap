@@ -1,21 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio renders correctly 1`] = `
-<label
-  className="LabelRadio-wot4p6-0 atti-r-css  jilFc"
+<span
+  className="atti-box"
 >
-  <input
-    checked={true}
-    className="HiddenInputRadio-sc-9a3euj-0 dCQjgv"
-    id="Atticomponents"
-    name="Atticomponents"
-    onChange={[Function]}
-    type="radio"
-    value="Atticomponents"
-  />
-  <span
-    className="RadioButton-sc-8w77ik-0 dQrdBg"
-  />
-  Atticomponents
-</label>
+  <label
+    className="LabelRadio-wot4p6-0 atti-r-css  jilFc"
+  >
+    <input
+      checked={true}
+      className="HiddenInputRadio-sc-9a3euj-0 dCQjgv"
+      id="Atticomponents"
+      name="Atticomponents"
+      onChange={[Function]}
+      type="radio"
+      value="Atticomponents"
+    />
+    <span
+      className="RadioButton-sc-8w77ik-0 dGJoZX"
+    />
+    Atticomponents
+  </label>
+</span>
 `;

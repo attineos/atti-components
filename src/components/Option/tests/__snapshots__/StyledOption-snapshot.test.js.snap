@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledOption renders correctly 1`] = `
-<p
-  className="StyledOption-sc-1g6h427-0 atti-r-css  daLKVh"
-/>
+<span
+  className="atti-box"
+>
+  <p
+    className="StyledOption-sc-1g6h427-0 atti-r-css  fMoItW"
+  />
+</span>
 `;

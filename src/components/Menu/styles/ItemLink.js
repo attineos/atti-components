@@ -7,10 +7,10 @@ const ItemLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   color: ${({ theme }) => theme.components.menu.link.colors.text};
+  border-bottom: 0;
   &:hover {
     background-color: ${({ theme }) => theme.components.menu.link.colors.backgroundHover};
     color: ${({ theme }) => theme.components.menu.link.colors.textHover};
-    border-bottom: 0;
   }
 `
 

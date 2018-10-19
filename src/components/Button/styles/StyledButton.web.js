@@ -37,7 +37,6 @@ const StyledButton = styled(Text.withComponent('button'))`
   text-align: ${({ theme }) => theme.components.button.textAlign};
 
   cursor: pointer;
-  box-sizing: border-box;
 `
 
 StyledButton.propTypes = {

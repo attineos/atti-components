@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
-// TODO: some style to remove when we'll use reset.css
-const ItemsList = styled.ul`
+import resetCSS from '../../../helpers/resetCSS'
+
+const ItemsList = styled.ul.attrs(resetCSS)`
   list-style-type: none;
-  padding-left: 0;
-  margin: 0;
   height: 100%;
 `
 

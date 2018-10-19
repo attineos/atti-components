@@ -1,19 +1,23 @@
 import styled, { css } from 'styled-components'
 
+const borders = css`
+  border-radius: ${({ theme }) => theme.components.checkbox.checkboxBox.borders.radius};
+  border: ${({ theme }) => theme.components.checkbox.checkboxBox.borders.width} solid
+    ${({ theme }) => theme.components.checkbox.checkboxBox.colors.border};
+`
+
 const sizes = css`
   height: ${({ theme }) => theme.components.checkbox.checkboxBox.sizes.height};
   width: ${({ theme }) => theme.components.checkbox.checkboxBox.sizes.width};
 `
 
 const CheckboxBox = styled.span`
+  ${borders};
   ${sizes};
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: ${({ theme }) => theme.components.checkbox.checkboxBox.spaces.marginRight};
-  border-radius: ${({ theme }) => theme.components.checkbox.checkboxBox.borders.radius};
-  border: ${({ theme }) => theme.components.checkbox.checkboxBox.borders.width} solid
-    ${({ theme }) => theme.components.checkbox.checkboxBox.colors.border};
+  cursor: pointer;
 
   // Use of a letter V in the checkbox when it's checked.
   // The letter V is a rectangle whose left and bottom borders are filled. A rotation of 45 degrees is

@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LabelCheckbox renders correctly 1`] = `
-<label
-  className="LabelCheckbox-sc-3x8kt7-0 atti-r-css  dFBmpj"
-/>
+<span
+  className="atti-box"
+>
+  <label
+    className="LabelCheckbox-sc-3x8kt7-0 atti-r-css  dmrHnf"
+  />
+</span>
 `;

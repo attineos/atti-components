@@ -6,13 +6,15 @@ import { isFunction, keys, merge, reduce, replace } from 'lodash'
 import { createGlobalStyle, ThemeProvider as TP, withTheme } from 'styled-components'
 
 const ResetCSS = createGlobalStyle`
+  .atti-box * {
+    box-sizing: border-box;
+  }
   .atti-r-css {
     margin: 0;
     padding: 0;
     border: 0;
     box-shadow: none;
     outline: none;
-    box-sizing: border-box;
   }
 `
 
@@ -104,10 +106,10 @@ class ThemeProvider extends React.Component {
 
     return (
       <TP theme={theme || propTheme}>
-        <React.Fragment>
+        <span className="atti-box">
           <ResetCSS suppressMultiMountWarnings />
           {children}
-        </React.Fragment>
+        </span>
       </TP>
     )
   }

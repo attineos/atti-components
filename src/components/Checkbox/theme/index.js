@@ -16,8 +16,8 @@ export default ({ borders, colors, forms, sizes, spaces }) => ({
       borderChecked: colors.success,
     },
     sizes: {
-      height: sizes.heights.h6,
-      width: sizes.widths.w6,
+      height: sizes.heights.h10,
+      width: sizes.widths.w10,
     },
     spaces: {
       marginRight: spaces.s5,

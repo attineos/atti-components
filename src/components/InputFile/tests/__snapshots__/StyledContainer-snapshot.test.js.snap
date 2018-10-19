@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledContainer renders correctly 1`] = `
-<div
-  className="StyledContainer-m5ly54-0 hiRREi"
-/>
+<span
+  className="atti-box"
+>
+  <div
+    className="StyledContainer-m5ly54-0 hiRREi"
+  />
+</span>
 `;

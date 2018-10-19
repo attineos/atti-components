@@ -3,8 +3,8 @@ import BigText from '../../BigText'
 
 const borders = css`
   border: ${({ theme, type }) =>
-    `${theme.components.alert.border.size} solid ${theme.components.alert.colors.border[type]}`};
-  border-radius: ${({ theme }) => theme.components.alert.border.radius};
+    `${theme.components.alert.borders.size} solid ${theme.components.alert.colors.borders[type]}`};
+  border-radius: ${({ theme }) => theme.components.alert.borders.radius};
 `
 
 const spaces = css`

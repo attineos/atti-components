@@ -2,6 +2,10 @@
 
 exports[`StyledBadge renders correctly 1`] = `
 <span
-  className="StyledBadge-sc-14ha03a-0 bZzAiU BigText-sc-1216e5t-0-span bVMXdI"
-/>
+  className="atti-box"
+>
+  <span
+    className="StyledBadge-sc-14ha03a-0 csDeYh"
+  />
+</span>
 `;

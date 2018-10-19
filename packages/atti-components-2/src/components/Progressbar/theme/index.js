@@ -1,7 +1,8 @@
-export default ({ border, colors, sizes }) => ({
-  border: {
-    borderColor: colors.black,
-    borderWidth: border.widths.bw2,
+export default ({ borders, colors, sizes }) => ({
+  borders: {
+    borderColor: colors.smoke,
+    borderRadius: '25px',
+    borderWidth: borders.widths.bw2,
   },
 
   colors: {
@@ -11,7 +12,7 @@ export default ({ border, colors, sizes }) => ({
   },
 
   sizes: {
-    height: sizes.heights.h8,
-    width: sizes.widths.w24,
+    height: sizes.heights.h12,
+    width: sizes.widths.w27,
   },
 })

@@ -11,11 +11,13 @@ const LabelRadio = styled(Label)`
 
   // Modifications of the color background of the radio :
   &:hover ${HiddenInputRadio} + ${RadioButton} {
-    background: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundHover};
+    &:after {
+      display: block;
+      background-color: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundHover};
+    }
   }
 
   ${HiddenInputRadio}:checked + ${RadioButton} {
-    background: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundHover};
     &:after {
       display: block;
     }

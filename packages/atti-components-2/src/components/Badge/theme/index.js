@@ -13,13 +13,15 @@ export default ({ colors, fonts, spaces }) => ({
     text: colors.white,
   },
   spaces: {
-    paddingHeight: spaces.s2,
+    paddingHeight: spaces.s3,
     paddingWidth: spaces.s4,
   },
   fonts: {
-    fontSize: '0.75em',
-    lineHeight: 1,
+    fontSize: fonts.fontSize.fs8,
+    lineHeight: fonts.lineHeight.lh8,
     fontWeight: fonts.fontWeight.fw600,
+    fontFamily: fonts.fontFamily.primary,
+    letterSpacing: '1.5px',
   },
-  display: 'inline-block',
+  display: 'inline-flex',
 })

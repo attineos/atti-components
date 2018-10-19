@@ -1,15 +1,15 @@
-export default ({ animations, border, colors, sizes }) => ({
+export default ({ animations, borders, colors, sizes }) => ({
   animations: {
     speed: animations.duration.d8,
     type: animations.type.linear,
   },
   borders: {
-    radius: border.radius.brCircle,
-    thickness: sizes.widths.w4,
+    radius: borders.radius.brCircle,
+    thickness: sizes.widths.w5,
   },
   colors: {
     colorIndicator: colors.primary,
     backgroundColor: colors.white,
   },
-  size: sizes.widths.w12,
+  size: sizes.widths.w16,
 })

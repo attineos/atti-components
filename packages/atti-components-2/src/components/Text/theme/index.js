@@ -3,7 +3,7 @@ export default ({ colors, fonts }) => ({
     text: colors.black,
   },
   fonts: {
-    fontFamily: fonts.global.fontFamilyPrimary,
+    fontFamily: fonts.fontFamily.primary,
     fontSize: fonts.fontSize.fs14,
     fontWeight: fonts.fontWeight.fw400,
     lineHeight: fonts.lineHeight.lh24,

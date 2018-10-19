@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import StyledOption from '../../Option/styles/StyledOption'
 
-const border = css`
+const borders = css`
   & > ${StyledOption} + ${StyledOption} {
     border-top: 0;
   }
@@ -12,7 +12,7 @@ const spaces = css`
 `
 
 const StyledOptionPanel = styled.div`
-  ${border};
+  ${borders};
   ${spaces};
 `
 

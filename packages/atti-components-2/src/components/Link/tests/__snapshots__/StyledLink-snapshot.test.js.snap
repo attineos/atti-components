@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledLink renders correctly 1`] = `
-<a
-  className="StyledLink-kwdrvq-0 fPzYXT sc-bwzfXH hkZNed"
+<span
+  className="atti-box"
 >
-  Atticomponents
-</a>
+  <a
+    className="StyledLink-kwdrvq-0 atti-r-css  jqDHDT"
+  >
+    Atticomponents
+  </a>
+</span>
 `;

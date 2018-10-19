@@ -1,30 +1,35 @@
 import styled, { css } from 'styled-components'
+import Text from '../../Text'
 
-const border = css`
-  border: ${({ theme }) => theme.components.textarea.textarea.border.width} solid
-    ${({ theme }) => theme.components.textarea.textarea.border.color};
+const borders = css`
+  border: ${({ theme }) => theme.components.textarea.textarea.borders.width} solid
+    ${({ theme }) => theme.components.textarea.textarea.colors.border};
+  border-radius: ${({ theme }) => theme.components.textarea.textarea.borders.radius};
 `
 
 const colors = css`
-  background: ${({ theme }) => theme.components.textarea.textarea.colors.background};
   color: ${({ theme }) => theme.components.textarea.textarea.colors.text};
-`
-
-const fonts = css`
-  font-size: ${({ theme }) => theme.components.textarea.textarea.fonts.fontSize};
-  font-weight: ${({ theme }) => theme.components.textarea.textarea.fonts.fontWeight};
-  font-family: ${({ theme }) => theme.components.textarea.textarea.fonts.fontFamily};
+  caret-color: ${({ theme }) => theme.components.textarea.textarea.colors.caret};
 `
 
 const spaces = css`
   padding: ${({ theme }) => theme.components.textarea.textarea.spaces.padding};
 `
 
-const StyledTextArea = styled.textarea`
-  ${border};
+const StyledTextArea = styled(Text.withComponent('textarea'))`
+  ${borders};
   ${colors};
-  ${fonts};
   ${spaces};
+
+  ::placeholder {
+    color: ${({ theme }) => theme.components.textarea.textarea.colors.placeholder};
+  }
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme }) => theme.components.textarea.textarea.colors.borderFocus};
+    box-shadow: ${({ theme }) => theme.components.textarea.textarea.boxShadows.boxShadowFocus};
+  }
 `
 
 export default StyledTextArea

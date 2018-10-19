@@ -33,8 +33,7 @@ const StyledInput = styled(Text.withComponent('input'))`
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.components.input.input.colors.borderFocus};
-    box-shadow: 0px 0px ${({ theme }) => theme.components.input.input.shadow.width} 0px
-      ${({ theme }) => theme.components.input.input.colors.boxShadowFocus};
+    box-shadow: ${({ theme }) => theme.components.input.input.boxShadows.boxShadowFocus};
   }
 `
 

@@ -9,12 +9,14 @@ export default ({ colors, forms, sizes, spaces }) => ({
       radius: forms.borders.radius,
       width: forms.borders.width,
     },
+    boxShadows: {
+      boxShadowFocus: forms.boxShadow,
+    },
     colors: {
       arrow: colors.slate,
       background: colors.transparent,
       border: forms.colors.border,
       borderFocus: forms.colors.borderFocus,
-      boxShadowFocus: forms.colors.boxShadowFocus,
       separator: colors.extraDarkSmoke,
       text: colors.slate,
     },
@@ -28,9 +30,6 @@ export default ({ colors, forms, sizes, spaces }) => ({
       paddingHeight: spaces.s4,
       paddingLeft: spaces.s5,
       paddingRight: spaces.s14,
-    },
-    shadow: {
-      width: forms.shadow.width,
     },
   },
 })

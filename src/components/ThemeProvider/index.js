@@ -3,7 +3,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { isFunction, keys, merge, reduce, replace } from 'lodash'
-import { ThemeProvider as TP, withTheme } from 'styled-components'
+import { createGlobalStyle, ThemeProvider as TP, withTheme } from 'styled-components'
+
+const ResetCSS = createGlobalStyle`
+  .atti-box * {
+    box-sizing: border-box;
+  }
+  .atti-r-css {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }
+`
 
 class ThemeProvider extends React.Component {
   static propTypes = {
@@ -91,7 +104,14 @@ class ThemeProvider extends React.Component {
     const { children, theme: propTheme } = this.props
     const { theme } = this.state
 
-    return <TP theme={theme || propTheme}>{children}</TP>
+    return (
+      <TP theme={theme || propTheme}>
+        <span className="atti-box">
+          <ResetCSS suppressMultiMountWarning />
+          {children}
+        </span>
+      </TP>
+    )
   }
 }
 

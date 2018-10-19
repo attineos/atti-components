@@ -10,7 +10,7 @@ it('Link renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Link href="Atticomponents" target="Atticomponents" onClick={mock} >Atticomponents</Link>
+        <Link className="Atticomponents" href="Atticomponents" target="Atticomponents" onClick={mock} >Atticomponents</Link>
       </Wrapper>
       )
     .toJSON();

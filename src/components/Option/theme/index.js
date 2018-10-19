@@ -1,15 +1,16 @@
-export default ({ border, colors, spaces }) => ({
-  border: {
-    color: colors.black,
+export default ({ borders, colors, spaces }) => ({
+  borders: {
+    color: colors.darkSmoke,
     style: 'solid',
-    width: border.widths.bw1,
+    width: borders.widths.bw1,
   },
   colors: {
     background: colors.white,
-    selected: colors.secondary,
-    text: colors.primary,
+    backgroundSelected: colors.primary,
+    text: colors.black,
+    textSelected: colors.white,
   },
   spaces: {
-    padding: spaces.s3,
+    padding: spaces.s4,
   },
 })

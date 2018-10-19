@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HiddenInputCheckbox renders correctly 1`] = `
-<input
-  className="HiddenInputCheckbox-sc-1exe2yb-0 AXPoO"
-/>
+<span
+  className="atti-box"
+>
+  <input
+    className="HiddenInputCheckbox-sc-1exe2yb-0 llFNkY"
+  />
+</span>
 `;

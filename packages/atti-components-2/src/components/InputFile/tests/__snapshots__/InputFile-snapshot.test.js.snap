@@ -1,22 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InputFile renders correctly 1`] = `
-<div
-  className="StyledContainer-m5ly54-0 hiRREi"
+<span
+  className="atti-box"
 >
-  <input
-    className="StyledInput-sc-19gmxuz-0 cyFwFw"
-    name="Atticomponents"
-    onChange={[Function]}
-    type="file"
-  />
-  <button
-    className="StyledFilePicker-sc-1q1g117-0 cqLqpa sc-bwzfXH hkZNed"
-    onClick={[Function]}
-    onDragOver={[Function]}
-    onDrop={[Function]}
+  <div
+    className="StyledContainer-m5ly54-0 hiRREi"
   >
-    Atticomponents
-  </button>
-</div>
+    <input
+      className="StyledInput-sc-19gmxuz-0 cyFwFw"
+      name="Atticomponents"
+      onChange={[Function]}
+      type="file"
+    />
+    <button
+      className="StyledFilePicker-sc-1q1g117-0 atti-r-css  ixGVaS"
+      onClick={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+    >
+      Atticomponents
+    </button>
+  </div>
+</span>
 `;

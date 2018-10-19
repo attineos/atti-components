@@ -8,6 +8,6 @@ export default ({ colors, fonts, spaces }) => ({
     paddingLeftRight: spaces.s14,
   },
   fonts: {
-    fontFamily: fonts.global.fontFamilyPrimary,
+    fontFamily: fonts.fontFamily.primary,
   },
 })

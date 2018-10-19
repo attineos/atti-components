@@ -107,7 +107,7 @@ class ThemeProvider extends React.Component {
     return (
       <TP theme={theme || propTheme}>
         <span className="atti-box">
-          <ResetCSS suppressMultiMountWarnings />
+          <ResetCSS suppressMultiMountWarning />
           {children}
         </span>
       </TP>

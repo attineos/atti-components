@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemLink renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <a
+    className="ItemLink-sc-10gyy0u-0 eJIVKI StyledLink-kwdrvq-0 atti-r-css ItemLink-sc-10gyy0u-0 eJIVKI jqDHDT"
+    onClick={null}
+    target={null}
+  />
+</span>
+`;

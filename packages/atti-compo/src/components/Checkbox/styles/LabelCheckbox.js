@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+
 import CheckboxBox from './CheckboxBox'
+import CheckboxBoxContainer from './CheckboxBoxContainer'
 import HiddenInputCheckbox from './HiddenInputCheckbox'
 
 import Label from '../../Label'
@@ -11,15 +13,9 @@ const LabelCheckbox = styled(Label)`
   position: relative;
 
   // Modifications of the color background of the checkbox :
-  &:hover ${HiddenInputCheckbox} + ${CheckboxBox} {
+  &:hover ${CheckboxBoxContainer} ${HiddenInputCheckbox} + ${CheckboxBox} {
     background: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundHover};
-  }
-
-  ${HiddenInputCheckbox}:checked + ${CheckboxBox} {
-    background: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundHover};
-    &:after {
-      display: block;
-    }
+    border-color: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.borderHover};
   }
 `
 

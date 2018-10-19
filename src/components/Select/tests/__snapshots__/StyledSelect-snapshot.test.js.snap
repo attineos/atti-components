@@ -5,7 +5,7 @@ exports[`StyledSelect renders correctly 1`] = `
   className="atti-box"
 >
   <select
-    className="StyledSelect-jeqzcu-0 atti-r-css  eULUxK"
+    className="StyledSelect-jeqzcu-0 atti-r-css  eOslxA"
   />
 </span>
 `;

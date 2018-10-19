@@ -11,7 +11,7 @@ exports[`Input renders correctly 1`] = `
     Atticomponents
   </label>
   <input
-    className="StyledInput-sc-12an70a-0 atti-r-css  rMEup"
+    className="StyledInput-sc-12an70a-0 atti-r-css  EBUgl"
     form={true}
     id="Atticomponents"
     name="Atticomponents"

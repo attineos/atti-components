@@ -1,3 +1,4 @@
+import Avatar from './components/Avatar'
 import BigText from './components/BigText'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
@@ -21,6 +22,7 @@ import ThemeProvider from './components/ThemeProvider'
 import theme from './theme'
 
 module.exports = {
+  Avatar,
   BigText,
   Breadcrumb,
   Button,

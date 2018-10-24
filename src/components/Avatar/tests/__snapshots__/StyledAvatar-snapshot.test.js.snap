@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledAvatar renders correctly 1`] = `
+<div
+  className="StyledAvatar-sc-8wohen-0 hUAfDK"
+/>
+`;

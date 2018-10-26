@@ -10,6 +10,7 @@
     "lint": "eslint --cache src",
     "preparecommit": "yarn snapshots && yarn prettier && yarn lint && yarn test",
     "precommit": "npm run prettier && npm run lint",
+    "prepublish": "npm run build",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
     "snapshots": "babel-node ./bin/generateSnapshots",
     "start": "yarn run start:styleguidist",
@@ -68,5 +69,10 @@
   "peerDependencies": {
     "react": "^16.4.1",
     "react-native": "0.55.4"
-  }
+  },
+  "files": [
+    "dist",
+    "native",
+    "CONTRIBUTING.md"
+  ]
 }

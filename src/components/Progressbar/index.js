@@ -6,8 +6,6 @@ import Text from '../Text'
 /**
  * A basic progress bar, which shows filling percentage.
  *
- * @version 0.1
- * @author Pierre Lachèvre
  */
 const Progressbar = ({
   end,

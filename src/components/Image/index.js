@@ -6,8 +6,6 @@ import StyledImage from './styles/StyledImage'
 /**
  * A simple image, nothing special for the moment.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
 class Image extends React.PureComponent {
   static defaultProps = {

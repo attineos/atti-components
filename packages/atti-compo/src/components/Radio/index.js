@@ -8,8 +8,6 @@ import LabelRadio from './styles/LabelRadio'
 /**
  * A radio button.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
 class Radio extends React.Component {
   static defaultProps = {

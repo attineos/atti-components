@@ -6,8 +6,6 @@ import StyledLoader from './styles/StyledLoader'
 /**
  * A Loader, nothing special for the moment.
  *
- * @version 0.1
- * @author Antoine Chan
  */
 const Loader = ({ color, type }) => <StyledLoader color={color} type={type} />
 

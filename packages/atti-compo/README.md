@@ -2,14 +2,41 @@
 
 ![pipelines](https://gitlab.com/attineos/atti-components/badges/develop/build.svg)
 
-Reusable React components, using the styled-components library.
+Reusable and cross platform React components, for web and Native application.
+
+This library aims to provide a common set of basic UI components that can be used seamlessly by both web and native application.
+Each component aims to provide the same options and functionality on both environments so your UI code can be written once and deployed everywhere.
 
 [See the live demo/documentation](https://atti-components.netlify.com/).
 
-You can use the exact same code for both native and web components.
-**Just be aware that if you use a native and a web property to do the exact same action, native property will get a higher priority on native applications and web property will get the same on web applications.**
+## Basic usage for any project
 
-## Installation
+To use this library, simply add it as a dependency to your yarn or npm project by running the command:
+
+```
+yarn add atti-components
+```
+
+This will install the latest atti-component version right away in your project
+
+Then, add the right import depending if you want to use Native or Web components:
+
+```js
+// Import Web components
+import * from 'atti-components'
+
+// Import Native components
+import * from 'atti-components/native'
+```
+
+The goal of this library is to abstract native and web differencies and expose a common interface. 
+However some inconsistencies may still exist and you will have to thoroughly test your application on all devices you intend to distribute it on.
+
+For a more detailed view of individual components and how to use them, please [see the live demo/documentation](https://atti-components.netlify.com/).
+
+## Contributing
+
+### Installation
 
 ```
 git clone https://gitlab.com/attineos/atti-components.git
@@ -17,15 +44,15 @@ cd atti-components
 yarn install
 ```
 
-## Usage
+### Yarn commands
 
-Run `yarn start` so you can start contributing/testing right away (alias of `yarn start:styleguidist`)
+Please note that for contributing, we only support YARN for consistency.
+
+Run `yarn start` to start the styleguidist server, and let you see/test the components right in your browser.
 
 Run `yarn build:watch` to set a watcher on your file and automatically build them on save.
 
 Run `yarn prettier` to run prettier on all your files. It will automatically fix them if necessary.
-
-Run `yarn start:styleguidist` to start the styleguidist server, and see the documentation of yours components.
 
 Run `yarn snapshots` to create automatically all snapshot tests of the components.
 
@@ -37,9 +64,10 @@ Run `yarn preparecommit` to check if you can commit your code. The command runs 
 
 Run `yarn build` to transpile and compress your components into 2 bundles (one for the web and one for native).
 
-## Contribution
 
-If you want to contribute to `atti-components`, please [see the contributing file](CONTRIBUTING.md).
+### Contributing rules and help
+
+Before contributing to `atti-components`, please [check the contributing file](CONTRIBUTING.md). It contains lot of help on how to write your contribution the right way.
 
 ## Useful links
 

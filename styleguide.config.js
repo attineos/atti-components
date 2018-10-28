@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  components: 'src/components/!(theme)/index.js',
+  components: 'src/components/**/index.js',
   compilerConfig: {
     transforms: {
       dangerousTaggedTemplateString: true,
@@ -20,6 +20,7 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
   },
+  skipComponentsWithoutExample: true,
   webpackConfig: {
     resolve: {
       extensions: ['.web.js', '.js']

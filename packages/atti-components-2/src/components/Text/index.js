@@ -6,8 +6,6 @@ import StyledText from './styles'
 /**
  * Text.
  *
- * @version 0.1
- * @author Alexandre DEVE
  */
 
 const Text = StyledText`

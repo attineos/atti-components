@@ -7,8 +7,6 @@ import resetCSS from '../../helpers/resetCSS'
 /**
  * Header3.
  *
- * @version 0.1
- * @author Alexandre DEVE
  */
 
 const Header3 = styled.h3.attrs(resetCSS)`

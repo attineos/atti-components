@@ -7,8 +7,6 @@ import resetCSS from '../../helpers/resetCSS'
 /**
  * BigText.
  *
- * @version 0.1
- * @author Alexandre DEVE
  */
 
 const BigText = styled.p.attrs(resetCSS)`

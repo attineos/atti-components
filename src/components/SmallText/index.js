@@ -7,8 +7,6 @@ import resetCSS from '../../helpers/resetCSS'
 /**
  * SmallText.
  *
- * @version 0.1
- * @author Alexandre DEVE
  */
 
 const SmallText = styled.p.attrs(resetCSS)`

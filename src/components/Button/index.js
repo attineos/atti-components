@@ -5,7 +5,6 @@ import ButtonFacade from './facade'
 /**
  * A Simple Button compatible for web and native.
  *
- * @version 0.2
  */
 
 const Button = ({ children, onClick, onPress, title }) => (

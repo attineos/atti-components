@@ -6,8 +6,6 @@ import StyledBadge from './styles/StyledBadge'
 /**
  * Badge component.
  *
- * @version 0.1
- * @author Ludovic LE HENAFF
  */
 class Badge extends React.Component {
   static defaultProps = {

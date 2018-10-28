@@ -7,7 +7,6 @@ import resetCSS from '../../helpers/resetCSS'
 /**
  * Label.
  *
- * @version 0.1
  */
 
 const Label = styled.label.attrs(resetCSS)`

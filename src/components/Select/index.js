@@ -9,8 +9,6 @@ import StyledLabel from './styles/StyledLabel'
 /**
  * A select field.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
 const Select = ({ id, isMulti, label, name, onChange, options, size, sort }) => {
   const optionsSorted =

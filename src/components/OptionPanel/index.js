@@ -6,8 +6,6 @@ import StyledOptionPanel from './styles/StyledOptionPanel'
 /**
  * A container of Options.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
 class OptionPanel extends React.Component {
   render() {

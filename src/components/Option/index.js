@@ -6,8 +6,6 @@ import StyledOption from './styles/StyledOption'
 /**
  * A div which contains a text and which can be selected.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
 class Option extends React.Component {
   static defaultProps = {

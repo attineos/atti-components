@@ -11,7 +11,6 @@ import StyledMenu from './styles/StyledMenu'
 /**
  * The menu is a list of Link elements.
  *
- * @version 0.1
  */
 const Menu = ({ values }) => (
   <StyledMenu>

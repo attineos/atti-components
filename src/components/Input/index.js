@@ -7,7 +7,6 @@ import StyledLabelInput from './styles/StyledLabelInput'
 /**
  * An input field.
  *
- * @version 0.2
  */
 const Input = ({ id, form, label, name, onChange, pattern, placeholder, size, type, value }) => (
   <React.Fragment>

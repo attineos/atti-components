@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import StyledLink from './styles/StyledLink'
 
 /**
- * A link, nothing special for the moment.
- *
- * @version 0.3
+ * A link to an action or another resource.
  */
 class Link extends React.Component {
   static defaultProps = {

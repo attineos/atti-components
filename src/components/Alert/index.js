@@ -6,8 +6,6 @@ import StyledDiv from './styles/StyledDiv'
 /**
  * An alert component.
  *
- * @version 0.1
- * @author Ludovic LE HENAFF
  */
 class Alert extends React.PureComponent {
   render() {

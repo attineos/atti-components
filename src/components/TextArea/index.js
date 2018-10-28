@@ -7,8 +7,6 @@ import StyledLabelTextArea from './styles/StyledLabelTextArea'
 /**
  * A textarea with an associated label.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
 const TextArea = ({ id, label, name, placeholder }) => (
   <React.Fragment>

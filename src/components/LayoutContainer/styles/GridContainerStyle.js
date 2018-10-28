@@ -11,10 +11,10 @@ const getColumnTemplateForIE = (colCount, gapSize) =>
   map(range(colCount), () => '1fr').join(` ${gapSize}px `)
 
 const getStyleString = (colCount, totalSize, gapSize) => `
-grid-gap: ${gapSize};
-max-width: ${totalSize}
--ms-grid-columns: ${getColumnTemplateForIE(colCount, gapSize)};
-grid-template-columns: ${getColumnTemplate(colCount)};
+  grid-gap: ${gapSize};
+  max-width: ${totalSize}
+  -ms-grid-columns: ${getColumnTemplateForIE(colCount, gapSize)};
+  grid-template-columns: ${getColumnTemplate(colCount)};
 `
 
 const GridContainerStyle = styled(BaseContainerStyle)`

@@ -4,22 +4,23 @@ import PropTypes from 'prop-types'
 import RawContainerStyle from './styles/RawContainerStyle'
 import GridContainerStyle from './styles/GridContainerStyle'
 
-/**
- * Container type that just create a container with no display rules for childrens
- * @type {string}
- */
-export const CONTAINER_RAW_TYPE = 'CONTAINER_RAW_TYPE'
-/**
- * Container type that create a container with grid layout display rules
- * @type {string}
- */
-export const CONTAINER_GRID_TYPE = 'CONTAINER_GRID_TYPE'
+import * as types from './types'
 
-export const CONTAINER_TYPES = [CONTAINER_RAW_TYPE, CONTAINER_GRID_TYPE]
-
+/**
+ * Generates a new Layout container.
+ *
+ * The container simply contains things.
+ * Layout is defined by the type of the container (Raw, Grid, something else).
+ */
 class LayoutContainer extends React.PureComponent {
   static propTypes = {
-    type: PropTypes.oneOf(CONTAINER_TYPES).isRequired,
+    /**
+     * The type of the container.
+     */
+    type: PropTypes.oneOf(types.CONTAINER_TYPES).isRequired,
+    /**
+     * The childrens to use as content of the container.
+     */
     children: PropTypes.element.isRequired,
   }
 
@@ -27,9 +28,9 @@ class LayoutContainer extends React.PureComponent {
     const { type } = this.props
 
     switch (type) {
-      case CONTAINER_RAW_TYPE:
+      case types.CONTAINER_RAW_TYPE:
         return RawContainerStyle
-      case CONTAINER_GRID_TYPE:
+      case types.CONTAINER_GRID_TYPE:
         return GridContainerStyle
     }
   }

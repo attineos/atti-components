@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack/native.config.babel.js && webpack --config webpack/web.config.babel.js",
     "build:documentation": "styleguidist build",
+    "theme": "babel-node ./bin/generateFullTheme",
     "gen": "babel-node --presets @babel/env ./bin/generateComponent",
     "lint": "eslint --cache src",
     "preparecommit": "yarn snapshots && yarn prettier && yarn lint && yarn test",

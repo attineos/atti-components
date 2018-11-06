@@ -9,7 +9,7 @@
     "theme": "babel-node --extensions \".js\",\".web.js\" ./bin/generateFullTheme",
     "gen": "babel-node --presets @babel/env ./bin/generateComponent",
     "lint": "eslint --cache src",
-    "preparecommit": "yarn snapshots && yarn prettier && yarn lint && yarn test",
+    "preparecommit": "yarn snapshots && yarn theme && yarn prettier && yarn lint && yarn test",
     "precommit": "npm run prettier && npm run lint",
     "prepublish": "npm run build",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",

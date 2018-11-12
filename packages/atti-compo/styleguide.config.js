@@ -1,7 +1,6 @@
 const path = require('path')
 
 module.exports = {
-  components: 'src/components/**/index.js',
   compilerConfig: {
     transforms: {
       dangerousTaggedTemplateString: true,
@@ -12,18 +11,37 @@ module.exports = {
       links: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Roboto'
-        }
-      ]
-    }
+          href: 'https://fonts.googleapis.com/css?family=Roboto',
+        },
+      ],
+    },
   },
+  sections: [
+    {
+      name: 'Introduction',
+      sections: [
+        {
+          name: 'Theme',
+          content: 'docs/theme.md',
+        },
+        {
+          name: 'Colors',
+          content: 'docs/colors.md',
+        },
+      ],
+    },
+    {
+      name: 'Components',
+      components: 'src/components/**/index.js',
+    },
+  ],
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
   },
   skipComponentsWithoutExample: true,
   webpackConfig: {
     resolve: {
-      extensions: ['.web.js', '.js']
+      extensions: ['.web.js', '.js'],
     },
     module: {
       rules: [

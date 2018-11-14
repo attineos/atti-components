@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../theme'
-
 import ThemeProvider from '../components/ThemeProvider'
+import theme from '../theme'
 
 class Wrapper extends React.Component {
   static propTypes = {
@@ -15,7 +14,6 @@ class Wrapper extends React.Component {
 
   render() {
     const { children } = this.props
-
     return <ThemeProvider theme={theme}>{children}</ThemeProvider>
   }
 }

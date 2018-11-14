@@ -29,12 +29,6 @@ const TEMPLATES_FOR_INDEX = {
   [THEME_FOLDER]: templateThemeFolderIndexFile,
 }
 
-// Styleguide list components file.
-const styleguideListCompoFile = 'src/styleguide/listComponents.txt'
-
-// Component factory file.
-const componentFactoryFile = 'src/theme/componentsFactory.js'
-
 // Component folder.
 const componentDir = 'src/components'
 
@@ -152,85 +146,8 @@ async function createFolders(payload) {
     // Create the folders and modify the theme to add the new component.
     const created = await createFolders({ componentName: name, folders })
     if (created) {
-      // Add the component to styleguide/listComponents.txt.
-      const textResult = fs
-        .readFileSync(styleguideListCompoFile, 'utf-8', err => {
-          if (err) {
-            console.error('Error while reading components in styleguide/listComponents.txt.', err)
-          }
-        })
-        .split('\n')
-        .concat(name)
-        .sort()
-        .join('\n')
-
-      fs.writeFileSync(styleguideListCompoFile, textResult, err => {
-        if (err) {
-          console.error('Error while writing components in styleguide/listComponents.txt.', err)
-        }
-      })
-
-      // Add the component to theme/componentsFactory.js.
-
-      // Read the file
-
-      const fileResult = fs
-        .readFileSync(componentFactoryFile, 'utf-8', err => {
-          if (err) {
-            console.error('Error while reading components in src/theme/componentFactory.js.', err)
-          }
-        })
-        .split('\n\n')
-
-      // Extract all imports, add the new import, sort the list and join it.
-
-      const importPart = fileResult[0]
-        .split('\n')
-        .concat('import ' + name.toLowerCase() + " from '../components/" + name + "/theme'")
-        .sort()
-        .join('\n')
-
-      // Extract export body.
-
-      const previousExportPart = fileResult[1].split('{\n')
-
-      const endExportPart = previousExportPart[1].split('}')
-
-      const bodyExportPart = endExportPart[0].split(',').map(s => s.trim().replace('\n', ''))
-
-      // Add new export and sort export list.
-
-      const bodyExportPartWithNewExport = bodyExportPart
-        .concat(name.toLowerCase() + ': ' + name.toLowerCase() + '(constants)')
-        .sort((a, b) => {
-          if (a === '') {
-            return 1
-          } else if (b === '') {
-            return -1
-          } else {
-            return a > b ? 1 : -1
-          }
-        })
-
-      // Join previous, body and end.
-
-      const exportPart =
-        previousExportPart[0] +
-        '{\n' +
-        bodyExportPartWithNewExport.join(',\n') +
-        '}' +
-        endExportPart[1]
-
-      // Write componentFactory file.
-
-      fs.writeFileSync(componentFactoryFile, importPart + '\n\n' + exportPart, err => {
-        if (err) {
-          console.error('Error while writing components in src/theme/componentFactory.js.', err)
-        }
-      })
-
       console.log(
-        'Component created. Your component theme was added into src/theme/componentsFactory.js.',
+        "Component created. Don't forget to add your component theme into src/theme/componentsFactory.js.",
       )
     } else {
       process.exit(1)

@@ -131,7 +131,7 @@ async function createFolders(payload) {
 /**
  * Launch the component generation.
  */
-;(async function() {
+;(async function generate() {
   // Get the details about the component to create.
   const answers = await prompts(questions)
 

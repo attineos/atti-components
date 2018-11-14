@@ -1,7 +1,7 @@
 const { camelCase, upperFirst } = require('lodash')
 const path = require('path')
 
-const TITLE = 'Atti-components'
+const TITLE = 'atti-components'
 
 module.exports = {
   title: `${TITLE}`,
@@ -22,7 +22,7 @@ module.exports = {
     const componentDirName = path.dirname(filePath);
     const componentSourcesFilesName = componentDirName.split(path.sep).pop();
     const componentName = upperFirst(camelCase(componentSourcesFilesName));
-    return `import ${componentName} from '${TITLE}'`
+    return `import { ${componentName} } from '${TITLE}'`
   },
   // sections: sectionsWithUnclassified,
   styleguideComponents: {

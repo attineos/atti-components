@@ -1,12 +1,25 @@
+const { camelCase, upperFirst } = require('lodash')
 const path = require('path')
 
+const TITLE = 'atti-components'
+
 module.exports = {
+  title: `${TITLE}`,
+  pagePerSection: true,
+  components: 'src/components/!(theme)/Readme.md',
   compilerConfig: {
     transforms: {
       dangerousTaggedTemplateString: true,
     },
   },
+  getComponentPathLine(filePath) {
+    const componentDirName = path.dirname(filePath);
+    const componentSourcesFilesName = componentDirName.split(path.sep).pop();
+    const componentName = upperFirst(camelCase(componentSourcesFilesName));
+    return `import { ${componentName} } from '${TITLE}'`
+  },
   template: {
+    favicon: 'favicon.png',
     head: {
       links: [
         {
@@ -15,6 +28,12 @@ module.exports = {
         },
       ],
     },
+  },
+  theme: {
+    color: {
+      linkHover: '#666',
+      link: '#333',
+    }
   },
   sections: [
     {
@@ -37,6 +56,7 @@ module.exports = {
   ],
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
+    StyleGuideRenderer: path.join(__dirname, 'src/styleguide/StyleGuideRenderer'),
   },
   skipComponentsWithoutExample: true,
   webpackConfig: {

@@ -12,22 +12,11 @@ module.exports = {
       dangerousTaggedTemplateString: true,
     },
   },
-  theme: {
-    color: {
-      linkHover: '#666',
-      link: '#333',
-    }
-  },
   getComponentPathLine(filePath) {
     const componentDirName = path.dirname(filePath);
     const componentSourcesFilesName = componentDirName.split(path.sep).pop();
     const componentName = upperFirst(camelCase(componentSourcesFilesName));
     return `import { ${componentName} } from '${TITLE}'`
-  },
-  // sections: sectionsWithUnclassified,
-  styleguideComponents: {
-    Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
-    StyleGuideRenderer: path.join(__dirname, 'src/styleguide/StyleGuideRenderer'),
   },
   template: {
     favicon: 'favicon.png',
@@ -39,6 +28,12 @@ module.exports = {
         },
       ],
     },
+  },
+  theme: {
+    color: {
+      linkHover: '#666',
+      link: '#333',
+    }
   },
   sections: [
     {
@@ -59,6 +54,10 @@ module.exports = {
       components: 'src/components/**/index.js',
     },
   ],
+  styleguideComponents: {
+    Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
+    StyleGuideRenderer: path.join(__dirname, 'src/styleguide/StyleGuideRenderer'),
+  },
   skipComponentsWithoutExample: true,
   webpackConfig: {
     resolve: {

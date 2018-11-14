@@ -1,22 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import Logo from 'rsg-components/Logo'
 import Markdown from 'rsg-components/Markdown'
-import Styled from 'rsg-components/Styled'
-import cx from 'classnames'
 import Ribbon from 'rsg-components/Ribbon'
+import Styled from 'rsg-components/Styled'
 import Version from 'rsg-components/Version'
 
 const styles = ({ color, fontFamily, fontSize, sidebarWidth, mq, space, maxWidth }) => ({
-  root: {
-    minHeight: '100vh',
-  },
-  hasSidebar: {
-    paddingLeft: sidebarWidth,
-    [mq.small]: {
-      paddingLeft: 0,
-    },
-  },
   content: {
     maxWidth,
     padding: [[space[2], space[4]]],
@@ -26,40 +18,49 @@ const styles = ({ color, fontFamily, fontSize, sidebarWidth, mq, space, maxWidth
     },
     display: 'block',
   },
+  footer: {
+    color: color.light,
+    display: 'block',
+    fontFamily: fontFamily.base,
+    fontSize: fontSize.small,
+  },
+  hasSidebar: {
+    paddingLeft: sidebarWidth,
+    [mq.small]: {
+      paddingLeft: 0,
+    },
+  },
+  logo: {
+    borderBottom: [[1, color.border, 'solid']],
+    padding: space[2],
+  },
   sidebar: {
+    top: 0,
+    left: 0,
+    bottom: 0,
     color: '#333',
     border: [[color.border, 'solid']],
     borderWidth: [[0, 1, 0, 0]],
     position: 'fixed',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    width: '250px',
     overflow: 'auto',
     WebkitOverflowScrolling: 'touch',
+    width: '250px',
     [mq.small]: {
-      position: 'static',
-      width: 'auto',
       borderWidth: [[1, 0, 0, 0]],
       paddingBottom: space[0],
+      position: 'static',
+      width: 'auto',
     },
   },
-  logo: {
-    padding: space[2],
-    borderBottom: [[1, color.border, 'solid']],
-  },
-  footer: {
-    display: 'block',
-    color: color.light,
-    fontFamily: fontFamily.base,
-    fontSize: fontSize.small,
+  root: {
+    minHeight: '100vh',
   },
 })
 
 class StyleGuideRenderer extends React.Component {
   static defaultProps = {
-    version: undefined,
     hasSidebar: undefined,
+    version: undefined,
   }
 
   static propTypes = {
@@ -77,6 +78,9 @@ class StyleGuideRenderer extends React.Component {
      * Title of the style guide.
      */
     title: PropTypes.string.isRequired,
+    /**
+     * All the sections of the sidebar.
+     */
     toc: PropTypes.node.isRequired,
     /**
      * The version of the project (if undefined, nothing is displayed).
@@ -93,7 +97,15 @@ class StyleGuideRenderer extends React.Component {
   }
 
   render() {
-    const { classes, title, version, homepageUrl, children, toc, hasSidebar } = this.props
+    const {
+      children,
+      classes,
+      hasSidebar,
+      homepageUrl,
+      title,
+      toc,
+      version,
+    } = this.props
     const { themeCompo } = this.state
     return (
       <div

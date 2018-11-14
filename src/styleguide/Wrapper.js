@@ -4,9 +4,6 @@ import PropTypes from 'prop-types'
 import ThemeProvider from '../components/ThemeProvider'
 import theme from '../theme'
 
-/**
- * The wrapper will subscribe to a static class name DynamicTheme to enable the theme to be modify.
- */
 class Wrapper extends React.Component {
   static propTypes = {
     /**

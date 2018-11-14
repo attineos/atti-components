@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text renders correctly 1`] = `
-<p
-  className="sc-bdVaJa khwxBn"
+<span
+  className="atti-box"
 >
-  <div />
-</p>
+  <p
+    className="sc-bdVaJa atti-r-css  cZskBj"
+  >
+    <div />
+  </p>
+</span>
 `;

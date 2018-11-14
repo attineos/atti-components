@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledLabel renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <label
+    className="StyledLabel-sc-7lrvk2-0 atti-r-css  cgokyd"
+  />
+</span>
+`;

@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledLabelTextArea renders correctly 1`] = `
-<label
-  className="StyledLabelTextArea-f7fxws-0 eryuZb"
-/>
+<span
+  className="atti-box"
+>
+  <label
+    className="StyledLabelTextArea-f7fxws-0 atti-r-css  kDYnrc"
+  />
+</span>
 `;

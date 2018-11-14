@@ -1,15 +1,17 @@
 {
   "name": "atti-components",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A set of fully customizable React components made with <3 with styled-components",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config webpack/native.config.babel.js && webpack --config webpack/web.config.babel.js",
     "build:documentation": "styleguidist build",
+    "theme": "babel-node --extensions \".js\",\".web.js\" ./bin/generateFullTheme",
     "gen": "babel-node --presets @babel/env ./bin/generateComponent",
     "lint": "eslint --cache src",
-    "preparecommit": "yarn snapshots && yarn prettier && yarn lint && yarn test",
+    "preparecommit": "yarn snapshots && yarn theme && yarn prettier && yarn lint && yarn test",
     "precommit": "npm run prettier && npm run lint",
+    "prepublish": "npm run build",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
     "snapshots": "babel-node ./bin/generateSnapshots",
     "start": "yarn run start:styleguidist",
@@ -23,7 +25,7 @@
     "lodash": "^4.17.10",
     "polished": "^2.0.3",
     "prop-types": "^15.6.2",
-    "styled-components": "^3.3.3"
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
     "@textlint/markdown-to-ast": "^6.0.9",
@@ -68,5 +70,10 @@
   "peerDependencies": {
     "react": "^16.4.1",
     "react-native": "0.55.4"
-  }
+  },
+  "files": [
+    "dist",
+    "native",
+    "CONTRIBUTING.md"
+  ]
 }

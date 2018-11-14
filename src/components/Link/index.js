@@ -3,45 +3,51 @@ import PropTypes from 'prop-types'
 import StyledLink from './styles/StyledLink'
 
 /**
- * A link, nothing special for the moment.
- *
- * @version 0.3
- * @author Joseph Lefevre
- * @author Thomas Capet
- * @author Victor Gosse
+ * A link to an action or another resource.
  */
-const Link = ({ children, href, onClick, target }) => (
-  <StyledLink href={href} onClick={onClick} target={target}>
-    {children}
-  </StyledLink>
-)
+class Link extends React.Component {
+  static defaultProps = {
+    className: '',
+    onClick: null,
+    target: null,
+  }
 
-Link.defaultProps = {
-  onClick: null,
-  target: null,
-}
+  static propTypes = {
+    /**
+     * Text of the link.
+     */
+    children: PropTypes.string.isRequired,
+    /**
+     * The classes used on the component.
+     */
+    className: PropTypes.string,
+    /**
+     * The location of the external resource.
+     */
+    href: PropTypes.string.isRequired,
 
-Link.propTypes = {
-  /**
-   * Text of the link.
-   */
-  children: PropTypes.string.isRequired,
-  /**
-   * The location of the external resource.
-   */
-  href: PropTypes.string.isRequired,
+    /**
+     * Where to open the link.
+     */
+    target: PropTypes.string,
 
-  /**
-   * Where to open the link.
-   */
-  target: PropTypes.string,
+    /**
+     * Gets called when the user clicks on the link.
+     *
+     * @param {SyntheticEvent} event The react `SyntheticEvent`
+     */
+    onClick: PropTypes.func,
+  }
 
-  /**
-   * Gets called when the user clicks on the link.
-   *
-   * @param {SyntheticEvent} event The react `SyntheticEvent`
-   */
-  onClick: PropTypes.func,
+  render() {
+    const { children, className, href, onClick, target } = this.props
+
+    return (
+      <StyledLink className={className} href={href} onClick={onClick} target={target}>
+        {children}
+      </StyledLink>
+    )
+  }
 }
 
 export default Link

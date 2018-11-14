@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`InputStyle renders correctly 1`] = `
-<input
-  className="InputStyle__StyledInput-sc-3f32vx-0 eHjWIv"
-/>
-`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledFilePicker renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <button
+    className="StyledFilePicker-sc-1q1g117-0 atti-r-css  ixGVaS"
+  />
+</span>
+`;

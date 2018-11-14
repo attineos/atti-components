@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link renders correctly 1`] = `
-<a
-  className="StyledLink-kwdrvq-0 blQXAh sc-bwzfXH kBpFOP"
-  href="Atticomponents"
-  onClick={[Function]}
-  target="Atticomponents"
+<span
+  className="atti-box"
 >
-  Atticomponents
-</a>
+  <a
+    className="Atticomponents StyledLink-kwdrvq-0 atti-r-css Atticomponents jqDHDT"
+    href="Atticomponents"
+    onClick={[Function]}
+    target="Atticomponents"
+  >
+    Atticomponents
+  </a>
+</span>
 `;

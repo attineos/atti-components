@@ -1,15 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input renders correctly 1`] = `
-Array [
+<span
+  className="atti-box"
+>
   <label
-    className="StyledLabelInput-p62z0t-0 iKQagb"
+    className="StyledLabelInput-p62z0t-0 atti-r-css  dhJTyY"
     htmlFor="Atticomponents"
   >
     Atticomponents
-  </label>,
+  </label>
   <input
-    className="InputStyle__StyledInput-sc-3f32vx-0 eHjWIv"
+    className="StyledInput-sc-12an70a-0 atti-r-css  EBUgl"
     form={true}
     id="Atticomponents"
     name="Atticomponents"
@@ -19,6 +21,6 @@ Array [
     size={42}
     type="Atticomponents"
     value="Atticomponents"
-  />,
-]
+  />
+</span>
 `;

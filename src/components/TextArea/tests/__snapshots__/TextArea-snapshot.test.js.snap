@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextArea renders correctly 1`] = `
-Array [
+<span
+  className="atti-box"
+>
   <label
-    className="StyledLabelTextArea-f7fxws-0 eryuZb"
+    className="StyledLabelTextArea-f7fxws-0 atti-r-css  kDYnrc"
     htmlFor="Atticomponents"
   >
     Atticomponents
-  </label>,
+  </label>
   <textarea
-    className="StyledTextArea-sc-1ciexer-0 kwYwue"
+    className="StyledTextArea-sc-1ciexer-0 atti-r-css  GdmeI"
     id="Atticomponents"
     name="Atticomponents"
     placeholder="Atticomponents"
-  />,
-]
+  />
+</span>
 `;

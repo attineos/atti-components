@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledMenu renders correctly 1`] = `
-<nav
-  className="StyledMenu-sc-1vi243o-0 cLVAAX"
-/>
+<span
+  className="atti-box"
+>
+  <nav
+    className="StyledMenu-sc-1vi243o-0 gzlXeh"
+  />
+</span>
 `;

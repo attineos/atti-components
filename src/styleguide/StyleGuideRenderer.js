@@ -6,9 +6,6 @@ import Styled from 'rsg-components/Styled'
 import cx from 'classnames'
 import Ribbon from 'rsg-components/Ribbon'
 import Version from 'rsg-components/Version'
-import ChangeThemeStyleGuide from './ChangeThemeStyleGuide'
-
-import ChangeThemeComponents from './ChangeThemeComponents'
 
 const styles = ({ color, fontFamily, fontSize, sidebarWidth, mq, space, maxWidth }) => ({
   root: {
@@ -30,13 +27,14 @@ const styles = ({ color, fontFamily, fontSize, sidebarWidth, mq, space, maxWidth
     display: 'block',
   },
   sidebar: {
+    color: '#333',
     border: [[color.border, 'solid']],
     borderWidth: [[0, 1, 0, 0]],
     position: 'fixed',
     top: 0,
     left: 0,
     bottom: 0,
-    width: sidebarWidth,
+    width: '250px',
     overflow: 'auto',
     WebkitOverflowScrolling: 'touch',
     [mq.small]: {
@@ -87,7 +85,7 @@ class StyleGuideRenderer extends React.Component {
   }
 
   state = {
-    themeCompo: { primary: '#bdd5ea', secondary: '#577399' },
+    themeCompo: { primary: '#ffffff', secondary: '#bdd5ea' },
   }
 
   modifyThemeCompo = t => {
@@ -115,8 +113,6 @@ class StyleGuideRenderer extends React.Component {
               {version && <Version>{version}</Version>}
             </div>
             {toc}
-            <ChangeThemeStyleGuide modifyTheme={this.modifyThemeCompo} />
-            <ChangeThemeComponents />
           </div>
         )}
         <Ribbon />

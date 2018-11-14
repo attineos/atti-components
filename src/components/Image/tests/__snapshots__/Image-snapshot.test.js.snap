@@ -1,11 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image renders correctly 1`] = `
-<img
-  alt="Atticomponents"
-  className="StyledImage-sc-1w567an-0 gWgWUd"
-  height="Atticomponents"
-  src="Atticomponents"
-  width="Atticomponents"
-/>
+<span
+  className="atti-box"
+>
+  <img
+    alt="Atticomponents"
+    className="StyledImage-sc-1w567an-0 gWgWUd"
+    height="Atticomponents"
+    src="Atticomponents"
+    width="Atticomponents"
+  />
+</span>
 `;

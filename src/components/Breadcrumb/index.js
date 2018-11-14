@@ -10,8 +10,6 @@ import StyledBreadcrumb from './styles/StyledBreadcrumb'
 
 /**
  * A breadcrumb component.
- * @author Clément ALLAIN
- * @version 0.1
  */
 const Breadcrumb = ({ elements, separator }) => (
   <StyledBreadcrumb>

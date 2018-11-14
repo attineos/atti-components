@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge renders correctly 1`] = `
-<sup>
-  <span
-    className="sc-htpNat kHxaTW sc-bwzfXH cBgBua"
-    type={null}
-  >
-    <div />
-  </span>
-</sup>
+<span
+  className="atti-box"
+>
+  <sup>
+    <span
+      className="StyledBadge-sc-14ha03a-0 csDeYh"
+      type={null}
+    >
+      <div />
+    </span>
+  </sup>
+</span>
 `;

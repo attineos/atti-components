@@ -7,6 +7,7 @@ const fonts = css`
 `
 
 const BreadcrumbSeparator = styled.span`
+  color: ${({ theme }) => theme.components.breadcrumb.breadcrumbSeparator.color};
   ${fonts};
   margin-left: ${({ theme }) => theme.components.breadcrumb.breadcrumbSeparator.spaces.marginLeft};
   margin-right: ${({ theme }) =>

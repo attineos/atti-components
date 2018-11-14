@@ -9,11 +9,6 @@ Checkbox Button :
     value="ImChecked"
   />
   <br />
-  <Checkbox
-    id="checkboxTest2"
-    name="checkboxTestGroup"
-    label="My second checkbox button"
-    value="ImCheckedToo"
-  />
+  <Checkbox id="checkboxTest2" name="checkboxTestGroup" value="ImCheckedToo" />
 </div>
 ```

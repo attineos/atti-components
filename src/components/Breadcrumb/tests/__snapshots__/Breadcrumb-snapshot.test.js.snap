@@ -1,16 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumb renders correctly 1`] = `
-<div
-  className="StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
+<span
+  className="atti-box"
 >
-  <a
-    className="StyledLink-kwdrvq-0 blQXAh sc-bwzfXH kBpFOP"
-    href="anUrl"
-    onClick={null}
-    target={null}
+  <div
+    className="StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
   >
-    anElement
-  </a>
-</div>
+    <a
+      className="StyledLink-kwdrvq-0 atti-r-css  jqDHDT"
+      href="anUrl"
+      onClick={null}
+      target={null}
+    >
+      anElement
+    </a>
+  </div>
+</span>
 `;

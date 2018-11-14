@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledLabelInput renders correctly 1`] = `
-<label
-  className="StyledLabelInput-p62z0t-0 iKQagb"
-/>
+<span
+  className="atti-box"
+>
+  <label
+    className="StyledLabelInput-p62z0t-0 atti-r-css  dhJTyY"
+  />
+</span>
 `;

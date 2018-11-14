@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LabelRadio renders correctly 1`] = `
-<label
-  className="LabelRadio-wot4p6-0 bQnqxV"
-/>
+<span
+  className="atti-box"
+>
+  <label
+    className="LabelRadio-wot4p6-0 atti-r-css  jilFc"
+  />
+</span>
 `;

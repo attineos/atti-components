@@ -1,3 +1,6 @@
+import ThemeProvider from './components/ThemeProvider'
+
+import Alert from './components/Alert'
 import BigText from './components/BigText'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
@@ -16,11 +19,13 @@ import Select from './components/Select'
 import SmallText from './components/SmallText'
 import Text from './components/Text'
 import TextArea from './components/TextArea'
-import ThemeProvider from './components/ThemeProvider'
 
 import theme from './theme'
 
 module.exports = {
+  ThemeProvider,
+
+  Alert,
   BigText,
   Breadcrumb,
   Button,
@@ -39,7 +44,6 @@ module.exports = {
   SmallText,
   Text,
   TextArea,
-  ThemeProvider,
 
   theme,
 }

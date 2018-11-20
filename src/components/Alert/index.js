@@ -10,7 +10,11 @@ import StyledDiv from './styles/StyledDiv'
 class Alert extends React.PureComponent {
   render() {
     const { children, className, type } = this.props
-    return <StyledDiv className={className} type={type}>{children}</StyledDiv>
+    return (
+      <StyledDiv className={className} type={type}>
+        {children}
+      </StyledDiv>
+    )
   }
 }
 

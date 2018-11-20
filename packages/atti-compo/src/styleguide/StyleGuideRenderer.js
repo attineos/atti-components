@@ -97,15 +97,7 @@ class StyleGuideRenderer extends React.Component {
   }
 
   render() {
-    const {
-      children,
-      classes,
-      hasSidebar,
-      homepageUrl,
-      title,
-      toc,
-      version,
-    } = this.props
+    const { children, classes, hasSidebar, homepageUrl, title, toc, version } = this.props
     const { themeCompo } = this.state
     return (
       <div

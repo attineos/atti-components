@@ -11,7 +11,7 @@ exports[`Select renders correctly 1`] = `
     Atticomponents
   </label>
   <select
-    className="StyledSelect-jeqzcu-0 atti-r-css  jHJiVI"
+    className="StyledSelect-jeqzcu-0 atti-r-css  wHhRh"
     id="Atticomponents"
     multiple={true}
     name="Atticomponents"

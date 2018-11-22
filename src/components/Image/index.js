@@ -44,4 +44,5 @@ Image.propTypes = {
   width: PropTypes.string,
 }
 
+/** @component */
 export default styled(Image)``

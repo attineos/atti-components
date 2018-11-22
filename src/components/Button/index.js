@@ -59,4 +59,5 @@ Button.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
+/** @component */
 export default styled(Button)``

@@ -5,12 +5,12 @@ exports[`Progressbar renders correctly 1`] = `
   className="atti-box"
 >
   <div
-    className="StyledProgressbar-tip8qd-0 fZEtjQ"
+    className="Progressbar-rfzdye-0 iAQcG StyledProgressbar-tip8qd-0 juzjTl"
     end={42}
     start={42}
   >
     <p
-      className="sc-bdVaJa atti-r-css  cZskBj"
+      className="Text-o3or1r-0 atti-r-css  eloKlU"
     >
       NaN%
     </p>

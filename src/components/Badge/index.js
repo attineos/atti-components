@@ -40,4 +40,5 @@ Badge.propTypes = {
   type: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
 }
 
+/** @component */
 export default styled(Badge)``

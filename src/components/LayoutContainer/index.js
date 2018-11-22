@@ -53,4 +53,5 @@ LayoutContainer.propTypes = {
   type: PropTypes.oneOf(types.CONTAINER_TYPES).isRequired,
 }
 
+/** @component */
 export default styled(LayoutContainer)``

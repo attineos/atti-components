@@ -71,4 +71,5 @@ LayoutGridCell.propTypes = {
   cols: PropTypes.element.isRequired,
 }
 
+/** @component */
 export default styled(LayoutGridCell)``

@@ -5,7 +5,7 @@ exports[`LayoutContainer renders correctly 1`] = `
   className="atti-box"
 >
   <div
-    className="LayoutContainer-clgmc0-0 cHUFOJ RawContainerStyle-sc-1s0z1ao-0 eqafuE"
+    className="Atticomponents LayoutContainer-clgmc0-0 cHUFOJ RawContainerStyle-sc-1s0z1ao-0 eqafuE"
   >
     <div />
   </div>

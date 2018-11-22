@@ -10,7 +10,7 @@ it('LayoutContainer renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <LayoutContainer type="CONTAINER_RAW_TYPE" ><div/></LayoutContainer>
+        <LayoutContainer className="Atticomponents" type="CONTAINER_RAW_TYPE" ><div/></LayoutContainer>
       </Wrapper>
       )
     .toJSON();

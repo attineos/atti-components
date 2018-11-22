@@ -10,7 +10,7 @@ it('LayoutGridCell renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <LayoutGridCell cols={<div/>} ><div/></LayoutGridCell>
+        <LayoutGridCell className="Atticomponents" cols={<div/>} ><div/></LayoutGridCell>
       </Wrapper>
       )
     .toJSON();

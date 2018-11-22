@@ -5,7 +5,7 @@ exports[`Progressbar renders correctly 1`] = `
   className="atti-box"
 >
   <div
-    className="Progressbar-rfzdye-0 iAQcG StyledProgressbar-tip8qd-0 juzjTl"
+    className="Atticomponents Progressbar-rfzdye-0 iAQcG StyledProgressbar-tip8qd-0 juzjTl"
     end={42}
     start={42}
   >

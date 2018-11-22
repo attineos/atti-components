@@ -10,10 +10,9 @@ it('Alert renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Alert type={null} ><div/></Alert>
+        <Alert className={<div/>} type={null} ><div/></Alert>
       </Wrapper>
       )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
-    

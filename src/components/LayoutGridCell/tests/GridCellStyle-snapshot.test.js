@@ -1,18 +1,19 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Badge from '..';
+import GridCellStyle from '../styles/GridCellStyle';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Badge renders correctly', () => {
+it('GridCellStyle renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Badge exponent={true} type={null} ><div/></Badge>
+        <GridCellStyle ></GridCellStyle>
       </Wrapper>
       )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+    

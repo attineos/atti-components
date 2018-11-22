@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Badge from '..';
+import LayoutContainer from '..';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Badge renders correctly', () => {
+it('LayoutContainer renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Badge exponent={true} type={null} ><div/></Badge>
+        <LayoutContainer type="CONTAINER_RAW_TYPE" ><div/></LayoutContainer>
       </Wrapper>
       )
     .toJSON();

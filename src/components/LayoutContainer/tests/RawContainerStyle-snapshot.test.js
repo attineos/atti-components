@@ -1,18 +1,19 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Badge from '..';
+import RawContainerStyle from '../styles/RawContainerStyle';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Badge renders correctly', () => {
+it('RawContainerStyle renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Badge exponent={true} type={null} ><div/></Badge>
+        <RawContainerStyle ></RawContainerStyle>
       </Wrapper>
       )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+    

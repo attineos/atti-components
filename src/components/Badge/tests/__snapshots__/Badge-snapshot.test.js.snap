@@ -4,13 +4,11 @@ exports[`Badge renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <sup>
-    <span
-      className="StyledBadge-sc-14ha03a-0 csDeYh"
-      type={null}
-    >
-      <div />
-    </span>
+  <sup
+    className="Badge-x3zjsz-0 iwInqQ StyledBadge-sc-14ha03a-0 csDeYh"
+    type={null}
+  >
+    <div />
   </sup>
 </span>
 `;

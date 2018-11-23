@@ -7,28 +7,7 @@ import StyledOption from './styles/StyledOption'
  * A div which contains a text and which can be selected.
  *
  */
-class Option extends React.Component {
-  static defaultProps = {
-    children: '',
-    id: undefined,
-    selected: false,
-  }
-
-  static propTypes = {
-    /**
-     * The content of the option.
-     */
-    children: PropTypes.any,
-    /**
-     * The id of the option.
-     */
-    id: PropTypes.string,
-    /**
-     * Whether the field is selected. False by default.
-     */
-    selected: PropTypes.bool,
-  }
-
+class Option extends React.PureComponent {
   state = {
     selected: this.props.selected || false,
   }
@@ -48,6 +27,27 @@ class Option extends React.Component {
       </StyledOption>
     )
   }
+}
+
+Option.defaultProps = {
+  children: '',
+  id: undefined,
+  selected: false,
+}
+
+Option.propTypes = {
+  /**
+   * The content of the option.
+   */
+  children: PropTypes.any,
+  /**
+   * The id of the option.
+   */
+  id: PropTypes.string,
+  /**
+   * Whether the field is selected. False by default.
+   */
+  selected: PropTypes.bool,
 }
 
 export default Option

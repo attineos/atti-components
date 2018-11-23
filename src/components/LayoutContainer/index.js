@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -13,7 +13,7 @@ import * as types from './types'
  * The container simply contains things.
  * Layout is defined by the type of the container (Raw, Grid, something else).
  */
-class LayoutContainer extends React.PureComponent {
+class LayoutContainer extends PureComponent {
   getRenderableComponent() {
     const { type } = this.props
 

@@ -9,7 +9,7 @@ import StyledOption from './styles/StyledOption'
  */
 class Option extends React.PureComponent {
   state = {
-    selected: this.props.selected || false,
+    selected: this.props.selected,
   }
 
   toggleSelected = () => {
@@ -31,7 +31,7 @@ class Option extends React.PureComponent {
 
 Option.defaultProps = {
   children: '',
-  id: undefined,
+  id: null,
   selected: false,
 }
 

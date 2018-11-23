@@ -21,6 +21,11 @@ export default {
       },
     ]
   },
+  resolve: {
+    alias: {
+      helpers: path.join(__dirname, '../src/helpers/')
+    }
+  },
   externals: {
     react: 'commonjs react',
     'react-dom': 'commonjs react-dom',

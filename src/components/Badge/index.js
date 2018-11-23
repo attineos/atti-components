@@ -41,4 +41,4 @@ Badge.propTypes = {
 }
 
 /** @component */
-export default styled(Badge)``
+export default styled(React.memo(Badge))``

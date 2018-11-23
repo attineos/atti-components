@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import StyledLink from './styles/StyledLink'
@@ -6,17 +6,11 @@ import StyledLink from './styles/StyledLink'
 /**
  * A link to an action or another resource.
  */
-class Link extends PureComponent {
-  render() {
-    const { children, className, href, onClick, target } = this.props
-
-    return (
-      <StyledLink className={className} href={href} onClick={onClick} target={target}>
-        {children}
-      </StyledLink>
-    )
-  }
-}
+const Link = ({ children, className, href, onClick, target }) => (
+  <StyledLink className={className} href={href} onClick={onClick} target={target}>
+    {children}
+  </StyledLink>
+)
 
 Link.defaultProps = {
   className: '',
@@ -52,4 +46,4 @@ Link.propTypes = {
 }
 
 /** @component */
-export default styled(Link)``
+export default styled(React.memo(Link))``

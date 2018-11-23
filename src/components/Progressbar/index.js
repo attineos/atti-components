@@ -90,4 +90,4 @@ Progressbar.propTypes = {
 }
 
 /** @component */
-export default styled(Progressbar)``
+export default styled(React.memo(Progressbar))``

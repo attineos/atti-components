@@ -35,4 +35,4 @@ Alert.propTypes = {
 }
 
 /** @component */
-export default styled(Alert)``
+export default styled(React.memo(Alert))``

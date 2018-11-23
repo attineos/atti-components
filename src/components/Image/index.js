@@ -45,4 +45,4 @@ Image.propTypes = {
 }
 
 /** @component */
-export default styled(Image)``
+export default styled(React.memo(Image))``

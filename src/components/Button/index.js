@@ -60,4 +60,4 @@ Button.propTypes = {
 }
 
 /** @component */
-export default styled(Button)``
+export default styled(React.memo(Button))``

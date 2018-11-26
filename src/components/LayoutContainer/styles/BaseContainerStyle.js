@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { join, map } from 'lodash'
 
-import wrapMediaQuery from '../../../helpers/wrapMediaQuery'
+import wrapMediaQuery from 'helpers/wrapMediaQuery'
 
 const BaseContainerStyle = styled.div`
   ${({ theme }) =>

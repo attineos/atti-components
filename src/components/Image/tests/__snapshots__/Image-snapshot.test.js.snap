@@ -6,7 +6,7 @@ exports[`Image renders correctly 1`] = `
 >
   <img
     alt="Atticomponents"
-    className="StyledImage-sc-1w567an-0 gWgWUd"
+    className="Atticomponents Image-sc-8q2lr-0 uelgk StyledImage-sc-1w567an-0 gWgWUd"
     height="Atticomponents"
     src="Atticomponents"
     width="Atticomponents"

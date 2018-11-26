@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import PropTypes from 'prop-types'
 import Text from '../../Text'
 
 const border = css`
@@ -38,12 +37,5 @@ const StyledButton = styled(Text.withComponent('button'))`
 
   cursor: pointer;
 `
-
-StyledButton.propTypes = {
-  /**
-   * Content of the component. Only text for now.
-   */
-  children: PropTypes.string.isRequired,
-}
 
 export default StyledButton

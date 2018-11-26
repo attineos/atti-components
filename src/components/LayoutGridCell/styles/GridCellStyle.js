@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { join, map, values, first, last, get } from 'lodash'
 
-import wrapMediaQuery from '../../../helpers/wrapMediaQuery'
+import wrapMediaQuery from 'helpers/wrapMediaQuery'
 
 const interpolateMargingCols = cols => {
   const margingColsCount = Math.floor(cols / 2)

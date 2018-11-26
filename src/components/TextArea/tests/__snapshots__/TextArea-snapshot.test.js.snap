@@ -11,7 +11,7 @@ exports[`TextArea renders correctly 1`] = `
     Atticomponents
   </label>
   <textarea
-    className="StyledTextArea-sc-1ciexer-0 atti-r-css  GdmeI"
+    className="StyledTextArea-sc-1ciexer-0 atti-r-css  hZYvUE"
     id="Atticomponents"
     name="Atticomponents"
     placeholder="Atticomponents"

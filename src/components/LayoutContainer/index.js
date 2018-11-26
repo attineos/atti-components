@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import RawContainerStyle from './styles/RawContainerStyle'
@@ -12,18 +13,7 @@ import * as types from './types'
  * The container simply contains things.
  * Layout is defined by the type of the container (Raw, Grid, something else).
  */
-class LayoutContainer extends React.PureComponent {
-  static propTypes = {
-    /**
-     * The type of the container.
-     */
-    type: PropTypes.oneOf(types.CONTAINER_TYPES).isRequired,
-    /**
-     * The childrens to use as content of the container.
-     */
-    children: PropTypes.element.isRequired,
-  }
-
+class LayoutContainer extends PureComponent {
   getRenderableComponent() {
     const { type } = this.props
 
@@ -36,12 +26,32 @@ class LayoutContainer extends React.PureComponent {
   }
 
   render() {
-    const { children } = this.props
+    const { children, className } = this.props
 
     const ContainerInstance = this.getRenderableComponent()
 
-    return <ContainerInstance>{children}</ContainerInstance>
+    return <ContainerInstance className={className}>{children}</ContainerInstance>
   }
 }
 
-export default LayoutContainer
+LayoutContainer.defaultProps = {
+  className: '',
+}
+
+LayoutContainer.propTypes = {
+  /**
+   * The childrens to use as content of the container.
+   */
+  children: PropTypes.element.isRequired,
+  /**
+   * Classes of the LayoutContainer.
+   */
+  className: PropTypes.string,
+  /**
+   * The type of the container.
+   */
+  type: PropTypes.oneOf(types.CONTAINER_TYPES).isRequired,
+}
+
+/** @component */
+export default styled(LayoutContainer)``

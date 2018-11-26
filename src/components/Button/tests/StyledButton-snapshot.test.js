@@ -10,7 +10,7 @@ it('StyledButton renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <StyledButton >Atticomponents</StyledButton>
+        <StyledButton ></StyledButton>
       </Wrapper>
       )
     .toJSON();

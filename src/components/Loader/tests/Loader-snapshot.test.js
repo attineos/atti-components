@@ -10,7 +10,7 @@ it('Loader renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Loader color="Atticomponents" type={null} ></Loader>
+        <Loader className="Atticomponents" color="Atticomponents" type={null} ></Loader>
       </Wrapper>
       )
     .toJSON();

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutGridCell renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="Atticomponents LayoutGridCell-sc-1icd2z3-0 eqGXyS GridCellStyle-sc-16l5io4-0 bvtZak"
+    cols={<div />}
+  >
+    <div />
+  </div>
+</span>
+`;

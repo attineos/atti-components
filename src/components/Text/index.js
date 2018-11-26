@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import getFontStyle from '../../helpers/Typography/getFontStyle'
-import StyledText from './styles'
+import getFontStyle from 'helpers/Typography/getFontStyle'
+import resetCSS from 'helpers/resetCSS'
 
 /**
  * Text.
  *
  */
-
-const Text = StyledText`
+const Text = styled.p.attrs(resetCSS)`
   ${getFontStyle('text')};
 `
 

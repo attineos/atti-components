@@ -14,7 +14,7 @@ exports[`InputFile renders correctly 1`] = `
       type="file"
     />
     <button
-      className="StyledFilePicker-sc-1q1g117-0 atti-r-css  ixGVaS"
+      className="StyledFilePicker-sc-1q1g117-0 atti-r-css  dTwFSH"
       onClick={[Function]}
       onDragOver={[Function]}
       onDrop={[Function]}

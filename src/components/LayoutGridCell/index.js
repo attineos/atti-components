@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import { clone } from 'lodash'
@@ -24,17 +25,6 @@ import GridCellStyle from './styles/GridCellStyle'
  * If given more breakpoints than in the theme, the excess ones are ignored.
  */
 class LayoutGridCell extends React.Component {
-  static propTypes = {
-    /**
-     * The cols data to use for display.
-     */
-    cols: PropTypes.element.isRequired,
-    /**
-     * The childrens to use as content of the Cell.
-     */
-    children: PropTypes.element.isRequired,
-  }
-
   state = {
     cols: [],
   }
@@ -50,12 +40,36 @@ class LayoutGridCell extends React.Component {
   }
 
   render() {
-    const { children } = this.props
+    const { children, className } = this.props
 
     const { cols } = this.state
 
-    return <GridCellStyle cols={cols}>{children}</GridCellStyle>
+    return (
+      <GridCellStyle className={className} cols={cols}>
+        {children}
+      </GridCellStyle>
+    )
   }
 }
 
-export default LayoutGridCell
+LayoutGridCell.defaultProps = {
+  className: '',
+}
+
+LayoutGridCell.propTypes = {
+  /**
+   * The childrens to use as content of the Cell.
+   */
+  children: PropTypes.element.isRequired,
+  /**
+   * Classes of the LayoutGridCell.
+   */
+  className: PropTypes.string,
+  /**
+   * The cols data to use for display.
+   */
+  cols: PropTypes.element.isRequired,
+}
+
+/** @component */
+export default styled(LayoutGridCell)``

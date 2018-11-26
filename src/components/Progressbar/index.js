@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import StyledProgressbar from './styles/StyledProgressbar'
 import Text from '../Text'
@@ -8,6 +9,7 @@ import Text from '../Text'
  *
  */
 const Progressbar = ({
+  className,
   end,
   fillingOrientation,
   fillingSpeed,
@@ -22,6 +24,7 @@ const Progressbar = ({
 
   return (
     <StyledProgressbar
+      className={className}
       end={end}
       fillingOrientation={fillingOrientation}
       fillingSpeed={fillingSpeed}
@@ -34,6 +37,7 @@ const Progressbar = ({
 }
 
 Progressbar.defaultProps = {
+  className: '',
   end: 100,
   fillingOrientation: 'left',
   fillingSpeed: 100,
@@ -44,6 +48,11 @@ Progressbar.defaultProps = {
 }
 
 Progressbar.propTypes = {
+  /**
+   * End of the progressbar.
+   */
+  className: PropTypes.string,
+
   /**
    * End of the progressbar.
    */
@@ -80,4 +89,5 @@ Progressbar.propTypes = {
   step: PropTypes.number,
 }
 
-export default Progressbar
+/** @component */
+export default styled(React.memo(Progressbar))``

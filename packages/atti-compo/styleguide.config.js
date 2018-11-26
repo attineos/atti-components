@@ -62,6 +62,9 @@ module.exports = {
   webpackConfig: {
     resolve: {
       extensions: ['.web.js', '.js'],
+      alias: {
+        helpers: path.join(__dirname, 'src/helpers/')
+      }
     },
     module: {
       rules: [

@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 import { join, range, map } from 'lodash'
 
+import wrapMediaQuery from 'helpers/wrapMediaQuery'
 import BaseContainerStyle from './BaseContainerStyle'
-import wrapMediaQuery from '../../../helpers/wrapMediaQuery'
 
 const getColumnTemplate = colCount => map(range(colCount), () => '1fr').join(' ')
 

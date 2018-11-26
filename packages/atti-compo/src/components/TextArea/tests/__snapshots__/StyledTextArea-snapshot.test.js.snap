@@ -5,7 +5,7 @@ exports[`StyledTextArea renders correctly 1`] = `
   className="atti-box"
 >
   <textarea
-    className="StyledTextArea-sc-1ciexer-0 atti-r-css  GdmeI"
+    className="StyledTextArea-sc-1ciexer-0 atti-r-css  hZYvUE"
   />
 </span>
 `;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseContainerStyle renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="BaseContainerStyle-sc-759awt-0 hzXZNP"
+  />
+</span>
+`;

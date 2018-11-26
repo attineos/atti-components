@@ -5,7 +5,7 @@ exports[`StyledFilePicker renders correctly 1`] = `
   className="atti-box"
 >
   <button
-    className="StyledFilePicker-sc-1q1g117-0 atti-r-css  ixGVaS"
+    className="StyledFilePicker-sc-1q1g117-0 atti-r-css  dTwFSH"
   />
 </span>
 `;

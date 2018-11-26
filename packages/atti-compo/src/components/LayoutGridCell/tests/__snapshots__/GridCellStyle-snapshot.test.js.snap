@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridCellStyle renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="GridCellStyle-sc-16l5io4-0 bvtZak"
+  />
+</span>
+`;

@@ -7,12 +7,7 @@ import StyledOptionPanel from './styles/StyledOptionPanel'
  * A container of Options.
  *
  */
-class OptionPanel extends React.Component {
-  render() {
-    const { children } = this.props
-    return <StyledOptionPanel>{children}</StyledOptionPanel>
-  }
-}
+const OptionPanel = ({ children }) => <StyledOptionPanel>{children}</StyledOptionPanel>
 
 OptionPanel.propTypes = {
   /**

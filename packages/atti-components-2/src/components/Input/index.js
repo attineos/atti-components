@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import StyledInput from './styles/StyledInput'
@@ -9,7 +9,7 @@ import StyledLabelInput from './styles/StyledLabelInput'
  *
  */
 const Input = ({ id, form, label, name, onChange, pattern, placeholder, size, type, value }) => (
-  <React.Fragment>
+  <Fragment>
     <StyledLabelInput htmlFor={id}>{label}</StyledLabelInput>
     <StyledInput
       id={id}
@@ -22,7 +22,7 @@ const Input = ({ id, form, label, name, onChange, pattern, placeholder, size, ty
       type={type}
       value={value}
     />
-  </React.Fragment>
+  </Fragment>
 )
 
 Input.defaultProps = {

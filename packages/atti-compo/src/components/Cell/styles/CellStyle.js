@@ -15,7 +15,7 @@ const getColumsStyleForIE = (start, end) => `
   -ms-grid-column-span: ${interpolateMargingCols(end - start)};
 `
 
-const GridCellStyle = styled.div`
+const CellStyle = styled.div`
   ${({ theme, cols }) =>
     join(
       map(values(theme.layout), (layout, index) =>
@@ -38,4 +38,4 @@ const GridCellStyle = styled.div`
     )};
 `
 
-export default GridCellStyle
+export default CellStyle

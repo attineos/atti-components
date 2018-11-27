@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import GridContainerStyle from '../styles/GridContainerStyle';
+import Container from '..';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('GridContainerStyle renders correctly', () => {
+it('Container renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <GridContainerStyle ></GridContainerStyle>
+        <Container ></Container>
       </Wrapper>
       )
     .toJSON();

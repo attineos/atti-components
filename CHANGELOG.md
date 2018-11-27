@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- XXXXX
+- *Breaking Change*: Remove LayoutGridCell & LayoutContainer
+  - LayoutGridCell is replaced by Cell
+  - LayoutContainer with type RAW is replaced by Container
+  - LayoutContainer with type GRID is replaced by Grid
+  - default number of columns in the grid has changed -> 12 cols in xldesktop & desktop / 6 cols in tablet & mobile
+  - values of theme.layout has changed accordingly
+  - Container & Grid now includes a default padding right & left
+
 
 ### Changed
 - Allow [extending](https://www.styled-components.com/docs/basics#extending-styles) and [referring](https://www.styled-components.com/docs/advanced#referring-to-other-components) of the following components by [@akaala](https://github.com/akaala)

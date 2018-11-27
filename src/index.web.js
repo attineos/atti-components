@@ -6,6 +6,7 @@ import BigText from './components/BigText'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
 import Cell from './components/Cell'
+import Container from './components/Container'
 import Checkbox from './components/Checkbox'
 import Grid from './components/Grid'
 import Header1 from './components/Header1'
@@ -38,6 +39,7 @@ module.exports = {
   Breadcrumb,
   Button,
   Cell,
+  Container,
   Checkbox,
   Grid,
   Header1,

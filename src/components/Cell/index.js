@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 
 import { clone } from 'lodash'
 
-import GridCellStyle from './styles/GridCellStyle'
+import CellStyle from './styles/CellStyle'
 
 /**
- * Defines a Layout Grid Cell.
+ * Defines a Cell.
  *
  * To be used in conjuction with a layout of grid type, this component define a Cell in the grid.
  *
@@ -24,7 +24,7 @@ import GridCellStyle from './styles/GridCellStyle'
  * If given less breakpoints than in the theme, the last one is used.
  * If given more breakpoints than in the theme, the excess ones are ignored.
  */
-class LayoutGridCell extends React.Component {
+class Cell extends React.Component {
   state = {
     cols: [],
   }
@@ -45,24 +45,24 @@ class LayoutGridCell extends React.Component {
     const { cols } = this.state
 
     return (
-      <GridCellStyle className={className} cols={cols}>
+      <CellStyle className={className} cols={cols}>
         {children}
-      </GridCellStyle>
+      </CellStyle>
     )
   }
 }
 
-LayoutGridCell.defaultProps = {
+Cell.defaultProps = {
   className: '',
 }
 
-LayoutGridCell.propTypes = {
+Cell.propTypes = {
   /**
    * The childrens to use as content of the Cell.
    */
   children: PropTypes.element.isRequired,
   /**
-   * Classes of the LayoutGridCell.
+   * Classes of the Cell.
    */
   className: PropTypes.string,
   /**
@@ -72,4 +72,4 @@ LayoutGridCell.propTypes = {
 }
 
 /** @component */
-export default styled(LayoutGridCell)``
+export default styled(Cell)``

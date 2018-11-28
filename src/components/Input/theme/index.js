@@ -21,9 +21,4 @@ export default ({ forms, spaces }) => ({
       paddingWidth: spaces.s5,
     },
   },
-  label: {
-    spaces: {
-      marginBottom: spaces.s4,
-    },
-  },
 })

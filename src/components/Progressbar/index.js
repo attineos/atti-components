@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import StyledProgressbar from './styles/StyledProgressbar'
+import StyledProgressBar from './styles/StyledProgressBar'
 import Text from '../Text'
 
 /**
  * A basic progress bar, which shows filling percentage.
  *
  */
-const Progressbar = ({
+const ProgressBar = ({
   className,
   end,
   fillingOrientation,
@@ -23,7 +23,7 @@ const Progressbar = ({
   const stepLabel = percentageLabel ? `${percent}%` : `${step - start}/${end - start}`
 
   return (
-    <StyledProgressbar
+    <StyledProgressBar
       className={className}
       end={end}
       fillingOrientation={fillingOrientation}
@@ -32,11 +32,11 @@ const Progressbar = ({
       start={start}
     >
       {showLabel ? <Text>{stepLabel}</Text> : null}
-    </StyledProgressbar>
+    </StyledProgressBar>
   )
 }
 
-Progressbar.defaultProps = {
+ProgressBar.defaultProps = {
   className: '',
   end: 100,
   fillingOrientation: 'left',
@@ -47,7 +47,7 @@ Progressbar.defaultProps = {
   step: 25,
 }
 
-Progressbar.propTypes = {
+ProgressBar.propTypes = {
   /**
    * End of the progressbar.
    */
@@ -90,4 +90,4 @@ Progressbar.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Progressbar))``
+export default styled(React.memo(ProgressBar))``

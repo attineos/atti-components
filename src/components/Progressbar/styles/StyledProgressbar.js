@@ -2,15 +2,15 @@ import styled, { css } from 'styled-components'
 import Text from '../../Text'
 
 const borders = css`
-  border: ${({ theme }) => theme.components.progressbar.borders.borderWidth} solid
-    ${({ theme }) => theme.components.progressbar.borders.borderColor};
-  border-radius: ${({ theme }) => theme.components.progressbar.borders.borderRadius};
+  border: ${({ theme }) => theme.components.progressBar.borders.borderWidth} solid
+    ${({ theme }) => theme.components.progressBar.borders.borderColor};
+  border-radius: ${({ theme }) => theme.components.progressBar.borders.borderRadius};
 `
 
 const before = css`
   &:before {
-    background: ${({ theme }) => theme.components.progressbar.colors.fill};
-    border-radius: ${({ theme }) => theme.components.progressbar.borders.borderRadius};
+    background: ${({ theme }) => theme.components.progressBar.colors.fill};
+    border-radius: ${({ theme }) => theme.components.progressBar.borders.borderRadius};
     content: ' ';
     height: 100%;
     position: absolute;
@@ -20,7 +20,7 @@ const before = css`
 `
 
 const colors = css`
-  background: ${({ theme }) => theme.components.progressbar.colors.background};
+  background: ${({ theme }) => theme.components.progressBar.colors.background};
 `
 
 const positionFirstComponent = css`
@@ -31,7 +31,7 @@ const positionFirstComponent = css`
 
 const positionText = css`
   > ${Text} {
-    color: ${({ theme }) => theme.components.progressbar.colors.text};
+    color: ${({ theme }) => theme.components.progressBar.colors.text};
     display: flex;
     justify-content: center;
     margin: 0;
@@ -41,12 +41,12 @@ const positionText = css`
 `
 const size = css`
   ${({ theme }) => `
-    height: ${theme.components.progressbar.sizes.height};
-    width: ${theme.components.progressbar.sizes.width};
+    height: ${theme.components.progressBar.sizes.height};
+    width: ${theme.components.progressBar.sizes.width};
   `};
 `
 
-const StyledProgressbar = styled.div`
+const StyledProgressBar = styled.div`
   ${before};
   ${borders};
   ${colors};
@@ -54,4 +54,4 @@ const StyledProgressbar = styled.div`
   ${size};
   user-select: none;
 `
-export default StyledProgressbar
+export default StyledProgressBar

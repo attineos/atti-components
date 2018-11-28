@@ -1,5 +1,5 @@
 export default ({ borders, colors, forms, sizes, spaces }) => ({
-  checkboxBox: {
+  checkBoxBox: {
     borders: {
       radius: forms.borders.radius,
       width: forms.borders.width,

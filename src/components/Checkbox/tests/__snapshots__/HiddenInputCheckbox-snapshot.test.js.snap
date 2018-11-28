@@ -5,7 +5,7 @@ exports[`HiddenInputCheckbox renders correctly 1`] = `
   className="atti-box"
 >
   <input
-    className="HiddenInputCheckbox-sc-1exe2yb-0 llFNkY"
+    className="HiddenInputCheckbox__HiddenInputCheckBox-sc-1uyfz8h-0 iJKQgK"
   />
 </span>
 `;

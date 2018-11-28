@@ -1,16 +1,16 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import CheckboxBox from './styles/CheckboxBox'
-import CheckboxBoxContainer from './styles/CheckboxBoxContainer'
-import HiddenInputCheckbox from './styles/HiddenInputCheckbox'
-import LabelCheckbox from './styles/LabelCheckbox'
+import CheckBoxBox from './styles/CheckBoxBox'
+import CheckBoxBoxContainer from './styles/CheckBoxBoxContainer'
+import HiddenInputCheckBox from './styles/HiddenInputCheckBox'
 
 /**
  * A checkbox button.
  *
  */
-class Checkbox extends PureComponent {
+class CheckBox extends PureComponent {
   state = {
     checked: this.props.checked,
   }
@@ -28,11 +28,11 @@ class Checkbox extends PureComponent {
     )
   }
 
-  checkBoxRenderer() {
-    const { id, name, value } = this.props
+  render() {
+    const { className, id, name, value } = this.props
     return (
-      <CheckboxBoxContainer>
-        <HiddenInputCheckbox
+      <CheckBoxBoxContainer className={className}>
+        <HiddenInputCheckBox
           id={id}
           checked={this.state.checked}
           name={name}
@@ -40,43 +40,31 @@ class Checkbox extends PureComponent {
           type="checkbox"
           value={value}
         />
-        <CheckboxBox />
-      </CheckboxBoxContainer>
-    )
-  }
-
-  render() {
-    const { id, label } = this.props
-    return label ? (
-      <LabelCheckbox htmlFor={id}>
-        {this.checkBoxRenderer()}
-        {label}
-      </LabelCheckbox>
-    ) : (
-      this.checkBoxRenderer()
+        <CheckBoxBox />
+      </CheckBoxBoxContainer>
     )
   }
 }
 
-Checkbox.defaultProps = {
+CheckBox.defaultProps = {
   checked: false,
-  label: '',
+  className: '',
   onChange: null,
 }
 
-Checkbox.propTypes = {
+CheckBox.propTypes = {
   /**
    * Whether or not the checkbox is checked.
    */
   checked: PropTypes.bool,
   /**
+   * Classes of the CheckBox.
+   */
+  className: PropTypes.string,
+  /**
    * The id of the current element.
    */
   id: PropTypes.string.isRequired,
-  /**
-   * Content of the label of the checkbox.
-   */
-  label: PropTypes.string,
   /**
    * The name attribute is used to reference form data after a form is submitted.
    * Numerous checkbox with the same name value will be in the same group.
@@ -94,4 +82,5 @@ Checkbox.propTypes = {
   value: PropTypes.string.isRequired,
 }
 
-export default Checkbox
+/** @component */
+export default styled(CheckBox)``

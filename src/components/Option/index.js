@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import StyledOption from './styles/StyledOption'
 
@@ -19,10 +20,10 @@ class Option extends React.PureComponent {
   }
 
   render() {
-    const { children, id } = this.props
+    const { children, className, id } = this.props
     const { selected } = this.state
     return (
-      <StyledOption id={id} onClick={this.toggleSelected} selected={selected}>
+      <StyledOption className={className} id={id} onClick={this.toggleSelected} selected={selected}>
         {children}
       </StyledOption>
     )
@@ -31,17 +32,22 @@ class Option extends React.PureComponent {
 
 Option.defaultProps = {
   children: '',
+  className: '',
   id: null,
   selected: false,
 }
 
 Option.propTypes = {
   /**
-   * The content of the option.
+   * The content of the Option.
    */
   children: PropTypes.any,
   /**
-   * The id of the option.
+   * The classes of the Option.
+   */
+  className: PropTypes.string,
+  /**
+   * The id of the Option.
    */
   id: PropTypes.string,
   /**
@@ -50,4 +56,4 @@ Option.propTypes = {
   selected: PropTypes.bool,
 }
 
-export default Option
+export default styled(Option)``

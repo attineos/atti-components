@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import CheckboxBox from './CheckboxBox'
+import CheckBoxBox from './CheckBoxBox'
 
-const HiddenInputCheckbox = styled.input`
+const HiddenInputCheckBox = styled.input`
   position: absolute;
   top: 0;
   left: 0;
@@ -14,10 +14,10 @@ const HiddenInputCheckbox = styled.input`
   width: 100%;
   height: 100%;
 
-  &:hover + ${CheckboxBox} {
-    background: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.backgroundHover};
-    border-color: ${({ theme }) => theme.components.checkbox.checkboxBox.colors.borderHover};
+  &:hover + ${CheckBoxBox} {
+    background: ${({ theme }) => theme.components.checkBox.checkBoxBox.colors.backgroundHover};
+    border-color: ${({ theme }) => theme.components.checkBox.checkBoxBox.colors.borderHover};
   }
 `
 
-export default HiddenInputCheckbox
+export default HiddenInputCheckBox

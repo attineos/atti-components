@@ -10,7 +10,7 @@ it('OptionPanel renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <OptionPanel >true</OptionPanel>
+        <OptionPanel className="Atticomponents" >true</OptionPanel>
       </Wrapper>
       )
     .toJSON();

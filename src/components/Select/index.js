@@ -1,16 +1,17 @@
-import { map } from 'lodash'
-import PropTypes from 'prop-types'
 import React from 'react'
-import Sort from './types/sort'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
+import { map } from 'lodash'
+
+import Sort from './types/sort'
 import StyledSelect from './styles/StyledSelect'
-import StyledLabel from './styles/StyledLabel'
 
 /**
  * A select field.
  *
  */
-const Select = ({ id, isMulti, label, name, onChange, options, size, sort }) => {
+const Select = ({ className, id, isMulti, name, onChange, options, size, sort }) => {
   const optionsSorted =
     sort === Sort.ASC ? options.sort() : sort === Sort.DESC ? options.sort().reverse() : options
   const optionsElements = map(optionsSorted, elt => (
@@ -19,18 +20,22 @@ const Select = ({ id, isMulti, label, name, onChange, options, size, sort }) => 
     </option>
   ))
   return (
-    <React.Fragment>
-      {label && <StyledLabel htmlFor={id}>{label}</StyledLabel>}
-      <StyledSelect id={id} name={name} onChange={onChange} multiple={isMulti} size={size}>
-        {optionsElements}
-      </StyledSelect>
-    </React.Fragment>
+    <StyledSelect
+      className={className}
+      id={id}
+      name={name}
+      onChange={onChange}
+      multiple={isMulti}
+      size={size}
+    >
+      {optionsElements}
+    </StyledSelect>
   )
 }
 
 Select.defaultProps = {
+  className: '',
   isMulti: false,
-  label: '',
   name: '',
   onChange: null,
   size: 0,
@@ -39,6 +44,10 @@ Select.defaultProps = {
 
 Select.propTypes = {
   /**
+   * The classes of the select.
+   */
+  className: PropTypes.string,
+  /**
    * The id of the select.
    */
   id: PropTypes.string.isRequired,
@@ -46,10 +55,6 @@ Select.propTypes = {
    * A boolean which is true if we allow multiple selection.
    */
   isMulti: PropTypes.bool,
-  /**
-   * A label associated to the select.
-   */
-  label: PropTypes.string,
   /**
    * Name of the component.
    */
@@ -72,4 +77,4 @@ Select.propTypes = {
   sort: PropTypes.oneOf([Sort.ASC, Sort.DESC, Sort.NONE]),
 }
 
-export default Select
+export default styled(Select)``

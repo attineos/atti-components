@@ -1,13 +1,7 @@
 Normal Input type text :
 
 ```js
-<Input
-  id="inputTestTxt"
-  label="Input type text :"
-  name="inputTestTxt"
-  placeholder="input text"
-  type="text"
-/>
+<Input id="inputTestTxt" name="inputTestTxt" placeholder="input text" type="text" />
 ```
 
 Normal Input type password:

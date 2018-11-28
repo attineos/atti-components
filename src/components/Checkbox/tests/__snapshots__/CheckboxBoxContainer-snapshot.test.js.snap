@@ -5,7 +5,7 @@ exports[`CheckboxBoxContainer renders correctly 1`] = `
   className="atti-box"
 >
   <span
-    className="CheckboxBoxContainer-sc-1rhgvgg-0 bYbrvy"
+    className="CheckboxBoxContainer__CheckBoxBoxContainer-sc-21lf0q-0 dxFWBK"
   />
 </span>
 `;

@@ -1,30 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox renders correctly 1`] = `
+exports[`CheckBox renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <label
-    className="LabelCheckbox-sc-3x8kt7-0 atti-r-css  dmrHnf"
-    htmlFor="Atticomponents"
+  <span
+    className="Atticomponents CheckBox-udu1se-0 kwjaRp CheckboxBoxContainer__CheckBoxBoxContainer-sc-21lf0q-0 dxFWBK"
   >
+    <input
+      checked={true}
+      className="HiddenInputCheckbox__HiddenInputCheckBox-sc-1uyfz8h-0 iJKQgK"
+      id="Atticomponents"
+      name="Atticomponents"
+      onChange={[Function]}
+      type="checkbox"
+      value="Atticomponents"
+    />
     <span
-      className="CheckboxBoxContainer-sc-1rhgvgg-0 bYbrvy"
-    >
-      <input
-        checked={true}
-        className="HiddenInputCheckbox-sc-1exe2yb-0 llFNkY"
-        id="Atticomponents"
-        name="Atticomponents"
-        onChange={[Function]}
-        type="checkbox"
-        value="Atticomponents"
-      />
-      <span
-        className="CheckboxBox-xrr36-0 krHvFk"
-      />
-    </span>
-    Atticomponents
-  </label>
+      className="CheckboxBox__CheckBoxBox-sc-66d8zq-0 iFikSN"
+    />
+  </span>
 </span>
 `;

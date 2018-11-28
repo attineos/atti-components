@@ -1,33 +1,42 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import StyledInput from './styles/StyledInput'
-import StyledLabelInput from './styles/StyledLabelInput'
 
 /**
  * An input field.
  *
  */
-const Input = ({ id, form, label, name, onChange, pattern, placeholder, size, type, value }) => (
-  <Fragment>
-    <StyledLabelInput htmlFor={id}>{label}</StyledLabelInput>
-    <StyledInput
-      id={id}
-      form={form}
-      name={name}
-      onChange={onChange}
-      pattern={pattern}
-      placeholder={placeholder}
-      size={size}
-      type={type}
-      value={value}
-    />
-  </Fragment>
+const Input = ({
+  className,
+  id,
+  form,
+  name,
+  onChange,
+  pattern,
+  placeholder,
+  size,
+  type,
+  value,
+}) => (
+  <StyledInput
+    className={className}
+    id={id}
+    form={form}
+    name={name}
+    onChange={onChange}
+    pattern={pattern}
+    placeholder={placeholder}
+    size={size}
+    type={type}
+    value={value}
+  />
 )
 
 Input.defaultProps = {
+  className: '',
   form: '',
-  label: '',
   name: '',
   onChange: undefined,
   pattern: undefined,
@@ -38,6 +47,10 @@ Input.defaultProps = {
 
 Input.propTypes = {
   /**
+   * The classes of the input field.
+   */
+  className: PropTypes.string,
+  /**
    * The id of the input field.
    */
   id: PropTypes.string.isRequired,
@@ -45,10 +58,6 @@ Input.propTypes = {
    * One or more forms the Input element belongs to.
    */
   form: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-  /**
-   * A label associated to the input field.
-   */
-  label: PropTypes.string,
   /**
    * Name of the input element.
    */
@@ -81,4 +90,4 @@ Input.propTypes = {
   value: PropTypes.string,
 }
 
-export default Input
+export default styled(Input)``

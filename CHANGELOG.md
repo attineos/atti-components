@@ -41,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - TextArea
 
 ### Removed
-- **Breaking Change**: The following component don't support `label` property anymore. You should combine them with a Label component. By [@akaala](https://github.com/akaala)
+- **Breaking Change**: The following components don't support `label` property anymore. You should combine them with a Label component. By [@akaala](https://github.com/akaala)
   - CheckBox
   - Input
   - Radio

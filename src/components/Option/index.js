@@ -56,4 +56,5 @@ Option.propTypes = {
   selected: PropTypes.bool,
 }
 
+/** @component */
 export default styled(Option)``

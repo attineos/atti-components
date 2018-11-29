@@ -37,4 +37,5 @@ TextArea.propTypes = {
   placeholder: PropTypes.string,
 }
 
-export default styled(TextArea)``
+/** @component */
+export default styled(React.memo(TextArea))``

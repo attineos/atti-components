@@ -16,11 +16,11 @@ const onChangeSingleValue = () => {
 }
 ;<div>
   <div onClick={onChangeSingleValue}>
-    <Progressbar step={state.stepFirstProgress} />
+    <ProgressBar step={state.stepFirstProgress} />
   </div>
   <br />
   <div onClick={onChangeSingleValue}>
-    <Progressbar
+    <ProgressBar
       id="secondProgress"
       step={state.stepFirstProgress}
       showLabel={false}

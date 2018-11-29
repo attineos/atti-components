@@ -17,12 +17,12 @@ const RadioButton = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: ${({ theme }) => theme.components.radio.radioButton.spaces.marginRight};
 
   // Use of a circle in the radio when it's checked.
   &:after {
     content: ' ';
-    display: none;
+    display: block;
+    visibility: hidden;
     background-color: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundChecked};
     width: calc(${({ theme }) => theme.components.radio.radioButton.sizes.widths} / 2);
     height: calc(${({ theme }) => theme.components.radio.radioButton.sizes.heights} / 2);

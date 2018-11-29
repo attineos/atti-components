@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import LabelRadio from '../styles/LabelRadio';
+import RadioContainer from '../styles/RadioContainer';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('LabelRadio renders correctly', () => {
+it('RadioContainer renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <LabelRadio ></LabelRadio>
+        <RadioContainer ></RadioContainer>
       </Wrapper>
       )
     .toJSON();

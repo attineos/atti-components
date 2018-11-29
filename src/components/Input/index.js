@@ -90,4 +90,5 @@ Input.propTypes = {
   value: PropTypes.string,
 }
 
-export default styled(Input)``
+/** @component */
+export default styled(React.memo(Input))``

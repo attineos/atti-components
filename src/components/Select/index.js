@@ -77,4 +77,5 @@ Select.propTypes = {
   sort: PropTypes.oneOf([Sort.ASC, Sort.DESC, Sort.NONE]),
 }
 
-export default styled(Select)``
+/** @component */
+export default styled(React.memo(Select))``

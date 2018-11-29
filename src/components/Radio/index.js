@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import RadioButton from './styles/RadioButton'
 import HiddenInputRadio from './styles/HiddenInputRadio'
-import LabelRadio from './styles/LabelRadio'
+import RadioContainer from './styles/RadioContainer'
 
 /**
  * A radio button.
@@ -28,9 +29,9 @@ class Radio extends PureComponent {
   }
 
   render() {
-    const { id, label, name, value } = this.props
+    const { className, id, name, value } = this.props
     return (
-      <LabelRadio>
+      <RadioContainer className={className}>
         <HiddenInputRadio
           id={id}
           checked={this.state.checked}
@@ -40,14 +41,14 @@ class Radio extends PureComponent {
           value={value}
         />
         <RadioButton />
-        {label}
-      </LabelRadio>
+      </RadioContainer>
     )
   }
 }
 
 Radio.defaultProps = {
   checked: false,
+  className: '',
   onChange: null,
 }
 
@@ -57,13 +58,13 @@ Radio.propTypes = {
    */
   checked: PropTypes.bool,
   /**
+   * The classes of the Radio element.
+   */
+  className: PropTypes.string,
+  /**
    * The id of the current element.
    */
   id: PropTypes.string.isRequired,
-  /**
-   * Content of the label of the radio.
-   */
-  label: PropTypes.string.isRequired,
   /**
    * The name attribute is used to reference form data after a form is submitted.
    * Numerous radio with the same name value will be in the same group.
@@ -81,4 +82,5 @@ Radio.propTypes = {
   value: PropTypes.string.isRequired,
 }
 
-export default Radio
+/** @component */
+export default styled(Radio)``

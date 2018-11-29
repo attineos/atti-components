@@ -27,4 +27,5 @@ OptionPanel.propTypes = {
   className: PropTypes.string,
 }
 
-export default styled(OptionPanel)``
+/** @component */
+export default styled(React.memo(OptionPanel))``

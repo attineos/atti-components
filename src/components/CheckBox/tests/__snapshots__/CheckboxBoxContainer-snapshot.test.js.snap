@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckboxBoxContainer renders correctly 1`] = `
+exports[`CheckBoxBoxContainer renders correctly 1`] = `
 <span
   className="atti-box"
 >
   <span
-    className="CheckboxBoxContainer__CheckBoxBoxContainer-sc-21lf0q-0 dxFWBK"
+    className="CheckBoxBoxContainer-kmg3i5-0 dXLRgI"
   />
 </span>
 `;

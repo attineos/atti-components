@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import HiddenInputCheckbox from '../styles/HiddenInputCheckbox';
+import HiddenInputCheckBox from '../styles/HiddenInputCheckBox';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('HiddenInputCheckbox renders correctly', () => {
+it('HiddenInputCheckBox renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <HiddenInputCheckbox ></HiddenInputCheckbox>
+        <HiddenInputCheckBox ></HiddenInputCheckBox>
       </Wrapper>
       )
     .toJSON();

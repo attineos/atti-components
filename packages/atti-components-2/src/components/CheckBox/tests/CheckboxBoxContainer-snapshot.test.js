@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Select from '..';
+import CheckBoxBoxContainer from '../styles/CheckBoxBoxContainer';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Select renders correctly', () => {
+it('CheckBoxBoxContainer renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Select className="Atticomponents" id="Atticomponents" isMulti={true} name="Atticomponents" onChange={mock} options={new Array()} size={42} sort={null} ></Select>
+        <CheckBoxBoxContainer ></CheckBoxBoxContainer>
       </Wrapper>
       )
     .toJSON();

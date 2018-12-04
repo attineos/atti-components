@@ -4,14 +4,8 @@ exports[`Input renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <label
-    className="StyledLabelInput-p62z0t-0 atti-r-css  dhJTyY"
-    htmlFor="Atticomponents"
-  >
-    Atticomponents
-  </label>
   <input
-    className="StyledInput-sc-12an70a-0 atti-r-css  dOJSEM"
+    className="Atticomponents Input-sc-1rdvjev-0 DIgUD StyledInput-sc-12an70a-0 atti-r-css Atticomponents Input-sc-1rdvjev-0 DIgUD dOJSEM"
     form={true}
     id="Atticomponents"
     name="Atticomponents"

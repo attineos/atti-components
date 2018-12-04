@@ -1,9 +1,4 @@
 export default ({ forms, spaces }) => ({
-  label: {
-    spaces: {
-      marginBottom: spaces.s5,
-    },
-  },
   textarea: {
     borders: {
       radius: forms.borders.radius,

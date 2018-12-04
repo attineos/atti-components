@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioButton renders correctly 1`] = `
+exports[`CheckBoxBox renders correctly 1`] = `
 <span
   className="atti-box"
 >
   <span
-    className="RadioButton-sc-8w77ik-0 eoAIkU"
+    className="CheckBoxBox-j9bhb-0 hIYtRu"
   />
 </span>
 `;

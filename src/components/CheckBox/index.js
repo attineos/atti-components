@@ -2,15 +2,15 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import RadioButton from './styles/RadioButton'
-import HiddenInputRadio from './styles/HiddenInputRadio'
-import RadioContainer from './styles/RadioContainer'
+import CheckBoxBox from './styles/CheckBoxBox'
+import CheckBoxBoxContainer from './styles/CheckBoxBoxContainer'
+import HiddenInputCheckBox from './styles/HiddenInputCheckBox'
 
 /**
- * A radio button.
+ * A checkbox button.
  *
  */
-class Radio extends PureComponent {
+class CheckBox extends PureComponent {
   state = {
     checked: this.props.checked,
   }
@@ -31,34 +31,34 @@ class Radio extends PureComponent {
   render() {
     const { className, id, name, value } = this.props
     return (
-      <RadioContainer className={className}>
-        <HiddenInputRadio
+      <CheckBoxBoxContainer className={className}>
+        <HiddenInputCheckBox
           id={id}
           checked={this.state.checked}
           name={name}
           onChange={this.handleToggleChecked}
-          type="radio"
+          type="checkbox"
           value={value}
         />
-        <RadioButton />
-      </RadioContainer>
+        <CheckBoxBox />
+      </CheckBoxBoxContainer>
     )
   }
 }
 
-Radio.defaultProps = {
+CheckBox.defaultProps = {
   checked: false,
   className: '',
   onChange: null,
 }
 
-Radio.propTypes = {
+CheckBox.propTypes = {
   /**
-   * Whether or not the radio is checked.
+   * Whether or not the checkbox is checked.
    */
   checked: PropTypes.bool,
   /**
-   * The classes of the Radio element.
+   * Classes of the CheckBox.
    */
   className: PropTypes.string,
   /**
@@ -67,20 +67,20 @@ Radio.propTypes = {
   id: PropTypes.string.isRequired,
   /**
    * The name attribute is used to reference form data after a form is submitted.
-   * Numerous radio with the same name value will be in the same group.
+   * Numerous checkbox with the same name value will be in the same group.
    */
   name: PropTypes.string.isRequired,
   /**
-   * Gets called when the value of the radio changes.
+   * Gets called when the value of the checkbox changes.
    *
    * @param {SyntheticEvent} event The react `SyntheticEvent`
    */
   onChange: PropTypes.func,
   /**
-   * The value attribute of the radio. This attribute has meaning when submitting a form.
+   * The value attribute of the checkbox. This attribute has meaning when submitting a form.
    */
   value: PropTypes.string.isRequired,
 }
 
 /** @component */
-export default styled(Radio)``
+export default styled(CheckBox)``

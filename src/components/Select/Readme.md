@@ -1,11 +1,7 @@
 Select :
 
 ```js
-<Select
-  id="single"
-  label="Experience"
-  options={['< 1 year', 'Between 1 and 3 years', '> 3 years']}
-/>
+<Select id="single" options={['< 1 year', 'Between 1 and 3 years', '> 3 years']} />
 ```
 
 Select with alphabetical sort :

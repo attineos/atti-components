@@ -7,7 +7,7 @@ import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
 import Cell from './components/Cell'
 import Container from './components/Container'
-import Checkbox from './components/Checkbox'
+import CheckBox from './components/CheckBox'
 import Grid from './components/Grid'
 import Header1 from './components/Header1'
 import Header2 from './components/Header2'
@@ -21,7 +21,7 @@ import Loader from './components/Loader'
 import Menu from './components/Menu'
 import Option from './components/Option'
 import OptionPanel from './components/OptionPanel'
-import Progressbar from './components/Progressbar'
+import ProgressBar from './components/ProgressBar'
 import Radio from './components/Radio'
 import Select from './components/Select'
 import SmallText from './components/SmallText'
@@ -40,7 +40,7 @@ module.exports = {
   Button,
   Cell,
   Container,
-  Checkbox,
+  CheckBox,
   Grid,
   Header1,
   Header2,
@@ -54,7 +54,7 @@ module.exports = {
   Menu,
   Option,
   OptionPanel,
-  Progressbar,
+  ProgressBar,
   Radio,
   Select,
   SmallText,

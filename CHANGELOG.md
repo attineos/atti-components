@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- *Breaking Change*: Remove LayoutGridCell & LayoutContainer
+- **Breaking Change**: Remove LayoutGridCell & LayoutContainer by [@akaala](https://github.com/akaala)
   - LayoutGridCell is replaced by Cell
   - LayoutContainer with type RAW is replaced by Container
   - LayoutContainer with type GRID is replaced by Grid
@@ -17,19 +17,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ### Changed
+
+- **Breaking Change**: Rename the following components by [@akaala](https://github.com/akaala)
+  - Checkbox -> CheckBox
+  - Progressbar -> ProgressBar
+
 - Allow [extending](https://www.styled-components.com/docs/basics#extending-styles) and [referring](https://www.styled-components.com/docs/advanced#referring-to-other-components) of the following components by [@akaala](https://github.com/akaala)
   - Alert
   - Badge
   - Button
+  - CheckBox
+  - Input
   - Image
   - LayoutContainer
   - LayoutGridCell
   - Link
   - Loader
-  - Progressbar
+  - Option
+  - OptionPanel
+  - ProgressBar
+  - Radio
+  - Select
+  - TextArea
 
 ### Removed
-- XXXXX
+- **Breaking Change**: The following components don't support `label` property anymore. You should combine them with a Label component. By [@akaala](https://github.com/akaala)
+  - CheckBox
+  - Input
+  - Radio
+  - Select
+  - TextArea
 
 
 ## [0.0.1] - 2018-11-21

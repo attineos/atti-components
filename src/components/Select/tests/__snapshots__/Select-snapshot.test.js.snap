@@ -4,14 +4,8 @@ exports[`Select renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <label
-    className="StyledLabel-sc-7lrvk2-0 atti-r-css  cgokyd"
-    htmlFor="Atticomponents"
-  >
-    Atticomponents
-  </label>
   <select
-    className="StyledSelect-jeqzcu-0 atti-r-css  wHhRh"
+    className="Atticomponents Select-sc-1yblj4q-0 eGaeAq StyledSelect-jeqzcu-0 atti-r-css Atticomponents Select-sc-1yblj4q-0 eGaeAq wHhRh"
     id="Atticomponents"
     multiple={true}
     name="Atticomponents"

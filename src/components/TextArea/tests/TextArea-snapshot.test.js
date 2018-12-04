@@ -10,7 +10,7 @@ it('TextArea renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <TextArea id="Atticomponents" label="Atticomponents" name="Atticomponents" placeholder="Atticomponents" ></TextArea>
+        <TextArea className="Atticomponents" id="Atticomponents" name="Atticomponents" placeholder="Atticomponents" ></TextArea>
       </Wrapper>
       )
     .toJSON();

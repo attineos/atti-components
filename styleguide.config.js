@@ -48,11 +48,67 @@ module.exports = {
           content: 'docs/colors.md',
         },
       ],
-    },
-    {
-      name: 'Components',
-      components: 'src/components/**/index.js',
-    },
+    }, {
+      name: 'Forms',
+      components: [
+        'src/components/Button/index.js',
+        'src/components/CheckBox/index.js',
+        'src/components/Input/index.js',
+        'src/components/InputFile/index.js',
+        'src/components/Radio/index.js',
+        'src/components/Select/index.js',
+        'src/components/TextArea/index.js',
+      ],
+    }, {
+      name: 'Graphics',
+      components: [
+        'src/components/Image/index.js',
+        'src/components/Loader/index.js',
+        'src/components/ProgressBar/index.js',
+      ],
+    }, {
+      name: 'Layout',
+      components: [
+        'src/components/Cell/index.js',
+        'src/components/Container/index.js',
+        'src/components/Grid/index.js',
+      ],
+    }, {
+      name: 'Navigation',
+      components: [
+        'src/components/Breadcrumb/index.js',
+        'src/components/Menu/index.js',
+        'src/components/Link/index.js',
+      ],
+    }, {
+      name: 'Notifications',
+      components: [
+        'src/components/Alert/index.js',
+        'src/components/Badge/index.js',
+      ],
+    }, {
+      name: 'Typography',
+      components: [
+        'src/components/BigText/index.js',
+        'src/components/Header1/index.js',
+        'src/components/Header2/index.js',
+        'src/components/Header3/index.js',
+        'src/components/Label/index.js',
+        'src/components/SmallText/index.js',
+        'src/components/Text/index.js',
+      ],
+    }, {
+      name: 'Helpers',
+      components: [
+        'src/components/ThemeProvider/index.js',
+      ],
+    }, {
+      name: 'Others',
+      components: [
+        'src/components/Option/index.js',
+        'src/components/OptionPanel/index.js',
+      ],
+    }
   ],
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),

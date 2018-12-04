@@ -4,8 +4,8 @@ exports[`Radio renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <label
-    className="LabelRadio-wot4p6-0 atti-r-css  jilFc"
+  <div
+    className="Atticomponents Radio-sc-1ut91e7-0 cqxOOJ RadioContainer-oshlxq-0 DRbLh"
   >
     <input
       checked={true}
@@ -17,9 +17,8 @@ exports[`Radio renders correctly 1`] = `
       value="Atticomponents"
     />
     <span
-      className="RadioButton-sc-8w77ik-0 dGJoZX"
+      className="RadioButton-sc-8w77ik-0 eoAIkU"
     />
-    Atticomponents
-  </label>
+  </div>
 </span>
 `;

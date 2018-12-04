@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Select from '..';
+import RadioContainer from '../styles/RadioContainer';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Select renders correctly', () => {
+it('RadioContainer renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Select className="Atticomponents" id="Atticomponents" isMulti={true} name="Atticomponents" onChange={mock} options={new Array()} size={42} sort={null} ></Select>
+        <RadioContainer ></RadioContainer>
       </Wrapper>
       )
     .toJSON();

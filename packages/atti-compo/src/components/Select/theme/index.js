@@ -1,9 +1,4 @@
 export default ({ colors, forms, sizes, spaces }) => ({
-  label: {
-    spaces: {
-      marginBottom: spaces.s3,
-    },
-  },
   select: {
     borders: {
       radius: forms.borders.radius,

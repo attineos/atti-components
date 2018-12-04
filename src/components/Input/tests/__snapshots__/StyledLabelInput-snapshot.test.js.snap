@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`StyledLabelInput renders correctly 1`] = `
-<label
-  className="StyledLabelInput-p62z0t-0 lhgtBc Label-xhjve5-0 fQVHlM"
-/>
-`;

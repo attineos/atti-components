@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Button from 'react-native'
 
 const StyledButton = styled.Button.attrs({
-  color: props => props.theme.components.button.colors.text,
+  color: props => props.theme.components.button.colors.background,
 })``
 
 export default StyledButton

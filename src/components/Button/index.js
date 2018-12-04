@@ -1,18 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { noop } from 'lodash'
 import ButtonFacade from './facade'
 /**
  * A Simple Button compatible for web and native.
  *
- * @version 0.2
  */
 
-const Button = ({ children, onClick, onPress, title }) => (
-  <ButtonFacade content={children} onClick={onClick} onPress={onPress} title={title} />
+const Button = ({ children, className, onClick, onPress, title }) => (
+  <ButtonFacade
+    className={className}
+    content={children}
+    onClick={onClick}
+    onPress={onPress}
+    title={title}
+  />
 )
 
 Button.defaultProps = {
+  className: '',
   onClick: noop(),
   onPress: noop(),
 }
@@ -24,6 +31,11 @@ Button.propTypes = {
    * Content of the component. Only text for now.
    */
   children: PropTypes.string.isRequired,
+
+  /**
+   * Classes of the Button.
+   */
+  className: PropTypes.string,
 
   /**
    * ![Native](src/images/native.png "")
@@ -47,4 +59,5 @@ Button.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-export default Button
+/** @component */
+export default styled(React.memo(Button))``

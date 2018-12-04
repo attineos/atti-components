@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import StyledOptionPanel from './styles/StyledOptionPanel'
 
 /**
  * A container of Options.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
-class OptionPanel extends React.Component {
-  render() {
-    const { children } = this.props
-    return <StyledOptionPanel>{children}</StyledOptionPanel>
-  }
+const OptionPanel = ({ children, className }) => (
+  <StyledOptionPanel className={className}>{children}</StyledOptionPanel>
+)
+
+OptionPanel.defaultProps = {
+  className: '',
 }
 
 OptionPanel.propTypes = {
@@ -21,6 +21,11 @@ OptionPanel.propTypes = {
    * Array of Option components.
    */
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  /**
+   * Classes of OptionPanel.
+   */
+  className: PropTypes.string,
 }
 
-export default OptionPanel
+/** @component */
+export default styled(React.memo(OptionPanel))``

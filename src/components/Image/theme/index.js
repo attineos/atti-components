@@ -1,6 +1,6 @@
 export default ({ sizes }) => ({
   sizes: {
-    height: sizes.heights.h15,
-    width: sizes.widths.w15,
+    height: sizes.heights.h19,
+    width: sizes.widths.w19,
   },
 })

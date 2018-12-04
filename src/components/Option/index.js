@@ -1,38 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import StyledOption from './styles/StyledOption'
 
 /**
  * A div which contains a text and which can be selected.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
-class Option extends React.Component {
-  static defaultProps = {
-    children: '',
-    id: undefined,
-    selected: false,
-  }
-
-  static propTypes = {
-    /**
-     * The content of the option.
-     */
-    children: PropTypes.any,
-    /**
-     * The id of the option.
-     */
-    id: PropTypes.string,
-    /**
-     * Whether the field is selected. False by default.
-     */
-    selected: PropTypes.bool,
-  }
-
+class Option extends React.PureComponent {
   state = {
-    selected: this.props.selected || false,
+    selected: this.props.selected,
   }
 
   toggleSelected = () => {
@@ -42,14 +20,41 @@ class Option extends React.Component {
   }
 
   render() {
-    const { children, id } = this.props
+    const { children, className, id } = this.props
     const { selected } = this.state
     return (
-      <StyledOption id={id} onClick={this.toggleSelected} selected={selected}>
+      <StyledOption className={className} id={id} onClick={this.toggleSelected} selected={selected}>
         {children}
       </StyledOption>
     )
   }
 }
 
-export default Option
+Option.defaultProps = {
+  children: '',
+  className: '',
+  id: null,
+  selected: false,
+}
+
+Option.propTypes = {
+  /**
+   * The content of the Option.
+   */
+  children: PropTypes.any,
+  /**
+   * The classes of the Option.
+   */
+  className: PropTypes.string,
+  /**
+   * The id of the Option.
+   */
+  id: PropTypes.string,
+  /**
+   * Whether the field is selected. False by default.
+   */
+  selected: PropTypes.bool,
+}
+
+/** @component */
+export default styled(Option)``

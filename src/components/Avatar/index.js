@@ -1,74 +1,61 @@
+// @noSnapshot
 import React from 'react'
 import PropTypes from 'prop-types'
-import { noop } from 'lodash'
+import styled from 'styled-components'
+
 import StyledAvatar from './styles/StyledAvatar'
-import StyledPicturedAvatar from './styles/StyledPicturedAvatar'
-import { abbrev_name } from '../../helpers/StringHelper/StringHelper'
 
 /**
  * Avatar component
  *
- * @version 0.1
- * @author Adrien TINEL
  */
+const Avatar = ({ bgColor, bgSrc, children, className, size, title }) => (
+  <StyledAvatar
+    as={children ? 'p' : 'div'}
+    bgColor={bgColor}
+    bgSrc={bgSrc}
+    className={className}
+    size={size}
+    title={title}
+  >
+    {children}
+  </StyledAvatar>
+)
 
-class Avatar extends React.Component {
-  static defaultProps = {
-    color: noop(),
-    size: 'medium',
-    src: noop(),
-  }
-
-  static propTypes = {
-    /**
-     * A deterministic color background
-     */
-    color: PropTypes.string,
-
-    /**
-     * Full name
-     */
-    name: PropTypes.string.isRequired,
-
-    /**
-     * Defines the size of the component
-     */
-    size: PropTypes.string,
-
-    /**
-     * Route to the background picture
-     */
-    src: PropTypes.string,
-  }
-
-  render() {
-    const { name, size, src, color } = this.props
-
-    // background of the avatar component
-    let children
-    if (src) {
-      // pick the img route to define it as the background
-      children = (
-        <StyledPicturedAvatar
-          alt={name}
-          color={color}
-          className="Avatar--img"
-          size={size}
-          src={src}
-        />
-      )
-    } else {
-      // initials as the background
-      const abbr = abbrev_name(name)
-      children = abbr
-    }
-
-    return (
-      <StyledAvatar className="Avatar" size={size} name={name} color={color}>
-        {children}
-      </StyledAvatar>
-    )
-  }
+Avatar.defaultProps = {
+  bgColor: '',
+  bgSrc: '',
+  children: '',
+  className: '',
+  size: 'medium',
+  title: '',
 }
 
-export default Avatar
+Avatar.propTypes = {
+  /**
+   * The background color of the Avatar. Can be a color value or a color's name from the theme.
+   */
+  bgColor: PropTypes.string,
+  /**
+   * Route to the background's picture.
+   */
+  bgSrc: PropTypes.string,
+  /**
+   * Content text of the Avatar.
+   */
+  children: PropTypes.string,
+  /**
+   * The classes of the Avatar.
+   */
+  className: PropTypes.string,
+  /**
+   * Defines the size of the component.
+   */
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  /**
+   * Title of the Avatar (useful for accessibility when setting a background image).
+   */
+  title: PropTypes.string,
+}
+
+export default styled(React.memo(Avatar))``

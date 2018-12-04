@@ -5,11 +5,6 @@ import PropTypes from 'prop-types'
 import { StyledContainer, StyledFilePicker, StyledInput } from './styles'
 
 class InputFile extends PureComponent {
-  static defaultProps = {
-    name: '',
-    placeholder: '',
-  }
-
   _input = {}
 
   state = {
@@ -54,6 +49,11 @@ class InputFile extends PureComponent {
       </StyledContainer>
     )
   }
+}
+
+InputFile.defaultProps = {
+  name: '',
+  placeholder: '',
 }
 
 InputFile.propTypes = {

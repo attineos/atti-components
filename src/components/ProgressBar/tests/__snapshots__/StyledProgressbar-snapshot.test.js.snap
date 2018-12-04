@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledProgressBar renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="StyledProgressBar-sc-1jrtilk-0 fzfqM"
+  />
+</span>
+`;

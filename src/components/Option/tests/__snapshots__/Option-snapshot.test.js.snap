@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Option renders correctly 1`] = `
-<div
-  className="StyledOption-sc-1g6h427-0 klCEM"
-  id="Atticomponents"
-  onClick={[Function]}
-  selected={true}
+<span
+  className="atti-box"
 >
-  Atticomponents
-</div>
+  <p
+    className="Atticomponents Option-sc-1gvlqg7-0 gfsVzN StyledOption-sc-1g6h427-0 atti-r-css Atticomponents Option-sc-1gvlqg7-0 gfsVzN fOljjt"
+    id="Atticomponents"
+    onClick={[Function]}
+    selected={true}
+  >
+    Atticomponents
+  </p>
+</span>
 `;

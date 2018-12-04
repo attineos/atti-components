@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import StyledDiv from './styles/StyledDiv'
@@ -6,30 +7,32 @@ import StyledDiv from './styles/StyledDiv'
 /**
  * An alert component.
  *
- * @version 0.1
- * @author Ludovic LE HENAFF
  */
-class Alert extends React.PureComponent {
-  render() {
-    const { children, type } = this.props
-    return <StyledDiv type={type}>{children}</StyledDiv>
-  }
-}
+const Alert = ({ children, className, type }) => (
+  <StyledDiv className={className} type={type}>
+    {children}
+  </StyledDiv>
+)
 
 Alert.defaultProps = {
+  className: '',
   type: 'success',
 }
 
 Alert.propTypes = {
   /**
-   * Content of the Alert
+   * Content of the Alert.
    */
   children: PropTypes.node.isRequired,
-
   /**
-   * Type of alert
+   * Classes of the Alert.
    */
-  type: PropTypes.oneOf(['success', 'error', 'info', 'warning']),
+  className: PropTypes.string,
+  /**
+   * Type of alert.
+   */
+  type: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
 }
 
-export default Alert
+/** @component */
+export default styled(React.memo(Alert))``

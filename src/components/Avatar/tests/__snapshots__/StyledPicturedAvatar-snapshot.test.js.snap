@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`StyledPicturedAvatar renders correctly 1`] = `
-<img
-  className="StyledPicturedAvatar-sc-2gx68i-0 dVzuMq"
-/>
-`;

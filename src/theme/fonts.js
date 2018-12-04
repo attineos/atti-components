@@ -5,11 +5,12 @@ const fontFamilyPrimary = 'Roboto'
 const fontFamilySecondary = 'Inconsolata, Monaco, consolas, "courrier new"'
 
 const fonts = {
-  global: {
-    fontFamilyPrimary: fontFamilyPrimary,
-    fontFamilySecondary: fontFamilySecondary,
+  fontFamily: {
+    primary: fontFamilyPrimary,
+    secondary: fontFamilySecondary,
   },
   fontSize: {
+    fs8: '8px',
     fs10: '10px',
     fs12: '12px',
     fs14: '14px',
@@ -31,8 +32,8 @@ const fonts = {
     fw900: 900,
     fw1000: 1000,
   },
-  fontFamily: fontFamilyPrimary,
   lineHeight: {
+    lh8: '8px',
     lh10: '10px',
     lh12: '12px',
     lh14: '14px',

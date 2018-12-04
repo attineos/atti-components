@@ -1,27 +1,31 @@
 Small Avatar :
 
 ```js
-<Avatar name="Marc Lenormand Legrain" size="small" color="#4285F4" />
+<Avatar size="small" bgColor="#4285F4">
+  ML
+</Avatar>
 ```
 
 Medium Avatar :
 
 ```js
-<Avatar name="Michel Varnier" />
+<Avatar bgColor="tertiary">MV</Avatar>
 ```
 
 Large Avatar :
 
 ```js
-<Avatar name="Eric Legrand" size="large" color="#FFC82C" />
+<Avatar size="large" bgColor="#FFC82C">
+  EL
+</Avatar>
 ```
 
 Pictured Avatar :
 
 ```js
 <Avatar
-  name="Eric Legrand"
+  bgSrc="https://image.flaticon.com/icons/svg/149/149071.svg"
   size="large"
-  src="https://image.flaticon.com/icons/svg/149/149071.svg"
+  title="Eric Legrand"
 />
 ```

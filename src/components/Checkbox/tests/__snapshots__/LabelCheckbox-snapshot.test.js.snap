@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`LabelCheckbox renders correctly 1`] = `
-<label
-  className="LabelCheckbox-sc-3x8kt7-0 kdLLBq Label-xhjve5-0 fQVHlM"
-/>
-`;

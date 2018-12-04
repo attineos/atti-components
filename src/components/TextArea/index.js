@@ -1,45 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import StyledTextArea from './styles/StyledTextArea'
-import StyledLabelTextArea from './styles/StyledLabelTextArea'
 
 /**
- * A textarea with an associated label.
+ * A textarea.
  *
- * @version 0.1
- * @author Joseph Lefevre
  */
-const TextArea = ({ id, label, name, placeholder }) => (
-  <React.Fragment>
-    <StyledLabelTextArea htmlFor={id}>{label}</StyledLabelTextArea>
-    <StyledTextArea id={id} placeholder={placeholder} name={name} />
-  </React.Fragment>
+const TextArea = ({ className, id, name, placeholder }) => (
+  <StyledTextArea className={className} id={id} placeholder={placeholder} name={name} />
 )
 
 TextArea.defaultProps = {
+  className: '',
   id: '',
-  label: '',
   placeholder: '',
 }
 
 TextArea.propTypes = {
   /**
-   * The id of the textarea, which binds the textarea with the label.
+   * The classes of the Textarea.
+   */
+  className: PropTypes.string,
+  /**
+   * The id of the Textarea, which binds the Textarea with the label.
    */
   id: PropTypes.string,
   /**
-   * The text in the label of the textarea.
-   */
-  label: PropTypes.string,
-  /**
-   * The name of the textarea, which is used to get the value of the field.
+   * The name of the Textarea, which is used to get the value of the field.
    */
   name: PropTypes.string.isRequired,
   /**
-   * The text by default in the textarea.
+   * The text by default in the Textarea.
    */
   placeholder: PropTypes.string,
 }
 
-export default TextArea
+/** @component */
+export default styled(React.memo(TextArea))``

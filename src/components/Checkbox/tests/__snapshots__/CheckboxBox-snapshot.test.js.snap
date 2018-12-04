@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`CheckboxBox renders correctly 1`] = `
-<span
-  className="CheckboxBox-xrr36-0 cpOzrJ"
-/>
-`;

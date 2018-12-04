@@ -1,13 +1,24 @@
-export default ({ colors, spaces }) => ({
+export default ({ forms, spaces }) => ({
   input: {
-    colors: {
-      text: colors.primary,
-      background: colors.white,
+    borders: {
+      radius: forms.borders.radius,
+      width: forms.borders.width,
     },
-  },
-  label: {
+    boxShadows: {
+      boxShadowFocus: forms.boxShadow,
+    },
+    colors: {
+      border: forms.colors.border,
+      borderFocus: forms.colors.borderFocus,
+      caret: forms.colors.caret,
+      placeholder: forms.colors.placeholder,
+      text: forms.colors.text,
+    },
+    sizes: {
+      minHeight: forms.sizes.minHeight,
+    },
     spaces: {
-      marginBottom: spaces.s3,
+      paddingWidth: spaces.s5,
     },
   },
 })

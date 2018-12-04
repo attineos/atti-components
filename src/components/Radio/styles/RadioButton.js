@@ -1,12 +1,9 @@
 import styled, { css } from 'styled-components'
 
-const border = css`
-  border-radius: ${({ theme }) => theme.components.radio.radioButton.border.radius};
-`
-
-const colors = css`
-  background: ${({ theme }) => theme.components.radio.radioButton.colors.background};
-  color: ${({ theme }) => theme.components.radio.radioButton.colors.text};
+const borders = css`
+  border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
+  border: ${({ theme }) => theme.components.radio.radioButton.borders.width} solid
+    ${({ theme }) => theme.colors.extraDarkSmoke};
 `
 
 const sizes = css`
@@ -15,22 +12,21 @@ const sizes = css`
 `
 
 const RadioButton = styled.span`
-  ${border};
-  ${colors};
+  ${borders};
   ${sizes};
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: ${({ theme }) => theme.components.radio.radioButton.spaces.marginRight};
 
   // Use of a circle in the radio when it's checked.
   &:after {
-    content: '';
-    display: none;
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    background-color: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundChecked};
     width: calc(${({ theme }) => theme.components.radio.radioButton.sizes.widths} / 2);
     height: calc(${({ theme }) => theme.components.radio.radioButton.sizes.heights} / 2);
-    background-color: ${({ theme }) => theme.components.radio.radioButton.colors.background};
-    border-radius: ${({ theme }) => theme.components.radio.radioButton.border.radius};
+    border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
   }
 `
 

@@ -10,7 +10,7 @@ it('Option renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Option id="Atticomponents" selected={true} >Atticomponents</Option>
+        <Option className="Atticomponents" id="Atticomponents" selected={true} >Atticomponents</Option>
       </Wrapper>
       )
     .toJSON();

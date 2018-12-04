@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StyledBreadcrumb renders correctly 1`] = `
-<div
-  className="StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
-/>
+<span
+  className="atti-box"
+>
+  <div
+    className="StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
+  />
+</span>
 `;

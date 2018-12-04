@@ -1,20 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select renders correctly 1`] = `
-Array [
-  <label
-    className="StyledLabel-sc-7lrvk2-0 bVnWMj Label-xhjve5-0 fQVHlM"
-    htmlFor="Atticomponents"
-  >
-    Atticomponents
-  </label>,
+<span
+  className="atti-box"
+>
   <select
-    className="StyledSelect-jeqzcu-0 hmXKmx"
+    className="Atticomponents Select-sc-1yblj4q-0 eGaeAq StyledSelect-jeqzcu-0 atti-r-css Atticomponents Select-sc-1yblj4q-0 eGaeAq wHhRh"
     id="Atticomponents"
     multiple={true}
     name="Atticomponents"
     onChange={[Function]}
     size={42}
-  />,
-]
+  />
+</span>
 `;

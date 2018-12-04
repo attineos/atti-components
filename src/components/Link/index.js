@@ -1,22 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import StyledLink from './styles/StyledLink'
 
 /**
- * A link, nothing special for the moment.
- *
- * @version 0.3
- * @author Joseph Lefevre
- * @author Thomas Capet
- * @author Victor Gosse
+ * A link to an action or another resource.
  */
-const Link = ({ children, href, onClick, target }) => (
-  <StyledLink href={href} onClick={onClick} target={target}>
+const Link = ({ children, className, href, onClick, target }) => (
+  <StyledLink className={className} href={href} onClick={onClick} target={target}>
     {children}
   </StyledLink>
 )
 
 Link.defaultProps = {
+  className: '',
   onClick: null,
   target: null,
 }
@@ -26,6 +23,10 @@ Link.propTypes = {
    * Text of the link.
    */
   children: PropTypes.string.isRequired,
+  /**
+   * The classes used on the component.
+   */
+  className: PropTypes.string,
   /**
    * The location of the external resource.
    */
@@ -44,4 +45,5 @@ Link.propTypes = {
   onClick: PropTypes.func,
 }
 
-export default Link
+/** @component */
+export default styled(React.memo(Link))``

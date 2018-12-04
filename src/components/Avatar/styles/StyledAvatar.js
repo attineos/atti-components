@@ -1,47 +1,44 @@
+// @noSnapshot
 import styled, { css } from 'styled-components'
-import avatarColors from '../../../theme/colors'
-import avatarSize from '../../../helpers/StyleHelper/StyleHelper'
-import { sumChars } from '../../../helpers/StringHelper/StringHelper'
 
-const handleBackground = ({ props }) => {
-  let avatarBackground
-  if (props.color) {
-    avatarBackground = css`
-      background-color: ${props.color};
-    `
-  } else if (props.name) {
-    // pick a deterministic color from the colors list
-    const i = sumChars(props.name) % avatarColors.avatarColors.length
-    const background = avatarColors.avatarColors[i]
-    avatarBackground = css`
-      background-color: ${background};
-    `
-  } else {
-    avatarBackground = css`
-      background-image: url('https://image.flaticon.com/icons/svg/149/149071.svg');
-    `
-  }
-  return avatarBackground
-}
+import resetCSS from 'helpers/resetCSS'
 
-const border = css`
+const backgroundImage = ({ bgSrc }) =>
+  bgSrc
+    ? css`
+    background-image: url('${bgSrc}');
+    background-size: 'cover';
+  `
+    : ''
+
+const borders = css`
   border-radius: ${({ theme }) => theme.components.avatar.border.radius};
 `
 
 const colors = css`
   color: ${({ theme }) => theme.components.avatar.colors.text};
+  background-color: ${({ theme, bgColor }) => theme.colors[bgColor] || bgColor};
 `
 const fonts = css`
   font-family: ${({ theme }) => theme.components.avatar.fonts.fontFamily};
-  text-align: center;
+  font-size: ${({ size, theme }) => theme.components.avatar.sizes[size].fontSize};
+  line-height: ${({ size, theme }) => theme.components.avatar.sizes[size].lineHeight};
 `
 
-const StyledAvatar = styled.div`
-  ${props => handleBackground({ props })};
-  ${props => avatarSize({ props })};
-  ${border};
+const sizes = css`
+  width: ${({ size, theme }) => theme.components.avatar.sizes[size].size};
+  height: ${({ size, theme }) => theme.components.avatar.sizes[size].size};
+`
+
+const StyledAvatar = styled('div').attrs(resetCSS)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${({ bgSrc }) => backgroundImage({ bgSrc })};
+  ${borders};
   ${colors};
   ${fonts};
+  ${sizes};
 `
 
 export default StyledAvatar

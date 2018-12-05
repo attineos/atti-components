@@ -1,5 +1,5 @@
 // @noSnapshot
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -9,18 +9,24 @@ import StyledAvatar from './styles/StyledAvatar'
  * Avatar component
  *
  */
-const Avatar = ({ bgColor, bgSrc, children, className, size, title }) => (
-  <StyledAvatar
-    as={children ? 'p' : 'div'}
-    bgColor={bgColor}
-    bgSrc={bgSrc}
-    className={className}
-    size={size}
-    title={title}
-  >
-    {children}
-  </StyledAvatar>
-)
+class Avatar extends PureComponent {
+  render() {
+    const { bgColor, bgSrc, children, className, size, title } = this.props
+
+    return (
+      <StyledAvatar
+        as={children ? 'p' : 'div'}
+        bgColor={bgColor}
+        bgSrc={bgSrc}
+        className={className}
+        size={size}
+        title={title}
+      >
+        {children}
+      </StyledAvatar>
+    )
+  }
+}
 
 Avatar.defaultProps = {
   bgColor: '',
@@ -58,4 +64,4 @@ Avatar.propTypes = {
   title: PropTypes.string,
 }
 
-export default styled(React.memo(Avatar))``
+export default styled(Avatar)``

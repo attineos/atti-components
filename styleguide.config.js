@@ -84,6 +84,7 @@ module.exports = {
       name: 'Notifications',
       components: [
         'src/components/Alert/index.js',
+        'src/components/Avatar/index.js',
         'src/components/Badge/index.js',
       ],
     }, {

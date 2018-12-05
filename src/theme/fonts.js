@@ -42,6 +42,7 @@ const fonts = {
     lh24: '24px',
     lh32: '32px',
     lh40: '40px',
+    lh48: '48px',
     lh56: '56px',
   },
 }

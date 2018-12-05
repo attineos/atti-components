@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-
 import { map } from 'lodash'
 
 import Sort from './types/sort'
@@ -11,26 +10,31 @@ import StyledSelect from './styles/StyledSelect'
  * A select field.
  *
  */
-const Select = ({ className, id, isMulti, name, onChange, options, size, sort }) => {
-  const optionsSorted =
-    sort === Sort.ASC ? options.sort() : sort === Sort.DESC ? options.sort().reverse() : options
-  const optionsElements = map(optionsSorted, elt => (
-    <option value={elt} key={elt}>
-      {elt}
-    </option>
-  ))
-  return (
-    <StyledSelect
-      className={className}
-      id={id}
-      name={name}
-      onChange={onChange}
-      multiple={isMulti}
-      size={size}
-    >
-      {optionsElements}
-    </StyledSelect>
-  )
+class Select extends PureComponent {
+  render() {
+    const { className, id, isMulti, name, onChange, options, size, sort } = this.props
+
+    const optionsSorted =
+      sort === Sort.ASC ? options.sort() : sort === Sort.DESC ? options.sort().reverse() : options
+    const optionsElements = map(optionsSorted, elt => (
+      <option value={elt} key={elt}>
+        {elt}
+      </option>
+    ))
+
+    return (
+      <StyledSelect
+        className={className}
+        id={id}
+        name={name}
+        onChange={onChange}
+        multiple={isMulti}
+        size={size}
+      >
+        {optionsElements}
+      </StyledSelect>
+    )
+  }
 }
 
 Select.defaultProps = {
@@ -78,4 +82,4 @@ Select.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Select))``
+export default styled(Select)``

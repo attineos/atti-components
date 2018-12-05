@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+
 import StyledProgressBar from './styles/StyledProgressBar'
 import Text from '../Text'
 
@@ -8,32 +9,35 @@ import Text from '../Text'
  * A basic progress bar, which shows filling percentage.
  *
  */
-const ProgressBar = ({
-  className,
-  end,
-  fillingOrientation,
-  fillingSpeed,
-  percentageLabel,
-  showLabel,
-  start,
-  step,
-}) => {
-  const percent = parseInt((step / (end - start)) * 100, 10)
+class ProgressBar extends PureComponent {
+  render() {
+    const {
+      className,
+      end,
+      fillingOrientation,
+      fillingSpeed,
+      percentageLabel,
+      showLabel,
+      start,
+      step,
+    } = this.props
 
-  const stepLabel = percentageLabel ? `${percent}%` : `${step - start}/${end - start}`
+    const percent = parseInt((step / (end - start)) * 100, 10)
+    const stepLabel = percentageLabel ? `${percent}%` : `${step - start}/${end - start}`
 
-  return (
-    <StyledProgressBar
-      className={className}
-      end={end}
-      fillingOrientation={fillingOrientation}
-      fillingSpeed={fillingSpeed}
-      percent={percent}
-      start={start}
-    >
-      {showLabel ? <Text>{stepLabel}</Text> : null}
-    </StyledProgressBar>
-  )
+    return (
+      <StyledProgressBar
+        className={className}
+        end={end}
+        fillingOrientation={fillingOrientation}
+        fillingSpeed={fillingSpeed}
+        percent={percent}
+        start={start}
+      >
+        {showLabel ? <Text>{stepLabel}</Text> : null}
+      </StyledProgressBar>
+    )
+  }
 }
 
 ProgressBar.defaultProps = {
@@ -90,4 +94,4 @@ ProgressBar.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(ProgressBar))``
+export default styled(ProgressBar)``

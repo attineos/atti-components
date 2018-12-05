@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -8,11 +8,17 @@ import StyledBadge from './styles/StyledBadge'
  * Badge component.
  *
  */
-const Badge = ({ children, className, type, exponent }) => (
-  <StyledBadge as={exponent ? 'sup' : undefined} className={className} type={type}>
-    {children}
-  </StyledBadge>
-)
+class Badge extends PureComponent {
+  render() {
+    const { children, className, type, exponent } = this.props
+
+    return (
+      <StyledBadge as={exponent ? 'sup' : undefined} className={className} type={type}>
+        {children}
+      </StyledBadge>
+    )
+  }
+}
 
 Badge.defaultProps = {
   className: '',
@@ -41,4 +47,4 @@ Badge.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Badge))``
+export default styled(Badge)``

@@ -1,6 +1,7 @@
 import ThemeProvider from './components/ThemeProvider'
 
 import Alert from './components/Alert'
+import Avatar from './components/Avatar'
 import Badge from './components/Badge'
 import BigText from './components/BigText'
 import Breadcrumb from './components/Breadcrumb'
@@ -34,6 +35,7 @@ module.exports = {
   ThemeProvider,
 
   Alert,
+  Avatar,
   Badge,
   BigText,
   Breadcrumb,

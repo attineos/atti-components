@@ -122,6 +122,7 @@
       lh24: "24px",
       lh32: "32px",
       lh40: "40px",
+      lh48: "48px",
       lh56: "56px"
     }
   },
@@ -274,6 +275,34 @@
       lineHeight: "10px"
     }
   },
+  avatar: {
+    border: {
+      radius: "50%"
+    },
+    colors: {
+      text: "#FFFFFF"
+    },
+    fonts: {
+      fontFamily: "Roboto"
+    },
+    sizes: {
+      small: {
+        size: "18px",
+        fontSize: "10px",
+        lineHeight: "10px"
+      },
+      medium: {
+        size: "32px",
+        fontSize: "16px",
+        lineHeight: "16px"
+      },
+      large: {
+        size: "56px",
+        fontSize: "32px",
+        lineHeight: "32px"
+      }
+    }
+  },
   badge: {
     borders: {
       radius: "50px"
@@ -355,8 +384,8 @@
     },
     textAlign: "center"
   },
-  checkbox: {
-    checkboxBox: {
+  checkBox: {
+    checkBoxBox: {
       borders: {
         radius: "3px",
         width: "1px"
@@ -441,11 +470,6 @@
       },
       spaces: {
         paddingWidth: "12px"
-      }
-    },
-    label: {
-      spaces: {
-        marginBottom: "8px"
       }
     }
   },
@@ -539,7 +563,7 @@
       padding: "4px"
     }
   },
-  progressbar: {
+  progressBar: {
     borders: {
       borderColor: "#E0E6ED",
       borderRadius: "25px",
@@ -567,18 +591,10 @@
       sizes: {
         heights: "18px",
         widths: "18px"
-      },
-      spaces: {
-        marginRight: "12px"
       }
     }
   },
   select: {
-    label: {
-      spaces: {
-        marginBottom: "4px"
-      }
-    },
     select: {
       borders: {
         radius: "3px",
@@ -631,11 +647,6 @@
     }
   },
   textarea: {
-    label: {
-      spaces: {
-        marginBottom: "12px"
-      }
-    },
     textarea: {
       borders: {
         radius: "3px",

@@ -1,28 +1,29 @@
-Progess bar :
+Progress bar :
 
 ```js
-initialState = { stepFirstProgress: 0, up: false }
+initialState = { progressValue: 0, up: false }
 const onChangeSingleValue = () => {
+  const step = 5
   let up = state.up
-  if (state.stepFirstProgress >= 100) {
+  if (state.progressValue >= 100) {
     up = false
-  } else if (state.stepFirstProgress <= 0) {
+  } else if (state.progressValue <= 0) {
     up = true
   }
   setState({
-    stepFirstProgress: up ? state.stepFirstProgress + 5 : state.stepFirstProgress - 5,
+    progressValue: up ? state.progressValue + step : state.progressValue - step,
     up,
   })
 }
 ;<div>
   <div onClick={onChangeSingleValue}>
-    <ProgressBar step={state.stepFirstProgress} />
+    <ProgressBar value={state.progressValue} />
   </div>
   <br />
   <div onClick={onChangeSingleValue}>
     <ProgressBar
       id="secondProgress"
-      step={state.stepFirstProgress}
+      value={state.progressValue}
       showLabel={false}
       fillingSpeed={500}
       fillingOrientation="center"

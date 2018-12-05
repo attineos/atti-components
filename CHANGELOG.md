@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - values of theme.layout has changed accordingly
   - Container & Grid now includes a default padding right & left
 
+- New component `Avatar` by @a.tinel & [@akaala](https://github.com/akaala)
+
 
 ### Changed
 

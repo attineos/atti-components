@@ -2,7 +2,11 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { createGlobalStyle, ThemeProvider as TP, withTheme } from 'styled-components'
+import {
+  createGlobalStyle,
+  ThemeProvider as StyledThemeProvider,
+  withTheme,
+} from 'styled-components'
 
 import constructTheme from './helpers/constructTheme'
 
@@ -55,12 +59,12 @@ class ThemeProvider extends React.Component {
     const { theme } = this.state
 
     return (
-      <TP theme={theme || propTheme}>
+      <StyledThemeProvider theme={theme || propTheme}>
         <span className="atti-box">
           <ResetCSS suppressMultiMountWarning />
           {children}
         </span>
-      </TP>
+      </StyledThemeProvider>
     )
   }
 }

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider as TP, withTheme } from 'styled-components'
+import { ThemeProvider as StyledThemeProvider, withTheme } from 'styled-components'
 
 import constructTheme from './helpers/constructTheme'
 
@@ -41,7 +41,7 @@ class ThemeProvider extends React.Component {
     const { children, theme: propTheme } = this.props
     const { theme } = this.state
 
-    return <TP theme={theme || propTheme}>{children}</TP>
+    return <StyledThemeProvider theme={theme || propTheme}>{children}</StyledThemeProvider>
   }
 }
 

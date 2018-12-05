@@ -1,5 +1,7 @@
 Progress bar :
 
+*Click on the progress bars to update their values*
+
 ```js
 initialState = { progressValue: 0, up: false }
 const onChangeSingleValue = () => {
@@ -16,10 +18,12 @@ const onChangeSingleValue = () => {
   })
 }
 ;<div>
+  <Text>With default properties</Text>
   <div onClick={onChangeSingleValue}>
     <ProgressBar value={state.progressValue} />
   </div>
   <br />
+  <Text>Centered progression with no label</Text>
   <div onClick={onChangeSingleValue}>
     <ProgressBar
       id="secondProgress"

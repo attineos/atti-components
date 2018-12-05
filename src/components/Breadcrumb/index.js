@@ -1,7 +1,8 @@
 // @noSnapshot
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { map } from 'lodash'
+
 import { ElementsType } from './types'
 import BreadcrumbElement from './components/BreadcrumbElement'
 import BreadcrumbSeparator from './styles/BreadcrumbSeparator'
@@ -11,17 +12,23 @@ import StyledBreadcrumb from './styles/StyledBreadcrumb'
 /**
  * A breadcrumb component.
  */
-const Breadcrumb = ({ elements, separator }) => (
-  <StyledBreadcrumb>
-    {map(elements, (element, index) => (
-      <React.Fragment key={element.name}>
-        {element.url && <BreadcrumbElement element={element} />}
-        {!element.url && <CurrentElement>{element.name}</CurrentElement>}
-        {index + 1 < elements.length && <BreadcrumbSeparator>{separator}</BreadcrumbSeparator>}
-      </React.Fragment>
-    ))}
-  </StyledBreadcrumb>
-)
+class Breadcrumb extends PureComponent {
+  render() {
+    const { elements, separator } = this.props
+
+    return (
+      <StyledBreadcrumb>
+        {map(elements, (element, index) => (
+          <React.Fragment key={element.name}>
+            {element.url && <BreadcrumbElement element={element} />}
+            {!element.url && <CurrentElement>{element.name}</CurrentElement>}
+            {index + 1 < elements.length && <BreadcrumbSeparator>{separator}</BreadcrumbSeparator>}
+          </React.Fragment>
+        ))}
+      </StyledBreadcrumb>
+    )
+  }
+}
 
 Breadcrumb.defaultProps = {
   separator: ' / ',

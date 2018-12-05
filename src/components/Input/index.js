@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -8,31 +8,37 @@ import StyledInput from './styles/StyledInput'
  * An input field.
  *
  */
-const Input = ({
-  className,
-  id,
-  form,
-  name,
-  onChange,
-  pattern,
-  placeholder,
-  size,
-  type,
-  value,
-}) => (
-  <StyledInput
-    className={className}
-    id={id}
-    form={form}
-    name={name}
-    onChange={onChange}
-    pattern={pattern}
-    placeholder={placeholder}
-    size={size}
-    type={type}
-    value={value}
-  />
-)
+class Input extends PureComponent {
+  render() {
+    const {
+      className,
+      id,
+      form,
+      name,
+      onChange,
+      pattern,
+      placeholder,
+      size,
+      type,
+      value,
+    } = this.props
+
+    return (
+      <StyledInput
+        className={className}
+        id={id}
+        form={form}
+        name={name}
+        onChange={onChange}
+        pattern={pattern}
+        placeholder={placeholder}
+        size={size}
+        type={type}
+        value={value}
+      />
+    )
+  }
+}
 
 Input.defaultProps = {
   className: '',
@@ -91,4 +97,4 @@ Input.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Input))``
+export default styled(Input)``

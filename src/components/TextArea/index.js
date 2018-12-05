@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -8,9 +8,13 @@ import StyledTextArea from './styles/StyledTextArea'
  * A textarea.
  *
  */
-const TextArea = ({ className, id, name, placeholder }) => (
-  <StyledTextArea className={className} id={id} placeholder={placeholder} name={name} />
-)
+class TextArea extends PureComponent {
+  render() {
+    const { className, id, name, placeholder } = this.props
+
+    return <StyledTextArea className={className} id={id} placeholder={placeholder} name={name} />
+  }
+}
 
 TextArea.defaultProps = {
   className: '',
@@ -38,4 +42,4 @@ TextArea.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(TextArea))``
+export default styled(TextArea)``

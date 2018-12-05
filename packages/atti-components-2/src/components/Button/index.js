@@ -1,22 +1,28 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { noop } from 'lodash'
+
 import ButtonFacade from './facade'
 /**
  * A Simple Button compatible for web and native.
  *
  */
+class Button extends PureComponent {
+  render() {
+    const { children, className, onClick, onPress, title } = this.props
 
-const Button = ({ children, className, onClick, onPress, title }) => (
-  <ButtonFacade
-    className={className}
-    content={children}
-    onClick={onClick}
-    onPress={onPress}
-    title={title}
-  />
-)
+    return (
+      <ButtonFacade
+        className={className}
+        content={children}
+        onClick={onClick}
+        onPress={onPress}
+        title={title}
+      />
+    )
+  }
+}
 
 Button.defaultProps = {
   className: '',
@@ -60,4 +66,4 @@ Button.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Button))``
+export default styled(Button)``

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -8,9 +8,13 @@ import StyledImage from './styles/StyledImage'
  * A simple image, nothing special for the moment.
  *
  */
-const Image = ({ alt, className, height, src, width }) => (
-  <StyledImage alt={alt} className={className} height={height} src={src} width={width} />
-)
+class Image extends PureComponent {
+  render() {
+    const { alt, className, height, src, width } = this.props
+
+    return <StyledImage alt={alt} className={className} height={height} src={src} width={width} />
+  }
+}
 
 Image.defaultProps = {
   alt: '',
@@ -45,4 +49,4 @@ Image.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Image))``
+export default styled(Image)``

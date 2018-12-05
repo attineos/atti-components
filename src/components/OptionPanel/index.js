@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -8,9 +8,13 @@ import StyledOptionPanel from './styles/StyledOptionPanel'
  * A container of Options.
  *
  */
-const OptionPanel = ({ children, className }) => (
-  <StyledOptionPanel className={className}>{children}</StyledOptionPanel>
-)
+class OptionPanel extends PureComponent {
+  render() {
+    const { children, className } = this.props
+
+    return <StyledOptionPanel className={className}>{children}</StyledOptionPanel>
+  }
+}
 
 OptionPanel.defaultProps = {
   className: '',
@@ -28,4 +32,4 @@ OptionPanel.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(OptionPanel))``
+export default styled(OptionPanel)``

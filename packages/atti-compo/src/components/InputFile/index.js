@@ -38,7 +38,7 @@ class InputFile extends PureComponent {
 
     return (
       <StyledContainer>
-        <StyledInput name={name} type="file" innerRef={this.setRef} onChange={this.onChangeFile} />
+        <StyledInput name={name} type="file" ref={this.setRef} onChange={this.onChangeFile} />
         <StyledFilePicker
           onClick={this.browseFile}
           onDragOver={this.allowDrop}

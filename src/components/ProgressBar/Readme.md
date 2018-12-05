@@ -1,6 +1,6 @@
 Progress bar :
 
-*Click on the progress bars to update their values*
+_Click on the progress bars to update their values_
 
 ```js
 initialState = { progressValue: 0, up: false }

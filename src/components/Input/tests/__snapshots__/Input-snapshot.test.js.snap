@@ -5,7 +5,7 @@ exports[`Input renders correctly 1`] = `
   className="atti-box"
 >
   <input
-    className="Atticomponents Input-sc-1rdvjev-0 DIgUD StyledInput-sc-12an70a-0 atti-r-css Atticomponents Input-sc-1rdvjev-0 DIgUD dOJSEM"
+    className="Atticomponents Input-sc-1rdvjev-0 DIgUD StyledInput-sc-12an70a-0 atti-r-css Atticomponents Input-sc-1rdvjev-0 DIgUD ehSSzP"
     form={true}
     id="Atticomponents"
     name="Atticomponents"

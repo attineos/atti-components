@@ -5,7 +5,7 @@ exports[`ItemLink renders correctly 1`] = `
   className="atti-box"
 >
   <a
-    className="ItemLink-sc-10gyy0u-0 eJIVKI StyledLink-kwdrvq-0 atti-r-css ItemLink-sc-10gyy0u-0 eJIVKI clESAP"
+    className="ItemLink-sc-10gyy0u-0 eJIVKI StyledLink-kwdrvq-0 atti-r-css ItemLink-sc-10gyy0u-0 eJIVKI kXlEaY"
     onClick={null}
     target={null}
   />

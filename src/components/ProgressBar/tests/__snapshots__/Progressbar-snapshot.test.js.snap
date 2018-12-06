@@ -10,7 +10,7 @@ exports[`ProgressBar renders correctly 1`] = `
     start={42}
   >
     <p
-      className="Text-o3or1r-0 atti-r-css  eloKlU"
+      className="Text-o3or1r-0 atti-r-css  casUoS"
     >
       Infinity%
     </p>

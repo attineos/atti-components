@@ -10,6 +10,8 @@ import Text from '../Text'
  *
  */
 class ProgressBar extends PureComponent {
+  roundToStep = (value, step) => Math.round(value / step) * step
+
   render() {
     const {
       className,
@@ -20,10 +22,14 @@ class ProgressBar extends PureComponent {
       showLabel,
       start,
       step,
+      value,
     } = this.props
 
-    const percent = parseInt((step / (end - start)) * 100, 10)
-    const stepLabel = percentageLabel ? `${percent}%` : `${step - start}/${end - start}`
+    const normalizedValue = Math.min(Math.max(parseFloat(value), start), end)
+    const percent = this.roundToStep((normalizedValue * 100) / (end - start), step)
+    const stepLabel = percentageLabel
+      ? `${percent}%`
+      : `${this.roundToStep(value, step) - start}/${end - start}`
 
     return (
       <StyledProgressBar
@@ -48,7 +54,8 @@ ProgressBar.defaultProps = {
   percentageLabel: true,
   showLabel: true,
   start: 0,
-  step: 25,
+  step: 1,
+  value: 0,
 }
 
 ProgressBar.propTypes = {
@@ -91,6 +98,11 @@ ProgressBar.propTypes = {
    * Incremental step.
    */
   step: PropTypes.number,
+
+  /**
+   * Progressbar value.
+   */
+  value: PropTypes.number,
 }
 
 /** @component */

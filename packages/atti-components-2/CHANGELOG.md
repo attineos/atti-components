@@ -42,6 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Select
   - TextArea
 
+- **Breaking Change**: ProgressBar component should use value prop to display the progress bar value instead of step prop [@munvier](https://gitlab.com/munvier)
+
 ### Removed
 - **Breaking Change**: The following components don't support `label` property anymore. You should combine them with a Label component. By [@akaala](https://github.com/akaala)
   - CheckBox

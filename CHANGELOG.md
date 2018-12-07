@@ -14,8 +14,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - default number of columns in the grid has changed -> 12 cols in xldesktop & desktop / 6 cols in tablet & mobile
   - values of theme.layout has changed accordingly
   - Container & Grid now includes a default padding right & left
-
 - New component `Avatar` by @a.tinel & [@akaala](https://github.com/akaala)
+- New helpers availables from `atti-components/helpers` (See docs for more information) by [@akaala](https://github.com/akaala) :
+  - displays
+  - heights
+  - margins
+  - paddings
+  - sizes
+  - widths
 
 
 ### Changed
@@ -23,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking Change**: Rename the following components by [@akaala](https://github.com/akaala)
   - Checkbox -> CheckBox
   - Progressbar -> ProgressBar
-
+- **Breaking Change**: ProgressBar component should use value prop to display the progress bar value instead of step prop [@munvier](https://gitlab.com/munvier)
 - Allow [extending](https://www.styled-components.com/docs/basics#extending-styles) and [referring](https://www.styled-components.com/docs/advanced#referring-to-other-components) of the following components by [@akaala](https://github.com/akaala)
   - Alert
   - Badge
@@ -41,8 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Radio
   - Select
   - TextArea
-
-- **Breaking Change**: ProgressBar component should use value prop to display the progress bar value instead of step prop [@munvier](https://gitlab.com/munvier)
+- Fix: the `InputFile` component now correctly opens a dialog by [@munvier](https://gitlab.com/munvier)
 
 ### Removed
 - **Breaking Change**: The following components don't support `label` property anymore. You should combine them with a Label component. By [@akaala](https://github.com/akaala)

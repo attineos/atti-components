@@ -6,7 +6,8 @@ import webpackConfig from './base.config'
 
 export default merge(webpackConfig, {
   entry: {
-    '../dist/index': "./src/index.web.js"
+    '../dist/index': "./src/index.web.js",
+    '../helpers/index': "./src/helpers/index.js"
   },
   resolve: {
     extensions: ['.web.js', '.js']

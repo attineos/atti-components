@@ -99,9 +99,9 @@ module.exports = {
         'src/components/Text/index.js',
       ],
     }, {
-      name: 'Helpers',
+      name: 'Providers',
       components: [
-        'src/components/ThemeProvider/index.js',
+        'src/components/ThemeProvider/index.web.js',
       ],
     }, {
       name: 'Others',
@@ -109,6 +109,14 @@ module.exports = {
         'src/components/Option/index.js',
         'src/components/OptionPanel/index.js',
       ],
+    }, {
+      name: 'Helpers',
+      sections: [
+        {
+          name: 'CSS helpers',
+          content: 'src/helpers/readme.md',
+        },
+      ]
     }
   ],
   styleguideComponents: {

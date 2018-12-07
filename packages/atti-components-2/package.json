@@ -78,6 +78,7 @@
   },
   "files": [
     "dist",
+    "helpers",
     "native",
     "CONTRIBUTING.md"
   ]

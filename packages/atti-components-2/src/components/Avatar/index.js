@@ -64,4 +64,5 @@ Avatar.propTypes = {
   title: PropTypes.string,
 }
 
+/** @component */
 export default styled(Avatar)``

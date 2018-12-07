@@ -1,5 +1,9 @@
 import { css } from 'styled-components'
 import { get } from 'lodash'
+import displays from '../displays'
+import margins from '../margins'
+import paddings from '../paddings'
+import sizes from '../sizes'
 
 const getFontStyle = fontType => css`
   color: ${({ theme }) => get(theme, `components.${fontType}.colors.text`)};
@@ -7,6 +11,10 @@ const getFontStyle = fontType => css`
   font-family: ${({ theme }) => get(theme, `components.${fontType}.fonts.fontFamily`)};
   line-height: ${({ theme }) => get(theme, `components.${fontType}.fonts.lineHeight`)};
   text-align: ${({ textAlign }) => textAlign || 'left'};
+  ${displays}
+  ${margins}
+  ${paddings}
+  ${sizes}
 `
 
 export default getFontStyle

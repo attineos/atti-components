@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="Atticomponents Alert-sc-6mbtvk-0 hTpuTT StyledDiv-rsh67c-0 atti-r-css Atticomponents Alert-sc-6mbtvk-0 hTpuTT fYiQET"
+    type={null}
+  >
+    <div />
+  </div>
+</span>
+`;

@@ -4,8 +4,10 @@
       "targets": {
         "browsers": ["last 2 versions"]
       }
-    }], 
-    "react"
+    }],
+    "react",
+    "es2015",
+    "stage-0"
   ],
-  "plugins": ["wildcard"]
+  "plugins": ["lodash", "styled-components", "transform-class-properties", "wildcard"]
 }

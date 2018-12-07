@@ -129,6 +129,16 @@ Feature 562: button component
 BREAKING CHANGE : old button should be removed as it will now throw an exception.
 ```
 
+Before each commit it is mandatory to run the command `yarn preparecommit`. The command will :
+
+- Create all snapshots.
+- Fix the style of all files.
+- Check the code quality.
+- Run all tests.
+
+The option `-u` can be added to also update all tests before launching them.
+
+
 ## JS conventions
 
 This project follow the W3Schools JS conventions (https://www.w3schools.com/js/js_conventions.asp),
@@ -154,8 +164,10 @@ component folder should follow this architecture :
 Component
 |-- config
 |-- components
+|-- facade
 |-- styles
 |-- tests
+|-- theme
 |-- types
 |-- index.js
 ```
@@ -163,7 +175,60 @@ With :
 * `config` :  contains the internal configuration of the component
 * `components` : contains the sub components, only useful for this component. Only contains 
 React component, no styled-components.
+* `facade` : contains a maximum of 3 files ('Facade.js', 'index.web.js' and 'index.native.js'). Indexes files render respectively a web and a native component. They should extend `Facade.js` which contains the common code of both versions
 * `styles` : contains all styled-components reserved for this component
 * `tests` : contains the tests for this component
+* `theme` : contains theme properties
 * `types` : contains the declarations of Flow types used by this component internally, if they 
 are too big to be put in the `index.js` or if they are used in multiples sub components
+* `index.js` : is the entry point of the component, it contains the definition of all the accepted properties
+
+You can execute the command `yarn gen`  to generate a new component minimal's files and folders. The generation is in three steps :
+* Choose the component name.
+* Pick folders, defaults are `styles` and `theme`.
+* Confirm your choice.
+
+
+## Web and Native versions
+
+### Files resolution
+
+During the build process, webpack (our building tool) will resolve the files by looking for their extension.
+
+For Native components, it will resolve first `*.native.js` files and then `*.js` files.
+
+For Web components, it will resolve first `*.web.js` files and then `*.js` files.
+
+With the following component:
+```
+Button
+|-- styles
+|---- StyledButton.native.js
+|---- StyledButton.web.js
+|-- index.js
+```
+If `styles/StyledButton.native.js` and `styles/StyledButton.web.js` are both exporting a `StyledButton` component and you do the following in `index.js`:
+```
+import StyledButton from './styles'
+```
+Webpack will automatically know which one to retrieve for its 2 bundles.
+
+### Properties
+
+As the purpose of this project is to be able to use the same component with the same properties for both native and web project, our components should accept properties from both versions.
+The facade folder of the component is then used to dispatch / use correctly those properties.
+
+Of course, some properties may be used in only one version. This is why we should, for each property, indicate its compatibility in its description by adding the following in the property's description:
+* property compatible with native applications
+```
+![Native](src/images/native.png "")
+```
+* property compatible with web applications
+```
+![Web](src/images/web.png "")
+```
+* property compatible with both
+```
+![Native](src/images/native.png "")
+![Web](src/images/web.png "")
+```

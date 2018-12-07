@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <input
+    className="Atticomponents Input-sc-1rdvjev-0 DIgUD StyledInput-sc-12an70a-0 atti-r-css Atticomponents Input-sc-1rdvjev-0 DIgUD ehSSzP"
+    form={true}
+    id="Atticomponents"
+    name="Atticomponents"
+    onChange={[Function]}
+    pattern="Atticomponents"
+    placeholder="Atticomponents"
+    size={42}
+    type="Atticomponents"
+    value="Atticomponents"
+  />
+</span>
+`;

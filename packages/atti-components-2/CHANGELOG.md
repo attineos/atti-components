@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please beware that all version pre 1.0.0 can have major and breaking changes in undocumented features.
 
+## Unreleased
+
+### Changed
+
+- Update multiple dependencies and devDependencies by [@akaala](https://github.com/akaala)
+
 ## [0.0.2] - 2018-12-07
 
 ### Added

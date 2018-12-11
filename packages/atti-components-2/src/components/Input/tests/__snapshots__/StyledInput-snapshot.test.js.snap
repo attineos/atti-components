@@ -5,7 +5,7 @@ exports[`StyledInput renders correctly 1`] = `
   className="atti-box"
 >
   <input
-    className="StyledInput-sc-12an70a-0 atti-r-css  ehSSzP"
+    className="Text-o3or1r-0-input StyledInput-sc-12an70a-0 atti-r-css  ehSSzP"
   />
 </span>
 `;

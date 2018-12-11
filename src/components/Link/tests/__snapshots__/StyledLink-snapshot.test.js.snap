@@ -5,7 +5,7 @@ exports[`StyledLink renders correctly 1`] = `
   className="atti-box"
 >
   <a
-    className="StyledLink-kwdrvq-0 atti-r-css  kXlEaY"
+    className="Text-o3or1r-0-a StyledLink-kwdrvq-0 atti-r-css  kXlEaY"
   >
     Atticomponents
   </a>

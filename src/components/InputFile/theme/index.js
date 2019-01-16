@@ -5,7 +5,7 @@ export default ({ colors, fonts, spaces }) => ({
   },
   spaces: {
     paddingTopBottom: spaces.s4,
-    paddingLeftRight: spaces.s14,
+    paddingLeftRight: spaces.s11,
   },
   fonts: {
     fontFamily: fonts.fontFamily.primary,

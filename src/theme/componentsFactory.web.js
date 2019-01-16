@@ -8,6 +8,7 @@ import checkBox from '../components/CheckBox/theme'
 import header1 from '../components/Header1/theme'
 import header2 from '../components/Header2/theme'
 import header3 from '../components/Header3/theme'
+import header4 from '../components/Header4/theme'
 import image from '../components/Image/theme'
 import input from '../components/Input/theme'
 import inputFile from '../components/InputFile/theme'
@@ -35,6 +36,7 @@ export default constants => ({
   header1: header1(constants),
   header2: header2(constants),
   header3: header3(constants),
+  header4: header4(constants),
   img: image(constants),
   input: input(constants),
   inputFile: inputFile(constants),

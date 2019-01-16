@@ -94,6 +94,7 @@ module.exports = {
         'src/components/Header1/index.js',
         'src/components/Header2/index.js',
         'src/components/Header3/index.js',
+        'src/components/Header4/index.js',
         'src/components/Label/index.js',
         'src/components/SmallText/index.js',
         'src/components/Text/index.js',

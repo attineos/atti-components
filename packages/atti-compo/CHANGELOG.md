@@ -13,6 +13,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 ### Changed
 
+- **Breaking Change**: Update spaces values by [@Whargal](https://github.com/Whargal)
 - Update multiple dependencies and devDependencies by [@akaala](https://github.com/akaala)
 
 ## [0.0.2] - 2018-12-07

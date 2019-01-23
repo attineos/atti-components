@@ -2,7 +2,7 @@
  * Different spaces values
  */
 const spaces = {
-  s0: '0',
+  s0: '0px',
   s1: '1px',
   s2: '2px',
   s3: '4px',

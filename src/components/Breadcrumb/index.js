@@ -1,5 +1,6 @@
 // @noSnapshot
 import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { map } from 'lodash'
 
@@ -14,10 +15,10 @@ import StyledBreadcrumb from './styles/StyledBreadcrumb'
  */
 class Breadcrumb extends PureComponent {
   render() {
-    const { elements, separator } = this.props
+    const { className, elements, separator } = this.props
 
     return (
-      <StyledBreadcrumb>
+      <StyledBreadcrumb className={className}>
         {map(elements, (element, index) => (
           <React.Fragment key={element.name}>
             {element.url && <BreadcrumbElement element={element} />}
@@ -31,10 +32,15 @@ class Breadcrumb extends PureComponent {
 }
 
 Breadcrumb.defaultProps = {
+  className: '',
   separator: ' / ',
 }
 
 Breadcrumb.propTypes = {
+  /**
+   * Classes of the Breadcrumb.
+   */
+  className: PropTypes.string,
   /**
    * Array elements of this breadcrumb.
    * Should be sorted.
@@ -46,4 +52,4 @@ Breadcrumb.propTypes = {
   separator: PropTypes.string,
 }
 
-export default Breadcrumb
+export default styled(Breadcrumb)``

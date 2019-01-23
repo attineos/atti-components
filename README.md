@@ -39,7 +39,7 @@ For a more detailed view of individual components and how to use them, please [s
 ### Installation
 
 ```
-git clone https://gitlab.com/attineos/atti-components.git
+git clone https://github.com/attineos/atti-components.git
 cd atti-components
 yarn install
 ```

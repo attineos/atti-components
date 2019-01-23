@@ -2,7 +2,7 @@
  * Different spaces values
  */
 const spaces = {
-  s0: '0px',
+  s0: '0',
   s1: '1px',
   s2: '2px',
   s3: '4px',
@@ -11,12 +11,13 @@ const spaces = {
   s6: '16px',
   s7: '20px',
   s8: '24px',
-  s9: '28px',
-  s10: '32px',
-  s11: '36px',
-  s12: '40px',
-  s13: '44px',
-  s14: '48px',
+  s9: '32px',
+  s10: '40px',
+  s11: '48px',
+  s12: '56px',
+  s13: '64px',
+  s14: '80px',
+  s15: '128px',
 }
 
 export default spaces

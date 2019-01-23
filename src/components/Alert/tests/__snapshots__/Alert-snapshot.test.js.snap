@@ -5,7 +5,7 @@ exports[`Alert renders correctly 1`] = `
   className="atti-box"
 >
   <div
-    className="Atticomponents Alert-sc-6mbtvk-0 hTpuTT StyledDiv-rsh67c-0 atti-r-css Atticomponents Alert-sc-6mbtvk-0 hTpuTT fYiQET"
+    className="BigText-sc-1216e5t-0-div Atticomponents Alert-sc-6mbtvk-0 hTpuTT StyledDiv-rsh67c-0 atti-r-css Atticomponents Alert-sc-6mbtvk-0 hTpuTT fYiQET"
     type={null}
   >
     <div />

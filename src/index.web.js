@@ -13,6 +13,7 @@ import Grid from './components/Grid'
 import Header1 from './components/Header1'
 import Header2 from './components/Header2'
 import Header3 from './components/Header3'
+import Header4 from './components/Header4'
 import Image from './components/Image'
 import Input from './components/Input'
 import InputFile from './components/InputFile'
@@ -47,6 +48,7 @@ module.exports = {
   Header1,
   Header2,
   Header3,
+  Header4,
   Image,
   Input,
   InputFile,

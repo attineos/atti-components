@@ -7,9 +7,8 @@
     "build": "webpack --config webpack/native.config.babel.js && webpack --config webpack/web.config.babel.js",
     "build:documentation": "styleguidist build",
     "dev": "yarn run start:styleguidist",
-    "gen": "babel-node --presets @babel/env ./bin/generateComponent",
+    "gen": "babel-node --presets babel-preset-env ./bin/generateComponent",
     "lint": "eslint --cache src",
-    "precommit": "npm run prettier && npm run lint",
     "preparecommit": "yarn snapshots && yarn theme && yarn prettier && yarn lint && yarn test",
     "prepublish": "npm run build",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
@@ -18,6 +17,11 @@
     "start:styleguidist": "styleguidist server",
     "test": "jest",
     "theme": "babel-node --extensions \".js\",\".web.js\" ./bin/generateFullTheme"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier && npm run lint"
+    }
   },
   "repository": "git@gitlab.com:attineos/atti-components.git",
   "author": "Attineos <contact@attineos.com>",
@@ -53,15 +57,15 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "husky": "^0.14.3",
+    "husky": "^1.2.0",
     "jest": "^23.5.0",
     "jest-styled-components": "^6.3.1",
     "path": "^0.12.7",
     "prettier": "^1.14.0",
-    "prompts": "^0.1.13",
+    "prompts": "^2.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-styleguidist": "^7.1.3",
+    "react-styleguidist": "^8.0.6",
     "react-test-renderer": "^16.4.2",
     "remark": "^9.0.0",
     "styled-components": "^4.0.0",

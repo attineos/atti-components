@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please beware that all version pre 1.0.0 can have major and breaking changes in undocumented features.
 
+## Unreleased
+
+### Added
+- New component `Header4` by [@Whargal](https://github.com/Whargal)
+
+### Changed
+
+- **Breaking Change**: Update spaces values by [@Whargal](https://github.com/Whargal)
+- Update multiple dependencies and devDependencies by [@akaala](https://github.com/akaala)
+
 ## [0.0.2] - 2018-12-07
 
 ### Added

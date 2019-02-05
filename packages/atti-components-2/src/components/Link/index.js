@@ -9,10 +9,10 @@ import StyledLink from './styles/StyledLink'
  */
 class Link extends PureComponent {
   render() {
-    const { children, className, href, onClick, target } = this.props
+    const { children, className, href, onClick, target, ...rest } = this.props
 
     return (
-      <StyledLink className={className} href={href} onClick={onClick} target={target}>
+      <StyledLink className={className} href={href} onClick={onClick} target={target} {...rest}>
         {children}
       </StyledLink>
     )

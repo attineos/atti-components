@@ -8,6 +8,8 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 ## [Unreleased]
 
+## [0.0.3] - 2019-02-05
+
 ### Added
 - New component `Header4` by [@Whargal](https://github.com/Whargal)
 

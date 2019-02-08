@@ -24,21 +24,20 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 ### Added
 - **Breaking Change**: Remove LayoutGridCell & LayoutContainer by [@akaala](https://github.com/akaala)
-  - LayoutGridCell is replaced by Cell
-  - LayoutContainer with type RAW is replaced by Container
-  - LayoutContainer with type GRID is replaced by Grid
-  - default number of columns in the grid has changed -> 12 cols in xldesktop & desktop / 6 cols in tablet & mobile
-  - values of theme.layout has changed accordingly
-  - Container & Grid now includes a default padding right & left
+   - LayoutGridCell is replaced by Cell
+   - LayoutContainer with type RAW is replaced by Container
+   - LayoutContainer with type GRID is replaced by Grid
+   - default number of columns in the grid has changed -> 12 cols in xldesktop & desktop / 6 cols in tablet & mobile
+   - values of theme.layout has changed accordingly
+   - Container & Grid now includes a default padding right & left
 - New component `Avatar` by @a.tinel & [@akaala](https://github.com/akaala)
 - New helpers availables from `atti-components/helpers` (See docs for more information) by [@akaala](https://github.com/akaala) :
-  - displays
-  - heights
-  - margins
-  - paddings
-  - sizes
-  - widths
-
+   - displays
+   - heights
+   - margins
+   - paddings
+   - sizes
+   - widths
 
 ### Changed
 

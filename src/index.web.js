@@ -30,7 +30,7 @@ import SmallText from './components/SmallText'
 import Text from './components/Text'
 import TextArea from './components/TextArea'
 
-import theme from './theme'
+import { defaultTheme, attineosTheme } from './themes'
 
 module.exports = {
   ThemeProvider,
@@ -65,5 +65,6 @@ module.exports = {
   Text,
   TextArea,
 
-  theme,
+  defaultTheme,
+  attineosTheme,
 }

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { map } from 'lodash'
+import { map, isString } from 'lodash'
 
 import Sort from './types/sort'
 import StyledSelect from './styles/StyledSelect'
@@ -12,15 +12,32 @@ import StyledSelect from './styles/StyledSelect'
  */
 class Select extends PureComponent {
   render() {
-    const { className, id, isMulti, name, onChange, options, size, sort } = this.props
+    const {
+      className,
+      id,
+      isMulti,
+      name,
+      onChange,
+      options,
+      size,
+      sort,
+      value,
+      defaultValue,
+    } = this.props
 
     const optionsSorted =
       sort === Sort.ASC ? options.sort() : sort === Sort.DESC ? options.sort().reverse() : options
-    const optionsElements = map(optionsSorted, elt => (
-      <option value={elt} key={elt}>
-        {elt}
-      </option>
-    ))
+    const optionsElements = map(optionsSorted, elt => {
+      const value = isString(elt) ? elt : elt.id || elt.name
+      const key = isString(elt) ? elt : elt.id || elt.name
+      const name = isString(elt) ? elt : elt.name || elt.id
+
+      return (
+        <option value={value} key={key}>
+          {name}
+        </option>
+      )
+    })
 
     return (
       <StyledSelect
@@ -30,6 +47,8 @@ class Select extends PureComponent {
         onChange={onChange}
         multiple={isMulti}
         size={size}
+        value={value}
+        defaultValue={defaultValue}
       >
         {optionsElements}
       </StyledSelect>
@@ -44,6 +63,8 @@ Select.defaultProps = {
   onChange: null,
   size: 0,
   sort: Sort.NONE,
+  value: null,
+  defaultValue: null,
 }
 
 Select.propTypes = {
@@ -79,6 +100,14 @@ Select.propTypes = {
    * The sort to apply (ASC, DESC or NONE).
    */
   sort: PropTypes.oneOf([Sort.ASC, Sort.DESC, Sort.NONE]),
+  /**
+   * The value to use as a controlled component
+   */
+  value: PropTypes.string,
+  /**
+   * The default value to use as an uncontrolled component
+   */
+  defaultValue: PropTypes.string,
 }
 
 /** @component */

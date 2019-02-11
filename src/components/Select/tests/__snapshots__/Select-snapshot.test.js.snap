@@ -6,11 +6,13 @@ exports[`Select renders correctly 1`] = `
 >
   <select
     className="Text-o3or1r-0-select Atticomponents Select-sc-1yblj4q-0 eGaeAq StyledSelect-jeqzcu-0 atti-r-css Atticomponents Select-sc-1yblj4q-0 eGaeAq eVoAfY"
+    defaultValue="Atticomponents"
     id="Atticomponents"
     multiple={true}
     name="Atticomponents"
     onChange={[Function]}
     size={42}
+    value="Atticomponents"
   />
 </span>
 `;

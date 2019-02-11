@@ -3,14 +3,14 @@ import React from 'react'
 import Enzyme, { shallow, render, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import ThemeProvider from '../components/ThemeProvider'
-import theme from '../theme'
+import { defaultTheme } from '../themes'
 
 // React 16 Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() })
 
 // Shallow styled-components
 const shallowWithTheme = tree => {
-  const context = shallow(<ThemeProvider theme={theme} />)
+  const context = shallow(<ThemeProvider theme={defaultTheme} />)
     .instance()
     .getChildContext()
   return shallow(tree, { context })

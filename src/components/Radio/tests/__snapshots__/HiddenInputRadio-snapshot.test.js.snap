@@ -4,8 +4,12 @@ exports[`HiddenInputRadio renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <input
-    className="HiddenInputRadio-sc-9a3euj-0 dCQjgv"
-  />
+  <span
+    className="atti-box"
+  >
+    <input
+      className="HiddenInputRadio-sc-9a3euj-0 dCQjgv"
+    />
+  </span>
 </span>
 `;

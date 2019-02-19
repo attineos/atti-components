@@ -4,16 +4,20 @@ exports[`ProgressBar renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="Atticomponents ProgressBar-sc-6utz1-0 ewMPLO StyledProgressBar-sc-15l6ukn-0 irsTOG"
-    end={42}
-    start={42}
+  <span
+    className="atti-box"
   >
-    <p
-      className="Text-o3or1r-0 atti-r-css  casUoS"
+    <div
+      className="Atticomponents ProgressBar-sc-6utz1-0 ewMPLO StyledProgressBar-sc-15l6ukn-0 irsTOG"
+      end={42}
+      start={42}
     >
-      Infinity%
-    </p>
-  </div>
+      <p
+        className="Text-o3or1r-0 atti-r-css  casUoS"
+      >
+        Infinity%
+      </p>
+    </div>
+  </span>
 </span>
 `;

@@ -103,8 +103,9 @@ class StyleGuideRenderer extends React.Component {
 
   render() {
     const { children, classes, hasSidebar, homepageUrl, title, toc, version } = this.props
+
     return (
-      <ThemeProvider theme={defaultTheme}>
+      <ThemeProvider theme={defaultTheme} suppressResetCss>
         <div
           className={cx(classes.root, hasSidebar && classes.hasSidebar)}
           style={{ backgroundColor: defaultTheme['primary'] }}

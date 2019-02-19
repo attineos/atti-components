@@ -4,8 +4,12 @@ exports[`ItemsList renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <ul
-    className="ItemsList-sc-1ayscze-0 atti-r-css  bLHaok"
-  />
+  <span
+    className="atti-box"
+  >
+    <ul
+      className="ItemsList-sc-1ayscze-0 atti-r-css  bLHaok"
+    />
+  </span>
 </span>
 `;

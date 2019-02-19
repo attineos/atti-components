@@ -4,8 +4,12 @@ exports[`Grid renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="Container-sc-2aqv-0 Grid-vtptcr-0 fOFnjO"
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="Container-sc-2aqv-0 Grid-vtptcr-0 fOFnjO"
+    />
+  </span>
 </span>
 `;

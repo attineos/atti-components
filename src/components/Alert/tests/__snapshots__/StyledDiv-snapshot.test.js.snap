@@ -4,8 +4,12 @@ exports[`StyledDiv renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="BigText-sc-1216e5t-0-div StyledDiv-rsh67c-0 atti-r-css  fYiQET"
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="BigText-sc-1216e5t-0-div StyledDiv-rsh67c-0 atti-r-css  fYiQET"
+    />
+  </span>
 </span>
 `;

@@ -4,8 +4,12 @@ exports[`StyledMenu renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <nav
-    className="StyledMenu-sc-1vi243o-0 gzlXeh"
-  />
+  <span
+    className="atti-box"
+  >
+    <nav
+      className="StyledMenu-sc-1vi243o-0 gzlXeh"
+    />
+  </span>
 </span>
 `;

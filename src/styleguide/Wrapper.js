@@ -50,8 +50,10 @@ class Wrapper extends React.Component {
     const { selectedTheme } = this.state
 
     return (
-      <ThemeProvider theme={selectedTheme} key={Math.random()}>
-        {children}
+      <ThemeProvider theme={themes.default} suppressResetCss>
+        <ThemeProvider otherTheme={selectedTheme} suppressResetCss key={Math.random()}>
+          {children}
+        </ThemeProvider>
       </ThemeProvider>
     )
   }

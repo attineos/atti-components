@@ -4,23 +4,27 @@ exports[`InputFile renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="StyledContainer-m5ly54-0 hiRREi"
+  <span
+    className="atti-box"
   >
-    <input
-      className="StyledInput-sc-19gmxuz-0 cyFwFw"
-      name="Atticomponents"
-      onChange={[Function]}
-      type="file"
-    />
-    <button
-      className="Text-o3or1r-0-button StyledFilePicker-sc-1q1g117-0 atti-r-css  cpstLJ"
-      onClick={[Function]}
-      onDragOver={[Function]}
-      onDrop={[Function]}
+    <div
+      className="StyledContainer-m5ly54-0 hiRREi"
     >
-      Atticomponents
-    </button>
-  </div>
+      <input
+        className="StyledInput-sc-19gmxuz-0 cyFwFw"
+        name="Atticomponents"
+        onChange={[Function]}
+        type="file"
+      />
+      <button
+        className="Text-o3or1r-0-button StyledFilePicker-sc-1q1g117-0 atti-r-css  cpstLJ"
+        onClick={[Function]}
+        onDragOver={[Function]}
+        onDrop={[Function]}
+      >
+        Atticomponents
+      </button>
+    </div>
+  </span>
 </span>
 `;

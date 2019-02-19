@@ -4,10 +4,14 @@ exports[`StyledLink renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <a
-    className="Text-o3or1r-0-a StyledLink-kwdrvq-0 atti-r-css  kXlEaY"
+  <span
+    className="atti-box"
   >
-    Atticomponents
-  </a>
+    <a
+      className="Text-o3or1r-0-a StyledLink-kwdrvq-0 atti-r-css  kXlEaY"
+    >
+      Atticomponents
+    </a>
+  </span>
 </span>
 `;

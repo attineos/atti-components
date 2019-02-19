@@ -1,7 +1,3 @@
-import { merge } from 'lodash'
-
-import defaultTheme from '../defaultTheme'
-
 const lightPrimaryColor = '#FDA42A'
 const primaryColor = '#FF9600'
 const secondaryColor = '#22DD8D'
@@ -119,4 +115,4 @@ const attineosTheme = {
   },
 }
 
-export default merge({}, defaultTheme, attineosTheme)
+export default attineosTheme

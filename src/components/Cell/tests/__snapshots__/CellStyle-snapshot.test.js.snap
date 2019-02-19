@@ -4,8 +4,12 @@ exports[`CellStyle renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="CellStyle-ytv8v6-0 jHyant"
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="CellStyle-ytv8v6-0 jHyant"
+    />
+  </span>
 </span>
 `;

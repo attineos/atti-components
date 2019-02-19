@@ -4,10 +4,14 @@ exports[`Loader renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="Atticomponents Loader-kh46gp-0 fWNqqK StyledLoader-d8og6-0 kFqyaG"
-    color="Atticomponents"
-    type={null}
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="Atticomponents Loader-kh46gp-0 fWNqqK StyledLoader-d8og6-0 kFqyaG"
+      color="Atticomponents"
+      type={null}
+    />
+  </span>
 </span>
 `;

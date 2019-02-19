@@ -4,13 +4,17 @@ exports[`Link renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <a
-    className="Text-o3or1r-0-a Atticomponents Link-x5cckk-0 jMqokw StyledLink-kwdrvq-0 atti-r-css Atticomponents Link-x5cckk-0 jMqokw kXlEaY"
-    href="Atticomponents"
-    onClick={[Function]}
-    target="Atticomponents"
+  <span
+    className="atti-box"
   >
-    Atticomponents
-  </a>
+    <a
+      className="Text-o3or1r-0-a Atticomponents Link-x5cckk-0 jMqokw StyledLink-kwdrvq-0 atti-r-css Atticomponents Link-x5cckk-0 jMqokw kXlEaY"
+      href="Atticomponents"
+      onClick={[Function]}
+      target="Atticomponents"
+    >
+      Atticomponents
+    </a>
+  </span>
 </span>
 `;

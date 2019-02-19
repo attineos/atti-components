@@ -4,8 +4,12 @@ exports[`StyledOptionPanel renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="StyledOptionPanel-y2rxr-0 fTDPQM"
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="StyledOptionPanel-y2rxr-0 fTDPQM"
+    />
+  </span>
 </span>
 `;

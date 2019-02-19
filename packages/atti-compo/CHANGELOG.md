@@ -11,10 +11,12 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 ### Added
 
 - New theme `Attineos` was added by [@Whargal](https://github.com/Whargal)
+- New `ResetCSS` component was added [@Atrakeur](https://github.com/atrakeur)
 
 ### Changed
 
 - **Breaking Change**: Theme name and import was changed [@Atrakeur](https://www.atrakeur.com)
+- ResetCSS can be removed from ThemeProvider with the `suppressResetCss` prop [@Atrakeur](https://www.atrakeur.com)
 
 ## [0.0.3] - 2019-02-05
 

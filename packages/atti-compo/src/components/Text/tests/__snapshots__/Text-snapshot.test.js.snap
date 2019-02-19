@@ -4,10 +4,14 @@ exports[`Text renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <p
-    className="Text-o3or1r-0 atti-r-css  casUoS"
+  <span
+    className="atti-box"
   >
-    <div />
-  </p>
+    <p
+      className="Text-o3or1r-0 atti-r-css  casUoS"
+    >
+      <div />
+    </p>
+  </span>
 </span>
 `;

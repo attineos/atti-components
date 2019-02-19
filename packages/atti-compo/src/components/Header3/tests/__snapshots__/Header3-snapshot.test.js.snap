@@ -4,10 +4,14 @@ exports[`Header3 renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <h3
-    className="Header3-eln9i6-0 atti-r-css  jrCRaY"
+  <span
+    className="atti-box"
   >
-    <div />
-  </h3>
+    <h3
+      className="Header3-eln9i6-0 atti-r-css  jrCRaY"
+    >
+      <div />
+    </h3>
+  </span>
 </span>
 `;

@@ -4,10 +4,14 @@ exports[`BigText renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <p
-    className="BigText-sc-1216e5t-0 atti-r-css  kkuyYk"
+  <span
+    className="atti-box"
   >
-    <div />
-  </p>
+    <p
+      className="BigText-sc-1216e5t-0 atti-r-css  kkuyYk"
+    >
+      <div />
+    </p>
+  </span>
 </span>
 `;

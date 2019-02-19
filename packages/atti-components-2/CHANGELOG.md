@@ -8,9 +8,18 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 ## [Unreleased]
 
+### Added
+
+- New theme `Attineos` was added by [@Whargal](https://github.com/Whargal)
+
+### Changed
+
+- **Breaking Change**: Theme name and import was changed [@Atrakeur](https://www.atrakeur.com)
+
 ## [0.0.3] - 2019-02-05
 
 ### Added
+
 - New component `Header4` by [@Whargal](https://github.com/Whargal)
 
 ### Changed

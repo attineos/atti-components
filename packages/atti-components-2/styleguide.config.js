@@ -40,12 +40,20 @@ module.exports = {
       name: 'Introduction',
       sections: [
         {
+          name: 'Installation',
+          content: 'docs/installation.md',
+        },
+        {
           name: 'Theme',
           content: 'docs/theme.md',
         },
         {
           name: 'Colors',
           content: 'docs/colors.md',
+        },
+        {
+          name: 'Changelog',
+          content: 'CHANGELOG.md',
         },
       ],
     }, {

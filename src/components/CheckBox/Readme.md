@@ -2,8 +2,14 @@ Checkbox Button :
 
 ```js
 <div>
-  <CheckBox id="checkboxTest" name="checkboxTestGroup" value="ImChecked" />
+  <Label htmlFor="checkboxTest">
+    <CheckBox id="checkboxTest" name="checkboxTestGroup" value="ImChecked" />
+    Some checkbox
+  </Label>
   <br />
-  <CheckBox id="checkboxTest2" name="checkboxTestGroup" value="ImCheckedToo" />
+  <Label htmlFor="checkboxTest2">
+    <CheckBox id="checkboxTest2" name="checkboxTestGroup" value="ImCheckedToo" />
+    Some other checkbox
+  </Label>
 </div>
 ```

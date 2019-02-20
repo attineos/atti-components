@@ -8,7 +8,8 @@ exports[`Label renders correctly 1`] = `
     className="atti-box"
   >
     <label
-      className="Label-xhjve5-0 atti-r-css  jeuFdc"
+      className="Label-xhjve5-0 atti-r-css  kaKURQ"
+      disabled={false}
     >
       <div />
     </label>

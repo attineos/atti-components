@@ -25,7 +25,7 @@ const customTheme = {
     },
   },
 }
-;<ThemeProvider otherTheme={customTheme}>
+;<ThemeProvider otherTheme={customTheme} suppressResetCss>
   <Breadcrumb
     elements={[
       { name: 'Home', url: '/#' },

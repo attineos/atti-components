@@ -12,6 +12,7 @@ import Version from 'rsg-components/Version'
 
 import ThemeSelector from './ThemeSelector'
 import ThemeProvider from '../components/ThemeProvider'
+import ResetCSS from '../components/ResetCSS'
 import { defaultTheme } from '../themes'
 
 import { getWrappersToUpdate } from './Wrapper'
@@ -106,6 +107,7 @@ class StyleGuideRenderer extends React.Component {
 
     return (
       <ThemeProvider theme={defaultTheme} suppressResetCss>
+        <ResetCSS />
         <div
           className={cx(classes.root, hasSidebar && classes.hasSidebar)}
           style={{ backgroundColor: defaultTheme['primary'] }}

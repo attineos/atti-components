@@ -11,6 +11,8 @@ import resetCSS from 'helpers/resetCSS'
 
 const Label = styled.label.attrs(resetCSS)`
   ${getFontStyle('label')};
+
+  ${({ disabled }) => !disabled && 'cursor: pointer;'}
 `
 
 Label.propTypes = {
@@ -22,6 +24,18 @@ Label.propTypes = {
    * String to determine the alignment of content.
    */
   textAlign: PropTypes.oneOf(['center', 'initial', 'inherit', 'justify', 'left', 'right']),
+  /**
+   * The component to be a label for
+   */
+  htmlFor: PropTypes.string.required,
+  /**
+   * Should interaction be disabled
+   */
+  disabled: PropTypes.bool,
+}
+
+Label.defaultProps = {
+  disabled: false,
 }
 
 // @component

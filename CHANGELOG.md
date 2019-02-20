@@ -17,6 +17,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 - **Breaking Change**: Theme name and import was changed [@Atrakeur](https://www.atrakeur.com)
 - ResetCSS can be removed from ThemeProvider with the `suppressResetCss` prop [@Atrakeur](https://www.atrakeur.com)
+- Added support for custom renderers into Breadcrumb [@Atrakeur](https://github.com/atrakeur)
 
 ## [0.0.3] - 2019-02-05
 

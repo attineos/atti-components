@@ -12,12 +12,16 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 - New theme `Attineos` was added by [@Whargal](https://github.com/Whargal)
 - New `ResetCSS` component was added [@Atrakeur](https://github.com/atrakeur)
+- Added support for custom renderers into Breadcrumb [@Atrakeur](https://github.com/atrakeur)
+- Added support for custom renderers into Menu [@Atrakeur](https://github.com/atrakeur)
 
 ### Changed
 
 - **Breaking Change**: Theme name and import was changed [@Atrakeur](https://www.atrakeur.com)
 - ResetCSS can be removed from ThemeProvider with the `suppressResetCss` prop [@Atrakeur](https://www.atrakeur.com)
-- Added support for custom renderers into Breadcrumb [@Atrakeur](https://github.com/atrakeur)
+- **Breaking Change**: Menu component now expect item to be passed as an `elements` prop instead of a `values` prop [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Default menu item renderer now expect an `url` prop instead of `href` [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Default menu item renderer now expect a `name` prop instead of `text` [@Atrakeur](https://www.atrakeur.com)
 
 ## [0.0.3] - 2019-02-05
 

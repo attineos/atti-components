@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import getFontStyle from 'helpers/Typography/getFontStyle'
-import resetCSS from 'helpers/resetCSS'
+import { resetCSS } from 'helpers'
 
 /**
  * Header4.

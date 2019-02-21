@@ -21,7 +21,6 @@ const StyledOption = styled(Text.withComponent('p'))`
   ${borders};
   ${colors};
 
-  margin: 0;
   padding: ${({ theme }) => theme.components.option.spaces.padding};
   font-family: ${({ theme }) => theme.fonts.fontFamily.primary};
   cursor: pointer;

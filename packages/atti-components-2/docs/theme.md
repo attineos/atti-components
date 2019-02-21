@@ -603,6 +603,12 @@
       sizes: {
         heights: "18px",
         widths: "18px"
+      },
+      margins: {
+        top: "2px",
+        bottom: "2px",
+        left: "4px",
+        right: "4px"
       }
     }
   },

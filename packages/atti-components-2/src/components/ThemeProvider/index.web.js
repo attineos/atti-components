@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider as StyledThemeProvider, withTheme } from 'styled-components'
-import ResetCSS from '../ResetCSS'
+import ResetCSS from './styles/ResetCSS'
 
 import constructTheme from './helpers/constructTheme'
 
@@ -22,17 +22,11 @@ class ThemeProvider extends React.Component {
      * The overload can be constants, or functions taking the constant part of the theme as parameter.
      */
     theme: PropTypes.object,
-    /**
-     * Do not inject the ResetCSS code.
-     * This code is needed because browser add some base CSS to some elements, and we just want to clear it
-     */
-    suppressResetCss: PropTypes.bool,
   }
 
   static defaultProps = {
     otherTheme: {},
     theme: {},
-    suppressResetCss: false,
   }
 
   state = {
@@ -44,13 +38,13 @@ class ThemeProvider extends React.Component {
   }
 
   render() {
-    const { children, theme: propTheme, suppressResetCss } = this.props
+    const { children, theme: propTheme } = this.props
     const { theme } = this.state
 
     return (
       <StyledThemeProvider theme={theme || propTheme}>
         <span className="atti-box">
-          {!suppressResetCss && <ResetCSS suppressMultiMountWarning />}
+          <ResetCSS suppressMultiMountWarning />
           {children}
         </span>
       </StyledThemeProvider>

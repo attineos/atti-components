@@ -1,3 +1,5 @@
+**Please note that this component should be the first component imported in your project ! Otherwise the style may be broken.**
+
 Theme declaration :
 
 ```js

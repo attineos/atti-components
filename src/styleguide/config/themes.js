@@ -1,8 +1,8 @@
-import { defaultTheme, attineosTheme, testTheme } from '../../themes'
+import { defaultTheme, attineosTheme, greenyBlueTheme } from '../../themes'
 
 const themes = {
   default: defaultTheme,
   attineos: attineosTheme,
-  test: testTheme,
+  greenyBlueTheme: greenyBlueTheme,
 }
 export default themes

@@ -18,7 +18,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 ### Changed
 
-- **Breaking Change**: Theme name and import was changed [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Theme name and import was changed from `theme` to `defaultTheme` [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Menu component now expect item to be passed as an `elements` prop instead of a `values` prop [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Default menu item renderer now expect an `url` prop instead of `href` [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Default menu item renderer now expect a `name` prop instead of `text` [@Atrakeur](https://www.atrakeur.com)

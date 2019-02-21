@@ -1,4 +1,4 @@
-const testTheme = {
+const greenyBlueTheme = {
   colors: {
     lightPrimary: '#00b4f1',
     primary: '#00a5e1',
@@ -14,4 +14,4 @@ const testTheme = {
   },
 }
 
-export default testTheme
+export default greenyBlueTheme

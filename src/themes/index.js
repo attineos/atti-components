@@ -1,3 +1,3 @@
 export defaultTheme from './defaultTheme'
 export attineosTheme from './attineosTheme'
-export testTheme from './testTheme'
+export greenyBlueTheme from './greenyBlueTheme'

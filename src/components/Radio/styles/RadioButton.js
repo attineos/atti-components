@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import getSpacesAsCss from 'helpers/getSpacesAsCss'
+import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
 
 const borders = css`
   border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};

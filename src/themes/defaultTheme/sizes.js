@@ -33,6 +33,11 @@ const sizes = {
     h27: '110px',
     h28: '120px',
     h29: '130px',
+
+    quarter: '25%',
+    halt: '50%',
+    threeQuarter: '75%',
+    full: '100%',
   },
   widths: {
     w0: '0px',
@@ -65,6 +70,11 @@ const sizes = {
     w27: '110px',
     w28: '120px',
     w29: '130px',
+
+    quarter: '25%',
+    halt: '50%',
+    threeQuarter: '75%',
+    full: '100%',
   },
 }
 

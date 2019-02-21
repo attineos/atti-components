@@ -14,6 +14,9 @@ const colors = css`
 
 const sizes = css`
   min-height: ${({ theme }) => theme.components.input.input.sizes.minHeight};
+
+  height: ${({ theme }) => theme.components.input.input.sizes.height};
+  width: ${({ theme }) => theme.components.input.input.sizes.width};
 `
 
 const spaces = css`

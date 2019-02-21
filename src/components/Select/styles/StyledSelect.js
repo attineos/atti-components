@@ -69,6 +69,9 @@ const colors = css`
 
 const sizes = css`
   min-height: ${({ theme }) => theme.components.select.select.sizes.minHeight};
+
+  height: ${({ theme }) => theme.components.select.select.sizes.height};
+  width: ${({ theme }) => theme.components.select.select.sizes.width};
 `
 
 const StyledSelect = styled(Text.withComponent('select'))`

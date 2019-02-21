@@ -1,4 +1,4 @@
-export default ({ forms, spaces }) => ({
+export default ({ forms, spaces, sizes }) => ({
   input: {
     borders: {
       radius: forms.borders.radius,
@@ -16,6 +16,7 @@ export default ({ forms, spaces }) => ({
     },
     sizes: {
       minHeight: forms.sizes.minHeight,
+      width: sizes.widths.full,
     },
     spaces: {
       paddingHeight: spaces.s4,

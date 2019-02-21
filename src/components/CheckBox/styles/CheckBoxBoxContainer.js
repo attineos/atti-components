@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import getSpacesAsCss from 'helpers/getSpacesAsCss'
+import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
 import CheckBoxBox from './CheckBoxBox'
 import HiddenInputCheckBox from './HiddenInputCheckBox'
 

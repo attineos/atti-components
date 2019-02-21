@@ -15,8 +15,8 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
     hover: opacities.o8,
   },
   spaces: {
-    paddingHeight: spaces.s3,
-    paddingWidth: spaces.s7,
+    paddingHeight: spaces.s6,
+    paddingWidth: spaces.s10,
   },
 
   textAlign: 'center',

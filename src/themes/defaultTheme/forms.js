@@ -21,7 +21,7 @@ const forms = {
     text: colors.steel,
   },
   sizes: {
-    minHeight: sizes.heights.h15,
+    minHeight: sizes.heights.h16,
   },
 }
 

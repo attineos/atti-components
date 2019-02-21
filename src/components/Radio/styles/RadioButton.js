@@ -19,10 +19,10 @@ const RadioButton = styled.span`
   justify-content: center;
 
   margin: ${({ theme }) => `
-    ${theme.components.radio.radioButton.margins.top}
-    ${theme.components.radio.radioButton.margins.right}
-    ${theme.components.radio.radioButton.margins.bottom}
-    ${theme.components.radio.radioButton.margins.left}
+    ${theme.components.radio.radioButton.spaces.top}
+    ${theme.components.radio.radioButton.spaces.right}
+    ${theme.components.radio.radioButton.spaces.bottom}
+    ${theme.components.radio.radioButton.spaces.left}
   `};
 
   // Use of a circle in the radio when it's checked.

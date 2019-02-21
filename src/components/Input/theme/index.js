@@ -18,6 +18,7 @@ export default ({ forms, spaces }) => ({
       minHeight: forms.sizes.minHeight,
     },
     spaces: {
+      paddingHeight: spaces.s4,
       paddingWidth: spaces.s5,
     },
   },

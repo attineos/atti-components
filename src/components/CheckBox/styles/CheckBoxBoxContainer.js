@@ -6,7 +6,14 @@ import HiddenInputCheckBox from './HiddenInputCheckBox'
 const CheckBoxBoxContainer = styled.span`
   position: relative;
   display: inline-block;
-  margin-right: ${({ theme }) => theme.components.checkBox.checkBoxBox.spaces.marginRight};
+
+  margin: ${({ theme }) => `
+    ${theme.components.checkBox.checkBoxBox.spaces.top}
+    ${theme.components.checkBox.checkBoxBox.spaces.right}
+    ${theme.components.checkBox.checkBoxBox.spaces.bottom}
+    ${theme.components.checkBox.checkBoxBox.spaces.left}
+  `};
+
   line-height: ${({ theme }) => theme.components.checkBox.checkBoxBox.sizes.height};
   height: ${({ theme }) => theme.components.checkBox.checkBoxBox.sizes.height};
   width: ${({ theme }) => theme.components.checkBox.checkBoxBox.sizes.width};

@@ -1,7 +1,7 @@
 export default ({ colors, sizes, spaces }) => ({
   link: {
     colors: {
-      backgroundHover: colors.snow,
+      backgroundHover: colors.secondary,
       text: colors.snow,
       textHover: colors.slate,
     },
@@ -14,7 +14,7 @@ export default ({ colors, sizes, spaces }) => ({
       background: colors.slate,
     },
     sizes: {
-      minHeight: sizes.heights.h17,
+      minHeight: sizes.heights.h21,
     },
   },
 })

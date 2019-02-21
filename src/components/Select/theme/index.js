@@ -22,9 +22,9 @@ export default ({ colors, forms, sizes, spaces }) => ({
       separatorWidth: sizes.widths.w1,
     },
     spaces: {
-      paddingHeight: spaces.s4,
-      paddingLeft: spaces.s5,
-      paddingRight: spaces.s11,
+      paddingHeight: spaces.s5,
+      paddingLeft: spaces.s6,
+      paddingRight: spaces.s13,
     },
   },
 })

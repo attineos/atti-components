@@ -17,7 +17,10 @@ const sizes = css`
 `
 
 const spaces = css`
-  padding: 0 ${({ theme }) => theme.components.input.input.spaces.paddingWidth};
+  padding: ${({ theme }) => theme.components.input.input.spaces.paddingHeight}
+    ${({ theme }) => theme.components.input.input.spaces.paddingWidth}
+    ${({ theme }) => theme.components.input.input.spaces.paddingHeight}
+    ${({ theme }) => theme.components.input.input.spaces.paddingWidth};
 `
 
 const StyledInput = styled(Text.withComponent('input'))`

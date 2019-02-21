@@ -1,7 +1,7 @@
 // @noSnapshot
 import styled, { css } from 'styled-components'
 
-import resetCSS from 'helpers/resetCSS'
+import { resetCSS } from 'helpers'
 
 const backgroundImage = ({ bgSrc }) =>
   bgSrc

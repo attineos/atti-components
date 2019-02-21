@@ -124,10 +124,6 @@ module.exports = {
         {
           name: 'CSS Helpers',
           content: 'src/helpers/readme.md',
-        },
-        {
-          name: 'CSS Reset',
-          content: 'src/components/ResetCSS/readme.md',
         }
       ]
     }

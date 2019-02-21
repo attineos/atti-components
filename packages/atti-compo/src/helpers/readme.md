@@ -101,3 +101,18 @@ import { widths } from 'atti-components/helpers'
 | maxW     | [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp) | A value from `theme.sizes.width`<br>Any other valid value |
 | minW     | [min-width](https://www.w3schools.com/cssref/pr_dim_min-width.asp) | A value from `theme.sizes.width`<br>Any other valid value |
 | w        | [width](https://www.w3schools.com/cssref/pr_dim_width.asp)         | A value from `theme.sizes.width`<br>Any other valid value |
+
+### resetCSS
+
+Browsers inject some styles by default, usually an application want to disable that style to enable consistent styling across all browsers.
+
+With atti-components, you can inject a class in your styled-component that will reset the default style created by the browser.
+
+```
+import { resetCSS } from 'atti-components/helpers'
+
+const MyComponent = styled.p.attrs(resetCSS)`
+  // Your style
+`
+
+```

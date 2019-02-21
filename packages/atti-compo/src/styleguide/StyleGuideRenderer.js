@@ -10,8 +10,8 @@ import Ribbon from 'rsg-components/Ribbon'
 import Styled from 'rsg-components/Styled'
 import Version from 'rsg-components/Version'
 
-import ThemeSelector from './ThemeSelector'
 import ThemeProvider from '../components/ThemeProvider'
+import ThemeSelector from './ThemeSelector'
 import { defaultTheme } from '../themes'
 
 import { getWrappersToUpdate } from './Wrapper'
@@ -105,7 +105,7 @@ class StyleGuideRenderer extends React.Component {
     const { children, classes, hasSidebar, homepageUrl, title, toc, version } = this.props
 
     return (
-      <ThemeProvider theme={defaultTheme} suppressResetCss>
+      <ThemeProvider theme={defaultTheme}>
         <div
           className={cx(classes.root, hasSidebar && classes.hasSidebar)}
           style={{ backgroundColor: defaultTheme['primary'] }}

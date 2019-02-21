@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import getSpacesAsCss from 'helpers/getSpacesAsCss'
 import CheckBoxBox from './CheckBoxBox'
 import HiddenInputCheckBox from './HiddenInputCheckBox'
 
@@ -7,12 +8,7 @@ const CheckBoxBoxContainer = styled.span`
   position: relative;
   display: inline-block;
 
-  margin: ${({ theme }) => `
-    ${theme.components.checkBox.checkBoxBox.spaces.top}
-    ${theme.components.checkBox.checkBoxBox.spaces.right}
-    ${theme.components.checkBox.checkBoxBox.spaces.bottom}
-    ${theme.components.checkBox.checkBoxBox.spaces.left}
-  `};
+  margin: ${({ theme }) => getSpacesAsCss(theme.components.checkBox.checkBoxBox.spaces)};
 
   line-height: ${({ theme }) => theme.components.checkBox.checkBoxBox.sizes.height};
   height: ${({ theme }) => theme.components.checkBox.checkBoxBox.sizes.height};

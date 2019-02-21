@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import getSpacesAsCss from 'helpers/getSpacesAsCss'
+
 const borders = css`
   border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
   border: ${({ theme }) => theme.components.radio.radioButton.borders.width} solid
@@ -18,12 +20,7 @@ const RadioButton = styled.span`
   align-items: center;
   justify-content: center;
 
-  margin: ${({ theme }) => `
-    ${theme.components.radio.radioButton.spaces.top}
-    ${theme.components.radio.radioButton.spaces.right}
-    ${theme.components.radio.radioButton.spaces.bottom}
-    ${theme.components.radio.radioButton.spaces.left}
-  `};
+  margin: ${({ theme }) => getSpacesAsCss(theme.components.radio.radioButton.spaces)};
 
   // Use of a circle in the radio when it's checked.
   &:after {

@@ -1,4 +1,5 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -6,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Please beware that all version pre 1.0.0 can have major and breaking changes in undocumented features.
 
-## [Unreleased]
+## [0.1.0] - Unreleased
 
 ### Added
 
@@ -17,10 +18,16 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 ### Changed
 
-- **Breaking Change**: Theme name and import was changed [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Theme name and import was changed from `theme` to `defaultTheme` [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Menu component now expect item to be passed as an `elements` prop instead of a `values` prop [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Default menu item renderer now expect an `url` prop instead of `href` [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Default menu item renderer now expect a `name` prop instead of `text` [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Changed numerous values from default theme for a better overall look [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Changed CheckBox `spaces` theme format [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Changed Input `spaces` theme format [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Changed FileInput theme format to be the same as Button [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Renamed Radio's theme `margins` to `spaces` [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Removed `sort` option from Select [@Atrakeur](https://www.atrakeur.com)
 
 ## [0.0.3] - 2019-02-05
 

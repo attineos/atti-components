@@ -1,13 +1,23 @@
-export default ({ colors, fonts, spaces }) => ({
+export default ({ borders, colors, forms, opacities, spaces }) => ({
+  borders: {
+    borderWidth: borders.widths.bw0,
+    borderRadius: borders.radius.br3,
+  },
   colors: {
-    text: colors.darkSnow,
-    background: colors.secondary,
+    background: colors.primary,
+    border: colors.transparent,
+    text: colors.white,
+  },
+  forms: {
+    minHeight: forms.sizes.minHeight,
+  },
+  opacities: {
+    hover: opacities.o8,
   },
   spaces: {
-    paddingTopBottom: spaces.s4,
-    paddingLeftRight: spaces.s11,
+    paddingHeight: spaces.s6,
+    paddingWidth: spaces.s10,
   },
-  fonts: {
-    fontFamily: fonts.fontFamily.primary,
-  },
+
+  textAlign: 'center',
 })

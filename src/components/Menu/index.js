@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 import { isNull, map, isFunction, isUndefined } from 'lodash'
-import chain from 'helpers/chain'
+import chain from 'helpers/generators/chain'
 import Item from './styles/Item'
 import ItemLink from './styles/ItemLink'
 import ItemsList from './styles/ItemsList'

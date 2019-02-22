@@ -20,11 +20,14 @@ export default ({ colors, forms, sizes, spaces }) => ({
       arrowWidth: '10px',
       minHeight: forms.sizes.minHeight,
       separatorWidth: sizes.widths.w1,
+      width: sizes.widths.full,
     },
     spaces: {
-      paddingHeight: spaces.s4,
-      paddingLeft: spaces.s5,
-      paddingRight: spaces.s11,
+      paddingHeight: spaces.s5,
+      paddingTop: spaces.s5,
+      paddingLeft: spaces.s6,
+      paddingBottom: spaces.s5,
+      paddingRight: spaces.s13,
     },
   },
 })

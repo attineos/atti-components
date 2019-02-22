@@ -16,10 +16,16 @@ const spaces = css`
   padding: ${({ theme }) => theme.components.textarea.textarea.spaces.padding};
 `
 
+const sizes = css`
+  height: ${({ theme }) => theme.components.textarea.textarea.sizes.height};
+  width: ${({ theme }) => theme.components.textarea.textarea.sizes.width};
+`
+
 const StyledTextArea = styled(Text.withComponent('textarea'))`
   ${borders};
   ${colors};
   ${spaces};
+  ${sizes};
 
   ::placeholder {
     color: ${({ theme }) => theme.components.textarea.textarea.colors.placeholder};

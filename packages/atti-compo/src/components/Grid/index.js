@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { join, map, range } from 'lodash'
 
-import wrapMediaQuery from 'helpers/wrapMediaQuery'
+import wrapMediaQuery from 'helpers/generators/wrapMediaQuery'
 
 import Container from '../Container'
 

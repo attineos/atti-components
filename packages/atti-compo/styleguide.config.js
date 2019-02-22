@@ -48,6 +48,10 @@ module.exports = {
           content: 'docs/theme.md',
         },
         {
+          name: 'Demo',
+          content: 'docs/demo.md',
+        },
+        {
           name: 'Colors',
           content: 'docs/colors.md',
         },

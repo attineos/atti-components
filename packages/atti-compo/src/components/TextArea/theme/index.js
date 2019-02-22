@@ -1,4 +1,4 @@
-export default ({ forms, spaces }) => ({
+export default ({ forms, spaces, sizes }) => ({
   textarea: {
     borders: {
       radius: forms.borders.radius,
@@ -16,6 +16,10 @@ export default ({ forms, spaces }) => ({
     },
     spaces: {
       padding: spaces.s5,
+    },
+    sizes: {
+      height: sizes.heights.full,
+      width: sizes.widths.full,
     },
   },
 })

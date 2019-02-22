@@ -14,13 +14,21 @@ const colors = css`
 
 const sizes = css`
   min-height: ${({ theme }) => theme.components.input.input.sizes.minHeight};
+
+  height: ${({ theme }) => theme.components.input.input.sizes.height};
+  width: ${({ theme }) => theme.components.input.input.sizes.width};
 `
 
 const spaces = css`
-  padding: 0 ${({ theme }) => theme.components.input.input.spaces.paddingWidth};
+  padding: ${({ theme }) => theme.components.input.input.spaces.paddingHeight}
+    ${({ theme }) => theme.components.input.input.spaces.paddingWidth}
+    ${({ theme }) => theme.components.input.input.spaces.paddingHeight}
+    ${({ theme }) => theme.components.input.input.spaces.paddingWidth};
 `
 
 const StyledInput = styled(Text.withComponent('input'))`
+  box-sizing: content-box;
+
   ${borders};
   ${colors};
   ${sizes};

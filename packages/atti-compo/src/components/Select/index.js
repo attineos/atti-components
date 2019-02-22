@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { map, isString } from 'lodash'
 
-import Sort from './types/sort'
 import StyledSelect from './styles/StyledSelect'
 
 /**
@@ -20,14 +19,11 @@ class Select extends PureComponent {
       onChange,
       options,
       size,
-      sort,
       value,
       defaultValue,
     } = this.props
 
-    const optionsSorted =
-      sort === Sort.ASC ? options.sort() : sort === Sort.DESC ? options.sort().reverse() : options
-    const optionsElements = map(optionsSorted, elt => {
+    const optionsElements = map(options, elt => {
       const value = isString(elt) ? elt : elt.id || elt.name
       const key = isString(elt) ? elt : elt.id || elt.name
       const name = isString(elt) ? elt : elt.name || elt.id
@@ -62,7 +58,6 @@ Select.defaultProps = {
   name: '',
   onChange: null,
   size: 0,
-  sort: Sort.NONE,
   value: null,
   defaultValue: null,
 }
@@ -96,10 +91,6 @@ Select.propTypes = {
    * Number of elements displayed.
    */
   size: PropTypes.number,
-  /**
-   * The sort to apply (ASC, DESC or NONE).
-   */
-  sort: PropTypes.oneOf([Sort.ASC, Sort.DESC, Sort.NONE]),
   /**
    * The value to use as a controlled component
    */

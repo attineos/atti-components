@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { isNull, map, isFunction, isUndefined } from 'lodash'
-import chain from 'helpers/chain'
+import chain from 'helpers/generators/chain'
 
 import { ElementsType } from './types'
 import BreadcrumbElement from './components/BreadcrumbElement'

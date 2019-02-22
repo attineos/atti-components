@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
 import Text from '../../Text'
 
 const borders = css`
@@ -51,7 +52,7 @@ const colors = css`
       calc(
         100% - calc(75 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100)
       )
-      ${({ theme }) => theme.components.select.select.spaces.paddingHeight};
+      ${({ theme }) => theme.components.select.select.spaces.paddingTop};
 
   background-size: ${({ theme }) => theme.components.select.select.sizes.arrowHeight}
       calc(${({ theme }) => theme.components.select.select.sizes.arrowWidth} / 2),
@@ -60,7 +61,7 @@ const colors = css`
     /* Separator
       height = select height - 2 * select vertical padding */
       ${({ theme }) => theme.components.select.select.sizes.separatorWidth}
-      calc(100% - calc(2 * ${({ theme }) => theme.components.select.select.spaces.paddingHeight}));
+      calc(100% - calc(2 * ${({ theme }) => theme.components.select.select.spaces.paddingBottom}));
 
   background-size: ${({ multiple }) => (multiple ? '0' : '')};
   background-repeat: no-repeat;
@@ -79,11 +80,8 @@ const StyledSelect = styled(Text.withComponent('select'))`
   ${colors};
   ${sizes};
 
-  padding: ${({ theme }) => theme.components.select.select.spaces.paddingHeight}
-    ${({ theme }) => theme.components.select.select.spaces.paddingRight}
-    ${({ theme }) => theme.components.select.select.spaces.paddingHeight}
-    ${({ theme }) => theme.components.select.select.spaces.paddingLeft};
   position: relative;
+  padding: ${({ theme }) => getSpacesAsCss(theme.components.select.select.spaces, 'padding')};
 
   // Remove default OS appearance
   appearance: none;

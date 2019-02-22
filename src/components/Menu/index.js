@@ -27,8 +27,8 @@ class Menu extends PureComponent {
       () => (renderElement && isFunction(renderElement) ? renderElement(element) : null),
       // Least precise, neither other function returned something, we default to some hand made rendering
       () => (
-        <Item key={element.url}>
-          <ItemLink href={element.url} target={element.target}>
+        <Item key={element.name}>
+          <ItemLink href={element.url} target={element.target} onClick={element.onClick}>
             {element.name}
           </ItemLink>
         </Item>

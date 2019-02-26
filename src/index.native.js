@@ -1,5 +1,5 @@
 import Button from './components/Button'
-import Text from './components/Text/index.native.js'
+import { Text } from './components/Typography'
 import ThemeProvider from './components/ThemeProvider'
 
 import { defaultTheme } from './themes'

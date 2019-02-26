@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header4 renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <h4
+      className="Header4-sc-1ydn4l9-0 atti-r-css  dCjQni"
+    >
+      <div />
+    </h4>
+  </span>
+</span>
+`;

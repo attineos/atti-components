@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import BigText from '../../BigText'
+import { BigText } from '../../Typography'
 
 const borders = css`
   border: ${({ theme, type }) =>

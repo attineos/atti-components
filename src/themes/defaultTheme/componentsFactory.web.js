@@ -1,18 +1,12 @@
 import alert from '../../components/Alert/theme'
 import avatar from '../../components/Avatar/theme'
 import badge from '../../components/Badge/theme'
-import bigText from '../../components/BigText/theme'
 import breadcrumb from '../../components/Breadcrumb/theme'
 import button from '../../components/Button/theme'
 import checkBox from '../../components/CheckBox/theme'
-import header1 from '../../components/Header1/theme'
-import header2 from '../../components/Header2/theme'
-import header3 from '../../components/Header3/theme'
-import header4 from '../../components/Header4/theme'
 import image from '../../components/Image/theme'
 import input from '../../components/Input/theme'
 import inputFile from '../../components/InputFile/theme'
-import label from '../../components/Label/theme'
 import link from '../../components/Link/theme'
 import loader from '../../components/Loader/theme'
 import menu from '../../components/Menu/theme'
@@ -21,9 +15,18 @@ import optionPanel from '../../components/OptionPanel/theme'
 import progressBar from '../../components/ProgressBar/theme'
 import radio from '../../components/Radio/theme'
 import select from '../../components/Select/theme'
-import smallText from '../../components/SmallText/theme'
-import text from '../../components/Text/theme'
 import textarea from '../../components/TextArea/theme'
+
+import {
+  bigText,
+  header1,
+  header2,
+  header3,
+  header4,
+  label,
+  smallText,
+  text,
+} from '../../components/Typography/theme'
 
 export default constants => ({
   alert: alert(constants),

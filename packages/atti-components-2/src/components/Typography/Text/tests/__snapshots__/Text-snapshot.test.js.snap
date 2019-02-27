@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <p
+      className="Text-sc-187vq02-0 atti-r-css  bcoxVd"
+    >
+      <div />
+    </p>
+  </span>
+</span>
+`;

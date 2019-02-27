@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
-import Text from '../../Text'
+import { Text } from '../../Typography'
 
 const borders = css`
   border: ${({ theme }) => theme.components.select.select.borders.width} solid

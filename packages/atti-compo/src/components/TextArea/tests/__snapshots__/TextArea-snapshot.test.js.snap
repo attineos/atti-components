@@ -8,7 +8,7 @@ exports[`TextArea renders correctly 1`] = `
     className="atti-box"
   >
     <textarea
-      className="Text-o3or1r-0-textarea Atticomponents TextArea-sc-1j7164a-0 fJQxaA StyledTextArea-sc-1ciexer-0 atti-r-css Atticomponents TextArea-sc-1j7164a-0 fJQxaA cBsaHu"
+      className="Text-sc-187vq02-0-textarea Atticomponents TextArea-sc-1j7164a-0 fJQxaA StyledTextArea-sc-1ciexer-0 atti-r-css Atticomponents TextArea-sc-1j7164a-0 fJQxaA cBsaHu"
       id="Atticomponents"
       name="Atticomponents"
       placeholder="Atticomponents"

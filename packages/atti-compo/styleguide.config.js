@@ -102,14 +102,14 @@ module.exports = {
     }, {
       name: 'Typography',
       components: [
-        'src/components/BigText/index.js',
-        'src/components/Header1/index.js',
-        'src/components/Header2/index.js',
-        'src/components/Header3/index.js',
-        'src/components/Header4/index.js',
-        'src/components/Label/index.js',
-        'src/components/SmallText/index.js',
-        'src/components/Text/index.js',
+        'src/components/Typography/BigText/index.js',
+        'src/components/Typography/Header1/index.js',
+        'src/components/Typography/Header2/index.js',
+        'src/components/Typography/Header3/index.js',
+        'src/components/Typography/Header4/index.js',
+        'src/components/Typography/Label/index.js',
+        'src/components/Typography/SmallText/index.js',
+        'src/components/Typography/Text/index.js',
       ],
     }, {
       name: 'Providers',

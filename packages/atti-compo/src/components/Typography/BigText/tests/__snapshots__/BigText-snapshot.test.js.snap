@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BigText renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <p
+      className="BigText-k0f7ck-0 atti-r-css  hebxUL"
+    >
+      <div />
+    </p>
+  </span>
+</span>
+`;

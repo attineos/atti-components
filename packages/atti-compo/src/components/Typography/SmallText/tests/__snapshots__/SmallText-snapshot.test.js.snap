@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmallText renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <p
+      className="SmallText-bmtkwj-0 atti-r-css  joGpkx"
+    >
+      <div />
+    </p>
+  </span>
+</span>
+`;

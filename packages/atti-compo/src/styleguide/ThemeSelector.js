@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { map, get } from 'lodash'
 
 import Select from '../components/Select'
-import Label from '../components/Label'
+import { Label } from '../components/Typography'
 
 import themes from './config/themes'
 import Cookies from './helpers/Cookies'

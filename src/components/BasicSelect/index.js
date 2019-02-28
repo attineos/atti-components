@@ -9,7 +9,7 @@ import StyledSelect from './styles/StyledSelect'
  * A select field.
  *
  */
-class Select extends PureComponent {
+class BasicSelect extends PureComponent {
   render() {
     const {
       className,
@@ -24,8 +24,8 @@ class Select extends PureComponent {
     } = this.props
 
     const optionsElements = map(options, elt => {
-      const value = isString(elt) ? elt : elt.id || elt.name
       const key = isString(elt) ? elt : elt.id || elt.name
+      const value = elt
       const name = isString(elt) ? elt : elt.name || elt.id
 
       return (
@@ -52,7 +52,7 @@ class Select extends PureComponent {
   }
 }
 
-Select.defaultProps = {
+BasicSelect.defaultProps = {
   className: '',
   isMulti: false,
   name: '',
@@ -62,7 +62,7 @@ Select.defaultProps = {
   defaultValue: null,
 }
 
-Select.propTypes = {
+BasicSelect.propTypes = {
   /**
    * The classes of the select.
    */
@@ -102,4 +102,4 @@ Select.propTypes = {
 }
 
 /** @component */
-export default styled(Select)``
+export default styled(BasicSelect)``

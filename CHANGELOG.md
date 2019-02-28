@@ -15,6 +15,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - Export the `resetCSS` helper by [@akaala](https://github.com/akaala)
 - Added support for custom renderers into Breadcrumb [@Atrakeur](https://github.com/atrakeur)
 - Added support for custom renderers into Menu [@Atrakeur](https://github.com/atrakeur)
+- Added AdvancedSelect based on react-select [@Atrakeur](https://github.com/atrakeur)D
 
 ### Changed
 
@@ -28,6 +29,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - **Breaking Change**: Changed FileInput theme format to be the same as Button [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Renamed Radio's theme `margins` to `spaces` [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Removed `sort` option from Select [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: Renamed `Select` to `BasicSelect` [@Atrakeur](https://www.atrakeur.com)
 
 ## [0.0.3] - 2019-02-05
 

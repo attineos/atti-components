@@ -65,6 +65,7 @@
     "prompts": "^2.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-select": "2.4.1",
     "react-styleguidist": "^8.0.6",
     "react-test-renderer": "^16.4.2",
     "remark": "^9.0.0",

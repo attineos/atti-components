@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { map, get } from 'lodash'
 
-import Select from '../components/Select'
+import Select from '../components/BasicSelect'
 import Label from '../components/Label'
 
 import themes from './config/themes'

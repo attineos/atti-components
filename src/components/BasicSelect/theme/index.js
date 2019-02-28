@@ -1,5 +1,5 @@
 export default ({ colors, forms, sizes, spaces }) => ({
-  select: {
+  basicSelect: {
     borders: {
       radius: forms.borders.radius,
       width: forms.borders.width,

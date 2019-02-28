@@ -1,8 +1,10 @@
 import ThemeProvider from './components/ThemeProvider'
 
+import AdvancedSelect from './components/AdvancedSelect'
 import Alert from './components/Alert'
 import Avatar from './components/Avatar'
 import Badge from './components/Badge'
+import BasicSelect from './components/BasicSelect'
 import BigText from './components/BigText'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
@@ -25,7 +27,6 @@ import Option from './components/Option'
 import OptionPanel from './components/OptionPanel'
 import ProgressBar from './components/ProgressBar'
 import Radio from './components/Radio'
-import Select from './components/Select'
 import SmallText from './components/SmallText'
 import Text from './components/Text'
 import TextArea from './components/TextArea'
@@ -35,9 +36,11 @@ import { defaultTheme, attineosTheme } from './themes'
 module.exports = {
   ThemeProvider,
 
+  AdvancedSelect,
   Alert,
   Avatar,
   Badge,
+  BasicSelect,
   BigText,
   Breadcrumb,
   Button,
@@ -60,7 +63,6 @@ module.exports = {
   OptionPanel,
   ProgressBar,
   Radio,
-  Select,
   SmallText,
   Text,
   TextArea,

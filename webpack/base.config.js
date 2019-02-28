@@ -31,5 +31,7 @@ export default {
     'react-dom': 'commonjs react-dom',
     'react-native': 'commonjs react-native',
     'styled-components': 'commonjs styled-components',
+    'react-select': 'commonjs react-select',
+    'lodash': 'commonjs lodash',
   }
 }

@@ -15,6 +15,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - Export the `resetCSS` helper by [@akaala](https://github.com/akaala)
 - Added support for custom renderers into Breadcrumb [@Atrakeur](https://github.com/atrakeur)
 - Added support for custom renderers into Menu [@Atrakeur](https://github.com/atrakeur)
+- Added Table component [@Atrakeur](https://github.com/atrakeur)
 
 ### Changed
 

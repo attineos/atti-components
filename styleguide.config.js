@@ -72,6 +72,11 @@ module.exports = {
         'src/components/TextArea/index.js',
       ],
     }, {
+      name: 'Table',
+      components: [
+        'src/components/Table/index.js',
+      ],
+    }, {
       name: 'Graphics',
       components: [
         'src/components/Image/index.js',

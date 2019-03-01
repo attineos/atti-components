@@ -53,6 +53,7 @@ export default constants => ({
   radio: radio(constants),
   select: select(constants),
   smallText: smallText(constants),
+  table: table(constants),
   text: text(constants),
   textarea: textarea(constants),
 })

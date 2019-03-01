@@ -58,12 +58,12 @@
     <Select id="single" options={['less than 1 year', 'Between 1 and 3 years', 'More than 3 years']} />
   </Cell>
   <Cell cols={[[1, 6], [1, 6], [8, 12]]}>
-    <BigText>
+    <Text lh="form">
       Let's try some features
       <Badge exponent={true} type="info">
         NEW!
       </Badge>
-    </BigText>
+    </Text>
   </Cell>
   <Cell cols={[[1, 6], [1, 6], [1, 12]]}>
     <Table

@@ -1,4 +1,4 @@
-export default ({ borders, colors }) => ({
+export default ({ borders, colors, spaces }) => ({
   borders: {
     borderWidth: borders.widths.bw2,
     borderRadius: borders.radius.br3,
@@ -10,8 +10,8 @@ export default ({ borders, colors }) => ({
     headerText: colors.slate,
   },
   spaces: {
-    headerHeight: '40px',
-    lineHeight: '60px',
-    firstChildLeftSpacing: '20px',
+    headerHeight: spaces.s13,
+    lineHeight: spaces.s16,
+    firstChildLeftSpacing: spaces.s9,
   },
 })

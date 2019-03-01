@@ -16,6 +16,7 @@ import optionPanel from '../../components/OptionPanel/theme'
 import progressBar from '../../components/ProgressBar/theme'
 import radio from '../../components/Radio/theme'
 import select from '../../components/Select/theme'
+import table from '../../components/Table/theme'
 import textarea from '../../components/TextArea/theme'
 
 import {

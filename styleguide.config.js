@@ -63,6 +63,7 @@ module.exports = {
     }, {
       name: 'Forms',
       components: [
+        'src/components/Typography/FormText/index.js',
         'src/components/Button/index.js',
         'src/components/ButtonGroup/index.js',
         'src/components/CheckBox/index.js',
@@ -116,6 +117,7 @@ module.exports = {
         'src/components/Typography/Label/index.js',
         'src/components/Typography/SmallText/index.js',
         'src/components/Typography/Text/index.js',
+        'src/components/Typography/FormText/index.js',
       ],
     }, {
       name: 'Providers',

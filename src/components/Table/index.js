@@ -11,25 +11,25 @@ class Table extends PureComponent {
   render() {
     const {
       className,
-      renderTable,
-      renderHeaderLine,
-      renderLine,
-      renderHeaderCell,
-      renderCell,
       cols,
       elements,
+      renderCell,
+      renderHeaderLine,
+      renderHeaderCell,
+      renderLine,
+      renderTable,
     } = this.props
 
     return (
       <TableFacade
         className={className}
-        renderTable={renderTable}
-        renderHeaderLine={renderHeaderLine}
-        renderLine={renderLine}
-        renderHeaderCell={renderHeaderCell}
-        renderCell={renderCell}
         cols={cols}
         elements={elements}
+        renderCell={renderCell}
+        renderHeaderLine={renderHeaderLine}
+        renderHeaderCell={renderHeaderCell}
+        renderLine={renderLine}
+        renderTable={renderTable}
       />
     )
   }
@@ -37,11 +37,11 @@ class Table extends PureComponent {
 
 Table.defaultProps = {
   className: '',
-  renderTable: null,
-  renderHeaderLine: null,
-  renderLine: null,
-  renderHeaderCell: null,
   renderCell: null,
+  renderLine: null,
+  renderHeaderLine: null,
+  renderHeaderCell: null,
+  renderTable: null,
 }
 
 Table.propTypes = {
@@ -63,9 +63,13 @@ Table.propTypes = {
    */
   elements: PropTypes.arrayOf(PropTypes.any).isRequired,
   /**
-   *  Define the component used to render the table element, accept a children params
+   *  Define the component used to render each table cells, accept a children params
    */
-  renderTable: PropTypes.func,
+  renderCell: PropTypes.func,
+  /**
+   *  Define the component used to render each table's headers cells, accept a children params
+   */
+  renderHeaderCell: PropTypes.func,
   /**
    *  Define the component used to render the table's header line, accept a children params
    */
@@ -75,13 +79,9 @@ Table.propTypes = {
    */
   renderLine: PropTypes.func,
   /**
-   *  Define the component used to render each table's headers cells, accept a children params
+   *  Define the component used to render the table element, accept a children params
    */
-  renderHeaderCell: PropTypes.func,
-  /**
-   *  Define the component used to render each table cells, accept a children params
-   */
-  renderCell: PropTypes.func,
+  renderTable: PropTypes.func,
 }
 
 /** @component */

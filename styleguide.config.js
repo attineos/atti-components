@@ -64,6 +64,7 @@ module.exports = {
       name: 'Forms',
       components: [
         'src/components/Button/index.js',
+        'src/components/ButtonGroup/index.js',
         'src/components/CheckBox/index.js',
         'src/components/Input/index.js',
         'src/components/InputFile/index.js',

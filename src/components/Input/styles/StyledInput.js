@@ -27,8 +27,6 @@ const spaces = css`
 `
 
 const StyledInput = styled(Text.withComponent('input'))`
-  box-sizing: content-box;
-
   ${borders};
   ${colors};
   ${sizes};

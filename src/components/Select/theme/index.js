@@ -26,7 +26,7 @@ export default ({ colors, forms, sizes, spaces }) => ({
       paddingHeight: spaces.s5,
       paddingTop: spaces.s5,
       paddingLeft: spaces.s6,
-      paddingBottom: spaces.s5,
+      paddingBottom: spaces.s4,
       paddingRight: spaces.s13,
     },
   },

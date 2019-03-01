@@ -65,5 +65,22 @@
       </Badge>
     </BigText>
   </Cell>
+  <Cell cols={[[1, 6], [1, 6], [1, 12]]}>
+    <Table
+      cols={[
+        { name: 'ident', label: 'ID' },
+        { name: 'name', label: 'Name' },
+        { name: 'someData', label: 'SomeData' },
+        { name: 'moreData', label: 'MoreData' },
+        { name: 'In Stock', label: 'inStock' },
+      ]}
+      elements={[
+        { ident: 1, name: 'Product 1', someData: '17', moreData: '42', inStock: true },
+        { ident: 3, name: 'Product 13', someData: 'NA', moreData: '43', inStock: false},
+        { ident: 7, name: 'Product abc', inStock: true },
+      ]}
+    /> 
+  </Cell>
+  
 </Grid>
 ```

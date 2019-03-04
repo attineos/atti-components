@@ -63,13 +63,20 @@ module.exports = {
     }, {
       name: 'Forms',
       components: [
+        'src/components/Typography/FormText/index.js',
         'src/components/Button/index.js',
+        'src/components/ButtonGroup/index.js',
         'src/components/CheckBox/index.js',
         'src/components/Input/index.js',
         'src/components/InputFile/index.js',
         'src/components/Radio/index.js',
         'src/components/Select/index.js',
         'src/components/TextArea/index.js',
+      ],
+    }, {
+      name: 'Table',
+      components: [
+        'src/components/Table/index.js',
       ],
     }, {
       name: 'Graphics',
@@ -110,6 +117,7 @@ module.exports = {
         'src/components/Typography/Label/index.js',
         'src/components/Typography/SmallText/index.js',
         'src/components/Typography/Text/index.js',
+        'src/components/Typography/FormText/index.js',
       ],
     }, {
       name: 'Providers',

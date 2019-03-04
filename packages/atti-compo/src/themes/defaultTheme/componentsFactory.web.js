@@ -3,6 +3,7 @@ import avatar from '../../components/Avatar/theme'
 import badge from '../../components/Badge/theme'
 import breadcrumb from '../../components/Breadcrumb/theme'
 import button from '../../components/Button/theme'
+import buttonGroup from '../../components/ButtonGroup/theme'
 import checkBox from '../../components/CheckBox/theme'
 import image from '../../components/Image/theme'
 import input from '../../components/Input/theme'
@@ -15,6 +16,7 @@ import optionPanel from '../../components/OptionPanel/theme'
 import progressBar from '../../components/ProgressBar/theme'
 import radio from '../../components/Radio/theme'
 import select from '../../components/Select/theme'
+import table from '../../components/Table/theme'
 import textarea from '../../components/TextArea/theme'
 
 import {
@@ -35,6 +37,7 @@ export default constants => ({
   bigText: bigText(constants),
   breadcrumb: breadcrumb(constants),
   button: button(constants),
+  buttonGroup: buttonGroup(constants),
   checkBox: checkBox(constants),
   header1: header1(constants),
   header2: header2(constants),
@@ -53,6 +56,7 @@ export default constants => ({
   radio: radio(constants),
   select: select(constants),
   smallText: smallText(constants),
+  table: table(constants),
   text: text(constants),
   textarea: textarea(constants),
 })

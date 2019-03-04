@@ -47,6 +47,16 @@ import { heights } from 'atti-components/helpers'
 | maxH     | [max-height](https://www.w3schools.com/cssref/pr_dim_max-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value |
 | minH     | [min-height](https://www.w3schools.com/cssref/pr_dim_min-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value |
 
+### line height
+
+```sh
+import { lineHeight } from 'atti-components/helpers'
+```
+
+| Property | Description                                                       | Possible values                                                                           |
+| -------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| lh       | [height](https://www.w3schools.com/cssref/pr_dim_line-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value<br>form to set to form height |
+
 ### margins
 
 ```sh

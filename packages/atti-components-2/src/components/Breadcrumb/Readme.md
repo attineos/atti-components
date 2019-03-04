@@ -46,7 +46,7 @@ You can provide your own rendering function as element.render. You can also pass
 These functions will be called from most specific to least specific (ie: element, then global, then default). It'll stop at the first function that return a valid JSX component.
 
 ```js
-const styled = require('styled-components')
+;``
 const Red = styled.default.div`display: initial; color: red;`
 const Green = styled.default.div`display: initial; color: green;`
 

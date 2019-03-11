@@ -11,6 +11,7 @@ exports[`TextArea renders correctly 1`] = `
       className="Text-sc-187vq02-0-textarea Atticomponents TextArea-sc-1j7164a-0 fJQxaA StyledTextArea-sc-1ciexer-0 atti-r-css Atticomponents TextArea-sc-1j7164a-0 fJQxaA ccAqyB"
       id="Atticomponents"
       name="Atticomponents"
+      onChange={[Function]}
       placeholder="Atticomponents"
     />
   </span>

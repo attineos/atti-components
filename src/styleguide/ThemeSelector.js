@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { map, get } from 'lodash'
 
@@ -7,6 +7,8 @@ import { Label } from '../components/Typography'
 
 import themes from './config/themes'
 import Cookies from './helpers/Cookies'
+
+import SectionContainer from './styles/SectionContainer'
 
 class ThemeSelector extends React.Component {
   static propTypes = {
@@ -17,7 +19,7 @@ class ThemeSelector extends React.Component {
     const { onThemeChange } = this.props
 
     return (
-      <Fragment>
+      <SectionContainer>
         <Label>Theme: </Label>
         <Select
           id="themeChange"
@@ -31,7 +33,7 @@ class ThemeSelector extends React.Component {
             onThemeChange(get(themes, e.target.value, null))
           }}
         />
-      </Fragment>
+      </SectionContainer>
     )
   }
 }

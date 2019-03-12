@@ -37,7 +37,7 @@ Alert.propTypes = {
   /**
    * Type of alert.
    */
-  type: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
+  type: PropTypes.oneOf(['success', 'error', 'info', 'warning']),
 }
 
 /** @component */

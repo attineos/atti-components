@@ -48,8 +48,14 @@ These functions will be called from most specific to least specific (ie: element
 ```js
 const styled = require('styled-components').default
 
-const Red = styled('div')`display: initial; color: red;`
-const Green = styled('div')`display: initial; color: green;`
+const Red = styled('div')`
+  display: initial;
+  color: red;
+`
+const Green = styled('div')`
+  display: initial;
+  color: green;
+`
 
 ;<Breadcrumb
   elements={[

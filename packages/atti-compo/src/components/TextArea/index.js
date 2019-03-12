@@ -9,16 +9,32 @@ import StyledTextArea from './styles/StyledTextArea'
  *
  */
 class TextArea extends PureComponent {
-  render() {
-    const { className, id, name, placeholder } = this.props
+  onChangeValue = e => {
+    const { onChange } = this.props
+    onChange && onChange(e.target.value)
+  }
 
-    return <StyledTextArea className={className} id={id} placeholder={placeholder} name={name} />
+  render() {
+    // eslint-disable-next-line no-unused-vars
+    const { className, id, name, onChange, placeholder, ...rest } = this.props
+
+    return (
+      <StyledTextArea
+        className={className}
+        id={id}
+        placeholder={placeholder}
+        name={name}
+        onChange={this.onChangeValue}
+        {...rest}
+      />
+    )
   }
 }
 
 TextArea.defaultProps = {
   className: '',
   id: '',
+  onChange: null,
   placeholder: '',
 }
 
@@ -35,6 +51,10 @@ TextArea.propTypes = {
    * The name of the Textarea, which is used to get the value of the field.
    */
   name: PropTypes.string.isRequired,
+  /**
+   * The function called on value change.
+   */
+  onChange: PropTypes.func,
   /**
    * The text by default in the Textarea.
    */

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <div
+      className="Atticomponents ButtonGroup-sc-1lkj4qz-0 ipZTua StyledButtonGroup-ze25zo-0 jlGRA"
+    >
+      Atticomponents
+    </div>
+  </span>
+</span>
+`;

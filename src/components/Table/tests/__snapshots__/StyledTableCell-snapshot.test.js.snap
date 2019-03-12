@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CellStyle renders correctly 1`] = `
+exports[`StyledTableCell renders correctly 1`] = `
 <span
   className="atti-box"
 >
   <span
     className="atti-box"
   >
-    <div
-      className="CellStyle-ytv8v6-0 cTjDAG"
+    <td
+      className="StyledTableCell-sc-1fzx577-0 hSakMf"
     />
   </span>
 </span>

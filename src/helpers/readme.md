@@ -118,7 +118,7 @@ Browsers inject some styles by default, usually an application want to disable t
 
 With atti-components, you can inject a class in your styled-component that will reset the default style created by the browser.
 
-```
+```sh
 import { resetCSS } from 'atti-components/helpers'
 
 const MyComponent = styled.p.attrs(resetCSS)`

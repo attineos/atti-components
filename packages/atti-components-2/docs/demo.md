@@ -2,10 +2,10 @@
 
 ```js
 <Grid>
-  <Cell cols={[[1, 6],[1, 6],[1, 12]]}>
+  <Cell cols={[[1, 6],[1, 6],[1, 13]]}>
     <Header2>This is some title</Header2>
   </Cell>
-  <Cell cols={[[1, 6],[1, 6],[1, 12]]}>
+  <Cell cols={[[1, 6],[1, 6],[1, 13]]}>
     <Menu
       elements={[
         { url: '/#/', name: 'Item 1' },
@@ -16,18 +16,18 @@
       ]}
     />
   </Cell>
-  <Cell cols={[[1, 6],[1, 6],[1, 12]]}>
+  <Cell cols={[[1, 6],[1, 6],[1, 13]]}>
     <Alert type="success">
       This is a success <Link href="#/">with a link</Link>
     </Alert>
   </Cell>
-  <Cell cols={[[1, 6],[1, 6],[1, 4]]}>
+  <Cell cols={[[1, 6],[1, 6],[1, 6]]}>
     <Button onClick={() => alert('Hello !')}>Click me !</Button>
   </Cell>
-  <Cell cols={[[1, 6],[1, 6],[6, 12]]}>
+  <Cell cols={[[1, 6],[1, 6],[7, 13]]}>
     <InputFile placeholder="Browse a file" onChange={e => console.log(e)} />
   </Cell>
-  <Cell cols={[[1, 6], [1, 6], [1, 4]]}>
+  <Cell cols={[[1, 6], [1, 6], [1, 6]]}>
     <Label htmlFor="checkboxTest">
       <CheckBox id="checkboxTest" name="checkboxTestGroup" value="ImChecked" />
       Some checkbox
@@ -38,7 +38,7 @@
       Some other checkbox
     </Label>
   </Cell>
-  <Cell cols={[[1, 6], [1, 6], [6, 12]]}>
+  <Cell cols={[[1, 6], [1, 6], [7, 13]]}>
       <div>
         <Label htmlFor="radioTest">
           <Radio id="radioTest" value="radioTest" name="radioTestGroup" />
@@ -51,13 +51,13 @@
         </Label>
       </div>
   </Cell>
-  <Cell cols={[[1, 6], [1, 6], [1, 4]]}>
+  <Cell cols={[[1, 6], [1, 6], [1, 5]]}>
     <Input id="inputTestTxt" name="inputTestTxt" placeholder="input text" type="text" />
   </Cell>
-  <Cell cols={[[1, 6], [1, 6], [4, 8]]}>
+  <Cell cols={[[1, 6], [1, 6], [5, 9]]}>
     <Select id="single" options={['less than 1 year', 'Between 1 and 3 years', 'More than 3 years']} />
   </Cell>
-  <Cell cols={[[1, 6], [1, 6], [8, 12]]}>
+  <Cell cols={[[1, 6], [1, 6], [9, 13]]}>
     <Text lh="form">
       Let's try some features
       <Badge exponent={true} type="info">
@@ -65,7 +65,7 @@
       </Badge>
     </Text>
   </Cell>
-  <Cell cols={[[1, 6], [1, 6], [1, 12]]}>
+  <Cell cols={[[1, 6], [1, 6], [1, 13]]}>
     <Table
       cols={[
         { name: 'ident', label: 'ID' },

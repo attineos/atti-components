@@ -25,7 +25,7 @@ const customTheme = {
     },
   },
 }
-;<ThemeProvider otherTheme={customTheme} suppressResetCss>
+;<ThemeProvider otherTheme={customTheme}>
   <Breadcrumb
     elements={[
       { name: 'Home', url: '/#' },
@@ -46,9 +46,10 @@ You can provide your own rendering function as element.render. You can also pass
 These functions will be called from most specific to least specific (ie: element, then global, then default). It'll stop at the first function that return a valid JSX component.
 
 ```js
-;``
-const Red = styled.default.div`display: initial; color: red;`
-const Green = styled.default.div`display: initial; color: green;`
+const styled = require('styled-components').default
+
+const Red = styled('div')`display: initial; color: red;`
+const Green = styled('div')`display: initial; color: green;`
 
 ;<Breadcrumb
   elements={[

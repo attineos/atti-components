@@ -15,6 +15,14 @@ const Test = styled('div'){
 <Test di="b" />
 ```
 
+### cellItem
+
+```sh
+import { cellItem } from 'atti-components/helpers'
+```
+
+This helper transforms a components into a `Cell` allowing you to pass it the `cols` prop (can be useful when it's complicated for you to extend the `Cell` component).
+
 ### displays
 
 ```sh

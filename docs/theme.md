@@ -140,7 +140,7 @@
       text: "#273444"
     },
     sizes: {
-      minHeight: "36px"
+      minHeight: "44px"
     }
   },
   opacities: {
@@ -170,24 +170,28 @@
       h9: "16px",
       h10: "18px",
       h11: "20px",
-      h12: "24px",
-      h13: "28px",
-      h14: "32px",
-      h15: "36px",
-      h16: "40px",
-      h17: "48px",
-      h18: "56px",
-      h19: "64px",
-      h20: "80px",
-      h21: "100px",
-      h22: "150px",
-      h23: "200px",
-      h24: "250px",
-      h25: "300px",
-      h26: "350px",
-      h27: "400px",
-      h28: "450px",
-      h29: "500px"
+      h12: "22px",
+      h13: "24px",
+      h14: "26px",
+      h15: "28px",
+      h16: "30px",
+      h17: "34px",
+      h18: "38px",
+      h19: "42px",
+      h20: "44px",
+      h21: "48px",
+      h22: "54px",
+      h23: "60px",
+      h24: "70px",
+      h25: "80px",
+      h26: "90px",
+      h27: "100px",
+      h28: "110px",
+      h29: "120px",
+      quarter: "25%",
+      halt: "50%",
+      threeQuarter: "75%",
+      full: "100%"
     },
     widths: {
       w0: "0px",
@@ -202,24 +206,28 @@
       w9: "16px",
       w10: "18px",
       w11: "20px",
-      w12: "24px",
-      w13: "28px",
-      w14: "32px",
-      w15: "36px",
-      w16: "40px",
-      w17: "48px",
-      w18: "56px",
-      w19: "64px",
-      w20: "80px",
-      w21: "100px",
-      w22: "150px",
-      w23: "200px",
-      w24: "250px",
-      w25: "300px",
-      w26: "350px",
-      w27: "400px",
-      w28: "450px",
-      w29: "500px"
+      w12: "22px",
+      w13: "24px",
+      w14: "26px",
+      w15: "28px",
+      w16: "30px",
+      w17: "34px",
+      w18: "38px",
+      w19: "42px",
+      w20: "46px",
+      w21: "50px",
+      w22: "60px",
+      w23: "70px",
+      w24: "80px",
+      w25: "90px",
+      w26: "100px",
+      w27: "110px",
+      w28: "120px",
+      w29: "130px",
+      quarter: "25%",
+      halt: "50%",
+      threeQuarter: "75%",
+      full: "100%"
     }
   },
   spaces: {
@@ -227,18 +235,19 @@
     s1: "1px",
     s2: "2px",
     s3: "4px",
-    s4: "8px",
-    s5: "12px",
-    s6: "16px",
-    s7: "20px",
-    s8: "24px",
-    s9: "32px",
-    s10: "40px",
-    s11: "48px",
-    s12: "56px",
-    s13: "64px",
-    s14: "80px",
-    s15: "128px"
+    s4: "6px",
+    s5: "8px",
+    s6: "10px",
+    s7: "12px",
+    s8: "16px",
+    s9: "20px",
+    s10: "24px",
+    s11: "28px",
+    s12: "34px",
+    s13: "40px",
+    s14: "46px",
+    s15: "52px",
+    s16: "58px"
   },
   alert: {
     colors: {
@@ -262,7 +271,7 @@
       }
     },
     spaces: {
-      padding: "16px"
+      padding: "10px"
     },
     borders: {
       radius: "3px",
@@ -293,12 +302,12 @@
         lineHeight: "10px"
       },
       medium: {
-        size: "32px",
+        size: "26px",
         fontSize: "16px",
         lineHeight: "16px"
       },
       large: {
-        size: "56px",
+        size: "38px",
         fontSize: "32px",
         lineHeight: "32px"
       }
@@ -319,7 +328,7 @@
     },
     spaces: {
       paddingHeight: "4px",
-      paddingWidth: "8px"
+      paddingWidth: "6px"
     },
     fonts: {
       fontSize: "8px",
@@ -360,7 +369,7 @@
       fontWeight: 100
     },
     spaces: {
-      marginBottom: "8px"
+      marginBottom: "6px"
     }
   },
   button: {
@@ -374,16 +383,25 @@
       text: "#FFFFFF"
     },
     forms: {
-      minHeight: "36px"
+      minHeight: "44px"
     },
     opacities: {
       hover: 0.8
     },
     spaces: {
-      paddingHeight: "4px",
-      paddingWidth: "20px"
+      paddingHeight: "10px",
+      paddingWidth: "24px"
     },
     textAlign: "center"
+  },
+  buttonGroup: {
+    borders: {
+      borderWidth: "2px",
+      borderRadius: "3px"
+    },
+    colors: {
+      border: "#E5E9F2"
+    }
   },
   checkBox: {
     checkBoxBox: {
@@ -396,18 +414,19 @@
         thickness: "3px"
       },
       colors: {
-        backgroundHover: "#13CE66",
-        backgroundChecked: "#13CE66",
-        border: "#C0CCDA",
-        borderHover: "#13CE66",
-        borderChecked: "#13CE66"
+        backgroundHover: "#7ACFD6",
+        backgroundChecked: "#479EA5",
+        border: "#C0CCDA"
       },
       sizes: {
-        height: "18px",
-        width: "18px"
+        height: "22px",
+        width: "22px"
       },
       spaces: {
-        marginRight: "12px"
+        top: "2px",
+        bottom: "2px",
+        left: "4px",
+        right: "6px"
       }
     }
   },
@@ -457,8 +476,8 @@
   },
   img: {
     sizes: {
-      height: "64px",
-      width: "64px"
+      height: "100%",
+      width: "100%"
     }
   },
   input: {
@@ -478,25 +497,36 @@
         text: "#273444"
       },
       sizes: {
-        minHeight: "36px"
+        minHeight: "44px",
+        width: "100%"
       },
       spaces: {
-        paddingWidth: "12px"
+        paddingHeight: "6px",
+        paddingWidth: "8px"
       }
     }
   },
   inputFile: {
+    borders: {
+      borderWidth: "0px",
+      borderRadius: "3px"
+    },
     colors: {
-      text: "#EFF2F7",
-      background: "#479EA5"
+      background: "#7ACFD6",
+      border: "transparent",
+      text: "#FFFFFF"
+    },
+    forms: {
+      minHeight: "44px"
+    },
+    opacities: {
+      hover: 0.8
     },
     spaces: {
-      paddingTopBottom: "8px",
-      paddingLeftRight: "48px"
+      paddingHeight: "10px",
+      paddingWidth: "24px"
     },
-    fonts: {
-      fontFamily: "Roboto"
-    }
+    textAlign: "center"
   },
   label: {
     colors: {
@@ -532,17 +562,17 @@
       colorIndicator: "#7ACFD6",
       backgroundColor: "#FFFFFF"
     },
-    size: "40px"
+    size: "30px"
   },
   menu: {
     link: {
       colors: {
-        backgroundHover: "#F9FAFC",
+        backgroundHover: "#479EA5",
         text: "#F9FAFC",
         textHover: "#3C4858"
       },
       spaces: {
-        paddingWidth: "20px"
+        paddingWidth: "12px"
       }
     },
     menu: {
@@ -567,7 +597,7 @@
       textSelected: "#FFFFFF"
     },
     spaces: {
-      padding: "8px"
+      padding: "6px"
     }
   },
   optionPanel: {
@@ -586,8 +616,8 @@
       fill: "#7ACFD6"
     },
     sizes: {
-      height: "24px",
-      width: "400px"
+      height: "22px",
+      width: "100%"
     }
   },
   radio: {
@@ -601,14 +631,14 @@
         backgroundHover: "#7ACFD6"
       },
       sizes: {
-        heights: "18px",
-        widths: "18px"
+        heights: "22px",
+        widths: "22px"
       },
-      margins: {
+      spaces: {
         top: "2px",
         bottom: "2px",
         left: "4px",
-        right: "4px"
+        right: "6px"
       }
     }
   },
@@ -632,13 +662,16 @@
       sizes: {
         arrowHeight: "5px",
         arrowWidth: "10px",
-        minHeight: "36px",
-        separatorWidth: "1px"
+        minHeight: "44px",
+        separatorWidth: "1px",
+        width: "100%"
       },
       spaces: {
         paddingHeight: "8px",
-        paddingLeft: "12px",
-        paddingRight: "48px"
+        paddingTop: "8px",
+        paddingLeft: "10px",
+        paddingBottom: "6px",
+        paddingRight: "40px"
       }
     }
   },
@@ -651,6 +684,23 @@
       fontSize: "12px",
       fontWeight: 400,
       lineHeight: "16px"
+    }
+  },
+  table: {
+    borders: {
+      borderWidth: "2px",
+      borderRadius: "3px"
+    },
+    colors: {
+      background: "#FFFFFF",
+      border: "#E5E9F2",
+      text: "#1F2D3D",
+      headerText: "#3C4858"
+    },
+    spaces: {
+      headerHeight: "40px",
+      lineHeight: "58px",
+      firstChildLeftSpacing: "20px"
     }
   },
   text: {
@@ -681,7 +731,11 @@
         text: "#273444"
       },
       spaces: {
-        padding: "12px"
+        padding: "8px"
+      },
+      sizes: {
+        height: "100%",
+        width: "100%"
       }
     }
   }

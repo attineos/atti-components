@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CellStyle renders correctly 1`] = `
+exports[`StyledButtonGroup renders correctly 1`] = `
 <span
   className="atti-box"
 >
@@ -8,7 +8,7 @@ exports[`CellStyle renders correctly 1`] = `
     className="atti-box"
   >
     <div
-      className="CellStyle-ytv8v6-0 cTjDAG"
+      className="StyledButtonGroup-ze25zo-0 jlGRA"
     />
   </span>
 </span>

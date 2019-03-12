@@ -19,6 +19,8 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - Added Table component [@Atrakeur](https://github.com/atrakeur)
 - Added ButtonGroup component [@Atrakeur](https://github.com/atrakeur)
 - Added FormText Typography component [@Atrakeur](https://github.com/atrakeur)
+- Added `onChange` prop to TextArea component [@alexandre-lelain](https://github.com/alexandre-lelain)
+- Added custom theme import option to storybook [@alexandre-lelain](https://github.com/alexandre-lelain)
 
 ### Changed
 
@@ -33,6 +35,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - **Breaking Change**: Renamed Radio's theme `margins` to `spaces` [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Removed `sort` option from Select [@Atrakeur](https://www.atrakeur.com)
 - Fixed Input height [@Atrakeur](https://www.atrakeur.com)
+- Fixed `danger` type in Alert component [@alexandre-lelain](https://github.com/alexandre-lelain)
 
 ## [0.0.3] - 2019-02-05
 

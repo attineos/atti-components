@@ -10,6 +10,7 @@ import Ribbon from 'rsg-components/Ribbon'
 import Styled from 'rsg-components/Styled'
 import Version from 'rsg-components/Version'
 
+import CustomTheme from './components/CustomTheme'
 import ThemeProvider from '../components/ThemeProvider'
 import ThemeSelector from './ThemeSelector'
 import { defaultTheme } from '../themes'
@@ -124,6 +125,7 @@ class StyleGuideRenderer extends React.Component {
               </div>
               {toc}
               <ThemeSelector onThemeChange={this.handleThemeChange} />
+              <CustomTheme onThemeChange={this.handleThemeChange} />
             </div>
           )}
           <Ribbon />

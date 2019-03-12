@@ -35,10 +35,10 @@ const colorOverride = {
     },
   },
 }
-;<ThemeProvider theme={theme} suppressResetCss>
+;<ThemeProvider theme={theme}>
   <>
     <Square />
-    <ThemeProvider otherTheme={colorOverride} suppressResetCss>
+    <ThemeProvider otherTheme={colorOverride}>
       <Square />
     </ThemeProvider>
   </>

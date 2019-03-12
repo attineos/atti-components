@@ -78,4 +78,5 @@ Breadcrumb.propTypes = {
   renderElement: PropTypes.func,
 }
 
+/** @component */
 export default styled(Breadcrumb)``

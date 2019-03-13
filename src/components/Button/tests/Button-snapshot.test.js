@@ -10,7 +10,7 @@ it('Button renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Button className="Atticomponents" onClick={mock} onPress={mock} title="Atticomponents" type="Atticomponents" >Atticomponents</Button>
+        <Button animation="Atticomponents" className="Atticomponents" onClick={mock} onPress={mock} title="Atticomponents" type="Atticomponents" variance={null} >Atticomponents</Button>
       </Wrapper>
       )
     .toJSON();

@@ -1,5 +1,11 @@
 import styled, { css } from 'styled-components'
+import { getAnimation } from 'helpers'
 import { Text } from '../../Typography'
+
+const animation = css`
+  ${({ animation }) => getAnimation(animation)};
+  transition: 0.2s ease-in-out;
+`
 
 const border = css`
   border: ${({ variance, theme }) =>
@@ -37,6 +43,10 @@ const StyledButton = styled(Text.withComponent('button'))`
   text-align: ${({ theme }) => theme.components.button.textAlign};
 
   cursor: pointer;
+
+  &:focus {
+    ${animation};
+  }
 `
 
 StyledButton.defaultProps = {

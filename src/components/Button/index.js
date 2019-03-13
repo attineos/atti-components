@@ -10,10 +10,11 @@ import ButtonFacade from './facade'
  */
 class Button extends PureComponent {
   render() {
-    const { children, className, onClick, onPress, title, type, variance } = this.props
+    const { animation, children, className, onClick, onPress, title, type, variance } = this.props
 
     return (
       <ButtonFacade
+        animation={animation}
         className={className}
         content={children}
         onClick={onClick}
@@ -27,6 +28,7 @@ class Button extends PureComponent {
 }
 
 Button.defaultProps = {
+  animation: 'focus',
   className: '',
   onClick: noop(),
   onPress: noop(),
@@ -35,6 +37,10 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
+  /**
+   * Indicates which animation to play when clicking on the button.
+   */
+  animation: PropTypes.string,
   /**
    * ![Native](src/images/native.png "")
    * ![Web](src/images/web.png "")

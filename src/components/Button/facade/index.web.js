@@ -5,10 +5,11 @@ import StyledButton from '../styles/StyledButton'
 
 class ButtonFacade extends Facade {
   render() {
-    const { className, content, onClick, onPress, title, type, variance } = this.props
+    const { animation, className, content, onClick, onPress, title, type, variance } = this.props
 
     return (
       <StyledButton
+        animation={animation}
         className={className}
         type={type}
         onClick={onClick || onPress}

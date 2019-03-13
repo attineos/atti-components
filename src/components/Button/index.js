@@ -10,7 +10,7 @@ import ButtonFacade from './facade'
  */
 class Button extends PureComponent {
   render() {
-    const { children, className, onClick, onPress, title } = this.props
+    const { children, className, onClick, onPress, title, type } = this.props
 
     return (
       <ButtonFacade
@@ -19,6 +19,7 @@ class Button extends PureComponent {
         onClick={onClick}
         onPress={onPress}
         title={title}
+        type={type}
       />
     )
   }
@@ -28,6 +29,7 @@ Button.defaultProps = {
   className: '',
   onClick: noop(),
   onPress: noop(),
+  type: 'button',
 }
 
 Button.propTypes = {
@@ -63,6 +65,11 @@ Button.propTypes = {
    * Content of the component. Only text for now.
    */
   title: PropTypes.string.isRequired,
+  /**
+   * The type to pass to the underlying button html element
+   * ![Web](src/images/web.png "")
+   */
+  type: PropTypes.string,
 }
 
 /** @component */

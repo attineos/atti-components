@@ -5,6 +5,7 @@ import Avatar from './components/Avatar'
 import Badge from './components/Badge'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
+import ButtonGroup from './components/ButtonGroup'
 import Cell from './components/Cell'
 import Container from './components/Container'
 import CheckBox from './components/CheckBox'
@@ -20,6 +21,7 @@ import OptionPanel from './components/OptionPanel'
 import ProgressBar from './components/ProgressBar'
 import Radio from './components/Radio'
 import Select from './components/Select'
+import Table from './components/Table'
 import TextArea from './components/TextArea'
 
 import {
@@ -44,6 +46,7 @@ module.exports = {
   BigText,
   Breadcrumb,
   Button,
+  ButtonGroup,
   Cell,
   Container,
   CheckBox,
@@ -65,6 +68,7 @@ module.exports = {
   Radio,
   Select,
   SmallText,
+  Table,
   Text,
   TextArea,
 

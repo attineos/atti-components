@@ -26,8 +26,8 @@ class Input extends PureComponent {
     return (
       <StyledInput
         className={className}
-        id={id}
         form={form}
+        id={id}
         name={name}
         onChange={onChange}
         pattern={pattern}
@@ -42,7 +42,7 @@ class Input extends PureComponent {
 
 Input.defaultProps = {
   className: '',
-  form: '',
+  form: undefined,
   name: '',
   onChange: undefined,
   pattern: undefined,

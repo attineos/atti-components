@@ -6,7 +6,7 @@ const getLineHeight = (lh, theme) => {
     return theme.forms.sizes.minHeight
   }
 
-  return theme.sizes.heights[lh] || lh
+  return theme.spaces[lh] || lh
 }
 
 /**

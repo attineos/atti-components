@@ -5,7 +5,7 @@
 import borders from './borders'
 import boxShadows from './boxShadows'
 import colors from './colors'
-import sizes from './sizes'
+import spaces from './spaces'
 
 const forms = {
   borders: {
@@ -21,7 +21,7 @@ const forms = {
     text: colors.steel,
   },
   sizes: {
-    minHeight: sizes.heights.h20,
+    minHeight: spaces.h20,
   },
 }
 

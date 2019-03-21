@@ -1,4 +1,4 @@
-export default ({ borders, colors, sizes }) => ({
+export default ({ borders, colors, spaces }) => ({
   borders: {
     borderColor: colors.smoke,
     borderRadius: '25px',
@@ -12,7 +12,7 @@ export default ({ borders, colors, sizes }) => ({
   },
 
   sizes: {
-    height: sizes.heights.h12,
-    width: sizes.widths.full,
+    height: spaces.s12,
+    width: spaces.full,
   },
 })

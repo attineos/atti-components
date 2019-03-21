@@ -19,8 +19,8 @@ export default ({ colors, forms, sizes, spaces }) => ({
       arrowHeight: '5px',
       arrowWidth: '10px',
       minHeight: forms.sizes.minHeight,
-      separatorWidth: sizes.widths.w1,
-      width: sizes.widths.full,
+      separatorWidth: spaces.w1,
+      width: spaces.full,
     },
     spaces: {
       paddingHeight: spaces.s5,

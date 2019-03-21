@@ -1,4 +1,4 @@
-export default ({ borders, colors, fonts, sizes }) => ({
+export default ({ borders, colors, fonts, spaces }) => ({
   border: {
     radius: borders.radius.brCircle,
   },
@@ -10,17 +10,17 @@ export default ({ borders, colors, fonts, sizes }) => ({
   },
   sizes: {
     small: {
-      size: sizes.widths.w10,
+      size: spaces.s10,
       fontSize: fonts.fontSize.fs10,
       lineHeight: fonts.lineHeight.lh10,
     },
     medium: {
-      size: sizes.widths.w14,
+      size: spaces.s14,
       fontSize: fonts.fontSize.fs16,
       lineHeight: fonts.lineHeight.lh16,
     },
     large: {
-      size: sizes.widths.w18,
+      size: spaces.s18,
       fontSize: fonts.fontSize.fs32,
       lineHeight: fonts.lineHeight.lh32,
     },

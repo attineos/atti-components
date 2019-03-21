@@ -9,8 +9,8 @@ export default ({ borders, colors, forms, sizes, spaces }) => ({
       backgroundHover: colors.primary,
     },
     sizes: {
-      heights: sizes.heights.h12,
-      widths: sizes.widths.w12,
+      heights: spaces.s12,
+      widths: spaces.s12,
     },
     spaces: {
       top: spaces.s2,

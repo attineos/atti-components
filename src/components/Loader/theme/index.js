@@ -4,7 +4,7 @@ export default ({ animations, borders, colors, spaces }) => ({
     type: animations.type.linear,
   },
   borders: {
-    radius: borders.radius.brCircle,
+    radius: borders.radius.full,
     thickness: spaces.w5,
   },
   colors: {

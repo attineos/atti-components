@@ -9,7 +9,7 @@ import spaces from './spaces'
 
 const forms = {
   borders: {
-    radius: borders.radius.br3,
+    radius: borders.radius.medium,
     width: borders.widths.bw1,
   },
   boxShadow: boxShadows.shadow1,

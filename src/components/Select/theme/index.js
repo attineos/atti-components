@@ -1,4 +1,4 @@
-export default ({ colors, forms, sizes, spaces }) => ({
+export default ({ colors, forms, spaces }) => ({
   select: {
     borders: {
       radius: forms.borders.radius,

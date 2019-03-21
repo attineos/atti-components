@@ -1,6 +1,6 @@
 export default ({ borders, colors, fonts, spaces }) => ({
   border: {
-    radius: borders.radius.brCircle,
+    radius: borders.radius.full,
   },
   colors: {
     text: colors.white,

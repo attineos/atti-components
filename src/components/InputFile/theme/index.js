@@ -1,7 +1,7 @@
 export default ({ borders, colors, forms, opacities, spaces }) => ({
   borders: {
     borderWidth: borders.widths.bw0,
-    borderRadius: borders.radius.br3,
+    borderRadius: borders.radius.medium,
   },
   colors: {
     background: colors.primary,

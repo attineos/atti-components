@@ -21,7 +21,11 @@ class Input extends PureComponent {
       size,
       type,
       value,
+      error,
+      warning,
     } = this.props
+
+    const showState = error ? 'error' : warning ? 'warning' : 'normal'
 
     return (
       <StyledInput
@@ -35,6 +39,7 @@ class Input extends PureComponent {
         size={size}
         type={type}
         value={value}
+        showState={showState}
       />
     )
   }
@@ -42,6 +47,7 @@ class Input extends PureComponent {
 
 Input.defaultProps = {
   className: '',
+  error: false,
   form: undefined,
   name: '',
   onChange: undefined,
@@ -49,6 +55,7 @@ Input.defaultProps = {
   placeholder: '',
   size: null,
   value: undefined,
+  warning: false,
 }
 
 Input.propTypes = {
@@ -64,6 +71,10 @@ Input.propTypes = {
    * One or more forms the Input element belongs to.
    */
   form: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  /**
+   * Should the input show as an errored input
+   */
+  error: PropTypes.bool,
   /**
    * Name of the input element.
    */
@@ -94,6 +105,10 @@ Input.propTypes = {
    * The value of the input element
    */
   value: PropTypes.string,
+  /**
+   * Should the input show as an warning input
+   */
+  warning: PropTypes.bool,
 }
 
 /** @component */

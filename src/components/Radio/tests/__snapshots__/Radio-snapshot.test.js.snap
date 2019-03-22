@@ -8,7 +8,7 @@ exports[`Radio renders correctly 1`] = `
     className="atti-box"
   >
     <div
-      className="Atticomponents Radio-sc-1ut91e7-0 cqxOOJ RadioContainer-oshlxq-0 DRbLh"
+      className="Atticomponents Radio-sc-1ut91e7-0 cqxOOJ RadioContainer-oshlxq-0 kgRLaR"
     >
       <input
         checked={true}
@@ -20,7 +20,7 @@ exports[`Radio renders correctly 1`] = `
         value="Atticomponents"
       />
       <span
-        className="RadioButton-sc-8w77ik-0 juVxJC"
+        className="RadioButton-sc-8w77ik-0 eYQPmS"
       />
     </div>
   </span>

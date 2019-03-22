@@ -1,6 +1,6 @@
 export default ({ borders, colors, spaces }) => ({
   borders: {
-    borderColor: colors.smoke,
+    borderColor: colors.darkWhite,
     borderRadius: '25px',
     borderWidth: borders.widths.bw2,
   },

@@ -10,17 +10,17 @@ export default ({ borders, colors, fonts, spaces }) => ({
   },
   sizes: {
     small: {
-      size: spaces.s10,
+      size: spaces.s15,
       fontSize: fonts.fontSize.fs10,
       lineHeight: fonts.lineHeight.lh10,
     },
     medium: {
-      size: spaces.s14,
+      size: spaces.s25,
       fontSize: fonts.fontSize.fs16,
       lineHeight: fonts.lineHeight.lh16,
     },
     large: {
-      size: spaces.s18,
+      size: spaces.s35,
       fontSize: fonts.fontSize.fs32,
       lineHeight: fonts.lineHeight.lh32,
     },

@@ -2,24 +2,27 @@ import styled, { css } from 'styled-components'
 import { Text } from '../../Typography'
 
 const border = css`
-  border: ${({ theme }) =>
-    `${theme.components.inputFile.borders.borderWidth} solid ${
-      theme.components.inputFile.colors.border
+  border: ${({ styleLevel, theme }) =>
+    `${theme.components.inputFile.borders[styleLevel].borderWidth} solid ${
+      theme.components.inputFile.colors[styleLevel].border
     }`};
-  border-radius: ${({ theme }) => theme.components.inputFile.borders.borderRadius};
+  border-radius: ${({ styleLevel, theme }) =>
+    theme.components.inputFile.borders[styleLevel].borderRadius};
 `
 
 const colors = css`
-  background-color: ${({ theme }) => theme.components.inputFile.colors.background};
-  color: ${({ theme }) => theme.components.inputFile.colors.text};
+  background-color: ${({ styleLevel, theme }) =>
+    theme.components.inputFile.colors[styleLevel].background};
+  color: ${({ styleLevel, theme }) => theme.components.inputFile.colors[styleLevel].text};
 
   &:hover {
     opacity: ${({ theme }) => theme.components.inputFile.opacities.hover};
   }
 `
 
-const forms = css`
-  min-height: ${({ theme }) => theme.components.inputFile.forms.minHeight};
+const sizes = css`
+  height: ${({ theme }) => theme.components.inputFile.sizes.height};
+  width: ${({ theme }) => theme.components.inputFile.sizes.width};
 `
 
 const spaces = css`
@@ -30,12 +33,16 @@ const spaces = css`
 const StyledFilePicker = styled(Text.withComponent('button'))`
   ${border};
   ${colors};
-  ${forms};
+  ${sizes};
   ${spaces};
 
   text-align: ${({ theme }) => theme.components.inputFile.textAlign};
 
   cursor: pointer;
 `
+
+StyledFilePicker.defaultProps = {
+  styleLevel: 'normal',
+}
 
 export default StyledFilePicker

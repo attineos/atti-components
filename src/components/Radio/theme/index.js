@@ -5,8 +5,11 @@ export default ({ borders, colors, forms, spaces }) => ({
       width: forms.borders.width,
     },
     colors: {
-      backgroundChecked: colors.secondary,
       backgroundHover: colors.primary,
+      backgroundChecked: colors.lightPrimary,
+      border: forms.colors.border,
+      borderHover: forms.colors.borderFocus,
+      borderChecked: forms.colors.border,
     },
     sizes: {
       heights: spaces.s12,

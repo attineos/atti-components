@@ -10,7 +10,7 @@ import ButtonFacade from './facade'
  */
 class Button extends PureComponent {
   render() {
-    const { children, className, onClick, onPress, title, type } = this.props
+    const { children, className, onClick, onPress, title, type, primary, secondary } = this.props
 
     return (
       <ButtonFacade
@@ -20,6 +20,8 @@ class Button extends PureComponent {
         onPress={onPress}
         title={title}
         type={type}
+        primary={primary}
+        secondary={secondary}
       />
     )
   }
@@ -29,6 +31,8 @@ Button.defaultProps = {
   className: '',
   onClick: noop(),
   onPress: noop(),
+  primary: false,
+  secondary: false,
   type: 'button',
 }
 
@@ -58,6 +62,19 @@ Button.propTypes = {
    * This function is called when the user clicks on the Button.
    */
   onPress: PropTypes.func,
+
+  /**
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   * Define if it's a primary button or not
+   */
+  primary: PropTypes.bool,
+  /**
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   * Define if it's a secondary button or not
+   */
+  secondary: PropTypes.bool,
 
   /**
    * ![Native](src/images/native.png "")

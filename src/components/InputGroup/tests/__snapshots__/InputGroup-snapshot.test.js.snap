@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonGroup renders correctly 1`] = `
+exports[`InputGroup renders correctly 1`] = `
 <span
   className="atti-box"
 >
@@ -8,7 +8,7 @@ exports[`ButtonGroup renders correctly 1`] = `
     className="atti-box"
   >
     <div
-      className="Atticomponents ButtonGroup-sc-1lkj4qz-0 ipZTua StyledButtonGroup-ze25zo-0 jlGRA"
+      className="Atticomponents InputGroup-sc-17yv7rx-0 foEPxx StyledVerticalInputGroup-hvv0gu-0 beMrip"
     >
       Atticomponents
     </div>

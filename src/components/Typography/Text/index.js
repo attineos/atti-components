@@ -9,7 +9,8 @@ import { resetCSS } from 'helpers'
  *
  */
 const Text = styled.p.attrs(resetCSS)`
-  ${getFontStyle('text')};
+  ${({ error, warning }) =>
+    getFontStyle(error ? 'text.error' : warning ? 'text.warning' : 'text.normal')};
 `
 
 Text.propTypes = {
@@ -18,9 +19,17 @@ Text.propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Should the string be displayed as an error
+   */
+  error: PropTypes.bool,
+  /**
    * String to determine the alignment of content.
    */
   textAlign: PropTypes.oneOf(['center', 'initial', 'inherit', 'justify', 'left', 'right']),
+  /**
+   * Should the string be displayed as a warning
+   */
+  warning: PropTypes.bool,
 }
 
 // @component

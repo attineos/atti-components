@@ -1,20 +1,20 @@
 export default ({ colors, spaces }) => ({
   link: {
     colors: {
-      backgroundHover: colors.secondary,
-      text: colors.snow,
-      textHover: colors.slate,
+      backgroundHover: colors.lightNeutral,
+      text: colors.grey,
+      textHover: colors.darkGrey,
     },
     spaces: {
-      paddingWidth: spaces.s7,
+      paddingWidth: spaces.s20,
     },
   },
   menu: {
     colors: {
-      background: colors.slate,
+      background: colors.lighterNeutral,
     },
     sizes: {
-      minHeight: spaces.s21,
+      minHeight: spaces.s30,
     },
   },
 })

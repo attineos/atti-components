@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StyledButtonGroup renders correctly 1`] = `
+exports[`StyledHorizontalInputGroup renders correctly 1`] = `
 <span
   className="atti-box"
 >
@@ -8,7 +8,7 @@ exports[`StyledButtonGroup renders correctly 1`] = `
     className="atti-box"
   >
     <div
-      className="StyledButtonGroup-ze25zo-0 jlGRA"
+      className="StyledHorizontalInputGroup-sc-14ezq2l-0 emlLlZ"
     />
   </span>
 </span>

@@ -2,24 +2,29 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import ButtonGroupFacade from './facade'
+import InputGroupFacade from './facade'
 /**
  * A Simple Button compatible for web and native.
  *
  */
-class ButtonGroup extends PureComponent {
+class InputGroup extends PureComponent {
   render() {
-    const { className, children } = this.props
+    const { className, children, vertical } = this.props
 
-    return <ButtonGroupFacade className={className}>{children}</ButtonGroupFacade>
+    return (
+      <InputGroupFacade className={className} vertical={vertical}>
+        {children}
+      </InputGroupFacade>
+    )
   }
 }
 
-ButtonGroup.defaultProps = {
+InputGroup.defaultProps = {
   className: '',
+  vertical: false,
 }
 
-ButtonGroup.propTypes = {
+InputGroup.propTypes = {
   /**
    * Classes of the Button.
    */
@@ -28,7 +33,9 @@ ButtonGroup.propTypes = {
    * The cols to use as header for the table
    */
   children: PropTypes.any.isRequired,
+
+  vertical: PropTypes.bool,
 }
 
 /** @component */
-export default styled(ButtonGroup)``
+export default styled(InputGroup)``

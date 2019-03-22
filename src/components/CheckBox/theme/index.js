@@ -10,10 +10,10 @@ export default ({ borders, colors, forms, spaces }) => ({
     },
     colors: {
       backgroundHover: colors.primary,
-      backgroundChecked: colors.secondary,
+      backgroundChecked: colors.lightPrimary,
       border: forms.colors.border,
-      borderHover: colors.darkSecondary,
-      borderChecked: colors.darkSecondary,
+      borderHover: forms.colors.borderFocus,
+      borderChecked: forms.colors.border,
     },
     sizes: {
       height: spaces.s12,

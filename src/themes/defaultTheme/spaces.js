@@ -12,7 +12,7 @@ const spaces = {
 
   ...mapValues(
     mapKeys(
-      map(range(1, 30), index => ({
+      map(range(1, 50), index => ({
         key: `s${index}`,
         value: calcCssSize(baseline, value => value * 0.25 * index),
       })),

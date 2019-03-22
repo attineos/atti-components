@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 const getLineHeight = (lh, theme) => {
   // Handle special value
   if (lh === 'form') {
-    return theme.forms.sizes.minHeight
+    return theme.forms.sizes.height
   }
 
   return theme.spaces[lh] || lh

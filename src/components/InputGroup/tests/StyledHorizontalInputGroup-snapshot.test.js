@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import StyledButtonGroup from '../styles/StyledButtonGroup';
+import StyledHorizontalInputGroup from '../styles/StyledHorizontalInputGroup';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('StyledButtonGroup renders correctly', () => {
+it('StyledHorizontalInputGroup renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <StyledButtonGroup ></StyledButtonGroup>
+        <StyledHorizontalInputGroup ></StyledHorizontalInputGroup>
       </Wrapper>
       )
     .toJSON();

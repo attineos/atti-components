@@ -12,6 +12,13 @@ const ItemLink = styled(Link)`
     background-color: ${({ theme }) => theme.components.menu.link.colors.backgroundHover};
     color: ${({ theme }) => theme.components.menu.link.colors.textHover};
   }
+
+  ${({ isSelected }) =>
+    isSelected &&
+    `
+    background-color: ${({ theme }) => theme.components.menu.link.colors.backgroundHover};
+    color: ${({ theme }) => theme.components.menu.link.colors.textHover};
+  `}
 `
 
 export default ItemLink

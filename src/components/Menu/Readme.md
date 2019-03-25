@@ -50,10 +50,10 @@ color: green;
 
 ;<Menu
   elements={[
-    { name: 'Ultra Custom render', someProps: 15, render: element => <Red>{element.name}</Red> },
-    { name: 'Global Breadcrumb Custom renderer', someProps: 10 },
+    { name: 'Specific Custom render', someProps: 15, render: element => <Red>{element.name}</Red> },
+    { name: 'Global Custom renderer', someProps: 10 },
     { name: 'Default Renderer with an url', url: '#' },
-    { name: 'Default Renderer without an url' },
+    { name: 'Default Renderer w/out an url' },
   ]}
   separator={'>'}
   renderElement={element => {

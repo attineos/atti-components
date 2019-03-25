@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 const StyledHorizontalInputGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+
   > * {
     width: auto;
   }

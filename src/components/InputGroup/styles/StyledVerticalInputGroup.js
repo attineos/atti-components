@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 const StyledVerticalInputGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+
   > * {
     height: auto;
   }

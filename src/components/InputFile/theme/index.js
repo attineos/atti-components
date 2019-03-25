@@ -32,7 +32,6 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
   },
   sizes: {
     height: forms.sizes.height,
-    width: spaces.full,
   },
   opacities: {
     hover: opacities.o8,

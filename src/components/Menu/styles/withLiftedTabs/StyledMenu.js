@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components'
 const colors = css``
 
 const sizes = css`
-  height: ${({ theme }) => theme.components.menu.withButtons.menu.sizes.height};
-  width: ${({ theme }) => theme.components.menu.withButtons.menu.sizes.width};
+  height: ${({ theme }) => theme.components.menu.withLiftedTabs.menu.sizes.height};
+  width: ${({ theme }) => theme.components.menu.withLiftedTabs.menu.sizes.width};
 `
 
 const StyledMenu = styled.nav`
@@ -16,7 +16,9 @@ const StyledMenu = styled.nav`
 
   li {
     flex-grow: 1;
-    border-right: 1px solid ${({ theme }) => theme.components.menu.withButtons.menu.colors.border};
+  }
+  li:first-child {
+    border-left: none;
   }
   li:last-child {
     border-right: none;

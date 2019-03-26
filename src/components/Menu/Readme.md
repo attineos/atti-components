@@ -24,31 +24,21 @@ If none of these design suit your needs, please check the next paragraph to full
 ```js
 <React.Fragment>
   <Menu
-    elements={[
-      { url: '/', name: 'Index page' },
-      { url: '/#/Navigation?id=menu', name: 'Menu page' },
-      { url: 'https://www.w3.org', name: 'W3C', target: '_blank' },
-      {
-        url: 'https://github.com/attineos/atti-component',
-        name: 'Our Github Page',
-        target: '_blank',
-      },
-    ]}
+    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
     type="basic"
+    selectedElement="Notifications"
   />
   <br />
   <Menu
-    elements={[
-      { url: '/', name: 'Index page' },
-      { url: '/#/Navigation?id=menu', name: 'Menu page' },
-      { url: 'https://www.w3.org', name: 'W3C', target: '_blank' },
-      {
-        url: 'https://github.com/attineos/atti-component',
-        name: 'Our Github Page',
-        target: '_blank',
-      },
-    ]}
+    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
     type="withButtons"
+    selectedElement="Notifications"
+  />
+  <br />
+  <Menu
+    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
+    type="withLiftedTabs"
+    selectedElement="Notifications"
   />
 </React.Fragment>
 ```

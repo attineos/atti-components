@@ -30,9 +30,13 @@ const colors = {
   transparent: 'transparent',
   black: '#222222',
   lightBlack: '#3B3B3B',
+  lighterBlack: '#505050',
+  darkerGrey: '#575757',
   darkGrey: '#626262',
   grey: '#7E7E7E',
   lightGrey: '#9E9E9E',
+  lighterGrey: '#ababab',
+  darkerWhite: '#b9b9b9',
   darkWhite: '#CFCFCF',
   white: '#F7F7F7',
 }

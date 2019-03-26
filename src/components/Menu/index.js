@@ -112,7 +112,7 @@ Menu.propTypes = {
   /**
    * Which type of menu to display
    */
-  type: PropTypes.oneOf(['basic', 'withButtons']),
+  type: PropTypes.oneOf(['basic', 'withButtons', 'withLiftedTabs']),
 }
 
 /** @component */

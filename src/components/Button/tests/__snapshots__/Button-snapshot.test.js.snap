@@ -8,7 +8,7 @@ exports[`Button renders correctly 1`] = `
     className="atti-box"
   >
     <button
-      className="Text-sc-187vq02-0-button Atticomponents Button-sc-3l67yl-0 lcbEQZ StyledButtonweb__StyledButton-djbee1-0 atti-r-css Atticomponents Button-sc-3l67yl-0 lcbEQZ ipeWlZ"
+      className="Text-sc-187vq02-0-button Atticomponents Button-sc-3l67yl-0 lcbEQZ StyledButtonweb__StyledButton-djbee1-0 atti-r-css Atticomponents Button-sc-3l67yl-0 lcbEQZ cqfMXq"
       onClick={[Function]}
       type="Atticomponents"
     >

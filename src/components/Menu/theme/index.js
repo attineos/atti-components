@@ -1,20 +1,43 @@
 export default ({ colors, spaces }) => ({
-  link: {
-    colors: {
-      backgroundHover: colors.lightNeutral,
-      text: colors.grey,
-      textHover: colors.darkGrey,
+  basic: {
+    link: {
+      colors: {
+        backgroundHover: colors.lightNeutral,
+        text: colors.grey,
+        textHover: colors.darkGrey,
+      },
+      spaces: {
+        paddingWidth: spaces.s20,
+      },
     },
-    spaces: {
-      paddingWidth: spaces.s20,
+    menu: {
+      colors: {
+        background: colors.lighterNeutral,
+      },
+      sizes: {
+        height: spaces.s30,
+      },
     },
   },
-  menu: {
-    colors: {
-      background: colors.lighterNeutral,
+  withButtons: {
+    link: {
+      colors: {
+        background: colors.transparent,
+        backgroundHover: colors.darkWhite,
+        text: colors.grey,
+        textHover: colors.darkGrey,
+      },
     },
-    sizes: {
-      minHeight: spaces.s30,
+    menu: {
+      borderRadius: '4px',
+      colors: {
+        background: colors.lighterNeutral,
+        border: colors.darkWhite,
+      },
+      sizes: {
+        height: spaces.s30,
+        width: spaces.full,
+      },
     },
   },
 })

@@ -2,20 +2,26 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-import { isNull, map, isFunction, isUndefined } from 'lodash'
+import { isNull, map, isFunction, isUndefined, upperFirst } from 'lodash'
 import chain from 'helpers/generators/chain'
-import StyledItem from './styles/StyledItem'
-import StyledItemLink from './styles/StyledItemLink'
-import StyledItemsList from './styles/StyledItemsList'
-import StyledMenu from './styles/StyledMenu'
+
+import Styles from './styles'
 
 /**
  * The menu is a list of Link elements.
  *
  */
 class Menu extends PureComponent {
+  getStylesFromType() {
+    const { type } = this.props
+
+    return Styles[upperFirst(type)]
+  }
+
   renderElement = (element, isSelected) => {
     const { renderElement } = this.props
+
+    const { StyledItem, StyledItemLink } = this.getStylesFromType()
 
     return chain(
       // We assume a valid result as soon as we got a non null element
@@ -46,6 +52,8 @@ class Menu extends PureComponent {
 
   renderMenu = (elements, children) => {
     const { renderMenu } = this.props
+
+    const { StyledMenu, StyledItemsList } = this.getStylesFromType()
 
     return chain(
       // We assume a valid result as soon as we got a non null element
@@ -81,6 +89,7 @@ Menu.defaultProps = {
   renderElement: null,
   renderMenu: null,
   selectedElement: null,
+  type: 'basic',
 }
 
 Menu.propTypes = {
@@ -100,6 +109,10 @@ Menu.propTypes = {
    * Which element is currently selected
    */
   selectedElement: PropTypes.string,
+  /**
+   * Which type of menu to display
+   */
+  type: PropTypes.oneOf(['basic', 'withButtons']),
 }
 
 /** @component */

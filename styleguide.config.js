@@ -151,6 +151,7 @@ module.exports = {
     resolve: {
       extensions: ['.web.js', '.js'],
       alias: {
+        components: path.join(__dirname, 'src/components/'),
         helpers: path.join(__dirname, 'src/helpers/'),
       },
     },

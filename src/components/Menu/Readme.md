@@ -15,7 +15,45 @@ Menu :
 />
 ```
 
-### Custom rendering:
+### Menu types
+
+The menu component already comes with multiple type (designs) provided.
+
+If none of these design suit your needs, please check the next paragraph to fully customise the menu.
+
+```js
+<React.Fragment>
+  <Menu
+    elements={[
+      { url: '/', name: 'Index page' },
+      { url: '/#/Navigation?id=menu', name: 'Menu page' },
+      { url: 'https://www.w3.org', name: 'W3C', target: '_blank' },
+      {
+        url: 'https://github.com/attineos/atti-component',
+        name: 'Our Github Page',
+        target: '_blank',
+      },
+    ]}
+    type="basic"
+  />
+  <br />
+  <Menu
+    elements={[
+      { url: '/', name: 'Index page' },
+      { url: '/#/Navigation?id=menu', name: 'Menu page' },
+      { url: 'https://www.w3.org', name: 'W3C', target: '_blank' },
+      {
+        url: 'https://github.com/attineos/atti-component',
+        name: 'Our Github Page',
+        target: '_blank',
+      },
+    ]}
+    type="withButtons"
+  />
+</React.Fragment>
+```
+
+### Custom rendering
 
 The default rendering function expect each element to have at least a name as a string.
 You can also provide an url to generate a link around this element.
@@ -29,11 +67,11 @@ const styled = require('styled-components')
 // Define some default CSS for our custom elements
 const DefaultItem = styled.css`
   height: 100%;
-  padding: 0 ${({ theme }) => theme.components.menu.link.spaces.paddingWidth};
+  padding: 0 ${({ theme }) => theme.components.menu.basic.link.spaces.paddingWidth};
   display: inline-flex;
   &:hover {
-    background-color: ${({ theme }) => theme.components.menu.link.colors.backgroundHover};
-    color: ${({ theme }) => theme.components.menu.link.colors.textHover};
+    background-color: ${({ theme }) => theme.components.menu.basic.link.colors.backgroundHover};
+    color: ${({ theme }) => theme.components.menu.basic.link.colors.textHover};
   }
 `
 

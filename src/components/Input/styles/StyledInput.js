@@ -3,13 +3,13 @@ import { Text } from '../../Typography'
 
 const borders = css`
   border: ${({ theme }) => theme.components.input.input.borders.width} solid
-    ${({ theme, showState }) => theme.components.input.input.colors[showState].border};
+    ${({ theme, variance }) => theme.components.input.input.colors[variance].border};
   border-radius: ${({ theme }) => theme.components.input.input.borders.radius};
 `
 
 const colors = css`
-  color: ${({ theme, showState }) => theme.components.input.input.colors[showState].text};
-  caret-color: ${({ theme, showState }) => theme.components.input.input.colors[showState].caret};
+  color: ${({ theme, variance }) => theme.components.input.input.colors[variance].text};
+  caret-color: ${({ theme, variance }) => theme.components.input.input.colors[variance].caret};
 `
 
 const sizes = css`
@@ -31,19 +31,19 @@ const StyledInput = styled(Text.withComponent('input'))`
   ${spaces};
 
   ::placeholder {
-    color: ${({ theme, showState }) => theme.components.input.input.colors[showState].placeholder};
+    color: ${({ theme, variance }) => theme.components.input.input.colors[variance].placeholder};
   }
 
   &:focus {
     outline: none;
-    border-color: ${({ theme, showState }) =>
-      theme.components.input.input.colors[showState].borderFocus};
+    border-color: ${({ theme, variance }) =>
+      theme.components.input.input.colors[variance].borderFocus};
     box-shadow: ${({ theme }) => theme.components.input.input.boxShadows.boxShadowFocus};
   }
 `
 
 StyledInput.defaultProps = {
-  showState: 'normal',
+  variance: 'normal',
 }
 
 export default StyledInput

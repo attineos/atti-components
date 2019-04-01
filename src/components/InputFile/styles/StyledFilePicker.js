@@ -2,18 +2,18 @@ import styled, { css } from 'styled-components'
 import { Text } from '../../Typography'
 
 const border = css`
-  border: ${({ styleLevel, theme }) =>
-    `${theme.components.inputFile.borders[styleLevel].borderWidth} solid ${
-      theme.components.inputFile.colors[styleLevel].border
+  border: ${({ variance, theme }) =>
+    `${theme.components.inputFile.borders[variance].borderWidth} solid ${
+      theme.components.inputFile.colors[variance].border
     }`};
-  border-radius: ${({ styleLevel, theme }) =>
-    theme.components.inputFile.borders[styleLevel].borderRadius};
+  border-radius: ${({ variance, theme }) =>
+    theme.components.inputFile.borders[variance].borderRadius};
 `
 
 const colors = css`
-  background-color: ${({ styleLevel, theme }) =>
-    theme.components.inputFile.colors[styleLevel].background};
-  color: ${({ styleLevel, theme }) => theme.components.inputFile.colors[styleLevel].text};
+  background-color: ${({ variance, theme }) =>
+    theme.components.inputFile.colors[variance].background};
+  color: ${({ variance, theme }) => theme.components.inputFile.colors[variance].text};
 
   &:hover {
     opacity: ${({ theme }) => theme.components.inputFile.opacities.hover};
@@ -42,7 +42,7 @@ const StyledFilePicker = styled(Text.withComponent('button'))`
 `
 
 StyledFilePicker.defaultProps = {
-  styleLevel: 'normal',
+  variance: 'normal',
 }
 
 export default StyledFilePicker

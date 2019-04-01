@@ -31,12 +31,12 @@
     </Alert>
   </Cell>
   <Cell cols={[[1, 5], [1, 5], [1, 5]]}>
-    <Button onClick={() => alert('Hello !')} primary>
+    <Button onClick={() => alert('Hello !')} variance="primary">
       I'm a primary button!
     </Button>
   </Cell>
   <Cell cols={[[5, 9], [5, 9], [5, 9]]}>
-    <Button onClick={() => alert('Hello !')} secondary>
+    <Button onClick={() => alert('Hello !')} variance="secondary">
       I'm secondary
     </Button>
   </Cell>
@@ -45,10 +45,10 @@
   </Cell>
 
   <Cell cols={[[1, 5], [1, 5], [1, 5]]}>
-    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} primary />
+    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="primary" />
   </Cell>
   <Cell cols={[[5, 9], [5, 9], [5, 9]]}>
-    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} secondary />
+    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="secondary" />
   </Cell>
   <Cell cols={[[9, 13], [9, 13], [9, 13]]}>
     <InputFile placeholder="Browse a file" onChange={e => console.log(e)} />

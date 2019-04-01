@@ -11,6 +11,7 @@ exports[`Link renders correctly 1`] = `
       className="Text-sc-187vq02-0-a Atticomponents Link-x5cckk-0 jMqokw StyledLink-kwdrvq-0 atti-r-css Atticomponents Link-x5cckk-0 jMqokw hGGMfa"
       href="Atticomponents"
       onClick={[Function]}
+      rel=""
       target="Atticomponents"
     >
       Atticomponents

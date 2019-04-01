@@ -25,19 +25,19 @@ If none of these design suit your needs, please check the next paragraph to full
 <React.Fragment>
   <Menu
     elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
-    type="basic"
+    variance="basic"
     selectedElement="Notifications"
   />
   <br />
   <Menu
     elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
-    type="withButtons"
+    variance="withButtons"
     selectedElement="Notifications"
   />
   <br />
   <Menu
     elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
-    type="withLiftedTabs"
+    variance="withLiftedTabs"
     selectedElement="Notifications"
   />
 </React.Fragment>

@@ -5,16 +5,14 @@ import StyledButton from '../styles/StyledButton'
 
 class ButtonFacade extends Facade {
   render() {
-    const { className, content, onClick, onPress, title, type, primary, secondary } = this.props
-
-    const styleLevel = primary ? 'primary' : secondary ? 'secondary' : 'normal'
+    const { className, content, onClick, onPress, title, type, variance } = this.props
 
     return (
       <StyledButton
         className={className}
         type={type}
         onClick={onClick || onPress}
-        styleLevel={styleLevel}
+        variance={variance}
       >
         {content || title}
       </StyledButton>

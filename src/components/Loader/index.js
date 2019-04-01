@@ -10,16 +10,16 @@ import StyledLoader from './styles/StyledLoader'
  */
 class Loader extends PureComponent {
   render() {
-    const { className, color, type } = this.props
+    const { className, color, variance } = this.props
 
-    return <StyledLoader className={className} color={color} type={type} />
+    return <StyledLoader className={className} color={color} variance={variance} />
   }
 }
 
 Loader.defaultProps = {
   className: '',
   color: null,
-  type: 'circle',
+  variance: 'circle',
 }
 
 Loader.propTypes = {
@@ -34,7 +34,7 @@ Loader.propTypes = {
   /**
    * The Loader type, at the moment the only type provided is circle.
    */
-  type: PropTypes.oneOf(['circle']),
+  variance: PropTypes.oneOf(['circle']),
 }
 
 /** @component */

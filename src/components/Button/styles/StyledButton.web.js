@@ -2,18 +2,16 @@ import styled, { css } from 'styled-components'
 import { Text } from '../../Typography'
 
 const border = css`
-  border: ${({ styleLevel, theme }) =>
-    `${theme.components.button.borders[styleLevel].borderWidth} solid ${
-      theme.components.button.colors[styleLevel].border
+  border: ${({ variance, theme }) =>
+    `${theme.components.button.borders[variance].borderWidth} solid ${
+      theme.components.button.colors[variance].border
     }`};
-  border-radius: ${({ styleLevel, theme }) =>
-    theme.components.button.borders[styleLevel].borderRadius};
+  border-radius: ${({ variance, theme }) => theme.components.button.borders[variance].borderRadius};
 `
 
 const colors = css`
-  background-color: ${({ styleLevel, theme }) =>
-    theme.components.button.colors[styleLevel].background};
-  color: ${({ styleLevel, theme }) => theme.components.button.colors[styleLevel].text};
+  background-color: ${({ variance, theme }) => theme.components.button.colors[variance].background};
+  color: ${({ variance, theme }) => theme.components.button.colors[variance].text};
 
   &:hover {
     opacity: ${({ theme }) => theme.components.button.opacities.hover};
@@ -42,7 +40,7 @@ const StyledButton = styled(Text.withComponent('button'))`
 `
 
 StyledButton.defaultProps = {
-  styleLevel: 'normal',
+  variance: 'normal',
 }
 
 export default StyledButton

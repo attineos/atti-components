@@ -13,11 +13,11 @@ const ItemLink = styled(Link)`
     color: ${({ theme }) => theme.components.menu.basic.link.colors.textHover};
   }
 
-  ${({ isSelected }) =>
+  ${({ isSelected, theme }) =>
     isSelected &&
     `
-    background-color: ${({ theme }) => theme.components.menu.basic.link.colors.backgroundHover};
-    color: ${({ theme }) => theme.components.menu.basic.link.colors.textHover};
+    background-color: ${theme.components.menu.basic.link.colors.backgroundHover};
+    color: ${theme.components.menu.basic.link.colors.textHover};
   `}
 `
 

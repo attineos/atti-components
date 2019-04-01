@@ -13,9 +13,9 @@ import Styles from './styles'
  */
 class Menu extends PureComponent {
   getStylesFromType() {
-    const { type } = this.props
+    const { variance } = this.props
 
-    return Styles[upperFirst(type)]
+    return Styles[upperFirst(variance)]
   }
 
   renderElement = (element, isSelected) => {
@@ -89,7 +89,7 @@ Menu.defaultProps = {
   renderElement: null,
   renderMenu: null,
   selectedElement: null,
-  type: 'basic',
+  variance: 'basic',
 }
 
 Menu.propTypes = {
@@ -112,7 +112,7 @@ Menu.propTypes = {
   /**
    * Which type of menu to display
    */
-  type: PropTypes.oneOf(['basic', 'withButtons', 'withLiftedTabs']),
+  variance: PropTypes.oneOf(['basic', 'withButtons', 'withLiftedTabs']),
 }
 
 /** @component */

@@ -14,6 +14,7 @@ exports[`Breadcrumb renders correctly 1`] = `
         className="Text-sc-187vq02-0-a Link-x5cckk-0 jMqokw StyledLink-kwdrvq-0 atti-r-css Link-x5cckk-0 jMqokw hGGMfa"
         href="anUrl"
         onClick={null}
+        rel=""
         target={null}
       >
         anElement

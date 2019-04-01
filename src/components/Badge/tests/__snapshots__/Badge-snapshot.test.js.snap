@@ -9,7 +9,6 @@ exports[`Badge renders correctly 1`] = `
   >
     <sup
       className="Atticomponents Badge-x3zjsz-0 iwInqQ StyledBadge-sc-14ha03a-0 kALmzc"
-      type={null}
     >
       <div />
     </sup>

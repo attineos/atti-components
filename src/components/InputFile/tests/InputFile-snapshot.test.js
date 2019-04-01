@@ -10,7 +10,7 @@ it('InputFile renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <InputFile name="Atticomponents" placeholder="Atticomponents" onChange={mock} primary={true} secondary={true} ></InputFile>
+        <InputFile name="Atticomponents" placeholder="Atticomponents" onChange={mock} ></InputFile>
       </Wrapper>
       )
     .toJSON();

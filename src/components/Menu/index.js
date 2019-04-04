@@ -36,7 +36,7 @@ class Menu extends PureComponent {
         renderElement && isFunction(renderElement) ? renderElement(element, isSelected) : null,
       // Least precise, neither other function returned something, we default to some hand made rendering
       () => (
-        <StyledItem key={element.id || element.name}>
+        <StyledItem key={element.id || element.name} onClick={element.onClick}>
           <StyledItemLink
             href={element.url}
             target={element.target}

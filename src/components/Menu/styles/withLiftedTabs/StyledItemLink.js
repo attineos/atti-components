@@ -21,35 +21,29 @@ const ItemLink = styled(Link)`
       : theme.components.menu.withLiftedTabs.link.colors.background};
   
   border-bottom: ${({ isSelected, theme }) =>
-    isSelected
-      ? `none`
-      : `${theme.components.menu.withLiftedTabs.menu.border} solid ${
-          theme.components.menu.withLiftedTabs.menu.colors.border
-        }`};
+    `${theme.components.menu.withLiftedTabs.menu.border} solid ${
+      !isSelected ? theme.components.menu.withLiftedTabs.menu.colors.border : 'transparent'
+    }`};
   border-left: ${({ isSelected, theme }) =>
-    isSelected
-      ? `${theme.components.menu.withLiftedTabs.menu.border} solid ${
-          theme.components.menu.withLiftedTabs.menu.colors.border
-        }`
-      : `none`};
+    `${theme.components.menu.withLiftedTabs.menu.border} solid ${
+      isSelected ? theme.components.menu.withLiftedTabs.menu.colors.border : 'transparent'
+    }`};
   border-right: ${({ isSelected, theme }) =>
-    isSelected
-      ? `${theme.components.menu.withLiftedTabs.menu.border} solid ${
-          theme.components.menu.withLiftedTabs.menu.colors.border
-        }`
-      : `none`};
+    `${theme.components.menu.withLiftedTabs.menu.border} solid ${
+      isSelected ? theme.components.menu.withLiftedTabs.menu.colors.border : 'transparent'
+    }`};
   border-top: ${({ isSelected, theme }) =>
-    isSelected
-      ? `${theme.components.menu.withLiftedTabs.menu.border} solid ${
-          theme.components.menu.withLiftedTabs.menu.colors.border
-        }`
-      : `none`};
+    `${theme.components.menu.withLiftedTabs.menu.border} solid ${
+      isSelected ? theme.components.menu.withLiftedTabs.menu.colors.border : 'transparent'
+    }`};
+  
   
   border-top-left-radius: ${({ theme }) => theme.components.menu.withLiftedTabs.menu.borderRadius};
   border-top-right-radius: ${({ theme }) => theme.components.menu.withLiftedTabs.menu.borderRadius};
 }
 
   &:hover {
+    cursor: pointer;
     background-color: ${({ theme }) =>
       theme.components.menu.withLiftedTabs.link.colors.backgroundHover};
     color: ${({ theme }) => theme.components.menu.withLiftedTabs.link.colors.textHover};

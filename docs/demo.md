@@ -114,15 +114,20 @@
       cols={[
         { name: 'ident', label: 'ID' },
         { name: 'name', label: 'Name' },
-        { name: 'someData', label: 'SomeData' },
-        { name: 'moreData', label: 'MoreData' },
-        { name: 'In Stock', label: 'inStock' },
+        { name: 'someData', label: 'Some Data' },
+        { name: 'moreData', label: 'More Data' },
+        { name: 'inStock', label: 'In Stock' },
       ]}
       elements={[
         { ident: 1, name: 'Product 1', someData: '17', moreData: '42', inStock: true },
         { ident: 3, name: 'Product 13', someData: 'NA', moreData: '43', inStock: false },
         { ident: 7, name: 'Product abc', inStock: true },
       ]}
+      renderCell={(col, element) =>
+        col.name === 'inStock' ? (
+          <td>{element.inStock ? <Badge>Oui</Badge> : <Badge type="danger">Non</Badge>}</td>
+        ) : null
+      }
     />
   </Cell>
 </Grid>

@@ -32,7 +32,7 @@ class InputFile extends PureComponent {
   allowDrop = e => e.preventDefault()
 
   render() {
-    const { placeholder, name } = this.props
+    const { placeholder, name, variance } = this.props
 
     const { file } = this.state
 
@@ -43,6 +43,7 @@ class InputFile extends PureComponent {
           onClick={this.browseFile}
           onDragOver={this.allowDrop}
           onDrop={this.onDrop}
+          variance={variance}
         >
           {file ? file.name : placeholder}
         </StyledFilePicker>
@@ -54,6 +55,7 @@ class InputFile extends PureComponent {
 InputFile.defaultProps = {
   name: '',
   placeholder: '',
+  variance: 'normal',
 }
 
 InputFile.propTypes = {
@@ -70,6 +72,13 @@ InputFile.propTypes = {
    * @param: the html file object.
    */
   onChange: PropTypes.func.isRequired,
+
+  /**
+   * The type of variation to display
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   */
+  variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }
 
 export default InputFile

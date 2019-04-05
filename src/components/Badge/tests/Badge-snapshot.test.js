@@ -10,7 +10,7 @@ it('Badge renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Badge className="Atticomponents" exponent={true} type={null} ><div/></Badge>
+        <Badge className="Atticomponents" exponent={true} variance={null} ><div/></Badge>
       </Wrapper>
       )
     .toJSON();

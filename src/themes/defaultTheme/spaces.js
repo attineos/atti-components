@@ -1,24 +1,30 @@
+import { range, map, mapKeys, mapValues } from 'lodash'
+import calcCssSize from 'helpers/generators/calcCssSize'
+
 /**
  * Different spaces values
  */
+const baseline = '6px'
+
 const spaces = {
+  baseline: baseline,
   s0: '0px',
-  s1: '1px',
-  s2: '2px',
-  s3: '4px',
-  s4: '6px',
-  s5: '8px',
-  s6: '10px',
-  s7: '12px',
-  s8: '16px',
-  s9: '20px',
-  s10: '24px',
-  s11: '28px',
-  s12: '34px',
-  s13: '40px',
-  s14: '46px',
-  s15: '52px',
-  s16: '58px',
+
+  ...mapValues(
+    mapKeys(
+      map(range(1, 50), index => ({
+        key: `s${index}`,
+        value: calcCssSize(baseline, value => value * 0.25 * index),
+      })),
+      'key',
+    ),
+    'value',
+  ),
+
+  quarter: '25%',
+  halt: '50%',
+  threeQuarter: '75%',
+  full: '100%',
 }
 
 export default spaces

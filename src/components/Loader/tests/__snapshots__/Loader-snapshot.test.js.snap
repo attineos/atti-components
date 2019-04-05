@@ -8,9 +8,8 @@ exports[`Loader renders correctly 1`] = `
     className="atti-box"
   >
     <div
-      className="Atticomponents Loader-kh46gp-0 fWNqqK StyledLoader-d8og6-0 dPnuBy"
+      className="Atticomponents Loader-kh46gp-0 fWNqqK StyledLoader-d8og6-0 jZnzpc"
       color="Atticomponents"
-      type={null}
     />
   </span>
 </span>

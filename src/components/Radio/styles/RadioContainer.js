@@ -10,6 +10,9 @@ const RadioContainer = styled('div')`
 
   // Modifications of the color background of the radio :
   &:hover ${HiddenInputRadio} + ${RadioButton} {
+    border: ${({ theme }) => theme.components.radio.radioButton.borders.width} solid
+      ${({ theme }) => theme.components.radio.radioButton.colors.borderHover};
+
     &:after {
       visibility: visible;
       background-color: ${({ theme }) => theme.components.radio.radioButton.colors.backgroundHover};

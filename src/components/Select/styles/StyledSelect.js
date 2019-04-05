@@ -33,7 +33,7 @@ const colors = css`
       horizontal position = half of 75% of right padding + 1/4 of arrow width
       vertical position = 50% */ calc(
         100% -
-          calc(75 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
+          calc(90 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
           calc(${({ theme }) => theme.components.select.select.sizes.arrowWidth} / 4)
       )
       50%,
@@ -42,7 +42,7 @@ const colors = css`
       vertical position = 50% */
       calc(
         100% -
-          calc(75 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
+          calc(90 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
           calc(3 * ${({ theme }) => theme.components.select.select.sizes.arrowWidth} / 4)
       )
       50%,
@@ -69,7 +69,7 @@ const colors = css`
 `
 
 const sizes = css`
-  min-height: ${({ theme }) => theme.components.select.select.sizes.minHeight};
+  max-height: ${({ theme }) => theme.components.select.select.sizes.minHeight};
 
   height: ${({ theme }) => theme.components.select.select.sizes.height};
   width: ${({ theme }) => theme.components.select.select.sizes.width};

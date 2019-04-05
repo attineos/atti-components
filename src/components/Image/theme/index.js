@@ -1,6 +1,6 @@
-export default ({ sizes }) => ({
+export default ({ spaces }) => ({
   sizes: {
-    height: sizes.heights.full,
-    width: sizes.widths.full,
+    height: spaces.full,
+    width: spaces.full,
   },
 })

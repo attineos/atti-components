@@ -96,16 +96,20 @@ class TableFacade extends Facade {
     }
     return this.renderTable(
       <React.Fragment>
-        {this.renderHeaderLine(
-          <React.Fragment>{map(cols, col => this.renderHeaderCell(col))}</React.Fragment>,
-        )}
+        <thead>
+          {this.renderHeaderLine(
+            <React.Fragment>{map(cols, col => this.renderHeaderCell(col))}</React.Fragment>,
+          )}
+        </thead>
 
-        {map(elements, element =>
-          this.renderLine(
-            element,
-            <React.Fragment>{map(cols, col => this.renderCell(col, element))}</React.Fragment>,
-          ),
-        )}
+        <tbody>
+          {map(elements, element =>
+            this.renderLine(
+              element,
+              <React.Fragment>{map(cols, col => this.renderCell(col, element))}</React.Fragment>,
+            ),
+          )}
+        </tbody>
       </React.Fragment>,
     )
   }

@@ -27,7 +27,7 @@ Label.propTypes = {
   /**
    * The component to be a label for
    */
-  htmlFor: PropTypes.string.required,
+  htmlFor: PropTypes.string.isRequired,
   /**
    * Should interaction be disabled
    */

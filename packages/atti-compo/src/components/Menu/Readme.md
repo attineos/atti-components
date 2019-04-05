@@ -15,7 +15,35 @@ Menu :
 />
 ```
 
-### Custom rendering:
+### Menu types
+
+The menu component already comes with multiple type (designs) provided.
+
+If none of these design suit your needs, please check the next paragraph to fully customise the menu.
+
+```js
+<React.Fragment>
+  <Menu
+    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
+    variance="basic"
+    selectedElement="Notifications"
+  />
+  <br />
+  <Menu
+    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
+    variance="withButtons"
+    selectedElement="Notifications"
+  />
+  <br />
+  <Menu
+    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
+    variance="withLiftedTabs"
+    selectedElement="Notifications"
+  />
+</React.Fragment>
+```
+
+### Custom rendering
 
 The default rendering function expect each element to have at least a name as a string.
 You can also provide an url to generate a link around this element.
@@ -29,11 +57,11 @@ const styled = require('styled-components')
 // Define some default CSS for our custom elements
 const DefaultItem = styled.css`
   height: 100%;
-  padding: 0 ${({ theme }) => theme.components.menu.link.spaces.paddingWidth};
+  padding: 0 ${({ theme }) => theme.components.menu.basic.link.spaces.paddingWidth};
   display: inline-flex;
   &:hover {
-    background-color: ${({ theme }) => theme.components.menu.link.colors.backgroundHover};
-    color: ${({ theme }) => theme.components.menu.link.colors.textHover};
+    background-color: ${({ theme }) => theme.components.menu.basic.link.colors.backgroundHover};
+    color: ${({ theme }) => theme.components.menu.basic.link.colors.textHover};
   }
 `
 
@@ -50,10 +78,10 @@ color: green;
 
 ;<Menu
   elements={[
-    { name: 'Ultra Custom render', someProps: 15, render: element => <Red>{element.name}</Red> },
-    { name: 'Global Breadcrumb Custom renderer', someProps: 10 },
+    { name: 'Specific Custom render', someProps: 15, render: element => <Red>{element.name}</Red> },
+    { name: 'Global Custom renderer', someProps: 10 },
     { name: 'Default Renderer with an url', url: '#' },
-    { name: 'Default Renderer without an url' },
+    { name: 'Default Renderer w/out an url' },
   ]}
   separator={'>'}
   renderElement={element => {

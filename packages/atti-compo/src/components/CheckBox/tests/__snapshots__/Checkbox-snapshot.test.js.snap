@@ -8,11 +8,11 @@ exports[`CheckBox renders correctly 1`] = `
     className="atti-box"
   >
     <span
-      className="Atticomponents CheckBox-udu1se-0 kwjaRp CheckBoxBoxContainer-kmg3i5-0 cxxWPi"
+      className="Atticomponents CheckBox-udu1se-0 kwjaRp CheckBoxBoxContainer-kmg3i5-0 bFExJg"
     >
       <input
         checked={true}
-        className="HiddenInputCheckBox-sc-1veeukk-0 fXBEuC"
+        className="HiddenInputCheckBox-sc-1veeukk-0 jcOuTp"
         id="Atticomponents"
         name="Atticomponents"
         onChange={[Function]}
@@ -20,7 +20,7 @@ exports[`CheckBox renders correctly 1`] = `
         value="Atticomponents"
       />
       <span
-        className="CheckBoxBox-j9bhb-0 IkPQw"
+        className="CheckBoxBox-j9bhb-0 iwSrpm"
       />
     </span>
   </span>

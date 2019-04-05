@@ -16,18 +16,11 @@ const borders = {
     bw10: '10px',
   },
   radius: {
-    br0: '0px',
-    br1: '1px',
-    br2: '2px',
-    br3: '3px',
-    br4: '4px',
-    br5: '5px',
-    br6: '6px',
-    br7: '7px',
-    br8: '8px',
-    br9: '9px',
-    br10: '10px',
-    brCircle: '50%',
+    none: '0px',
+    small: '2px',
+    medium: '4px',
+    large: '6px',
+    full: '50%',
   },
 }
 

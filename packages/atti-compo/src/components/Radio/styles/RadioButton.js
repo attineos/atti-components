@@ -5,7 +5,7 @@ import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
 const borders = css`
   border-radius: ${({ theme }) => theme.components.radio.radioButton.borders.radius};
   border: ${({ theme }) => theme.components.radio.radioButton.borders.width} solid
-    ${({ theme }) => theme.colors.extraDarkSmoke};
+    ${({ theme }) => theme.components.radio.radioButton.colors.border};
 `
 
 const sizes = css`

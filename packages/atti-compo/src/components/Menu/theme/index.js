@@ -1,20 +1,76 @@
-export default ({ colors, sizes, spaces }) => ({
-  link: {
-    colors: {
-      backgroundHover: colors.secondary,
-      text: colors.snow,
-      textHover: colors.slate,
+export default ({ colors, spaces }) => ({
+  basic: {
+    link: {
+      colors: {
+        backgroundHover: colors.lightNeutral,
+        text: colors.grey,
+        textHover: colors.darkGrey,
+      },
+      spaces: {
+        paddingWidth: spaces.s40,
+      },
     },
-    spaces: {
-      paddingWidth: spaces.s7,
+    menu: {
+      colors: {
+        background: colors.lighterNeutral,
+      },
+      sizes: {
+        height: spaces.s30,
+      },
     },
   },
-  menu: {
-    colors: {
-      background: colors.slate,
+  withButtons: {
+    link: {
+      colors: {
+        background: colors.white,
+        backgroundSelected: colors.darkWhite,
+        backgroundHover: colors.darkerWhite,
+        text: colors.grey,
+        textSelected: colors.darkGrey,
+        textHover: colors.darkerGrey,
+        bottomBorder: colors.transparent,
+        bottomBorderSelected: colors.primary,
+      },
+      spaces: {
+        paddingWidth: spaces.s40,
+      },
     },
-    sizes: {
-      minHeight: sizes.heights.h21,
+    menu: {
+      borderRadius: '4px',
+      bottomBorder: '2px',
+      colors: {
+        background: colors.lighterNeutral,
+        border: colors.darkWhite,
+      },
+      sizes: {
+        height: spaces.s30,
+      },
+    },
+  },
+  withLiftedTabs: {
+    link: {
+      colors: {
+        background: colors.transparent,
+        backgroundSelected: colors.transparent,
+        backgroundHover: colors.transparent,
+        text: colors.grey,
+        textSelected: colors.darkGrey,
+        textHover: colors.darkerGrey,
+      },
+      spaces: {
+        paddingWidth: spaces.s40,
+      },
+    },
+    menu: {
+      borderRadius: '8px',
+      border: '1px',
+      colors: {
+        background: colors.lighterNeutral,
+        border: colors.darkWhite,
+      },
+      sizes: {
+        height: spaces.s30,
+      },
     },
   },
 })

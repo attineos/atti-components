@@ -2,27 +2,36 @@
  * All the rules common to multiple form elements.
  */
 
-import borders from './borders'
-import boxShadows from './boxShadows'
-import colors from './colors'
-import sizes from './sizes'
-
-const forms = {
+export default ({ borders, boxShadows, colors, spaces }) => ({
   borders: {
-    radius: borders.radius.br3,
+    radius: borders.radius.medium,
     width: borders.widths.bw1,
   },
   boxShadow: boxShadows.shadow1,
   colors: {
-    border: colors.extraDarkSmoke,
-    borderFocus: colors.extraDarkSmoke,
-    caret: colors.steel,
-    placeholder: colors.extraDarkSmoke,
-    text: colors.steel,
+    normal: {
+      border: colors.darkWhite,
+      borderFocus: colors.lightGrey,
+      caret: colors.lightBlack,
+      placeholder: colors.lightGrey,
+      text: colors.grey,
+    },
+    error: {
+      border: colors.supportDanger,
+      borderFocus: colors.supportDarkDanger,
+      caret: colors.supportDarkDanger,
+      placeholder: colors.supportDanger,
+      text: colors.supportDarkDanger,
+    },
+    warning: {
+      border: colors.supportWarning,
+      borderFocus: colors.supportDarkWarning,
+      caret: colors.supportDarkWarning,
+      placeholder: colors.supportWarning,
+      text: colors.supportDarkWarning,
+    },
   },
   sizes: {
-    minHeight: sizes.heights.h20,
+    height: spaces.s26,
   },
-}
-
-export default forms
+})

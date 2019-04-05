@@ -1,17 +1,19 @@
 export default ({ borders, colors, spaces }) => ({
   borders: {
-    borderWidth: borders.widths.bw2,
-    borderRadius: borders.radius.br3,
+    borderWidth: borders.widths.bw1,
+    borderRadius: borders.radius.large,
   },
   colors: {
-    background: colors.white,
-    border: colors.extraDarkSnow,
-    text: colors.black,
-    headerText: colors.slate,
+    background: colors.transparent,
+    backgroundEven: colors.transparent,
+    backgroundOdd: colors.white,
+    border: colors.darkWhite,
+    text: colors.grey,
+    headerText: colors.grey,
   },
   spaces: {
-    headerHeight: spaces.s13,
-    lineHeight: spaces.s16,
-    firstChildLeftSpacing: spaces.s9,
+    headerHeight: spaces.s25,
+    lineHeight: spaces.s22,
+    firstChildLeftSpacing: spaces.s20,
   },
 })

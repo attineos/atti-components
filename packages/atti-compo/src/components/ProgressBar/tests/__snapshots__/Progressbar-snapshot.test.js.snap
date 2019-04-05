@@ -8,12 +8,12 @@ exports[`ProgressBar renders correctly 1`] = `
     className="atti-box"
   >
     <div
-      className="Atticomponents ProgressBar-sc-6utz1-0 ewMPLO StyledProgressBar-sc-15l6ukn-0 grUQSI"
+      className="Atticomponents ProgressBar-sc-6utz1-0 ewMPLO StyledProgressBar-sc-15l6ukn-0 SNumc"
       end={42}
       start={42}
     >
       <p
-        className="Text-sc-187vq02-0 atti-r-css  hDmOdn"
+        className="Text-sc-187vq02-0 atti-r-css  hUWlTD"
       >
         Infinity%
       </p>

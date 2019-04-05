@@ -7,10 +7,10 @@ import { css } from 'styled-components'
  * - w (width)
  *
  * Don't support negative values.
- * Correct values are for example : w4, 150px, 10%
+ * Correct values are for example : s4, 150px, 10%
  */
 export default ({ maxW, minW, w, theme }) => css`
-  ${maxW && `max-width: ${theme.sizes.heights[maxW] || maxW}`};
-  ${minW && `min-width: ${theme.sizes.heights[minW] || minW}`};
-  ${w && `width: ${theme.sizes.heights[w] || w}`};
+  ${maxW && `max-width: ${theme.spaces[maxW] || maxW}`};
+  ${minW && `min-width: ${theme.spaces[minW] || minW}`};
+  ${w && `width: ${theme.spaces[w] || w}`};
 `

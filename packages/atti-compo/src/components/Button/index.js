@@ -10,7 +10,7 @@ import ButtonFacade from './facade'
  */
 class Button extends PureComponent {
   render() {
-    const { children, className, onClick, onPress, title, type } = this.props
+    const { children, className, onClick, onPress, title, type, variance } = this.props
 
     return (
       <ButtonFacade
@@ -20,6 +20,7 @@ class Button extends PureComponent {
         onPress={onPress}
         title={title}
         type={type}
+        variance={variance}
       />
     )
   }
@@ -30,6 +31,7 @@ Button.defaultProps = {
   onClick: noop(),
   onPress: noop(),
   type: 'button',
+  variance: 'normal',
 }
 
 Button.propTypes = {
@@ -70,6 +72,13 @@ Button.propTypes = {
    * ![Web](src/images/web.png "")
    */
   type: PropTypes.string,
+
+  /**
+   * The type of variation to display
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   */
+  variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }
 
 /** @component */

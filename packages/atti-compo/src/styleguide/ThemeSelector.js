@@ -20,7 +20,7 @@ class ThemeSelector extends React.Component {
 
     return (
       <SectionContainer>
-        <Label>Theme: </Label>
+        <Label htmlFor="themeChange">Theme: </Label>
         <Select
           id="themeChange"
           options={map(themes, (theme, index) => ({

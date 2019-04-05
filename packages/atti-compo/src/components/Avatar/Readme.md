@@ -9,7 +9,7 @@ Small Avatar :
 Medium Avatar :
 
 ```js
-<Avatar bgColor="tertiary">MV</Avatar>
+<Avatar bgColor="neutral">MV</Avatar>
 ```
 
 Large Avatar :

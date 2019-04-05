@@ -37,6 +37,7 @@ const positionText = css`
     margin: 0;
     position: relative;
     width: 100%;
+    align-items: center;
   }
 `
 const size = css`

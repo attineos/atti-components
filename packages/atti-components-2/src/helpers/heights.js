@@ -10,7 +10,7 @@ import { css } from 'styled-components'
  * Correct values are for example : h4, 150px, 10%
  */
 export default ({ maxH, minH, h, theme }) => css`
-  ${maxH && `max-height: ${theme.sizes.heights[maxH] || maxH}`};
-  ${minH && `min-height: ${theme.sizes.heights[minH] || minH}`};
-  ${h && `height: ${theme.sizes.heights[h] || h}`};
+  ${maxH && `max-height: ${theme.spaces[maxH] || maxH}`};
+  ${minH && `min-height: ${theme.spaces[minH] || minH}`};
+  ${h && `height: ${theme.spaces[h] || h}`};
 `

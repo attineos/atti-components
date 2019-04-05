@@ -1,16 +1,19 @@
-export default ({ borders, colors, forms, sizes, spaces }) => ({
+export default ({ borders, colors, forms, spaces }) => ({
   radioButton: {
     borders: {
-      radius: borders.radius.brCircle,
+      radius: borders.radius.full,
       width: forms.borders.width,
     },
     colors: {
-      backgroundChecked: colors.secondary,
       backgroundHover: colors.primary,
+      backgroundChecked: colors.lightPrimary,
+      border: forms.colors.border,
+      borderHover: forms.colors.borderFocus,
+      borderChecked: forms.colors.border,
     },
     sizes: {
-      heights: sizes.heights.h12,
-      widths: sizes.widths.w12,
+      heights: spaces.s12,
+      widths: spaces.s12,
     },
     spaces: {
       top: spaces.s2,

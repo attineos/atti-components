@@ -5,7 +5,6 @@ import Avatar from './components/Avatar'
 import Badge from './components/Badge'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
-import ButtonGroup from './components/ButtonGroup'
 import Cell from './components/Cell'
 import Container from './components/Container'
 import CheckBox from './components/CheckBox'
@@ -13,6 +12,7 @@ import Grid from './components/Grid'
 import Image from './components/Image'
 import Input from './components/Input'
 import InputFile from './components/InputFile'
+import InputGroup from './components/InputGroup'
 import Link from './components/Link'
 import Loader from './components/Loader'
 import Menu from './components/Menu'
@@ -46,7 +46,6 @@ module.exports = {
   BigText,
   Breadcrumb,
   Button,
-  ButtonGroup,
   Cell,
   Container,
   CheckBox,
@@ -58,6 +57,7 @@ module.exports = {
   Image,
   Input,
   InputFile,
+  InputGroup,
   Label,
   Link,
   Loader,

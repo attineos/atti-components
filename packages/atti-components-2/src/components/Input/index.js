@@ -21,6 +21,7 @@ class Input extends PureComponent {
       size,
       type,
       value,
+      variance,
     } = this.props
 
     return (
@@ -35,6 +36,7 @@ class Input extends PureComponent {
         size={size}
         type={type}
         value={value}
+        variance={variance}
       />
     )
   }
@@ -49,6 +51,7 @@ Input.defaultProps = {
   placeholder: '',
   size: null,
   value: undefined,
+  variance: 'normal',
 }
 
 Input.propTypes = {
@@ -94,6 +97,10 @@ Input.propTypes = {
    * The value of the input element
    */
   value: PropTypes.string,
+  /**
+   * Which type of input to display
+   */
+  variance: PropTypes.oneOf(['normal', 'error', 'warning']),
 }
 
 /** @component */

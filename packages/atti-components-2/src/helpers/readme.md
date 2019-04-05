@@ -49,11 +49,11 @@ import { displays } from 'atti-components/helpers'
 import { heights } from 'atti-components/helpers'
 ```
 
-| Property | Description                                                          | Possible values                                             |
-| -------- | -------------------------------------------------------------------- | ----------------------------------------------------------- |
-| h        | [height](https://www.w3schools.com/cssref/pr_dim_height.asp)         | A value from `theme.sizes.heights`<br>Any other valid value |
-| maxH     | [max-height](https://www.w3schools.com/cssref/pr_dim_max-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value |
-| minH     | [min-height](https://www.w3schools.com/cssref/pr_dim_min-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value |
+| Property | Description                                                          | Possible values                                      |
+| -------- | -------------------------------------------------------------------- | ---------------------------------------------------- |
+| h        | [height](https://www.w3schools.com/cssref/pr_dim_height.asp)         | A value from `theme.spaces`<br>Any other valid value |
+| maxH     | [max-height](https://www.w3schools.com/cssref/pr_dim_max-height.asp) | A value from `theme.spaces`<br>Any other valid value |
+| minH     | [min-height](https://www.w3schools.com/cssref/pr_dim_min-height.asp) | A value from `theme.spaces`<br>Any other valid value |
 
 ### line height
 
@@ -61,9 +61,9 @@ import { heights } from 'atti-components/helpers'
 import { lineHeight } from 'atti-components/helpers'
 ```
 
-| Property | Description                                                       | Possible values                                                                           |
-| -------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| lh       | [height](https://www.w3schools.com/cssref/pr_dim_line-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value<br>form to set to form height |
+| Property | Description                                                       | Possible values                                                                    |
+| -------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| lh       | [height](https://www.w3schools.com/cssref/pr_dim_line-height.asp) | A value from `theme.spaces`<br>Any other valid value<br>form to set to form height |
 
 ### margins
 
@@ -99,14 +99,14 @@ It's a shortcut for `heights` and `widths`
 import { sizes } from 'atti-components/helpers'
 ```
 
-| Property | Description                                                          | Possible values                                             |
-| -------- | -------------------------------------------------------------------- | ----------------------------------------------------------- |
-| h        | [height](https://www.w3schools.com/cssref/pr_dim_height.asp)         | A value from `theme.sizes.heights`<br>Any other valid value |
-| maxH     | [max-height](https://www.w3schools.com/cssref/pr_dim_max-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value |
-| maxW     | [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp)   | A value from `theme.sizes.width`<br>Any other valid value   |
-| minH     | [min-height](https://www.w3schools.com/cssref/pr_dim_min-height.asp) | A value from `theme.sizes.heights`<br>Any other valid value |
-| minW     | [min-width](https://www.w3schools.com/cssref/pr_dim_min-width.asp)   | A value from `theme.sizes.width`<br>Any other valid value   |
-| w        | [width](https://www.w3schools.com/cssref/pr_dim_width.asp)           | A value from `theme.sizes.width`<br>Any other valid value   |
+| Property | Description                                                          | Possible values                                      |
+| -------- | -------------------------------------------------------------------- | ---------------------------------------------------- |
+| h        | [height](https://www.w3schools.com/cssref/pr_dim_height.asp)         | A value from `theme.spaces`<br>Any other valid value |
+| maxH     | [max-height](https://www.w3schools.com/cssref/pr_dim_max-height.asp) | A value from `theme.spaces`<br>Any other valid value |
+| maxW     | [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp)   | A value from `theme.spaces`<br>Any other valid value |
+| minH     | [min-height](https://www.w3schools.com/cssref/pr_dim_min-height.asp) | A value from `theme.spaces`<br>Any other valid value |
+| minW     | [min-width](https://www.w3schools.com/cssref/pr_dim_min-width.asp)   | A value from `theme.spaces`<br>Any other valid value |
+| w        | [width](https://www.w3schools.com/cssref/pr_dim_width.asp)           | A value from `theme.spaces`<br>Any other valid value |
 
 ### widths
 
@@ -114,11 +114,11 @@ import { sizes } from 'atti-components/helpers'
 import { widths } from 'atti-components/helpers'
 ```
 
-| Property | Description                                                        | Possible values                                           |
-| -------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
-| maxW     | [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp) | A value from `theme.sizes.width`<br>Any other valid value |
-| minW     | [min-width](https://www.w3schools.com/cssref/pr_dim_min-width.asp) | A value from `theme.sizes.width`<br>Any other valid value |
-| w        | [width](https://www.w3schools.com/cssref/pr_dim_width.asp)         | A value from `theme.sizes.width`<br>Any other valid value |
+| Property | Description                                                        | Possible values                                      |
+| -------- | ------------------------------------------------------------------ | ---------------------------------------------------- |
+| maxW     | [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp) | A value from `theme.spaces`<br>Any other valid value |
+| minW     | [min-width](https://www.w3schools.com/cssref/pr_dim_min-width.asp) | A value from `theme.spaces`<br>Any other valid value |
+| w        | [width](https://www.w3schools.com/cssref/pr_dim_width.asp)         | A value from `theme.spaces`<br>Any other valid value |
 
 ### resetCSS
 

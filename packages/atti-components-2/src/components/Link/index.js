@@ -12,7 +12,14 @@ class Link extends PureComponent {
     const { children, className, href, onClick, target, ...rest } = this.props
 
     return (
-      <StyledLink className={className} href={href} onClick={onClick} target={target} {...rest}>
+      <StyledLink
+        className={className}
+        href={href}
+        onClick={onClick}
+        target={target}
+        rel={target === '_blank' ? 'noreferrer noopener' : ''}
+        {...rest}
+      >
         {children}
       </StyledLink>
     )

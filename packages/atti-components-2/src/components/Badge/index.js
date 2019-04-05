@@ -10,10 +10,10 @@ import StyledBadge from './styles/StyledBadge'
  */
 class Badge extends PureComponent {
   render() {
-    const { children, className, type, exponent } = this.props
+    const { children, className, variance, exponent } = this.props
 
     return (
-      <StyledBadge as={exponent ? 'sup' : undefined} className={className} type={type}>
+      <StyledBadge as={exponent ? 'sup' : undefined} className={className} variance={variance}>
         {children}
       </StyledBadge>
     )
@@ -23,7 +23,7 @@ class Badge extends PureComponent {
 Badge.defaultProps = {
   className: '',
   exponent: false,
-  type: 'success',
+  variance: 'success',
 }
 
 Badge.propTypes = {
@@ -43,7 +43,7 @@ Badge.propTypes = {
   /**
    * Type of Badge.
    */
-  type: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
+  variance: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
 }
 
 /** @component */

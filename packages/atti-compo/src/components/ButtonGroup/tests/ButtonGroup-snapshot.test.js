@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import constructTheme from '../helpers/constructTheme';
+import ButtonGroup from '..';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('constructTheme renders correctly', () => {
+it('ButtonGroup renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <constructTheme ></constructTheme>
+        <ButtonGroup className="Atticomponents" >Atticomponents</ButtonGroup>
       </Wrapper>
       )
     .toJSON();

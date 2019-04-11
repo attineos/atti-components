@@ -33,11 +33,8 @@ const constructTheme = (otherTheme, theme) => {
   // Compute second level theme, by taking the full first level theme, then adding second theme constants
   // Then reexecuting both theme factories
   const secondLevelTheme = partition(otherTheme)
-  const secondLevelThemeConstants = merge({}, firstLevelComputedTheme, secondLevelTheme.constants)
-  const secondLevelComputedTheme = applyFunctions(
-    applyFunctions(secondLevelThemeConstants, firstLevelTheme.functions),
-    secondLevelTheme.functions,
-  )
+  const intermediateTheme = merge({}, firstLevelComputedTheme, secondLevelTheme.constants)
+  const secondLevelComputedTheme = applyFunctions(intermediateTheme, secondLevelTheme.functions)
 
   return secondLevelComputedTheme
 }

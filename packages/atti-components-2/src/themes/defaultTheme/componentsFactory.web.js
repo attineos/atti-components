@@ -3,11 +3,11 @@ import avatar from '../../components/Avatar/theme'
 import badge from '../../components/Badge/theme'
 import breadcrumb from '../../components/Breadcrumb/theme'
 import button from '../../components/Button/theme'
-import InputGroup from '../../components/InputGroup/theme'
 import checkBox from '../../components/CheckBox/theme'
 import image from '../../components/Image/theme'
 import input from '../../components/Input/theme'
 import inputFile from '../../components/InputFile/theme'
+import inputGroup from '../../components/InputGroup/theme'
 import link from '../../components/Link/theme'
 import loader from '../../components/Loader/theme'
 import menu from '../../components/Menu/theme'
@@ -37,7 +37,6 @@ export default constants => ({
   bigText: bigText(constants),
   breadcrumb: breadcrumb(constants),
   button: button(constants),
-  InputGroup: InputGroup(constants),
   checkBox: checkBox(constants),
   header1: header1(constants),
   header2: header2(constants),
@@ -46,6 +45,7 @@ export default constants => ({
   img: image(constants),
   input: input(constants),
   inputFile: inputFile(constants),
+  inputGroup: inputGroup(constants),
   label: label(constants),
   link: link(constants),
   loader: loader(constants),

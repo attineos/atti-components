@@ -1,3 +1,4 @@
+import breakpoints from './breakpoints'
 /**
  * The Container defines breakpoints for hos child components
  *
@@ -14,32 +15,24 @@
 export default () => ({
   mobile: {
     cols: 6,
-    gap: '20px',
-    to: '419px',
-    containerMaxWidth: '419px',
-    padding: 's5',
+    gap: 's10',
+    to: breakpoints.mobileMax,
+    containerMaxWidth: '420px',
+    padding: 's10',
   },
   tablet: {
     cols: 6,
-    gap: '20px',
-    from: '420px',
-    to: '767px',
-    containerMaxWidth: '767px',
-    padding: 's5',
+    gap: 's16',
+    from: breakpoints.tabletMin,
+    to: breakpoints.tabletMax,
+    containerMaxWidth: 'none',
+    padding: 's16',
   },
   desktop: {
     cols: 12,
-    gap: '20px',
-    from: '768px',
-    to: '1023px',
-    containerMaxWidth: '1023px',
-    padding: 's5',
-  },
-  xlDesktop: {
-    cols: 12,
-    gap: '20px',
-    from: '1024px',
+    gap: 's16',
+    from: breakpoints.desltopMin,
     containerMaxWidth: '1280px',
-    padding: 's5',
+    padding: 's16',
   },
 })

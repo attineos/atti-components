@@ -15,24 +15,24 @@ import breakpoints from './breakpoints'
 export default () => ({
   mobile: {
     cols: 6,
-    gap: 's10',
+    gap: 's1',
     to: breakpoints.mobileMax,
     containerMaxWidth: '420px',
-    padding: 's10',
+    padding: 's1',
   },
   tablet: {
     cols: 6,
-    gap: 's16',
+    gap: 's1_5',
     from: breakpoints.tabletMin,
     to: breakpoints.tabletMax,
     containerMaxWidth: 'none',
-    padding: 's16',
+    padding: 's1_5',
   },
   desktop: {
     cols: 12,
-    gap: 's16',
+    gap: 's1_5',
     from: breakpoints.desltopMin,
     containerMaxWidth: '1280px',
-    padding: 's16',
+    padding: 's1_5',
   },
 })

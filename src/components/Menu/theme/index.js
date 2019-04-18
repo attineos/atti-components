@@ -7,7 +7,7 @@ export default ({ colors, spaces }) => ({
         textHover: colors.darkGrey,
       },
       spaces: {
-        paddingWidth: spaces.s40,
+        paddingWidth: spaces.s4,
       },
     },
     menu: {
@@ -15,7 +15,7 @@ export default ({ colors, spaces }) => ({
         background: colors.lighterNeutral,
       },
       sizes: {
-        height: spaces.s30,
+        height: spaces.s3,
       },
     },
   },
@@ -32,7 +32,7 @@ export default ({ colors, spaces }) => ({
         bottomBorderSelected: colors.primary,
       },
       spaces: {
-        paddingWidth: spaces.s40,
+        paddingWidth: spaces.s4,
       },
     },
     menu: {
@@ -43,7 +43,7 @@ export default ({ colors, spaces }) => ({
         border: colors.darkWhite,
       },
       sizes: {
-        height: spaces.s30,
+        height: spaces.s3,
       },
     },
   },
@@ -58,7 +58,7 @@ export default ({ colors, spaces }) => ({
         textHover: colors.darkerGrey,
       },
       spaces: {
-        paddingWidth: spaces.s40,
+        paddingWidth: spaces.s4,
       },
     },
     menu: {
@@ -69,7 +69,7 @@ export default ({ colors, spaces }) => ({
         border: colors.darkWhite,
       },
       sizes: {
-        height: spaces.s30,
+        height: spaces.s3,
       },
     },
   },

@@ -13,11 +13,11 @@ export default ({ colors, fonts, spaces }) => ({
     text: colors.white,
   },
   spaces: {
-    paddingHeight: spaces.s4,
-    paddingWidth: spaces.s5,
+    paddingHeight: spaces.s0_5,
+    paddingWidth: spaces.s0_5,
   },
   fonts: {
-    fontSize: fonts.fontSize.fs8,
+    fontSize: fonts.fontSize.fs12,
     lineHeight: fonts.lineHeight.lh8,
     fontWeight: fonts.fontWeight.fw600,
     fontFamily: fonts.fontFamily.primary,

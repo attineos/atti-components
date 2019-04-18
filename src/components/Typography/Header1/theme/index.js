@@ -1,11 +1,11 @@
 export default ({ colors, fonts }) => ({
   colors: {
-    text: colors.black,
+    text: colors.lightBlack,
   },
   fonts: {
     fontFamily: fonts.fontFamily.primary,
-    fontSize: fonts.fontSize.fs48,
-    fontWeight: fonts.fontWeight.fw900,
-    lineHeight: fonts.lineHeight.lh56,
+    fontSize: fonts.fontSize.fs72,
+    fontWeight: fonts.fontWeight.fw700,
+    lineHeight: '1em',
   },
 })

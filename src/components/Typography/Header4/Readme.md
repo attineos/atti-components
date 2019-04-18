@@ -1,3 +1,3 @@
 ```js
-<Header4>This is a Header4</Header4>
+<Header4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Header4>
 ```

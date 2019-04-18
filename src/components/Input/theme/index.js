@@ -35,8 +35,8 @@ export default ({ forms, spaces }) => ({
       width: spaces.full,
     },
     spaces: {
-      paddingHeight: spaces.s4,
-      paddingWidth: spaces.s5,
+      paddingHeight: spaces.s0_5,
+      paddingWidth: spaces.s0_5,
     },
   },
 })

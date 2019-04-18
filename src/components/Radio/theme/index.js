@@ -12,14 +12,14 @@ export default ({ borders, colors, forms, spaces }) => ({
       borderChecked: forms.colors.border,
     },
     sizes: {
-      heights: spaces.s12,
-      widths: spaces.s12,
+      heights: spaces.s1,
+      widths: spaces.s1,
     },
     spaces: {
-      top: spaces.s2,
-      bottom: spaces.s2,
-      left: spaces.s3,
-      right: spaces.s4,
+      top: spaces.s0_25,
+      bottom: spaces.s0_25,
+      left: spaces.s0_25,
+      right: spaces.s0_5,
     },
   },
 })

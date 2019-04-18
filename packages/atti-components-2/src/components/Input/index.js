@@ -22,6 +22,7 @@ class Input extends PureComponent {
       type,
       value,
       variance,
+      ...rest
     } = this.props
 
     return (
@@ -37,6 +38,7 @@ class Input extends PureComponent {
         type={type}
         value={value}
         variance={variance}
+        {...rest}
       />
     )
   }

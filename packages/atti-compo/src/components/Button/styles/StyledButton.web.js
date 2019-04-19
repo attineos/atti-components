@@ -20,7 +20,6 @@ const colors = css`
 
 const forms = css`
   height: ${({ theme }) => theme.components.button.sizes.height};
-  width: ${({ theme }) => theme.components.button.sizes.width};
 `
 
 const spaces = css`
@@ -34,8 +33,8 @@ const StyledButton = styled(Text.withComponent('button'))`
   ${forms};
   ${spaces};
 
+  display: inline-block;
   text-align: ${({ theme }) => theme.components.button.textAlign};
-
   cursor: pointer;
 `
 

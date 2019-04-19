@@ -11,6 +11,6 @@ export default ({ borders, colors, spaces }) => ({
     textSelected: colors.white,
   },
   spaces: {
-    padding: spaces.s4,
+    padding: spaces.s0_5,
   },
 })

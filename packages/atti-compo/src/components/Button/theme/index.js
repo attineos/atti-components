@@ -2,15 +2,19 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
   borders: {
     primary: {
       borderWidth: borders.widths.bw2,
-      borderRadius: borders.radius.medium,
+      borderRadius: borders.radius.none,
     },
-    secondary: {
+    neutral: {
       borderWidth: borders.widths.bw2,
-      borderRadius: borders.radius.medium,
+      borderRadius: borders.radius.none,
     },
-    normal: {
+    light: {
       borderWidth: borders.widths.bw2,
-      borderRadius: borders.radius.medium,
+      borderRadius: borders.radius.none,
+    },
+    dark: {
+      borderWidth: borders.widths.bw2,
+      borderRadius: borders.radius.none,
     },
   },
   colors: {
@@ -19,15 +23,20 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
       border: colors.transparent,
       text: colors.white,
     },
-    secondary: {
+    neutral: {
       background: colors.neutral,
       border: colors.transparent,
       text: colors.white,
     },
-    normal: {
+    light: {
       background: colors.transparent,
-      border: colors.neutral,
-      text: colors.grey,
+      border: colors.white,
+      text: colors.white,
+    },
+    dark: {
+      background: colors.transparent,
+      border: colors.black,
+      text: colors.black,
     },
   },
   sizes: {
@@ -37,8 +46,8 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
     hover: opacities.o8,
   },
   spaces: {
-    paddingHeight: spaces.s4,
-    paddingWidth: spaces.s10,
+    paddingHeight: 0,
+    paddingWidth: spaces.s1,
   },
 
   textAlign: 'center',

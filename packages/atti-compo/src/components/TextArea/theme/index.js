@@ -15,7 +15,7 @@ export default ({ forms, spaces }) => ({
       text: forms.colors.text,
     },
     spaces: {
-      padding: spaces.s5,
+      padding: spaces.s0_5,
     },
     sizes: {
       height: spaces.full,

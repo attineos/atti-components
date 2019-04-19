@@ -2,8 +2,8 @@ export default ({ colors, fonts, spaces }) => ({
   breadcrumbSeparator: {
     color: colors.grey,
     spaces: {
-      marginLeft: spaces.s3,
-      marginRight: spaces.s3,
+      marginLeft: spaces.s0_25,
+      marginRight: spaces.s0_25,
     },
   },
   currentElement: {
@@ -17,6 +17,6 @@ export default ({ colors, fonts, spaces }) => ({
     fontWeight: fonts.fontWeight.fw100,
   },
   spaces: {
-    marginBottom: spaces.s4,
+    marginBottom: spaces.s0_5,
   },
 })

@@ -32,6 +32,6 @@ export default ({ borders, boxShadows, colors, spaces }) => ({
     },
   },
   sizes: {
-    height: spaces.s26,
+    height: spaces.s3,
   },
 })

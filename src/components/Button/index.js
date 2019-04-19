@@ -31,7 +31,7 @@ Button.defaultProps = {
   onClick: noop(),
   onPress: noop(),
   type: 'button',
-  variance: 'normal',
+  variance: 'primary',
 }
 
 Button.propTypes = {

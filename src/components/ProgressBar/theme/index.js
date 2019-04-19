@@ -12,7 +12,7 @@ export default ({ borders, colors, spaces }) => ({
   },
 
   sizes: {
-    height: spaces.s12,
+    height: spaces.s1,
     width: spaces.full,
   },
 })

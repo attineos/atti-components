@@ -5,9 +5,9 @@ export default ({ colors, fonts }) => ({
     },
     fonts: {
       fontFamily: fonts.fontFamily.primary,
-      fontSize: fonts.fontSize.fs14,
+      fontSize: fonts.fontSize.fs16,
       fontWeight: fonts.fontWeight.fw400,
-      lineHeight: fonts.lineHeight.lh24,
+      lineHeight: '1.5em',
     },
   },
   error: {
@@ -16,9 +16,9 @@ export default ({ colors, fonts }) => ({
     },
     fonts: {
       fontFamily: fonts.fontFamily.primary,
-      fontSize: fonts.fontSize.fs14,
+      fontSize: fonts.fontSize.fs16,
       fontWeight: fonts.fontWeight.fw400,
-      lineHeight: fonts.lineHeight.lh24,
+      lineHeight: '1.5em',
     },
   },
   warning: {
@@ -27,9 +27,9 @@ export default ({ colors, fonts }) => ({
     },
     fonts: {
       fontFamily: fonts.fontFamily.primary,
-      fontSize: fonts.fontSize.fs14,
+      fontSize: fonts.fontSize.fs16,
       fontWeight: fonts.fontWeight.fw400,
-      lineHeight: fonts.lineHeight.lh24,
+      lineHeight: '1.5em',
     },
   },
 })

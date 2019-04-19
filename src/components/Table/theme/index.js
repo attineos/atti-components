@@ -12,8 +12,8 @@ export default ({ borders, colors, spaces }) => ({
     headerText: colors.grey,
   },
   spaces: {
-    headerHeight: spaces.s25,
-    lineHeight: spaces.s22,
-    firstChildLeftSpacing: spaces.s20,
+    headerHeight: spaces.s2,
+    lineHeight: spaces.s2,
+    firstChildLeftSpacing: spaces.s2,
   },
 })

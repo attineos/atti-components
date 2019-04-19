@@ -1,5 +1,5 @@
 Header3 :
 
 ```js
-<Header3>This is a Header3</Header3>
+<Header3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Header3>
 ```

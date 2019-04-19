@@ -6,6 +6,6 @@ export default ({ colors, fonts }) => ({
     fontFamily: fonts.fontFamily.primary,
     fontSize: fonts.fontSize.fs12,
     fontWeight: fonts.fontWeight.fw400,
-    lineHeight: fonts.lineHeight.lh16,
+    lineHeight: '1.5em',
   },
 })

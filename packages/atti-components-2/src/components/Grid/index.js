@@ -11,8 +11,8 @@ const getColumnTemplateForIE = (colCount, gapSize) =>
   map(range(colCount), () => '1fr').join(` ${gapSize}px `)
 
 // Iterate over the responsive spaces to apply the corresponding rules
-const responsiveGrid = layout => `
-  grid-gap: ${layout.gap};
+const responsiveGrid = (layout, spaces) => `
+  grid-gap: ${spaces[layout.gap]};
   -ms-grid-columns: ${getColumnTemplateForIE(layout.cols, layout.gap)};
   grid-template-columns: ${getColumnTemplate(layout.cols)};
 `
@@ -23,7 +23,9 @@ const Grid = styled(Container)`
   display: grid;
   ${({ theme }) =>
     join(
-      map(theme.layout, layout => wrapMediaQuery(layout.from, layout.to, responsiveGrid(layout))),
+      map(theme.layout, layout =>
+        wrapMediaQuery(layout.from, layout.to, responsiveGrid(layout, theme.spaces)),
+      ),
       '',
     )};
 `

@@ -27,38 +27,27 @@ const attineosTheme = {
       secondary: 'Montserrat',
     },
     fontSize: {
+      fs10: '10px',
+      fs12: '12px',
+      fs14: '14px',
       fs18: '18px',
+      fs20: '20px',
+      fs22: '22px',
+      fs24: '24px',
       fs28: '28px',
+      fs30: '30px',
       fs34: '34px',
       fs44: '44px',
-    },
-  },
-  layout: {
-    xlDesktop: {
-      containerMaxWidth: '1300px',
+      fs54: '54px',
+      fs70: '70px',
     },
   },
   components: {
     bigText: {
-      colors: {
-        text: secondaryColor,
-      },
       fonts: {
-        fontFamily: 'Montserrat',
-        fontSize: '18px',
-        lineHeight: '1.2em',
-      },
-    },
-    button: {
-      borders: {
-        borderRadius: '0px',
-      },
-      colors: {
-        background: lightPrimaryColor,
-      },
-      spaces: {
-        paddingHeight: '15px',
-        paddingWidth: '30px',
+        fontSize: '22px',
+        fontWeight: 300,
+        lineHeight: '1.4em',
       },
     },
     header1: {
@@ -98,6 +87,13 @@ const attineosTheme = {
     text: {
       fonts: {
         fontSize: '18px',
+        fontWeight: 300,
+        lineHeight: '1.4em',
+      },
+    },
+    smallText: {
+      fonts: {
+        fontSize: '14px',
         fontWeight: 300,
         lineHeight: '1.4em',
       },

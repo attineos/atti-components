@@ -16,6 +16,7 @@ class Input extends PureComponent {
       form,
       name,
       onChange,
+      _ref,
       pattern,
       placeholder,
       size,
@@ -37,6 +38,7 @@ class Input extends PureComponent {
         size={size}
         type={type}
         value={value}
+        ref={_ref}
         variance={variance}
         {...rest}
       />
@@ -49,6 +51,7 @@ Input.defaultProps = {
   form: undefined,
   name: '',
   onChange: undefined,
+  _ref: undefined,
   pattern: undefined,
   placeholder: '',
   size: null,
@@ -79,6 +82,10 @@ Input.propTypes = {
    * @param {SyntheticEvent} event The react `SyntheticEvent`
    */
   onChange: PropTypes.func,
+  /**
+   * Ref of the input element.
+   */
+  _ref: PropTypes.func,
   /**
    * Specifies a regular expression that an Input elemen'ts value is checked against.
    */

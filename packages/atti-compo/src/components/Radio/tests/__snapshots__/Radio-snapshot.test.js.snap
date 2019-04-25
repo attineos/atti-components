@@ -20,7 +20,7 @@ exports[`Radio renders correctly 1`] = `
         value="Atticomponents"
       />
       <span
-        className="RadioButton-sc-8w77ik-0 eYQPmS"
+        className="RadioButton-sc-8w77ik-0 eRaIuo"
       />
     </div>
   </span>

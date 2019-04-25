@@ -12,7 +12,6 @@
         { url: '/#/', name: 'Item 2' },
         { url: '/#/', name: 'Item 3' },
         { url: '/#/', name: 'Item 4' },
-        { url: '/#/', name: 'Item 5' },
       ]}
     />
   </Cell>
@@ -36,7 +35,7 @@
     </Button>
   </Cell>
   <Cell cols={[[5, 9], [5, 9], [5, 9]]}>
-    <Button onClick={() => alert('Hello !')} variance="secondary">
+    <Button onClick={() => alert('Hello !')} variance="neutral">
       I'm secondary
     </Button>
   </Cell>

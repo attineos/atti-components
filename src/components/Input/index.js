@@ -16,7 +16,7 @@ class Input extends PureComponent {
       form,
       name,
       onChange,
-      _ref,
+      forwardRef,
       pattern,
       placeholder,
       size,
@@ -38,7 +38,7 @@ class Input extends PureComponent {
         size={size}
         type={type}
         value={value}
-        ref={_ref}
+        ref={forwardRef}
         variance={variance}
         {...rest}
       />

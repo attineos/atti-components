@@ -8,7 +8,7 @@ exports[`InputFile renders correctly 1`] = `
     className="atti-box"
   >
     <div
-      className="StyledContainer-m5ly54-0 hDTspd"
+      className="StyledContainer-m5ly54-0 lgZwCX"
     >
       <input
         className="StyledInput-sc-19gmxuz-0 cyFwFw"
@@ -17,7 +17,7 @@ exports[`InputFile renders correctly 1`] = `
         type="file"
       />
       <button
-        className="Text-sc-187vq02-0-button StyledFilePicker-sc-1q1g117-0 atti-r-css  dkhgCm"
+        className="Text-sc-187vq02-0-button StyledFilePicker-sc-1q1g117-0 atti-r-css  eOlxkd"
         onClick={[Function]}
         onDragOver={[Function]}
         onDrop={[Function]}

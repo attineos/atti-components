@@ -8,7 +8,7 @@ exports[`CheckBox renders correctly 1`] = `
     className="atti-box"
   >
     <span
-      className="Atticomponents CheckBox-udu1se-0 kwjaRp CheckBoxBoxContainer-kmg3i5-0 bFExJg"
+      className="Atticomponents CheckBox-udu1se-0 kwjaRp CheckBoxBoxContainer-kmg3i5-0 hoxPgZ"
     >
       <input
         checked={true}
@@ -20,7 +20,7 @@ exports[`CheckBox renders correctly 1`] = `
         value="Atticomponents"
       />
       <span
-        className="CheckBoxBox-j9bhb-0 iwSrpm"
+        className="CheckBoxBox-j9bhb-0 oTPty"
       />
     </span>
   </span>

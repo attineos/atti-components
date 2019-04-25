@@ -7,8 +7,9 @@ const ItemsList = styled.ul.attrs(resetCSS)`
   height: 100%;
   display: flex;
 
-  border: 1px solid ${({ theme }) => theme.components.menu.withButtons.menu.colors.border};
-  border-radius: ${({ theme }) => theme.components.menu.withButtons.menu.borderRadius};
+  border: 1px solid
+    ${({ theme }) => theme.components.menu.menuDesktop.withButtons.menu.colors.border};
+  border-radius: ${({ theme }) => theme.components.menu.menuDesktop.withButtons.menu.borderRadius};
 `
 
 export default ItemsList

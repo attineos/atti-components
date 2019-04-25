@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components'
 const colors = css``
 
 const sizes = css`
-  height: ${({ theme }) => theme.components.menu.withLiftedTabs.menu.sizes.height};
-  width: ${({ theme }) => theme.components.menu.withLiftedTabs.menu.sizes.width};
+  height: ${({ theme }) => theme.components.menu.menuDesktop.withLiftedTabs.menu.sizes.height};
+  width: ${({ theme }) => theme.components.menu.menuDesktop.withLiftedTabs.menu.sizes.width};
 `
 
 const StyledMenu = styled.nav`

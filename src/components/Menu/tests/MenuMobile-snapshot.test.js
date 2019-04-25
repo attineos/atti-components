@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import StyledButton from '../styles/StyledButton';
+import MenuMobile from '../components/MenuMobile';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('StyledButton renders correctly', () => {
+it('MenuMobile renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <StyledButton ></StyledButton>
+        <MenuMobile className="Atticomponents" elements={true} renderElement={mock} selectedElement="Atticomponents" ></MenuMobile>
       </Wrapper>
       )
     .toJSON();

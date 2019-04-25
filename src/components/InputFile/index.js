@@ -1,3 +1,4 @@
+// @noSnapshot
 import React, { PureComponent } from 'react'
 import { head } from 'lodash'
 import PropTypes from 'prop-types'

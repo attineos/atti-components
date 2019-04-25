@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import StyledButton from '../styles/StyledButton';
+import constructTheme from '../helpers/constructTheme';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('StyledButton renders correctly', () => {
+it('constructTheme renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <StyledButton ></StyledButton>
+        <constructTheme ></constructTheme>
       </Wrapper>
       )
     .toJSON();

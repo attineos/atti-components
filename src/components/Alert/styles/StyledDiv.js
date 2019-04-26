@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
-import { BigText } from '../../Typography'
+import Link from '../../Link'
+import { Typography } from '../../Typographies'
 
 const borders = css`
   border: ${({ theme, variance }) =>
@@ -21,19 +22,16 @@ const sizes = css`
 
 const colors = css`
   background-color: ${({ theme, variance }) => theme.components.alert.colors.background[variance]};
-  color: ${({ theme, variance }) => theme.components.alert.colors.text[variance]};
+  ${Typography}, ${Link} {
+    color: ${({ theme, variance }) => theme.components.alert.colors.text[variance]};
+  }
 `
 
-const fonts = css`
-  font-weight: ${({ theme }) => theme.components.alert.fonts.fontWeight};
-`
-
-const StyledDiv = styled(BigText.withComponent('div'))`
+const StyledDiv = styled('div')`
   ${borders}
   ${spaces}
   ${sizes}
   ${colors}
-  ${fonts}
 `
 
 export default StyledDiv

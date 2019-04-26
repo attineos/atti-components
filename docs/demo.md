@@ -16,17 +16,25 @@
     />
   </Cell>
   <Cell cols={[[1, 6], [1, 6], [1, 13]]}>
-    <Alert type="success">
-      This is a success <Link href="#/">with a link</Link>
+    <Alert variance="success">
+      <Text>
+        This is a success <Link href="#/">with a link</Link>
+      </Text>
     </Alert>
-    <Alert type="error">
-      This is an error <Link href="#/">with a link</Link>
+    <Alert variance="error">
+      <Text>
+        This is an error <Link href="#/">with a link</Link>
+      </Text>
     </Alert>
-    <Alert type="warning">
-      This is a warning <Link href="#/">with a link</Link>
+    <Alert variance="warning">
+      <Text>
+        This is a warning <Link href="#/">with a link</Link>
+      </Text>
     </Alert>
-    <Alert type="info">
-      This is an info <Link href="#/">with a link</Link>
+    <Alert variance="info">
+      <Text>
+        This is an info <Link href="#/">with a link</Link>
+      </Text>
     </Alert>
   </Cell>
   <Cell cols={[[1, 5], [1, 5], [1, 5]]}>

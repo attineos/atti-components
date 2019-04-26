@@ -1,3 +1,4 @@
+// @noSnapshot
 import styled, { css } from 'styled-components'
 import { Text } from '../../Typography'
 

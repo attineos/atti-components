@@ -24,19 +24,31 @@ If none of these design suit your needs, please check the next paragraph to full
 ```js
 <React.Fragment>
   <Menu
-    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
+    elements={[
+      { name: 'Account', url: '#' },
+      { name: 'Notifications', url: '#' },
+      { name: 'Security', url: '#' },
+    ]}
     variance="basic"
     selectedElement="Notifications"
   />
   <br />
   <Menu
-    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
+    elements={[
+      { name: 'Account', url: '#' },
+      { name: 'Notifications', url: '#' },
+      { name: 'Security', url: '#' },
+    ]}
     variance="withButtons"
     selectedElement="Notifications"
   />
   <br />
   <Menu
-    elements={[{ name: 'Account' }, { name: 'Notifications' }, { name: 'Security' }]}
+    elements={[
+      { name: 'Account', url: '#' },
+      { name: 'Notifications', url: '#' },
+      { name: 'Security', url: '#' },
+    ]}
     variance="withLiftedTabs"
     selectedElement="Notifications"
   />
@@ -57,11 +69,12 @@ const styled = require('styled-components')
 // Define some default CSS for our custom elements
 const DefaultItem = styled.css`
   height: 100%;
-  padding: 0 ${({ theme }) => theme.components.menu.basic.link.spaces.paddingWidth};
+  padding: 0 ${({ theme }) => theme.components.menu.menuDesktop.basic.link.spaces.paddingWidth};
   display: inline-flex;
   &:hover {
-    background-color: ${({ theme }) => theme.components.menu.basic.link.colors.backgroundHover};
-    color: ${({ theme }) => theme.components.menu.basic.link.colors.textHover};
+    background-color: ${({ theme }) =>
+      theme.components.menu.menuDesktop.basic.link.colors.backgroundHover};
+    color: ${({ theme }) => theme.components.menu.menuDesktop.basic.link.colors.textHover};
   }
 `
 
@@ -81,7 +94,6 @@ color: green;
     { name: 'Specific Custom render', someProps: 15, render: element => <Red>{element.name}</Red> },
     { name: 'Global Custom renderer', someProps: 10 },
     { name: 'Default Renderer with an url', url: '#' },
-    { name: 'Default Renderer w/out an url' },
   ]}
   separator={'>'}
   renderElement={element => {

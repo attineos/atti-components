@@ -4,7 +4,7 @@ export default ({ borders, colors }) => ({
   },
   colors: {
     border: colors.transparent,
-    borderHover: colors.secondary,
-    text: colors.secondary,
+    borderHover: colors.neutral,
+    text: colors.neutral,
   },
 })

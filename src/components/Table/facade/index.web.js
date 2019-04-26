@@ -11,7 +11,7 @@ import {
   StyledTableCell,
 } from '../styles'
 
-import { Text } from '../../Typography'
+import { Text } from '../../Typographies'
 
 class TableFacade extends Facade {
   renderTable(children) {

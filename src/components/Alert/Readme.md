@@ -1,23 +1,31 @@
 Alert with error :
 
 ```js
-<Alert variance="error">There is an error</Alert>
+<Alert variance="error">
+  <Text>There is an error</Text>
+</Alert>
 ```
 
 Alert with success :
 
 ```js
-<Alert variance="success">Success</Alert>
+<Alert variance="success">
+  <Text>Success</Text>
+</Alert>
 ```
 
 Alert with information :
 
 ```js
-<Alert variance="info">Information</Alert>
+<Alert variance="info">
+  <Text>Information</Text>
+</Alert>
 ```
 
 Alert with warning :
 
 ```js
-<Alert variance="warning">Warning</Alert>
+<Alert variance="warning">
+  <Text>Warning</Text>
+</Alert>
 ```

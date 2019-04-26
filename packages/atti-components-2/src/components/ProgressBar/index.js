@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import StyledProgressBar from './styles/StyledProgressBar'
-import { Text } from '../Typography'
+import { Text } from '../Typographies'
 
 /**
  * A basic progress bar, which shows filling percentage.

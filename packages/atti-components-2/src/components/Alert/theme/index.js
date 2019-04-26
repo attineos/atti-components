@@ -21,7 +21,7 @@ export default ({ borders, colors, spaces, fonts }) => ({
     },
   },
   spaces: {
-    padding: spaces.s0_5,
+    padding: spaces.s1,
   },
   borders: {
     radius: borders.radius.medium,

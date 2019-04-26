@@ -28,7 +28,7 @@ import {
   label,
   smallText,
   text,
-} from '../../components/Typography/theme'
+} from '../../components/Typographies/theme'
 
 export default constants => ({
   alert: alert(constants),

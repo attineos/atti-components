@@ -33,7 +33,8 @@ import {
   Label,
   SmallText,
   Text,
-} from './components/Typography'
+  Typography,
+} from './components/Typographies'
 
 import { defaultTheme, attineosTheme } from './themes'
 
@@ -71,6 +72,7 @@ module.exports = {
   Table,
   Text,
   TextArea,
+  Typography,
 
   defaultTheme,
   attineosTheme,

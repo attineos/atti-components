@@ -21,6 +21,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - Added FormText Typography component [@Atrakeur](https://github.com/atrakeur)
 - Added `onChange` prop to TextArea component [@alexandre-lelain](https://github.com/alexandre-lelain)
 - Added custom theme import option to storybook [@alexandre-lelain](https://github.com/alexandre-lelain)
+- Added a new `Typography` component (this component is extended by all the other typographies) by [@akaala](https://github.com/akaala)
 
 ### Changed
 
@@ -36,6 +37,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - **Breaking Change**: Removed `sort` option from Select [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: The `Menu` component is now responsive. You can add set the `isResponsive` props to false to keep the old behavior by [@akaala](https://github.com/akaala)
 - Some design changes have been made on the `Link` and `Menu` components by [@akaala](https://github.com/akaala)
+- Some design and DOM changes have been made on the `Alert` component by [@akaala](https://github.com/akaala)
 - Fixed Input height [@Atrakeur](https://www.atrakeur.com)
 - Fixed `danger` type in Alert component [@alexandre-lelain](https://github.com/alexandre-lelain)
 

@@ -88,4 +88,4 @@ InputFile.propTypes = {
   variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }
 
-export default styled(InputFile)
+export default styled(InputFile)``

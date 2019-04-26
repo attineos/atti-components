@@ -1,5 +1,6 @@
 // @noSnapshot
 import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import { head } from 'lodash'
 import PropTypes from 'prop-types'
 
@@ -82,4 +83,4 @@ InputFile.propTypes = {
   variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }
 
-export default InputFile
+export default styled(InputFile)

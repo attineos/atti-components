@@ -34,12 +34,12 @@ class InputFile extends PureComponent {
   allowDrop = e => e.preventDefault()
 
   render() {
-    const { placeholder, name, variance } = this.props
+    const { placeholder, name, variance, className } = this.props
 
     const { file } = this.state
 
     return (
-      <StyledContainer>
+      <StyledContainer className={className}>
         <StyledInput name={name} type="file" ref={this.setRef} onChange={this.onChangeFile} />
         <StyledFilePicker
           onClick={this.browseFile}
@@ -55,12 +55,17 @@ class InputFile extends PureComponent {
 }
 
 InputFile.defaultProps = {
+  className: '',
   name: '',
   placeholder: '',
   variance: 'normal',
 }
 
 InputFile.propTypes = {
+  /**
+   *
+   */
+  className: PropTypes.string,
   /**
    * The name of the input file.
    */

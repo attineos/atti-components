@@ -17,6 +17,7 @@ class Input extends PureComponent {
       form,
       name,
       onChange,
+      forwardedRef,
       pattern,
       placeholder,
       size,
@@ -38,6 +39,7 @@ class Input extends PureComponent {
         size={size}
         type={type}
         value={value}
+        ref={forwardedRef}
         variance={variance}
         {...rest}
       />
@@ -50,6 +52,7 @@ Input.defaultProps = {
   form: undefined,
   name: '',
   onChange: undefined,
+  forwardedRef: undefined,
   pattern: undefined,
   placeholder: '',
   size: null,
@@ -81,6 +84,10 @@ Input.propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * Ref of the input element.
+   */
+  forwardedRef: PropTypes.func,
+  /**
    * Specifies a regular expression that an Input elemen'ts value is checked against.
    */
   pattern: PropTypes.string,
@@ -107,4 +114,4 @@ Input.propTypes = {
 }
 
 /** @component */
-export default styled(Input)``
+export default styled(React.forwardRef((props, ref) => <Input {...props} forwardedRef={ref} />))``

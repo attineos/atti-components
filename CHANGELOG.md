@@ -34,6 +34,8 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - **Breaking Change**: Changed FileInput theme format to be the same as Button [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Renamed Radio's theme `margins` to `spaces` [@Atrakeur](https://www.atrakeur.com)
 - **Breaking Change**: Removed `sort` option from Select [@Atrakeur](https://www.atrakeur.com)
+- **Breaking Change**: The `Menu` component is now responsive. You can add set the `isResponsive` props to false to keep the old behavior by [@akaala](https://github.com/akaala)
+- Some design changes have been made on the `Link` and `Menu` components by [@akaala](https://github.com/akaala)
 - Fixed Input height [@Atrakeur](https://www.atrakeur.com)
 - Fixed `danger` type in Alert component [@alexandre-lelain](https://github.com/alexandre-lelain)
 
@@ -53,21 +55,22 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 ## [0.0.2] - 2018-12-07
 
 ### Added
+
 - **Breaking Change**: Remove LayoutGridCell & LayoutContainer by [@akaala](https://github.com/akaala)
-   - LayoutGridCell is replaced by Cell
-   - LayoutContainer with type RAW is replaced by Container
-   - LayoutContainer with type GRID is replaced by Grid
-   - default number of columns in the grid has changed -> 12 cols in xldesktop & desktop / 6 cols in tablet & mobile
-   - values of theme.layout has changed accordingly
-   - Container & Grid now includes a default padding right & left
+  - LayoutGridCell is replaced by Cell
+  - LayoutContainer with type RAW is replaced by Container
+  - LayoutContainer with type GRID is replaced by Grid
+  - default number of columns in the grid has changed -> 12 cols in xldesktop & desktop / 6 cols in tablet & mobile
+  - values of theme.layout has changed accordingly
+  - Container & Grid now includes a default padding right & left
 - New component `Avatar` by @a.tinel & [@akaala](https://github.com/akaala)
 - New helpers availables from `atti-components/helpers` (See docs for more information) by [@akaala](https://github.com/akaala) :
-   - displays
-   - heights
-   - margins
-   - paddings
-   - sizes
-   - widths
+  - displays
+  - heights
+  - margins
+  - paddings
+  - sizes
+  - widths
 
 ### Changed
 
@@ -95,13 +98,13 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - Fix: the `InputFile` component now correctly opens a dialog by [@munvier](https://gitlab.com/munvier)
 
 ### Removed
+
 - **Breaking Change**: The following components don't support `label` property anymore. You should combine them with a Label component. By [@akaala](https://github.com/akaala)
   - CheckBox
   - Input
   - Radio
   - Select
   - TextArea
-
 
 ## [0.0.1] - 2018-11-21
 

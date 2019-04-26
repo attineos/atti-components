@@ -20,7 +20,7 @@ const theme = {
   componentsFactory: ({ colors }) => ({
     square: {
       background: colors.primary,
-      border: colors.secondary,
+      border: colors.neutral,
     },
   }),
 }

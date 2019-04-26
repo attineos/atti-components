@@ -1,9 +1,3 @@
-import * as Basic from './basic'
-import * as WithButtons from './withButtons'
-import * as WithLiftedTabs from './withLiftedTabs'
+import MenuContainer from './MenuContainer'
 
-export default {
-  Basic,
-  WithButtons,
-  WithLiftedTabs,
-}
+export { MenuContainer }

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import InputGroupFacade from './facade'
 /**
- * A Simple Button compatible for web and native.
+ * A Simple InputGroup compatible for web and native.
  *
  */
 class InputGroup extends PureComponent {

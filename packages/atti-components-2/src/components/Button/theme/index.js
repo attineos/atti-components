@@ -30,8 +30,8 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
     },
     light: {
       background: colors.transparent,
-      border: colors.neutral,
-      text: colors.neutral,
+      border: colors.white,
+      text: colors.white,
     },
     dark: {
       background: colors.transparent,

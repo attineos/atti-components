@@ -132,7 +132,7 @@
       ]}
       renderCell={(col, element) =>
         col.name === 'inStock' ? (
-          <td>{element.inStock ? <Badge>Oui</Badge> : <Badge type="danger">Non</Badge>}</td>
+          <td>{element.inStock ? <Badge>Yes</Badge> : <Badge type="danger">No</Badge>}</td>
         ) : null
       }
     />

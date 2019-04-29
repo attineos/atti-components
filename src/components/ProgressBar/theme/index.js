@@ -7,12 +7,12 @@ export default ({ borders, colors, spaces }) => ({
 
   colors: {
     background: colors.transparent,
-    fill: colors.primary,
-    text: colors.grey,
+    fill: colors.lightPrimary,
+    text: colors.darkerGrey,
   },
 
   sizes: {
-    height: spaces.s1,
+    height: spaces.s1_5,
     width: spaces.full,
   },
 })

@@ -88,4 +88,5 @@ InputFile.propTypes = {
   variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }
 
+/** @component */
 export default styled(InputFile)``

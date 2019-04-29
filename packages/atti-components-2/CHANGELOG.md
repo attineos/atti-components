@@ -38,6 +38,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - **Breaking Change**: The `Menu` component is now responsive. You can add set the `isResponsive` props to false to keep the old behavior by [@akaala](https://github.com/akaala)
 - Some design changes have been made on the `Link` and `Menu` components by [@akaala](https://github.com/akaala)
 - Some design and DOM changes have been made on the `Alert` component by [@akaala](https://github.com/akaala)
+- Some color accessibility changes have been made on multiple components by [@akaala](https://github.com/akaala)
 - Fixed Input height [@Atrakeur](https://www.atrakeur.com)
 - Fixed `danger` type in Alert component [@alexandre-lelain](https://github.com/alexandre-lelain)
 

@@ -53,6 +53,7 @@ const StyledProgressBar = styled.div`
   ${colors};
   ${positionFirstComponent} ${positionText};
   ${size};
+  padding: 2px 0;
   user-select: none;
 `
 export default StyledProgressBar

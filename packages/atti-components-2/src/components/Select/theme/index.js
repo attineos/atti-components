@@ -22,14 +22,14 @@ export default ({ colors, forms, spaces }) => ({
       arrowHeight: '5px',
       arrowWidth: '10px',
       height: forms.sizes.height,
-      separatorWidth: spaces.s0_25,
+      separatorWidth: '2px',
       width: spaces.full,
     },
     spaces: {
       paddingTop: spaces.s0_5,
       paddingLeft: spaces.s0_5,
       paddingBottom: spaces.s0_5,
-      paddingRight: spaces.s2,
+      paddingRight: spaces.s3,
     },
   },
 })

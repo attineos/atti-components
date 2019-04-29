@@ -5,6 +5,6 @@ export default ({ borders, colors }) => ({
   colors: {
     border: 'currentcolor',
     borderHover: 'currentcolor',
-    text: colors.secondary,
+    text: colors.primary,
   },
 })

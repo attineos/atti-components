@@ -28,9 +28,11 @@ class Button extends PureComponent {
 }
 
 Button.defaultProps = {
+  children: '',
   className: '',
   onClick: noop(),
   onPress: noop(),
+  title: '',
   type: 'button',
   variance: 'primary',
 }
@@ -41,7 +43,7 @@ Button.propTypes = {
    * ![Web](src/images/web.png "")
    * Content of the component. Only text for now.
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
 
   /**
    * Classes of the Button.
@@ -67,7 +69,7 @@ Button.propTypes = {
    * ![Web](src/images/web.png "")
    * Content of the component. Only text for now.
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   /**
    * The type to pass to the underlying button html element
    * ![Web](src/images/web.png "")
@@ -79,7 +81,7 @@ Button.propTypes = {
    * ![Native](src/images/native.png "")
    * ![Web](src/images/web.png "")
    */
-  variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
+  variance: PropTypes.oneOf(['primary', 'neutral', 'light', 'dark']),
 }
 
 /** @component */

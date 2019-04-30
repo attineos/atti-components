@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { isNull, map, isFunction, isUndefined } from 'lodash'
@@ -29,30 +29,34 @@ class MenuMobile extends PureComponent {
   renderElement = (element, isSelected) => {
     const { renderElement } = this.props
 
-    return chain(
-      // We assume a valid result as soon as we got a non null element
-      element => !isNull(element) && !isUndefined(element),
-      // Most precise, we got a custom render function for THAT element
-      () =>
-        element && element.render && isFunction(element.render)
-          ? element.render(element, isSelected)
-          : null,
-      // A little less precise, we got a custom render function for each item
-      () =>
-        renderElement && isFunction(renderElement) ? renderElement(element, isSelected) : null,
-      // Least precise, neither other function returned something, we default to some hand made rendering
-      () => (
-        <MenuItem key={element.id || element.name} onClick={element.onClick}>
-          <MenuLink
-            href={element.url}
-            target={element.target}
-            onClick={element.onClick}
-            isSelected={isSelected}
-          >
-            {element.name}
-          </MenuLink>
-        </MenuItem>
-      ),
+    return (
+      <Fragment key={element.id || element.name}>
+        {chain(
+          // We assume a valid result as soon as we got a non null element
+          element => !isNull(element) && !isUndefined(element),
+          // Most precise, we got a custom render function for THAT element
+          () =>
+            element && element.render && isFunction(element.render)
+              ? element.render(element, isSelected)
+              : null,
+          // A little less precise, we got a custom render function for each item
+          () =>
+            renderElement && isFunction(renderElement) ? renderElement(element, isSelected) : null,
+          // Least precise, neither other function returned something, we default to some hand made rendering
+          () => (
+            <MenuItem onClick={element.onClick}>
+              <MenuLink
+                href={element.url}
+                target={element.target}
+                onClick={element.onClick}
+                isSelected={isSelected}
+              >
+                {element.name}
+              </MenuLink>
+            </MenuItem>
+          ),
+        )}
+      </Fragment>
     )
   }
 
@@ -72,11 +76,9 @@ class MenuMobile extends PureComponent {
 
         <SideMenu opened={opened}>
           <MenuLinksList>
-            {map(elements, element => (
-              <React.Fragment key={element.text}>
-                {this.renderElement(element, (element.id || element.name) === selectedElement)}
-              </React.Fragment>
-            ))}
+            {map(elements, element =>
+              this.renderElement(element, (element.id || element.name) === selectedElement),
+            )}
           </MenuLinksList>
         </SideMenu>
       </MenuNavMobile>

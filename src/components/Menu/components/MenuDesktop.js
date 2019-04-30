@@ -1,5 +1,5 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -24,30 +24,34 @@ class MenuDesktop extends PureComponent {
 
     const { StyledItem, StyledItemLink } = this.getStylesFromType()
 
-    return chain(
-      // We assume a valid result as soon as we got a non null element
-      element => !isNull(element) && !isUndefined(element),
-      // Most precise, we got a custom render function for THAT element
-      () =>
-        element && element.render && isFunction(element.render)
-          ? element.render(element, isSelected)
-          : null,
-      // A little less precise, we got a custom render function for each item
-      () =>
-        renderElement && isFunction(renderElement) ? renderElement(element, isSelected) : null,
-      // Least precise, neither other function returned something, we default to some hand made rendering
-      () => (
-        <StyledItem key={element.id || element.name} onClick={element.onClick}>
-          <StyledItemLink
-            href={element.url}
-            target={element.target}
-            onClick={element.onClick}
-            isSelected={isSelected}
-          >
-            {element.name}
-          </StyledItemLink>
-        </StyledItem>
-      ),
+    return (
+      <Fragment key={element.id || element.name}>
+        {chain(
+          // We assume a valid result as soon as we got a non null element
+          element => !isNull(element) && !isUndefined(element),
+          // Most precise, we got a custom render function for THAT element
+          () =>
+            element && element.render && isFunction(element.render)
+              ? element.render(element, isSelected)
+              : null,
+          // A little less precise, we got a custom render function for each item
+          () =>
+            renderElement && isFunction(renderElement) ? renderElement(element, isSelected) : null,
+          // Least precise, neither other function returned something, we default to some hand made rendering
+          () => (
+            <StyledItem onClick={element.onClick}>
+              <StyledItemLink
+                href={element.url}
+                target={element.target}
+                onClick={element.onClick}
+                isSelected={isSelected}
+              >
+                {element.name}
+              </StyledItemLink>
+            </StyledItem>
+          ),
+        )}
+      </Fragment>
     )
   }
 
@@ -76,11 +80,9 @@ class MenuDesktop extends PureComponent {
     return this.renderMenu(
       elements,
       <React.Fragment>
-        {map(elements, element => (
-          <React.Fragment key={element.text}>
-            {this.renderElement(element, (element.id || element.name) === selectedElement)}
-          </React.Fragment>
-        ))}
+        {map(elements, element =>
+          this.renderElement(element, (element.id || element.name) === selectedElement),
+        )}
       </React.Fragment>,
     )
   }

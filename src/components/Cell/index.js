@@ -60,7 +60,7 @@ Cell.propTypes = {
   /**
    * The childrens to use as content of the Cell.
    */
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   /**
    * Classes of the Cell.
    */
@@ -68,7 +68,7 @@ Cell.propTypes = {
   /**
    * The cols data to use for display.
    */
-  cols: PropTypes.element.isRequired,
+  cols: PropTypes.array.isRequired,
 }
 
 /** @component */

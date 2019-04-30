@@ -53,8 +53,8 @@ Table.propTypes = {
    * The cols to use as header for the table
    */
   cols: PropTypes.arrayOf(
-    PropTypes.objectOf({
-      name: PropTypes.string.required,
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
       label: PropTypes.any,
     }),
   ).isRequired,

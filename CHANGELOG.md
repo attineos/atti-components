@@ -39,6 +39,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - Some design changes have been made on the `Link` and `Menu` components by [@akaala](https://github.com/akaala)
 - Some design and DOM changes have been made on the `Alert` component by [@akaala](https://github.com/akaala)
 - Some color accessibility changes have been made on multiple components by [@akaala](https://github.com/akaala)
+- Fix multiple warnings in the console by [@akaala](https://github.com/akaala)
 - Fixed Input height [@Atrakeur](https://www.atrakeur.com)
 - Fixed `danger` type in Alert component [@alexandre-lelain](https://github.com/alexandre-lelain)
 

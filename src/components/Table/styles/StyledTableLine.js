@@ -9,6 +9,13 @@ const StyledTableLine = styled.tr`
   td:first-child {
     padding-left: ${({ theme }) => theme.components.table.spaces.firstChildLeftSpacing};
   }
+
+  ${({ isHoverable, theme }) =>
+    isHoverable
+      ? `&:hover {
+    background: ${theme.components.table.colors.backgroundHover};
+  }`
+      : ``}
 `
 
 export default StyledTableLine

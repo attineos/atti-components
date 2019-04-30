@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-import React from 'react'
+import React, { Fragment } from 'react'
 import { isNull, map, isFunction, isUndefined, size, isString } from 'lodash'
 import chain from 'helpers/generators/chain'
 import Facade from './Facade'
@@ -15,12 +15,12 @@ import { Text } from '../../Typographies'
 
 class TableFacade extends Facade {
   renderTable(children) {
-    const { renderTable } = this.props
+    const { className, renderTable } = this.props
 
     return chain(
       element => !isNull(element) && !isUndefined(element),
       () => (renderTable && isFunction(renderTable) ? renderTable(children) : null),
-      () => <StyledTable>{children}</StyledTable>,
+      () => <StyledTable className={className}>{children}</StyledTable>,
     )
   }
 
@@ -55,36 +55,56 @@ class TableFacade extends Facade {
   renderHeaderCell(col) {
     const { renderHeaderCell } = this.props
 
-    return chain(
-      element => !isNull(element) && !isUndefined(element),
-      () => (renderHeaderCell && isFunction(renderHeaderCell) ? renderHeaderCell(col) : null),
-      () =>
-        col.renderHeaderCell && isFunction(col.renderHeaderCell) ? col.renderHeaderCell(col) : null,
-      () => <StyledTableHeaderCell>{this.renderText(col.label)}</StyledTableHeaderCell>,
+    return (
+      <Fragment key={col.name}>
+        {chain(
+          element => !isNull(element) && !isUndefined(element),
+          () => (renderHeaderCell && isFunction(renderHeaderCell) ? renderHeaderCell(col) : null),
+          () =>
+            col.renderHeaderCell && isFunction(col.renderHeaderCell)
+              ? col.renderHeaderCell(col)
+              : null,
+          () => (
+            <StyledTableHeaderCell>{this.renderText(col.label)}</StyledTableHeaderCell>
+          ),
+        )}
+      </Fragment>
     )
   }
 
-  renderLine(element, children) {
+  renderLine(element, children, id) {
     const { renderLine } = this.props
 
-    return chain(
-      // We assume a valid result as soon as we got a non null element
-      element => !isNull(element) && !isUndefined(element),
-      () => (element && isFunction(element.render) ? element.render(element, children) : null),
-      () => (renderLine && isFunction(renderLine) ? renderLine(element, children) : null),
-      () => <StyledTableLine>{children}</StyledTableLine>,
+    return (
+      <Fragment key={id}>
+        {chain(
+          // We assume a valid result as soon as we got a non null element
+          element => !isNull(element) && !isUndefined(element),
+          () => (element && isFunction(element.render) ? element.render(element, children) : null),
+          () => (renderLine && isFunction(renderLine) ? renderLine(element, children) : null),
+          () => (
+            <StyledTableLine>{children}</StyledTableLine>
+          ),
+        )}
+      </Fragment>
     )
   }
 
-  renderCell(col, element) {
+  renderCell(col, element, index) {
     const { renderCell } = this.props
 
-    return chain(
-      element => !isNull(element) && !isUndefined(element),
-      () => (element && isFunction(element.render) ? element.render(col, element) : null),
-      () => (col && isFunction(col.renderCell) ? col.renderCell(col, element) : null),
-      () => (renderCell && isFunction(renderCell) ? renderCell(col, element) : null),
-      () => <StyledTableCell>{this.renderText(element[col.name])}</StyledTableCell>,
+    return (
+      <Fragment key={`${index}-${col.name}`}>
+        {chain(
+          element => !isNull(element) && !isUndefined(element),
+          () => (element && isFunction(element.render) ? element.render(col, element) : null),
+          () => (col && isFunction(col.renderCell) ? col.renderCell(col, element) : null),
+          () => (renderCell && isFunction(renderCell) ? renderCell(col, element) : null),
+          () => (
+            <StyledTableCell>{this.renderText(element[col.name])}</StyledTableCell>
+          ),
+        )}
+      </Fragment>
     )
   }
 
@@ -103,10 +123,13 @@ class TableFacade extends Facade {
         </thead>
 
         <tbody>
-          {map(elements, element =>
+          {map(elements, (element, index) =>
             this.renderLine(
               element,
-              <React.Fragment>{map(cols, col => this.renderCell(col, element))}</React.Fragment>,
+              <React.Fragment>
+                {map(cols, col => this.renderCell(col, element, index))}
+              </React.Fragment>,
+              index,
             ),
           )}
         </tbody>

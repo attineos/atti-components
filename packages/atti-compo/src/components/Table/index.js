@@ -9,35 +9,16 @@ import TableFacade from './facade'
  */
 class Table extends PureComponent {
   render() {
-    const {
-      className,
-      cols,
-      elements,
-      renderCell,
-      renderHeaderLine,
-      renderHeaderCell,
-      renderLine,
-      renderTable,
-    } = this.props
+    const { className, cols, elements, ...rest } = this.props
 
-    return (
-      <TableFacade
-        className={className}
-        cols={cols}
-        elements={elements}
-        renderCell={renderCell}
-        renderHeaderLine={renderHeaderLine}
-        renderHeaderCell={renderHeaderCell}
-        renderLine={renderLine}
-        renderTable={renderTable}
-      />
-    )
+    return <TableFacade className={className} cols={cols} elements={elements} {...rest} />
   }
 }
 
 Table.defaultProps = {
   className: '',
   renderCell: null,
+  renderEmptyTable: null,
   renderLine: null,
   renderHeaderLine: null,
   renderHeaderCell: null,
@@ -66,6 +47,10 @@ Table.propTypes = {
    *  Define the component used to render each table cells, accept a children params
    */
   renderCell: PropTypes.func,
+  /**
+   *  Define the component used to render the table content when the table is empty
+   */
+  renderEmptyTable: PropTypes.func,
   /**
    *  Define the component used to render each table's headers cells, accept a children params
    */

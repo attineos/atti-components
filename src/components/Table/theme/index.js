@@ -7,6 +7,7 @@ export default ({ borders, colors, spaces }) => ({
     background: colors.transparent,
     backgroundEven: colors.transparent,
     backgroundOdd: colors.white,
+    backgroundHover: colors.darkWhite,
     border: colors.darkerWhite,
     text: colors.grey,
     headerText: colors.grey,

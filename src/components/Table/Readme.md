@@ -14,6 +14,7 @@ Table :
       name: 'Product 1',
       someData: '17',
       moreData: '42',
+      isLineHoverable: true,
     },
     {
       ident: 3,
@@ -96,5 +97,36 @@ const SomeMoreDataFinder = styled.default.td`
       // It's up to the custom renderer can handle that case
     },
   ]}
+/>
+```
+
+Elements can also be made hoverable and/or clickable with a custom action:
+
+```js
+<Table
+  cols={[{ name: 'ident', label: 'ID' }, { name: 'name', label: 'Name' }]}
+  elements={[
+    {
+      ident: 1,
+      name: 'Product 1',
+      someData: '17',
+      moreData: '42',
+      isLineHoverable: true, // Some lines can be made hoverable
+    },
+    {
+      ident: 3,
+      name: 'Product 13',
+      someData: 'NA',
+      moreData: '43',
+      // or clickable
+      onLineClick: (e, element) => console.log('Element clicked! from line handler', element),
+    },
+    {
+      ident: 78,
+      name: 'Product abc',
+    },
+  ]}
+  isLineHoverable={true}
+  onLineClick={(e, element) => console.log('Element clicked! from global handler', element)}
 />
 ```

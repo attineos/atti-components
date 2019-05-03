@@ -73,7 +73,7 @@ class TableFacade extends Facade {
   }
 
   renderLine(element, children, id) {
-    const { renderLine } = this.props
+    const { renderLine, isLineHoverable, onLineClick } = this.props
 
     return (
       <Fragment key={id}>
@@ -83,7 +83,19 @@ class TableFacade extends Facade {
           () => (element && isFunction(element.render) ? element.render(element, children) : null),
           () => (renderLine && isFunction(renderLine) ? renderLine(element, children) : null),
           () => (
-            <StyledTableLine>{children}</StyledTableLine>
+            <StyledTableLine
+              onClick={
+                !!element.onLineClick || !!onLineClick
+                  ? e => {
+                      !!element.onLineClick && element.onLineClick(e, element)
+                      !!onLineClick && onLineClick(e, element)
+                    }
+                  : null
+              }
+              isHoverable={isLineHoverable || element.isLineHoverable}
+            >
+              {children}
+            </StyledTableLine>
           ),
         )}
       </Fragment>

@@ -16,6 +16,8 @@ const StyledTableLine = styled.tr`
     background: ${theme.components.table.colors.backgroundHover};
   }`
       : ``}
+
+  ${({ onClick }) => (!!onClick ? `cursor: pointer;` : ``)}
 `
 
 export default StyledTableLine

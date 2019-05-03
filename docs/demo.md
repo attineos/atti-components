@@ -55,7 +55,7 @@
     <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="primary" />
   </Cell>
   <Cell cols={[[5, 9], [5, 9], [5, 9]]}>
-    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="secondary" />
+    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="neutral" />
   </Cell>
   <Cell cols={[[9, 13], [9, 13], [9, 13]]}>
     <InputFile placeholder="Browse a file" onChange={e => console.log(e)} />
@@ -64,14 +64,14 @@
   <Cell cols={[[1, 7], [1, 7], [1, 7]]}>
     <InputGroup>
       <Button>Grouped1</Button>
-      <Button>Grouped2</Button>
+      <Button variance="neutral">Grouped2</Button>
       <Button>Grouped3</Button>
     </InputGroup>
   </Cell>
   <Cell cols={[[7, 13], [7, 13], [7, 13]]}>
     <InputGroup vertical>
       <Button>Grouped1</Button>
-      <Button>Grouped2</Button>
+      <Button variance="neutral">Grouped2</Button>
       <Button>Grouped3</Button>
     </InputGroup>
   </Cell>

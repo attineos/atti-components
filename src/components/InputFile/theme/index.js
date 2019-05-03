@@ -4,11 +4,19 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
       borderWidth: borders.widths.bw2,
       borderRadius: borders.radius.medium,
     },
-    secondary: {
+    neutral: {
       borderWidth: borders.widths.bw2,
       borderRadius: borders.radius.medium,
     },
     normal: {
+      borderWidth: borders.widths.bw2,
+      borderRadius: borders.radius.medium,
+    },
+    light: {
+      borderWidth: borders.widths.bw2,
+      borderRadius: borders.radius.medium,
+    },
+    dark: {
       borderWidth: borders.widths.bw2,
       borderRadius: borders.radius.medium,
     },
@@ -19,7 +27,7 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
       border: colors.transparent,
       text: colors.white,
     },
-    secondary: {
+    neutral: {
       background: colors.neutral,
       border: colors.transparent,
       text: colors.white,
@@ -28,6 +36,16 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
       background: colors.transparent,
       border: colors.neutral,
       text: colors.grey,
+    },
+    light: {
+      background: colors.transparent,
+      border: colors.white,
+      text: colors.white,
+    },
+    dark: {
+      background: colors.transparent,
+      border: colors.black,
+      text: colors.black,
     },
   },
   sizes: {

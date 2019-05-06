@@ -22,6 +22,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 - Added `onChange` prop to TextArea component [@alexandre-lelain](https://github.com/alexandre-lelain)
 - Added custom theme import option to storybook [@alexandre-lelain](https://github.com/alexandre-lelain)
 - Added a new `Typography` component (this component is extended by all the other typographies) by [@akaala](https://github.com/akaala)
+- It's now possible to set a custom gap (not following the theme) on the `Grid` component by [@akaala](https://github.com/akaala)
 
 ### Changed
 

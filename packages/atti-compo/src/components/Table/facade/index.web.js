@@ -82,21 +82,17 @@ class TableFacade extends Facade {
           element => !isNull(element) && !isUndefined(element),
           () => (element && isFunction(element.render) ? element.render(element, children) : null),
           () => (renderLine && isFunction(renderLine) ? renderLine(element, children) : null),
-          () => (
-            <StyledTableLine
-              onClick={
-                !!element.onLineClick || !!onLineClick
-                  ? e => {
-                      !!element.onLineClick && element.onLineClick(e, element)
-                      !!onLineClick && onLineClick(e, element)
-                    }
-                  : null
-              }
-              isHoverable={isLineHoverable || element.isLineHoverable}
-            >
-              {children}
-            </StyledTableLine>
-          ),
+          () => {
+            const isHoverable =
+              'isLineHoverable' in element ? element.isLineHoverable : isLineHoverable
+            const handleLineClick = 'onLineClick' in element ? element.onLineClick : onLineClick
+
+            return (
+              <StyledTableLine onClick={handleLineClick} isHoverable={isHoverable}>
+                {children}
+              </StyledTableLine>
+            )
+          },
         )}
       </Fragment>
     )

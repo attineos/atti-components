@@ -40,7 +40,7 @@ const StyledButton = styled(Text.withComponent('button'))`
 `
 
 StyledButton.defaultProps = {
-  variance: 'neutral',
+  variance: 'normal',
 }
 
 export default StyledButton

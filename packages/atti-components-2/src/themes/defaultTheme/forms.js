@@ -2,7 +2,7 @@
  * All the rules common to multiple form elements.
  */
 
-export default ({ borders, boxShadows, colors, spaces }) => ({
+export default ({ borders, boxShadows, colors }) => ({
   borders: {
     radius: borders.radius.medium,
     width: borders.widths.bw1,
@@ -32,6 +32,6 @@ export default ({ borders, boxShadows, colors, spaces }) => ({
     },
   },
   sizes: {
-    height: spaces.s3,
+    height: '42px',
   },
 })

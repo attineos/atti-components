@@ -1,6 +1,6 @@
 {
   "name": "atti-components",
-  "version": "0.1.0-rc26",
+  "version": "0.1.0-rc28",
   "description": "A set of fully customizable React components made with <3 with styled-components",
   "main": "dist/index.js",
   "scripts": {

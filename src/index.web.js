@@ -16,6 +16,7 @@ import InputGroup from './components/InputGroup'
 import Link from './components/Link'
 import Loader from './components/Loader'
 import Menu from './components/Menu'
+import Modal from './components/Modal'
 import Option from './components/Option'
 import OptionPanel from './components/OptionPanel'
 import ProgressBar from './components/ProgressBar'
@@ -63,6 +64,7 @@ module.exports = {
   Link,
   Loader,
   Menu,
+  Modal,
   Option,
   OptionPanel,
   ProgressBar,

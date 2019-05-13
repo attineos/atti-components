@@ -131,7 +131,11 @@ module.exports = {
     },
     {
       name: 'Others',
-      components: ['src/components/Option/index.js', 'src/components/OptionPanel/index.js'],
+      components: [
+        'src/components/Modal/index.js',
+        'src/components/Option/index.js',
+        'src/components/OptionPanel/index.js',
+      ],
     },
     {
       name: 'Helpers',

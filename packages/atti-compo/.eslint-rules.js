@@ -44,6 +44,8 @@ module.exports = {
     'operator-assignment': 0,
     'padded-blocks': [2, { classes: 'always', switches: 'never' }],
     'quote-props': [2, 'as-needed'],
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
     'space-before-function-paren': [2, 'always'],
     'space-in-parens': [2, 'never'],
     'vars-on-top': 0,
@@ -70,7 +72,7 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'jsx-a11y/no-static-element-interactions': 0,
 
-    "react/destructuring-assignment": 0,
+    'react/destructuring-assignment': 0,
     'react/forbid-prop-types': 0,
     'react/jsx-boolean-value': [2, 'never'],
     'react/jsx-closing-bracket-location': 0,
@@ -90,35 +92,35 @@ module.exports = {
     'react/prefer-es6-class': 2,
     'react/prefer-stateless-function': 0,
 
-    "react/sort-comp": [
+    'react/sort-comp': [
       2,
       {
-        "order": [
-          "static-methods",
-          "/^_.+$/",
-          "state",
-          "constructor",
-          "lifecycle",
-          "/^(on|handle).+$/",
-          "/^(get|set).+$/",
-          "/^is.+$/",
-          "everything-else",
-          "/^render.+$/",
-          "render"
+        order: [
+          'static-methods',
+          '/^_.+$/',
+          'state',
+          'constructor',
+          'lifecycle',
+          '/^(on|handle).+$/',
+          '/^(get|set).+$/',
+          '/^is.+$/',
+          'everything-else',
+          '/^render.+$/',
+          'render',
         ],
-        "groups": {
-          "lifecycle": [
-            "getDerivedStateFromProps",
-            "componentWillMount",
-            "componentDidMount",
-            "componentWillReceiveProps",
-            "shouldComponentUpdate",
-            "componentWillUpdate",
-            "componentDidUpdate",
-            "componentWillUnmount"
-          ]
-        }
-      }
+        groups: {
+          lifecycle: [
+            'getDerivedStateFromProps',
+            'componentWillMount',
+            'componentDidMount',
+            'componentWillReceiveProps',
+            'shouldComponentUpdate',
+            'componentWillUpdate',
+            'componentDidUpdate',
+            'componentWillUnmount',
+          ],
+        },
+      },
     ],
   },
 }

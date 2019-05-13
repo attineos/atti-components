@@ -10,7 +10,7 @@ it('Table renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Table className="Atticomponents" cols={true} name="Atticomponents" label="Atticomponents" elements={true} renderCell={mock} renderHeaderCell={mock} renderHeaderLine={mock} renderLine={mock} renderTable={mock} ></Table>
+        <Table className="Atticomponents" cols={true} name="Atticomponents" label="Atticomponents" elements={true} renderCell={mock} renderEmptyTable={mock} renderHeaderCell={mock} renderHeaderLine={mock} renderLine={mock} renderTable={mock} ></Table>
       </Wrapper>
       )
     .toJSON();

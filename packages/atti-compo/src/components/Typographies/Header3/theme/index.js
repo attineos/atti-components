@@ -7,5 +7,8 @@ export default ({ colors, fonts }) => ({
     fontSize: fonts.fontSize.fs36,
     fontWeight: fonts.fontWeight.fw400,
     lineHeight: '1.1em',
+    mobile: {
+      fontSize: fonts.fontSize.fs30,
+    },
   },
 })

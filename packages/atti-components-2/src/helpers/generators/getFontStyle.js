@@ -17,6 +17,14 @@ const getFontStyle = fontType => css`
   ${margins}
   ${paddings}
   ${sizes}
+
+  ${({ theme }) =>
+    get(theme, `components.${fontType}.fonts.mobile`) &&
+    `
+    @media only screen and (max-width: ${theme.breakpoints.mobileMax}) {
+      font-size: ${get(theme, `components.${fontType}.fonts.mobile.fontSize`)};
+    }
+  `}
 `
 
 export default getFontStyle

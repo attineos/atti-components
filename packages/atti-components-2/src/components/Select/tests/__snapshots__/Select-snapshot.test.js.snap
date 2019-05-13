@@ -8,7 +8,7 @@ exports[`Select renders correctly 1`] = `
     className="atti-box"
   >
     <select
-      className="Text-sc-9szep3-0-select Atticomponents Select-sc-1yblj4q-0 eGaeAq StyledSelect-jeqzcu-0 atti-r-css Atticomponents Select-sc-1yblj4q-0 eGaeAq jzsxDd"
+      className="Text-sc-9szep3-0-select Atticomponents Select-sc-1yblj4q-0 eGaeAq StyledSelect-jeqzcu-0 atti-r-css Atticomponents Select-sc-1yblj4q-0 eGaeAq bhfuwo"
       defaultValue="Atticomponents"
       id="Atticomponents"
       multiple={true}

@@ -1,5 +1,7 @@
 {
   "parser": "babel-eslint",
+
+  "plugins": [ "react-hooks" ],
   "extends": [
     "./.eslint-rules.js",
     "prettier",

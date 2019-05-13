@@ -9,7 +9,7 @@ exports[`Cell renders correctly 1`] = `
   >
     <div
       className="Atticomponents Cell-h1m9gz-0 igMAoI CellStyle-ytv8v6-0 jUIZge"
-      cols={<div />}
+      cols={Array []}
     >
       <div />
     </div>

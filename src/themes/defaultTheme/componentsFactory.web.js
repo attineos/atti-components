@@ -11,6 +11,7 @@ import inputGroup from '../../components/InputGroup/theme'
 import link from '../../components/Link/theme'
 import loader from '../../components/Loader/theme'
 import menu from '../../components/Menu/theme'
+import modal from '../../components/Modal/theme'
 import option from '../../components/Option/theme'
 import optionPanel from '../../components/OptionPanel/theme'
 import progressBar from '../../components/ProgressBar/theme'
@@ -50,6 +51,7 @@ export default constants => ({
   link: link(constants),
   loader: loader(constants),
   menu: menu(constants),
+  modal: modal(constants),
   option: option(constants),
   optionPanel: optionPanel(constants),
   progressBar: progressBar(constants),

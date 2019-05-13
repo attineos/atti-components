@@ -1,16 +1,16 @@
 /* This file was generated automatically, please do not write in it. */
 import React from 'react';
-import Cell from '..';
+import ContentContainer from '../styles/ContentContainer';
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer';
 
 const mock = () => {}
 
-it('Cell renders correctly', () => {
+it('ContentContainer renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Cell className="Atticomponents" cols={new Array()} ><div/></Cell>
+        <ContentContainer ></ContentContainer>
       </Wrapper>
       )
     .toJSON();

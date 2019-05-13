@@ -8,7 +8,7 @@ exports[`Option renders correctly 1`] = `
     className="atti-box"
   >
     <p
-      className="Text-sc-9szep3-0-p Atticomponents Option-sc-1gvlqg7-0 gfsVzN StyledOption-sc-1g6h427-0 atti-r-css Atticomponents Option-sc-1gvlqg7-0 gfsVzN gqMICD"
+      className="Text-sc-9szep3-0-p Atticomponents Option-sc-1gvlqg7-0 gfsVzN StyledOption-sc-1g6h427-0 atti-r-css Atticomponents Option-sc-1gvlqg7-0 gfsVzN iGDldu"
       id="Atticomponents"
       onClick={[Function]}
       selected={true}

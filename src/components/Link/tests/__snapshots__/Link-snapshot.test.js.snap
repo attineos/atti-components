@@ -8,7 +8,7 @@ exports[`Link renders correctly 1`] = `
     className="atti-box"
   >
     <a
-      className="Text-sc-9szep3-0-a Atticomponents Link-x5cckk-0 jMqokw StyledLink-kwdrvq-0 atti-r-css Atticomponents Link-x5cckk-0 jMqokw evJJPH"
+      className="Text-sc-9szep3-0-a Atticomponents Link-x5cckk-0 jMqokw StyledLink-kwdrvq-0 atti-r-css Atticomponents Link-x5cckk-0 jMqokw wXEjL"
       href="Atticomponents"
       onClick={[Function]}
       rel=""

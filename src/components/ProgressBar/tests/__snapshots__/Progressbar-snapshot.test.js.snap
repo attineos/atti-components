@@ -13,7 +13,7 @@ exports[`ProgressBar renders correctly 1`] = `
       start={42}
     >
       <p
-        className="Typography-csduj4-0 Text-sc-9szep3-0 atti-r-css  gBlsIe"
+        className="Typography-csduj4-0 Text-sc-9szep3-0 atti-r-css  jskFzg"
       >
         Infinity%
       </p>

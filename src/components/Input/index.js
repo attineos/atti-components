@@ -1,3 +1,4 @@
+// @noSnapshot
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -16,18 +17,21 @@ class Input extends PureComponent {
       form,
       name,
       onChange,
+      forwardedRef,
       pattern,
       placeholder,
       size,
       type,
       value,
+      variance,
+      ...rest
     } = this.props
 
     return (
       <StyledInput
         className={className}
-        id={id}
         form={form}
+        id={id}
         name={name}
         onChange={onChange}
         pattern={pattern}
@@ -35,6 +39,9 @@ class Input extends PureComponent {
         size={size}
         type={type}
         value={value}
+        ref={forwardedRef}
+        variance={variance}
+        {...rest}
       />
     )
   }
@@ -42,13 +49,15 @@ class Input extends PureComponent {
 
 Input.defaultProps = {
   className: '',
-  form: '',
+  form: undefined,
   name: '',
   onChange: undefined,
+  forwardedRef: undefined,
   pattern: undefined,
   placeholder: '',
   size: null,
   value: undefined,
+  variance: 'normal',
 }
 
 Input.propTypes = {
@@ -75,6 +84,10 @@ Input.propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * Ref of the input element.
+   */
+  forwardedRef: PropTypes.func,
+  /**
    * Specifies a regular expression that an Input elemen'ts value is checked against.
    */
   pattern: PropTypes.string,
@@ -94,7 +107,11 @@ Input.propTypes = {
    * The value of the input element
    */
   value: PropTypes.string,
+  /**
+   * Which type of input to display
+   */
+  variance: PropTypes.oneOf(['normal', 'error', 'warning']),
 }
 
 /** @component */
-export default styled(Input)``
+export default styled(React.forwardRef((props, ref) => <Input {...props} forwardedRef={ref} />))``

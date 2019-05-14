@@ -1,18 +1,18 @@
-export default ({ borders, colors, sizes }) => ({
+export default ({ borders, colors, spaces }) => ({
   borders: {
-    borderColor: colors.smoke,
+    borderColor: colors.darkWhite,
     borderRadius: '25px',
     borderWidth: borders.widths.bw2,
   },
 
   colors: {
     background: colors.transparent,
-    fill: colors.primary,
-    text: colors.grey,
+    fill: colors.lightPrimary,
+    text: colors.darkerGrey,
   },
 
   sizes: {
-    height: sizes.heights.h12,
-    width: sizes.widths.w27,
+    height: spaces.s1_5,
+    width: spaces.full,
   },
 })

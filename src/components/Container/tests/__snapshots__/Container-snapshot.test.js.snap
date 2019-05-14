@@ -4,8 +4,12 @@ exports[`Container renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="Container-sc-2aqv-0 gEHtld"
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="Container-sc-2aqv-0 kLMeMF"
+    />
+  </span>
 </span>
 `;

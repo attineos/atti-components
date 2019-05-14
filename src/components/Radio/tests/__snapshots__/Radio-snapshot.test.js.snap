@@ -4,21 +4,25 @@ exports[`Radio renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="Atticomponents Radio-sc-1ut91e7-0 cqxOOJ RadioContainer-oshlxq-0 DRbLh"
+  <span
+    className="atti-box"
   >
-    <input
-      checked={true}
-      className="HiddenInputRadio-sc-9a3euj-0 dCQjgv"
-      id="Atticomponents"
-      name="Atticomponents"
-      onChange={[Function]}
-      type="radio"
-      value="Atticomponents"
-    />
-    <span
-      className="RadioButton-sc-8w77ik-0 eoAIkU"
-    />
-  </div>
+    <div
+      className="Atticomponents Radio-sc-1ut91e7-0 cqxOOJ RadioContainer-oshlxq-0 kgRLaR"
+    >
+      <input
+        checked={true}
+        className="HiddenInputRadio-sc-9a3euj-0 dCQjgv"
+        id="Atticomponents"
+        name="Atticomponents"
+        onChange={[Function]}
+        type="radio"
+        value="Atticomponents"
+      />
+      <span
+        className="RadioButton-sc-8w77ik-0 eRaIuo"
+      />
+    </div>
+  </span>
 </span>
 `;

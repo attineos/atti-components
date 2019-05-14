@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
-import Text from '../../Text'
+import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
+import { Text } from '../../Typographies'
 
 const borders = css`
   border: ${({ theme }) => theme.components.select.select.borders.width} solid
@@ -32,7 +33,7 @@ const colors = css`
       horizontal position = half of 75% of right padding + 1/4 of arrow width
       vertical position = 50% */ calc(
         100% -
-          calc(75 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
+          calc(90 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
           calc(${({ theme }) => theme.components.select.select.sizes.arrowWidth} / 4)
       )
       50%,
@@ -41,7 +42,7 @@ const colors = css`
       vertical position = 50% */
       calc(
         100% -
-          calc(75 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
+          calc(90 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100 / 2) +
           calc(3 * ${({ theme }) => theme.components.select.select.sizes.arrowWidth} / 4)
       )
       50%,
@@ -51,7 +52,7 @@ const colors = css`
       calc(
         100% - calc(75 * ${({ theme }) => theme.components.select.select.spaces.paddingRight} / 100)
       )
-      ${({ theme }) => theme.components.select.select.spaces.paddingHeight};
+      ${({ theme }) => theme.components.select.select.spaces.paddingTop};
 
   background-size: ${({ theme }) => theme.components.select.select.sizes.arrowHeight}
       calc(${({ theme }) => theme.components.select.select.sizes.arrowWidth} / 2),
@@ -60,7 +61,7 @@ const colors = css`
     /* Separator
       height = select height - 2 * select vertical padding */
       ${({ theme }) => theme.components.select.select.sizes.separatorWidth}
-      calc(100% - calc(2 * ${({ theme }) => theme.components.select.select.spaces.paddingHeight}));
+      calc(100% - calc(2 * ${({ theme }) => theme.components.select.select.spaces.paddingBottom}));
 
   background-size: ${({ multiple }) => (multiple ? '0' : '')};
   background-repeat: no-repeat;
@@ -68,7 +69,10 @@ const colors = css`
 `
 
 const sizes = css`
-  min-height: ${({ theme }) => theme.components.select.select.sizes.minHeight};
+  max-height: ${({ theme }) => theme.components.select.select.sizes.minHeight};
+
+  height: ${({ theme }) => theme.components.select.select.sizes.height};
+  width: ${({ theme }) => theme.components.select.select.sizes.width};
 `
 
 const StyledSelect = styled(Text.withComponent('select'))`
@@ -76,11 +80,8 @@ const StyledSelect = styled(Text.withComponent('select'))`
   ${colors};
   ${sizes};
 
-  padding: ${({ theme }) => theme.components.select.select.spaces.paddingHeight}
-    ${({ theme }) => theme.components.select.select.spaces.paddingRight}
-    ${({ theme }) => theme.components.select.select.spaces.paddingHeight}
-    ${({ theme }) => theme.components.select.select.spaces.paddingLeft};
   position: relative;
+  padding: ${({ theme }) => getSpacesAsCss(theme.components.select.select.spaces, 'padding')};
 
   // Remove default OS appearance
   appearance: none;

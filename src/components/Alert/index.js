@@ -10,10 +10,10 @@ import StyledDiv from './styles/StyledDiv'
  */
 class Alert extends PureComponent {
   render() {
-    const { children, className, type } = this.props
+    const { children, className, variance } = this.props
 
     return (
-      <StyledDiv className={className} type={type}>
+      <StyledDiv className={className} variance={variance}>
         {children}
       </StyledDiv>
     )
@@ -22,7 +22,7 @@ class Alert extends PureComponent {
 
 Alert.defaultProps = {
   className: '',
-  type: 'success',
+  variance: 'success',
 }
 
 Alert.propTypes = {
@@ -37,7 +37,7 @@ Alert.propTypes = {
   /**
    * Type of alert.
    */
-  type: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
+  variance: PropTypes.oneOf(['success', 'error', 'info', 'warning']),
 }
 
 /** @component */

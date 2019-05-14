@@ -1,13 +1,13 @@
 import Button from './components/Button'
-import Text from './components/Text/index.native.js'
+import { Text } from './components/Typographies'
 import ThemeProvider from './components/ThemeProvider'
 
-import theme from './theme'
+import { defaultTheme } from './themes'
 
 module.exports = {
   Button,
   Text,
   ThemeProvider,
 
-  theme,
+  defaultTheme,
 }

@@ -1,18 +1,48 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { Text } from '../../Typographies'
 
-import Text from '../../Text'
+const border = css`
+  border: ${({ variance, theme }) =>
+    `${theme.components.inputFile.borders[variance].borderWidth} solid ${
+      theme.components.inputFile.colors[variance].border
+    }`};
+  border-radius: ${({ variance, theme }) =>
+    theme.components.inputFile.borders[variance].borderRadius};
+`
+
+const colors = css`
+  background-color: ${({ variance, theme }) =>
+    theme.components.inputFile.colors[variance].background};
+  color: ${({ variance, theme }) => theme.components.inputFile.colors[variance].text};
+
+  &:hover {
+    opacity: ${({ theme }) => theme.components.inputFile.opacities.hover};
+  }
+`
+
+const sizes = css`
+  height: ${({ theme }) => theme.components.inputFile.sizes.height};
+  width: ${({ theme }) => theme.components.inputFile.sizes.width};
+`
+
+const spaces = css`
+  padding: ${({ theme }) => theme.components.inputFile.spaces.paddingHeight}
+    ${({ theme }) => theme.components.inputFile.spaces.paddingWidth};
+`
 
 const StyledFilePicker = styled(Text.withComponent('button'))`
-  cursor: pointer;
-  border: none;
+  ${border};
+  ${colors};
+  ${sizes};
+  ${spaces};
 
-  padding: ${({ theme }) =>
-    `${theme.components.inputFile.spaces.paddingTopBottom} ${
-      theme.components.inputFile.spaces.paddingLeftRight
-    }`};
-  color: ${({ theme }) => theme.components.inputFile.colors.text};
-  background-color: ${({ theme }) => theme.components.inputFile.colors.background};
-  font-family: ${({ theme }) => theme.components.inputFile.fonts.fontFamily || 'inherit'};
+  text-align: ${({ theme }) => theme.components.inputFile.textAlign};
+
+  cursor: pointer;
 `
+
+StyledFilePicker.defaultProps = {
+  variance: 'normal',
+}
 
 export default StyledFilePicker

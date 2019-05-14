@@ -5,9 +5,9 @@ export default {
     path: path.resolve(__dirname, ''),
     filename: '[name].js',
     library: '',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'commonjs2',
   },
-  mode: "production",
+  mode: 'production',
   module: {
     rules: [
       {
@@ -16,20 +16,21 @@ export default {
         exclude: /node_modules/,
         options: {
           presets: ['env', 'react'],
-          plugins: ['babel-plugin-transform-class-properties', 'babel-plugin-styled-components']
-        }
+          plugins: ['babel-plugin-transform-class-properties', 'babel-plugin-styled-components'],
+        },
       },
-    ]
+    ],
   },
   resolve: {
     alias: {
-      helpers: path.join(__dirname, '../src/helpers/')
-    }
+      components: path.join(__dirname, '../src/components/'),
+      helpers: path.join(__dirname, '../src/helpers/'),
+    },
   },
   externals: {
     react: 'commonjs react',
     'react-dom': 'commonjs react-dom',
     'react-native': 'commonjs react-native',
     'styled-components': 'commonjs styled-components',
-  }
+  },
 }

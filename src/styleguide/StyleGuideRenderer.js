@@ -2,11 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { forEach } from 'lodash'
+
 import Logo from 'rsg-components/Logo'
 import Markdown from 'rsg-components/Markdown'
 import Ribbon from 'rsg-components/Ribbon'
 import Styled from 'rsg-components/Styled'
 import Version from 'rsg-components/Version'
+
+import CustomTheme from './components/CustomTheme'
+import ThemeProvider from '../components/ThemeProvider'
+import ThemeSelector from './ThemeSelector'
+import { defaultTheme } from '../themes'
+
+import { getWrappersToUpdate } from './Wrapper'
 
 const styles = ({ color, fontFamily, fontSize, sidebarWidth, mq, space, maxWidth }) => ({
   content: {
@@ -88,39 +97,40 @@ class StyleGuideRenderer extends React.Component {
     version: PropTypes.string,
   }
 
-  state = {
-    themeCompo: { primary: '#ffffff', secondary: '#bdd5ea' },
-  }
-
-  modifyThemeCompo = t => {
-    this.setState({ themeCompo: t })
+  handleThemeChange = t => {
+    const wrappers = getWrappersToUpdate()
+    forEach(wrappers, wrapper => wrapper.handleSetTheme(t))
   }
 
   render() {
     const { children, classes, hasSidebar, homepageUrl, title, toc, version } = this.props
-    const { themeCompo } = this.state
+
     return (
-      <div
-        className={cx(classes.root, hasSidebar && classes.hasSidebar)}
-        style={{ backgroundColor: themeCompo['primary'] }}
-      >
-        <main className={classes.content}>
-          {children}
-          <footer className={classes.footer}>
-            <Markdown text={`Generated with [React Styleguidist](${homepageUrl})`} />
-          </footer>
-        </main>
-        {hasSidebar && (
-          <div className={classes.sidebar} style={{ backgroundColor: themeCompo['secondary'] }}>
-            <div className={classes.logo}>
-              <Logo>{title}</Logo>
-              {version && <Version>{version}</Version>}
+      <ThemeProvider theme={defaultTheme}>
+        <div
+          className={cx(classes.root, hasSidebar && classes.hasSidebar)}
+          style={{ backgroundColor: defaultTheme['primary'] }}
+        >
+          <main className={classes.content}>
+            {children}
+            <footer className={classes.footer}>
+              <Markdown text={`Generated with [React Styleguidist](${homepageUrl})`} />
+            </footer>
+          </main>
+          {hasSidebar && (
+            <div className={classes.sidebar} style={{ backgroundColor: defaultTheme['secondary'] }}>
+              <div className={classes.logo}>
+                <Logo>{title}</Logo>
+                {version && <Version>{version}</Version>}
+              </div>
+              {toc}
+              <ThemeSelector onThemeChange={this.handleThemeChange} />
+              <CustomTheme onThemeChange={this.handleThemeChange} />
             </div>
-            {toc}
-          </div>
-        )}
-        <Ribbon />
-      </div>
+          )}
+          <Ribbon />
+        </div>
+      </ThemeProvider>
     )
   }
 }

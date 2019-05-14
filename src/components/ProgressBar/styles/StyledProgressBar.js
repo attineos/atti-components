@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import Text from '../../Text'
+import { Text } from '../../Typographies'
 
 const borders = css`
   border: ${({ theme }) => theme.components.progressBar.borders.borderWidth} solid
@@ -37,6 +37,7 @@ const positionText = css`
     margin: 0;
     position: relative;
     width: 100%;
+    align-items: center;
   }
 `
 const size = css`
@@ -52,6 +53,7 @@ const StyledProgressBar = styled.div`
   ${colors};
   ${positionFirstComponent} ${positionText};
   ${size};
+  padding: 2px 0;
   user-select: none;
 `
 export default StyledProgressBar

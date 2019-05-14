@@ -4,8 +4,12 @@ exports[`StyledSelect renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <select
-    className="Text-o3or1r-0-select StyledSelect-jeqzcu-0 atti-r-css  eptAmm"
-  />
+  <span
+    className="atti-box"
+  >
+    <select
+      className="Text-sc-9szep3-0-select StyledSelect-jeqzcu-0 atti-r-css  hDcBEi"
+    />
+  </span>
 </span>
 `;

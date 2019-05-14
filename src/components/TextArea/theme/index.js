@@ -8,14 +8,18 @@ export default ({ forms, spaces }) => ({
       boxShadowFocus: forms.boxShadow,
     },
     colors: {
-      border: forms.colors.border,
-      borderFocus: forms.colors.borderFocus,
-      caret: forms.colors.caret,
-      placeholder: forms.colors.placeholder,
-      text: forms.colors.text,
+      border: forms.colors.normal.border,
+      borderFocus: forms.colors.normal.borderFocus,
+      caret: forms.colors.normal.caret,
+      placeholder: forms.colors.normal.placeholder,
+      text: forms.colors.normal.text,
     },
     spaces: {
-      padding: spaces.s5,
+      padding: spaces.s0_5,
+    },
+    sizes: {
+      height: spaces.full,
+      width: spaces.full,
     },
   },
 })

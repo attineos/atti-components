@@ -1,27 +1,10 @@
 // @noSnapshot
-
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  createGlobalStyle,
-  ThemeProvider as StyledThemeProvider,
-  withTheme,
-} from 'styled-components'
+import { ThemeProvider as StyledThemeProvider, withTheme } from 'styled-components'
+import ResetCSS from './styles/ResetCSS'
 
 import constructTheme from './helpers/constructTheme'
-
-const ResetCSS = createGlobalStyle`
-  .atti-box * {
-    box-sizing: border-box;
-  }
-  .atti-r-css {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    outline: none;
-  }
-`
 
 class ThemeProvider extends React.Component {
   static propTypes = {

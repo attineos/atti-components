@@ -4,8 +4,12 @@ exports[`StyledProgressBar renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="StyledProgressBar-sc-15l6ukn-0 ePCkgl"
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="StyledProgressBar-sc-15l6ukn-0 eTLZMS"
+    />
+  </span>
 </span>
 `;

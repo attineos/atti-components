@@ -1,42 +1,56 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-import { map } from 'lodash'
-import Item from './styles/Item'
-import ItemLink from './styles/ItemLink'
-import ItemsList from './styles/ItemsList'
-import StyledMenu from './styles/StyledMenu'
+import MenuMobile from './components/MenuMobile'
+import MenuDesktop from './components/MenuDesktop'
+import { MenuContainer } from './styles'
 
 /**
  * The menu is a list of Link elements.
  *
  */
-class Menu extends PureComponent {
-  render() {
-    const { values } = this.props
+const Menu = props => (
+  <MenuContainer isResponsive={props.isResponsive}>
+    {props.isResponsive && <MenuMobile {...props} />}
+    <MenuDesktop {...props} />
+  </MenuContainer>
+)
 
-    return (
-      <StyledMenu>
-        <ItemsList>
-          {map(values, elt => (
-            <Item key={elt.href}>
-              <ItemLink href={elt.href} target={elt.target}>
-                {elt.text}
-              </ItemLink>
-            </Item>
-          ))}
-        </ItemsList>
-      </StyledMenu>
-    )
-  }
+Menu.defaultProps = {
+  isResponsive: true,
+  renderElement: null,
+  renderMenu: null,
+  selectedElement: null,
+  variance: 'basic',
 }
 
 Menu.propTypes = {
   /**
    * The links in the menu.
    */
-  values: PropTypes.arrayOf(PropTypes.object).isRequired,
+  elements: PropTypes.arrayOf(PropTypes.object).isRequired,
+  /**
+   * Is the menu responsive or not.
+   */
+  isResponsive: PropTypes.bool,
+  /**
+   * The function to use for rendering of each element
+   */
+  renderElement: PropTypes.func,
+  /**
+   * The function to use for rendering the menu
+   */
+  renderMenu: PropTypes.func,
+  /**
+   * Which element is currently selected
+   */
+  selectedElement: PropTypes.string,
+  /**
+   * Which type of menu to display
+   */
+  variance: PropTypes.oneOf(['basic', 'withButtons', 'withLiftedTabs']),
 }
 
-export default Menu
+/** @component */
+export default React.memo(Menu)

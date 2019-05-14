@@ -4,11 +4,14 @@ exports[`Alert renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="BigText-sc-1216e5t-0-div Atticomponents Alert-sc-6mbtvk-0 hTpuTT StyledDiv-rsh67c-0 atti-r-css Atticomponents Alert-sc-6mbtvk-0 hTpuTT fYiQET"
-    type={null}
+  <span
+    className="atti-box"
   >
-    <div />
-  </div>
+    <div
+      className="Atticomponents Alert-sc-6mbtvk-0 hTpuTT StyledDiv-rsh67c-0 eVGlSH"
+    >
+      <div />
+    </div>
+  </span>
 </span>
 `;

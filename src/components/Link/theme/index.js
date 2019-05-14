@@ -3,8 +3,8 @@ export default ({ borders, colors }) => ({
     width: borders.widths.bw1,
   },
   colors: {
-    border: colors.transparent,
-    borderHover: colors.secondary,
-    text: colors.secondary,
+    border: 'currentcolor',
+    borderHover: 'currentcolor',
+    text: colors.primary,
   },
 })

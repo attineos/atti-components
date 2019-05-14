@@ -2,8 +2,14 @@ Radio Button :
 
 ```js
 <div>
-  <Radio id="radioTest" value="radioTest" name="radioTestGroup" />
+  <Label htmlFor="radioTest">
+    <Radio id="radioTest" value="radioTest" name="radioTestGroup" />
+    Some option
+  </Label>
   <br />
-  <Radio id="radioTest2" value="radioTest2" name="radioTestGroup" />
+  <Label htmlFor="radioTest2">
+    <Radio id="radioTest2" value="radioTest2" name="radioTestGroup" />
+    Some other option
+  </Label>
 </div>
 ```

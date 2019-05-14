@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import Text from '../../Text'
+import { Text } from '../../Typographies'
 
 const borders = css`
   border: ${({ theme }) => `

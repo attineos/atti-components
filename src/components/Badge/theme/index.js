@@ -5,19 +5,19 @@ export default ({ colors, fonts, spaces }) => ({
   },
   colors: {
     background: {
-      danger: colors.danger,
-      success: colors.success,
-      warning: colors.warning,
-      info: colors.info,
+      danger: colors.supportDanger,
+      success: colors.supportSuccess,
+      warning: colors.supportWarning,
+      info: colors.supportInfo,
     },
     text: colors.white,
   },
   spaces: {
-    paddingHeight: spaces.s3,
-    paddingWidth: spaces.s4,
+    paddingHeight: spaces.s0_5,
+    paddingWidth: spaces.s0_5,
   },
   fonts: {
-    fontSize: fonts.fontSize.fs8,
+    fontSize: fonts.fontSize.fs12,
     lineHeight: fonts.lineHeight.lh8,
     fontWeight: fonts.fontWeight.fw600,
     fontFamily: fonts.fontFamily.primary,

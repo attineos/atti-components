@@ -1,4 +1,4 @@
-export default ({ colors, forms, sizes, spaces }) => ({
+export default ({ colors, forms, spaces }) => ({
   select: {
     borders: {
       radius: forms.borders.radius,
@@ -8,23 +8,28 @@ export default ({ colors, forms, sizes, spaces }) => ({
       boxShadowFocus: forms.boxShadow,
     },
     colors: {
-      arrow: colors.slate,
+      border: forms.colors.normal.border,
+      borderFocus: forms.colors.normal.borderFocus,
+      caret: forms.colors.normal.caret,
+      placeholder: forms.colors.normal.placeholder,
+      text: forms.colors.normal.text,
+
+      arrow: colors.grey,
       background: colors.transparent,
-      border: forms.colors.border,
-      borderFocus: forms.colors.borderFocus,
-      separator: colors.extraDarkSmoke,
-      text: colors.slate,
+      separator: forms.colors.normal.border,
     },
     sizes: {
       arrowHeight: '5px',
       arrowWidth: '10px',
-      minHeight: forms.sizes.minHeight,
-      separatorWidth: sizes.widths.w1,
+      height: forms.sizes.height,
+      separatorWidth: '2px',
+      width: spaces.full,
     },
     spaces: {
-      paddingHeight: spaces.s4,
-      paddingLeft: spaces.s5,
-      paddingRight: spaces.s11,
+      paddingTop: spaces.s0_5,
+      paddingLeft: spaces.s0_5,
+      paddingBottom: spaces.s0_5,
+      paddingRight: spaces.s3,
     },
   },
 })

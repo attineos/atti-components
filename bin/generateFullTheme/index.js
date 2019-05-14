@@ -1,5 +1,5 @@
-import theme from '../../src/theme'
-import componentsFactory from '../../src/theme/componentsFactory.web'
+import theme from '../../src/themes/defaultTheme'
+import componentsFactory from '../../src/themes/defaultTheme/componentsFactory.web'
 import { omit } from 'lodash'
 import fs from 'fs'
 

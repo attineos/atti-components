@@ -1,0 +1,8 @@
+Label :
+
+```js
+<>
+  <Label htmlFor="someID">This is a Label</Label>
+  <Input type="text" id="someID" placeholder="This is the linked input" />
+</>
+```

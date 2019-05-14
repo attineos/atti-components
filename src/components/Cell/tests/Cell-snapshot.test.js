@@ -10,7 +10,7 @@ it('Cell renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Cell className="Atticomponents" cols={<div/>} ><div/></Cell>
+        <Cell className="Atticomponents" cols={new Array()} ><div/></Cell>
       </Wrapper>
       )
     .toJSON();

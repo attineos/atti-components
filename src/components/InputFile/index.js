@@ -1,4 +1,6 @@
+// @noSnapshot
 import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import { head } from 'lodash'
 import PropTypes from 'prop-types'
 
@@ -32,17 +34,18 @@ class InputFile extends PureComponent {
   allowDrop = e => e.preventDefault()
 
   render() {
-    const { placeholder, name } = this.props
+    const { placeholder, name, variance, className } = this.props
 
     const { file } = this.state
 
     return (
-      <StyledContainer>
+      <StyledContainer className={className}>
         <StyledInput name={name} type="file" ref={this.setRef} onChange={this.onChangeFile} />
         <StyledFilePicker
           onClick={this.browseFile}
           onDragOver={this.allowDrop}
           onDrop={this.onDrop}
+          variance={variance}
         >
           {file ? file.name : placeholder}
         </StyledFilePicker>
@@ -52,11 +55,17 @@ class InputFile extends PureComponent {
 }
 
 InputFile.defaultProps = {
+  className: '',
   name: '',
   placeholder: '',
+  variance: 'normal',
 }
 
 InputFile.propTypes = {
+  /**
+   *
+   */
+  className: PropTypes.string,
   /**
    * The name of the input file.
    */
@@ -70,6 +79,14 @@ InputFile.propTypes = {
    * @param: the html file object.
    */
   onChange: PropTypes.func.isRequired,
+
+  /**
+   * The type of variation to display
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   */
+  variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }
 
-export default InputFile
+/** @component */
+export default styled(InputFile)``

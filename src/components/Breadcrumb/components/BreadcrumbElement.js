@@ -6,7 +6,11 @@ import { ElementType } from '../types'
 /**
  * A breadcrumb element.
  */
-const BreadcrumbElement = ({ element }) => <Link href={element.url}>{element.name}</Link>
+const BreadcrumbElement = ({ element }) => (
+  <Link href={element.url} onClick={element.onClick}>
+    {element.name}
+  </Link>
+)
 
 BreadcrumbElement.propTypes = {
   /**

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import Text from '../../Text'
+import { Text } from '../../Typographies'
 
 const colors = css`
   color: ${({ theme }) => theme.components.link.colors.text};

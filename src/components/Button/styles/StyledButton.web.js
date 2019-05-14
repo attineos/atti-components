@@ -1,17 +1,18 @@
+// @noSnapshot
 import styled, { css } from 'styled-components'
-import Text from '../../Text'
+import { Text } from '../../Typographies'
 
 const border = css`
-  border: ${({ theme }) =>
-    `${theme.components.button.borders.borderWidth} solid ${
-      theme.components.button.colors.border
+  border: ${({ variance, theme }) =>
+    `${theme.components.button.borders[variance].borderWidth} solid ${
+      theme.components.button.colors[variance].border
     }`};
-  border-radius: ${({ theme }) => theme.components.button.borders.borderRadius};
+  border-radius: ${({ variance, theme }) => theme.components.button.borders[variance].borderRadius};
 `
 
 const colors = css`
-  background-color: ${({ theme }) => theme.components.button.colors.background};
-  color: ${({ theme }) => theme.components.button.colors.text};
+  background-color: ${({ variance, theme }) => theme.components.button.colors[variance].background};
+  color: ${({ variance, theme }) => theme.components.button.colors[variance].text};
 
   &:hover {
     opacity: ${({ theme }) => theme.components.button.opacities.hover};
@@ -19,7 +20,7 @@ const colors = css`
 `
 
 const forms = css`
-  min-height: ${({ theme }) => theme.components.button.forms.minHeight};
+  height: ${({ theme }) => theme.components.button.sizes.height};
 `
 
 const spaces = css`
@@ -33,9 +34,13 @@ const StyledButton = styled(Text.withComponent('button'))`
   ${forms};
   ${spaces};
 
+  display: inline-block;
   text-align: ${({ theme }) => theme.components.button.textAlign};
-
   cursor: pointer;
 `
+
+StyledButton.defaultProps = {
+  variance: 'normal',
+}
 
 export default StyledButton

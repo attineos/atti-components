@@ -1,3 +1,4 @@
+// @noSnapshot
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
@@ -10,7 +11,7 @@ import ButtonFacade from './facade'
  */
 class Button extends PureComponent {
   render() {
-    const { children, className, onClick, onPress, title } = this.props
+    const { children, className, onClick, onPress, title, type, variance } = this.props
 
     return (
       <ButtonFacade
@@ -19,15 +20,21 @@ class Button extends PureComponent {
         onClick={onClick}
         onPress={onPress}
         title={title}
+        type={type}
+        variance={variance}
       />
     )
   }
 }
 
 Button.defaultProps = {
+  children: '',
   className: '',
   onClick: noop(),
   onPress: noop(),
+  title: '',
+  type: 'button',
+  variance: 'normal',
 }
 
 Button.propTypes = {
@@ -36,7 +43,7 @@ Button.propTypes = {
    * ![Web](src/images/web.png "")
    * Content of the component. Only text for now.
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
 
   /**
    * Classes of the Button.
@@ -62,7 +69,19 @@ Button.propTypes = {
    * ![Web](src/images/web.png "")
    * Content of the component. Only text for now.
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  /**
+   * The type to pass to the underlying button html element
+   * ![Web](src/images/web.png "")
+   */
+  type: PropTypes.string,
+
+  /**
+   * The type of variation to display
+   * ![Native](src/images/native.png "")
+   * ![Web](src/images/web.png "")
+   */
+  variance: PropTypes.oneOf(['primary', 'neutral', 'light', 'dark']),
 }
 
 /** @component */

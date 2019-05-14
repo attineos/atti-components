@@ -4,8 +4,12 @@ exports[`RadioContainer renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <div
-    className="RadioContainer-oshlxq-0 DRbLh"
-  />
+  <span
+    className="atti-box"
+  >
+    <div
+      className="RadioContainer-oshlxq-0 kgRLaR"
+    />
+  </span>
 </span>
 `;

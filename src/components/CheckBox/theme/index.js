@@ -1,4 +1,4 @@
-export default ({ borders, colors, forms, sizes, spaces }) => ({
+export default ({ borders, colors, forms, spaces }) => ({
   checkBoxBox: {
     borders: {
       radius: forms.borders.radius,
@@ -9,18 +9,21 @@ export default ({ borders, colors, forms, sizes, spaces }) => ({
       thickness: borders.widths.bw3,
     },
     colors: {
-      backgroundHover: colors.success,
-      backgroundChecked: colors.success,
+      backgroundHover: colors.primary,
+      backgroundChecked: colors.lightPrimary,
       border: forms.colors.border,
-      borderHover: colors.success,
-      borderChecked: colors.success,
+      borderHover: forms.colors.borderFocus,
+      borderChecked: forms.colors.border,
     },
     sizes: {
-      height: sizes.heights.h10,
-      width: sizes.widths.w10,
+      height: spaces.s1,
+      width: spaces.s1,
     },
     spaces: {
-      marginRight: spaces.s5,
+      top: spaces.s0_25,
+      bottom: spaces.s0_25,
+      left: spaces.s0_25,
+      right: spaces.s0_5,
     },
   },
 })

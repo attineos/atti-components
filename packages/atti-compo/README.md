@@ -1,6 +1,6 @@
 # Atti Component
 
-![pipelines](https://gitlab.com/attineos/atti-components/badges/develop/build.svg)
+[<img src="https://travis-ci.org/attineos/atti-components.svg?branch=master">](https://travis-ci.org/attineos/atti-components)
 
 Reusable and cross platform React components, for web and Native application.
 

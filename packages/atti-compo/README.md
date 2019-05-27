@@ -11,6 +11,8 @@ Each component aims to provide the same options and functionality on both enviro
 
 ## Basic usage for any project
 
+### Installation
+
 To use this library, simply add it as a dependency to your yarn or npm project by running the command:
 
 ```
@@ -29,10 +31,28 @@ import * from 'atti-components'
 import * from 'atti-components/native'
 ```
 
-The goal of this library is to abstract native and web differencies and expose a common interface. 
+The goal of this library is to abstract native and web differencies and expose a common interface.
 However some inconsistencies may still exist and you will have to thoroughly test your application on all devices you intend to distribute it on.
 
 For a more detailed view of individual components and how to use them, please [see the live demo/documentation](https://atti-components.netlify.com/).
+
+### Usage example
+
+To use the components, you should provide your application a theme. Based on [styled-components' usage](https://www.styled-components.com/docs/advanced#theming), you should wrap your components in a `ThemeProvider` component.
+
+In atti-components, we provide you a custom `ThemeProvider` and a basic theme that you can override.
+
+So the root of your application should look like something like this:
+
+```js
+import { defaultTheme, Button, ThemeProvider } from 'atti-components'
+
+const App = () => (
+  <ThemeProvider theme={defaultTheme}>
+    <Button>Click me</Button>
+  </ThemeProvider>
+)
+```
 
 ## Contributing
 
@@ -64,13 +84,12 @@ Run `yarn preparecommit` to check if you can commit your code. The command runs 
 
 Run `yarn build` to transpile and compress your components into 2 bundles (one for the web and one for native).
 
-
 ### Contributing rules and help
 
 Before contributing to `atti-components`, please [check the contributing file](CONTRIBUTING.md). It contains lot of help on how to write your contribution the right way.
 
 ## Useful links
 
-* React: https://github.com/facebook/react
-* Styled-components : https://github.com/styled-components/styled-components
-* Styleguidist : https://github.com/styleguidist/react-styleguidist
+- React: https://github.com/facebook/react
+- Styled-components : https://github.com/styled-components/styled-components
+- Styleguidist : https://github.com/styleguidist/react-styleguidist

@@ -31,14 +31,19 @@ const colors = {
   black: '#222222',
   lightBlack: '#3B3B3B',
   lighterBlack: '#515151',
-  darkerGrey: '#626262',
-  darkGrey: '#7E7E7E',
-  grey: '#9E9E9E',
-  lightGrey: '#B1B1B1',
-  lighterGrey: '#CFCFCF',
-  darkerWhite: '#E1E1E1',
-  darkWhite: '#F7F7F7',
-  white: '#FFFFFF',
+  lightestBlack: '#6f6f6f',
+
+  darkerGrey: '#aaaaaa',
+  darkGrey: '#b5b5b5',
+  grey: '#bdbdbd',
+  lightGrey: '#c9c9c9',
+  lighterGrey: '#d1d1d1',
+  lightestGrey: '#dcdcdc',
+
+  darkestWhite: '#e1e1e1',
+  darkerWhite: '#ebebeb',
+  darkWhite: '#f5f5f5',
+  white: '#ffffff',
 }
 
 export default colors

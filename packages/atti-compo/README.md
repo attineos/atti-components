@@ -54,6 +54,21 @@ const App = () => (
 )
 ```
 
+## Troubleshooting
+
+### Missing font
+
+In the `defaultTheme`, the font used is Roboto. As we don't want to include it for you to avoid any conflicts, you should include it by yourself.
+For example you can add the following in one of your CSS files:
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+```
+
+If you don't want to use Roboto as your default font, you can simply override the `theme.fonts.fontFamily.primary` to any other value and include the corresponding font by yourself.
+
+Please note that there is also a `theme.fonts.fontFamily.secondary` property but this one is not used so far. That said, it doesn't prevent you from overriding its value and using it :).
+
 ## Contributing
 
 ### Installation

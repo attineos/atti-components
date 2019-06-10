@@ -1,17 +1,7 @@
-import MenuItem from './MenuItem'
-import MenuLink from './MenuLink'
-import MenuLinksList from './MenuLinksList'
-import MenuNavMobile from './MenuNavMobile'
-import MenuOpenerContainer from './MenuOpenerContainer'
-import MenuOpenerLine from './MenuOpenerLine'
-import SideMenu from './SideMenu'
-
-export {
-  MenuItem,
-  MenuLink,
-  MenuLinksList,
-  MenuNavMobile,
-  MenuOpenerContainer,
-  MenuOpenerLine,
-  SideMenu,
-}
+export MenuItem from './MenuItem'
+export MenuLink from './MenuLink'
+export MenuLinksList from './MenuLinksList'
+export MenuNavMobile from './MenuNavMobile'
+export MenuOpenerContainer from './MenuOpenerContainer'
+export MenuOpenerLine from './MenuOpenerLine'
+export SideMenu from './SideMenu'

@@ -10,6 +10,7 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 ## Unreleased
 
 - Improve documentation regarding usage of ThemeProvider by [@akaala](https://github.com/akaala)
+- Add a new section in the global README about troubleshooting and fill it with some explanations regarding font imports by [@akaala](https://github.com/akaala)
 
 ## [0.1.1] - 2019-05-14
 

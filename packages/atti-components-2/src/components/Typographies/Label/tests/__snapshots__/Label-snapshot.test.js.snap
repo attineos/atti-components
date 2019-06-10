@@ -8,7 +8,7 @@ exports[`Label renders correctly 1`] = `
     className="atti-box"
   >
     <label
-      className="Typography-csduj4-0-label Label-sc-13odsk3-0 atti-r-css  cTHwoi"
+      className="Typography-csduj4-0-label Label-sc-13odsk3-0 atti-r-css  hKeVnC"
       disabled={true}
       htmlFor="Atticomponents"
     >

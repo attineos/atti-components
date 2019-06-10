@@ -8,7 +8,7 @@ exports[`StyledSelect renders correctly 1`] = `
     className="atti-box"
   >
     <select
-      className="Text-sc-9szep3-0-select StyledSelect-jeqzcu-0 atti-r-css  hDcBEi"
+      className="Text-sc-9szep3-0-select StyledSelect-jeqzcu-0 atti-r-css  gZfpmy"
     />
   </span>
 </span>

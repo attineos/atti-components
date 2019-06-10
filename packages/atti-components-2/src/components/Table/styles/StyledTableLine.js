@@ -10,6 +10,14 @@ const StyledTableLine = styled.tr`
     padding-left: ${({ theme }) => theme.components.table.spaces.firstChildLeftSpacing};
   }
 
+  &:nth-child(even) {
+    background: ${({ theme }) => theme.components.table.colors.backgroundEven};
+  }
+
+  &:nth-child(odd) {
+    background: ${({ theme }) => theme.components.table.colors.backgroundOdd};
+  }
+
   ${({ isHoverable, theme }) =>
     isHoverable
       ? `&:hover {

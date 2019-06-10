@@ -1,6 +1,9 @@
 # Atti Component
 
 [<img src="https://travis-ci.org/attineos/atti-components.svg?branch=master">](https://travis-ci.org/attineos/atti-components)
+[<img src="https://img.shields.io/npm/v/atti-components.svg">](https://www.npmjs.com/package/atti-components)
+[<img src="https://img.shields.io/npm/dm/atti-components.svg">](https://www.npmjs.com/package/atti-components)
+
 
 Reusable and cross platform React components, for web and Native application.
 

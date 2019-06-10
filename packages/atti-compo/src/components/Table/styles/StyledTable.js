@@ -8,7 +8,6 @@ const StyledTable = styled.table`
   border: ${({ theme }) => theme.components.table.borders.borderWidth} solid
     ${({ theme }) => theme.components.table.colors.border};
 
-  border-collapse: collapse;
   border-spacing: 0;
 `
 

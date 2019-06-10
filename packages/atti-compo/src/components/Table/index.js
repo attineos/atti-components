@@ -71,3 +71,4 @@ Table.propTypes = {
 
 /** @component */
 export default styled(Table)``
+export * as Styles from './styles'

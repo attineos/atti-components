@@ -27,6 +27,7 @@ const positionFirstComponent = css`
   display: flex;
   justify-content: ${({ fillingOrientation }) => fillingOrientation};
   position: relative;
+  justify-content: space-between;
 `
 
 const positionText = css`
@@ -53,7 +54,11 @@ const StyledProgressBar = styled.div`
   ${colors};
   ${positionFirstComponent} ${positionText};
   ${size};
-  padding: 2px 0;
+  padding: 0 0;
   user-select: none;
+
+  > ${Text} {
+    width: auto;
+  }
 `
 export default StyledProgressBar

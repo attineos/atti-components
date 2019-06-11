@@ -1,5 +1,18 @@
 Progress bar :
 
+```js
+<div>
+  <ProgressBar
+    start={0}
+    value={500}
+    end={1000}
+    label="Label centered"
+    leftLabel="Label left"
+    rightLabel="Label right"
+  />
+</div>
+```
+
 _Click on the progress bars to update their values_
 
 ```js

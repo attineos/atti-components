@@ -1,8 +1,8 @@
-export default ({ borders, colors, spaces }) => ({
+export default ({ colors, spaces }) => ({
   borders: {
-    borderColor: colors.darkWhite,
+    borderColor: colors.transparent,
     borderRadius: '25px',
-    borderWidth: borders.widths.bw2,
+    borderWidth: 0,
   },
 
   colors: {

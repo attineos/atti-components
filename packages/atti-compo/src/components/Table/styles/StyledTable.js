@@ -9,6 +9,13 @@ const StyledTable = styled.table`
     ${({ theme }) => theme.components.table.colors.border};
 
   border-spacing: 0;
+
+  tbody tr:last-child td:first-child {
+    border-bottom-left-radius: ${({ theme }) => theme.components.table.borders.borderRadius};
+  }
+  tbody tr:last-child td:last-child {
+    border-bottom-right-radius: ${({ theme }) => theme.components.table.borders.borderRadius};
+  }
 `
 
 export default StyledTable

@@ -15,21 +15,23 @@ class ProgressBar extends PureComponent {
   render() {
     const {
       className,
-      end,
       fillingOrientation,
       fillingSpeed,
-      percentageLabel,
-      showLabel,
+
       start,
+      end,
       step,
       value,
+
+      label,
+      leftLabel,
+      rightLabel,
     } = this.props
 
     const normalizedValue = Math.min(Math.max(parseFloat(value), start), end)
     const percent = this.roundToStep((normalizedValue * 100) / (end - start), step)
-    const stepLabel = percentageLabel
-      ? `${percent}%`
-      : `${this.roundToStep(value, step) - start}/${end - start}`
+
+    const stepLabel = !!label ? label : `${this.roundToStep(value, step) - start}/${end - start}%`
 
     return (
       <StyledProgressBar
@@ -40,7 +42,9 @@ class ProgressBar extends PureComponent {
         percent={percent}
         start={start}
       >
-        {showLabel ? <Text>{stepLabel}</Text> : null}
+        <Text>{leftLabel}</Text>
+        <Text>{stepLabel}</Text>
+        <Text>{rightLabel}</Text>
       </StyledProgressBar>
     )
   }
@@ -51,11 +55,12 @@ ProgressBar.defaultProps = {
   end: 100,
   fillingOrientation: 'left',
   fillingSpeed: 100,
-  percentageLabel: true,
-  showLabel: true,
   start: 0,
   step: 1,
   value: 0,
+  leftLabel: '',
+  rightLabel: '',
+  label: null,
 }
 
 ProgressBar.propTypes = {
@@ -80,14 +85,19 @@ ProgressBar.propTypes = {
   fillingSpeed: PropTypes.number,
 
   /**
-   * Define if the percentage label should be used.
+   * Define the label text.
    */
-  percentageLabel: PropTypes.bool,
+  label: PropTypes.string,
 
   /**
-   * Define if the label should be visible.
+   * Define the left label text.
    */
-  showLabel: PropTypes.bool,
+  leftLabel: PropTypes.string,
+
+  /**
+   * Define the right label.
+   */
+  rightLabel: PropTypes.string,
 
   /**
    * Beginning of the progressbar.

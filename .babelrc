@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }],
+    "react",
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": ["lodash", "styled-components", "transform-class-properties", "wildcard"]
+}

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledImage renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <img
+      className="StyledImage-sc-1w567an-0 bkCYm"
+    />
+  </span>
+</span>
+`;

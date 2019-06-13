@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledLoader renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <div
+      className="StyledLoader-d8og6-0 gyvoiN"
+    />
+  </span>
+</span>
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <div
+      className="Atticomponents Loader-kh46gp-0 fWNqqK StyledLoader-d8og6-0 fqkFec"
+      color="Atticomponents"
+    />
+  </span>
+</span>
+`;

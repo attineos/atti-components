@@ -1,0 +1,31 @@
+Small Avatar :
+
+```js
+<Avatar size="small" bgColor="#4285F4">
+  ML
+</Avatar>
+```
+
+Medium Avatar :
+
+```js
+<Avatar bgColor="neutral">MV</Avatar>
+```
+
+Large Avatar :
+
+```js
+<Avatar size="large" bgColor="#FFC82C">
+  EL
+</Avatar>
+```
+
+Pictured Avatar :
+
+```js
+<Avatar
+  bgSrc="https://image.flaticon.com/icons/svg/149/149071.svg"
+  size="large"
+  title="Eric Legrand"
+/>
+```

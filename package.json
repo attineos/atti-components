@@ -1,0 +1,91 @@
+{
+  "name": "atti-components",
+  "version": "0.1.0-rc26",
+  "description": "A set of fully customizable React components made with <3 with styled-components",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --config webpack/native.config.babel.js && webpack --config webpack/web.config.babel.js",
+    "build:documentation": "styleguidist build",
+    "dev": "yarn run start:styleguidist",
+    "gen": "babel-node --presets babel-preset-env ./bin/generateComponent",
+    "lint": "eslint --cache src",
+    "preparecommit": "yarn snapshots && yarn theme && yarn prettier && yarn lint && yarn test",
+    "prepublish": "npm run build",
+    "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
+    "snapshots": "babel-node ./bin/generateSnapshots",
+    "start": "yarn run start:styleguidist",
+    "start:styleguidist": "styleguidist server",
+    "test": "jest",
+    "theme": "babel-node --extensions \".js\",\".web.js\" ./bin/generateFullTheme"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint"
+    }
+  },
+  "repository": "git@gitlab.com:attineos/atti-components.git",
+  "author": "Attineos <contact@attineos.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "polished": "^2.0.3",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "@textlint/markdown-to-ast": "^6.0.9",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.7.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-wildcard": "^5.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^1.2.0",
+    "jest": "^23.5.0",
+    "jest-styled-components": "^6.3.1",
+    "path": "^0.12.7",
+    "prettier": "^1.14.0",
+    "pretty-quick": "^1.10.0",
+    "prompts": "^2.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-styleguidist": "^8.0.6",
+    "react-test-renderer": "^16.4.2",
+    "remark": "^9.0.0",
+    "styled-components": "^4.0.0",
+    "unist-util-is": "^2.1.2",
+    "webpack": "^4.16.3",
+    "webpack-bundle-analyzer": "^3.0.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.4"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-native": "0.55.4",
+    "styled-components": "^4.0.0"
+  },
+  "files": [
+    "dist",
+    "helpers",
+    "native",
+    "CONTRIBUTING.md"
+  ]
+}

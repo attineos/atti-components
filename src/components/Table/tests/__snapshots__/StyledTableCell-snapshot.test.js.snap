@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledTableCell renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <td
+      className="StyledTableCell-sc-1fzx577-0 hSakMf"
+    />
+  </span>
+</span>
+`;

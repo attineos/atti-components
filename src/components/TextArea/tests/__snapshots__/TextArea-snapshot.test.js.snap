@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <textarea
+      className="Text-sc-9szep3-0-textarea Atticomponents TextArea-sc-1j7164a-0 fJQxaA StyledTextArea-sc-1ciexer-0 atti-r-css Atticomponents TextArea-sc-1j7164a-0 fJQxaA gQKnfc"
+      id="Atticomponents"
+      name="Atticomponents"
+      onChange={[Function]}
+      placeholder="Atticomponents"
+    />
+  </span>
+</span>
+`;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Title, DivHeader, Align, Gitspan } from './style'
+import { Button, Title, DivHeader, Align } from './style'
 class Header extends React.Component {
   render() {
     return (

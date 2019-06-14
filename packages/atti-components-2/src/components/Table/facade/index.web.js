@@ -100,10 +100,11 @@ class TableFacade extends Facade {
   }
 
   renderDetailsLine(element, id, odd) {
-    const { renderDetailsLine, cols, isLineHoverable } = this.props
+    const { renderDetailsLine, cols, isDetailsLineHoverable } = this.props
 
     const colCount = size(cols)
-    const isHoverable = 'isLineHoverable' in element ? element.isLineHoverable : isLineHoverable
+    const isDetailsHoverable =
+      'isDetailsLineHoverable' in element ? element.isDetailsLineHoverable : isDetailsLineHoverable
 
     const component = chain(
       // We assume a valid result as soon as we got a non null element
@@ -120,7 +121,7 @@ class TableFacade extends Facade {
 
     return (
       <Fragment key={`details-${id}`}>
-        <StyledTableLine isHoverable={isHoverable} odd={odd}>
+        <StyledTableLine isHoverable={isDetailsHoverable} odd={odd}>
           <StyledTableCell colSpan={colCount}>{component}</StyledTableCell>
         </StyledTableLine>
       </Fragment>

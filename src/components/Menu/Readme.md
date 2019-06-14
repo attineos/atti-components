@@ -7,7 +7,7 @@ Menu :
     { url: '/#/Navigation?id=menu', name: 'Menu page' },
     { url: 'https://www.w3.org', name: 'W3C', target: '_blank' },
     {
-      url: 'https://github.com/attineos/atti-component',
+      url: 'https://github.com/attineos/atti-components',
       name: 'Our Github Page',
       target: '_blank',
     },

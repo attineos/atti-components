@@ -10,6 +10,7 @@ class Header extends React.Component {
         </Align>
         <Align className="right">
           <Button
+            target="_blank"
             onClick={() => {
               window.location.href = 'https://github.com/attineos/atti-components'
             }}

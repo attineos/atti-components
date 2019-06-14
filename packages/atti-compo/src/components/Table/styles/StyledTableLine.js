@@ -10,13 +10,10 @@ const StyledTableLine = styled.tr`
     padding-left: ${({ theme }) => theme.components.table.spaces.firstChildLeftSpacing};
   }
 
-  &:nth-child(even) {
-    background: ${({ theme }) => theme.components.table.colors.backgroundEven};
-  }
-
-  &:nth-child(odd) {
-    background: ${({ theme }) => theme.components.table.colors.backgroundOdd};
-  }
+  background-color: ${({ theme, odd }) =>
+    odd == 1
+      ? theme.components.table.colors.backgroundOdd
+      : theme.components.table.colors.backgroundEven};
 
   ${({ isHoverable, theme }) =>
     isHoverable

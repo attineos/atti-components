@@ -72,7 +72,7 @@ class TableFacade extends Facade {
     )
   }
 
-  renderLine(element, children, id) {
+  renderLine(element, children, id, odd) {
     const { renderLine, isLineHoverable, onLineClick } = this.props
 
     return (
@@ -80,20 +80,49 @@ class TableFacade extends Facade {
         {chain(
           // We assume a valid result as soon as we got a non null element
           element => !isNull(element) && !isUndefined(element),
-          () => (element && isFunction(element.render) ? element.render(element, children) : null),
-          () => (renderLine && isFunction(renderLine) ? renderLine(element, children) : null),
+          () =>
+            element && isFunction(element.render) ? element.render(element, children, odd) : null,
+          () => (renderLine && isFunction(renderLine) ? renderLine(element, children, odd) : null),
           () => {
             const isHoverable =
               'isLineHoverable' in element ? element.isLineHoverable : isLineHoverable
             const handleLineClick = 'onLineClick' in element ? element.onLineClick : onLineClick
 
             return (
-              <StyledTableLine onClick={handleLineClick} isHoverable={isHoverable}>
+              <StyledTableLine onClick={handleLineClick} isHoverable={isHoverable} odd={odd}>
                 {children}
               </StyledTableLine>
             )
           },
         )}
+      </Fragment>
+    )
+  }
+
+  renderDetailsLine(element, id, odd) {
+    const { renderDetailsLine, cols, isLineHoverable } = this.props
+
+    const colCount = size(cols)
+    const isHoverable = 'isLineHoverable' in element ? element.isLineHoverable : isLineHoverable
+
+    const component = chain(
+      // We assume a valid result as soon as we got a non null element
+      element => !isNull(element) && !isUndefined(element),
+      () =>
+        element && isFunction(element.renderDetails) ? element.renderDetails(element, odd) : null,
+      () =>
+        renderDetailsLine && isFunction(renderDetailsLine) ? renderDetailsLine(element, odd) : null,
+    )
+
+    if (!component) {
+      return null
+    }
+
+    return (
+      <Fragment key={`details-${id}`}>
+        <StyledTableLine isHoverable={isHoverable} odd={odd}>
+          <StyledTableCell colSpan={colCount}>{component}</StyledTableCell>
+        </StyledTableLine>
       </Fragment>
     )
   }
@@ -131,15 +160,19 @@ class TableFacade extends Facade {
         </thead>
 
         <tbody>
-          {map(elements, (element, index) =>
-            this.renderLine(
-              element,
-              <React.Fragment>
-                {map(cols, col => this.renderCell(col, element, index))}
-              </React.Fragment>,
-              index,
-            ),
-          )}
+          {map(elements, (element, index) => (
+            <React.Fragment>
+              {this.renderLine(
+                element,
+                <React.Fragment>
+                  {map(cols, col => this.renderCell(col, element, index))}
+                </React.Fragment>,
+                index,
+                index % 2,
+              )}
+              {this.renderDetailsLine(element, index, index % 2)}
+            </React.Fragment>
+          ))}
         </tbody>
       </React.Fragment>,
     )

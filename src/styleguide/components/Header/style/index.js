@@ -1,33 +1,21 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-  /* Adapt the colors based on primary prop */
   background: #f29400;
   color: ${({ theme }) => theme.colors.white};
   z-index: 2;
   font-size: 1em;
+  font-family: Arial;
   margin: 1em;
-  padding: 0.45em 1em;
+  padding: 0.5em 0.75em;
   border: 1px solid white;
-  border-radius: 4px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
-  img.black {
-    display: none;
-  }
-  img.white {
-    display: flex;
-  }
 
   :hover {
     background: white;
     color: #f29400;
-    img.black {
-      display: flex;
-    }
-    img.white {
-      display: none;
-    }
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
@@ -58,7 +46,7 @@ export const DivHeader = styled.div`
 
 export const Align = styled.div`
   display: flex;
-
+  align-items: center;
   &.left {
     justify-content: flex-start;
   }
@@ -76,11 +64,5 @@ export const Align = styled.div`
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     justify-content: space-between;
-  }
-`
-
-export const Gitspan = styled.span`
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-    display: none;
   }
 `

@@ -4,9 +4,7 @@ class Header extends React.Component {
   render() {
     return (
       <DivHeader>
-        <Align className="left">
-          <Menu />
-        </Align>
+        <Align className="left" />
         <Align className="center">
           <Title>Atti-components</Title>
         </Align>
@@ -16,7 +14,7 @@ class Header extends React.Component {
               window.location.href = 'https://github.com/attineos/atti-components'
             }}
           >
-            <Gitspan>GitHub</Gitspan>
+            GitHub
           </Button>
         </Align>
       </DivHeader>

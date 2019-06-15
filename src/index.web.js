@@ -24,6 +24,7 @@ import Radio from './components/Radio'
 import Select from './components/Select'
 import Table from './components/Table'
 import TextArea from './components/TextArea'
+import Tooltip from './components/Tooltip'
 
 import {
   BigText,
@@ -74,6 +75,7 @@ module.exports = {
   Table,
   Text,
   TextArea,
+  Tooltip,
   Typography,
 
   defaultTheme,

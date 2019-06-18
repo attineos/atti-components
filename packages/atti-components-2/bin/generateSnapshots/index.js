@@ -5,7 +5,13 @@ import glob from 'glob'
 
 import SnapshotComponent from './SnapshotComponent'
 import { mockProp } from './mocks'
-import { extractProps, extractKey, extractChildrenValue, extractValue } from './extractor'
+import {
+  extractProps,
+  extractKey,
+  extractChildrenValue,
+  extractValue,
+  getNumberOfComponents,
+} from './extractor'
 
 /*
  * Folders to ignore.
@@ -128,7 +134,7 @@ glob(`${componentsDir}/**/!(${ignoreList})/!(*.native).js`, (err, files) => {
         )
     try {
       const fileContent = fs.readFileSync(file, 'utf-8')
-      if (fileContent.includes(ignoreAnnotation)) {
+      if (fileContent.includes(ignoreAnnotation) || getNumberOfComponents(fileContent) < 1) {
         logComponentSkipped(snapshotComponent.getName())
         return
       }

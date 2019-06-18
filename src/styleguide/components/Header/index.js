@@ -4,13 +4,20 @@ class Header extends React.Component {
   render() {
     return (
       <DivHeader>
-        <Align className="left" />
+        <Align className="left">
+          <Button
+            onClick={() => {
+              window.location.href = '/'
+            }}
+          >
+            Home
+          </Button>
+        </Align>
         <Align className="center">
           <Title>Atti-components</Title>
         </Align>
         <Align className="right">
           <Button
-            target="_blank"
             onClick={() => {
               window.location.href = 'https://github.com/attineos/atti-components'
             }}

@@ -42,6 +42,7 @@ export const DivHeader = styled.div`
   justify-content: space-between;
   position: relative;
   height: 70px;
+  margin-left: 0;
 `
 
 export const Align = styled.div`

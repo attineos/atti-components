@@ -103,14 +103,19 @@ class StyleGuideRenderer extends React.Component {
 
   render() {
     const { children, classes, hasSidebar, homepageUrl, toc } = this.props
-
+    //console.log(window.location.href.includes('/#!/'))
     return (
       <ThemeProvider theme={defaultTheme}>
         <div
           className={cx(classes.root, hasSidebar && classes.hasSidebar)}
           style={{ backgroundColor: defaultTheme['primary'] }}
         >
-          <header style={{marginLeft:"45px"}}>
+          <header
+            style={{
+              marginLeft: `${() => (window.location.href.includes('/#!/') ? '20000px' : '45px')};`,
+            }}
+            llqlla={console.log(window.location.href.includes('/#!/'))}
+          >
             <Header />
           </header>
           <main className={classes.content}>
@@ -135,4 +140,3 @@ class StyleGuideRenderer extends React.Component {
 }
 
 export default Styled(styles)(StyleGuideRenderer)
-

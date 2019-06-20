@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'components/Link'
 
-const ItemLink = styled(Link)`
+const StyledItemLink = styled(Link)`
   height: 100%;
   padding: 0 ${({ theme }) => theme.components.menu.menuDesktop.basic.link.spaces.paddingWidth};
   display: inline-flex;
@@ -22,4 +22,4 @@ const ItemLink = styled(Link)`
   `}
 `
 
-export default ItemLink
+export default StyledItemLink

@@ -39,9 +39,8 @@ import {
 
 import { defaultTheme, attineosTheme } from './themes'
 
-module.exports = {
+export {
   ThemeProvider,
-
   Alert,
   Avatar,
   Badge,
@@ -75,7 +74,6 @@ module.exports = {
   Text,
   TextArea,
   Typography,
-
   defaultTheme,
   attineosTheme,
 }

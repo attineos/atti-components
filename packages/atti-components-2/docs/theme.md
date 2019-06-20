@@ -77,14 +77,17 @@
       black: '#222222',
       lightBlack: '#3B3B3B',
       lighterBlack: '#515151',
-      darkerGrey: '#626262',
-      darkGrey: '#7E7E7E',
-      grey: '#9E9E9E',
-      lightGrey: '#B1B1B1',
-      lighterGrey: '#CFCFCF',
-      darkerWhite: '#E1E1E1',
-      darkWhite: '#F7F7F7',
-      white: '#FFFFFF',
+      lightestBlack: '#6f6f6f',
+      darkerGrey: '#aaaaaa',
+      darkGrey: '#b5b5b5',
+      grey: '#bdbdbd',
+      lightGrey: '#c9c9c9',
+      lighterGrey: '#d1d1d1',
+      lightestGrey: '#dcdcdc',
+      darkestWhite: '#e1e1e1',
+      darkerWhite: '#ebebeb',
+      darkWhite: '#f5f5f5',
+      white: '#ffffff',
     },
   fonts:
     {
@@ -191,11 +194,11 @@
         {
           normal:
             {
-              border: '#E1E1E1',
-              borderFocus: '#B1B1B1',
+              border: '#ebebeb',
+              borderFocus: '#c9c9c9',
               caret: '#3B3B3B',
-              placeholder: '#B1B1B1',
-              text: '#7E7E7E',
+              placeholder: '#c9c9c9',
+              text: '#b5b5b5',
             },
           error:
             {
@@ -236,7 +239,7 @@
       avatar:
         {
           border: { radius: '50%' },
-          colors: { text: '#FFFFFF' },
+          colors: { text: '#ffffff' },
           fonts: { fontFamily: 'Roboto' },
           sizes:
             {
@@ -252,7 +255,7 @@
             {
               background:
                 { danger: '#F9703E', success: '#3EBD93', warning: '#F7C948', info: '#3AE7E1' },
-              text: '#FFFFFF',
+              text: '#ffffff',
             },
           spaces: { paddingHeight: '8px', paddingWidth: '8px' },
           fonts:
@@ -273,8 +276,8 @@
       breadcrumb:
         {
           breadcrumbSeparator:
-            { color: '#9E9E9E', spaces: { marginLeft: '4px', marginRight: '4px' } },
-          currentElement: { colors: { text: '#9E9E9E' } },
+            { color: '#bdbdbd', spaces: { marginLeft: '4px', marginRight: '4px' } },
+          currentElement: { colors: { text: '#bdbdbd' } },
           fonts: { fontFamily: 'Roboto', fontSize: '14px', fontWeight: 100 },
           spaces: { marginBottom: '8px' },
         },
@@ -290,10 +293,10 @@
             },
           colors:
             {
-              primary: { background: '#2CB1BC', border: 'transparent', text: '#FFFFFF' },
-              neutral: { background: '#627D98', border: 'transparent', text: '#FFFFFF' },
-              normal: { background: 'transparent', border: '#627D98', text: '#9E9E9E' },
-              light: { background: 'transparent', border: '#FFFFFF', text: '#FFFFFF' },
+              primary: { background: '#2CB1BC', border: 'transparent', text: '#ffffff' },
+              neutral: { background: '#627D98', border: 'transparent', text: '#ffffff' },
+              normal: { background: 'transparent', border: '#627D98', text: '#bdbdbd' },
+              light: { background: 'transparent', border: '#ffffff', text: '#ffffff' },
               dark: { background: 'transparent', border: '#222222', text: '#222222' },
             },
           sizes: { height: '42px' },
@@ -306,7 +309,7 @@
           checkBoxBox:
             {
               borders: { radius: '4px', width: '1px' },
-              checkSign: { color: '#FFFFFF', thickness: '3px' },
+              checkSign: { color: '#ffffff', thickness: '3px' },
               colors: { backgroundHover: '#2CB1BC', backgroundChecked: '#54D1DB' },
               sizes: { height: '16px', width: '16px' },
               spaces: { top: '4px', bottom: '4px', left: '4px', right: '8px' },
@@ -364,11 +367,11 @@
                 {
                   normal:
                     {
-                      border: '#E1E1E1',
-                      borderFocus: '#B1B1B1',
+                      border: '#ebebeb',
+                      borderFocus: '#c9c9c9',
                       caret: '#3B3B3B',
-                      placeholder: '#B1B1B1',
-                      text: '#7E7E7E',
+                      placeholder: '#c9c9c9',
+                      text: '#b5b5b5',
                     },
                   error:
                     {
@@ -403,10 +406,10 @@
             },
           colors:
             {
-              primary: { background: '#2CB1BC', border: 'transparent', text: '#FFFFFF' },
-              neutral: { background: '#627D98', border: 'transparent', text: '#FFFFFF' },
-              normal: { background: 'transparent', border: '#627D98', text: '#9E9E9E' },
-              light: { background: 'transparent', border: '#FFFFFF', text: '#FFFFFF' },
+              primary: { background: '#2CB1BC', border: 'transparent', text: '#ffffff' },
+              neutral: { background: '#627D98', border: 'transparent', text: '#ffffff' },
+              normal: { background: 'transparent', border: '#627D98', text: '#bdbdbd' },
+              light: { background: 'transparent', border: '#ffffff', text: '#ffffff' },
               dark: { background: 'transparent', border: '#222222', text: '#222222' },
             },
           sizes: { height: '42px' },
@@ -417,7 +420,7 @@
       inputGroup: { borders: { borderWidth: '2px', borderRadius: '4px' }, colors: {} },
       label:
         {
-          colors: { text: '#9E9E9E' },
+          colors: { text: '#bdbdbd' },
           fonts: { fontFamily: 'Roboto', fontSize: '16px', fontWeight: 500, lineHeight: '24px' },
         },
       link:
@@ -429,7 +432,7 @@
         {
           animations: { speed: '1.25s', type: 'linear' },
           borders: { radius: '50%', thickness: '4px' },
-          colors: { colorIndicator: '#2CB1BC', backgroundColor: '#FFFFFF' },
+          colors: { colorIndicator: '#2CB1BC', backgroundColor: '#ffffff' },
           size: '24px',
         },
       menu:
@@ -440,7 +443,7 @@
                 {
                   link:
                     {
-                      colors: { backgroundHover: '#9FB3C8', text: '#FFFFFF', textHover: '#FFFFFF' },
+                      colors: { backgroundHover: '#9FB3C8', text: '#ffffff', textHover: '#ffffff' },
                       spaces: { paddingWidth: '64px' },
                     },
                   menu: { colors: { background: '#627D98' }, sizes: { height: '48px' } },
@@ -451,12 +454,12 @@
                     {
                       colors:
                         {
-                          background: '#FFFFFF',
-                          backgroundSelected: '#E1E1E1',
-                          backgroundHover: '#E1E1E1',
-                          text: '#9E9E9E',
-                          textSelected: '#7E7E7E',
-                          textHover: '#626262',
+                          background: '#ffffff',
+                          backgroundSelected: '#ebebeb',
+                          backgroundHover: '#ebebeb',
+                          text: '#bdbdbd',
+                          textSelected: '#b5b5b5',
+                          textHover: '#aaaaaa',
                           bottomBorder: 'transparent',
                           bottomBorderSelected: '#2CB1BC',
                         },
@@ -466,7 +469,7 @@
                     {
                       borderRadius: '4px',
                       bottomBorder: '2px',
-                      colors: { background: '#D9E2EC', border: '#F7F7F7' },
+                      colors: { background: '#D9E2EC', border: '#f5f5f5' },
                       sizes: { height: '48px' },
                     },
                 },
@@ -479,9 +482,9 @@
                           background: 'transparent',
                           backgroundSelected: 'transparent',
                           backgroundHover: 'transparent',
-                          text: '#9E9E9E',
-                          textSelected: '#7E7E7E',
-                          textHover: '#626262',
+                          text: '#bdbdbd',
+                          textSelected: '#b5b5b5',
+                          textHover: '#aaaaaa',
                         },
                       spaces: { paddingWidth: '64px' },
                     },
@@ -489,7 +492,7 @@
                     {
                       borderRadius: '8px',
                       border: '1px',
-                      colors: { background: '#D9E2EC', border: '#E1E1E1' },
+                      colors: { background: '#D9E2EC', border: '#ebebeb' },
                       sizes: { height: '48px' },
                     },
                 },
@@ -502,9 +505,9 @@
                     {
                       backgroundSelected: '#9FB3C8',
                       backgroundHover: '#9FB3C8',
-                      text: '#FFFFFF',
-                      textHover: '#FFFFFF',
-                      textSelected: '#FFFFFF',
+                      text: '#ffffff',
+                      textHover: '#ffffff',
+                      textSelected: '#ffffff',
                     },
                   spaces: { marginHeight: '8px', paddingHeight: '12px', paddingWidth: '24px' },
                 },
@@ -531,7 +534,7 @@
           boxShadows: { boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 20px' },
           colors:
             {
-              background: '#FFFFFF',
+              background: '#ffffff',
               closeButton: '#222222',
               overlayBackground: 'rgba(0, 0, 0, 0.3)',
             },
@@ -548,18 +551,18 @@
           borders: { style: 'solid', width: '1px' },
           colors:
             {
-              background: '#FFFFFF',
+              background: '#ffffff',
               backgroundSelected: '#2CB1BC',
               text: '#222222',
-              textSelected: '#FFFFFF',
+              textSelected: '#ffffff',
             },
           spaces: { padding: '8px' },
         },
       optionPanel: { spaces: { padding: '4px' } },
       progressBar:
         {
-          borders: { borderColor: '#F7F7F7', borderRadius: '25px', borderWidth: '2px' },
-          colors: { background: 'transparent', fill: '#54D1DB', text: '#626262' },
+          borders: { borderColor: 'transparent', borderRadius: '25px', borderWidth: 0 },
+          colors: { background: 'transparent', fill: '#54D1DB', text: '#aaaaaa' },
           sizes: { height: '24px', width: '100%' },
         },
       radio:
@@ -580,14 +583,14 @@
               boxShadows: { boxShadowFocus: '0 0 4px 0 #2CB1BC' },
               colors:
                 {
-                  border: '#E1E1E1',
-                  borderFocus: '#B1B1B1',
+                  border: '#ebebeb',
+                  borderFocus: '#c9c9c9',
                   caret: '#3B3B3B',
-                  placeholder: '#B1B1B1',
-                  text: '#7E7E7E',
-                  arrow: '#9E9E9E',
+                  placeholder: '#c9c9c9',
+                  text: '#b5b5b5',
+                  arrow: '#bdbdbd',
                   background: 'transparent',
-                  separator: '#E1E1E1',
+                  separator: '#ebebeb',
                 },
               sizes:
                 {
@@ -616,13 +619,13 @@
           borders: { borderWidth: '1px', borderRadius: '6px' },
           colors:
             {
-              background: 'transparent',
-              backgroundEven: 'transparent',
-              backgroundOdd: '#FFFFFF',
-              backgroundHover: '#F7F7F7',
-              border: '#E1E1E1',
-              text: '#9E9E9E',
-              headerText: '#9E9E9E',
+              background: '#ffffff',
+              backgroundEven: '#f5f5f5',
+              backgroundOdd: '#ffffff',
+              backgroundHover: '#ebebeb',
+              border: '#e1e1e1',
+              text: '#bdbdbd',
+              headerText: '#bdbdbd',
             },
           spaces: { headerHeight: '32px', lineHeight: '32px', firstChildLeftSpacing: '32px' },
         },
@@ -655,11 +658,11 @@
               boxShadows: { boxShadowFocus: '0 0 4px 0 #2CB1BC' },
               colors:
                 {
-                  border: '#E1E1E1',
-                  borderFocus: '#B1B1B1',
+                  border: '#ebebeb',
+                  borderFocus: '#c9c9c9',
                   caret: '#3B3B3B',
-                  placeholder: '#B1B1B1',
-                  text: '#7E7E7E',
+                  placeholder: '#c9c9c9',
+                  text: '#b5b5b5',
                 },
               spaces: { padding: '8px' },
               sizes: { height: '100%', width: '100%' },

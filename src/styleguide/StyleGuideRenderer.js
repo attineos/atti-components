@@ -109,14 +109,8 @@ class StyleGuideRenderer extends React.Component {
           className={cx(classes.root, hasSidebar && classes.hasSidebar)}
           style={{ backgroundColor: defaultTheme['primary'] }}
         >
-          <header
-            style={{
-              marginLeft: window.location.href.includes('/#!/') ? '0px' : '45px',
-              
-            }}
-          >
-            <Header />
-          </header>
+          <Header />
+
           <main className={classes.content}>
             {children}
 

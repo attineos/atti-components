@@ -18,11 +18,9 @@ export const Button = styled.button`
     color: #f29400;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {c
-    border: 0;
-    margin: 0;
-    padding: 0;
-    margin-right: 10px;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    margin: 7px;
+    padding: 7px;
   }
 `
 
@@ -35,13 +33,18 @@ export const Title = styled.h1`
   }
 `
 
-export const DivHeader = styled.div`
+export const DivHeader = styled.header`
   background-color: #f29400;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   height: 70px;
+  margin-left: ${window.location.href.includes('/#!/') ? '0px' : '45px'};
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    margin-left: 0;
+  }
 `
 
 export const Align = styled.div`

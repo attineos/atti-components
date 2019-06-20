@@ -3,9 +3,7 @@ import { Text } from '../../Typographies'
 
 const border = css`
   border: ${({ variance, theme }) =>
-    `${theme.components.inputFile.borders[variance].borderWidth} solid ${
-      theme.components.inputFile.colors[variance].border
-    }`};
+    `${theme.components.inputFile.borders[variance].borderWidth} solid ${theme.components.inputFile.colors[variance].border}`};
   border-radius: ${({ variance, theme }) =>
     theme.components.inputFile.borders[variance].borderRadius};
 `

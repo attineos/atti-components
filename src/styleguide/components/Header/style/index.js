@@ -18,7 +18,7 @@ export const Button = styled.button`
     color: #f29400;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {c
     border: 0;
     margin: 0;
     padding: 0;

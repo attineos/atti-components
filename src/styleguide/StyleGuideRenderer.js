@@ -112,6 +112,7 @@ class StyleGuideRenderer extends React.Component {
           <header
             style={{
               marginLeft: window.location.href.includes('/#!/') ? '0px' : '45px',
+              
             }}
           >
             <Header />

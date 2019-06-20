@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'components/Link'
 
-const ItemLink = styled(Link)`
+const StyledItemLink = styled(Link)`
   height: 100%;
   width: 100%;
 
@@ -61,4 +61,4 @@ const ItemLink = styled(Link)`
   }
 `
 
-export default ItemLink
+export default StyledItemLink

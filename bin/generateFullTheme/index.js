@@ -1,10 +1,9 @@
-import theme from '../../src/themes/defaultTheme'
-import componentsFactory from '../../src/themes/defaultTheme/componentsFactory.web'
-import { omit } from 'lodash'
 import fs from 'fs'
+import constructTheme from '../../src/components/ThemeProvider/helpers/constructTheme'
+import defaultTheme from '../../src/themes/defaultTheme'
 
-// Add theme constants
-let fullTheme = { ...omit(theme, 'componentsFactory'), ...componentsFactory(theme) }
+// Construct the theme
+const fullTheme = constructTheme({}, defaultTheme)
 
 fs.writeFile(
   './docs/theme.md',

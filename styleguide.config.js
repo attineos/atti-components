@@ -44,6 +44,10 @@ module.exports = {
           content: 'docs/installation.md',
         },
         {
+          name: 'Usage',
+          content: 'docs/usage.md',
+        },
+        {
           name: 'Theme',
           content: 'docs/theme.md',
         },

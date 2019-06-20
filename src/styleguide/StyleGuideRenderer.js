@@ -103,7 +103,6 @@ class StyleGuideRenderer extends React.Component {
 
   render() {
     const { children, classes, hasSidebar, homepageUrl, toc } = this.props
-    //console.log(window.location.href.includes('/#!/'))
     return (
       <ThemeProvider theme={defaultTheme}>
         <div
@@ -114,7 +113,6 @@ class StyleGuideRenderer extends React.Component {
             style={{
               marginLeft: window.location.href.includes('/#!/') ? '0px' : '45px',
             }}
-            llqlla={console.log(window.location.href.includes('/#!/'))}
           >
             <Header />
           </header>

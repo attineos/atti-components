@@ -19,8 +19,8 @@ export const Button = styled.button`
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-    margin: 7px;
-    padding: 7px;
+    margin: 10px;
+    padding: 8px;
   }
 `
 

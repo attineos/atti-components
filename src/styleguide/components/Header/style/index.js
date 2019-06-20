@@ -28,7 +28,7 @@ export const Title = styled.h1`
   color: white;
   font-family: Arial;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
   }
 `

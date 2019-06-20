@@ -1,7 +1,7 @@
 const { camelCase, upperFirst } = require('lodash')
 const path = require('path')
 
-const TITLE = 'atti-components'
+const TITLE = 'Atti-components'
 
 module.exports = {
   title: `${TITLE}`,

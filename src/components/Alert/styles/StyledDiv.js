@@ -4,9 +4,7 @@ import { Typography } from '../../Typographies'
 
 const borders = css`
   border: ${({ theme, variance }) =>
-    `${theme.components.alert.borders.size} solid ${
-      theme.components.alert.colors.borders[variance]
-    }`};
+    `${theme.components.alert.borders.size} solid ${theme.components.alert.colors.borders[variance]}`};
   border-radius: ${({ theme }) => theme.components.alert.borders.radius};
 `
 

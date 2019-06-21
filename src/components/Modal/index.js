@@ -18,12 +18,9 @@ import {
 const Modal = ({ children, className, isOpened, onClose, title }) => {
   const [opened, setOpened] = useState(isOpened)
 
-  useEffect(
-    () => {
-      setOpened(isOpened)
-    },
-    [isOpened],
-  )
+  useEffect(() => {
+    setOpened(isOpened)
+  }, [isOpened])
 
   const closeModal = () => {
     onClose && onClose()

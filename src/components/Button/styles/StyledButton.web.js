@@ -4,9 +4,7 @@ import { Text } from '../../Typographies'
 
 const border = css`
   border: ${({ variance, theme }) =>
-    `${theme.components.button.borders[variance].borderWidth} solid ${
-      theme.components.button.colors[variance].border
-    }`};
+    `${theme.components.button.borders[variance].borderWidth} solid ${theme.components.button.colors[variance].border}`};
   border-radius: ${({ variance, theme }) => theme.components.button.borders[variance].borderRadius};
 `
 

@@ -7,9 +7,7 @@ const MenuLink = styled(Link)`
   align-items: center;
   height: 100%;
   padding: ${({ theme }) =>
-    `${theme.components.menu.menuMobile.link.spaces.paddingHeight} ${
-      theme.components.menu.menuMobile.link.spaces.paddingWidth
-    }`};
+    `${theme.components.menu.menuMobile.link.spaces.paddingHeight} ${theme.components.menu.menuMobile.link.spaces.paddingWidth}`};
   border: none;
   ${({ isSelected, theme }) =>
     isSelected &&

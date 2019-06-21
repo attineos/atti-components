@@ -20,9 +20,7 @@ const MenuOpenerContainer = styled.span`
     &:nth-child(2) {
       margin-top: calc(
         ${({ theme }) =>
-          `calc(${theme.components.menu.menuMobile.opener.spaces.height} / 2) - calc(${
-            theme.components.menu.menuMobile.opener.line.spaces.height
-          } / 2)`}
+          `calc(${theme.components.menu.menuMobile.opener.spaces.height} / 2) - calc(${theme.components.menu.menuMobile.opener.line.spaces.height} / 2)`}
       );
       transform: ${({ opened }) => (opened ? 'rotate(45deg)' : 'rotate(0deg)')};
     }
@@ -30,9 +28,7 @@ const MenuOpenerContainer = styled.span`
     &:nth-child(3) {
       margin-top: calc(
         ${({ theme }) =>
-          `calc(${theme.components.menu.menuMobile.opener.spaces.height} / 2) - calc(${
-            theme.components.menu.menuMobile.opener.line.spaces.height
-          } / 2)`}
+          `calc(${theme.components.menu.menuMobile.opener.spaces.height} / 2) - calc(${theme.components.menu.menuMobile.opener.line.spaces.height} / 2)`}
       );
       transform: ${({ opened }) => (opened ? 'rotate(-45deg)' : 'rotate(0deg)')};
     }
@@ -40,9 +36,7 @@ const MenuOpenerContainer = styled.span`
     &:nth-child(4) {
       margin-top: calc(
         ${({ theme }) =>
-          `${theme.components.menu.menuMobile.opener.spaces.height} - ${
-            theme.components.menu.menuMobile.opener.line.spaces.height
-          }`}
+          `${theme.components.menu.menuMobile.opener.spaces.height} - ${theme.components.menu.menuMobile.opener.line.spaces.height}`}
       );
       opacity: ${({ opened }) => (opened ? '0' : '1')};
     }

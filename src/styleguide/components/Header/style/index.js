@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { withRouter } from 'react-router'
 
 export const Button = styled.button`
   background: #f29400;
@@ -34,19 +33,19 @@ export const Title = styled.h1`
   }
 `
 
-export const DivHeader = withRouter(styled.header`
+export const DivHeader = styled.header`
   background-color: #f29400;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   height: 70px;
-  margin-left: ${({ location }) => (location.pathname ? '0px' : '45px')};
-
+  margin-left: ${({ location }) => (location.href.includes('/#!/') ? '0px' : '45px')};
+  llzlzll: ${console.log(location.href)};
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     margin-left: 0;
   }
-`)
+`
 
 export const Align = styled.div`
   display: flex;

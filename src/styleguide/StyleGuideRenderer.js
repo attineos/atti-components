@@ -110,7 +110,6 @@ class StyleGuideRenderer extends React.Component {
           style={{ backgroundColor: defaultTheme['primary'] }}
         >
           <Header />
-
           <main className={classes.content}>
             {children}
 

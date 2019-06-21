@@ -29,7 +29,8 @@
   "dependencies": {
     "lodash": "^4.17.10",
     "polished": "^2.0.3",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "react-router": "^5.0.1"
   },
   "devDependencies": {
     "@textlint/markdown-to-ast": "^6.0.9",

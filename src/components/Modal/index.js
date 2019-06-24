@@ -78,4 +78,4 @@ Modal.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Modal))``
+export default styled(Modal)``

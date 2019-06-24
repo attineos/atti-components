@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -10,40 +10,27 @@ import HiddenInputCheckBox from './styles/HiddenInputCheckBox'
  * A checkbox button.
  *
  */
-class CheckBox extends PureComponent {
-  state = {
-    checked: this.props.checked,
+const CheckBox = ({ checked: propsChecked, className, id, name, onChange, value }) => {
+  const [checked, setChecked] = useState(propsChecked)
+
+  const handleToggleChecked = () => {
+    setChecked(!checked)
+    onChange && onChange()
   }
 
-  handleToggleChecked = () => {
-    const { onChange } = this.props
-
-    this.setState(
-      prevState => ({
-        checked: !prevState.checked,
-      }),
-      () => {
-        onChange && onChange()
-      },
-    )
-  }
-
-  render() {
-    const { className, id, name, value } = this.props
-    return (
-      <CheckBoxBoxContainer className={className}>
-        <HiddenInputCheckBox
-          id={id}
-          checked={this.state.checked}
-          name={name}
-          onChange={this.handleToggleChecked}
-          type="checkbox"
-          value={value}
-        />
-        <CheckBoxBox />
-      </CheckBoxBoxContainer>
-    )
-  }
+  return (
+    <CheckBoxBoxContainer className={className}>
+      <HiddenInputCheckBox
+        id={id}
+        checked={checked}
+        name={name}
+        onChange={handleToggleChecked}
+        type="checkbox"
+        value={value}
+      />
+      <CheckBoxBox />
+    </CheckBoxBoxContainer>
+  )
 }
 
 CheckBox.defaultProps = {

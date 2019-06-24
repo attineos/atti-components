@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -8,17 +8,11 @@ import StyledDiv from './styles/StyledDiv'
  * An alert component.
  *
  */
-class Alert extends PureComponent {
-  render() {
-    const { children, className, variance } = this.props
-
-    return (
-      <StyledDiv className={className} variance={variance}>
-        {children}
-      </StyledDiv>
-    )
-  }
-}
+const Alert = ({ children, className, variance }) => (
+  <StyledDiv className={className} variance={variance}>
+    {children}
+  </StyledDiv>
+)
 
 Alert.defaultProps = {
   className: '',

@@ -668,6 +668,13 @@
               sizes: { height: '100%', width: '100%' },
             },
         },
+      tooltip:
+        {
+          animations: { opacityEnd: 1, opacityStart: 0, speed: '200ms' },
+          borders: { radius: '6px' },
+          colors: { background: '#0E7C86', text: '#f5f5f5' },
+          spaces: { maxWidth: '192px', minWidth: '128px', padding: '8px' },
+        },
     },
 }
 ```

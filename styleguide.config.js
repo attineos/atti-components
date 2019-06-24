@@ -12,6 +12,7 @@ module.exports = {
       dangerousTaggedTemplateString: true,
     },
   },
+  require: [path.resolve(__dirname, 'styleguide/setup.js')],
   getComponentPathLine(filePath) {
     const componentDirName = path.dirname(filePath)
     const componentSourcesFilesName = componentDirName.split(path.sep).pop()

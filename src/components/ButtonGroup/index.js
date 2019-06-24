@@ -1,19 +1,15 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import ButtonGroupFacade from './facade'
+import { StyledButtonGroup } from './styles'
 /**
  * A Simple Button compatible for web and native.
  *
  */
-class ButtonGroup extends PureComponent {
-  render() {
-    const { className, children } = this.props
-
-    return <ButtonGroupFacade className={className}>{children}</ButtonGroupFacade>
-  }
-}
+const ButtonGroup = ({ className, children }) => (
+  <StyledButtonGroup className={className}>{children}</StyledButtonGroup>
+)
 
 ButtonGroup.defaultProps = {
   className: '',
@@ -21,11 +17,11 @@ ButtonGroup.defaultProps = {
 
 ButtonGroup.propTypes = {
   /**
-   * Classes of the Button.
+   * Classes of the ButtonGroup.
    */
   className: PropTypes.string,
   /**
-   * The cols to use as header for the table
+   * The Buttons that will be grouped.
    */
   children: PropTypes.any.isRequired,
 }

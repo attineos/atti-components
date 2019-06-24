@@ -113,6 +113,7 @@ module.exports = {
         'src/components/Alert/index.js',
         'src/components/Avatar/index.js',
         'src/components/Badge/index.js',
+        'src/components/Tooltip/index.js',
       ],
     },
     {

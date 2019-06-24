@@ -100,6 +100,13 @@
     </Label>
   </Cell>
   <Cell cols={[[1, 6], [1, 6], [1, 5]]}>
+    <Tooltip message="Atti-Components rocks!">
+      <Text style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+        Hover me to display a tooltip
+      </Text>
+    </Tooltip>
+  </Cell>
+  <Cell cols={[[1, 6], [1, 6], [1, 5]]}>
     <Input id="inputTestTxt" name="inputTestTxt" placeholder="input text" type="text" />
   </Cell>
   <Cell cols={[[1, 6], [1, 6], [5, 9]]}>

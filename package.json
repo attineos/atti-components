@@ -2,6 +2,12 @@
   "name": "atti-components",
   "version": "0.1.7",
   "description": "A set of fully customizable React components made with <3 with styled-components",
+  "repository": "github:attineos/atti-components",
+  "bugs":  "https://github.com/attineos/atti-components/issues",
+  "homepage": "https://atti-components.netlify.com",
+  "author": "Attineos <contact@attineos.com>",
+  "license": "MIT",
+  "keywords": ["react", "components", "customizable", "styled-components"],
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
@@ -26,9 +32,6 @@
       "pre-commit": "pretty-quick --staged && npm run lint"
     }
   },
-  "repository": "git@gitlab.com:attineos/atti-components.git",
-  "author": "Attineos <contact@attineos.com>",
-  "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.10",
     "polished": "^3.4.1",

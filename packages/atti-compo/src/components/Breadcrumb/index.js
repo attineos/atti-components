@@ -1,5 +1,5 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { isNull, map, isFunction, isUndefined } from 'lodash'
@@ -14,11 +14,9 @@ import StyledBreadcrumb from './styles/StyledBreadcrumb'
 /**
  * A breadcrumb component.
  */
-class Breadcrumb extends PureComponent {
-  renderElement = element => {
-    const { renderElement } = this.props
-
-    return chain(
+const Breadcrumb = ({ className, elements, renderElement, separator }) => {
+  const displayElement = element =>
+    chain(
       // We assume a valid result as soon as we got a non null element
       element => !isNull(element) && !isUndefined(element),
       // Most precise, we got a custom render function for THAT element
@@ -34,22 +32,17 @@ class Breadcrumb extends PureComponent {
         </React.Fragment>
       ),
     )
-  }
 
-  render() {
-    const { className, elements, separator } = this.props
-
-    return (
-      <StyledBreadcrumb className={className}>
-        {map(elements, (element, index, elements) => (
-          <React.Fragment key={element.name}>
-            {this.renderElement(element)}
-            {index + 1 < elements.length && <BreadcrumbSeparator>{separator}</BreadcrumbSeparator>}
-          </React.Fragment>
-        ))}
-      </StyledBreadcrumb>
-    )
-  }
+  return (
+    <StyledBreadcrumb className={className}>
+      {map(elements, (element, index, elements) => (
+        <React.Fragment key={element.name}>
+          {displayElement(element)}
+          {index + 1 < elements.length && <BreadcrumbSeparator>{separator}</BreadcrumbSeparator>}
+        </React.Fragment>
+      ))}
+    </StyledBreadcrumb>
+  )
 }
 
 Breadcrumb.defaultProps = {

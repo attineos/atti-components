@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -10,40 +10,27 @@ import RadioContainer from './styles/RadioContainer'
  * A radio button.
  *
  */
-class Radio extends PureComponent {
-  state = {
-    checked: this.props.checked,
+const Radio = ({ checked: propsChecked, className, id, name, onChange, value }) => {
+  const [checked, setChecked] = useState(propsChecked)
+
+  const handleToggleChecked = () => {
+    setChecked(!checked)
+    onChange && onChange()
   }
 
-  handleToggleChecked = () => {
-    const { onChange } = this.props
-
-    this.setState(
-      prevState => ({
-        checked: !prevState.checked,
-      }),
-      () => {
-        onChange && onChange()
-      },
-    )
-  }
-
-  render() {
-    const { className, id, name, value } = this.props
-    return (
-      <RadioContainer className={className}>
-        <HiddenInputRadio
-          id={id}
-          checked={this.state.checked}
-          name={name}
-          onChange={this.handleToggleChecked}
-          type="radio"
-          value={value}
-        />
-        <RadioButton />
-      </RadioContainer>
-    )
-  }
+  return (
+    <RadioContainer className={className}>
+      <HiddenInputRadio
+        id={id}
+        checked={checked}
+        name={name}
+        onChange={handleToggleChecked}
+        type="radio"
+        value={value}
+      />
+      <RadioButton />
+    </RadioContainer>
+  )
 }
 
 Radio.defaultProps = {

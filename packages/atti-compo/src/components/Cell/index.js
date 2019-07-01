@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import { clone } from 'lodash'
-
 import CellStyle from './styles/CellStyle'
 
 /**
@@ -24,32 +22,12 @@ import CellStyle from './styles/CellStyle'
  * If given less breakpoints than in the theme, the last one is used.
  * If given more breakpoints than in the theme, the excess ones are ignored.
  */
-class Cell extends React.Component {
-  state = {
-    cols: [],
-  }
-
-  componentWillMount() {
-    this.state.cols = clone(this.props.cols)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.cols !== nextProps.cols) {
-      this.setState({ cols: clone(nextProps.cols) })
-    }
-  }
-
-  render() {
-    const { children, className } = this.props
-
-    const { cols } = this.state
-
-    return (
-      <CellStyle className={className} cols={cols}>
-        {children}
-      </CellStyle>
-    )
-  }
+const Cell = ({ children, cols, className }) => {
+  return (
+    <CellStyle className={className} cols={cols}>
+      {children}
+    </CellStyle>
+  )
 }
 
 Cell.defaultProps = {

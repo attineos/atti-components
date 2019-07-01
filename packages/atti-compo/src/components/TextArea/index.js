@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -8,27 +8,21 @@ import StyledTextArea from './styles/StyledTextArea'
  * A textarea.
  *
  */
-class TextArea extends PureComponent {
-  onChangeValue = e => {
-    const { onChange } = this.props
+const TextArea = ({ className, id, name, onChange, placeholder, ...rest }) => {
+  const onChangeValue = e => {
     onChange && onChange(e.target.value)
   }
 
-  render() {
-    // eslint-disable-next-line no-unused-vars
-    const { className, id, name, onChange, placeholder, ...rest } = this.props
-
-    return (
-      <StyledTextArea
-        className={className}
-        id={id}
-        placeholder={placeholder}
-        name={name}
-        onChange={this.onChangeValue}
-        {...rest}
-      />
-    )
-  }
+  return (
+    <StyledTextArea
+      className={className}
+      id={id}
+      placeholder={placeholder}
+      name={name}
+      onChange={onChangeValue}
+      {...rest}
+    />
+  )
 }
 
 TextArea.defaultProps = {

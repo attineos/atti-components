@@ -6,14 +6,20 @@ const border = css`
   border: ${({ variance, theme }) =>
     `${theme.components.button.borders[variance].borderWidth} solid ${theme.components.button.colors[variance].border}`};
   border-radius: ${({ variance, theme }) => theme.components.button.borders[variance].borderRadius};
+
+  &:disabled {
+    border: ${({ variance, theme }) =>
+      `${theme.components.button.borders[variance].borderWidth} solid ${theme.components.button.colors.disabled.border}`};
+  }
 `
 
 const colors = css`
   background-color: ${({ variance, theme }) => theme.components.button.colors[variance].background};
   color: ${({ variance, theme }) => theme.components.button.colors[variance].text};
 
-  &:hover {
-    opacity: ${({ theme }) => theme.components.button.opacities.hover};
+  &:disabled {
+    background-color: ${({ theme }) => theme.components.button.colors.disabled.background};
+    color: ${({ theme }) => theme.components.button.colors.disabled.text};
   }
 `
 
@@ -35,6 +41,16 @@ const StyledButton = styled(Text.withComponent('button'))`
   display: inline-block;
   text-align: ${({ theme }) => theme.components.button.textAlign};
   cursor: pointer;
+
+  &:hover {
+    opacity: ${({ theme }) => theme.components.button.opacities.hover};
+  }
+  &:disabled {
+    &:hover {
+      opacity: 1;
+      cursor: not-allowed;
+    }
+  }
 `
 
 StyledButton.defaultProps = {

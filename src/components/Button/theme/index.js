@@ -47,6 +47,11 @@ export default ({ borders, colors, forms, opacities, spaces }) => ({
       border: colors.black,
       text: colors.black,
     },
+    disabled: {
+      background: colors.lighterGrey,
+      border: colors.lightGrey,
+      text: colors.white,
+    },
   },
   sizes: {
     height: forms.sizes.height,

@@ -9,7 +9,9 @@ Button :
     <Button onClick={() => console.log('Hello !')} variance="neutral">
       Neutral
     </Button>
-    <Button onClick={() => console.log('Hello !')}>Normal</Button>
+    <Button disabled onClick={() => console.log('Hello !')}>
+      Normal
+    </Button>
   </div>
 
   <div style={{ backgroundColor: 'lightcoral', padding: '24px' }}>

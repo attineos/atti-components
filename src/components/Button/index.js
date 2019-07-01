@@ -10,8 +10,14 @@ import StyledButton from './styles/StyledButton'
  * A Simple Button.
  *
  */
-const Button = ({ children, className, onClick, type, variance }) => (
-  <StyledButton className={className} type={type} onClick={onClick} variance={variance}>
+const Button = ({ children, className, disabled, onClick, type, variance }) => (
+  <StyledButton
+    className={className}
+    disabled={disabled}
+    type={type}
+    onClick={onClick}
+    variance={variance}
+  >
     {children}
   </StyledButton>
 )
@@ -19,9 +25,10 @@ const Button = ({ children, className, onClick, type, variance }) => (
 Button.defaultProps = {
   children: '',
   className: '',
+  disabled: false,
   onClick: noop(),
   type: 'button',
-  variance: 'normal',
+  variance: 'primary',
 }
 
 Button.propTypes = {
@@ -34,6 +41,11 @@ Button.propTypes = {
    * Classes of the Button.
    */
   className: PropTypes.string,
+
+  /**
+   * Is the Button disabled or not.
+   */
+  disabled: PropTypes.bool,
 
   /**
    * This function is called when the user clicks on the Button.

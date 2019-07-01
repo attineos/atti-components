@@ -9,6 +9,8 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 ## Unreleased
 
+## [0.2.0] - 2019-07-01
+
 - Improve documentation regarding usage of ThemeProvider by [@akaala](https://github.com/akaala)
 - Add a new section in the global README about troubleshooting and fill it with some explanations regarding font imports by [@akaala](https://github.com/akaala)
 - atti-components is now exported in multiple formats. Including esm that allows tree shaking. If NODE_END = "development", warnings will be displayed. By [@akaala](https://github.com/akaala)

@@ -1,6 +1,6 @@
 {
   "name": "atti-components",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "A set of fully customizable React components made with <3 with styled-components",
   "repository": "github:attineos/atti-components",
   "bugs":  "https://github.com/attineos/atti-components/issues",

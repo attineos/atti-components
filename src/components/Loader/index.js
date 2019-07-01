@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -8,13 +8,9 @@ import StyledLoader from './styles/StyledLoader'
  * A Loader, nothing special for the moment.
  *
  */
-class Loader extends PureComponent {
-  render() {
-    const { className, color, variance } = this.props
-
-    return <StyledLoader className={className} color={color} variance={variance} />
-  }
-}
+const Loader = ({ className, color, variance }) => (
+  <StyledLoader className={className} color={color} variance={variance} />
+)
 
 Loader.defaultProps = {
   className: '',

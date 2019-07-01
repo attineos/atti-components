@@ -1,5 +1,5 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -7,30 +7,30 @@ import { positionType } from './types'
 import { Bubble, ChildrenContainer, Container } from './styles'
 import Message from './exposedStyles/Message'
 
-class Tooltip extends PureComponent {
-  state = {
-    showTooltip: false,
-  }
+const Tooltip = ({ children, message, position }) => {
+  const [show, setShow] = useState(false)
 
-  onShowTooltip = () => this.setState({ showTooltip: true })
-
-  onHideTooltip = () => this.setState({ showTooltip: false })
-
-  render() {
-    const { children, message, position } = this.props
-    const { showTooltip } = this.state
-
-    return (
-      <Container onMouseLeave={this.onHideTooltip}>
-        <Bubble position={position} showTooltip={showTooltip}>
-          <Message>{message}</Message>
-        </Bubble>
-        <ChildrenContainer onMouseOver={this.onShowTooltip} onFocus={this.onShowTooltip}>
-          {children}
-        </ChildrenContainer>
-      </Container>
-    )
-  }
+  return (
+    <Container
+      onMouseLeave={() => {
+        setShow(false)
+      }}
+    >
+      <Bubble position={position} showTooltip={show}>
+        <Message>{message}</Message>
+      </Bubble>
+      <ChildrenContainer
+        onMouseOver={() => {
+          setShow(true)
+        }}
+        onFocus={() => {
+          setShow(true)
+        }}
+      >
+        {children}
+      </ChildrenContainer>
+    </Container>
+  )
 }
 
 Tooltip.defaultProps = {

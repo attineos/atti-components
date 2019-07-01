@@ -1,7 +1,10 @@
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 
-import { BubbleBottom, BubbleLeft, BubbleRight, BubbleTop } from '.'
+import BubbleBottom from './BubbleBottom'
+import BubbleLeft from './BubbleLeft'
+import BubbleRight from './BubbleRight'
+import BubbleTop from './BubbleTop'
 import { positionType } from '../types'
 
 const positionBubbleStyle = ({ position = 'top' }) => {

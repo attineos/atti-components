@@ -1,57 +1,44 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components'
 import { head } from 'lodash'
 import PropTypes from 'prop-types'
 
 import { StyledContainer, StyledFilePicker, StyledInput } from './styles'
 
-class InputFile extends PureComponent {
-  _input = {}
+const InputFile = ({ className, name, onChange, placeholder, variance }) => {
+  const input = useRef(null)
+  const [file, setFile] = useState(null)
 
-  state = {
-    file: null,
+  const onChangeFile = () => {
+    const file = head(input.current.files) || {}
+    setFile(file)
+    onChange && onChange(file)
   }
 
-  onChangeFile = () => {
-    const { onChange } = this.props
-    const file = head(this._input.files) || {}
-    this.setState({ file: file }, () => {
-      onChange && onChange(file)
-    })
-  }
-
-  onDrop = e => {
+  const onDrop = e => {
     e.preventDefault()
     const item = head(e.dataTransfer.items) || {}
-    item.kind === 'file' && this.setState({ file: item.getAsFile() || {} })
+    item.kind === 'file' && setFile(item.getAsFile() || {})
   }
 
-  setRef = ref => (this._input = ref)
+  const browseFile = () => input && input.current.click()
 
-  browseFile = () => this._input && this._input.click()
+  const allowDrop = e => e.preventDefault()
 
-  allowDrop = e => e.preventDefault()
-
-  render() {
-    const { placeholder, name, variance, className } = this.props
-
-    const { file } = this.state
-
-    return (
-      <StyledContainer className={className}>
-        <StyledInput name={name} type="file" ref={this.setRef} onChange={this.onChangeFile} />
-        <StyledFilePicker
-          onClick={this.browseFile}
-          onDragOver={this.allowDrop}
-          onDrop={this.onDrop}
-          variance={variance}
-        >
-          {file ? file.name : placeholder}
-        </StyledFilePicker>
-      </StyledContainer>
-    )
-  }
+  return (
+    <StyledContainer className={className}>
+      <StyledInput name={name} type="file" ref={input} onChange={onChangeFile} />
+      <StyledFilePicker
+        onClick={browseFile}
+        onDragOver={allowDrop}
+        onDrop={onDrop}
+        variance={variance}
+      >
+        {file ? file.name : placeholder}
+      </StyledFilePicker>
+    </StyledContainer>
+  )
 }
 
 InputFile.defaultProps = {

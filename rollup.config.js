@@ -11,8 +11,8 @@ import fs from 'fs'
 import { readdirSync } from 'fs-extra'
 
 const NODE_ENV = process.env.NODE_ENV || 'development'
-const INDEX_WEB_FILE = 'index.web.js'
-const extensions = ['.web.js', '.js']
+const INDEX_FILE = 'index.js'
+const extensions = ['.js']
 
 function removeExt(path) {
   return path.replace(/\.[^.]+$/, '')
@@ -21,8 +21,8 @@ function removeExt(path) {
 const componentsEntries = readdirSync('src/components').reduce((components, filename) => {
   const path = join('src/components/', filename)
   let file = ''
-  if (fs.existsSync(join(path, INDEX_WEB_FILE))) {
-    file = join(path, INDEX_WEB_FILE)
+  if (fs.existsSync(join(path, INDEX_FILE))) {
+    file = join(path, INDEX_FILE)
   } else {
     file = join(path, 'index.js')
   }
@@ -40,16 +40,13 @@ const getPlugins = (minify = true) => [
     exclude: 'node_modules/**',
   }),
   alias({
-    resolve: ['.web.js', '.js', '/index.js'],
+    resolve: ['.js', '/index.js'],
     components: path.join(__dirname, 'src/components'),
     helpers: path.join(__dirname, 'src/helpers'),
   }),
   resolve({ extensions, preferBuiltins: false }),
   commonjs({
     include: 'node_modules/**',
-    namedExports: {
-      './src/components/Table/index.js': ['Table'],
-    },
   }),
   peerDepsExternal(),
   process.env.NODE_ENV === 'production' && minify ? terser() : '',
@@ -76,7 +73,7 @@ if (NODE_ENV === 'production') {
       plugins: getPlugins(),
     },
     {
-      input: `./src/${INDEX_WEB_FILE}`,
+      input: `./src/${INDEX_FILE}`,
       output: {
         file: './dist/umd/atti-components.min.js',
         format: 'umd',
@@ -88,7 +85,7 @@ if (NODE_ENV === 'production') {
     },
     {
       input: {
-        index: `src/${INDEX_WEB_FILE}`,
+        index: `src/${INDEX_FILE}`,
         ...componentsEntries,
         themes: 'src/themes/index.js',
       },
@@ -107,7 +104,7 @@ if (NODE_ENV === 'production') {
   )
 } else {
   conf.push({
-    input: './src/index.web.js',
+    input: `src/${INDEX_FILE}`,
     output: {
       file: './dist/cjs/atti-components.js',
       format: 'cjs',

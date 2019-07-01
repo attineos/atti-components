@@ -8,10 +8,15 @@ import StyledTextArea from './styles/StyledTextArea'
  * A textarea.
  *
  */
-const TextArea = ({ className, id, name, onChange, placeholder, ...rest }) => {
+const TextArea = ({ className, id, name, onChange, placeholder, value, ...rest }) => {
   const onChangeValue = e => {
     onChange && onChange(e.target.value)
   }
+
+  /*
+   * React will consider the textarea as controlled even if value is null.
+   */
+  const finalValue = value === null ? undefined : value
 
   return (
     <StyledTextArea
@@ -20,6 +25,7 @@ const TextArea = ({ className, id, name, onChange, placeholder, ...rest }) => {
       placeholder={placeholder}
       name={name}
       onChange={onChangeValue}
+      value={finalValue}
       {...rest}
     />
   )
@@ -30,6 +36,7 @@ TextArea.defaultProps = {
   id: '',
   onChange: null,
   placeholder: '',
+  value: undefined,
 }
 
 TextArea.propTypes = {
@@ -53,6 +60,10 @@ TextArea.propTypes = {
    * The text by default in the Textarea.
    */
   placeholder: PropTypes.string,
+  /**
+   * The value of the Textarea.
+   */
+  value: PropTypes.string,
 }
 
 /** @component */

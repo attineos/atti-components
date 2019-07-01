@@ -69,8 +69,6 @@ InputFile.propTypes = {
 
   /**
    * The type of variation to display
-   * ![Native](src/images/native.png "")
-   * ![Web](src/images/web.png "")
    */
   variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }

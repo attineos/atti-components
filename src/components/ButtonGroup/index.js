@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { StyledButtonGroup } from './styles'
 /**
- * A Simple Button compatible for web and native.
+ * A Simple Button.
  *
  */
 const ButtonGroup = ({ className, children }) => (

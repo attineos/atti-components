@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { map, isString } from 'lodash'
@@ -9,47 +9,33 @@ import StyledSelect from './styles/StyledSelect'
  * A select field.
  *
  */
-class Select extends PureComponent {
-  render() {
-    const {
-      className,
-      id,
-      isMulti,
-      name,
-      onChange,
-      options,
-      size,
-      value,
-      defaultValue,
-    } = this.props
-
-    const optionsElements = map(options, elt => {
-      const value = isString(elt) ? elt : elt.id || elt.name
-      const key = isString(elt) ? elt : elt.id || elt.name
-      const name = isString(elt) ? elt : elt.name || elt.id
-
-      return (
-        <option value={value} key={key}>
-          {name}
-        </option>
-      )
-    })
+const Select = ({ className, id, isMulti, name, onChange, options, size, value, defaultValue }) => {
+  const optionsElements = map(options, elt => {
+    const value = isString(elt) ? elt : elt.id || elt.name
+    const key = isString(elt) ? elt : elt.id || elt.name
+    const name = isString(elt) ? elt : elt.name || elt.id
 
     return (
-      <StyledSelect
-        className={className}
-        id={id}
-        name={name}
-        onChange={onChange}
-        multiple={isMulti}
-        size={size}
-        value={value}
-        defaultValue={defaultValue}
-      >
-        {optionsElements}
-      </StyledSelect>
+      <option value={value} key={key}>
+        {name}
+      </option>
     )
-  }
+  })
+
+  return (
+    <StyledSelect
+      className={className}
+      id={id}
+      name={name}
+      onChange={onChange}
+      multiple={isMulti}
+      size={size}
+      value={value}
+      defaultValue={defaultValue}
+    >
+      {optionsElements}
+    </StyledSelect>
+  )
 }
 
 Select.defaultProps = {

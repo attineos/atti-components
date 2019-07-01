@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -7,24 +7,18 @@ import StyledLink from './styles/StyledLink'
 /**
  * A link to an action or another resource.
  */
-class Link extends PureComponent {
-  render() {
-    const { children, className, href, onClick, target, ...rest } = this.props
-
-    return (
-      <StyledLink
-        className={className}
-        href={href}
-        onClick={onClick}
-        target={target}
-        rel={target === '_blank' ? 'noreferrer noopener' : ''}
-        {...rest}
-      >
-        {children}
-      </StyledLink>
-    )
-  }
-}
+const Link = ({ children, className, href, onClick, target, ...rest }) => (
+  <StyledLink
+    className={className}
+    href={href}
+    onClick={onClick}
+    target={target}
+    rel={target === '_blank' ? 'noreferrer noopener' : ''}
+    {...rest}
+  >
+    {children}
+  </StyledLink>
+)
 
 Link.defaultProps = {
   className: '',

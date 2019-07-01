@@ -1,22 +1,16 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import InputGroupFacade from './facade'
+import { StyledHorizontalInputGroup, StyledVerticalInputGroup } from './styles'
 /**
- * A Simple InputGroup compatible for web and native.
+ * A Simple InputGroup.
  *
  */
-class InputGroup extends PureComponent {
-  render() {
-    const { className, children, vertical } = this.props
+const InputGroup = ({ className, children, vertical }) => {
+  const StyleComponent = vertical ? StyledVerticalInputGroup : StyledHorizontalInputGroup
 
-    return (
-      <InputGroupFacade className={className} vertical={vertical}>
-        {children}
-      </InputGroupFacade>
-    )
-  }
+  return <StyleComponent className={className}>{children}</StyleComponent>
 }
 
 InputGroup.defaultProps = {
@@ -30,10 +24,12 @@ InputGroup.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * The cols to use as header for the table
+   * The cols to use as header for the table.
    */
   children: PropTypes.any.isRequired,
-
+  /**
+   * Are the Inputs displayed vertically or not.
+   */
   vertical: PropTypes.bool,
 }
 

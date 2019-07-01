@@ -1,5 +1,5 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -9,43 +9,37 @@ import StyledInput from './styles/StyledInput'
  * An input field.
  *
  */
-class Input extends PureComponent {
-  render() {
-    const {
-      className,
-      id,
-      form,
-      name,
-      onChange,
-      forwardedRef,
-      pattern,
-      placeholder,
-      size,
-      type,
-      value,
-      variance,
-      ...rest
-    } = this.props
-
-    return (
-      <StyledInput
-        className={className}
-        form={form}
-        id={id}
-        name={name}
-        onChange={onChange}
-        pattern={pattern}
-        placeholder={placeholder}
-        size={size}
-        type={type}
-        value={value}
-        ref={forwardedRef}
-        variance={variance}
-        {...rest}
-      />
-    )
-  }
-}
+const Input = ({
+  className,
+  id,
+  form,
+  name,
+  onChange,
+  forwardedRef,
+  pattern,
+  placeholder,
+  size,
+  type,
+  value,
+  variance,
+  ...rest
+}) => (
+  <StyledInput
+    className={className}
+    form={form}
+    id={id}
+    name={name}
+    onChange={onChange}
+    pattern={pattern}
+    placeholder={placeholder}
+    size={size}
+    type={type}
+    value={value}
+    ref={forwardedRef}
+    variance={variance}
+    {...rest}
+  />
+)
 
 Input.defaultProps = {
   className: '',

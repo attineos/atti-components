@@ -24,6 +24,7 @@ import Radio from './components/Radio'
 import Select from './components/Select'
 import Table from './components/Table'
 import TextArea from './components/TextArea'
+import Tooltip from './components/Tooltip'
 
 import {
   BigText,
@@ -39,9 +40,8 @@ import {
 
 import { defaultTheme, attineosTheme } from './themes'
 
-module.exports = {
+export {
   ThemeProvider,
-
   Alert,
   Avatar,
   Badge,
@@ -74,8 +74,8 @@ module.exports = {
   Table,
   Text,
   TextArea,
+  Tooltip,
   Typography,
-
   defaultTheme,
   attineosTheme,
 }

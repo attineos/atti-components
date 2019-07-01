@@ -1,46 +1,38 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { noop } from 'lodash'
 
-import ButtonFacade from './facade'
+import StyledButton from './styles/StyledButton'
+
 /**
- * A Simple Button compatible for web and native.
+ * A Simple Button.
  *
  */
-class Button extends PureComponent {
-  render() {
-    const { children, className, onClick, onPress, title, type, variance } = this.props
-
-    return (
-      <ButtonFacade
-        className={className}
-        content={children}
-        onClick={onClick}
-        onPress={onPress}
-        title={title}
-        type={type}
-        variance={variance}
-      />
-    )
-  }
-}
+const Button = ({ children, className, disabled, onClick, type, variance }) => (
+  <StyledButton
+    className={className}
+    disabled={disabled}
+    type={type}
+    onClick={onClick}
+    variance={variance}
+  >
+    {children}
+  </StyledButton>
+)
 
 Button.defaultProps = {
   children: '',
   className: '',
+  disabled: false,
   onClick: noop(),
-  onPress: noop(),
-  title: '',
   type: 'button',
-  variance: 'normal',
+  variance: 'primary',
 }
 
 Button.propTypes = {
   /**
-   * ![Native](src/images/native.png "")
-   * ![Web](src/images/web.png "")
    * Content of the component. Only text for now.
    */
   children: PropTypes.string,
@@ -51,35 +43,22 @@ Button.propTypes = {
   className: PropTypes.string,
 
   /**
-   * ![Native](src/images/native.png "")
-   * ![Web](src/images/web.png "")
+   * Is the Button disabled or not.
+   */
+  disabled: PropTypes.bool,
+
+  /**
    * This function is called when the user clicks on the Button.
    */
   onClick: PropTypes.func,
 
   /**
-   * ![Native](src/images/native.png "")
-   * ![Web](src/images/web.png "")
-   * This function is called when the user clicks on the Button.
-   */
-  onPress: PropTypes.func,
-
-  /**
-   * ![Native](src/images/native.png "")
-   * ![Web](src/images/web.png "")
-   * Content of the component. Only text for now.
-   */
-  title: PropTypes.string,
-  /**
    * The type to pass to the underlying button html element
-   * ![Web](src/images/web.png "")
    */
   type: PropTypes.string,
 
   /**
    * The type of variation to display
-   * ![Native](src/images/native.png "")
-   * ![Web](src/images/web.png "")
    */
   variance: PropTypes.oneOf(['primary', 'neutral', 'light', 'dark']),
 }

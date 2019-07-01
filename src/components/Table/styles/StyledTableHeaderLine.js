@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledTableLine = styled.tr`
+const StyledTableHeaderLine = styled.tr`
   height: ${({ theme }) => theme.components.table.spaces.headerHeight};
 
   text-align: left;
@@ -9,4 +9,4 @@ const StyledTableLine = styled.tr`
   }
 `
 
-export default StyledTableLine
+export default StyledTableHeaderLine

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -8,26 +8,19 @@ import StyledOption from './styles/StyledOption'
  * A div which contains a text and which can be selected.
  *
  */
-class Option extends React.PureComponent {
-  state = {
-    selected: this.props.selected,
-  }
+const Option = ({ children, className, id, selected: propsSelected }) => {
+  const [selected, setSelected] = useState(propsSelected)
 
-  toggleSelected = () => {
-    this.setState(prev => ({
-      selected: !prev.selected,
-    }))
-  }
-
-  render() {
-    const { children, className, id } = this.props
-    const { selected } = this.state
-    return (
-      <StyledOption className={className} id={id} onClick={this.toggleSelected} selected={selected}>
-        {children}
-      </StyledOption>
-    )
-  }
+  return (
+    <StyledOption
+      className={className}
+      id={id}
+      onClick={() => setSelected(!selected)}
+      selected={selected}
+    >
+      {children}
+    </StyledOption>
+  )
 }
 
 Option.defaultProps = {

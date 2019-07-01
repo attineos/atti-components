@@ -12,6 +12,7 @@ module.exports = {
       dangerousTaggedTemplateString: true,
     },
   },
+  require: [path.resolve(__dirname, 'styleguide/setup.js')],
   getComponentPathLine(filePath) {
     const componentDirName = path.dirname(filePath)
     const componentSourcesFilesName = componentDirName.split(path.sep).pop()
@@ -113,6 +114,7 @@ module.exports = {
         'src/components/Alert/index.js',
         'src/components/Avatar/index.js',
         'src/components/Badge/index.js',
+        'src/components/Tooltip/index.js',
       ],
     },
     {

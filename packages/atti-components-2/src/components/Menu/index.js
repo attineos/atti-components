@@ -1,5 +1,6 @@
 // @noSnapshot
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import MenuMobile from './components/MenuMobile'
@@ -10,14 +11,15 @@ import { MenuContainer } from './styles'
  * The menu is a list of Link elements.
  *
  */
-const Menu = props => (
-  <MenuContainer isResponsive={props.isResponsive}>
-    {props.isResponsive && <MenuMobile {...props} />}
-    <MenuDesktop {...props} />
+const Menu = ({ className, isResponsive, ...rest }) => (
+  <MenuContainer className={className} isResponsive={isResponsive}>
+    {isResponsive && <MenuMobile {...rest} />}
+    <MenuDesktop {...rest} />
   </MenuContainer>
 )
 
 Menu.defaultProps = {
+  className: '',
   isResponsive: true,
   renderElement: null,
   renderMenu: null,
@@ -26,6 +28,10 @@ Menu.defaultProps = {
 }
 
 Menu.propTypes = {
+  /**
+   * Classes of the menu.
+   */
+  className: PropTypes.string,
   /**
    * The links in the menu.
    */
@@ -53,4 +59,4 @@ Menu.propTypes = {
 }
 
 /** @component */
-export default React.memo(Menu)
+export default styled(Menu)``

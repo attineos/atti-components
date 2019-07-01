@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -9,45 +9,41 @@ import { Text } from '../Typographies'
  * A basic progress bar, which shows filling percentage.
  *
  */
-class ProgressBar extends PureComponent {
-  roundToStep = (value, step) => Math.round(value / step) * step
+const ProgressBar = ({
+  className,
+  fillingOrientation,
+  fillingSpeed,
 
-  render() {
-    const {
-      className,
-      fillingOrientation,
-      fillingSpeed,
+  start,
+  end,
+  step,
+  value,
 
-      start,
-      end,
-      step,
-      value,
+  label,
+  leftLabel,
+  rightLabel,
+}) => {
+  const roundToStep = (value, step) => Math.round(value / step) * step
 
-      label,
-      leftLabel,
-      rightLabel,
-    } = this.props
+  const normalizedValue = Math.min(Math.max(parseFloat(value), start), end)
+  const percent = roundToStep((normalizedValue * 100) / (end - start), step)
 
-    const normalizedValue = Math.min(Math.max(parseFloat(value), start), end)
-    const percent = this.roundToStep((normalizedValue * 100) / (end - start), step)
+  const stepLabel = !!label ? label : `${roundToStep(value, step) - start}/${end - start}%`
 
-    const stepLabel = !!label ? label : `${this.roundToStep(value, step) - start}/${end - start}%`
-
-    return (
-      <StyledProgressBar
-        className={className}
-        end={end}
-        fillingOrientation={fillingOrientation}
-        fillingSpeed={fillingSpeed}
-        percent={percent}
-        start={start}
-      >
-        <Text>{leftLabel}</Text>
-        <Text>{stepLabel}</Text>
-        <Text>{rightLabel}</Text>
-      </StyledProgressBar>
-    )
-  }
+  return (
+    <StyledProgressBar
+      className={className}
+      end={end}
+      fillingOrientation={fillingOrientation}
+      fillingSpeed={fillingSpeed}
+      percent={percent}
+      start={start}
+    >
+      <Text>{leftLabel}</Text>
+      <Text>{stepLabel}</Text>
+      <Text>{rightLabel}</Text>
+    </StyledProgressBar>
+  )
 }
 
 ProgressBar.defaultProps = {

@@ -1,5 +1,5 @@
 // @noSnapshot
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -9,26 +9,21 @@ import StyledAvatar from './styles/StyledAvatar'
  * Avatar component
  *
  */
-class Avatar extends PureComponent {
-  render() {
-    const { bgColor, bgSrc, children, className, size, title } = this.props
-
-    return (
-      <StyledAvatar
-        as={children ? 'p' : 'div'}
-        bgColor={bgColor}
-        bgSrc={bgSrc}
-        className={className}
-        size={size}
-        title={title}
-      >
-        {children}
-      </StyledAvatar>
-    )
-  }
-}
+const Avatar = ({ as, bgColor, bgSrc, children, className, size, title }) => (
+  <StyledAvatar
+    as={as || children ? 'p' : 'div'}
+    bgColor={bgColor}
+    bgSrc={bgSrc}
+    className={className}
+    size={size}
+    title={title}
+  >
+    {children}
+  </StyledAvatar>
+)
 
 Avatar.defaultProps = {
+  as: '',
   bgColor: '',
   bgSrc: '',
   children: '',
@@ -38,6 +33,10 @@ Avatar.defaultProps = {
 }
 
 Avatar.propTypes = {
+  /**
+   * The rendered DOM element.
+   */
+  as: PropTypes.oneOf([PropTypes.Element, PropTypes.string]),
   /**
    * The background color of the Avatar. Can be a color value or a color's name from the theme.
    */

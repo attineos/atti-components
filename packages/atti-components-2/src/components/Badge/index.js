@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -8,25 +8,24 @@ import StyledBadge from './styles/StyledBadge'
  * Badge component.
  *
  */
-class Badge extends PureComponent {
-  render() {
-    const { children, className, variance, exponent } = this.props
-
-    return (
-      <StyledBadge as={exponent ? 'sup' : undefined} className={className} variance={variance}>
-        {children}
-      </StyledBadge>
-    )
-  }
-}
+const Badge = ({ as, children, className, variance, exponent }) => (
+  <StyledBadge as={as || exponent ? 'sup' : undefined} className={className} variance={variance}>
+    {children}
+  </StyledBadge>
+)
 
 Badge.defaultProps = {
+  as: '',
   className: '',
   exponent: false,
   variance: 'success',
 }
 
 Badge.propTypes = {
+  /**
+   * The rendered DOM element.
+   */
+  as: PropTypes.oneOf([PropTypes.Element, PropTypes.string]),
   /**
    * Content of the Badge.
    */

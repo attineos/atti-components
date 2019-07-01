@@ -1,4 +1,4 @@
-import React, { Fragment, PureComponent } from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { isNull, map, isFunction, isUndefined, size, isString } from 'lodash'
@@ -18,18 +18,30 @@ import { Text } from '../Typographies'
  * A Table component.
  *
  */
-class Table extends PureComponent {
-  renderTable(children) {
-    const { className, renderTable } = this.props
-
+const Table = ({
+  className,
+  cols,
+  elements,
+  isDetailsLineHoverable,
+  isLineHoverable,
+  onLineClick,
+  renderCell: propsRenderCell,
+  renderDetailsLine: propsRenderDetailsLine,
+  renderEmptyTable: propsRenderEmptyTable,
+  renderHeaderCell: propsRenderHeaderCell,
+  renderHeaderLine: propsRenderHeaderLine,
+  renderLine: propsRenderLine,
+  renderTable: propsRenderTable,
+}) => {
+  const renderTable = content => {
     return chain(
       element => !isNull(element) && !isUndefined(element),
-      () => (renderTable ? renderTable(children) : null),
-      () => <StyledTable className={className}>{children}</StyledTable>,
+      () => (propsRenderTable ? propsRenderTable(content) : null),
+      () => <StyledTable className={className}>{content}</StyledTable>,
     )
   }
 
-  renderText(content) {
+  const renderText = content => {
     if (isString(content)) {
       return <Text>{content}</Text>
     }
@@ -37,57 +49,49 @@ class Table extends PureComponent {
     return content
   }
 
-  renderEmptyTable() {
-    const { renderEmptyTable } = this.props
-
+  const renderEmptyTable = () => {
     return chain(
       element => !isNull(element) && !isUndefined(element),
-      () => (renderEmptyTable ? renderEmptyTable() : null),
+      () => (propsRenderEmptyTable ? propsRenderEmptyTable() : null),
       () => <StyledTable />,
     )
   }
 
-  renderHeaderLine(children) {
-    const { renderHeaderLine } = this.props
-
+  const renderHeaderLine = content => {
     return chain(
       element => !isNull(element) && !isUndefined(element),
-      () => (renderHeaderLine ? renderHeaderLine(children) : null),
-      () => <StyledTableHeaderLine>{children}</StyledTableHeaderLine>,
+      () => (propsRenderHeaderLine ? propsRenderHeaderLine(content) : null),
+      () => <StyledTableHeaderLine>{content}</StyledTableHeaderLine>,
     )
   }
 
-  renderHeaderCell(col) {
-    const { renderHeaderCell } = this.props
-
+  const renderHeaderCell = col => {
     return (
       <Fragment key={col.name}>
         {chain(
           element => !isNull(element) && !isUndefined(element),
-          () => (renderHeaderCell ? renderHeaderCell(col) : null),
+          () => (propsRenderHeaderCell ? propsRenderHeaderCell(col) : null),
           () =>
             col.renderHeaderCell && isFunction(col.renderHeaderCell)
               ? col.renderHeaderCell(col)
               : null,
           () => (
-            <StyledTableHeaderCell>{this.renderText(col.label)}</StyledTableHeaderCell>
+            <StyledTableHeaderCell>{renderText(col.label)}</StyledTableHeaderCell>
           ),
         )}
       </Fragment>
     )
   }
 
-  renderLine(element, children, id, odd) {
-    const { renderLine, isLineHoverable, onLineClick } = this.props
-
+  const renderLine = (element, content, id, odd) => {
     return (
       <Fragment key={id}>
         {chain(
           // We assume a valid result as soon as we got a non null element
           element => !isNull(element) && !isUndefined(element),
           () =>
-            element && isFunction(element.render) ? element.render(element, children, odd) : null,
-          () => (renderLine ? renderLine(element, children, odd) : null),
+            element && isFunction(element.render) ? element.render(element, content, odd) : null,
+          () => (propsRenderLine ? propsRenderLine(element, content, odd) : null),
           () => {
             const isHoverable =
               'isLineHoverable' in element ? element.isLineHoverable : isLineHoverable
@@ -95,7 +99,7 @@ class Table extends PureComponent {
 
             return (
               <StyledTableLine onClick={handleLineClick} isHoverable={isHoverable} odd={odd}>
-                {children}
+                {content}
               </StyledTableLine>
             )
           },
@@ -104,9 +108,7 @@ class Table extends PureComponent {
     )
   }
 
-  renderDetailsLine(element, id, odd) {
-    const { renderDetailsLine, cols, isDetailsLineHoverable } = this.props
-
+  const renderDetailsLine = (element, id, odd) => {
     const colCount = size(cols)
     const isDetailsHoverable =
       'isDetailsLineHoverable' in element ? element.isDetailsLineHoverable : isDetailsLineHoverable
@@ -116,7 +118,7 @@ class Table extends PureComponent {
       element => !isNull(element) && !isUndefined(element),
       () =>
         element && isFunction(element.renderDetails) ? element.renderDetails(element, odd) : null,
-      () => (renderDetailsLine ? renderDetailsLine(element, odd) : null),
+      () => (propsRenderDetailsLine ? propsRenderDetailsLine(element, odd) : null),
     )
 
     if (!component) {
@@ -132,56 +134,48 @@ class Table extends PureComponent {
     )
   }
 
-  renderCell(col, element, index) {
-    const { renderCell } = this.props
-
+  const renderCell = (col, element, index) => {
     return (
       <Fragment key={`${index}-${col.name}`}>
         {chain(
           element => !isNull(element) && !isUndefined(element),
           () => (element && isFunction(element.render) ? element.render(col, element) : null),
           () => (col && isFunction(col.renderCell) ? col.renderCell(col, element) : null),
-          () => (renderCell ? renderCell(col, element) : null),
+          () => (propsRenderCell ? propsRenderCell(col, element) : null),
           () => (
-            <StyledTableCell>{this.renderText(element[col.name])}</StyledTableCell>
+            <StyledTableCell>{renderText(element[col.name])}</StyledTableCell>
           ),
         )}
       </Fragment>
     )
   }
 
-  render() {
-    const { cols, elements } = this.props
-
-    if (size(elements) === 0) {
-      return this.renderEmptyTable()
-    }
-    return this.renderTable(
-      <React.Fragment>
-        <thead>
-          {this.renderHeaderLine(
-            <React.Fragment>{map(cols, col => this.renderHeaderCell(col))}</React.Fragment>,
-          )}
-        </thead>
-
-        <tbody>
-          {map(elements, (element, index) => (
-            <React.Fragment>
-              {this.renderLine(
-                element,
-                <React.Fragment>
-                  {map(cols, col => this.renderCell(col, element, index))}
-                </React.Fragment>,
-                index,
-                index % 2,
-              )}
-              {this.renderDetailsLine(element, index, index % 2)}
-            </React.Fragment>
-          ))}
-        </tbody>
-      </React.Fragment>,
-    )
+  if (size(elements) === 0) {
+    return renderEmptyTable()
   }
+  return renderTable(
+    <React.Fragment>
+      <thead>
+        {renderHeaderLine(
+          <React.Fragment>{map(cols, col => renderHeaderCell(col))}</React.Fragment>,
+        )}
+      </thead>
+
+      <tbody>
+        {map(elements, (element, index) => (
+          <React.Fragment>
+            {renderLine(
+              element,
+              <React.Fragment>{map(cols, col => renderCell(col, element, index))}</React.Fragment>,
+              index,
+              index % 2,
+            )}
+            {renderDetailsLine(element, index, index % 2)}
+          </React.Fragment>
+        ))}
+      </tbody>
+    </React.Fragment>,
+  )
 }
 
 Table.defaultProps = {

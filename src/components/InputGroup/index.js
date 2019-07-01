@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { StyledHorizontalInputGroup, StyledVerticalInputGroup } from './styles'
 /**
- * A Simple InputGroup compatible for web and native.
+ * A Simple InputGroup.
  *
  */
 const InputGroup = ({ className, children, vertical }) => {

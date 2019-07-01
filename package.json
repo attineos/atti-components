@@ -103,7 +103,6 @@
   "peerDependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-native": "0.55.4",
     "styled-components": "^4.0.0"
   },
   "sideEffects": false,

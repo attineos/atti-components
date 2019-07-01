@@ -1,0 +1,51 @@
+{
+  "name": "atti-components",
+  "version": "0.1.7",
+  "description": "A set of fully customizable React components made with <3 with styled-components",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "yarn run build:dev && yarn run build:prod",
+    "build:prod": "cross-env NODE_ENV=production rollup -c",
+    "build:dev": "cross-env NODE_ENV=development rollup -c",
+    "build:documentation": "styleguidist build",
+    "dev": "yarn run start:styleguidist",
+    "gen": "babel-node --presets @babel/preset-env ./bin/generateComponent",
+    "lint": "eslint --cache src",
+    "preparecommit": "yarn snapshots && yarn theme && yarn prettier && yarn lint && yarn test",
+    "prepublish": "npm run build",
+    "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
+    "snapshots": "babel-node --presets @babel/preset-env ./bin/generateSnapshots",
+    "start": "yarn run start:styleguidist",
+    "start:styleguidist": "styleguidist server",
+    "test": "jest --env=jsdom",
+    "theme": "babel-node --presets @babel/preset-env --extensions \".js\",\".web.js\" ./bin/generateFullTheme"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint"
+    }
+  },
+  "repository": "git@gitlab.com:attineos/atti-components.git",
+  "author": "Attineos <contact@attineos.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "polished": "^3.4.1",
+    "prop-types": "^15.6.2"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-native": "0.55.4",
+    "styled-components": "^4.0.0"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/cjs/*",
+    "dist/esm/*",
+    "dist/umd/*",
+    "helpers",
+    "CONTRIBUTING.md"
+  ]
+}

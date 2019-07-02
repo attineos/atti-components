@@ -25,7 +25,7 @@ Badge.propTypes = {
   /**
    * The rendered DOM element.
    */
-  as: PropTypes.oneOf([PropTypes.Element, PropTypes.string]),
+  as: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   /**
    * Content of the Badge.
    */

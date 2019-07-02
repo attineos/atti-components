@@ -134,9 +134,9 @@ const Table = ({
     )
   }
 
-  const renderCell = (col, element, index) => {
+  const renderCell = (col, element) => {
     return (
-      <Fragment key={`${index}-${col.name}`}>
+      <Fragment key={`cell-${col.name}`}>
         {chain(
           element => !isNull(element) && !isUndefined(element),
           () => (element && isFunction(element.render) ? element.render(col, element) : null),
@@ -163,10 +163,10 @@ const Table = ({
 
       <tbody>
         {map(elements, (element, index) => (
-          <React.Fragment>
+          <React.Fragment key={`line-${element.name}`}>
             {renderLine(
               element,
-              <React.Fragment>{map(cols, col => renderCell(col, element, index))}</React.Fragment>,
+              <React.Fragment>{map(cols, col => renderCell(col, element))}</React.Fragment>,
               index,
               index % 2,
             )}

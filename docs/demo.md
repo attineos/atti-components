@@ -55,7 +55,7 @@
     <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="primary" />
   </Cell>
   <Cell cols={[[5, 9], [5, 9], [5, 9]]}>
-    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="neutral" />
+    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="normal" />
   </Cell>
   <Cell cols={[[9, 13], [9, 13], [9, 13]]}>
     <InputFile placeholder="Browse a file" onChange={e => console.log(e)} />

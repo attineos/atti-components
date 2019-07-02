@@ -22,6 +22,11 @@ const Select = ({ className, id, isMulti, name, onChange, options, size, value, 
     )
   })
 
+  /*
+   * React will consider the select as controlled even if value is null.
+   */
+  const finalValue = value === null ? undefined : value
+
   return (
     <StyledSelect
       className={className}
@@ -30,7 +35,7 @@ const Select = ({ className, id, isMulti, name, onChange, options, size, value, 
       onChange={onChange}
       multiple={isMulti}
       size={size}
-      value={value}
+      value={finalValue}
       defaultValue={defaultValue}
     >
       {optionsElements}

@@ -1,6 +1,6 @@
 {
   "name": "atti-components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A set of fully customizable React components made with <3 with styled-components",
   "repository": "github:attineos/atti-components",
   "bugs":  "https://github.com/attineos/atti-components/issues",
@@ -8,7 +8,7 @@
   "author": "Attineos <contact@attineos.com>",
   "license": "MIT",
   "keywords": ["react", "components", "customizable", "styled-components"],
-  "main": "dist/index.js",
+  "main": "index.js",
   "module": "dist/esm/index.js",
   "scripts": {
     "build": "yarn run build:dev && yarn run build:prod",
@@ -114,6 +114,7 @@
     "dist/esm/*",
     "dist/umd/*",
     "helpers",
+    "index.js",
     "CONTRIBUTING.md"
   ]
 }

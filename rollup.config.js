@@ -21,6 +21,9 @@ function removeExt(path) {
 const componentsEntries = readdirSync('src/components').reduce((components, filename) => {
   const path = join('src/components/', filename)
   let file = ''
+  if (filename === 'ThemeProvider') {
+    return components
+  }
   if (fs.existsSync(join(path, INDEX_FILE))) {
     file = join(path, INDEX_FILE)
   } else {
@@ -86,6 +89,7 @@ if (NODE_ENV === 'production') {
     {
       input: {
         index: `src/${INDEX_FILE}`,
+        ThemeProvider: `src/components/ThemeProvider/index.js`,
         ...componentsEntries,
         themes: 'src/themes/index.js',
       },

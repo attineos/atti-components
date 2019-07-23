@@ -63,6 +63,7 @@ const animationStyle = ({ showTooltip, theme }) => {
 }
 
 const Bubble = styled('div')`
+  pointer-events: none;
   ${animationStyle}
   ${baseBubbleStyle}
   ${positionBubbleStyle}

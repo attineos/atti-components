@@ -7,7 +7,7 @@ import { positionType } from './types'
 import { Bubble, ChildrenContainer, Container } from './styles'
 import Message from './exposedStyles/Message'
 
-const Tooltip = ({ children, message, position }) => {
+const Tooltip = ({ children, className, message, position }) => {
   const [show, setShow] = useState(false)
 
   return (
@@ -15,6 +15,7 @@ const Tooltip = ({ children, message, position }) => {
       onMouseLeave={() => {
         setShow(false)
       }}
+      className={className}
     >
       <Bubble position={position} showTooltip={show}>
         <Message>{message}</Message>

@@ -75,6 +75,7 @@ module.exports = {
         'src/components/Input/index.js',
         'src/components/InputFile/index.js',
         'src/components/InputGroup/index.js',
+        'src/components/InputTime/index.js',
         'src/components/Radio/index.js',
         'src/components/Select/index.js',
         'src/components/TextArea/index.js',

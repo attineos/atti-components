@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   getSeconds,
   setSeconds,
@@ -38,9 +38,11 @@ const InputTime = ({
   const [stateValue, setStateValue] = useState(defaultValue)
 
   // Sync with value if in controlled state
-  if (isDate(value) && !isEqual(stateValue, value)) {
-    setStateValue(value)
-  }
+  useEffect(() => {
+    if (isDate(value) && !isEqual(stateValue, value)) {
+      setStateValue(value)
+    }
+  }, [value])
 
   const handleOnChange = (value, mutator) => {
     const newDate = mutator(stateValue, value)

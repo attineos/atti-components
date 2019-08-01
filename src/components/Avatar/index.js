@@ -64,4 +64,4 @@ Avatar.propTypes = {
 }
 
 /** @component */
-export default styled(Avatar)``
+export default styled(React.memo(Avatar))``

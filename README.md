@@ -3,6 +3,7 @@
 [<img src="https://travis-ci.org/attineos/atti-components.svg?branch=master">](https://travis-ci.org/attineos/atti-components)
 [<img src="https://img.shields.io/npm/v/atti-components.svg">](https://www.npmjs.com/package/atti-components)
 [<img src="https://img.shields.io/npm/dm/atti-components.svg">](https://www.npmjs.com/package/atti-components)
+[![DeepScan grade](https://deepscan.io/api/teams/3505/projects/5178/branches/40277/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3505&pid=5178&bid=40277)
 
 Reusable and fully customizable React components for web applications.
 

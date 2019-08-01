@@ -6,7 +6,6 @@ import {
   setMinutes,
   getHours,
   setHours,
-  isEqual,
   isDate,
 } from 'date-fns'
 import { noop, isNull, isUndefined, isFunction } from 'lodash'
@@ -39,7 +38,7 @@ const InputTime = ({
 
   // Sync with value if in controlled state
   useEffect(() => {
-    if (isDate(value) && !isEqual(stateValue, value)) {
+    if (isDate(value)) {
       setStateValue(value)
     }
   }, [value])

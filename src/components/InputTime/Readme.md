@@ -1,14 +1,14 @@
-Input Calendar:
+Input Time:
 
 Uncontrolled component:
 
 ```js
-<InputCalendar onChange={date => console.log(date)} />
+<InputTime onChange={date => console.log(date)} />
 ```
 
 Controlled component:
 
 ```js
 initialState = { date: new Date() }
-;<InputCalendar value={state.date} onChange={date => setState({ date })} />
+;<InputTime value={state.date} onChange={date => setState({ date })} />
 ```

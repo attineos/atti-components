@@ -1,12 +1,12 @@
 import React from 'react'
-import { isNull, isUndefined } from 'lodash'
+import { isNil } from 'lodash'
 
 import chain from 'helpers/generators/chain'
 import { StyledTable } from '../styles'
 
 const renderEmptyTable = ({ renderEmptyTable }) => {
   return chain(
-    element => !isNull(element) && !isUndefined(element),
+    element => !isNil(element),
     () => (renderEmptyTable ? renderEmptyTable() : null),
     () => <StyledTable />,
   )

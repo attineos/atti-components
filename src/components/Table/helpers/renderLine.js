@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { isNull, isUndefined, isFunction } from 'lodash'
+import { isNil, isFunction } from 'lodash'
 
 import chain from 'helpers/generators/chain'
 import { StyledTableLine } from '../styles'
@@ -9,7 +9,7 @@ const renderLine = (element, content, id, odd, { isLineHoverable, renderLine, on
     <Fragment key={id}>
       {chain(
         // We assume a valid result as soon as we got a non null element
-        element => !isNull(element) && !isUndefined(element),
+        element => !isNil(element),
         () =>
           element && isFunction(element.render) ? element.render(element, content, odd) : null,
         () => (renderLine ? renderLine(element, content, odd) : null),

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { isNull, isUndefined, isFunction } from 'lodash'
+import { isNil, isFunction } from 'lodash'
 
 import chain from 'helpers/generators/chain'
 import { StyledTableHeaderCell } from '../styles'
@@ -10,7 +10,7 @@ const renderHeaderCell = (col, { renderHeaderCell }) => {
   return (
     <Fragment key={col.name}>
       {chain(
-        element => !isNull(element) && !isUndefined(element),
+        element => !isNil(element),
         () => (renderHeaderCell ? renderHeaderCell(col) : null),
         () =>
           col.renderHeaderCell && isFunction(col.renderHeaderCell)

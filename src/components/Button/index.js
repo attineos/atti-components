@@ -8,15 +8,15 @@ import StyledButton from './styles/StyledButton'
 
 /**
  * A Simple Button.
- *
  */
-const Button = ({ children, className, disabled, onClick, type, variance }) => (
+const Button = ({ children, className, disabled, onClick, type, variance, ...rest }) => (
   <StyledButton
     className={className}
     disabled={disabled}
     type={type}
     onClick={onClick}
     variance={variance}
+    {...rest}
   >
     {children}
   </StyledButton>

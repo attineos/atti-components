@@ -35,10 +35,12 @@ const Tooltip = ({ children, className, message, position }) => {
 }
 
 Tooltip.defaultProps = {
+  className: '',
   position: 'top',
 }
 
 Tooltip.propTypes = {
+  className: PropTypes.string,
   /* The children on which the tooltip will be displayed over. */
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
   /* The message to display in the tooltip. */

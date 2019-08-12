@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { isNull, map, isFunction, isUndefined, size, isString } from 'lodash'
+import { map, size } from 'lodash'
 
-import chain from 'helpers/generators/chain'
 import {
   StyledTable,
   StyledTableHeaderLine,
@@ -12,152 +11,31 @@ import {
   StyledTableCell,
 } from './styles'
 
-import { Text } from '../Typographies'
+import {
+  renderCell,
+  renderDetailsLine,
+  renderEmptyTable,
+  renderHeaderCell,
+  renderHeaderLine,
+  renderLine,
+  renderTable,
+} from './helpers'
 
 /**
  * A Table component.
  *
  */
-const Table = ({
-  className,
-  cols,
-  elements,
-  isDetailsLineHoverable,
-  isLineHoverable,
-  onLineClick,
-  renderCell: propsRenderCell,
-  renderDetailsLine: propsRenderDetailsLine,
-  renderEmptyTable: propsRenderEmptyTable,
-  renderHeaderCell: propsRenderHeaderCell,
-  renderHeaderLine: propsRenderHeaderLine,
-  renderLine: propsRenderLine,
-  renderTable: propsRenderTable,
-}) => {
-  const renderTable = content => {
-    return chain(
-      element => !isNull(element) && !isUndefined(element),
-      () => (propsRenderTable ? propsRenderTable(content) : null),
-      () => <StyledTable className={className}>{content}</StyledTable>,
-    )
-  }
-
-  const renderText = content => {
-    if (isString(content)) {
-      return <Text>{content}</Text>
-    }
-
-    return content
-  }
-
-  const renderEmptyTable = () => {
-    return chain(
-      element => !isNull(element) && !isUndefined(element),
-      () => (propsRenderEmptyTable ? propsRenderEmptyTable() : null),
-      () => <StyledTable />,
-    )
-  }
-
-  const renderHeaderLine = content => {
-    return chain(
-      element => !isNull(element) && !isUndefined(element),
-      () => (propsRenderHeaderLine ? propsRenderHeaderLine(content) : null),
-      () => <StyledTableHeaderLine>{content}</StyledTableHeaderLine>,
-    )
-  }
-
-  const renderHeaderCell = col => {
-    return (
-      <Fragment key={col.name}>
-        {chain(
-          element => !isNull(element) && !isUndefined(element),
-          () => (propsRenderHeaderCell ? propsRenderHeaderCell(col) : null),
-          () =>
-            col.renderHeaderCell && isFunction(col.renderHeaderCell)
-              ? col.renderHeaderCell(col)
-              : null,
-          () => (
-            <StyledTableHeaderCell>{renderText(col.label)}</StyledTableHeaderCell>
-          ),
-        )}
-      </Fragment>
-    )
-  }
-
-  const renderLine = (element, content, id, odd) => {
-    return (
-      <Fragment key={id}>
-        {chain(
-          // We assume a valid result as soon as we got a non null element
-          element => !isNull(element) && !isUndefined(element),
-          () =>
-            element && isFunction(element.render) ? element.render(element, content, odd) : null,
-          () => (propsRenderLine ? propsRenderLine(element, content, odd) : null),
-          () => {
-            const isHoverable =
-              'isLineHoverable' in element ? element.isLineHoverable : isLineHoverable
-            const handleLineClick = 'onLineClick' in element ? element.onLineClick : onLineClick
-
-            return (
-              <StyledTableLine onClick={handleLineClick} isHoverable={isHoverable} odd={odd}>
-                {content}
-              </StyledTableLine>
-            )
-          },
-        )}
-      </Fragment>
-    )
-  }
-
-  const renderDetailsLine = (element, id, odd) => {
-    const colCount = size(cols)
-    const isDetailsHoverable =
-      'isDetailsLineHoverable' in element ? element.isDetailsLineHoverable : isDetailsLineHoverable
-
-    const component = chain(
-      // We assume a valid result as soon as we got a non null element
-      element => !isNull(element) && !isUndefined(element),
-      () =>
-        element && isFunction(element.renderDetails) ? element.renderDetails(element, odd) : null,
-      () => (propsRenderDetailsLine ? propsRenderDetailsLine(element, odd) : null),
-    )
-
-    if (!component) {
-      return null
-    }
-
-    return (
-      <Fragment key={`details-${id}`}>
-        <StyledTableLine isHoverable={isDetailsHoverable} odd={odd}>
-          <StyledTableCell colSpan={colCount}>{component}</StyledTableCell>
-        </StyledTableLine>
-      </Fragment>
-    )
-  }
-
-  const renderCell = (col, element) => {
-    return (
-      <Fragment key={`cell-${col.name}`}>
-        {chain(
-          element => !isNull(element) && !isUndefined(element),
-          () => (element && isFunction(element.render) ? element.render(col, element) : null),
-          () => (col && isFunction(col.renderCell) ? col.renderCell(col, element) : null),
-          () => (propsRenderCell ? propsRenderCell(col, element) : null),
-          () => (
-            <StyledTableCell>{renderText(element[col.name])}</StyledTableCell>
-          ),
-        )}
-      </Fragment>
-    )
-  }
-
+const Table = ({ cols, elements, ...props }) => {
   if (size(elements) === 0) {
-    return renderEmptyTable()
+    return renderEmptyTable(props)
   }
+
   return renderTable(
     <React.Fragment>
       <thead>
         {renderHeaderLine(
-          <React.Fragment>{map(cols, col => renderHeaderCell(col))}</React.Fragment>,
+          <React.Fragment>{map(cols, col => renderHeaderCell(col, props))}</React.Fragment>,
+          props,
         )}
       </thead>
 
@@ -166,15 +44,17 @@ const Table = ({
           <React.Fragment key={`line-${element.name}`}>
             {renderLine(
               element,
-              <React.Fragment>{map(cols, col => renderCell(col, element))}</React.Fragment>,
+              <React.Fragment>{map(cols, col => renderCell(col, element, props))}</React.Fragment>,
               index,
               index % 2,
+              props,
             )}
-            {renderDetailsLine(element, index, index % 2)}
+            {renderDetailsLine(cols, element, index, index % 2, props)}
           </React.Fragment>
         ))}
       </tbody>
     </React.Fragment>,
+    props,
   )
 }
 

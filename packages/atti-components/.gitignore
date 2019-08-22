@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+*.log
+.idea
+.eslintcache
+./styleguide
+lib/*
+dist/*
+helpers/*

@@ -1,15 +1,19 @@
 {
   "name": "atti-components-project",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "lerna run build --stream --parallel",
+    "build": "lerna run build --stream",
     "build:documentation": "lerna run build:documentation --stream --parallel && cp -r ./packages/atti-components/styleguide ./styleguide",
     "clean": "lerna clean",
     "dev": "lerna run dev --stream --parallel",
     "lint": "lerna run lint --stream --parallel",
+    "old:dev": "lerna run old:dev --stream --parallel",
     "preparecommit": "yarn prettier && yarn lint && yarn test",
     "prepublish": "yarn run build",
-    "prepublishOnly": "yarn clean && yarn && yarn build",
+    "prepublishOnly": "yarn clean && lerna bootstrap && yarn build",
     "publish": "lerna publish",
     "prettier": "lerna run prettier --stream --parallel",
     "test": "lerna run test --stream --parallel"
@@ -63,7 +67,7 @@
     "jest-styled-components": "^6.3.1",
     "lerna": "^3.15.0",
     "path": "^0.12.7",
-    "prettier": "^1.14.0",
+    "prettier": "^1.18.2",
     "pretty-quick": "^1.10.0",
     "prompts": "^2.0.0",
     "react": "^16.4.1",
@@ -85,10 +89,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint"
+      "pre-commit": "pretty-quick --staged && yarn run lint"
     }
   },
   "dependencies": {
-    "atti-components": "file:packages\\atti-components"
+    "atti-components": "file:packages\\atti-components",
+    "gatsby-starter-default": "file:packages\\website"
   }
 }

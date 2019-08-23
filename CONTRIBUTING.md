@@ -172,7 +172,18 @@ This project follows all Airbnb React/JSX conventions
 - Always use single quotes, even in JSX.
 - Define propTypes and defaultProps as static property in your component class.
 
-### Files architecture
+## Lerna
+
+This project is using [lerna](https://lerna.js.org/) as it includes multiple packages. You can find them under the /packages folder.
+
+Currently, there are 2 packages:
+
+- atti-components: this package contains all the components exposed by the project
+- website: this is the documentation website created thanks to [gatsbyjs](https://www.gatsbyjs.org/)
+
+### atti-components architecture
+
+As explained earlier, all our components are in packages/atti-components. So all the following rules apply to this package.
 
 Each component should be developed in its own folder, under the `src/components` folder. Each
 component folder should follow this architecture :
@@ -205,3 +216,23 @@ You can execute the command `yarn gen` to generate a new component minimal's fil
 - Choose the component name.
 - Pick folders, defaults are `styles` and `theme`.
 - Confirm your choice.
+
+## Commands
+
+Please note that for contributing, we only support YARN for consistency.
+
+First of all, you should run `lerna bootstrap`. It'll install the dependencies and link cross-dependencies.
+
+Then you can run one of the following commands:
+
+Run `yarn dev` to start contributing. It'll run a build watch on the components of packages/atti-components and run in parallel the documentation of packages/website on a local server that you'll be able to access on http://localhost:8000/. Hot reload is configured so any modification on the components of packages/atti-components will be visible on the server.
+
+Run `yarn prettier` to run prettier on all your files. It will automatically fix them if necessary.
+
+Run `yarn test` to run the tests.
+
+Run `yarn test -u` to run and update the snapshot tests if the update is validated and expected.
+
+Run `yarn preparecommit` to check if you can commit your code. The command runs `yarn snapshots`, `yarn prettier`, `yarn lint` and `yarn test` (you can add -u to run and update snapshots).
+
+Run `yarn build` to transpile and compress your components into multiple bundles formats.

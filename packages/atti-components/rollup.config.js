@@ -11,6 +11,7 @@ import fs from 'fs'
 import { readdirSync } from 'fs-extra'
 
 const NODE_ENV = process.env.NODE_ENV || 'development'
+const WATCH = process.env.WATCH || false
 const INDEX_FILE = 'index.js'
 const extensions = ['.js']
 
@@ -40,7 +41,7 @@ const getPlugins = (minify = true) => [
     'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
   }),
   babel({
-    exclude: ['node_modules/**', '../../node_modules/**'],
+    exclude: ['/node_modules/'],
   }),
   alias({
     resolve: ['.js', '/index.js'],
@@ -62,7 +63,23 @@ const globals = {
 
 const conf = []
 
-if (NODE_ENV === 'production') {
+if (WATCH === 'true') {
+  conf.push({
+    input: {
+      index: `src/${INDEX_FILE}`,
+      ThemeProvider: `src/components/ThemeProvider/index.js`,
+      ...componentsEntries,
+      themes: 'src/themes/index.js',
+    },
+    output: [
+      {
+        dir: './dist/esm',
+        format: 'esm',
+      },
+    ],
+    plugins: getPlugins(false),
+  })
+} else if (NODE_ENV === 'production') {
   conf.push(
     {
       input: './src/helpers/index.js',

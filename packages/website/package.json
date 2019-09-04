@@ -2,10 +2,10 @@
   "name": "atti-components-documentation",
   "private": true,
   "description": "atti-components library's documentation built with Gatsby",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Attineos <contact@attineos.com>",
   "dependencies": {
-    "atti-components": "^0.2.1",
+    "atti-components": "^0.2.2-rc3",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.73",
     "gatsby-image": "^2.2.10",

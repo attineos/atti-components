@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "cross-env rm -rf .cache && gatsby build",
+    "build": "gatsby build",
     "dev": "cross-env rm -rf .cache && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "yarn run develop",

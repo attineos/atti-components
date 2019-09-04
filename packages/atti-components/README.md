@@ -35,13 +35,13 @@ In atti-components, we provide you a custom `ThemeProvider` and a basic theme th
 So the root of your application should look like something like this:
 
 ```js
-import { defaultTheme, Button, ThemeProvider } from "atti-components";
+import { defaultTheme, Button, ThemeProvider } from 'atti-components'
 
 const App = () => (
   <ThemeProvider theme={defaultTheme}>
     <Button>Click me</Button>
   </ThemeProvider>
-);
+)
 ```
 
 ## Troubleshooting
@@ -52,7 +52,7 @@ In the `defaultTheme`, the font used is Roboto. As we don't want to include it f
 For example you can add the following in one of your CSS files:
 
 ```css
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 ```
 
 If you don't want to use Roboto as your default font, you can simply override the `theme.fonts.fontFamily.primary` to any other value and include the corresponding font by yourself.

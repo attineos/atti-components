@@ -1,0 +1,50 @@
+{
+  "name": "atti-components-documentation",
+  "private": true,
+  "description": "atti-components library's documentation built with Gatsby",
+  "version": "0.1.0",
+  "author": "Attineos <contact@attineos.com>",
+  "dependencies": {
+    "atti-components": "^0.2.1",
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.13.73",
+    "gatsby-image": "^2.2.10",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-manifest": "^2.2.6",
+    "gatsby-plugin-offline": "^2.2.7",
+    "gatsby-plugin-react-helmet": "^3.1.4",
+    "gatsby-plugin-sharp": "^2.2.13",
+    "gatsby-plugin-styled-components": "^3.1.2",
+    "gatsby-source-filesystem": "^2.1.11",
+    "gatsby-transformer-sharp": "^2.2.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2"
+  },
+  "keywords": [
+    "gatsby",
+    "documentation",
+    "reactjs",
+    "react",
+    "atti-components",
+    "styled-components"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env rm -rf .cache && gatsby build",
+    "dev": "cross-env rm -rf .cache && gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "yarn run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

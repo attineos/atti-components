@@ -1,0 +1,53 @@
+{
+  "name": "atti-components",
+  "version": "0.2.2",
+  "description": "A set of fully customizable React components made with <3 with styled-components",
+  "repository": "github:attineos/atti-components",
+  "bugs": "https://github.com/attineos/atti-components/issues",
+  "homepage": "https://atti-components.netlify.com",
+  "author": "Attineos <contact@attineos.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "components",
+    "customizable",
+    "styled-components"
+  ],
+  "main": "index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "yarn run build:dev && yarn run build:prod",
+    "build:prod": "cross-env NODE_ENV=production rollup -c",
+    "build:dev": "cross-env NODE_ENV=development rollup -c",
+    "build:devwatch": "cross-env NODE_ENV=development WATCH=true rollup -c",
+    "build:documentation": "styleguidist build",
+    "dev": "yarn run build:devwatch --watch",
+    "gen": "babel-node --presets @babel/preset-env ./bin/generateComponent",
+    "lint": "eslint --cache src",
+    "old:dev": "yarn run start:styleguidist",
+    "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
+    "snapshots": "babel-node --presets @babel/preset-env ./bin/generateSnapshots",
+    "start:styleguidist": "styleguidist server",
+    "test": "yarn run snapshots && jest --env=jsdom"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "polished": "^3.4.1",
+    "prop-types": "^15.6.2"
+  },
+  "peerDependencies": {
+    "date-fns": "1.30.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "styled-components": "^4.0.0"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/cjs/*",
+    "dist/esm/*",
+    "dist/umd/*",
+    "helpers",
+    "index.js",
+    "CONTRIBUTING.md"
+  ]
+}

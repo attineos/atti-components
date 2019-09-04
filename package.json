@@ -1,46 +1,22 @@
 {
-  "name": "atti-components",
-  "version": "0.2.2-rc1",
-  "description": "A set of fully customizable React components made with <3 with styled-components",
-  "repository": "github:attineos/atti-components",
-  "bugs": "https://github.com/attineos/atti-components/issues",
-  "homepage": "https://atti-components.netlify.com",
-  "author": "Attineos <contact@attineos.com>",
-  "license": "MIT",
-  "keywords": [
-    "react",
-    "components",
-    "customizable",
-    "styled-components"
+  "name": "atti-components-project",
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "main": "index.js",
-  "module": "dist/esm/index.js",
   "scripts": {
-    "build": "yarn run build:dev && yarn run build:prod",
-    "build:prod": "cross-env NODE_ENV=production rollup -c",
-    "build:dev": "cross-env NODE_ENV=development rollup -c",
-    "build:documentation": "styleguidist build",
-    "dev": "yarn run start:styleguidist",
-    "gen": "babel-node --presets @babel/preset-env ./bin/generateComponent",
-    "lint": "eslint --cache src",
-    "preparecommit": "yarn snapshots && yarn theme && yarn prettier && yarn lint && yarn test",
-    "prepublish": "npm run build",
-    "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
-    "snapshots": "babel-node --presets @babel/preset-env ./bin/generateSnapshots",
-    "start": "yarn run start:styleguidist",
-    "start:styleguidist": "styleguidist server",
-    "test": "jest --env=jsdom",
-    "theme": "babel-node --presets @babel/preset-env --extensions \".js\",\".web.js\" ./bin/generateFullTheme"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint"
-    }
-  },
-  "dependencies": {
-    "lodash": "^4.17.10",
-    "polished": "^3.4.1",
-    "prop-types": "^15.6.2"
+    "build": "lerna run build --stream",
+    "build:documentation": "lerna run build:documentation --stream --parallel && cp -r ./packages/atti-components/styleguide ./styleguide",
+    "clean": "lerna clean",
+    "dev": "lerna run dev --stream --parallel",
+    "lint": "lerna run lint --stream --parallel",
+    "old:dev": "lerna run old:dev --stream --parallel",
+    "preparecommit": "yarn prettier && yarn lint && yarn test",
+    "prepublish": "yarn run build",
+    "prepublishOnly": "yarn clean && lerna bootstrap && yarn build",
+    "publish": "lerna publish",
+    "prettier": "lerna run prettier --stream --parallel",
+    "test": "lerna run test --stream --parallel"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -75,6 +51,7 @@
     "babel-plugin-styled-components": "^1.7.1",
     "babel-plugin-wildcard": "^5.0.0",
     "cross-env": "^5.2.0",
+    "date-fns": "1.30.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.2.0",
@@ -88,8 +65,9 @@
     "husky": "^2.4.1",
     "jest": "^24.5.0",
     "jest-styled-components": "^6.3.1",
+    "lerna": "^3.15.0",
     "path": "^0.12.7",
-    "prettier": "^1.14.0",
+    "prettier": "^1.18.2",
     "pretty-quick": "^1.10.0",
     "prompts": "^2.0.0",
     "react": "^16.4.1",
@@ -109,19 +87,13 @@
     "styled-components": "^4.0.0",
     "webpack": "^4.34.0"
   },
-  "peerDependencies": {
-    "date-fns": "1.30.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "styled-components": "^4.0.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && yarn run lint"
+    }
   },
-  "sideEffects": false,
-  "files": [
-    "dist/cjs/*",
-    "dist/esm/*",
-    "dist/umd/*",
-    "helpers",
-    "index.js",
-    "CONTRIBUTING.md"
-  ]
+  "dependencies": {
+    "atti-components": "file:packages\\atti-components",
+    "gatsby-starter-default": "file:packages\\website"
+  }
 }

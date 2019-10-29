@@ -8,6 +8,7 @@ import image from '../../components/Image/theme'
 import input from '../../components/Input/theme'
 import inputFile from '../../components/InputFile/theme'
 import inputGroup from '../../components/InputGroup/theme'
+import inputTime from '../../components/InputTime/theme'
 import link from '../../components/Link/theme'
 import loader from '../../components/Loader/theme'
 import menu from '../../components/Menu/theme'
@@ -48,6 +49,7 @@ export default constants => ({
   input: input(constants),
   inputFile: inputFile(constants),
   inputGroup: inputGroup(constants),
+  inputTime: inputTime(constants),
   label: label(constants),
   link: link(constants),
   loader: loader(constants),

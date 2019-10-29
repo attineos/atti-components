@@ -40,9 +40,10 @@ Tooltip.defaultProps = {
 }
 
 Tooltip.propTypes = {
-  className: PropTypes.string,
   /* The children on which the tooltip will be displayed over. */
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  /* Class name to add to root component */
+  className: PropTypes.string,
   /* The message to display in the tooltip. */
   message: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   /* The position of the tooltip around the children. */

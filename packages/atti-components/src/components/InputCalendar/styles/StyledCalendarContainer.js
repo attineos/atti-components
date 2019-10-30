@@ -6,9 +6,14 @@ const StyledCalendarContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: ${({ theme }) => getSpacesAsCss(theme.components.inputTime, 'padding')};
+  margin: ${({ theme }) => getSpacesAsCss(theme.components.inputCalendar.spaces, 'margin')};
+  padding: ${({ theme }) => getSpacesAsCss(theme.components.inputCalendar.spaces, 'padding')};
 
-  border: 1px solid red;
+  max-width: ${({ theme }) => theme.components.inputCalendar.maxWidth};
+
+  box-shadow: ${({ theme }) => theme.components.inputCalendar.boxShadow};
+
+  padding: 5px;
 `
 
 export default StyledCalendarContainer

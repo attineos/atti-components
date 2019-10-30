@@ -6,8 +6,11 @@ import button from '../../components/Button/theme'
 import checkBox from '../../components/CheckBox/theme'
 import image from '../../components/Image/theme'
 import input from '../../components/Input/theme'
+import inputCalendar from '../../components/InputCalendar/theme'
 import inputFile from '../../components/InputFile/theme'
 import inputGroup from '../../components/InputGroup/theme'
+import inputMonth from '../../components/InputMonth/theme'
+import inputTime from '../../components/InputTime/theme'
 import link from '../../components/Link/theme'
 import loader from '../../components/Loader/theme'
 import menu from '../../components/Menu/theme'
@@ -46,8 +49,11 @@ export default constants => ({
   header4: header4(constants),
   img: image(constants),
   input: input(constants),
+  inputCalendar: inputCalendar(constants),
   inputFile: inputFile(constants),
   inputGroup: inputGroup(constants),
+  inputMonth: inputMonth(constants),
+  inputTime: inputTime(constants),
   label: label(constants),
   link: link(constants),
   loader: loader(constants),

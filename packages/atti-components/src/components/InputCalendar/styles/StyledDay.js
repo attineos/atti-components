@@ -1,11 +1,26 @@
 import styled from 'styled-components'
 
-const StyledDay = styled.div`
-  width: 30px;
-  height: 20px;
+import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
 
-  ${({ isSunday }) => (isSunday ? 'color: green;' : '')}
-  ${({ isToday }) => (isToday ? 'color: red;' : '')}
+const StyledDay = styled.div`
+  width: ${({ theme }) => theme.components.inputCalendar.day.width};
+
+  flex-grow: 1;
+  text-align: center;
+
+  margin: ${({ theme }) => getSpacesAsCss(theme.components.inputCalendar.day.spaces, 'margin')};
+  padding: ${({ theme }) => getSpacesAsCss(theme.components.inputCalendar.day.spaces, 'padding')};
+
+  ${({ isSameMonth, theme }) =>
+    !isSameMonth ? `color: ${theme.components.inputCalendar.colors.notSameMonth};` : ''}
+  ${({ isSunday, theme }) =>
+    isSunday ? `color: ${theme.components.inputCalendar.colors.sunday};` : ''}
+  ${({ isToday, theme }) =>
+    isToday ? `color: ${theme.components.inputCalendar.colors.today};` : ''}
+  ${({ isSelected, theme }) =>
+    isSelected ? `color: ${theme.components.inputCalendar.colors.selected};` : ''}
+
+  cursor: pointer;
 `
 
 export default StyledDay

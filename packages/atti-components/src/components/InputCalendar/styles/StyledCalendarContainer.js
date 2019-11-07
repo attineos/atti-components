@@ -9,7 +9,7 @@ const StyledCalendarContainer = styled.div`
   margin: ${({ theme }) => getSpacesAsCss(theme.components.inputCalendar.spaces, 'margin')};
   padding: ${({ theme }) => getSpacesAsCss(theme.components.inputCalendar.spaces, 'padding')};
 
-  max-width: ${({ theme }) => theme.components.inputCalendar.maxWidth};
+  min-width: ${({ theme }) => theme.components.inputCalendar.maxWidth};
 
   box-shadow: ${({ theme }) => theme.components.inputCalendar.boxShadow};
 

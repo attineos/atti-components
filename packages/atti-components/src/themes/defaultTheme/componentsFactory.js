@@ -10,6 +10,7 @@ import inputCalendar from '../../components/InputCalendar/theme'
 import inputFile from '../../components/InputFile/theme'
 import inputGroup from '../../components/InputGroup/theme'
 import inputMonth from '../../components/InputMonth/theme'
+import inputPopdown from '../../components/InputPopdown/theme'
 import inputTime from '../../components/InputTime/theme'
 import link from '../../components/Link/theme'
 import loader from '../../components/Loader/theme'
@@ -53,6 +54,7 @@ export default constants => ({
   inputFile: inputFile(constants),
   inputGroup: inputGroup(constants),
   inputMonth: inputMonth(constants),
+  inputPopdown: inputPopdown(constants),
   inputTime: inputTime(constants),
   label: label(constants),
   link: link(constants),

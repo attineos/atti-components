@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 const StyledInputPopdownContainer = styled.div`
-  width: 100%;
-
   position: relative;
 `
 
@@ -11,7 +9,10 @@ const StyledInputPopdown = styled.div`
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
 
   position: absolute;
+  left: 0;
+  right: 0;
   width: 100%;
+  z-index: 100;
 
   ${({ theme }) => `
     background: ${theme.components.inputPopdown.colors.background};

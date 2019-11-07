@@ -12,20 +12,20 @@ const InputPopdown = ({ className, children, enhancer }) => {
   const componentRef = useRef()
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleClickOutside = e => {
-    if (isOpen) {
-      if (!componentRef.current.contains(e.target)) {
-        setIsOpen(false)
+  useEffect(() => {
+    const handleClickOutside = e => {
+      if (isOpen) {
+        if (!componentRef.current.contains(e.target)) {
+          setIsOpen(false)
+        }
       }
     }
-  }
 
-  useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [handleClickOutside])
+  })
 
   return (
     <StyledInputPopdownContainer

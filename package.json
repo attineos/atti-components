@@ -12,7 +12,6 @@
     "lint": "lerna run lint --stream --parallel",
     "old:dev": "lerna run old:dev --stream --parallel",
     "preparecommit": "yarn prettier && yarn lint && yarn test",
-    "prepublish": "yarn run build",
     "prepublishOnly": "yarn clean && lerna bootstrap && yarn build",
     "publish": "lerna publish",
     "prettier": "lerna run prettier --stream --parallel",

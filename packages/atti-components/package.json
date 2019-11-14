@@ -13,12 +13,11 @@
     "customizable",
     "styled-components"
   ],
-  "main": "index.js",
   "module": "dist/esm/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "yarn run build:dev && yarn run build:prod",
-    "build:prod": "cross-env NODE_ENV=production rollup -c",
-    "build:dev": "cross-env NODE_ENV=development rollup -c",
+    "build": "yarn run build:umd",
+    "build:umd": "cross-env NODE_ENV=production rollup -c",
     "build:devwatch": "cross-env NODE_ENV=development WATCH=true rollup -c",
     "build:documentation": "styleguidist build",
     "dev": "yarn run build:devwatch --watch",
@@ -43,11 +42,7 @@
   },
   "sideEffects": false,
   "files": [
-    "dist/cjs/*",
-    "dist/esm/*",
-    "dist/umd/*",
-    "helpers",
-    "index.js",
+    "dist",
     "CONTRIBUTING.md"
   ]
 }

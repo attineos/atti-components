@@ -3,7 +3,11 @@ import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { StyledInputPopdownContainer, StyledInputPopdown } from './styles.js'
+import {
+  StyledInputPopdownContainer,
+  StyledInputPopdown,
+  StyledInputPopdownEnhancerContainer,
+} from './styles.js'
 
 /**
  * Enhance any input with a dropdown on focus
@@ -34,7 +38,9 @@ const InputPopdown = ({ className, children, enhancer }) => {
       ref={componentRef}
     >
       {children}
-      <StyledInputPopdown isOpen={isOpen}>{enhancer()}</StyledInputPopdown>
+      <StyledInputPopdown isOpen={isOpen}>
+        <StyledInputPopdownEnhancerContainer>{enhancer()}</StyledInputPopdownEnhancerContainer>
+      </StyledInputPopdown>
     </StyledInputPopdownContainer>
   )
 }

@@ -11,8 +11,12 @@ import CheckBox from './components/CheckBox'
 import Grid from './components/Grid'
 import Image from './components/Image'
 import Input from './components/Input'
+import InputCalendar from './components/InputCalendar'
 import InputFile from './components/InputFile'
 import InputGroup from './components/InputGroup'
+import InputMonth from './components/InputMonth'
+import InputPopdown from './components/InputPopdown'
+import InputTime from './components/InputTime'
 import Link from './components/Link'
 import Loader from './components/Loader'
 import Menu from './components/Menu'
@@ -58,8 +62,12 @@ export {
   Header4,
   Image,
   Input,
+  InputCalendar,
   InputFile,
   InputGroup,
+  InputMonth,
+  InputPopdown,
+  InputTime,
   Label,
   Link,
   Loader,

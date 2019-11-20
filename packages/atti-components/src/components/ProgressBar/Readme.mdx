@@ -1,0 +1,61 @@
+---
+path: '/progressbar'
+name: 'ProgressBar'
+title: 'ProgressBar component'
+---
+
+Progress bar :
+
+```js
+<div>
+  <ProgressBar
+    start={0}
+    value={500}
+    end={1000}
+    label="Label centered"
+    leftLabel="Label left"
+    rightLabel="Label right"
+  />
+</div>
+```
+
+_Click on the progress bars to update their values_
+
+```js
+const Example = () => {
+  const [value, setValue] = useState(0)
+  const [isUp, setIsUp] = useState(true)
+
+  const onChangeSingleValue = () => {
+    const step = 5
+    if (value >= 100) {
+      setIsUp(false)
+    } else if (value <= 0) {
+      setIsUp(true)
+    }
+    setValue(prevValue => (isUp ? prevValue + step : prevValue - step))
+  }
+
+  return (
+    <div>
+      <Text>With default properties</Text>
+      <div onClick={onChangeSingleValue}>
+        <ProgressBar value={value} />
+      </div>
+      <br />
+      <Text>Centered progression with no label</Text>
+      <div onClick={onChangeSingleValue}>
+        <ProgressBar
+          id="secondProgress"
+          value={value}
+          showLabel={false}
+          fillingSpeed={500}
+          fillingOrientation="center"
+        />
+      </div>
+    </div>
+  )
+}
+
+render(<Example />)
+```

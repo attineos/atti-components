@@ -107,12 +107,10 @@ const InputCalendar = ({
 
 InputCalendar.defaultProps = {
   className: '',
-
   defaultValue: new Date(),
   value: null,
   cursorValue: null,
   onChange: noop,
-
   renderContainer: null,
   renderDay: null,
   renderWeek: null,
@@ -125,16 +123,33 @@ InputCalendar.propTypes = {
    * The classes of the select.
    */
   className: PropTypes.string,
-
+  /**
+   * The defaultValue of the select.
+   */
   defaultValue: PropTypes.instanceOf(Date),
+  /**
+   * The value of the select.
+   */
   value: PropTypes.instanceOf(Date),
+  /**
+   * The value selected of the select.
+   */
   cursorValue: PropTypes.instanceOf(Date),
+  /**
+   * The function called when the value changes.
+   */
   onChange: PropTypes.func,
 
   yearRange: PropTypes.arrayOf(PropTypes.number),
 
   renderContainer: PropTypes.func,
+  /**
+   * The function to override the rendering of the Day.
+   */
   renderDay: PropTypes.func,
+  /**
+   * The function to override the rendering of the Week.
+   */
   renderWeek: PropTypes.func,
 
   locale: PropTypes.any,

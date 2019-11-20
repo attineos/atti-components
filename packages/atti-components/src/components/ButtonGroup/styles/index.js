@@ -1,1 +1,3 @@
-export StyledButtonGroup from './StyledButtonGroup'
+import StyledButtonGroup from './StyledButtonGroup'
+
+export { StyledButtonGroup }

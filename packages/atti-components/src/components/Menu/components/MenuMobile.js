@@ -63,10 +63,10 @@ class MenuMobile extends PureComponent {
   render() {
     const { opened } = this.state
 
-    const { className, elements, selectedElement } = this.props
+    const { className, elements, isVertical, selectedElement } = this.props
 
     return (
-      <MenuNavMobile className={className}>
+      <MenuNavMobile className={className} isVertical={isVertical}>
         <MenuOpenerContainer onClick={this.handleClick} opened={opened}>
           <MenuOpenerLine />
           <MenuOpenerLine />
@@ -74,7 +74,7 @@ class MenuMobile extends PureComponent {
           <MenuOpenerLine />
         </MenuOpenerContainer>
 
-        <SideMenu opened={opened}>
+        <SideMenu opened={opened} isVertical={isVertical}>
           <MenuLinksList>
             {map(elements, element =>
               this.renderElement(element, (element.id || element.name) === selectedElement),
@@ -88,6 +88,7 @@ class MenuMobile extends PureComponent {
 
 MenuMobile.defaultProps = {
   className: '',
+  isVertical: false,
   renderElement: null,
   selectedElement: null,
 }
@@ -101,6 +102,10 @@ MenuMobile.propTypes = {
    * The links in the menu.
    */
   elements: PropTypes.arrayOf(PropTypes.object).isRequired,
+  /**
+   * Is the menu vertical or not.
+   */
+  isVertical: PropTypes.bool,
   /**
    * The function to use for rendering of each element
    */

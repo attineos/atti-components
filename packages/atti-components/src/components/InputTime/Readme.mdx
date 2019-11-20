@@ -1,0 +1,24 @@
+---
+path: '/inputtime'
+name: 'InputTime'
+title: 'InputTime component'
+---
+
+Input Time:
+
+Uncontrolled component:
+
+```js
+<InputTime onChange={date => console.log(date)} />
+```
+
+Controlled component:
+
+```js
+const Example = () => {
+  const [date, setDate] = useState(new Date())
+  return <InputTime value={date} onChange={date => setDate({ date })} />
+}
+
+render(<Example />)
+```

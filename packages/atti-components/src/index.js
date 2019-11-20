@@ -5,6 +5,7 @@ import Avatar from './components/Avatar'
 import Badge from './components/Badge'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
+import ButtonGroup from './components/ButtonGroup'
 import Cell from './components/Cell'
 import Container from './components/Container'
 import CheckBox from './components/CheckBox'
@@ -52,6 +53,7 @@ export {
   BigText,
   Breadcrumb,
   Button,
+  ButtonGroup,
   Cell,
   Container,
   CheckBox,

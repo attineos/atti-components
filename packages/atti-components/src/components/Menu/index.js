@@ -11,16 +11,17 @@ import { MenuContainer } from './styles'
  * The menu is a list of Link elements.
  *
  */
-const Menu = ({ className, isResponsive, ...rest }) => (
-  <MenuContainer className={className} isResponsive={isResponsive}>
-    {isResponsive && <MenuMobile {...rest} />}
-    <MenuDesktop {...rest} />
+const Menu = ({ className, isResponsive, isVertical, ...rest }) => (
+  <MenuContainer className={className} isResponsive={isResponsive} isVertical={isVertical}>
+    {(isResponsive || isVertical) && <MenuMobile isVertical={isVertical} {...rest} />}
+    {!isVertical && <MenuDesktop {...rest} />}
   </MenuContainer>
 )
 
 Menu.defaultProps = {
   className: '',
   isResponsive: true,
+  isVertical: false,
   renderElement: null,
   renderMenu: null,
   selectedElement: null,
@@ -40,6 +41,10 @@ Menu.propTypes = {
    * Is the menu responsive or not.
    */
   isResponsive: PropTypes.bool,
+  /**
+   * Is the desktop menu vertical or not.
+   */
+  isVertical: PropTypes.bool,
   /**
    * The function to use for rendering of each element
    */

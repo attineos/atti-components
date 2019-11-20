@@ -7,8 +7,16 @@ const MenuContainer = styled('div')`
   ${MenuDesktop} {
     display: flex;
   }
+
   ${MenuMobile} {
-    display: none;
+    ${({ isVertical }) =>
+      isVertical
+        ? `
+        display: flex;
+      `
+        : `
+        display: none;
+      `}
   }
 
   ${({ isResponsive, theme }) =>

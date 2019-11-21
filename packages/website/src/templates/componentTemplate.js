@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { defaultTheme, ThemeProvider, Header1 } from "atti-components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
-import mdxComponents from "../helpers/mdxComponents"
+import mdxComponents from "../pagesComponents/componentPage/mdxComponents"
 import { PropsTable } from "../pagesComponents/componentPage"
 import Layout from "../components/Layout"
 

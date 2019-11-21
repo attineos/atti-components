@@ -54,5 +54,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "react-json-view": "^1.19.1"
   }
 }

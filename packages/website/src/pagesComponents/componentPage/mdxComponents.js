@@ -1,6 +1,7 @@
 import React, { useState } from "react"
-import styled, { css } from "styled-components"
+import styled, { css, withTheme } from "styled-components"
 import { reduce } from "lodash"
+import ReactJson from "react-json-view"
 // TODO: improve
 import {
   Alert,
@@ -94,6 +95,16 @@ const scope = {
 
 const Pre = ({ children }) => <div>{children}</div>
 
+const ThemeRenderer = ({ name, theme }) => (
+  <ReactJson
+    collapsed={1}
+    enableClipboard={false}
+    name={`theme.components.${name}`}
+    sortKeys
+    src={theme.components[name]}
+  />
+)
+
 const LiveProviderTrue = ({ children }) => {
   const code = `${children}`
 
@@ -154,6 +165,7 @@ const mdxComponents = {
   Table: Table,
   Text: Text,
   TextArea: TextArea,
+  Theme: withTheme(ThemeRenderer),
   ThemeProvider: ThemeProvider,
   Tooltip: Tooltip,
 }

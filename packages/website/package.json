@@ -23,6 +23,7 @@
     "gatsby-transformer-remark": "^2.6.34",
     "gatsby-transformer-sharp": "^2.2.7",
     "lodash": "^4.17.15",
+    "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -56,6 +57,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "devDependencies": {
+    "babel-plugin-prismjs": "^1.1.1",
+    "babel-preset-gatsby": "^0.2.22",
     "react-json-view": "^1.19.1"
   }
 }

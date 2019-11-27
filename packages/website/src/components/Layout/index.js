@@ -1,17 +1,15 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
 import { defaultTheme, ThemeProvider } from "atti-components"
 
 import Navigation from "../Navigation"
-import { BehindMenu, Content, PageLayout } from "./styles"
-import { Container } from "atti-components"
+import {
+  BehindMenu,
+  Content,
+  Footer,
+  MainContainer,
+  PageLayout,
+} from "./styles"
+import { Container, Text } from "atti-components"
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={defaultTheme}>
@@ -19,19 +17,17 @@ const Layout = ({ children }) => (
       <Navigation />
       <BehindMenu />
       <Content>
-        <Container as="main">{children}</Container>
-        <Container as="footer">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Container>
+        <MainContainer>{children}</MainContainer>
+        <Footer>
+          <Container>
+            <Text>Made with ❤ with Gatsby - Hosted on Netlify</Text>
+            <br />
+            <Text>© {new Date().getFullYear()} - MIT licensed</Text>
+          </Container>
+        </Footer>
       </Content>
     </PageLayout>
   </ThemeProvider>
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

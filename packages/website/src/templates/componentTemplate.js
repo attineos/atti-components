@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { defaultTheme, ThemeProvider, Header1 } from "atti-components"
+import { Header1 } from "atti-components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
-import mdxComponents from "../pagesComponents/componentPage/mdxComponents"
-import { PropsTable } from "../pagesComponents/componentPage"
+import mdxComponents from "../pagesComponents/ComponentPage/mdxComponents"
+import { PropsTable } from "../pagesComponents/ComponentPage"
 import Layout from "../components/Layout"
 
 export default function Template({ data }) {

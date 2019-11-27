@@ -5,6 +5,7 @@ const BehindMenu = styled("div")`
   ${({ theme }) => `
     @media only screen and (min-width: ${theme.breakpoints.tabletMin}) {
       width: ${theme.components.menu.menuMobile.menu.spaces.width};
+      min-width: ${theme.components.menu.menuMobile.menu.spaces.width};
     }
   `}
 `

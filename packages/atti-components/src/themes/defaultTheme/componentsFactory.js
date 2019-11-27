@@ -15,6 +15,7 @@ import inputTime from '../../components/InputTime/theme'
 import link from '../../components/Link/theme'
 import loader from '../../components/Loader/theme'
 import menu from '../../components/Menu/theme'
+import menuOld from '../../components/MenuOld/theme'
 import modal from '../../components/Modal/theme'
 import option from '../../components/Option/theme'
 import optionPanel from '../../components/OptionPanel/theme'
@@ -60,6 +61,7 @@ export default constants => ({
   link: link(constants),
   loader: loader(constants),
   menu: menu(constants),
+  menuOld: menuOld(constants),
   modal: modal(constants),
   option: option(constants),
   optionPanel: optionPanel(constants),

@@ -1,3 +1,6 @@
-import MenuContainer from './MenuContainer'
+import ItemsHolder from './ItemsHolder'
+import MenuHolder from './MenuHolder'
+import MenuMobile from './MenuMobile'
+import Nav from './Nav'
 
-export { MenuContainer }
+export { ItemsHolder, MenuHolder, MenuMobile, Nav }

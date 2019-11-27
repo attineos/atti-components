@@ -1,8 +1,9 @@
-import React from "react"
 import styled from "styled-components"
 
 const PageLayout = styled("div")`
-  display: flex;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopMin}) {
+    padding-left: ${({ theme }) => theme.components.menu.vertical.spaces.width};
+  }
 `
 
 export default PageLayout

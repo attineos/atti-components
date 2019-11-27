@@ -1,21 +1,13 @@
 import React from "react"
-import { defaultTheme, ThemeProvider } from "atti-components"
+import { Container, defaultTheme, Text, ThemeProvider } from "atti-components"
 
-import Navigation from "../Navigation"
-import {
-  BehindMenu,
-  Content,
-  Footer,
-  MainContainer,
-  PageLayout,
-} from "./styles"
-import { Container, Text } from "atti-components"
+import { Navbar } from "./components"
+import { Content, Footer, MainContainer, PageLayout } from "./styles"
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={defaultTheme}>
     <PageLayout>
-      <Navigation />
-      <BehindMenu />
+      <Navbar />
       <Content>
         <MainContainer>{children}</MainContainer>
         <Footer>

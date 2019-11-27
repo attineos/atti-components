@@ -21,6 +21,7 @@ import InputTime from './components/InputTime'
 import Link from './components/Link'
 import Loader from './components/Loader'
 import Menu from './components/Menu'
+import MenuOld from './components/MenuOld'
 import Modal from './components/Modal'
 import Option from './components/Option'
 import OptionPanel from './components/OptionPanel'
@@ -74,6 +75,7 @@ export {
   Link,
   Loader,
   Menu,
+  MenuOld,
   Modal,
   Option,
   OptionPanel,

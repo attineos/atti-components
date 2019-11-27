@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledMonthContainer renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="atti-box"
+  >
+    <div
+      className="StyledMonthContainer-sc-1a80ekh-0 blYvcn"
+    />
+  </span>
+</span>
+`;

@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 import { Container, Header2, Header4 } from "atti-components"
 

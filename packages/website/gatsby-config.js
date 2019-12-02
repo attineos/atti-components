@@ -3,8 +3,8 @@ const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `atti-components documentation`,
-    description: `The documentation of all the atti-components library`,
-    author: `@gatsbyjs`,
+    description: `The documentation of the atti-components library`,
+    author: `@attineos`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -44,7 +44,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../atti-components/src/components`,
+        path: `${__dirname}/../atti-components/src`,
         name: `components-pages`,
       },
     },
@@ -60,8 +60,5 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-react-docgen`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

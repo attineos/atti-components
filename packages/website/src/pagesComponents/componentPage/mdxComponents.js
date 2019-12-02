@@ -43,7 +43,9 @@ import {
   TextArea,
   ThemeProvider,
   Tooltip,
+  defaultTheme,
 } from "atti-components"
+
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 
 // TODO: improve
@@ -88,12 +90,18 @@ const scope = {
   ThemeProvider,
   Tooltip,
   css,
+  defaultTheme,
   reduce,
   styled,
   useState,
 }
 
 const Pre = ({ children }) => <div>{children}</div>
+const InlineCode = ({ children, language, ...props }) => (
+  <code className={`language-${language}`} {...props}>
+    {children}
+  </code>
+)
 
 const ThemeRenderer = ({ name, theme }) => (
   <ReactJson
@@ -131,6 +139,7 @@ const mdxComponents = {
   Cell: Cell,
   CheckBox: CheckBox,
   code: LiveProviderTrue,
+  Code: InlineCode,
   Container: Container,
   Grid: Grid,
   Header1: Header1,

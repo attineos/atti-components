@@ -6,6 +6,18 @@ const Item = Menu.Item
 
 const Navbar = () => (
   <Menu isResponsive isVertical>
+    <Item as={Link} to="/" activeClassName="active">
+      Homepage
+    </Item>
+    <Item as={Link} to="/get-started" activeClassName="active">
+      Get Started
+    </Item>
+    <Item as={Link} to="/colors" activeClassName="active">
+      Colors
+    </Item>
+    <Item as={Link} to="/themes" activeClassName="active">
+      Themes
+    </Item>
     <Item as={Link} to="/alert" activeClassName="active">
       Alert
     </Item>

@@ -6,13 +6,11 @@ import Container from 'components/Container'
 import { BurgerMenu, Item } from './components'
 import { ItemsHolder, MenuHolder, MenuMobile, Nav } from './styles'
 
-const Menu = props => {
-  const { children, isResponsive, isVertical } = props
-
-  const [opened, setOpened] = useState(false)
+const Menu = ({ children, isResponsive, isVertical }) => {
+  const [isOpened, setIsOpened] = useState(false)
 
   const updateOpened = () => {
-    setOpened(!opened)
+    setIsOpened(prevIsOpened => !prevIsOpened)
   }
 
   return (
@@ -20,11 +18,11 @@ const Menu = props => {
       {isResponsive && (
         <MenuMobile>
           <Container>
-            <BurgerMenu updateOpened={updateOpened} opened={opened} />
+            <BurgerMenu updateOpened={updateOpened} opened={isOpened} />
           </Container>
         </MenuMobile>
       )}
-      <MenuHolder isVertical={isVertical} isResponsive={isResponsive} opened={opened}>
+      <MenuHolder isVertical={isVertical} isResponsive={isResponsive} opened={isOpened}>
         <Container>
           <Nav>
             <ItemsHolder>{children}</ItemsHolder>
@@ -35,16 +33,25 @@ const Menu = props => {
   )
 }
 
-Menu.propTypes = {
-  children: PropTypes.any,
-  isResponsive: PropTypes.bool,
-  isVertical: PropTypes.bool,
-}
-
 Menu.defaultProps = {
   children: null,
   isResponsive: false,
   isVertical: false,
+}
+
+Menu.propTypes = {
+  /**
+   * Content of the Menu.
+   */
+  children: PropTypes.any,
+  /**
+   * Is the menu responsive or not.
+   */
+  isResponsive: PropTypes.bool,
+  /**
+   * Is the desktop menu vertical or not.
+   */
+  isVertical: PropTypes.bool,
 }
 
 Menu.Item = Item

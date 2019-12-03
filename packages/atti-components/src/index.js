@@ -7,6 +7,7 @@ import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
 import ButtonGroup from './components/ButtonGroup'
 import Cell from './components/Cell'
+import Collapsible from './components/Collapsible'
 import Container from './components/Container'
 import CheckBox from './components/CheckBox'
 import Grid from './components/Grid'
@@ -56,6 +57,7 @@ export {
   Button,
   ButtonGroup,
   Cell,
+  Collapsible,
   Container,
   CheckBox,
   Grid,

@@ -11,12 +11,12 @@ const Item = ({ children, ...rest }) => {
   )
 }
 
-Item.propTypes = {
-  children: PropTypes.any,
-}
-
 Item.defaultProps = {
   children: null,
+}
+
+Item.propTypes = {
+  children: PropTypes.any,
 }
 
 export default Item

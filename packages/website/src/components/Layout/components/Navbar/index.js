@@ -45,6 +45,9 @@ const Navbar = () => (
     <Item as={Link} to="/checkbox" activeClassName="active">
       CheckBox
     </Item>
+    <Item as={Link} to="/collapsible" activeClassName="active">
+      Collapsible
+    </Item>
     <Item as={Link} to="/container" activeClassName="active">
       Container
     </Item>

@@ -1,0 +1,27 @@
+---
+path: '/collapsible'
+name: 'Collapsible'
+title: 'Collapsible component'
+---
+
+```js
+const Content = styled('p')`
+  border: 1px solid black;
+  padding: 20px;
+`
+
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>Collapse</Button>
+      <Collapsible open={isOpen}>
+        <Content>Coucou</Content>
+      </Collapsible>
+    </>
+  )
+}
+
+render(<App />)
+```

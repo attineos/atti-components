@@ -6,7 +6,7 @@ import StyledCalendarContainer from '../styles/StyledCalendarContainer'
 
 const renderContainer = ({ className, cursorValue, handleCursorChange, children }) => (
   <StyledCalendarContainer className={className}>
-    <InputMonth value={cursorValue} onChange={handleCursorChange} />
+    <InputMonth value={cursorValue} onChange={handleCursorChange} withNextPrevButtons />
     {children}
   </StyledCalendarContainer>
 )

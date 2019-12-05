@@ -11,8 +11,6 @@ const StyledCalendarContainer = styled.div`
 
   min-width: ${({ theme }) => theme.components.inputCalendar.maxWidth};
 
-  box-shadow: ${({ theme }) => theme.components.inputCalendar.boxShadow};
-
   padding: 5px;
 `
 

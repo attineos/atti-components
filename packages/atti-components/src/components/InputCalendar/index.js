@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { noop, map } from 'lodash'
-import { isDate } from 'date-fns'
+import { isDate, getDate, setDate, getMonth, setMonth, getYear, setYear } from 'date-fns'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -42,9 +42,13 @@ const InputCalendar = ({
   }, [cursorValue])
 
   const handleOnChange = day => {
-    setStateValue(day)
-    setStateCursor(day)
-    onChange(day)
+    let newDate = setYear(stateValue, getYear(day))
+    newDate = setMonth(newDate, getMonth(day))
+    newDate = setDate(newDate, getDate(day))
+
+    setStateValue(newDate)
+    setStateCursor(newDate)
+    onChange(newDate)
   }
 
   const handleCursorChange = value => {

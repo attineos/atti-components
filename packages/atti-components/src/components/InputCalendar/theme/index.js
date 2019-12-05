@@ -1,6 +1,5 @@
 export default ({ spaces, colors }) => ({
   maxWidth: '400px',
-  boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 20px',
 
   colors: {
     notSameMonth: colors.grey,

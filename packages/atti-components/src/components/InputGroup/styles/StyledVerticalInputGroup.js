@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledVerticalInputGroup = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
 
   > * {

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledHorizontalInputGroup = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 
   > * {

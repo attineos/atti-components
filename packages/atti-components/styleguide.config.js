@@ -74,6 +74,7 @@ module.exports = {
         'src/components/CheckBox/index.js',
         'src/components/Input/index.js',
         'src/components/InputFile/index.js',
+        'src/components/InputMasked/index.js',
         'src/components/InputGroup/index.js',
         'src/components/InputMonth/index.js',
         'src/components/InputPopdown/index.js',

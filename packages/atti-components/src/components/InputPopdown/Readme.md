@@ -32,17 +32,3 @@ initialState = { date: new Date() }
   Input.
 </React.Fragment>
 ```
-
-```js
-initialState = { value: 50 }
-;<React.Fragment>
-  <InputPopdown enhancer={() => <ProgressBar value={state.value} />}>
-    <InputGroup>
-      <Button onClick={() => setState({ value: state.value + 1 })}>More</Button>
-      <Input onChange={value => setState({ value })} value={state.value} />
-      <Button onClick={() => setState({ value: state.value - 1 })}>Less</Button>
-    </InputGroup>
-  </InputPopdown>
-  Here we enhance the stardard input with a loader and More/Less buttons for more sexyness !
-</React.Fragment>
-```

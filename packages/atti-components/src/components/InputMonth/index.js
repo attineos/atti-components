@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { setMonth, setYear, isDate } from 'date-fns'
+import { setMonth, setYear, isDate, addMonths } from 'date-fns'
 import { noop } from 'lodash'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -9,6 +9,7 @@ import renderContainer from './helpers/renderContainer'
 import renderCurrentMonth from './helpers/renderCurrentMonth'
 import renderCurrentYear from './helpers/renderCurrentYear'
 import chainedRender from '../../helpers/generators/chainedRender'
+import renderControlButton from './helpers/renderControlButton'
 
 const InputMonth = ({
   className,
@@ -17,8 +18,10 @@ const InputMonth = ({
   value,
   onChange,
   yearRange,
+  withNextPrevButtons = false,
 
   containerRender,
+  controlButtonRender,
   monthRender,
   yearRender,
 }) => {
@@ -31,10 +34,14 @@ const InputMonth = ({
     }
   }, [value])
 
-  const handleOnChange = (value, mutator) => {
+  const handleMutatorOnChange = (value, mutator) => {
     const newDate = mutator(stateValue, value)
     setStateValue(newDate)
     onChange(newDate)
+  }
+  const handleOnChange = value => {
+    setStateValue(value)
+    onChange(value)
   }
 
   return chainedRender(
@@ -42,12 +49,20 @@ const InputMonth = ({
     containerRender,
     className,
     <React.Fragment>
+      {withNextPrevButtons &&
+        chainedRender(renderControlButton, controlButtonRender, stateValue, 'prev', () =>
+          handleOnChange(addMonths(stateValue, -1)),
+        )}
       {chainedRender(renderCurrentMonth, monthRender, stateValue, getMonthNames(), val =>
-        handleOnChange(val, setMonth),
+        handleMutatorOnChange(val, setMonth),
       )}
       {chainedRender(renderCurrentYear, yearRender, stateValue, yearRange, val =>
-        handleOnChange(val, setYear),
+        handleMutatorOnChange(val, setYear),
       )}
+      {withNextPrevButtons &&
+        chainedRender(renderControlButton, controlButtonRender, stateValue, 'next', () =>
+          handleOnChange(addMonths(stateValue, 1)),
+        )}
     </React.Fragment>,
   )
 }

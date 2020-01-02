@@ -1,5 +1,5 @@
 import React from "react"
-import HomePage from "../pagesComponents/HomePage"
+import HomePage from "@pagesComponents/HomePage"
 
 const IndexPage = () => <HomePage />
 

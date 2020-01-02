@@ -1,12 +1,14 @@
 ---
 path: '/cell'
 name: 'Cell'
-title: 'Cell component'
+title: 'Cell'
 ---
 
-Cells can change layout based on viewport size.
+Cells work together with the Grid component. They allow you to change layout based on viewport size.
 
 Cells are mobile first so if you don't specify sizes for each breakpoint, it will be infered from previous one.
+
+## Example
 
 ```js
 <Grid>
@@ -18,9 +20,13 @@ Cells are mobile first so if you don't specify sizes for each breakpoint, it wil
       //xlDesktop is infered from previous one
     ]}
   >
-    Cells on one line
+    <Text>Cells on one line</Text>
   </Cell>
-  <Cell cols={[[1, 7], [1, 7], [5, 9]]}>Then goes to new line</Cell>
-  <Cell cols={[[1, 7], [1, 7], [9, 13]]}>on mobile and tablets</Cell>
+  <Cell cols={[[1, 7], [1, 7], [5, 9]]}>
+    <Text>Then goes to new line</Text>
+  </Cell>
+  <Cell cols={[[1, 7], [1, 7], [9, 13]]}>
+    <Text>on mobile and tablets</Text>
+  </Cell>
 </Grid>
 ```

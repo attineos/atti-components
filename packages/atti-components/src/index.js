@@ -22,10 +22,7 @@ import InputTime from './components/InputTime'
 import Link from './components/Link'
 import Loader from './components/Loader'
 import Menu from './components/Menu'
-import MenuOld from './components/MenuOld'
 import Modal from './components/Modal'
-import Option from './components/Option'
-import OptionPanel from './components/OptionPanel'
 import ProgressBar from './components/ProgressBar'
 import Radio from './components/Radio'
 import Select from './components/Select'
@@ -77,10 +74,7 @@ export {
   Link,
   Loader,
   Menu,
-  MenuOld,
   Modal,
-  Option,
-  OptionPanel,
   ProgressBar,
   Radio,
   Select,

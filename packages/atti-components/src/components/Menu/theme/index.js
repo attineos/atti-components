@@ -38,21 +38,21 @@ export default ({ colors, fonts, spaces }) => ({
   vertical: {
     spaces: {
       width: spaces.s16,
-      padding: `${spaces.s4} 0`,
+      padding: `${spaces.s2} 0`,
     },
     item: {
       spaces: {
-        padding: `${spaces.s0_75} ${spaces.s3}`,
+        padding: `${spaces.s0_75} ${spaces.s2} ${spaces.s0_75} ${spaces.s3}`,
       },
     },
   },
   responsive: {
     colors: {
-      background: colors.neutral,
+      background: colors.primary,
     },
     item: {
       colors: {
-        backgroundHover: colors.lightNeutral,
+        backgroundHover: colors.lightPrimary,
       },
     },
   },

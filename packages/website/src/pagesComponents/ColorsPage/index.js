@@ -1,12 +1,13 @@
 import React from "react"
-import { Header1, Text } from "atti-components"
+import { withTheme } from "styled-components"
+
+import { Header1, Text } from "@components/global"
+import SEO from "@components/seo"
 
 import { Square, SquareContainer } from "./styles"
-import Layout from "../../components/Layout"
-import SEO from "../../components/seo"
 
-const ColorsPage = () => (
-  <Layout>
+const ColorsPage = ({ theme }) => (
+  <>
     <SEO title="Colors" />
     <Header1>Colors</Header1>
     <Text>
@@ -17,27 +18,27 @@ const ColorsPage = () => (
       <Square background="lighterPrimary" color="black">
         lighterPrimary
         <br />
-        #BEF8FD
+        {theme.colors.lighterPrimary}
       </Square>
       <Square background="lightPrimary" color="white">
         lightPrimary
         <br />
-        #54D1DB
+        {theme.colors.lightPrimary}
       </Square>
       <Square background="primary" color="white">
         primary
         <br />
-        #2CB1BC
+        {theme.colors.primary}
       </Square>
       <Square background="darkPrimary" color="white">
         darkPrimary
         <br />
-        #0E7C86
+        {theme.colors.darkPrimary}
       </Square>
       <Square background="darkerPrimary" color="white">
         darkerPrimary
         <br />
-        #044E54
+        {theme.colors.darkerPrimary}
       </Square>
     </SquareContainer>
 
@@ -45,27 +46,27 @@ const ColorsPage = () => (
       <Square background="lighterNeutral" color="black">
         lighterNeutral
         <br />
-        #D9E2EC
+        {theme.colors.lighterNeutral}
       </Square>
       <Square background="lightNeutral" color="white">
         lightNeutral
         <br />
-        #9FB3C8
+        {theme.colors.lightNeutral}
       </Square>
       <Square background="neutral" color="white">
         neutral
         <br />
-        #627D98
+        {theme.colors.neutral}
       </Square>
       <Square background="darkNeutral" color="white">
         darkNeutral
         <br />
-        #334E68
+        {theme.colors.darkNeutral}
       </Square>
       <Square background="darkerNeutral" color="white">
         darkerNeutral
         <br />
-        #102A43
+        {theme.colors.darkerNeutral}
       </Square>
     </SquareContainer>
 
@@ -73,17 +74,17 @@ const ColorsPage = () => (
       <Square background="supportLightInfo" color="black">
         supportLightInfo
         <br />
-        #C1FEF6
+        {theme.colors.supportLightInfo}
       </Square>
       <Square background="supportInfo" color="white">
         supportInfo
         <br />
-        #3AE7E1
+        {theme.colors.supportInfo}
       </Square>
       <Square background="supportDarkInfo" color="white">
         supportDarkInfo
         <br />
-        #099AA4
+        {theme.colors.supportDarkInfo}
       </Square>
     </SquareContainer>
 
@@ -91,17 +92,17 @@ const ColorsPage = () => (
       <Square background="supportLightSuccess" color="black">
         supportLightSuccess
         <br />
-        #C6F7E2
+        {theme.colors.supportLightSuccess}
       </Square>
       <Square background="supportSuccess" color="white">
         supportSuccess
         <br />
-        #3EBD93
+        {theme.colors.supportSuccess}
       </Square>
       <Square background="supportDarkSuccess" color="white">
         supportDarkSuccess
         <br />
-        #147D64
+        {theme.colors.supportDarkSuccess}
       </Square>
     </SquareContainer>
 
@@ -109,17 +110,17 @@ const ColorsPage = () => (
       <Square background="supportLightWarning" color="black">
         supportLightWarning
         <br />
-        #FFF3C4
+        {theme.colors.supportLightWarning}
       </Square>
       <Square background="supportWarning" color="white">
         supportWarning
         <br />
-        #F7C948
+        {theme.colors.supportWarning}
       </Square>
       <Square background="supportDarkWarning" color="white">
         supportDarkWarning
         <br />
-        #CB6E17
+        {theme.colors.supportDarkWarning}
       </Square>
     </SquareContainer>
 
@@ -127,17 +128,17 @@ const ColorsPage = () => (
       <Square background="supportLightDanger" color="black">
         supportLightDanger
         <br />
-        #FFD0B5
+        {theme.colors.supportLightDanger}
       </Square>
       <Square background="supportDanger" color="white">
         supportDanger
         <br />
-        #F9703E
+        {theme.colors.supportDanger}
       </Square>
       <Square background="supportDarkDanger" color="white">
         supportDarkDanger
         <br />
-        #C52707
+        {theme.colors.supportDarkDanger}
       </Square>
     </SquareContainer>
 
@@ -145,17 +146,17 @@ const ColorsPage = () => (
       <Square background="lighterBlack" color="white">
         lighterBlack
         <br />
-        #515151
+        {theme.colors.lighterBlack}
       </Square>
       <Square background="lightBlack" color="white">
         lightBlack
         <br />
-        #3B3B3B
+        {theme.colors.lightBlack}
       </Square>
       <Square background="black" color="white">
         black
         <br />
-        #222222
+        {theme.colors.black}
       </Square>
     </SquareContainer>
 
@@ -163,17 +164,17 @@ const ColorsPage = () => (
       <Square background="white" color="black">
         white
         <br />
-        #FFFFFF
+        {theme.colors.white}
       </Square>
       <Square background="darkWhite" color="black">
         darkWhite
         <br />
-        #F7F7F7
+        {theme.colors.darkWhite}
       </Square>
       <Square background="darkerWhite" color="black">
         darkerWhite
         <br />
-        #E1E1E1
+        {theme.colors.darkerWhite}
       </Square>
     </SquareContainer>
 
@@ -181,27 +182,27 @@ const ColorsPage = () => (
       <Square background="lighterGrey" color="white">
         lighterGrey
         <br />
-        #CFCFCF
+        {theme.colors.lighterGrey}
       </Square>
       <Square background="lightGrey" color="white">
         lightGrey
         <br />
-        #B1B1B1
+        {theme.colors.lightGrey}
       </Square>
       <Square background="grey" color="white">
         grey
         <br />
-        #9E9E9E
+        {theme.colors.grey}
       </Square>
       <Square background="darkGrey" color="white">
         darkGrey
         <br />
-        #7E7E7E
+        {theme.colors.darkGrey}
       </Square>
       <Square background="darkerGrey" color="white">
         darkerGrey
         <br />
-        #626262
+        {theme.colors.darkerGrey}
       </Square>
     </SquareContainer>
 
@@ -209,10 +210,10 @@ const ColorsPage = () => (
       <Square background="transparent" color="black">
         transparent
         <br />
-        transparent
+        {theme.colors.transparent}
       </Square>
     </SquareContainer>
-  </Layout>
+  </>
 )
 
-export default ColorsPage
+export default withTheme(ColorsPage)

@@ -7,9 +7,8 @@ import StyledLink from './styles/StyledLink'
 /**
  * A link to an action or another resource.
  */
-const Link = ({ children, className, href, onClick, target, ...rest }) => (
+const Link = ({ children, href, onClick, target, ...rest }) => (
   <StyledLink
-    className={className}
     href={href}
     onClick={onClick}
     target={target}
@@ -21,7 +20,6 @@ const Link = ({ children, className, href, onClick, target, ...rest }) => (
 )
 
 Link.defaultProps = {
-  className: '',
   onClick: null,
   target: null,
 }
@@ -31,10 +29,6 @@ Link.propTypes = {
    * Text of the link.
    */
   children: PropTypes.string.isRequired,
-  /**
-   * The classes used on the component.
-   */
-  className: PropTypes.string,
   /**
    * The location of the external resource.
    */

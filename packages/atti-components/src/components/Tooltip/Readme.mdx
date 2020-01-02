@@ -1,14 +1,18 @@
 ---
 path: '/tooltip'
 name: 'Tooltip'
-title: 'Tooltip component'
+title: 'Tooltip'
 ---
+
+Displays some info text when you're hovering a component.
+
+## Examples
 
 Basic example. The Tooltip's default position is 'top'.
 
 ```js
 <Tooltip message="Atti-Components rocks !">
-  <Text style={{ cursor: 'pointer', textDecoration: 'underline' }}>Hover me</Text>
+  <Text>Hover me</Text>
 </Tooltip>
 ```
 
@@ -23,7 +27,7 @@ as follow.
     </Text>
   }
 >
-  <Text style={{ cursor: 'pointer', textDecoration: 'underline' }}>Hover me</Text>
+  <Text>Hover me</Text>
 </Tooltip>
 ```
 
@@ -45,7 +49,7 @@ const Example = () => {
       </div>
       <div style={{ textAlign: 'center', flexGrow: '1' }}>
         <Tooltip position={position} message="Atti-Components rocks !">
-          <Text style={{ cursor: 'pointer', textDecoration: 'underline' }}>Hover me</Text>
+          <Text>Hover me</Text>
         </Tooltip>
       </div>
     </div>
@@ -60,7 +64,7 @@ You can use the tooltip around an inline or a block element.
 ```js
 <Tooltip message="Atti-Components rocks !">
   <div>
-    <Text style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+    <Text>
       This is a very long text inside a block element. Its purpose is to show that a tooltip can be
       placed around a block element as well. This is a very long text inside a block element. Its
       purpose is to show that a tooltip can be placed around a block element as well. This is a very
@@ -68,7 +72,7 @@ You can use the tooltip around an inline or a block element.
       block element as well.
     </Text>
     <br />
-    <Text style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+    <Text>
       This is a very long text inside a block element. Its purpose is to show that a tooltip can be
       placed around a block element as well. This is a very long text inside a block element. Its
       purpose is to show that a tooltip can be placed around a block element as well. This is a very
@@ -81,4 +85,4 @@ You can use the tooltip around an inline or a block element.
 
 ## Theme
 
-<Theme name="tooltip" />
+<Theme name="components.tooltip" />

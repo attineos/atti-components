@@ -1,24 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Header1 } from "atti-components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
-import mdxComponents from "../pagesComponents/ComponentPage/mdxComponents"
-import { PropsTable } from "../pagesComponents/ComponentPage"
-import Layout from "../components/Layout"
+
+import { mdxComponents, PropsTable } from "@pagesComponents/ComponentPage"
+import { Header1 } from "@components/global"
 
 export default function Template({ data }) {
   const { componentMetadata, mdx } = data
   const { frontmatter, body } = mdx
 
   return (
-    <Layout>
-      <Header1 mb="s2">{frontmatter.title}</Header1>
-      {componentMetadata && <PropsTable data={componentMetadata.props} />}
+    <>
+      <Header1>{frontmatter.title}</Header1>
       <MDXProvider components={mdxComponents}>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
-    </Layout>
+      {componentMetadata && <PropsTable data={componentMetadata.props} />}
+    </>
   )
 }
 export const pageQuery = graphql`

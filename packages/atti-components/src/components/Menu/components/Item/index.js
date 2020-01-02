@@ -1,22 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import { ItemLink, Li } from './styles'
+const Item = styled.a`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.components.menu.item.colors.text};
+  padding: ${({ theme }) => theme.components.menu.item.spaces.padding};
+  font-family: ${({ theme }) => theme.components.menu.item.fonts.fontFamily};
+  font-size: ${({ theme }) => theme.components.menu.item.fonts.fontSize};
+  font-weight: ${({ theme }) => theme.components.menu.item.fonts.fontWeight};
+  line-height: ${({ theme }) => theme.components.menu.item.fonts.lineHeight};
+  text-decoration: none;
+  transition: background-color ${({ theme }) => theme.animations.duration.d4} ease-in-out;
 
-const Item = ({ children, ...rest }) => {
-  return (
-    <Li>
-      <ItemLink {...rest}>{children}</ItemLink>
-    </Li>
-  )
-}
-
-Item.defaultProps = {
-  children: null,
-}
-
-Item.propTypes = {
-  children: PropTypes.any,
-}
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: ${({ theme }) => theme.components.menu.item.colors.backgroundHover};
+  }
+`
 
 export default Item

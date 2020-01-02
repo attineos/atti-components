@@ -8,13 +8,12 @@ import StyledImage from './styles/StyledImage'
  * A simple image, nothing special for the moment.
  *
  */
-const Image = ({ alt, className, height, src, width }) => (
-  <StyledImage alt={alt} className={className} height={height} src={src} width={width} />
+const Image = ({ alt, height, src, width, ...rest }) => (
+  <StyledImage alt={alt} height={height} src={src} width={width} {...rest} />
 )
 
 Image.defaultProps = {
   alt: '',
-  className: '',
   height: null,
   width: null,
 }
@@ -24,10 +23,6 @@ Image.propTypes = {
    * An alternative text if the image is not displayed.
    */
   alt: PropTypes.string,
-  /**
-   * Classes of the Image.
-   */
-  className: PropTypes.string,
   /**
    * The height of the image. You can give a reference to the theme (e.g h10) or a heigth in px or in %
    * If you don't give a height, the height of the theme will be used.

@@ -25,6 +25,8 @@ module.exports = {
             __dirname,
             "../atti-components/dist/esm/index.js"
           ),
+          "@components": path.resolve(__dirname, "src/components"),
+          "@pagesComponents": path.resolve(__dirname, "src/pagesComponents"),
         },
       },
     },
@@ -46,6 +48,12 @@ module.exports = {
       options: {
         path: `${__dirname}/../atti-components/src`,
         name: `components-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout/index.js`),
       },
     },
     {

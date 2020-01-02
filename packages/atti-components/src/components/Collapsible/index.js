@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import CollapsibleContainer from './styles/CollapsibleContainer'
 
-const Collapsible = ({ children, open }) => {
+const Collapsible = ({ children, open, ...rest }) => {
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -13,7 +13,11 @@ const Collapsible = ({ children, open }) => {
       : (containerElem.style.maxHeight = null)
   }, [open])
 
-  return <CollapsibleContainer ref={containerRef}>{children}</CollapsibleContainer>
+  return (
+    <CollapsibleContainer {...rest} ref={containerRef}>
+      {children}
+    </CollapsibleContainer>
+  )
 }
 
 Collapsible.defaultProps = {

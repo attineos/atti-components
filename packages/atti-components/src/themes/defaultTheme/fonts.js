@@ -10,6 +10,7 @@ const fonts = {
     secondary: fontFamilySecondary,
   },
   fontSize: {
+    fs10: '10px',
     fs12: '12px',
     fs14: '14px',
     fs16: '16px',

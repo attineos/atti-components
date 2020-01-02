@@ -15,7 +15,7 @@ import {
  * A Modal.
  *
  */
-const Modal = ({ children, className, isOpened, onClose, title }) => {
+const Modal = ({ children, isOpened, onClose, title, ...rest }) => {
   const [opened, setOpened] = useState(isOpened)
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Modal = ({ children, className, isOpened, onClose, title }) => {
 
   return (
     opened && (
-      <ModalBackground className={className} onClick={closeModal}>
+      <ModalBackground onClick={closeModal} {...rest}>
         <ModalContainer onClick={e => e.stopPropagation()}>
           <TitleContainer>
             <Header3>{title}</Header3>
@@ -49,7 +49,6 @@ const Modal = ({ children, className, isOpened, onClose, title }) => {
 
 Modal.defaultProps = {
   children: '',
-  className: '',
   isOpened: false,
   onClose: null,
 }
@@ -59,10 +58,6 @@ Modal.propTypes = {
    * The content of the Modal.
    */
   children: PropTypes.any,
-  /**
-   * The classes of the Modal.
-   */
-  className: PropTypes.string,
   /**
    * Is the modal opened or not.
    */

@@ -1,10 +1,12 @@
 ---
 path: '/breadcrumb'
 name: 'Breadcrumb'
-title: 'Breadcrumb component'
+title: 'Breadcrumb'
 ---
 
-### Basic usage:
+Breadcrumbs are usually used to navigate across categories and also to help the user to understand where he is.
+
+## Examples
 
 ```js
 <Breadcrumb
@@ -46,8 +48,6 @@ render(
 )
 ```
 
-### Custom rendering:
-
 The default rendering function expect each element to have at least a name as a string.
 You can also provide an url to generate a link around this element.
 
@@ -55,18 +55,20 @@ You can provide your own rendering function as element.render. You can also pass
 These functions will be called from most specific to least specific (ie: element, then global, then default). It'll stop at the first function that return a valid JSX component.
 
 ```js
-const Red = styled('div')`
-  display: initial;
+const Red = styled(Link)`
   color: red;
 `
-const Green = styled('div')`
-  display: initial;
+const Green = styled(Link)`
   color: green;
 `
 render(
   <Breadcrumb
     elements={[
-      { name: 'Ultra Custom render', someProps: 15, render: element => <Red>{element.name}</Red> },
+      {
+        name: 'Ultra Custom render',
+        someProps: 15,
+        render: element => <Red href="#">{element.name}</Red>,
+      },
       { name: 'Global Breadcrumb Custom renderer', someProps: 10 },
       { name: 'Default Renderer with an url', url: '#' },
       { name: 'Default Renderer without an url' },
@@ -76,7 +78,7 @@ render(
       // Let's render, only when some prop is equals to 10
       // We return nothing (or null) so that it falls back to the default renderer
       if (element.someProps === 10) {
-        return <Green>{element.name}</Green>
+        return <Green href="#">{element.name}</Green>
       }
     }}
   />,
@@ -85,4 +87,4 @@ render(
 
 ## Theme
 
-<Theme name="breadcrumb" />
+<Theme name="components.breadcrumb" />

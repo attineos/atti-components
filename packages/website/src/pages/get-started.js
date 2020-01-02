@@ -1,5 +1,5 @@
 import React from "react"
-import GetStartedPage from "../pagesComponents/GetStartedPage"
+import GetStartedPage from "@pagesComponents/GetStartedPage"
 
 const GetStarted = () => <GetStartedPage />
 

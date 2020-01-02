@@ -1,11 +1,15 @@
 ---
 path: '/collapsible'
 name: 'Collapsible'
-title: 'Collapsible component'
+title: 'Collapsible'
 ---
 
+Collapsible allows you to display / hide its children with a smooth animation.
+
+## Example
+
 ```js
-const Content = styled('p')`
+const Content = styled(Text)`
   border: 1px solid black;
   padding: 20px;
 `
@@ -17,7 +21,7 @@ const App = () => {
     <>
       <Button onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>Collapse</Button>
       <Collapsible open={isOpen}>
-        <Content>Coucou</Content>
+        <Content>Now you see me.</Content>
       </Collapsible>
     </>
   )

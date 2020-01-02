@@ -30,7 +30,7 @@ const sizes = css`
   height: ${({ size, theme }) => theme.components.avatar.sizes[size].size};
 `
 
-const StyledAvatar = styled('div').attrs(resetCSS)`
+const StyledAvatar = styled('p').attrs(resetCSS)`
   display: flex;
   align-items: center;
   justify-content: center;

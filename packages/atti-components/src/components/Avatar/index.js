@@ -9,34 +9,21 @@ import StyledAvatar from './styles/StyledAvatar'
  * Avatar component
  *
  */
-const Avatar = ({ as, bgColor, bgSrc, children, className, size, title }) => (
-  <StyledAvatar
-    as={as || children ? 'p' : 'div'}
-    bgColor={bgColor}
-    bgSrc={bgSrc}
-    className={className}
-    size={size}
-    title={title}
-  >
+const Avatar = ({ bgColor, bgSrc, children, size, title, ...rest }) => (
+  <StyledAvatar bgColor={bgColor} bgSrc={bgSrc} size={size} title={title} {...rest}>
     {children}
   </StyledAvatar>
 )
 
 Avatar.defaultProps = {
-  as: '',
   bgColor: '',
   bgSrc: '',
   children: '',
-  className: '',
   size: 'medium',
   title: '',
 }
 
 Avatar.propTypes = {
-  /**
-   * The rendered DOM element.
-   */
-  as: PropTypes.oneOf([PropTypes.Element, PropTypes.string]),
   /**
    * The background color of the Avatar. Can be a color value or a color's name from the theme.
    */
@@ -50,10 +37,6 @@ Avatar.propTypes = {
    */
   children: PropTypes.string,
   /**
-   * The classes of the Avatar.
-   */
-  className: PropTypes.string,
-  /**
    * Defines the size of the component.
    */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
@@ -64,4 +47,4 @@ Avatar.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Avatar))``
+export default styled(Avatar)``

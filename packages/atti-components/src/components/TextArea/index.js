@@ -8,7 +8,7 @@ import StyledTextArea from './styles/StyledTextArea'
  * A textarea.
  *
  */
-const TextArea = ({ className, id, name, onChange, placeholder, value, ...rest }) => {
+const TextArea = ({ id, name, onChange, placeholder, value, ...rest }) => {
   const onChangeValue = e => {
     onChange && onChange(e.target.value)
   }
@@ -20,7 +20,6 @@ const TextArea = ({ className, id, name, onChange, placeholder, value, ...rest }
 
   return (
     <StyledTextArea
-      className={className}
       id={id}
       placeholder={placeholder}
       name={name}
@@ -32,7 +31,6 @@ const TextArea = ({ className, id, name, onChange, placeholder, value, ...rest }
 }
 
 TextArea.defaultProps = {
-  className: '',
   id: '',
   onChange: null,
   placeholder: '',
@@ -40,10 +38,6 @@ TextArea.defaultProps = {
 }
 
 TextArea.propTypes = {
-  /**
-   * The classes of the Textarea.
-   */
-  className: PropTypes.string,
   /**
    * The id of the Textarea, which binds the Textarea with the label.
    */

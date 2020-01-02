@@ -1,57 +1,15 @@
 ---
 path: '/select'
 name: 'Select'
-title: 'Select component'
+title: 'Select'
 ---
 
-Select :
+Allows you to select one or more options from a list.
+
+## Examples
 
 ```js
 <Select id="single" options={['< 1 year', 'Between 1 and 3 years', '> 3 years']} />
-```
-
-Select with alphabetical sort :
-
-```js
-const Example = () => {
-  const [value, setValue] = useState('')
-
-  return (
-    <div>
-      <div> Selected value sorted : {value}</div>
-      <Select
-        sort="ASC"
-        id="single"
-        onChange={e => setValue(e.target.value)}
-        options={['allo', 'coco', 'bobo']}
-      />
-    </div>
-  )
-}
-
-render(<Example />)
-```
-
-Select with alphabetical sort (desc.) :
-
-```js
-const Example = () => {
-  const [value, setValue] = useState('')
-
-  return (
-    <div>
-      <div> Selected value sorted : {value}</div>
-      <Select
-        sort="DESC"
-        id="single"
-        onChange={e => setValue(e.target.value)}
-        options={['allo', 'coco', 'bobo']}
-      />
-    </div>
-  )
-}
-
-render(<Example />)
 ```
 
 Select multiple :
@@ -78,13 +36,15 @@ const Example = () => {
 
   return (
     <div>
-      <div> Selected values : {values} (press ctrl to select multiple values)</div>
-      <Select
-        id="multiple"
-        onChange={onChangeMultipleValue}
-        options={['value 1', 'value 2', 'value 3', 'value4', 'value5']}
-        isMulti
-      />
+      <Label>
+        Selected values : {values} (press ctrl to select multiple values)
+        <Select
+          id="multiple"
+          onChange={onChangeMultipleValue}
+          options={['value 1', 'value 2', 'value 3', 'value4', 'value5']}
+          isMulti
+        />
+      </Label>
     </div>
   )
 }
@@ -94,4 +54,4 @@ render(<Example />)
 
 ## Theme
 
-<Theme name="select" />
+<Theme name="components.select" />

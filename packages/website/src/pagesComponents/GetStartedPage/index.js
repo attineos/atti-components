@@ -1,9 +1,9 @@
 import React, { useEffect } from "react"
-import { Header1, Header2, Link, Text } from "atti-components"
+import { Link } from "atti-components"
 import Prism from "prismjs"
 
-import Layout from "../../components/Layout"
-import SEO from "../../components/seo"
+import { Header1, Header2, Pre, Text } from "@components/global"
+import SEO from "@components/seo"
 
 const GetStartedPage = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const GetStartedPage = () => {
   const installDeps = `npm install react react-dom styled-components`
 
   return (
-    <Layout>
+    <>
       <SEO title="Get started" />
       <Header1>Get started</Header1>
       <Text>
@@ -28,9 +28,9 @@ const GetStartedPage = () => {
         <code className="language-shell">react-dom</code> and{" "}
         <code className="language-shell">styled-components</code> :
       </Text>
-      <pre>
+      <Pre>
         <code className="language-shell">{installDeps}</code>
-      </pre>
+      </Pre>
       <Text>
         Then atti-components is available as a{" "}
         <Link
@@ -41,9 +41,9 @@ const GetStartedPage = () => {
         </Link>{" "}
         :
       </Text>
-      <pre>
+      <Pre>
         <code className="language-shell">npm install atti-components</code>
-      </pre>
+      </Pre>
 
       <Header2>Usage</Header2>
       <Text>
@@ -58,7 +58,7 @@ const GetStartedPage = () => {
       <Text>
         So the root of your application should look like something like this:
       </Text>
-      <pre>
+      <Pre>
         <code className="language-jsx">{`import { defaultTheme, Button, ThemeProvider } from 'atti-components'
 
 const App = () => (
@@ -66,7 +66,7 @@ const App = () => (
     <Button>Click me</Button>
   </ThemeProvider>
 )`}</code>
-      </pre>
+      </Pre>
 
       <Header2>Theme</Header2>
       <Text>
@@ -79,7 +79,7 @@ const App = () => (
         value of our theme or give a second theme to the ThemeProvider with just
         the values that you want to override :
       </Text>
-      <pre>
+      <Pre>
         <code className="language-jsx">{`import { Button, ThemeProvider, defaultTheme } from 'atti-components'
 
 const customTheme = {
@@ -100,7 +100,7 @@ const App = () => (
     <Button>Click me</Button> // This button will have #FAFAFA background and blue text
   </ThemeProvider>
 )`}</code>
-      </pre>
+      </Pre>
 
       <Header2>Fonts</Header2>
       <Text>
@@ -109,9 +109,9 @@ const App = () => (
         conflicts, you should include it by yourself. For example you can add
         the following in one of your CSS files:
       </Text>
-      <pre>
+      <Pre>
         <code className="language-javascript">{`@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');`}</code>
-      </pre>
+      </Pre>
 
       <Text>
         If you don't want to use Roboto as your default font, you can simply
@@ -129,7 +129,7 @@ const App = () => (
         property but this one is not used so far. That said, it doesn't prevent
         you from overriding its value and using it.
       </Text>
-    </Layout>
+    </>
   )
 }
 

@@ -21,12 +21,29 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-  result.data.allMdx.edges.forEach(({ node }, index) => {
-    createPage({
-      path: node.frontmatter.path || `/blog/${index}`,
-      name: node.frontmatter.name,
-      component: componentTemplate,
-      context: { name: node.frontmatter.name }, // additional data can be passed via context
-    })
+  result.data.allMdx.edges.forEach(({ node }) => {
+    node.frontmatter &&
+      node.frontmatter.path &&
+      createPage({
+        path: node.frontmatter.path,
+        name: node.frontmatter.name,
+        component: componentTemplate,
+        context: { name: node.frontmatter.name }, // additional data can be passed via context
+      })
   })
+}
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-json-view/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
 }

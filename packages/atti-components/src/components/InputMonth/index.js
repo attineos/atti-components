@@ -19,6 +19,7 @@ const InputMonth = ({
   onChange,
   yearRange,
   withNextPrevButtons = false,
+  locale,
 
   containerRender,
   controlButtonRender,
@@ -53,7 +54,7 @@ const InputMonth = ({
         chainedRender(renderControlButton, controlButtonRender, stateValue, 'prev', () =>
           handleOnChange(addMonths(stateValue, -1)),
         )}
-      {chainedRender(renderCurrentMonth, monthRender, stateValue, getMonthNames(), val =>
+      {chainedRender(renderCurrentMonth, monthRender, stateValue, getMonthNames(locale), val =>
         handleMutatorOnChange(val, setMonth),
       )}
       {chainedRender(renderCurrentYear, yearRender, stateValue, yearRange, val =>
@@ -73,11 +74,13 @@ InputMonth.defaultProps = {
   defaultValue: new Date(),
   value: null,
   onChange: noop,
-  yearRange: [1950, 2100],
+  yearRange: [2000, 2040],
 
   containerRender: null,
   monthRender: null,
   yearRender: null,
+
+  locale: null,
 }
 
 InputMonth.propTypes = {
@@ -94,6 +97,8 @@ InputMonth.propTypes = {
   containerRender: PropTypes.func,
   monthRender: PropTypes.func,
   yearRender: PropTypes.func,
+
+  locale: PropTypes.any,
 }
 
 /** @component */

@@ -1,14 +1,14 @@
 /* eslint-env browser, node */
-import { memoize, get } from 'lodash'
+import { startCase } from 'lodash'
 import { format } from 'date-fns'
 
-const getMonthNames = () => {
+const getMonthNames = (locale = undefined) => {
   const monthNames = []
 
   for (let i = 0; i < 12; i++) {
     monthNames.push({
       id: i,
-      name: format(new Date(2019, i, 1), 'MMM'),
+      name: startCase(format(new Date(2019, i, 1), 'MMMM', { locale: locale })),
     })
   }
 
@@ -17,7 +17,4 @@ const getMonthNames = () => {
 
 // Memoize result, avoid recreating a new array each time, avoid causing useless react rerender,
 // Can you feel such performance !
-export default memoize(
-  getMonthNames,
-  () => `attiCompoGetMonthNames-${get(window, '__localeId__', 'default')}`,
-)
+export default getMonthNames

@@ -12,6 +12,10 @@ import renderDefaultContainer from './helpers/renderContainer'
 import renderDefaultDay from './helpers/renderDay'
 import renderDefaultWeek from './helpers/renderWeek'
 
+import StyledCalendarContainer from './styles/StyledCalendarContainer'
+import StyledDay from './styles/StyledDay'
+import StyledWeek from './styles/StyledWeek'
+
 const InputCalendar = ({
   className,
 
@@ -19,6 +23,9 @@ const InputCalendar = ({
   value,
   onChange,
   cursorValue,
+
+  yearRange,
+  locale,
 
   renderContainer,
   renderDay,
@@ -64,6 +71,8 @@ const InputCalendar = ({
     handleCursorChange,
     value: stateValue,
     handleOnChange,
+    yearRange,
+    locale,
     children: (
       <React.Fragment>
         {map(daysPerWeek, week =>
@@ -107,6 +116,8 @@ InputCalendar.defaultProps = {
   renderContainer: null,
   renderDay: null,
   renderWeek: null,
+
+  locale: null,
 }
 
 InputCalendar.propTypes = {
@@ -120,10 +131,18 @@ InputCalendar.propTypes = {
   cursorValue: PropTypes.instanceOf(Date),
   onChange: PropTypes.func,
 
+  yearRange: PropTypes.arrayOf(PropTypes.number),
+
   renderContainer: PropTypes.func,
   renderDay: PropTypes.func,
   renderWeek: PropTypes.func,
+
+  locale: PropTypes.any,
 }
+
+InputCalendar.StyledCalendarContainer = StyledCalendarContainer
+InputCalendar.StyledDay = StyledDay
+InputCalendar.StyledWeek = StyledWeek
 
 /** @component */
 export default styled(React.memo(InputCalendar))``

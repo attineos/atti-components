@@ -1,70 +1,73 @@
-// @noSnapshot
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import Ellipse from './styles/StyledEllipse'
-import Rectangle from './styles/StyledRectangle'
+import SwitchBox from './styles/SwitchBox'
+import SwitchBoxContainer from './styles/SwitchBoxContainer'
+import HiddenInputSwitch from './styles/HiddenInputSwitch'
 
 /**
- * A Simple Switch.
+ * A checkbox button.
+ *
  */
-const Switch = ({ children, className, disabled, onClick, switches, variance }) => {
+const Switch = ({ checked: propsChecked, className, id, name, onChange, value }) => {
+  const [checked, setChecked] = useState(propsChecked)
+
+  const handleToggleChecked = () => {
+    setChecked(!checked)
+    onChange && onChange()
+  }
+
   return (
-    <Rectangle className={className} disabled={disabled} variance={variance}>
-      <Ellipse
-        className={className}
-        disabled={disabled}
-        switches={switches}
-        onClick={onClick}
-        variance={variance}
-      >
-        {children}
-      </Ellipse>
-    </Rectangle>
+    <SwitchBoxContainer className={className}>
+      <HiddenInputSwitch
+        id={id}
+        checked={checked}
+        name={name}
+        onChange={handleToggleChecked}
+        type="checkbox"
+        value={value}
+      />
+      <SwitchBox />
+    </SwitchBoxContainer>
   )
 }
 
 Switch.defaultProps = {
-  children: '',
+  checked: false,
   className: '',
-  disabled: false,
-  onClick: null,
-  switches: false,
-  variance: 'primary',
+  onChange: null,
 }
 
 Switch.propTypes = {
   /**
-   * Content of the component. Only text for now.
+   * Whether or not the checkbox is checked.
    */
-  children: PropTypes.string,
-
+  checked: PropTypes.bool,
   /**
-   * Classes of the Button.
+   * Classes of the CheckBox.
    */
   className: PropTypes.string,
-
   /**
-   * Is the Button disabled or not.
+   * The id of the current element.
    */
-  disabled: PropTypes.bool,
-
+  id: PropTypes.string.isRequired,
   /**
-   * This function is called when the user clicks on the Button.
+   * The name attribute is used to reference form data after a form is submitted.
+   * Numerous checkbox with the same name value will be in the same group.
    */
-  onClick: PropTypes.func,
-
+  name: PropTypes.string.isRequired,
   /**
-   * The type to pass to the underlying button html element
+   * Gets called when the value of the checkbox changes.
+   *
+   * @param {SyntheticEvent} event The react `SyntheticEvent`
    */
-  switches: PropTypes.bool,
-
+  onChange: PropTypes.func,
   /**
-   * The type of variation to display
+   * The value attribute of the checkbox. This attribute has meaning when submitting a form.
    */
-  variance: PropTypes.oneOf(['primary', 'dark']),
+  value: PropTypes.string.isRequired,
 }
 
 /** @component */
-export default styled(React.memo(Switch))``
+export default styled(Switch)``

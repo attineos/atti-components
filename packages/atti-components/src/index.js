@@ -26,9 +26,9 @@ import OptionPanel from './components/OptionPanel'
 import ProgressBar from './components/ProgressBar'
 import Radio from './components/Radio'
 import Select from './components/Select'
-import Switch from './components/Switch'
 import Table from './components/Table'
 import TextArea from './components/TextArea'
+import Toggle from './components/Toggle'
 import Tooltip from './components/Tooltip'
 
 import {
@@ -79,11 +79,11 @@ export {
   ProgressBar,
   Radio,
   Select,
-  Switch,
   SmallText,
   Table,
   Text,
   TextArea,
+  Toggle,
   Tooltip,
   Typography,
   defaultTheme,

@@ -81,8 +81,8 @@ module.exports = {
         'src/components/InputCalendar/index.js',
         'src/components/Radio/index.js',
         'src/components/Select/index.js',
-        'src/components/Switch/index.js',
         'src/components/TextArea/index.js',
+        'src/components/Toggle/index.js',
       ],
     },
     {

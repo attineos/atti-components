@@ -2,15 +2,14 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import SwitchBox from './styles/SwitchBox'
-import SwitchBoxContainer from './styles/SwitchBoxContainer'
-import HiddenInputSwitch from './styles/HiddenInputSwitch'
+import ToggleBox from './styles/ToggleBox'
+import ToggleBoxContainer from './styles/ToggleBoxContainer'
+import HiddenInputToggle from './styles/HiddenInputToggle'
 
 /**
  * A checkbox button.
- *
  */
-const Switch = ({ checked: propsChecked, className, id, name, onChange, value }) => {
+const Toggle = ({ checked: propsChecked, className, id, name, onChange, value }) => {
   const [checked, setChecked] = useState(propsChecked)
 
   const handleToggleChecked = () => {
@@ -19,8 +18,8 @@ const Switch = ({ checked: propsChecked, className, id, name, onChange, value })
   }
 
   return (
-    <SwitchBoxContainer className={className}>
-      <HiddenInputSwitch
+    <ToggleBoxContainer className={className}>
+      <HiddenInputToggle
         id={id}
         checked={checked}
         name={name}
@@ -28,18 +27,18 @@ const Switch = ({ checked: propsChecked, className, id, name, onChange, value })
         type="checkbox"
         value={value}
       />
-      <SwitchBox />
-    </SwitchBoxContainer>
+      <ToggleBox />
+    </ToggleBoxContainer>
   )
 }
 
-Switch.defaultProps = {
+Toggle.defaultProps = {
   checked: false,
   className: '',
   onChange: null,
 }
 
-Switch.propTypes = {
+Toggle.propTypes = {
   /**
    * Whether or not the checkbox is checked.
    */
@@ -70,4 +69,4 @@ Switch.propTypes = {
 }
 
 /** @component */
-export default styled(Switch)``
+export default styled(Toggle)``

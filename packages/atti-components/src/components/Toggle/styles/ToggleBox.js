@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 
+import getSpacesAsCss from 'helpers/generators/getSpacesAsCSS'
+
 const ToggleBox = styled.span`
   position: absolute;
 
-  width: ${({ theme }) => theme.components.toggle.sizes.widthEllipse};
-  height: ${({ theme }) => theme.components.toggle.sizes.height};
+  margin: ${({ sized, theme }) => getSpacesAsCss(theme.components.toggle.sizes[sized].spaces)};
+
+  width: ${({ sized, theme }) => theme.components.toggle.sizes[sized].widthEllipse};
+  height: ${({ sized, theme }) => theme.components.toggle.sizes[sized].heightEllipse};
 
   background: ${({ variant, theme }) => theme.components.toggle.colors[variant].backgroundEllipse};
-  border-radius: ${({ theme }) => theme.components.toggle.sizes.borderRadius};
+  border-radius: ${({ sized, theme }) => theme.components.toggle.sizes[sized].borderRadius};
   left: ${({ position, theme }) => theme.components.toggle.sizes[position].initial};
 `
-/*
-fais commencer le curseur à gauche 
-left:25px
-*/
+
 export default ToggleBox

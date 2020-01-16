@@ -13,6 +13,7 @@ Toggle :
         value="ImChecked"
         variant="neutral"
         position="reverse"
+        sized="little"
       />
     </div>
     <div style={{ marginLeft: '400px' }}>
@@ -21,11 +22,17 @@ Toggle :
         name="toggleTestGroup"
         value="ImChecked"
         variant="disabled"
-        display="false"
+        click="false"
       />
     </div>
     <div style={{ marginLeft: '600px' }}>
-      <Toggle id="toggleTest4" name="toggleTestGroup" value="ImChecked" variant="on_off" />
+      <Toggle
+        id="toggleTest4"
+        name="toggleTestGroup"
+        value="ImChecked"
+        variant="on_off"
+        sized="medium"
+      />
     </div>
   </div>
 </div>

@@ -19,10 +19,42 @@ export default ({ colors, spaces }) => ({
     },
   },
   sizes: {
-    height: spaces.s2,
-    widthRectangle: spaces.s4,
-    widthEllipse: spaces.s2,
-    borderRadius: spaces.s3,
+    // toggle size
+    little: {
+      heightRectangle: spaces.s1,
+      heightEllipse: spaces.s2,
+      widthRectangle: spaces.s4,
+      widthEllipse: spaces.s2,
+      borderRadius: spaces.s3,
+
+      spaces: {
+        top: '-7px',
+        bottom: 0,
+        left: 0,
+        right: 0,
+      },
+      margintop: spaces.s0_75,
+    },
+    medium: {
+      heightRectangle: spaces.s2,
+      heightEllipse: spaces.s1_5,
+      widthRectangle: spaces.s4,
+      widthEllipse: spaces.s1_5,
+      borderRadius: spaces.s3,
+      spaces: {
+        top: spaces.s0_25,
+        bottom: spaces.s0_25,
+        left: spaces.s0_25,
+        right: spaces.s0_5,
+      },
+    },
+    large: {
+      heightRectangle: spaces.s2,
+      heightEllipse: spaces.s2,
+      widthRectangle: spaces.s4,
+      widthEllipse: spaces.s2,
+      borderRadius: spaces.s3,
+    },
 
     // Position: left or right
     default: {
@@ -42,5 +74,11 @@ export default ({ colors, spaces }) => ({
     false: {
       display: 'none',
     },
+  },
+  spaces: {
+    top: spaces.s0_25,
+    bottom: spaces.s0_25,
+    left: spaces.s0_25,
+    right: spaces.s0_5,
   },
 })

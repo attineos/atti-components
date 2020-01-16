@@ -18,7 +18,8 @@ const Toggle = ({
   value,
   variant,
   position,
-  display,
+  click,
+  sized,
 }) => {
   const [checked, setChecked] = useState(propsChecked)
 
@@ -32,7 +33,8 @@ const Toggle = ({
       className={className}
       variant={variant}
       position={position}
-      display={display}
+      click={click}
+      sized={sized}
     >
       <HiddenInputToggle
         id={id}
@@ -41,8 +43,9 @@ const Toggle = ({
         onChange={handleToggleChecked}
         type="checkbox"
         value={value}
+        sized={sized}
       />
-      <ToggleBox variant={variant} position={position} />
+      <ToggleBox variant={variant} position={position} sized={sized} />
     </ToggleBoxContainer>
   )
 }
@@ -53,7 +56,8 @@ Toggle.defaultProps = {
   onChange: null,
   variant: 'primary',
   position: 'default',
-  display: true,
+  click: true,
+  sized: 'large',
 }
 
 Toggle.propTypes = {
@@ -95,7 +99,15 @@ Toggle.propTypes = {
    */
   position: PropTypes.oneOf(['default', 'reverse']),
 
-  display: PropTypes.bool,
+  /**
+   * Click possible or not
+   */
+  click: PropTypes.bool,
+
+  /**
+   * The type of size to display
+   */
+  sized: PropTypes.oneOf(['little', 'medium', 'large']),
 }
 
 /** @component */

@@ -9,8 +9,8 @@ const HiddenInputToggle = styled.input`
   margin: 0;
   z-index: 2;
 
-  width: ${({ theme }) => theme.components.toggle.sizes.widthRectangle};
-  height: ${({ theme }) => theme.components.toggle.sizes.height};
+  width: ${({ sized, theme }) => theme.components.toggle.sizes[sized].widthRectangle};
+  height: ${({ sized, theme }) => theme.components.toggle.sizes[sized].heightRectangle};
 
   cursor: pointer;
 `

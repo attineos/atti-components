@@ -88,7 +88,7 @@ Toggle.propTypes = {
   /**
    * The type of variation to display
    */
-  variance: PropTypes.oneOf(['primary', 'neutral', 'disabled']),
+  variant: PropTypes.oneOf(['primary', 'neutral', 'disabled', 'on_off']),
 
   /**
    * The type of position to display

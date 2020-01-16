@@ -9,7 +9,17 @@ import HiddenInputToggle from './styles/HiddenInputToggle'
 /**
  * A checkbox button.
  */
-const Toggle = ({ checked: propsChecked, className, id, name, onChange, value }) => {
+const Toggle = ({
+  checked: propsChecked,
+  className,
+  id,
+  name,
+  onChange,
+  value,
+  variant,
+  position,
+  display,
+}) => {
   const [checked, setChecked] = useState(propsChecked)
 
   const handleToggleChecked = () => {
@@ -18,7 +28,12 @@ const Toggle = ({ checked: propsChecked, className, id, name, onChange, value })
   }
 
   return (
-    <ToggleBoxContainer className={className}>
+    <ToggleBoxContainer
+      className={className}
+      variant={variant}
+      position={position}
+      display={display}
+    >
       <HiddenInputToggle
         id={id}
         checked={checked}
@@ -27,7 +42,7 @@ const Toggle = ({ checked: propsChecked, className, id, name, onChange, value })
         type="checkbox"
         value={value}
       />
-      <ToggleBox />
+      <ToggleBox variant={variant} position={position} />
     </ToggleBoxContainer>
   )
 }
@@ -36,6 +51,9 @@ Toggle.defaultProps = {
   checked: false,
   className: '',
   onChange: null,
+  variant: 'primary',
+  position: 'default',
+  display: true,
 }
 
 Toggle.propTypes = {
@@ -66,6 +84,18 @@ Toggle.propTypes = {
    * The value attribute of the checkbox. This attribute has meaning when submitting a form.
    */
   value: PropTypes.string.isRequired,
+
+  /**
+   * The type of variation to display
+   */
+  variance: PropTypes.oneOf(['primary', 'neutral', 'disabled']),
+
+  /**
+   * The type of position to display
+   */
+  position: PropTypes.oneOf(['default', 'reverse']),
+
+  display: PropTypes.bool,
 }
 
 /** @component */

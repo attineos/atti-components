@@ -8,21 +8,29 @@ const ToggleBoxContainer = styled.span`
 
   width: ${({ theme }) => theme.components.toggle.sizes.widthRectangle};
   height: ${({ theme }) => theme.components.toggle.sizes.height};
-  background: ${({ theme }) => theme.components.toggle.colors.backgroundRectangle};
+
+  background: ${({ variant, theme }) =>
+    theme.components.toggle.colors[variant].backgroundRectangle};
   border-radius: ${({ theme }) => theme.components.toggle.sizes.borderRadius};
 
   ${HiddenInputToggle}:checked + ${ToggleBox} {
-    background: ${({ theme }) => theme.components.toggle.colors.backgroundEllipse};
-    left: ${({ theme }) => theme.components.toggle.sizes.left};
+    left: ${({ position, theme }) => theme.components.toggle.sizes[position].changePos};
+
     &:after {
       display: inline-block;
       visibility: visible;
     }
   }
 
-  &:hover ${ToggleBox} {
-    background: ${({ theme }) => theme.components.toggle.colors.backgroundEllipse};
+  ${HiddenInputToggle} {
+    display: ${({ display, theme }) => theme.components.toggle.display[display].display};
   }
 `
 
+/*
+Désactive le clique
+${HiddenInputToggle}{
+  display : none;   
+}
+*/
 export default ToggleBoxContainer

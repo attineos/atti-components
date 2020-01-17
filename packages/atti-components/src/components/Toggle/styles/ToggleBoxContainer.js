@@ -11,8 +11,10 @@ const ToggleBoxContainer = styled.span`
 
   margin-top: ${({ sized, theme }) => theme.components.toggle.sizes[sized].margintop};
 
-  background: ${({ variant, theme }) =>
-    theme.components.toggle.colors[variant].backgroundRectangle};
+  background-color: ${({ variant, checked, theme }) =>
+    checked
+      ? theme.components.toggle.colors[variant].backgroundRectangleAfter
+      : theme.components.toggle.colors[variant].backgroundRectangle};
   border-radius: ${({ sized, theme }) => theme.components.toggle.sizes[sized].borderRadius};
 
   @keyframes slideRight {
@@ -23,11 +25,12 @@ const ToggleBoxContainer = styled.span`
     from {left: ${({ theme }) => theme.components.toggle.sizes.left};}
     to {left: 0px;}
   }
-
+  
   ${HiddenInputToggle}:checked + ${ToggleBox} {
     
     animation-name: slideRight;
-    animation-duration: 0.75s;
+    animation-duration: 75ms;
+    animation-timing-function: ease-in;
     left: ${({ theme }) => theme.components.toggle.sizes.left};
 
     &:after {
@@ -39,15 +42,14 @@ const ToggleBoxContainer = styled.span`
 
   ${HiddenInputToggle} + ${ToggleBox}{
     animation-name: slideLeft;
-    animation-duration: 0.75s;
+    animation-duration: 75ms;
+    animation-timing-function: ease-in;
     left: 0px;
   }
 
   ${HiddenInputToggle} {
     display: ${({ click, theme }) => theme.components.toggle.display[click].display};
-    
   }
-  
   
   
 `
@@ -57,6 +59,6 @@ ${HiddenInputToggle}:checked + ${ToggleBox} {
     background: green;
     
   }
-  */
+*/
 
 export default ToggleBoxContainer

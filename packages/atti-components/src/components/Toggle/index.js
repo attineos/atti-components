@@ -28,7 +28,13 @@ const Toggle = ({
   }
 
   return (
-    <ToggleBoxContainer className={className} variant={variant} click={click} sized={sized}>
+    <ToggleBoxContainer
+      className={className}
+      variant={variant}
+      click={click}
+      sized={sized}
+      checked={checked}
+    >
       <HiddenInputToggle
         id={id}
         checked={checked}

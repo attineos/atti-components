@@ -3,19 +3,22 @@ export default ({ colors, spaces }) => ({
     primary: {
       backgroundEllipse: colors.darkPrimary,
       backgroundRectangle: colors.lightPrimary,
+      backgroundRectangleAfter: colors.lightPrimary,
     },
     neutral: {
       backgroundEllipse: colors.darkNeutral,
       backgroundRectangle: colors.lightNeutral,
+      backgroundRectangleAfter: colors.lightNeutral,
     },
     disabled: {
       backgroundEllipse: colors.white,
       backgroundRectangle: colors.darkGrey,
+      backgroundRectangleAfter: colors.darkGrey,
     },
     on_off: {
       backgroundEllipse: colors.white,
-      backgroundRectangle: colors.supportWarning,
-      backgroundRectangleAfter: colors.supportSucess,
+      backgroundRectangle: colors.supportDanger,
+      backgroundRectangleAfter: colors.supportSuccess,
     },
   },
   sizes: {

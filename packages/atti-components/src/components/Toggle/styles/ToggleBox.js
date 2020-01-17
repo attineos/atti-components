@@ -12,7 +12,7 @@ const ToggleBox = styled.span`
 
   background: ${({ variant, theme }) => theme.components.toggle.colors[variant].backgroundEllipse};
   border-radius: ${({ sized, theme }) => theme.components.toggle.sizes[sized].borderRadius};
-  left: ${({ position, theme }) => theme.components.toggle.sizes[position].initial};
+  left: 0px;
 `
 
 export default ToggleBox

@@ -55,16 +55,7 @@ export default ({ colors, spaces }) => ({
       widthEllipse: spaces.s2,
       borderRadius: spaces.s3,
     },
-
-    // Position: left or right
-    default: {
-      initial: 0,
-      changePos: spaces.s2,
-    },
-    reverse: {
-      initial: spaces.s2,
-      changePos: 0,
-    },
+    left: spaces.s2,
   },
   // Click activated or disable
   display: {

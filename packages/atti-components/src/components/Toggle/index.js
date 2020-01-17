@@ -17,7 +17,6 @@ const Toggle = ({
   onChange,
   value,
   variant,
-  position,
   click,
   sized,
 }) => {
@@ -29,13 +28,7 @@ const Toggle = ({
   }
 
   return (
-    <ToggleBoxContainer
-      className={className}
-      variant={variant}
-      position={position}
-      click={click}
-      sized={sized}
-    >
+    <ToggleBoxContainer className={className} variant={variant} click={click} sized={sized}>
       <HiddenInputToggle
         id={id}
         checked={checked}
@@ -45,7 +38,7 @@ const Toggle = ({
         value={value}
         sized={sized}
       />
-      <ToggleBox variant={variant} position={position} sized={sized} />
+      <ToggleBox variant={variant} sized={sized} />
     </ToggleBoxContainer>
   )
 }
@@ -55,7 +48,6 @@ Toggle.defaultProps = {
   className: '',
   onChange: null,
   variant: 'primary',
-  position: 'default',
   click: true,
   sized: 'large',
 }
@@ -93,11 +85,6 @@ Toggle.propTypes = {
    * The type of variation to display
    */
   variant: PropTypes.oneOf(['primary', 'neutral', 'disabled', 'on_off']),
-
-  /**
-   * The type of position to display
-   */
-  position: PropTypes.oneOf(['default', 'reverse']),
 
   /**
    * Click possible or not

@@ -15,20 +15,20 @@ const ToggleBoxContainer = styled.span`
     theme.components.toggle.colors[variant].backgroundRectangle};
   border-radius: ${({ sized, theme }) => theme.components.toggle.sizes[sized].borderRadius};
 
-  @keyframes example1 {
+  @keyframes slideRight {
     from {left: 0px;}
-    to {left: ${({ position, theme }) => theme.components.toggle.sizes[position].changePos};}
+    to {left: ${({ theme }) => theme.components.toggle.sizes.left};}
   }
-  @keyframes example2 {
-    from {left: ${({ position, theme }) => theme.components.toggle.sizes[position].changePos};}
+  @keyframes slideLeft {
+    from {left: ${({ theme }) => theme.components.toggle.sizes.left};}
     to {left: 0px;}
   }
 
   ${HiddenInputToggle}:checked + ${ToggleBox} {
     
-    animation-name: example1;
-    animation-duration: 2s;
-    left: ${({ position, theme }) => theme.components.toggle.sizes[position].changePos};
+    animation-name: slideRight;
+    animation-duration: 0.75s;
+    left: ${({ theme }) => theme.components.toggle.sizes.left};
 
     &:after {
       display: inline-block;
@@ -38,14 +38,16 @@ const ToggleBoxContainer = styled.span`
 
 
   ${HiddenInputToggle} + ${ToggleBox}{
-    animation-name: example2;
-    animation-duration: 2s;
+    animation-name: slideLeft;
+    animation-duration: 0.75s;
+    left: 0px;
   }
 
   ${HiddenInputToggle} {
     display: ${({ click, theme }) => theme.components.toggle.display[click].display};
     
   }
+  
 `
 
 export default ToggleBoxContainer

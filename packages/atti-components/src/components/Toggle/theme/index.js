@@ -9,17 +9,16 @@ export default ({ colors, spaces }) => ({
       backgroundRectangle: colors.lightNeutral,
     },
     disabled: {
-      backgroundEllipse: colors.darkerWhite,
-      backgroundRectangle: colors.grey,
+      backgroundEllipse: colors.white,
+      backgroundRectangle: colors.darkGrey,
     },
     on_off: {
-      backgroundEllipse: colors.darkerWhite,
-      backgroundRectangle: colors.supportDanger,
+      backgroundEllipse: colors.white,
+      backgroundRectangle: colors.supportWarning,
       backgroundRectangleAfter: colors.supportSucess,
     },
   },
   sizes: {
-    // toggle size
     little: {
       heightRectangle: spaces.s1,
       heightEllipse: spaces.s2,
@@ -28,7 +27,7 @@ export default ({ colors, spaces }) => ({
       borderRadius: spaces.s3,
 
       spaces: {
-        top: '-7px',
+        top: '-8px',
         bottom: 0,
         left: 0,
         right: 0,

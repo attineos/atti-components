@@ -48,6 +48,15 @@ const ToggleBoxContainer = styled.span`
     
   }
   
+  
+  
 `
+/* 
+permet de modifier la cooleur de l'ellipse en fonction du click 
+${HiddenInputToggle}:checked + ${ToggleBox} {
+    background: green;
+    
+  }
+  */
 
 export default ToggleBoxContainer

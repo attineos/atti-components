@@ -8,7 +8,7 @@ export default ({ colors, spaces }) => ({
   colors: {
     background: colors.transparent,
     fill: colors.lightPrimary,
-    text: colors.darkerGrey,
+    text: colors.black,
   },
 
   sizes: {

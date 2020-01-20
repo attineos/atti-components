@@ -1,7 +1,6 @@
 export default ({ borders, colors, spaces }) => ({
   borders: {
     borderWidth: borders.widths.bw1,
-    borderRadius: borders.radius.large,
   },
   colors: {
     background: colors.white,
@@ -13,8 +12,13 @@ export default ({ borders, colors, spaces }) => ({
     headerText: colors.grey,
   },
   spaces: {
-    headerHeight: spaces.s2,
-    lineHeight: spaces.s2,
     firstChildLeftSpacing: spaces.s2,
+    cell: {
+      padding: spaces.s0_75,
+      paddingBottom: spaces.s1_5,
+    },
+    header: {
+      padding: spaces.s0_75,
+    },
   },
 })

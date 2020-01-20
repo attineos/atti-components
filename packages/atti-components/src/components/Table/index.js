@@ -59,7 +59,6 @@ const Table = ({ cols, elements, ...props }) => {
 }
 
 Table.defaultProps = {
-  className: '',
   isDetailsLineHoverable: false,
   isLineHoverable: false,
   onLineClick: null,
@@ -73,10 +72,6 @@ Table.defaultProps = {
 }
 
 Table.propTypes = {
-  /**
-   * Classes of the Button.
-   */
-  className: PropTypes.string,
   /**
    * The cols to use as header for the table
    */

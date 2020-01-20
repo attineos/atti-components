@@ -7,8 +7,8 @@ const StyledButtonGroup = styled.div`
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 
-    border-right: ${({ theme }) => theme.components.inputGroup.borders.borderWidth} solid
-      ${({ theme }) => theme.components.inputGroup.colors.border};
+    border-right: ${({ theme }) => theme.components.buttonGroup.borders.borderWidth} solid
+      ${({ theme }) => theme.components.buttonGroup.colors.border};
   }
 
   > ${Button}:last-child {
@@ -19,8 +19,8 @@ const StyledButtonGroup = styled.div`
   > ${Button}:not(:first-child):not(:last-child) {
     border-radius: 0;
 
-    border-right: ${({ theme }) => theme.components.inputGroup.borders.borderWidth} solid
-      ${({ theme }) => theme.components.inputGroup.colors.border};
+    border-right: ${({ theme }) => theme.components.buttonGroup.borders.borderWidth} solid
+      ${({ theme }) => theme.components.buttonGroup.colors.border};
   }
 `
 

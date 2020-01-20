@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -10,19 +10,16 @@ import RadioContainer from './styles/RadioContainer'
  * A radio button.
  *
  */
-const Radio = ({ checked: propsChecked, className, id, name, onChange, value }) => {
-  const [checked, setChecked] = useState(propsChecked)
-
-  const handleToggleChecked = () => {
-    setChecked(!checked)
-    onChange && onChange()
+const Radio = ({ checked, id, name, onChange, value, ...rest }) => {
+  const handleToggleChecked = event => {
+    onChange && onChange(event)
   }
 
   return (
-    <RadioContainer className={className}>
+    <RadioContainer {...rest}>
       <HiddenInputRadio
         id={id}
-        checked={checked}
+        checked={checked === value}
         name={name}
         onChange={handleToggleChecked}
         type="radio"
@@ -35,19 +32,14 @@ const Radio = ({ checked: propsChecked, className, id, name, onChange, value }) 
 
 Radio.defaultProps = {
   checked: false,
-  className: '',
   onChange: null,
 }
 
 Radio.propTypes = {
   /**
-   * Whether or not the radio is checked.
+   * Should equals the value if you want it to be checked.
    */
-  checked: PropTypes.bool,
-  /**
-   * The classes of the Radio element.
-   */
-  className: PropTypes.string,
+  checked: PropTypes.string,
   /**
    * The id of the current element.
    */

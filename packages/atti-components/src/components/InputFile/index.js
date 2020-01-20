@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 import { StyledContainer, StyledFilePicker, StyledInput } from './styles'
 
-const InputFile = ({ className, name, onChange, placeholder, variance }) => {
+const InputFile = ({ name, onChange, placeholder, variance, ...rest }) => {
   const input = useRef(null)
   const [file, setFile] = useState(null)
 
@@ -27,7 +27,7 @@ const InputFile = ({ className, name, onChange, placeholder, variance }) => {
   const allowDrop = e => e.preventDefault()
 
   return (
-    <StyledContainer className={className}>
+    <StyledContainer {...rest}>
       <StyledInput name={name} type="file" ref={input} onChange={onChangeFile} />
       <StyledFilePicker
         onClick={browseFile}
@@ -42,17 +42,12 @@ const InputFile = ({ className, name, onChange, placeholder, variance }) => {
 }
 
 InputFile.defaultProps = {
-  className: '',
   name: '',
   placeholder: '',
   variance: 'normal',
 }
 
 InputFile.propTypes = {
-  /**
-   *
-   */
-  className: PropTypes.string,
   /**
    * The name of the input file.
    */

@@ -10,18 +10,16 @@ import { Text } from '../Typographies'
  *
  */
 const ProgressBar = ({
-  className,
   fillingOrientation,
   fillingSpeed,
-
   start,
   end,
   step,
   value,
-
   label,
   leftLabel,
   rightLabel,
+  ...rest
 }) => {
   const roundToStep = (value, step) => Math.round(value / step) * step
 
@@ -32,12 +30,12 @@ const ProgressBar = ({
 
   return (
     <StyledProgressBar
-      className={className}
       end={end}
       fillingOrientation={fillingOrientation}
       fillingSpeed={fillingSpeed}
       percent={percent}
       start={start}
+      {...rest}
     >
       <Text>{leftLabel}</Text>
       <Text>{stepLabel}</Text>
@@ -47,7 +45,6 @@ const ProgressBar = ({
 }
 
 ProgressBar.defaultProps = {
-  className: '',
   end: 100,
   fillingOrientation: 'left',
   fillingSpeed: 100,
@@ -60,11 +57,6 @@ ProgressBar.defaultProps = {
 }
 
 ProgressBar.propTypes = {
-  /**
-   * End of the progressbar.
-   */
-  className: PropTypes.string,
-
   /**
    * End of the progressbar.
    */

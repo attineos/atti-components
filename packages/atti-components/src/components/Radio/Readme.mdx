@@ -1,0 +1,51 @@
+---
+path: '/radio'
+name: 'Radio'
+title: 'Radio'
+---
+
+Allows you to select a value from a set.
+
+## Example
+
+```js
+const Example = () => {
+  const [value, setValue] = useState('radioTest')
+
+  const handleChange = event => {
+    setValue(event.target.value)
+  }
+
+  return (
+    <div>
+      <Label htmlFor="radioTest">
+        <Radio
+          id="radioTest"
+          value="radioTest"
+          name="radioTestGroup"
+          onChange={handleChange}
+          checked={value}
+        />
+        Some option
+      </Label>
+      <br />
+      <Label htmlFor="radioTest2">
+        <Radio
+          id="radioTest2"
+          value="radioTest2"
+          name="radioTestGroup"
+          onChange={handleChange}
+          checked={value}
+        />
+        Some other option
+      </Label>
+    </div>
+  )
+}
+
+render(<Example />)
+```
+
+## Theme
+
+<Theme name="components.radio" />

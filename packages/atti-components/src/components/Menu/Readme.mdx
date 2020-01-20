@@ -1,0 +1,45 @@
+---
+path: '/menu'
+name: 'Menu'
+title: 'Menu'
+---
+
+Menu is a navigation bar. It can be responsive and has 2 different displays
+
+## Examples
+
+By default the menu is horizontal.
+
+```js
+<Menu>
+  <Menu.Item href="/">Index page</Menu.Item>
+  <Menu.Item href="/menu">Menu page</Menu.Item>
+  <Menu.Item href="https://www.w3.org" target="_blank">
+    W3C
+  </Menu.Item>
+  <Menu.Item href="https://github.com/attineos/atti-component" target="_blank">
+    Our Github Page
+  </Menu.Item>
+</Menu>
+```
+
+But it can also be vertical if you pass an `isVertical` prop to `<Menu>`.
+
+You can also make it responsive.
+
+```js
+<Menu isResponsive>
+  <Menu.Item href="/">Index page</Menu.Item>
+  <Menu.Item href="/menu">Menu page</Menu.Item>
+  <Menu.Item href="https://www.w3.org" target="_blank">
+    W3C
+  </Menu.Item>
+  <Menu.Item href="https://github.com/attineos/atti-component" target="_blank">
+    Our Github Page
+  </Menu.Item>
+</Menu>
+```
+
+## Theme
+
+<Theme name="components.menu" />

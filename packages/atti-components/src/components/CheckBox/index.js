@@ -10,7 +10,7 @@ import HiddenInputCheckBox from './styles/HiddenInputCheckBox'
  * A checkbox button.
  *
  */
-const CheckBox = ({ checked: propsChecked, className, id, name, onChange, value }) => {
+const CheckBox = ({ checked: propsChecked, id, name, onChange, value, ...rest }) => {
   const [checked, setChecked] = useState(propsChecked)
 
   const handleToggleChecked = () => {
@@ -19,7 +19,7 @@ const CheckBox = ({ checked: propsChecked, className, id, name, onChange, value 
   }
 
   return (
-    <CheckBoxBoxContainer className={className}>
+    <CheckBoxBoxContainer {...rest}>
       <HiddenInputCheckBox
         id={id}
         checked={checked}
@@ -35,7 +35,6 @@ const CheckBox = ({ checked: propsChecked, className, id, name, onChange, value 
 
 CheckBox.defaultProps = {
   checked: false,
-  className: '',
   onChange: null,
 }
 
@@ -44,10 +43,6 @@ CheckBox.propTypes = {
    * Whether or not the checkbox is checked.
    */
   checked: PropTypes.bool,
-  /**
-   * Classes of the CheckBox.
-   */
-  className: PropTypes.string,
   /**
    * The id of the current element.
    */

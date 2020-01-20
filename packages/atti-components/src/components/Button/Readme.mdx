@@ -1,0 +1,38 @@
+---
+path: '/button'
+name: 'Button'
+title: 'Button'
+---
+
+Buttons are used to take actions.
+
+## Examples
+
+```js
+<div>
+  <div style={{ marginBottom: '24px' }}>
+    <Button onClick={() => console.log('Hello !')} variance="primary">
+      Primary
+    </Button>
+    <Button onClick={() => console.log('Hello !')} variance="neutral">
+      Neutral
+    </Button>
+    <Button disabled onClick={() => console.log('Hello !')}>
+      Normal
+    </Button>
+  </div>
+
+  <div style={{ backgroundColor: 'lightcoral', padding: '24px' }}>
+    <Button onClick={() => console.log('Hello !')} variance="light">
+      Light
+    </Button>
+    <Button onClick={() => console.log('Hello !')} variance="dark">
+      Dark
+    </Button>
+  </div>
+</div>
+```
+
+## Theme
+
+<Theme name="components.button" />

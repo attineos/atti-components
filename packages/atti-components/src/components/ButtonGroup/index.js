@@ -3,23 +3,16 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import { StyledButtonGroup } from './styles'
+
 /**
  * A Simple Button.
  *
  */
-const ButtonGroup = ({ className, children }) => (
-  <StyledButtonGroup className={className}>{children}</StyledButtonGroup>
+const ButtonGroup = ({ children, ...rest }) => (
+  <StyledButtonGroup {...rest}>{children}</StyledButtonGroup>
 )
 
-ButtonGroup.defaultProps = {
-  className: '',
-}
-
 ButtonGroup.propTypes = {
-  /**
-   * Classes of the ButtonGroup.
-   */
-  className: PropTypes.string,
   /**
    * The Buttons that will be grouped.
    */

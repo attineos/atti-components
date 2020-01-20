@@ -14,7 +14,7 @@ import StyledBreadcrumb from './styles/StyledBreadcrumb'
 /**
  * A breadcrumb component.
  */
-const Breadcrumb = ({ className, elements, renderElement, separator }) => {
+const Breadcrumb = ({ elements, renderElement, separator, ...rest }) => {
   const displayElement = element =>
     chain(
       // We assume a valid result as soon as we got a non null element
@@ -34,7 +34,7 @@ const Breadcrumb = ({ className, elements, renderElement, separator }) => {
     )
 
   return (
-    <StyledBreadcrumb className={className}>
+    <StyledBreadcrumb {...rest}>
       {map(elements, (element, index, elements) => (
         <React.Fragment key={element.name}>
           {displayElement(element)}
@@ -46,16 +46,11 @@ const Breadcrumb = ({ className, elements, renderElement, separator }) => {
 }
 
 Breadcrumb.defaultProps = {
-  className: '',
   separator: ' / ',
   renderElement: null,
 }
 
 Breadcrumb.propTypes = {
-  /**
-   * Classes of the Breadcrumb.
-   */
-  className: PropTypes.string,
   /**
    * Array elements of this breadcrumb.
    * Should be sorted.

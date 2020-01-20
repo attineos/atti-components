@@ -10,7 +10,6 @@ import StyledInput from './styles/StyledInput'
  *
  */
 const Input = ({
-  className,
   id,
   form,
   name,
@@ -25,7 +24,6 @@ const Input = ({
   ...rest
 }) => (
   <StyledInput
-    className={className}
     form={form}
     id={id}
     name={name}
@@ -42,27 +40,24 @@ const Input = ({
 )
 
 Input.defaultProps = {
-  className: '',
   form: undefined,
+  forwardedRef: undefined,
+  id: undefined,
   name: '',
   onChange: undefined,
-  forwardedRef: undefined,
   pattern: undefined,
   placeholder: '',
   size: null,
+  type: 'text',
   value: undefined,
   variance: 'normal',
 }
 
 Input.propTypes = {
   /**
-   * The classes of the input field.
-   */
-  className: PropTypes.string,
-  /**
    * The id of the input field.
    */
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   /**
    * One or more forms the Input element belongs to.
    */
@@ -96,13 +91,13 @@ Input.propTypes = {
   /**
    * The type of the input field.
    */
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   /**
-   * The value of the input element
+   * The value of the input element.
    */
-  value: PropTypes.string,
+  value: PropTypes.any,
   /**
-   * Which type of input to display
+   * Which type of input to display.
    */
   variance: PropTypes.oneOf(['normal', 'error', 'warning']),
 }

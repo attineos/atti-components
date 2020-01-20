@@ -1,0 +1,31 @@
+---
+path: '/collapsible'
+name: 'Collapsible'
+title: 'Collapsible'
+---
+
+Collapsible allows you to display / hide its children with a smooth animation.
+
+## Example
+
+```js
+const Content = styled(Text)`
+  border: 1px solid black;
+  padding: 20px;
+`
+
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>Collapse</Button>
+      <Collapsible open={isOpen}>
+        <Content>Now you see me.</Content>
+      </Collapsible>
+    </>
+  )
+}
+
+render(<App />)
+```

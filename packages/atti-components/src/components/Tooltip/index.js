@@ -2,12 +2,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { isString } from 'lodash'
 
 import { positionType } from './types'
 import { Bubble, ChildrenContainer, Container } from './styles'
 import Message from './exposedStyles/Message'
 
-const Tooltip = ({ children, className, message, position }) => {
+const Tooltip = ({ children, message, position, ...rest }) => {
   const [show, setShow] = useState(false)
 
   return (
@@ -15,10 +16,10 @@ const Tooltip = ({ children, className, message, position }) => {
       onMouseLeave={() => {
         setShow(false)
       }}
-      className={className}
+      {...rest}
     >
       <Bubble position={position} showTooltip={show}>
-        <Message>{message}</Message>
+        <Message as={!isString(message) && 'div'}>{message}</Message>
       </Bubble>
       <ChildrenContainer
         onMouseOver={() => {
@@ -35,12 +36,10 @@ const Tooltip = ({ children, className, message, position }) => {
 }
 
 Tooltip.defaultProps = {
-  className: '',
   position: 'top',
 }
 
 Tooltip.propTypes = {
-  className: PropTypes.string,
   /* The children on which the tooltip will be displayed over. */
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
   /* The message to display in the tooltip. */

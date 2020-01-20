@@ -5,7 +5,8 @@ export default ({ spaces, colors }) => ({
     notSameMonth: colors.grey,
     sunday: colors.darkGrey,
     today: colors.darkerPrimary,
-    selected: colors.neutral,
+    selected: colors.white,
+    backgroundSelected: colors.primary,
   },
 
   spaces: {
@@ -17,12 +18,7 @@ export default ({ spaces, colors }) => ({
 
   day: {
     width: '30px',
-    spaces: {
-      paddingTop: spaces.s0_5,
-      paddingLeft: spaces.s0,
-      paddingBottom: spaces.s0_5,
-      paddingRight: spaces.s0,
-    },
+    height: '30px',
   },
 
   week: {

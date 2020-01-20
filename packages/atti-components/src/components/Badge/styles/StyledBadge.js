@@ -27,7 +27,7 @@ const StyledBadge = styled.span`
   ${spaces}
   ${colors}
   ${fonts}
-  display: ${({ theme }) => theme.components.badge.display};
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;

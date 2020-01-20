@@ -22,6 +22,7 @@ import radio from '../../components/Radio/theme'
 import select from '../../components/Select/theme'
 import table from '../../components/Table/theme'
 import textarea from '../../components/TextArea/theme'
+import toggle from '../../components/Toggle/theme'
 import tooltip from '../../components/Tooltip/theme'
 
 import {
@@ -68,5 +69,6 @@ export default constants => ({
   table: table(constants),
   text: text(constants),
   textarea: textarea(constants),
+  toggle: toggle(constants),
   tooltip: tooltip(constants),
 })

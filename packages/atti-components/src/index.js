@@ -28,6 +28,7 @@ import Radio from './components/Radio'
 import Select from './components/Select'
 import Table from './components/Table'
 import TextArea from './components/TextArea'
+import Toggle from './components/Toggle'
 import Tooltip from './components/Tooltip'
 
 import {
@@ -82,6 +83,7 @@ export {
   Table,
   Text,
   TextArea,
+  Toggle,
   Tooltip,
   Typography,
   defaultTheme,

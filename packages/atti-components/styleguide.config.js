@@ -82,6 +82,7 @@ module.exports = {
         'src/components/Radio/index.js',
         'src/components/Select/index.js',
         'src/components/TextArea/index.js',
+        'src/components/Toggle/index.js',
       ],
     },
     {

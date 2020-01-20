@@ -12,7 +12,7 @@ import {
 /**
  * Enhance any input with a dropdown on focus
  */
-const InputPopdown = ({ className, children, enhancer }) => {
+const InputPopdown = ({ children, enhancer, ...rest }) => {
   const componentRef = useRef()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -32,11 +32,7 @@ const InputPopdown = ({ className, children, enhancer }) => {
   })
 
   return (
-    <StyledInputPopdownContainer
-      className={className}
-      onFocus={() => setIsOpen(true)}
-      ref={componentRef}
-    >
+    <StyledInputPopdownContainer onFocus={() => setIsOpen(true)} ref={componentRef} {...rest}>
       {children}
       <StyledInputPopdown isOpen={isOpen}>
         <StyledInputPopdownEnhancerContainer>{enhancer()}</StyledInputPopdownEnhancerContainer>
@@ -45,12 +41,7 @@ const InputPopdown = ({ className, children, enhancer }) => {
   )
 }
 
-InputPopdown.defaultProps = {
-  className: '',
-}
-
 InputPopdown.propTypes = {
-  className: PropTypes.string,
   children: PropTypes.element.isRequired,
   enhancer: PropTypes.func.isRequired,
 }

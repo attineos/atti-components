@@ -5,22 +5,32 @@
   "version": "0.1.1",
   "author": "Attineos <contact@attineos.com>",
   "dependencies": {
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
     "atti-components": "^0.2.2-rc3",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.73",
     "gatsby-image": "^2.2.10",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-layout": "^1.1.18",
     "gatsby-plugin-manifest": "^2.2.6",
+    "gatsby-plugin-mdx": "^1.0.56",
     "gatsby-plugin-offline": "^2.2.7",
     "gatsby-plugin-react-helmet": "^3.1.4",
     "gatsby-plugin-sharp": "^2.2.13",
     "gatsby-plugin-styled-components": "^3.1.2",
-    "gatsby-source-filesystem": "^2.1.11",
+    "gatsby-source-filesystem": "^2.1.36",
+    "gatsby-transformer-react-docgen": "^5.0.21",
+    "gatsby-transformer-remark": "^2.6.34",
     "gatsby-transformer-sharp": "^2.2.7",
+    "lodash": "^4.17.15",
+    "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "react-live": "^2.2.1",
+    "rehype-react": "^4.0.1",
     "styled-components": "^4.3.2"
   },
   "keywords": [
@@ -46,5 +56,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "babel-plugin-prismjs": "^1.1.1",
+    "babel-preset-gatsby": "^0.2.22",
+    "react-json-view": "^1.19.1"
   }
 }

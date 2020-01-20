@@ -22,16 +22,12 @@ import CellStyle from './styles/CellStyle'
  * If given less breakpoints than in the theme, the last one is used.
  * If given more breakpoints than in the theme, the excess ones are ignored.
  */
-const Cell = ({ children, cols, className }) => {
+const Cell = ({ children, cols, ...rest }) => {
   return (
-    <CellStyle className={className} cols={cols}>
+    <CellStyle cols={cols} {...rest}>
       {children}
     </CellStyle>
   )
-}
-
-Cell.defaultProps = {
-  className: '',
 }
 
 Cell.propTypes = {
@@ -39,10 +35,6 @@ Cell.propTypes = {
    * The childrens to use as content of the Cell.
    */
   children: PropTypes.node.isRequired,
-  /**
-   * Classes of the Cell.
-   */
-  className: PropTypes.string,
   /**
    * The cols data to use for display.
    */

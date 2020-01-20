@@ -1,0 +1,57 @@
+---
+path: '/select'
+name: 'Select'
+title: 'Select'
+---
+
+Allows you to select one or more options from a list.
+
+## Examples
+
+```js
+<Select id="single" options={['< 1 year', 'Between 1 and 3 years', '> 3 years']} />
+```
+
+Select multiple :
+
+```js
+const Example = () => {
+  const [values, setValues] = useState([])
+
+  const onChangeMultipleValue = () => {
+    const options = document.getElementById('multiple')
+    setValues(
+      reduce(
+        options,
+        (acc, { selected, value }) => {
+          if (selected) {
+            acc.push(value)
+          }
+          return acc
+        },
+        [],
+      ).join(', '),
+    )
+  }
+
+  return (
+    <div>
+      <Label>
+        Selected values : {values} (press ctrl to select multiple values)
+        <Select
+          id="multiple"
+          onChange={onChangeMultipleValue}
+          options={['value 1', 'value 2', 'value 3', 'value4', 'value5']}
+          isMulti
+        />
+      </Label>
+    </div>
+  )
+}
+
+render(<Example />)
+```
+
+## Theme
+
+<Theme name="components.select" />

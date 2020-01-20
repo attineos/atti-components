@@ -17,11 +17,10 @@ export default ({ colors, fonts, spaces }) => ({
     paddingWidth: spaces.s0_5,
   },
   fonts: {
-    fontSize: fonts.fontSize.fs12,
+    fontSize: fonts.fontSize.fs10,
     lineHeight: fonts.lineHeight.lh8,
     fontWeight: fonts.fontWeight.fw600,
     fontFamily: fonts.fontFamily.primary,
     letterSpacing: '1.5px',
   },
-  display: 'inline-flex',
 })

@@ -8,37 +8,21 @@ import StyledBadge from './styles/StyledBadge'
  * Badge component.
  *
  */
-const Badge = ({ as, children, className, variance, exponent }) => (
-  <StyledBadge as={as || exponent ? 'sup' : undefined} className={className} variance={variance}>
+const Badge = ({ children, variance, ...rest }) => (
+  <StyledBadge variance={variance} {...rest}>
     {children}
   </StyledBadge>
 )
 
 Badge.defaultProps = {
-  as: '',
-  className: '',
-  exponent: false,
   variance: 'success',
 }
 
 Badge.propTypes = {
   /**
-   * The rendered DOM element.
-   */
-  as: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  /**
    * Content of the Badge.
    */
   children: PropTypes.node.isRequired,
-  /**
-   * Classes of the Badge.
-   */
-  className: PropTypes.string,
-  /**
-   * Set the badge with sup.
-   */
-  exponent: PropTypes.bool,
-
   /**
    * Type of Badge.
    */

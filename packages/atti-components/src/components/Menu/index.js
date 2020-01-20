@@ -1,62 +1,68 @@
-// @noSnapshot
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import MenuMobile from './components/MenuMobile'
-import MenuDesktop from './components/MenuDesktop'
-import { MenuContainer } from './styles'
+import Container from 'components/Container'
 
-/**
- * The menu is a list of Link elements.
- *
- */
-const Menu = ({ className, isResponsive, ...rest }) => (
-  <MenuContainer className={className} isResponsive={isResponsive}>
-    {isResponsive && <MenuMobile {...rest} />}
-    <MenuDesktop {...rest} />
-  </MenuContainer>
-)
+import { BurgerMenu, Item, ItemGroup } from './components'
+import { ItemsHolder, Li, MenuHolder, MenuMobile, Nav } from './styles'
+import { MenuProvider } from './context/MenuContext'
+
+const Menu = ({ children, isResponsive, isVertical, ...rest }) => {
+  const [isOpened, setIsOpened] = useState(false)
+
+  const updateOpened = () => {
+    setIsOpened(prevIsOpened => !prevIsOpened)
+  }
+
+  const items = React.Children.map(children, child => {
+    return <Li>{child}</Li>
+  })
+
+  return (
+    <div {...rest}>
+      <MenuProvider>
+        {isResponsive && (
+          <MenuMobile>
+            <Container>
+              <BurgerMenu updateOpened={updateOpened} opened={isOpened} />
+            </Container>
+          </MenuMobile>
+        )}
+        <MenuHolder isVertical={isVertical} isResponsive={isResponsive} opened={isOpened}>
+          <Container>
+            <Nav>
+              <ItemsHolder>{items}</ItemsHolder>
+            </Nav>
+          </Container>
+        </MenuHolder>
+      </MenuProvider>
+    </div>
+  )
+}
 
 Menu.defaultProps = {
-  className: '',
-  isResponsive: true,
-  renderElement: null,
-  renderMenu: null,
-  selectedElement: null,
-  variance: 'basic',
+  children: null,
+  isResponsive: false,
+  isVertical: false,
 }
 
 Menu.propTypes = {
   /**
-   * Classes of the menu.
+   * Content of the Menu.
    */
-  className: PropTypes.string,
-  /**
-   * The links in the menu.
-   */
-  elements: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.any,
   /**
    * Is the menu responsive or not.
    */
   isResponsive: PropTypes.bool,
   /**
-   * The function to use for rendering of each element
+   * Is the desktop menu vertical or not.
    */
-  renderElement: PropTypes.func,
-  /**
-   * The function to use for rendering the menu
-   */
-  renderMenu: PropTypes.func,
-  /**
-   * Which element is currently selected
-   */
-  selectedElement: PropTypes.string,
-  /**
-   * Which type of menu to display
-   */
-  variance: PropTypes.oneOf(['basic', 'withButtons', 'withLiftedTabs']),
+  isVertical: PropTypes.bool,
 }
 
-/** @component */
+Menu.Item = Item
+Menu.ItemGroup = ItemGroup
+
 export default styled(Menu)``

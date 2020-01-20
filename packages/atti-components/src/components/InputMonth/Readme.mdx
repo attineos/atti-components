@@ -1,0 +1,30 @@
+---
+path: '/inputmonth'
+name: 'InputMonth'
+title: 'InputMonth'
+---
+
+InputCalendar allows you to pick up a month and an associated year.
+
+## Examples
+
+Uncontrolled component:
+
+```js
+<InputMonth onChange={date => console.log(date)} />
+```
+
+Controlled component:
+
+```js
+const Example = () => {
+  const [date, setDate] = useState(new Date())
+  return <InputMonth value={date} onChange={date => setDate({ date })} />
+}
+
+render(<Example />)
+```
+
+## Theme
+
+<Theme name="components.inputMonth" />

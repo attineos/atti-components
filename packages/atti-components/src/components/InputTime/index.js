@@ -23,8 +23,6 @@ import StyledTimeContainer from './styles/StyledTimeContainer'
  *
  */
 const InputTime = ({
-  className,
-
   hoursLabel,
   minutesLabel,
   secondsLabel,
@@ -33,6 +31,7 @@ const InputTime = ({
   defaultValue,
   value,
   onChange,
+  ...rest
 }) => {
   const [stateValue, setStateValue] = useState(defaultValue)
 
@@ -51,8 +50,8 @@ const InputTime = ({
 
   const defaultComponentRender = (mode, label, value, handleOnChange) => {
     return (
-      <div>
-        <Label>{label}</Label>
+      <Label>
+        {label}
         <Input
           type="number"
           min="0"
@@ -60,7 +59,7 @@ const InputTime = ({
           value={value}
           onChange={e => handleOnChange(e.target.value)}
         />
-      </div>
+      </Label>
     )
   }
 
@@ -73,7 +72,7 @@ const InputTime = ({
   }
 
   return (
-    <StyledTimeContainer className={className}>
+    <StyledTimeContainer {...rest}>
       {chainedComponentRender('hours', hoursLabel, getHours(stateValue), value =>
         handleOnChange(value, setHours),
       )}
@@ -90,7 +89,6 @@ const InputTime = ({
 }
 
 InputTime.defaultProps = {
-  className: '',
   hoursLabel: 'Hours',
   minutesLabel: 'Minutes',
   secondsLabel: 'Seconds',
@@ -101,11 +99,6 @@ InputTime.defaultProps = {
 }
 
 InputTime.propTypes = {
-  /**
-   * The classes of the select.
-   */
-  className: PropTypes.string,
-
   hoursLabel: PropTypes.string,
   minutesLabel: PropTypes.string,
   secondsLabel: PropTypes.string,

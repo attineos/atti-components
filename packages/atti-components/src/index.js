@@ -5,7 +5,9 @@ import Avatar from './components/Avatar'
 import Badge from './components/Badge'
 import Breadcrumb from './components/Breadcrumb'
 import Button from './components/Button'
+import ButtonGroup from './components/ButtonGroup'
 import Cell from './components/Cell'
+import Collapsible from './components/Collapsible'
 import Container from './components/Container'
 import CheckBox from './components/CheckBox'
 import Grid from './components/Grid'
@@ -21,8 +23,6 @@ import Link from './components/Link'
 import Loader from './components/Loader'
 import Menu from './components/Menu'
 import Modal from './components/Modal'
-import Option from './components/Option'
-import OptionPanel from './components/OptionPanel'
 import ProgressBar from './components/ProgressBar'
 import Radio from './components/Radio'
 import Select from './components/Select'
@@ -52,7 +52,9 @@ export {
   BigText,
   Breadcrumb,
   Button,
+  ButtonGroup,
   Cell,
+  Collapsible,
   Container,
   CheckBox,
   Grid,
@@ -73,8 +75,6 @@ export {
   Loader,
   Menu,
   Modal,
-  Option,
-  OptionPanel,
   ProgressBar,
   Radio,
   Select,

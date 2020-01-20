@@ -10,7 +10,7 @@ it('Alert renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Alert className="Atticomponents" variance={null}>
+        <Alert className="Atticomponents" variant={null}>
           <div />
         </Alert>
       </Wrapper>,

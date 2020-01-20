@@ -20,7 +20,7 @@ const Input = ({
   size,
   type,
   value,
-  variance,
+  variant,
   ...rest
 }) => (
   <StyledInput
@@ -34,7 +34,7 @@ const Input = ({
     type={type}
     value={value}
     ref={forwardedRef}
-    variance={variance}
+    variant={variant}
     {...rest}
   />
 )
@@ -50,7 +50,7 @@ Input.defaultProps = {
   size: null,
   type: 'text',
   value: undefined,
-  variance: 'normal',
+  variant: 'normal',
 }
 
 Input.propTypes = {
@@ -99,7 +99,7 @@ Input.propTypes = {
   /**
    * Which type of input to display.
    */
-  variance: PropTypes.oneOf(['normal', 'error', 'warning']),
+  variant: PropTypes.oneOf(['normal', 'error', 'warning']),
 }
 
 /** @component */

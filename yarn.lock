@@ -2897,7 +2897,7 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
 
 "atti-components@file:packages/atti-components":
-  version "0.2.2"
+  version "0.2.2-rc9"
   dependencies:
     lodash "^4.17.10"
     polished "^3.4.1"
@@ -4744,9 +4744,10 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-date-fns@1.30.1:
-  version "1.30.1"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
+date-fns@2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.9.0.tgz#d0b175a5c37ed5f17b97e2272bbc1fa5aec677d2"
+  integrity sha512-khbFLu/MlzLjEzy9Gh8oY1hNt/Dvxw3J6Rbc28cVoYWQaC1S3YI4xwkF9ZWcjDLscbZlY9hISMr66RFzZagLsA==
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -6618,12 +6619,13 @@ gatsby-source-filesystem@^2.1.11:
     xstate "^3.3.3"
 
 "gatsby-starter-default@file:packages/website":
-  version "0.1.0"
+  version "0.1.1"
   dependencies:
-    atti-components "^0.2.1"
+    atti-components "^0.2.2-rc3"
     babel-plugin-styled-components "^1.10.6"
     gatsby "^2.13.73"
     gatsby-image "^2.2.10"
+    gatsby-plugin-alias-imports "^1.0.5"
     gatsby-plugin-manifest "^2.2.6"
     gatsby-plugin-offline "^2.2.7"
     gatsby-plugin-react-helmet "^3.1.4"

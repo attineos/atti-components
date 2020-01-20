@@ -16,6 +16,7 @@ initialState = { date: new Date() }
 Change locale and year range:
 
 ```js
-var locale = require('date-fns/locale/fr')
-;<InputCalendar onChange={date => console.log(date)} locale={locale} yearRange={[1990, 1999]} />
+var _locale = require('date-fns/locale')
+var fr = _locale.fr
+;<InputCalendar onChange={date => console.log(date)} locale={fr} yearRange={[1990, 1999]} />
 ```

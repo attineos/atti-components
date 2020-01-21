@@ -3,8 +3,8 @@ const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `atti-components documentation`,
-    description: `The documentation of all the atti-components library`,
-    author: `@gatsbyjs`,
+    description: `The documentation of the atti-components library`,
+    author: `@attineos`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,8 @@ module.exports = {
             __dirname,
             "../atti-components/dist/esm/index.js"
           ),
+          "@components": path.resolve(__dirname, "src/components"),
+          "@pagesComponents": path.resolve(__dirname, "src/pagesComponents"),
         },
       },
     },
@@ -38,11 +40,33 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/../atti-components/src`,
+        name: `components-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout/index.js`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-transformer-remark`,
+          },
+        ],
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-react-docgen`,
   ],
 }

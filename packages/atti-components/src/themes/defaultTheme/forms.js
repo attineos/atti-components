@@ -10,11 +10,11 @@ export default ({ borders, boxShadows, colors }) => ({
   boxShadow: boxShadows.shadow1,
   colors: {
     normal: {
-      border: colors.darkerWhite,
+      border: colors.grey,
       borderFocus: colors.lightGrey,
       caret: colors.lightBlack,
       placeholder: colors.lightGrey,
-      text: colors.darkGrey,
+      text: colors.lightBlack,
     },
     error: {
       border: colors.supportDanger,

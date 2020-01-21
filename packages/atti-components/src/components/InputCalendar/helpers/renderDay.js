@@ -7,13 +7,14 @@ import StyledDay from '../styles/StyledDay'
 
 const renderDay = ({ value, cursorValue, day, handleOnChange }) => (
   <StyledDay
+    key={getDate(day)}
     isToday={isToday(day)}
     isSunday={isSunday(day)}
     onClick={() => handleOnChange(day)}
     isSelected={isSameDay(value, day)}
     isSameMonth={isSameMonth(cursorValue, day)}
   >
-    {getDate(day)}
+    <span>{getDate(day)}</span>
   </StyledDay>
 )
 

@@ -9,22 +9,14 @@ import StyledButton from './styles/StyledButton'
 /**
  * A Simple Button.
  */
-const Button = ({ children, className, disabled, onClick, type, variance, ...rest }) => (
-  <StyledButton
-    className={className}
-    disabled={disabled}
-    type={type}
-    onClick={onClick}
-    variance={variance}
-    {...rest}
-  >
+const Button = ({ children, disabled, onClick, type, variance, ...rest }) => (
+  <StyledButton disabled={disabled} type={type} onClick={onClick} variance={variance} {...rest}>
     {children}
   </StyledButton>
 )
 
 Button.defaultProps = {
   children: '',
-  className: '',
   disabled: false,
   onClick: noop(),
   type: 'button',
@@ -36,11 +28,6 @@ Button.propTypes = {
    * Content of the component. Only text for now.
    */
   children: PropTypes.string,
-
-  /**
-   * Classes of the Button.
-   */
-  className: PropTypes.string,
 
   /**
    * Is the Button disabled or not.
@@ -64,4 +51,4 @@ Button.propTypes = {
 }
 
 /** @component */
-export default styled(React.memo(Button))``
+export default styled(Button)``

@@ -1,0 +1,56 @@
+---
+path: '/inputpopdown'
+name: 'InputPopdown'
+title: 'InputPopdown'
+---
+
+InputPopdown will display a component when you click on another component.
+
+## Examples
+
+Add popdown component to any input
+
+```js
+const Example = () => {
+  const [date, setDate] = useState(new Date())
+  return (
+    <>
+      <InputPopdown
+        enhancer={() => <InputCalendar value={date} onChange={date => setDate({ date })} />}
+      >
+        <Input value={date} onChange={date => setDate({ date })} />
+      </InputPopdown>
+      <Text>
+        Here the Popdown create a Datepicker functionnality by adding an InputCalendar on top of a
+        standard Input.
+      </Text>
+    </>
+  )
+}
+render(<Example />)
+```
+
+```js
+const Example = () => {
+  const [value, setValue] = useState(50)
+  return (
+    <>
+      <InputPopdown enhancer={() => <ProgressBar value={value} />}>
+        <InputGroup>
+          <Button onClick={() => setValue(prevState => prevState - 1)}>Less</Button>
+          <Input onChange={value => setValue({ value })} value={value} />
+          <Button onClick={() => setValue(prevState => prevState + 1)}>More</Button>
+        </InputGroup>
+      </InputPopdown>
+      <Text>
+        Here we enhance the standard input with a loader and More/Less buttons for more sexyness !
+      </Text>
+    </>
+  )
+}
+render(<Example />)
+```
+
+## Theme
+
+<Theme name="components.inputPopdown" />

@@ -18,17 +18,18 @@ const Label = styled(Typography.withComponent('label'))`
 
 Label.propTypes = {
   /**
-   * The component to be a label for
-   */
-  htmlFor: PropTypes.string.isRequired,
-  /**
-   * Should interaction be disabled
+   * Should interaction be disabled.
    */
   disabled: PropTypes.bool,
+  /**
+   * The component to be a label for.
+   */
+  htmlFor: PropTypes.string,
 }
 
 Label.defaultProps = {
   disabled: false,
+  htmlFor: undefined,
 }
 
 // @component

@@ -8,14 +8,13 @@ import StyledDiv from './styles/StyledDiv'
  * An alert component.
  *
  */
-const Alert = ({ children, className, variance }) => (
-  <StyledDiv className={className} variance={variance}>
+const Alert = ({ children, variance, ...rest }) => (
+  <StyledDiv variance={variance} {...rest}>
     {children}
   </StyledDiv>
 )
 
 Alert.defaultProps = {
-  className: '',
   variance: 'success',
 }
 
@@ -24,10 +23,6 @@ Alert.propTypes = {
    * Content of the Alert.
    */
   children: PropTypes.node.isRequired,
-  /**
-   * Classes of the Alert.
-   */
-  className: PropTypes.string,
   /**
    * Type of alert.
    */

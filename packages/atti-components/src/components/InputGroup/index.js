@@ -7,22 +7,17 @@ import { StyledHorizontalInputGroup, StyledVerticalInputGroup } from './styles'
  * A Simple InputGroup.
  *
  */
-const InputGroup = ({ className, children, vertical }) => {
+const InputGroup = ({ children, vertical, ...rest }) => {
   const StyleComponent = vertical ? StyledVerticalInputGroup : StyledHorizontalInputGroup
 
-  return <StyleComponent className={className}>{children}</StyleComponent>
+  return <StyleComponent {...rest}>{children}</StyleComponent>
 }
 
 InputGroup.defaultProps = {
-  className: '',
   vertical: false,
 }
 
 InputGroup.propTypes = {
-  /**
-   * Classes of the Button.
-   */
-  className: PropTypes.string,
   /**
    * The cols to use as header for the table.
    */

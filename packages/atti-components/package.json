@@ -20,20 +20,19 @@
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
     "build:devwatch": "cross-env NODE_ENV=development WATCH=true rollup -c",
-    "build:documentation": "styleguidist build",
     "dev": "yarn run build:devwatch --watch",
     "gen": "babel-node --presets @babel/preset-env ./bin/generateComponent",
     "lint": "eslint --cache src",
     "old:dev": "yarn run start:styleguidist",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
     "snapshots": "babel-node --presets @babel/preset-env ./bin/generateSnapshots",
-    "start:styleguidist": "styleguidist server",
     "test": "yarn run snapshots && jest --env=jsdom"
   },
   "dependencies": {
     "lodash": "^4.17.10",
     "polished": "^3.4.1",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "react-live": "^2.2.1"
   },
   "peerDependencies": {
     "date-fns": "1.30.1",

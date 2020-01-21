@@ -9,7 +9,7 @@ import StyledSelect from './styles/StyledSelect'
  * A select field.
  *
  */
-const Select = ({ className, id, isMulti, name, onChange, options, size, value, defaultValue }) => {
+const Select = ({ id, isMulti, name, onChange, options, size, value, defaultValue, ...rest }) => {
   const optionsElements = map(options, elt => {
     const value = isString(elt) ? elt : elt.id || elt.name
     const key = isString(elt) ? elt : elt.id || elt.name
@@ -29,7 +29,6 @@ const Select = ({ className, id, isMulti, name, onChange, options, size, value, 
 
   return (
     <StyledSelect
-      className={className}
       id={id}
       name={name}
       onChange={onChange}
@@ -37,6 +36,7 @@ const Select = ({ className, id, isMulti, name, onChange, options, size, value, 
       size={size}
       value={finalValue}
       defaultValue={defaultValue}
+      {...rest}
     >
       {optionsElements}
     </StyledSelect>
@@ -44,7 +44,6 @@ const Select = ({ className, id, isMulti, name, onChange, options, size, value, 
 }
 
 Select.defaultProps = {
-  className: '',
   isMulti: false,
   name: '',
   onChange: null,
@@ -54,10 +53,6 @@ Select.defaultProps = {
 }
 
 Select.propTypes = {
-  /**
-   * The classes of the select.
-   */
-  className: PropTypes.string,
   /**
    * The id of the select.
    */
@@ -83,13 +78,13 @@ Select.propTypes = {
    */
   size: PropTypes.number,
   /**
-   * The value to use as a controlled component
+   * The value to use as a controlled component.
    */
-  value: PropTypes.string,
+  value: PropTypes.any,
   /**
-   * The default value to use as an uncontrolled component
+   * The default value to use as an uncontrolled component.
    */
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.any,
 }
 
 /** @component */

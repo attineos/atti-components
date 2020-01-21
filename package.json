@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --stream",
-    "build:documentation": "lerna run build:documentation --stream --parallel && cp -r ./packages/atti-components/styleguide ./styleguide",
+    "build": "lerna run build --stream ",
+    "build:documentation": "lerna bootstrap && yarn run build",
     "clean": "lerna clean",
     "dev": "lerna run dev --stream --parallel",
     "lint": "lerna run lint --stream --parallel",

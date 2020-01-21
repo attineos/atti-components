@@ -1,0 +1,46 @@
+---
+path: '/themes'
+name: 'Themes'
+title: 'Themes'
+---
+
+## Which themes are available ?
+
+By default, atti-components provides 3 themes : <Code language="js">defaultTheme</Code>, <Code language="js">attineosTheme</Code> and <Code language="js">greenyBlueTheme</Code>.
+
+Those themes can be easily overriden and help you to get started to create your website.
+
+## Why a custom ThemeProvider ?
+
+To use atti-components, you have to use our own <Code language="jsx">ThemeProvider</Code> components. This is because we've overriden a bit the way it works to ease theme customization.
+
+Indeed, our ThemeProvider allows dynamic usage of theme values. For example if you change the <Code language="js">theme.spaces.s1</Code> value, this will impact automatically all the components that use this value.
+
+## How to override the theme ?
+
+It has to be done at the ThemeProvider level.
+
+You can simply change the value of our theme or give a second theme to the ThemeProvider with just the values that you want to override :
+
+```js
+const customTheme = {
+  components: {
+    button: {
+      colors: {
+        primary: {
+          background: '#FAFAFA',
+          text: 'blue',
+        },
+      },
+    },
+  },
+}
+
+const App = () => (
+  <ThemeProvider theme={defaultTheme} otherTheme={customTheme}>
+    <Button>Click me</Button>
+  </ThemeProvider>
+)
+
+render(<App />)
+```

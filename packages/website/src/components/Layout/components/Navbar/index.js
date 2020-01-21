@@ -71,6 +71,9 @@ const Navbar = () => {
         <Item as={Link} to="/select" activeClassName="active">
           Select
         </Item>
+        <Item as={Link} to="/toggle" activeClassName="active">
+          Toggle
+        </Item>
         <Item as={Link} to="/textarea" activeClassName="active">
           TextArea
         </Item>

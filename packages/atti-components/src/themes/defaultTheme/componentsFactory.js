@@ -20,6 +20,7 @@ import modal from '../../components/Modal/theme'
 import progressBar from '../../components/ProgressBar/theme'
 import radio from '../../components/Radio/theme'
 import select from '../../components/Select/theme'
+import stepper from '../../components/Stepper/theme'
 import table from '../../components/Table/theme'
 import textarea from '../../components/TextArea/theme'
 import toggle from '../../components/Toggle/theme'
@@ -66,6 +67,7 @@ export default constants => ({
   radio: radio(constants),
   select: select(constants),
   smallText: smallText(constants),
+  stepper: stepper(constants),
   table: table(constants),
   text: text(constants),
   textarea: textarea(constants),

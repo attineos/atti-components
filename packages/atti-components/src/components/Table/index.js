@@ -31,12 +31,9 @@ const Table = ({ cols, elements, ...props }) => {
   }
 
   return renderTable(
-    <React.Fragment>
+    <>
       <thead>
-        {renderHeaderLine(
-          <React.Fragment>{map(cols, col => renderHeaderCell(col, props))}</React.Fragment>,
-          props,
-        )}
+        {renderHeaderLine(<>{map(cols, col => renderHeaderCell(col, props))}</>, props)}
       </thead>
 
       <tbody>
@@ -44,7 +41,7 @@ const Table = ({ cols, elements, ...props }) => {
           <React.Fragment key={`line-${element.name}`}>
             {renderLine(
               element,
-              <React.Fragment>{map(cols, col => renderCell(col, element, props))}</React.Fragment>,
+              <>{map(cols, col => renderCell(col, element, props))}</>,
               index,
               index % 2,
               props,
@@ -53,7 +50,7 @@ const Table = ({ cols, elements, ...props }) => {
           </React.Fragment>
         ))}
       </tbody>
-    </React.Fragment>,
+    </>,
     props,
   )
 }

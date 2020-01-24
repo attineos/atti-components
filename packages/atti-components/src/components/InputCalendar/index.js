@@ -74,7 +74,7 @@ const InputCalendar = ({
     yearRange,
     locale,
     children: (
-      <React.Fragment>
+      <>
         {map(daysPerWeek, week =>
           chainedRender(renderDefaultWeek, renderWeek, {
             className,
@@ -84,7 +84,7 @@ const InputCalendar = ({
             handleOnChange,
             week,
             children: (
-              <React.Fragment>
+              <>
                 {map(week, day =>
                   chainedRender(renderDefaultDay, renderDay, {
                     className,
@@ -96,11 +96,11 @@ const InputCalendar = ({
                     day,
                   }),
                 )}
-              </React.Fragment>
+              </>
             ),
           }),
         )}
-      </React.Fragment>
+      </>
     ),
   })
 }

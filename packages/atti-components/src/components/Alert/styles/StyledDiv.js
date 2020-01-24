@@ -3,8 +3,8 @@ import Link from '../../Link'
 import { Typography } from '../../Typographies'
 
 const borders = css`
-  border: ${({ theme, variance }) =>
-    `${theme.components.alert.borders.size} solid ${theme.components.alert.colors.borders[variance]}`};
+  border: ${({ theme, variant }) =>
+    `${theme.components.alert.borders.size} solid ${theme.components.alert.colors.borders[variant]}`};
   border-radius: ${({ theme }) => theme.components.alert.borders.radius};
 `
 
@@ -19,9 +19,9 @@ const sizes = css`
 `
 
 const colors = css`
-  background-color: ${({ theme, variance }) => theme.components.alert.colors.background[variance]};
+  background-color: ${({ theme, variant }) => theme.components.alert.colors.background[variant]};
   ${Typography}, ${Link} {
-    color: ${({ theme, variance }) => theme.components.alert.colors.text[variance]};
+    color: ${({ theme, variant }) => theme.components.alert.colors.text[variant]};
   }
 `
 

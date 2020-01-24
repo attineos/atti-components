@@ -3,19 +3,19 @@ import styled, { css } from 'styled-components'
 import { Text } from '../../Typographies'
 
 const border = css`
-  border: ${({ variance, theme }) =>
-    `${theme.components.button.borders[variance].borderWidth} solid ${theme.components.button.colors[variance].border}`};
-  border-radius: ${({ variance, theme }) => theme.components.button.borders[variance].borderRadius};
+  border: ${({ variant, theme }) =>
+    `${theme.components.button.borders[variant].borderWidth} solid ${theme.components.button.colors[variant].border}`};
+  border-radius: ${({ variant, theme }) => theme.components.button.borders[variant].borderRadius};
 
   &:disabled {
-    border: ${({ variance, theme }) =>
-      `${theme.components.button.borders[variance].borderWidth} solid ${theme.components.button.colors.disabled.border}`};
+    border: ${({ variant, theme }) =>
+      `${theme.components.button.borders[variant].borderWidth} solid ${theme.components.button.colors.disabled.border}`};
   }
 `
 
 const colors = css`
-  background-color: ${({ variance, theme }) => theme.components.button.colors[variance].background};
-  color: ${({ variance, theme }) => theme.components.button.colors[variance].text};
+  background-color: ${({ variant, theme }) => theme.components.button.colors[variant].background};
+  color: ${({ variant, theme }) => theme.components.button.colors[variant].text};
 
   &:disabled {
     background-color: ${({ theme }) => theme.components.button.colors.disabled.background};
@@ -54,7 +54,7 @@ const StyledButton = styled(Text.withComponent('button'))`
 `
 
 StyledButton.defaultProps = {
-  variance: 'normal',
+  variant: 'normal',
 }
 
 export default StyledButton

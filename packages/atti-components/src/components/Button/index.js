@@ -9,8 +9,8 @@ import StyledButton from './styles/StyledButton'
 /**
  * A Simple Button.
  */
-const Button = ({ children, disabled, onClick, type, variance, ...rest }) => (
-  <StyledButton disabled={disabled} type={type} onClick={onClick} variance={variance} {...rest}>
+const Button = ({ children, disabled, onClick, type, variant, ...rest }) => (
+  <StyledButton disabled={disabled} type={type} onClick={onClick} variant={variant} {...rest}>
     {children}
   </StyledButton>
 )
@@ -20,7 +20,7 @@ Button.defaultProps = {
   disabled: false,
   onClick: noop(),
   type: 'button',
-  variance: 'primary',
+  variant: 'primary',
 }
 
 Button.propTypes = {
@@ -47,7 +47,7 @@ Button.propTypes = {
   /**
    * The type of variation to display
    */
-  variance: PropTypes.oneOf(['primary', 'neutral', 'light', 'dark']),
+  variant: PropTypes.oneOf(['primary', 'neutral', 'light', 'dark']),
 }
 
 /** @component */

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 import { StyledContainer, StyledFilePicker, StyledInput } from './styles'
 
-const InputFile = ({ name, onChange, placeholder, variance, ...rest }) => {
+const InputFile = ({ name, onChange, placeholder, variant, ...rest }) => {
   const input = useRef(null)
   const [file, setFile] = useState(null)
 
@@ -33,7 +33,7 @@ const InputFile = ({ name, onChange, placeholder, variance, ...rest }) => {
         onClick={browseFile}
         onDragOver={allowDrop}
         onDrop={onDrop}
-        variance={variance}
+        variant={variant}
       >
         {file ? file.name : placeholder}
       </StyledFilePicker>
@@ -44,7 +44,7 @@ const InputFile = ({ name, onChange, placeholder, variance, ...rest }) => {
 InputFile.defaultProps = {
   name: '',
   placeholder: '',
-  variance: 'normal',
+  variant: 'normal',
 }
 
 InputFile.propTypes = {
@@ -65,7 +65,7 @@ InputFile.propTypes = {
   /**
    * The type of variation to display
    */
-  variance: PropTypes.oneOf(['primary', 'secondary', 'normal']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'normal']),
 }
 
 /** @component */

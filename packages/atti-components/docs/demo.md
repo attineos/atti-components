@@ -16,34 +16,34 @@
     />
   </Cell>
   <Cell cols={[[1, 6], [1, 6], [1, 13]]}>
-    <Alert variance="success">
+    <Alert variant="success">
       <Text>
         This is a success <Link href="#/">with a link</Link>
       </Text>
     </Alert>
-    <Alert variance="error">
+    <Alert variant="error">
       <Text>
         This is an error <Link href="#/">with a link</Link>
       </Text>
     </Alert>
-    <Alert variance="warning">
+    <Alert variant="warning">
       <Text>
         This is a warning <Link href="#/">with a link</Link>
       </Text>
     </Alert>
-    <Alert variance="info">
+    <Alert variant="info">
       <Text>
         This is an info <Link href="#/">with a link</Link>
       </Text>
     </Alert>
   </Cell>
   <Cell cols={[[1, 5], [1, 5], [1, 5]]}>
-    <Button onClick={() => alert('Hello !')} variance="primary">
+    <Button onClick={() => alert('Hello !')} variant="primary">
       I'm a primary button!
     </Button>
   </Cell>
   <Cell cols={[[5, 9], [5, 9], [5, 9]]}>
-    <Button onClick={() => alert('Hello !')} variance="neutral">
+    <Button onClick={() => alert('Hello !')} variant="neutral">
       I'm secondary
     </Button>
   </Cell>
@@ -52,10 +52,10 @@
   </Cell>
 
   <Cell cols={[[1, 5], [1, 5], [1, 5]]}>
-    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="primary" />
+    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variant="primary" />
   </Cell>
   <Cell cols={[[5, 9], [5, 9], [5, 9]]}>
-    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variance="normal" />
+    <InputFile placeholder="Browse a file" onChange={e => console.log(e)} variant="normal" />
   </Cell>
   <Cell cols={[[9, 13], [9, 13], [9, 13]]}>
     <InputFile placeholder="Browse a file" onChange={e => console.log(e)} />
@@ -64,14 +64,14 @@
   <Cell cols={[[1, 7], [1, 7], [1, 7]]}>
     <InputGroup>
       <Button>Grouped1</Button>
-      <Button variance="neutral">Grouped2</Button>
+      <Button variant="neutral">Grouped2</Button>
       <Button>Grouped3</Button>
     </InputGroup>
   </Cell>
   <Cell cols={[[7, 13], [7, 13], [7, 13]]}>
     <InputGroup vertical>
       <Button>Grouped1</Button>
-      <Button variance="neutral">Grouped2</Button>
+      <Button variant="neutral">Grouped2</Button>
       <Button>Grouped3</Button>
     </InputGroup>
   </Cell>

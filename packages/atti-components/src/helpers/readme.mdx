@@ -132,8 +132,8 @@ With atti-components, you can inject a class in your styled-component that will 
 ```sh
 import { resetCSS } from 'atti-components/helpers'
 
-const MyComponent = styled.p.attrs(resetCSS)`
-  // Your style
+const MyComponent = styled.p`
+  ${resetCSS};
 `
 
 ```

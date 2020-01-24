@@ -8,13 +8,13 @@ import StyledLoader from './styles/StyledLoader'
  * A Loader, nothing special for the moment.
  *
  */
-const Loader = ({ color, variance, ...rest }) => (
-  <StyledLoader color={color} variance={variance} {...rest} />
+const Loader = ({ color, variant, ...rest }) => (
+  <StyledLoader color={color} variant={variant} {...rest} />
 )
 
 Loader.defaultProps = {
   color: null,
-  variance: 'circle',
+  variant: 'circle',
 }
 
 Loader.propTypes = {
@@ -25,7 +25,7 @@ Loader.propTypes = {
   /**
    * The Loader type, at the moment the only type provided is circle.
    */
-  variance: PropTypes.oneOf(['circle']),
+  variant: PropTypes.oneOf(['circle']),
 }
 
 /** @component */

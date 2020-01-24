@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 import { resetCSS } from 'helpers'
 
-const Typography = styled.p.attrs(resetCSS)``
+const Typography = styled.p`
+  ${resetCSS};
+`
 
 Typography.propTypes = {
   /**

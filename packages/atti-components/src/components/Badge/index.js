@@ -8,14 +8,14 @@ import StyledBadge from './styles/StyledBadge'
  * Badge component.
  *
  */
-const Badge = ({ children, variance, ...rest }) => (
-  <StyledBadge variance={variance} {...rest}>
+const Badge = ({ children, variant, ...rest }) => (
+  <StyledBadge variant={variant} {...rest}>
     {children}
   </StyledBadge>
 )
 
 Badge.defaultProps = {
-  variance: 'success',
+  variant: 'success',
 }
 
 Badge.propTypes = {
@@ -26,7 +26,7 @@ Badge.propTypes = {
   /**
    * Type of Badge.
    */
-  variance: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
+  variant: PropTypes.oneOf(['success', 'danger', 'info', 'warning']),
 }
 
 /** @component */

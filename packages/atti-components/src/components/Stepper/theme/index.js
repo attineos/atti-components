@@ -13,7 +13,12 @@ export default ({ colors, spaces }) => ({
   },
 
   sizes: {
-    height: spaces.s1_5,
-    width: spaces.full,
+    ellipse: spaces.s4,
+    heightBar: spaces.s0_25,
+    widthBar: spaces.s16,
+    borderRadius: spaces.s3,
+    marginTopBar: spaces.s2,
+    marginTopH3: spaces.s0_75,
+    marginTopT: spaces.s1_5,
   },
 })

@@ -1,18 +1,14 @@
 import styled from 'styled-components'
 
-const StyledEllipse = styled.div`
-
+const StyledBar = styled.span`
   position: absolute;
 
-  width: 150px;
-  height: 5px;
-  margin-top:20px;
-  margin-left: 42px
+  width: ${({ theme }) => theme.components.stepper.sizes.widthBar};
+  height: ${({ theme }) => theme.components.stepper.sizes.heightBar};
+  margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopBar};
 
-  background-color: ${({ theme }) => theme.components.stepper.colors.background}; ;
-  border-radius: 50px;
-
-
+  background-color: ${({ theme }) => theme.components.stepper.colors.background};
+  border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
 `
 
-export default StyledEllipse
+export default StyledBar

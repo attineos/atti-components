@@ -2,7 +2,7 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider as StyledThemeProvider, withTheme } from 'styled-components'
-import ResetCSS from './styles/ResetCSS'
+import GlobalStyle from './styles/GlobalStyle'
 
 import constructTheme from './helpers/constructTheme'
 
@@ -12,7 +12,7 @@ const ThemeProvider = ({ children, otherTheme, theme: propsTheme }) => {
   return (
     <StyledThemeProvider theme={theme || propsTheme}>
       <span className="atti-box">
-        <ResetCSS suppressMultiMountWarning />
+        <GlobalStyle />
         {children}
       </span>
     </StyledThemeProvider>

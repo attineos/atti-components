@@ -8,14 +8,14 @@ import StyledDiv from './styles/StyledDiv'
  * An alert component.
  *
  */
-const Alert = ({ children, variance, ...rest }) => (
-  <StyledDiv variance={variance} {...rest}>
+const Alert = ({ children, variant, ...rest }) => (
+  <StyledDiv variant={variant} {...rest}>
     {children}
   </StyledDiv>
 )
 
 Alert.defaultProps = {
-  variance: 'success',
+  variant: 'success',
 }
 
 Alert.propTypes = {
@@ -26,7 +26,7 @@ Alert.propTypes = {
   /**
    * Type of alert.
    */
-  variance: PropTypes.oneOf(['success', 'error', 'info', 'warning']),
+  variant: PropTypes.oneOf(['success', 'error', 'info', 'warning']),
 }
 
 /** @component */

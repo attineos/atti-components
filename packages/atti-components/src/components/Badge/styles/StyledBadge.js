@@ -10,7 +10,7 @@ const spaces = css`
 `
 
 const colors = css`
-  background-color: ${({ theme, variance }) => theme.components.badge.colors.background[variance]};
+  background-color: ${({ theme, variant }) => theme.components.badge.colors.background[variant]};
   color: ${({ theme }) => theme.components.badge.colors.text};
 `
 

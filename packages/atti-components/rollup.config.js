@@ -1,4 +1,4 @@
-import alias from 'rollup-plugin-alias'
+import alias from '@rollup/plugin-alias'
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
@@ -44,9 +44,10 @@ const getPlugins = (minify = true) => [
     exclude: ['/node_modules/'],
   }),
   alias({
-    resolve: ['.js', '/index.js'],
-    components: path.join(__dirname, 'src/components'),
-    helpers: path.join(__dirname, 'src/helpers'),
+    entries: [
+      { find: 'components', replacement: path.join(__dirname, 'src/components') },
+      { find: 'helpers', replacement: path.join(__dirname, 'src/helpers') },
+    ],
   }),
   resolve({ extensions, preferBuiltins: false }),
   commonjs({

@@ -44,6 +44,7 @@ module.exports = {
     'operator-assignment': 0,
     'padded-blocks': [2, { classes: 'always', switches: 'never' }],
     'quote-props': [2, 'as-needed'],
+    'react/jsx-props-no-spreading': 0,
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
     'space-before-function-paren': [2, 'always'],

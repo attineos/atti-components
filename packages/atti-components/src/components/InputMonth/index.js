@@ -49,7 +49,7 @@ const InputMonth = ({
     renderContainer,
     containerRender,
     className,
-    <React.Fragment>
+    <>
       {withNextPrevButtons &&
         chainedRender(renderControlButton, controlButtonRender, stateValue, 'prev', () =>
           handleOnChange(addMonths(stateValue, -1)),
@@ -64,7 +64,7 @@ const InputMonth = ({
         chainedRender(renderControlButton, controlButtonRender, stateValue, 'next', () =>
           handleOnChange(addMonths(stateValue, 1)),
         )}
-    </React.Fragment>,
+    </>,
   )
 }
 

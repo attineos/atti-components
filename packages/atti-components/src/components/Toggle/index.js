@@ -16,9 +16,9 @@ const Toggle = ({
   name,
   onChange,
   value,
-  variant,
+  color,
   click,
-  sized,
+  variant,
 }) => {
   const [checked, setChecked] = useState(propsChecked)
 
@@ -30,9 +30,9 @@ const Toggle = ({
   return (
     <ToggleBoxContainer
       className={className}
-      variant={variant}
+      color={color}
       click={click}
-      sized={sized}
+      variant={variant}
       checked={checked}
     >
       <HiddenInputToggle
@@ -42,9 +42,9 @@ const Toggle = ({
         onChange={handleToggleChecked}
         type="checkbox"
         value={value}
-        sized={sized}
+        variant={variant}
       />
-      <ToggleBox variant={variant} sized={sized} />
+      <ToggleBox color={color} variant={variant} />
     </ToggleBoxContainer>
   )
 }
@@ -53,9 +53,9 @@ Toggle.defaultProps = {
   checked: false,
   className: '',
   onChange: null,
-  variant: 'primary',
+  color: 'primary',
   click: true,
-  sized: 'large',
+  variant: 'large',
 }
 
 Toggle.propTypes = {
@@ -90,7 +90,7 @@ Toggle.propTypes = {
   /**
    * The type of variation to display.
    */
-  variant: PropTypes.oneOf(['primary', 'neutral', 'disabled', 'on_off']),
+  color: PropTypes.oneOf(['primary', 'neutral', 'disabled', 'on_off']),
 
   /**
    * Click possible or not on the toggle.
@@ -100,7 +100,7 @@ Toggle.propTypes = {
   /**
    * The type of size to display.
    */
-  sized: PropTypes.oneOf(['little', 'medium', 'large']),
+  variant: PropTypes.oneOf(['little', 'medium', 'large']),
 }
 
 /** @component */

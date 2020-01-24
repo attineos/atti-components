@@ -4,18 +4,19 @@ import ToggleBox from './ToggleBox'
 import HiddenInputToggle from './HiddenInputToggle'
 
 const ToggleBoxContainer = styled.span`
-  position: absolute;
+  position: relative;
+  display: inline-block;
 
-  width: ${({ sized, theme }) => theme.components.toggle.sizes[sized].widthRectangle};
-  height: ${({ sized, theme }) => theme.components.toggle.sizes[sized].heightRectangle};
+  width: ${({ variant, theme }) => theme.components.toggle.sizes[variant].widthRectangle};
+  height: ${({ variant, theme }) => theme.components.toggle.sizes[variant].heightRectangle};
 
-  margin-top: ${({ sized, theme }) => theme.components.toggle.sizes[sized].margintop};
+  margin-top: ${({ variant, theme }) => theme.components.toggle.sizes[variant].margintop};
 
-  background-color: ${({ variant, checked, theme }) =>
+  background-color: ${({ color, checked, theme }) =>
     checked
-      ? theme.components.toggle.colors[variant].backgroundRectangleAfter
-      : theme.components.toggle.colors[variant].backgroundRectangle};
-  border-radius: ${({ sized, theme }) => theme.components.toggle.sizes[sized].borderRadius};
+      ? theme.components.toggle.colors[color].backgroundRectangleAfter
+      : theme.components.toggle.colors[color].backgroundRectangle};
+  border-radius: ${({ variant, theme }) => theme.components.toggle.sizes[variant].borderRadius};
 
   @keyframes slideRight {
     from {left: 0px;}

@@ -10,7 +10,7 @@ it('Badge renders correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <Badge className="Atticomponents" exponent={true} variance={null}>
+        <Badge className="Atticomponents" exponent={true} variant={null}>
           <div />
         </Badge>
       </Wrapper>,

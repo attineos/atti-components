@@ -7,6 +7,7 @@ const StyledLabel = styled.p`
   font-family: roboto;
   text-align: center;
   color: red;
+  margin-top:24px;
   
   :after{
     content="✔";

@@ -10,10 +10,24 @@ Displays a stepper that can be filled.
 
 ```js
 <div style={{ paddingBottom: '60px' }}>
-  <Stepper>
-    <Stepper.Step />
-    <Stepper.Label>WOOWOWO</Stepper.Label>
-    <Stepper.Element />
+  <Stepper style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Stepper.Step style={{ marginLeft: '100px' }}>
+      <Stepper.Element />
+      <Stepper.Label>1</Stepper.Label>
+      <Stepper.Label>Paris</Stepper.Label>
+    </Stepper.Step>
+    <Stepper.Bar />
+    <Stepper.Step style={{ marginLeft: '500px' }}>
+      <Stepper.Element />
+      <Stepper.Label>2</Stepper.Label>
+      <Stepper.Label>Lyon</Stepper.Label>
+    </Stepper.Step>
+    <Stepper.Bar />
+    <Stepper.Step style={{ marginLeft: '900px' }}>
+      <Stepper.Element />
+      <Stepper.Label>3</Stepper.Label>
+      <Stepper.Label>Nice</Stepper.Label>
+    </Stepper.Step>
   </Stepper>
 </div>
 ```

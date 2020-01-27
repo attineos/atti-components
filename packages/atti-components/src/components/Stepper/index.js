@@ -3,10 +3,9 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import StyledEllipse from './styles/StyledEllipse'
-// import StyledBar from './styles/StyledBar'
+import StyledBar from './styles/StyledBar'
 import StyledStep from './styles/StyledStep'
 import StyledLabel from './styles/StyledLabel'
-import StyledStepperProvider from './styles/StyledStepperProvider'
 
 const StepperContext = React.createContext()
 
@@ -16,11 +15,9 @@ const StepperContext = React.createContext()
 
 const Stepper = ({ step, variant, onChange, id, children }) => {
   return (
-    <StyledStepperProvider>
-      <StepperContext.Provider variant={variant} step={step} onChange={onChange} id={id}>
-        {children}
-      </StepperContext.Provider>
-    </StyledStepperProvider>
+    <StepperContext.Provider variant={variant} step={step} onChange={onChange} id={id}>
+      {children}
+    </StepperContext.Provider>
   )
 }
 
@@ -45,6 +42,7 @@ Stepper.propTypes = {
 Stepper.Step = StyledStep
 Stepper.Label = StyledLabel
 Stepper.Element = StyledEllipse
+Stepper.Bar = StyledBar
 
 /** @component */
 export default styled(Stepper)``

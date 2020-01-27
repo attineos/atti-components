@@ -30,27 +30,6 @@ const Example = () => {
 render(<Example />)
 ```
 
-```js
-const Example = () => {
-  const [value, setValue] = useState(50)
-  return (
-    <>
-      <InputPopdown enhancer={() => <ProgressBar value={value} />}>
-        <InputGroup>
-          <Button onClick={() => setValue(prevState => prevState - 1)}>Less</Button>
-          <Input onChange={value => setValue({ value })} value={value} />
-          <Button onClick={() => setValue(prevState => prevState + 1)}>More</Button>
-        </InputGroup>
-      </InputPopdown>
-      <Text>
-        Here we enhance the standard input with a loader and More/Less buttons for more sexyness !
-      </Text>
-    </>
-  )
-}
-render(<Example />)
-```
-
 ## Theme
 
 <Theme name="components.inputPopdown" />

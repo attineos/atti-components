@@ -1,28 +1,32 @@
 export default ({ colors, spaces }) => ({
   colors: {
     primary: {
-      backgroundEllipse: colors.darkPrimary,
-      backgroundRectangle: colors.lightPrimary,
+      backgroundEllipse: colors.white,
+      backgroundEllipseAfter: colors.darkPrimary,
+      backgroundRectangle: colors.lightGrey,
       backgroundRectangleAfter: colors.lightPrimary,
     },
     neutral: {
-      backgroundEllipse: colors.darkNeutral,
-      backgroundRectangle: colors.lightNeutral,
+      backgroundEllipse: colors.neutral,
+      backgroundEllipseAfter: colors.neutral,
+      backgroundRectangle: colors.lighterGrey,
       backgroundRectangleAfter: colors.lightNeutral,
     },
     disabled: {
       backgroundEllipse: colors.white,
+      backgroundEllipseAfter: colors.white,
       backgroundRectangle: colors.darkGrey,
       backgroundRectangleAfter: colors.darkGrey,
     },
     on_off: {
       backgroundEllipse: colors.white,
+      backgroundEllipseAfter: colors.white,
       backgroundRectangle: colors.supportDanger,
       backgroundRectangleAfter: colors.supportSuccess,
     },
   },
   sizes: {
-    little: {
+    small: {
       heightRectangle: spaces.s1,
       heightEllipse: spaces.s2,
       widthRectangle: spaces.s4,

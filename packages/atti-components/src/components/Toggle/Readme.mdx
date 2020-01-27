@@ -16,16 +16,15 @@ Toggle offers the user the possibility to choose or not item.
   }}
 >
   <div>
-    <Toggle id="toggleTest1" name="toggleTestGroup" value="ImChecked" />
+    <Toggle id="toggleTest1" name="toggleTestGroup" />
   </div>
   <div>
     <Toggle
       id="toggleTest2"
       name="toggleTestGroup"
-      value="ImChecked"
-      color="neutral"
-      checked="true"
-      variant="little"
+      variant="neutral"
+      checked={true}
+      sized="small"
     />
   </div>
   <div>
@@ -33,20 +32,14 @@ Toggle offers the user the possibility to choose or not item.
       id="toggleTest3"
       name="toggleTestGroup"
       value="ImChecked"
-      color="disabled"
+      variant="disabled"
       click="false"
-      variant="medium"
-      checked="true"
+      sized="medium"
+      checked={true}
     />
   </div>
   <div>
-    <Toggle
-      id="toggleTest4"
-      name="toggleTestGroup"
-      value="ImChecked"
-      color="on_off"
-      variant="medium"
-    />
+    <Toggle id="toggleTest4" name="toggleTestGroup" variant="on_off" sized="medium" />
   </div>
 </div>
 ```

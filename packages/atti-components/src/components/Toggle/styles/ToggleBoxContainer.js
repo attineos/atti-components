@@ -7,16 +7,16 @@ const ToggleBoxContainer = styled.span`
   position: relative;
   display: inline-block;
 
-  width: ${({ variant, theme }) => theme.components.toggle.sizes[variant].widthRectangle};
-  height: ${({ variant, theme }) => theme.components.toggle.sizes[variant].heightRectangle};
+  width: ${({ sized, theme }) => theme.components.toggle.sizes[sized].widthRectangle};
+  height: ${({ sized, theme }) => theme.components.toggle.sizes[sized].heightRectangle};
 
-  margin-top: ${({ variant, theme }) => theme.components.toggle.sizes[variant].margintop};
+  margin-top: ${({ sized, theme }) => theme.components.toggle.sizes[sized].margintop};
 
-  background-color: ${({ color, checked, theme }) =>
+  background-color: ${({ variant, checked, theme }) =>
     checked
-      ? theme.components.toggle.colors[color].backgroundRectangleAfter
-      : theme.components.toggle.colors[color].backgroundRectangle};
-  border-radius: ${({ variant, theme }) => theme.components.toggle.sizes[variant].borderRadius};
+      ? theme.components.toggle.colors[variant].backgroundRectangleAfter
+      : theme.components.toggle.colors[variant].backgroundRectangle};
+  border-radius: ${({ sized, theme }) => theme.components.toggle.sizes[sized].borderRadius};
 
   @keyframes slideRight {
     from {left: 0px;}
@@ -33,6 +33,9 @@ const ToggleBoxContainer = styled.span`
     animation-duration: 75ms;
     animation-timing-function: ease-in;
     left: ${({ theme }) => theme.components.toggle.sizes.left};
+    background-color:  ${({ variant, theme }) =>
+      theme.components.toggle.colors[variant].backgroundEllipseAfter};
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 
     &:after {
       display: inline-block;
@@ -54,12 +57,5 @@ const ToggleBoxContainer = styled.span`
   
   
 `
-/* 
-permet de modifier la cooleur de l'ellipse en fonction du click 
-${HiddenInputToggle}:checked + ${ToggleBox} {
-    background: green;
-    
-  }
-*/
 
 export default ToggleBoxContainer

@@ -26,10 +26,10 @@ const Breadcrumb = ({ elements, renderElement, separator, ...rest }) => {
       () => (renderElement && isFunction(renderElement) ? renderElement(element) : null),
       // Least precise, neither other function returned something, we default to some hand made rendering
       () => (
-        <React.Fragment>
+        <>
           {element.url && <BreadcrumbElement element={element} />}
           {!element.url && <CurrentElement>{element.name}</CurrentElement>}
-        </React.Fragment>
+        </>
       ),
     )
 

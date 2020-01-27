@@ -3522,7 +3522,7 @@ atob@^2.1.2:
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
 "atti-components@file:packages/atti-components":
-  version "0.2.2-rc9"
+  version "0.2.2"
   dependencies:
     lodash "^4.17.10"
     polished "^3.4.1"
@@ -5722,6 +5722,7 @@ data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
+<<<<<<< HEAD
 dataloader@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-1.4.0.tgz#bca11d867f5d3f1b9ed9f737bd15970c65dff5c8"
@@ -5731,6 +5732,11 @@ date-fns@2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.9.0.tgz#d0b175a5c37ed5f17b97e2272bbc1fa5aec677d2"
   integrity sha512-khbFLu/MlzLjEzy9Gh8oY1hNt/Dvxw3J6Rbc28cVoYWQaC1S3YI4xwkF9ZWcjDLscbZlY9hISMr66RFzZagLsA==
+=======
+date-fns@1.30.1:
+  version "1.30.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
+>>>>>>> parent of fcf6d6d... Tech 151 : upgrade date-fns
 
 dateformat@^3.0.0:
   version "3.0.3"
@@ -7946,7 +7952,7 @@ gatsby-source-filesystem@^2.1.36:
     xstate "^4.7.2"
 
 "gatsby-starter-default@file:packages/website":
-  version "0.1.1"
+  version "0.1.0"
   dependencies:
     "@mdx-js/mdx" "^1.5.1"
     "@mdx-js/react" "^1.5.1"

@@ -1,11 +1,4 @@
-import {
-  eachDayOfInterval,
-  endOfMonth,
-  endOfWeek,
-  startOfMonth,
-  startOfWeek,
-  isDate,
-} from 'date-fns'
+import { eachDay, endOfMonth, endOfWeek, startOfMonth, startOfWeek, isDate } from 'date-fns'
 
 const getDaysToDisplay = (date, weekStartsOn = 1) => {
   if (!isDate(date)) {
@@ -18,7 +11,7 @@ const getDaysToDisplay = (date, weekStartsOn = 1) => {
   // Advance time to the last weekday after the end of the month
   const lastDayToDisplay = endOfWeek(endOfMonth(date), { weekStartsOn })
 
-  return eachDayOfInterval({ start: firstDayToDisplay, end: lastDayToDisplay })
+  return eachDay(firstDayToDisplay, lastDayToDisplay)
 }
 
 export default getDaysToDisplay

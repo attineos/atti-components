@@ -1,37 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Text, Header3 } from '../Typographies'
 
 import StyledEllipse from './styles/StyledEllipse'
-import StyledBar from './styles/StyledBar'
+// import StyledBar from './styles/StyledBar'
+import StyledStep from './styles/StyledStep'
+import StyledLabel from './styles/StyledLabel'
+import StyledStepperProvider from './styles/StyledStepperProvider'
 
 /**
  * A basic stepper
  */
+// ICI DOIT RETURN UNIQUEMENT LE CONTEXTE AVEC AU MILIEU CHILDREN !!!
 
-const Stepper = ({ lbl, step }) => {
+const Stepper = ({ step, variant, onChange, id }) => {
   return (
-    <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <StyledEllipse>
-          <Header3>{step}</Header3>
-          <Text>{lbl}</Text>
-        </StyledEllipse>
-        <StyledBar style={{ marginLeft: '70px' }} />
-      </div>
-    </div>
+    <StyledStepperProvider variant={variant} step={step} onChange={onChange}>
+      <StyledStep id={id} />
+      <StyledEllipse />
+      <StyledLabel />
+    </StyledStepperProvider>
   )
 }
 
 Stepper.defaultProps = {
   step: 1,
-  lbl: null,
+  value: null,
 }
 
 Stepper.propTypes = {
-  lbl: PropTypes.string,
   step: PropTypes.number,
+  variant: PropTypes.oneOf(['number', 'checks', 'normal']),
+  /**
+   * Gets called when the value of the stepper changes.
+   *
+   * @param {SyntheticEvent} event The react `SyntheticEvent`
+   */
+  onChange: PropTypes.func,
+  value: PropTypes.string,
 }
 
 /** @component */

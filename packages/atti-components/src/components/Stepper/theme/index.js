@@ -20,5 +20,6 @@ export default ({ colors, spaces }) => ({
     marginTopBar: spaces.s2,
     marginTopH3: spaces.s0_75,
     marginTopT: spaces.s1_5,
+    marginTopLabel: spaces.s4,
   },
 })

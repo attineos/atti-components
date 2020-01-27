@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -8,17 +8,18 @@ import StyledStep from './styles/StyledStep'
 import StyledLabel from './styles/StyledLabel'
 import StyledStepperProvider from './styles/StyledStepperProvider'
 
+const StepperContext = React.createContext()
+
 /**
  * A basic stepper
  */
-// ICI DOIT RETURN UNIQUEMENT LE CONTEXTE AVEC AU MILIEU CHILDREN !!!
 
-const Stepper = ({ step, variant, onChange, id }) => {
+const Stepper = ({ step, variant, onChange, id, children }) => {
   return (
-    <StyledStepperProvider variant={variant} step={step} onChange={onChange}>
-      <StyledStep id={id} />
-      <StyledEllipse />
-      <StyledLabel />
+    <StyledStepperProvider>
+      <StepperContext.Provider variant={variant} step={step} onChange={onChange} id={id}>
+        {children}
+      </StepperContext.Provider>
     </StyledStepperProvider>
   )
 }
@@ -39,6 +40,11 @@ Stepper.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
 }
+
+// mise en place des attributs utilisable ou non
+Stepper.Step = StyledStep
+Stepper.Label = StyledLabel
+Stepper.Element = StyledEllipse
 
 /** @component */
 export default styled(Stepper)``

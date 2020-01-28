@@ -7,7 +7,7 @@ import ToggleBoxContainer from './styles/ToggleBoxContainer'
 import HiddenInputToggle from './styles/HiddenInputToggle'
 
 /**
- * A checkbox button.
+ * A toggle button.
  */
 const Toggle = ({
   checked: propsChecked,
@@ -60,11 +60,11 @@ Toggle.defaultProps = {
 
 Toggle.propTypes = {
   /**
-   * Whether or not the checkbox is checked.
+   * Whether or not the toggle is checked.
    */
   checked: PropTypes.bool,
   /**
-   * Classes of the CheckBox.
+   * Classes of the toggle.
    */
   className: PropTypes.string,
   /**
@@ -73,34 +73,34 @@ Toggle.propTypes = {
   id: PropTypes.string.isRequired,
   /**
    * The name attribute is used to reference form data after a form is submitted.
-   * Numerous checkbox with the same name value will be in the same group.
+   * Numerous toggle with the same name value will be in the same group.
    */
   name: PropTypes.string.isRequired,
   /**
-   * Gets called when the value of the checkbox changes.
+   * Gets called when the value of the toggle changes.
    *
    * @param {SyntheticEvent} event The react `SyntheticEvent`
    */
   onChange: PropTypes.func,
   /**
-   * The value attribute of the checkbox. This attribute has meaning when submitting a form.
+   * The value attribute of the toggle. This attribute has meaning when submitting a form.
    */
   value: PropTypes.string.isRequired,
 
   /**
-   * The type of variation to display
+   * The type of variation to display.
    */
   variant: PropTypes.oneOf(['primary', 'neutral', 'disabled', 'on_off']),
 
   /**
-   * Click possible or not
+   * Click possible or not on the toggle.
    */
   click: PropTypes.bool,
 
   /**
-   * The type of size to display
+   * The type of size to display.
    */
-  sized: PropTypes.oneOf(['little', 'medium', 'large']),
+  sized: PropTypes.oneOf(['small', 'medium', 'large']),
 }
 
 /** @component */

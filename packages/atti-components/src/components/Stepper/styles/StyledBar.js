@@ -12,3 +12,5 @@ const StyledBar = styled.span`
 `
 
 export default StyledBar
+
+// A remplacer pour qu'elle s'implante automatiquement entre 2 balises StyledStep

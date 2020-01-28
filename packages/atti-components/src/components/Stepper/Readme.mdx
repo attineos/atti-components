@@ -9,27 +9,33 @@ Displays a stepper that can be filled.
 ## Examples
 
 ```js
-<div style={{ paddingBottom: '60px' }}>
-  <Stepper style={{ display: 'flex', justifyContent: 'space-between' }}>
-    <Stepper.Step style={{ marginLeft: '100px' }}>
-      <Stepper.Element />
-      <Stepper.Label>1</Stepper.Label>
-      <Stepper.Label>Paris</Stepper.Label>
-    </Stepper.Step>
-    <Stepper.Bar />
-    <Stepper.Step style={{ marginLeft: '500px' }}>
-      <Stepper.Element />
-      <Stepper.Label>2</Stepper.Label>
-      <Stepper.Label>Lyon</Stepper.Label>
-    </Stepper.Step>
-    <Stepper.Bar />
-    <Stepper.Step style={{ marginLeft: '900px' }}>
-      <Stepper.Element />
-      <Stepper.Label>3</Stepper.Label>
-      <Stepper.Label>Nice</Stepper.Label>
-    </Stepper.Step>
-  </Stepper>
-</div>
+const Example = () => {
+  const [step, setStep] = useState(1)
+  const handleStep = () => {
+    setStep(2)
+    var elmt = document.getElementById(step)
+    elmt.style.backgroundColor = 'darkblue'
+  }
+
+  return (
+    <div style={{ paddingBottom: '80px' }}>
+      <Stepper>
+        <Stepper.Step id={1} onClick={handleStep}>
+          <Stepper.Element />
+          <Stepper.Label>1</Stepper.Label>
+          <Stepper.Label>Num 1</Stepper.Label>
+        </Stepper.Step>
+        <Stepper.Step id={2} onClick={handleStep} style={{ marginLeft: '400px' }}>
+          <Stepper.Element />
+          <Stepper.Label>2</Stepper.Label>
+          <Stepper.Label>Num 2</Stepper.Label>
+        </Stepper.Step>
+      </Stepper>
+    </div>
+  )
+}
+
+render(<Example />)
 ```
 
 ## Theme

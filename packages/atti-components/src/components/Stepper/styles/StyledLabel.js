@@ -1,16 +1,15 @@
 import styled from 'styled-components'
-import StyledEllipse from './StyledEllipse'
 
 const StyledLabel = styled.p`
   position: relative;
-  font-size: 18px;
-  font-family: roboto;
+  font-size: ${({ theme }) => theme.components.stepper.fonts.fontSize};
+  font-family: ${({ theme }) => theme.components.stepper.fonts.fontFamily};
   text-align: center;
-  color: red;
-  margin-top:24px;
+  color: ${({ theme }) => theme.components.stepper.colors.fill};
+  margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopLabel};
   
   :after{
-    content="✔";
+    content='✔';
   }
 
 `

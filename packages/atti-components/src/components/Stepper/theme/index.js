@@ -1,4 +1,4 @@
-export default ({ colors, spaces }) => ({
+export default ({ colors, spaces, fonts }) => ({
   borders: {
     borderColor: colors.grey,
     borderRadius: '25px',
@@ -8,8 +8,9 @@ export default ({ colors, spaces }) => ({
   colors: {
     bulle: colors.primary,
     background: colors.lighterGrey,
-    fill: colors.lightPrimary,
+    fill: colors.darkerPrimary,
     text: colors.black,
+    grey: colors.lighterGrey,
   },
 
   sizes: {
@@ -20,6 +21,10 @@ export default ({ colors, spaces }) => ({
     marginTopBar: spaces.s2,
     marginTopH3: spaces.s0_75,
     marginTopT: spaces.s1_5,
-    marginTopLabel: spaces.s4,
+    marginTopLabel: spaces.s1_5,
+  },
+  fonts: {
+    fontFamily: fonts.fontFamily.primary,
+    fontSize: fonts.fontSize.fs18,
   },
 })

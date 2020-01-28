@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -13,32 +13,54 @@ const StepperContext = React.createContext()
  * A basic stepper
  */
 
-const Stepper = ({ step, variant, onChange, id, children }) => {
+const Stepper = ({ variant, onChange, id, children, value }) => {
+  const [step, setStep] = useState()
+  const handleStep = () => {
+    setStep(id)
+    onChange && onChange()
+  }
   return (
-    <StepperContext.Provider variant={variant} step={step} onChange={onChange} id={id}>
+    <StepperContext.Provider
+      variant={variant}
+      onChange={handleStep}
+      id={id}
+      value={value}
+      step={step}
+    >
       {children}
     </StepperContext.Provider>
   )
 }
 
 Stepper.defaultProps = {
-  step: 1,
   value: null,
+  variant: 'normal',
 }
 
 Stepper.propTypes = {
-  step: PropTypes.number,
-  variant: PropTypes.oneOf(['number', 'checks', 'normal']),
   /**
-   * Gets called when the value of the stepper changes.
+   * The variant of the stepper.
+   */
+  variant: PropTypes.oneOf(['number', 'checks', 'normal']),
+
+  /**
+   * Gets called when the step changes.
    *
    * @param {SyntheticEvent} event The react `SyntheticEvent`
    */
   onChange: PropTypes.func,
+
+  /**
+   * The value of the stepper.
+   */
   value: PropTypes.string,
+
+  /**
+   * The id of the step require.
+   */
+  id: PropTypes.number,
 }
 
-// mise en place des attributs utilisable ou non
 Stepper.Step = StyledStep
 Stepper.Label = StyledLabel
 Stepper.Element = StyledEllipse

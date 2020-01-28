@@ -4,7 +4,8 @@ import ToggleBox from './ToggleBox'
 import HiddenInputToggle from './HiddenInputToggle'
 
 const ToggleBoxContainer = styled.span`
-  position: absolute;
+  position: relative;
+  display: inline-block;
 
   width: ${({ sized, theme }) => theme.components.toggle.sizes[sized].widthRectangle};
   height: ${({ sized, theme }) => theme.components.toggle.sizes[sized].heightRectangle};
@@ -32,6 +33,9 @@ const ToggleBoxContainer = styled.span`
     animation-duration: 75ms;
     animation-timing-function: ease-in;
     left: ${({ theme }) => theme.components.toggle.sizes.left};
+    background-color:  ${({ variant, theme }) =>
+      theme.components.toggle.colors[variant].backgroundEllipseAfter};
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 
     &:after {
       display: inline-block;
@@ -53,12 +57,5 @@ const ToggleBoxContainer = styled.span`
   
   
 `
-/* 
-permet de modifier la cooleur de l'ellipse en fonction du click 
-${HiddenInputToggle}:checked + ${ToggleBox} {
-    background: green;
-    
-  }
-*/
 
 export default ToggleBoxContainer

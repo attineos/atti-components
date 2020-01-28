@@ -35,6 +35,7 @@ import {
   Table,
   TextArea,
   ThemeProvider,
+  Toggle,
   Tooltip,
 } from "atti-components"
 
@@ -89,6 +90,7 @@ const mdxComponents = {
   TextArea: TextArea,
   Theme: withTheme(ThemeRenderer),
   ThemeProvider: ThemeProvider,
+  Toggle: Toggle,
   Tooltip: Tooltip,
 }
 

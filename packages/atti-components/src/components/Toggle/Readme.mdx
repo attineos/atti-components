@@ -1,0 +1,49 @@
+---
+path: '/toggle'
+name: 'Toggle'
+title: 'Toggle'
+---
+
+Toggle offers the user the possibility to choose or not item.
+
+## Example
+
+```js
+<div
+  style={{
+    display: 'flex',
+    justifyContent: 'space-between',
+  }}
+>
+  <div>
+    <Toggle id="toggleTest1" name="toggleTestGroup" />
+  </div>
+  <div>
+    <Toggle
+      id="toggleTest2"
+      name="toggleTestGroup"
+      variant="neutral"
+      checked={true}
+      sized="small"
+    />
+  </div>
+  <div>
+    <Toggle
+      id="toggleTest3"
+      name="toggleTestGroup"
+      value="ImChecked"
+      variant="disabled"
+      click="false"
+      sized="medium"
+      checked={true}
+    />
+  </div>
+  <div>
+    <Toggle id="toggleTest4" name="toggleTestGroup" variant="on_off" sized="medium" />
+  </div>
+</div>
+```
+
+## Theme
+
+<Theme name="components.toggle" />

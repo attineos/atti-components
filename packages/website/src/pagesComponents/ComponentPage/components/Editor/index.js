@@ -42,6 +42,7 @@ import {
   Text,
   TextArea,
   ThemeProvider,
+  Toggle,
   Tooltip,
   defaultTheme,
 } from "atti-components"
@@ -88,6 +89,7 @@ const scope = {
   Text,
   TextArea,
   ThemeProvider,
+  Toggle,
   Tooltip,
   css,
   defaultTheme,

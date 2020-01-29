@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 
 const StyledBar = styled.span`
-  position: absolute;
-
-  width: ${({ theme }) => theme.components.stepper.sizes.widthBar};
-  height: ${({ theme }) => theme.components.stepper.sizes.heightBar};
-  margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopBar};
-
-  background-color: ${({ theme }) => theme.components.stepper.colors.background};
-  border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 5px;
 `
 
 export default StyledBar

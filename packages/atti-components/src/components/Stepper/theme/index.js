@@ -8,9 +8,8 @@ export default ({ colors, spaces, fonts }) => ({
   colors: {
     bulle: colors.primary,
     background: colors.lighterGrey,
-    fill: colors.darkerPrimary,
     text: colors.black,
-    grey: colors.lighterGrey,
+    hover: colors.darkPrimary,
   },
 
   sizes: {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -8,25 +8,13 @@ import StyledStep from './styles/StyledStep'
 import StyledLabel from './styles/StyledLabel'
 
 const StepperContext = React.createContext()
-
 /**
  * A basic stepper
  */
 
-const Stepper = ({ variant, onChange, id, children, value }) => {
-  const [step, setStep] = useState()
-  const handleStep = () => {
-    setStep(id)
-    onChange && onChange()
-  }
+const Stepper = ({ variant, id, children, value }) => {
   return (
-    <StepperContext.Provider
-      variant={variant}
-      onChange={handleStep}
-      id={id}
-      value={value}
-      step={step}
-    >
+    <StepperContext.Provider variant={variant} id={id} value={value}>
       {children}
     </StepperContext.Provider>
   )
@@ -35,6 +23,7 @@ const Stepper = ({ variant, onChange, id, children, value }) => {
 Stepper.defaultProps = {
   value: null,
   variant: 'normal',
+  id: null,
 }
 
 Stepper.propTypes = {
@@ -42,13 +31,6 @@ Stepper.propTypes = {
    * The variant of the stepper.
    */
   variant: PropTypes.oneOf(['number', 'checks', 'normal']),
-
-  /**
-   * Gets called when the step changes.
-   *
-   * @param {SyntheticEvent} event The react `SyntheticEvent`
-   */
-  onChange: PropTypes.func,
 
   /**
    * The value of the stepper.
@@ -59,6 +41,7 @@ Stepper.propTypes = {
    * The id of the step require.
    */
   id: PropTypes.number,
+  children: PropTypes.object.isRequired,
 }
 
 Stepper.Step = StyledStep

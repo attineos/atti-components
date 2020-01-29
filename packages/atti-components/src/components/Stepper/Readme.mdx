@@ -12,22 +12,31 @@ Displays a stepper that can be filled.
 const Example = () => {
   const [step, setStep] = useState(1)
   const handleStep = () => {
-    setStep(2)
-    var elmt = document.getElementById(step)
-    elmt.style.backgroundColor = 'darkblue'
+    var elmt1 = document.getElementById(step)
+    var elmt2 = document.getElementById(step - 1)
+    var elmt3 = document.getElementById(step + 1)
+    if (step == 1) {
+      elmt1.style.backgroundColor = '#0E7C86'
+      elmt3.style.backgroundColor = '#2CB1BC'
+      setStep(step + 1)
+    } else {
+      elmt2.style.backgroundColor = '#2CB1BC'
+      elmt1.style.backgroundColor = '#0E7C86'
+      setStep(step - 1)
+    }
   }
 
   return (
-    <div style={{ paddingBottom: '80px' }}>
+    <div style={{ padding: '30px', display: 'flex', alignItems: 'center' }}>
       <Stepper>
-        <Stepper.Step id={1} onClick={handleStep}>
-          <Stepper.Element />
-          <Stepper.Label>1</Stepper.Label>
+        <Stepper.Step onClick={handleStep}>
+          <Stepper.Element id={1} />
+          <Stepper.Label style={{ color: 'white' }}>1</Stepper.Label>
           <Stepper.Label>Num 1</Stepper.Label>
         </Stepper.Step>
-        <Stepper.Step id={2} onClick={handleStep} style={{ marginLeft: '400px' }}>
-          <Stepper.Element />
-          <Stepper.Label>2</Stepper.Label>
+        <Stepper.Step onClick={handleStep}>
+          <Stepper.Element id={2} />
+          <Stepper.Label style={{ color: 'white' }}>2</Stepper.Label>
           <Stepper.Label>Num 2</Stepper.Label>
         </Stepper.Step>
       </Stepper>
@@ -36,6 +45,13 @@ const Example = () => {
 }
 
 render(<Example />)
+
+/*  const [step, setStep] = useState(1)
+  const handleStep = () => {
+    setStep(2)
+    var elmt = document.getElementById(step)
+    elmt.style.backgroundColor = '#0E7C86'
+  }*/
 ```
 
 ## Theme

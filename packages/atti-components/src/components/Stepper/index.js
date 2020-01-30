@@ -3,27 +3,21 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import StyledEllipse from './styles/StyledEllipse'
-import StyledBar from './styles/StyledBar'
-import StyledStep from './styles/StyledStep'
+import Step from './styles/StyledStep'
 import StyledLabel from './styles/StyledLabel'
+import { StepperProvider } from './hooks'
 
-const StepperContext = React.createContext()
 /**
  * A basic stepper
  */
 
-const Stepper = ({ variant, id, children, value }) => {
-  return (
-    <StepperContext.Provider variant={variant} id={id} value={value}>
-      {children}
-    </StepperContext.Provider>
-  )
+const Stepper = ({ variant, children, value }) => {
+  return <StepperProvider>{children}</StepperProvider>
 }
 
 Stepper.defaultProps = {
   value: null,
   variant: 'normal',
-  id: null,
 }
 
 Stepper.propTypes = {
@@ -38,16 +32,14 @@ Stepper.propTypes = {
   value: PropTypes.string,
 
   /**
-   * The id of the step require.
+   * The id of the step.
    */
-  id: PropTypes.number,
-  children: PropTypes.object.isRequired,
+  children: PropTypes.any.isRequired,
 }
 
-Stepper.Step = StyledStep
+Stepper.Step = Step
 Stepper.Label = StyledLabel
 Stepper.Element = StyledEllipse
-Stepper.Bar = StyledBar
 
 /** @component */
 export default styled(Stepper)``

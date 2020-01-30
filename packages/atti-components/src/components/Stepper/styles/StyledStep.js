@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import React, { useEffect } from 'react'
+import { useStepperDispatch } from '../hooks'
 
 const StyledStep = styled.div`
   position: relative;
@@ -6,7 +8,6 @@ const StyledStep = styled.div`
   text-align: center;
   width: ${({ theme }) => theme.components.stepper.sizes.ellipse};
   height: ${({ theme }) => theme.components.stepper.sizes.ellipse};
-  background-color: white;
 
   :not(:last-child) {
     margin-right: 100px;
@@ -23,4 +24,21 @@ const StyledStep = styled.div`
   }
 `
 
-export default StyledStep
+const Step = ({ id, children }) => {
+  const { register, activate } = useStepperDispatch()
+
+  useEffect(() => {
+    console.log(register(id))
+  }, [])
+  console.log('fois')
+
+  const onClickElem = () => {
+    console.log(id)
+    activate(id)
+    console.log('activer')
+  }
+
+  return <StyledStep onClick={onClickElem}>{children}</StyledStep>
+}
+
+export default Step

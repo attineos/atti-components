@@ -1,10 +1,4 @@
 export default ({ colors, spaces, fonts }) => ({
-  borders: {
-    borderColor: colors.grey,
-    borderRadius: '25px',
-    borderWidth: 0,
-  },
-
   colors: {
     bulle: colors.primary,
     background: colors.lighterGrey,

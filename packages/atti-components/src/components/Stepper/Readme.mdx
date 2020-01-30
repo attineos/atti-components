@@ -4,54 +4,30 @@ name: 'Stepper'
 title: 'Stepper'
 ---
 
-Displays a stepper that can be filled.
+Displays a stepper that can be adapted.
 
 ## Examples
 
 ```js
-const Example = () => {
-  const [step, setStep] = useState(1)
-  const handleStep = () => {
-    var elmt1 = document.getElementById(step)
-    var elmt2 = document.getElementById(step - 1)
-    var elmt3 = document.getElementById(step + 1)
-    if (step == 1) {
-      elmt1.style.backgroundColor = '#0E7C86'
-      elmt3.style.backgroundColor = '#2CB1BC'
-      setStep(step + 1)
-    } else {
-      elmt2.style.backgroundColor = '#2CB1BC'
-      elmt1.style.backgroundColor = '#0E7C86'
-      setStep(step - 1)
-    }
-  }
-
-  return (
-    <div style={{ padding: '30px', display: 'flex', alignItems: 'center' }}>
-      <Stepper>
-        <Stepper.Step onClick={handleStep}>
-          <Stepper.Element id={1} />
-          <Stepper.Label style={{ color: 'white' }}>1</Stepper.Label>
-          <Stepper.Label>Num 1</Stepper.Label>
-        </Stepper.Step>
-        <Stepper.Step onClick={handleStep}>
-          <Stepper.Element id={2} />
-          <Stepper.Label style={{ color: 'white' }}>2</Stepper.Label>
-          <Stepper.Label>Num 2</Stepper.Label>
-        </Stepper.Step>
-      </Stepper>
-    </div>
-  )
-}
-
-render(<Example />)
-
-/*  const [step, setStep] = useState(1)
-  const handleStep = () => {
-    setStep(2)
-    var elmt = document.getElementById(step)
-    elmt.style.backgroundColor = '#0E7C86'
-  }*/
+<div style={{ display: 'flex', alignItems: 'center' }}>
+  <Stepper>
+    <Stepper.Step id="1">
+      <Stepper.Element />
+      <Stepper.Label style={{ color: 'white' }}>1</Stepper.Label>
+      <Stepper.Label>Num 1</Stepper.Label>
+    </Stepper.Step>
+    <Stepper.Step id="2">
+      <Stepper.Element />
+      <Stepper.Label style={{ color: 'white' }}>2</Stepper.Label>
+      <Stepper.Label>Num 2</Stepper.Label>
+    </Stepper.Step>
+    <Stepper.Step id="3">
+      <Stepper.Element />
+      <Stepper.Label style={{ color: 'white' }}>3</Stepper.Label>
+      <Stepper.Label>Num 3</Stepper.Label>
+    </Stepper.Step>
+  </Stepper>
+</div>
 ```
 
 ## Theme

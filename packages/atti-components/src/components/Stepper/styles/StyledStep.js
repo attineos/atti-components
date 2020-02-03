@@ -26,11 +26,11 @@ const StyledStep = styled.div`
   :not(:last-child):after {
     position: absolute;
     content: '';
-    right: -154%;
+    right: -200%;
     top: 0%;
-    width: 152%;
+    width: 200%;
     margin-top: 50%;
-    border-bottom: 1px solid grey;
+    border-bottom: 3px solid grey;
   }
 `
 

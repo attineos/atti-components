@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import React, { useEffect } from 'react'
-import { useStepperDispatch } from '../hooks'
+import { size } from 'lodash'
+
+import { useStepperDispatch, useStepper } from '../hooks'
 
 const StyledStep = styled.div`
   position: relative;
@@ -9,6 +11,9 @@ const StyledStep = styled.div`
   width: ${({ theme }) => theme.components.stepper.sizes.ellipse};
   height: ${({ theme }) => theme.components.stepper.sizes.ellipse};
 
+  border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
+  cursor: pointer;
+
   :not(:last-child) {
     margin-right: 100px;
   }
@@ -16,27 +21,36 @@ const StyledStep = styled.div`
   :not(:last-child):after {
     position: absolute;
     content: '';
-    right: -200%;
+    right: -154%;
     top: 0%;
-    width: 200%;
-    height: 50%;
-    border-bottom: 2px solid grey;
+    width: 152%;
+    margin-top: 50%;
+    border-bottom: 1px solid grey;
+    border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
   }
 `
 
 const Step = ({ id, children }) => {
-  const { register, activate } = useStepperDispatch()
+  const { register, activate, desactivate } = useStepperDispatch()
+  const list = useStepper()
 
   useEffect(() => {
-    console.log(register(id))
+    register(id)
   }, [])
-  console.log('fois')
 
   const onClickElem = () => {
-    console.log(id)
-    activate(id)
-    console.log('activer')
+    const currentStep = id
+    if (list[currentStep]) {
+      for (let k = currentStep; k <= size(list); k++) {
+        desactivate(k)
+      }
+    } else {
+      for (let i = 1; i <= currentStep; i++) {
+        activate(i)
+      }
+    }
   }
+  console.log(list)
 
   return <StyledStep onClick={onClickElem}>{children}</StyledStep>
 }

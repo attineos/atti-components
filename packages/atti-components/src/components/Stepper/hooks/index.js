@@ -1,32 +1,45 @@
 import React, { useContext, useReducer } from 'react'
 
 const StepperContext = React.createContext()
+const StepperDispatchContext = React.createContext()
 
-function stepReducer(state, action) {
-  switch (action.type) {
+function stepReducer(state, { type, id }) {
+  switch (type) {
     case 'REGISTER':
-      return 'false' // mets les id et un bool associé à false dans un obj
-    case 'ACTIVE':
-      return 'true' // passe le bool de l'id en question à true
+      return { ...state, [id]: false }
+    case 'ACTIVATE':
+      return { ...state, [id]: true }
+    case 'DESACTIVATE':
+      return { ...state, [id]: false }
   }
+}
+function useStepper() {
+  const context = useContext(StepperContext)
+  return context
 }
 
 function useStepperDispatch() {
-  const dispatch = useContext(StepperContext)
+  const dispatch = useContext(StepperDispatchContext)
 
   const register = id => dispatch({ type: 'REGISTER', id })
-  const activate = id => dispatch({ type: 'ACTIVE', id })
+  const activate = id => dispatch({ type: 'ACTIVATE', id })
+  const desactivate = id => dispatch({ type: 'DESACTIVATE', id })
 
   return {
     register,
     activate,
+    desactivate,
   }
 }
 
 const StepperProvider = ({ children }) => {
-  const [, dispatch] = useReducer(stepReducer)
+  const [list, dispatch] = useReducer(stepReducer, {}) // ici pour obtenir un state
 
-  return <StepperContext.Provider value={dispatch}>{children}</StepperContext.Provider>
+  return (
+    <StepperContext.Provider value={list}>
+      <StepperDispatchContext.Provider value={dispatch}>{children}</StepperDispatchContext.Provider>
+    </StepperContext.Provider>
+  )
 }
 
-export { StepperProvider, useStepperDispatch }
+export { StepperProvider, useStepperDispatch, useStepper }

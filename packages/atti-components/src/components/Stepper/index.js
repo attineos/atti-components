@@ -11,12 +11,11 @@ import { StepperProvider } from './hooks'
  * A basic stepper
  */
 
-const Stepper = ({ variant, children, value }) => {
-  return <StepperProvider>{children}</StepperProvider>
+const Stepper = ({ variant, children }) => {
+  return <StepperProvider variant={variant}>{children}</StepperProvider>
 }
 
 Stepper.defaultProps = {
-  value: null,
   variant: 'normal',
 }
 
@@ -25,11 +24,6 @@ Stepper.propTypes = {
    * The variant of the stepper.
    */
   variant: PropTypes.oneOf(['number', 'checks', 'normal']),
-
-  /**
-   * The value of the stepper.
-   */
-  value: PropTypes.string,
 
   /**
    * The id of the step.

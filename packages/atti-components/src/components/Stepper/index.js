@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import StyledEllipse from './styles/StyledEllipse'
 import Step from './styles/StyledStep'
 import StyledLabel from './styles/StyledLabel'
 import { StepperProvider } from './hooks'
@@ -29,7 +28,6 @@ Stepper.propTypes = {
 
 Stepper.Step = Step
 Stepper.Label = StyledLabel
-Stepper.Element = StyledEllipse
 
 /** @component */
 export default styled(Stepper)``

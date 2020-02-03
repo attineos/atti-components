@@ -16,7 +16,7 @@ const Stepper = ({ variant, children }) => {
 }
 
 Stepper.defaultProps = {
-  variant: 'normal',
+  variant: 'number',
 }
 
 Stepper.propTypes = {
@@ -24,10 +24,6 @@ Stepper.propTypes = {
    * The variant of the stepper.
    */
   variant: PropTypes.oneOf(['number', 'checks', 'normal']),
-
-  /**
-   * The id of the step.
-   */
   children: PropTypes.any.isRequired,
 }
 

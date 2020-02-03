@@ -5,7 +5,8 @@ const StyledLabel = styled.p`
   font-size: ${({ theme }) => theme.components.stepper.fonts.fontSize};
   font-family: ${({ theme }) => theme.components.stepper.fonts.fontFamily};
   text-align: center;
-  color: ${({ theme }) => theme.components.stepper.colors.text};
+  color: ${({ theme, middle }) =>
+    middle ? theme.components.stepper.colors.midText : theme.components.stepper.colors.text};
   margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopLabel};
 `
 

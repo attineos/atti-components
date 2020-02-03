@@ -1,5 +1,6 @@
-import styled from 'styled-components'
 import React, { useEffect } from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { size } from 'lodash'
 
 import { useStepperDispatch, useStepper } from '../hooks'
@@ -7,12 +8,16 @@ import { useStepperDispatch, useStepper } from '../hooks'
 const StyledStep = styled.div`
   position: relative;
   display: inline-block;
-  text-align: center;
-  width: ${({ theme }) => theme.components.stepper.sizes.ellipse};
-  height: ${({ theme }) => theme.components.stepper.sizes.ellipse};
+
+  width: ${({ theme }) => theme.components.stepper.sizes.element};
+  height: ${({ theme }) => theme.components.stepper.sizes.element};
 
   border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
   cursor: pointer;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+  background-color: ${({ isActivated, theme }) =>
+    isActivated ? theme.components.stepper.colors.stepAfter : theme.components.stepper.colors.step};
 
   :not(:last-child) {
     margin-right: 100px;
@@ -26,7 +31,6 @@ const StyledStep = styled.div`
     width: 152%;
     margin-top: 50%;
     border-bottom: 1px solid grey;
-    border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
   }
 `
 
@@ -49,10 +53,26 @@ const Step = ({ id, children }) => {
         activate(i)
       }
     }
+    isActive()
   }
-  console.log(list)
 
-  return <StyledStep onClick={onClickElem}>{children}</StyledStep>
+  const isActive = () => {
+    return list[id]
+  }
+
+  return (
+    <StyledStep isActivated={isActive()} onClick={onClickElem}>
+      {children}
+    </StyledStep>
+  )
+}
+Step.defaultProps = {
+  children: null,
+}
+
+Step.propTypes = {
+  id: PropTypes.string.isRequired,
+  children: PropTypes.any,
 }
 
 export default Step

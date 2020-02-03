@@ -1,4 +1,5 @@
 import React, { useContext, useReducer } from 'react'
+import PropTypes from 'prop-types'
 
 const StepperContext = React.createContext()
 const StepperDispatchContext = React.createContext()
@@ -40,6 +41,13 @@ const StepperProvider = ({ children }) => {
       <StepperDispatchContext.Provider value={dispatch}>{children}</StepperDispatchContext.Provider>
     </StepperContext.Provider>
   )
+}
+StepperProvider.defaultProps = {
+  children: null,
+}
+
+StepperProvider.propTypes = {
+  children: PropTypes.any,
 }
 
 export { StepperProvider, useStepperDispatch, useStepper }

@@ -3,10 +3,11 @@ import styled from 'styled-components'
 const StyledEllipse = styled.div`
   position: absolute;
 
+  display:none;
   width: ${({ theme }) => theme.components.stepper.sizes.ellipse};
   height: ${({ theme }) => theme.components.stepper.sizes.ellipse};
 
-  background-color: ${({ theme }) => theme.components.stepper.colors.bulle};
+  background-color: ${({ theme }) => theme.components.stepper.colors.step};
   border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
   top: 0
   cursor: pointer;
@@ -18,3 +19,5 @@ const StyledEllipse = styled.div`
 `
 
 export default StyledEllipse
+
+// INUTILISER VOIR SI ON LE GARDE SACHANT QU IL NA PAS D UTILITER

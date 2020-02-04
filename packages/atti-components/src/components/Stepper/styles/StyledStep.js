@@ -14,7 +14,10 @@ const StyledStep = styled.div`
 
   border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
   cursor: pointer;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: ${({ isActivated, theme }) =>
+    isActivated
+      ? theme.components.stepper.boxShadows.shadow1
+      : theme.components.stepper.boxShadows.shadow2};
 
   background-color: ${({ isActivated, theme }) =>
     isActivated ? theme.components.stepper.colors.stepAfter : theme.components.stepper.colors.step};
@@ -26,17 +29,17 @@ const StyledStep = styled.div`
   :not(:last-child):after {
     position: absolute;
     content: '';
-    right: -200%;
-    top: 0%;
-    width: 200%;
-    margin-top: 50%;
-    border-bottom: 3px solid grey;
+    right: ${({ theme }) => theme.components.stepper.sizes.rightBar};
+    top: ${({ theme }) => theme.components.stepper.sizes.topBar};
+    width: ${({ theme }) => theme.components.stepper.sizes.widthBar};
+    margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopBar};
+    border-bottom: ${({ theme }) => theme.components.stepper.sizes.borderBottomBar};
   }
 `
 
 const Step = ({ id, children }) => {
   const { register, activate, desactivate } = useStepperDispatch()
-  const list = useStepper()
+  const stepList = useStepper()
 
   useEffect(() => {
     register(id)
@@ -44,8 +47,8 @@ const Step = ({ id, children }) => {
 
   const onClickElem = () => {
     const currentStep = id
-    if (list[currentStep]) {
-      for (let k = currentStep; k <= size(list); k++) {
+    if (stepList[currentStep]) {
+      for (let k = currentStep; k <= size(stepList); k++) {
         desactivate(k)
       }
     } else {
@@ -57,7 +60,7 @@ const Step = ({ id, children }) => {
   }
 
   const isActive = () => {
-    return list[id]
+    return stepList[id]
   }
 
   return (
@@ -71,7 +74,14 @@ Step.defaultProps = {
 }
 
 Step.propTypes = {
+  /**
+   * The id of the step.
+   * It allows to identify each step to know if it activates and apply the modifications
+   */
   id: PropTypes.string.isRequired,
+  /**
+   * The content of the step.
+   */
   children: PropTypes.any,
 }
 

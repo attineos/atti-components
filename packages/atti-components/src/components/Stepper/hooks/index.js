@@ -7,11 +7,10 @@ const StepperDispatchContext = React.createContext()
 function stepReducer(state, { type, id }) {
   switch (type) {
     case 'REGISTER':
+    case 'DESACTIVATE':
       return { ...state, [id]: false }
     case 'ACTIVATE':
       return { ...state, [id]: true }
-    case 'DESACTIVATE':
-      return { ...state, [id]: false }
   }
 }
 function useStepper() {
@@ -34,10 +33,10 @@ function useStepperDispatch() {
 }
 
 const StepperProvider = ({ children }) => {
-  const [list, dispatch] = useReducer(stepReducer, {}) // ici pour obtenir un state
+  const [stepList, dispatch] = useReducer(stepReducer, {})
 
   return (
-    <StepperContext.Provider value={list}>
+    <StepperContext.Provider value={stepList}>
       <StepperDispatchContext.Provider value={dispatch}>{children}</StepperDispatchContext.Provider>
     </StepperContext.Provider>
   )
@@ -47,6 +46,9 @@ StepperProvider.defaultProps = {
 }
 
 StepperProvider.propTypes = {
+  /**
+   * Content of the StepProvider.
+   */
   children: PropTypes.any,
 }
 

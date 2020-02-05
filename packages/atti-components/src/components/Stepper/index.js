@@ -9,12 +9,17 @@ import { StepperProvider, useStepperDispatch, useStepper } from './hooks'
 /**
  * A basic stepper
  */
-const Stepper = ({ children, onClick }) => {
-  return <StepperProvider onClick={onClick}>{children}</StepperProvider>
+const Stepper = ({ children, onClick, stepList }) => {
+  return (
+    <StepperProvider onClick={onClick} stepperList={stepList}>
+      {children}
+    </StepperProvider>
+  )
 }
 
 Stepper.defaultProps = {
   onClick: null,
+  stepList: {},
 }
 
 Stepper.propTypes = {
@@ -27,6 +32,10 @@ Stepper.propTypes = {
    *  retrieves the current step
    */
   onClick: PropTypes.any,
+  /*
+   * list that allows the user to choose the starting step
+   */
+  stepList: PropTypes.object,
 }
 
 Stepper.Step = Step

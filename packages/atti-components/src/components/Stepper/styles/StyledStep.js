@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { size } from 'lodash'
+import { size, isEmpty } from 'lodash'
 
 import StyledMidLabel from './StyledMidLabel'
 import { useStepperDispatch, useStepper, useOnChange } from '../hooks'
@@ -58,7 +58,9 @@ const Step = ({ id, children, value }) => {
   const onClick = useOnChange()
 
   useEffect(() => {
-    register(id)
+    if (isEmpty(stepList)) {
+      register(id)
+    }
   }, [])
 
   const onClickStep = () => {
@@ -72,7 +74,6 @@ const Step = ({ id, children, value }) => {
         activate(i)
       }
     }
-    isActive()
     onClick && onClick(currentStep)
   }
 

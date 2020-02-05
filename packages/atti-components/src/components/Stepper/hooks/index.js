@@ -38,8 +38,8 @@ function useOnChange() {
   return context
 }
 
-const StepperProvider = ({ children, onClick }) => {
-  const [stepList, dispatch] = useReducer(stepReducer, {})
+const StepperProvider = ({ children, onClick, stepperList }) => {
+  const [stepList, dispatch] = useReducer(stepReducer, stepperList)
 
   return (
     <StepperContext.Provider value={stepList}>
@@ -54,6 +54,7 @@ const StepperProvider = ({ children, onClick }) => {
 StepperProvider.defaultProps = {
   children: null,
   onClick: null,
+  stepperList: {},
 }
 
 StepperProvider.propTypes = {
@@ -65,6 +66,10 @@ StepperProvider.propTypes = {
    * retrieves the current step.
    */
   onClick: PropTypes.any,
+  /*
+   * list that allows the user to choose the starting step
+   */
+  stepperList: PropTypes.object,
 }
 
 export { StepperProvider, useStepperDispatch, useStepper, useOnChange }

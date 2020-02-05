@@ -10,14 +10,14 @@ Displays a stepper that can be adapted.
 
 ```js
 const Example = () => {
-  const [counter, setCounter] = useState(null)
+  const [counter, setCounter] = useState(2)
 
   return (
     <div>
       <div style={{ margin: '15px' }}>
         <p>The selected step is : {counter} </p>
       </div>
-      <Stepper onClick={setCounter}>
+      <Stepper onClick={setCounter} stepList={{ 1: true, 2: true, 3: false }}>
         <Stepper.Step id="1" value="1">
           <Stepper.Label>Num 1</Stepper.Label>
         </Stepper.Step>

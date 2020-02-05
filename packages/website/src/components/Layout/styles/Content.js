@@ -5,6 +5,7 @@ const Content = styled("div")`
   padding-top: ${({ theme }) => theme.spaces.s4};
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 `
 
 export default Content

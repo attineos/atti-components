@@ -7,6 +7,10 @@ const StyledMidLabel = styled.p`
   font-family: ${({ theme }) => theme.components.stepper.fonts.fontFamily};
   color: ${({ theme }) => theme.components.stepper.colors.midText};
   text-align: center;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    font-size: ${({ theme }) => theme.components.stepper.fonts.fontSizeMobile};
+  }
 `
 
 export default StyledMidLabel

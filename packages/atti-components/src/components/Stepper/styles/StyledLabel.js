@@ -10,7 +10,8 @@ const StyledLabel = styled.p`
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     margin-top: -25%;
     margin-left: 125%;
-    text-align: right;
+    font-size: ${({ theme }) => theme.components.stepper.fonts.fontSizeMobile};
+    width: 75px;
   }
 `
 

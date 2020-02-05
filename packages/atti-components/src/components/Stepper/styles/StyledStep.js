@@ -47,7 +47,7 @@ const StyledStep = styled.div`
       top: 50%;
       width: 0;
       height: 75%;
-      border: ${({ theme }) => theme.components.stepper.sizes.borderBottomBar};
+      border: ${({ theme }) => theme.components.stepper.sizes.borderMobileBar};
     }
   }
 `
@@ -102,6 +102,9 @@ Step.propTypes = {
    * The content of the step.
    */
   children: PropTypes.any,
+  /**
+   * value in the step.
+   */
   value: PropTypes.string,
 }
 

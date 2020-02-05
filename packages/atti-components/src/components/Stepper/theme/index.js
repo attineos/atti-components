@@ -17,10 +17,12 @@ export default ({ colors, spaces, fonts, boxShadows }) => ({
     rightBar: '-200%',
     widthBar: '200%',
     borderBottomBar: `${borders.widths.bw3} solid ${colors.darkerGrey}`,
+    borderMobileBar: `${borders.widths.bw2} solid ${colors.darkerGrey}`,
   },
   fonts: {
     fontFamily: fonts.fontFamily.primary,
     fontSize: fonts.fontSize.fs18,
+    fontSizeMobile: fonts.fontSize.fs16,
   },
   boxShadows: {
     shadow1: boxShadows.shadow1,

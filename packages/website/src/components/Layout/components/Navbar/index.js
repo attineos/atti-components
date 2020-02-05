@@ -146,6 +146,9 @@ const Navbar = () => {
         <Item as={Link} to="/header4" activeClassName="active">
           Header4
         </Item>
+        <Item as={Link} to="/header5" activeClassName="active">
+          Header5
+        </Item>
         <Item as={Link} to="/label" activeClassName="active">
           Label
         </Item>

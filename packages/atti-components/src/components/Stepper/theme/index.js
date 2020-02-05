@@ -16,7 +16,7 @@ export default ({ colors, spaces, fonts, boxShadows }) => ({
     topBar: 0,
     rightBar: '-200%',
     widthBar: '200%',
-    borderBottomBar: `${borders.widths.bw2} solid ${colors.darkerGrey}`,
+    borderBottomBar: `${borders.widths.bw3} solid ${colors.darkerGrey}`,
   },
   fonts: {
     fontFamily: fonts.fontFamily.primary,

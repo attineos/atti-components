@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { size } from 'lodash'
 
-import { useStepperDispatch, useStepper } from '../hooks'
+import StyledMidLabel from './StyledMidLabel'
+import { useStepperDispatch, useStepper, useOnChange } from '../hooks'
 
 const StyledStep = styled.div`
   position: relative;
   display: inline-block;
+  text-align: center;
 
   width: ${({ theme }) => theme.components.stepper.sizes.element};
   height: ${({ theme }) => theme.components.stepper.sizes.element};
@@ -35,17 +37,31 @@ const StyledStep = styled.div`
     margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopBar};
     border-bottom: ${({ theme }) => theme.components.stepper.sizes.borderBottomBar};
   }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    display: block;
+    margin-top: 50px;
+    :not(:last-child):after {
+      content: '';
+      left: 47%;
+      top: 50%;
+      width: 0;
+      height: 75%;
+      border: ${({ theme }) => theme.components.stepper.sizes.borderBottomBar};
+    }
+  }
 `
 
-const Step = ({ id, children }) => {
+const Step = ({ id, children, value }) => {
   const { register, activate, desactivate } = useStepperDispatch()
   const stepList = useStepper()
+  const onClick = useOnChange()
 
   useEffect(() => {
     register(id)
   }, [])
 
-  const onClickElem = () => {
+  const onClickStep = () => {
     const currentStep = id
     if (stepList[currentStep]) {
       for (let k = currentStep; k <= size(stepList); k++) {
@@ -57,6 +73,7 @@ const Step = ({ id, children }) => {
       }
     }
     isActive()
+    onClick && onClick(currentStep)
   }
 
   const isActive = () => {
@@ -64,13 +81,15 @@ const Step = ({ id, children }) => {
   }
 
   return (
-    <StyledStep isActivated={isActive()} onClick={onClickElem}>
+    <StyledStep isActivated={isActive()} onClick={onClickStep}>
+      <StyledMidLabel>{value}</StyledMidLabel>
       {children}
     </StyledStep>
   )
 }
 Step.defaultProps = {
   children: null,
+  value: null,
 }
 
 Step.propTypes = {
@@ -83,6 +102,7 @@ Step.propTypes = {
    * The content of the step.
    */
   children: PropTypes.any,
+  value: PropTypes.string,
 }
 
 export default Step

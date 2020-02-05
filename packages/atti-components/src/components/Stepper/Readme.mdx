@@ -9,20 +9,30 @@ Displays a stepper that can be adapted.
 ## Examples
 
 ```js
-<Stepper>
-  <Stepper.Step id="1">
-    <Stepper.Label middle>1</Stepper.Label>
-    <Stepper.Label>Num 1</Stepper.Label>
-  </Stepper.Step>
-  <Stepper.Step id="2">
-    <Stepper.Label middle>2</Stepper.Label>
-    <Stepper.Label>Num 2</Stepper.Label>
-  </Stepper.Step>
-  <Stepper.Step id="3">
-    <Stepper.Label middle>3</Stepper.Label>
-    <Stepper.Label>Num 3</Stepper.Label>
-  </Stepper.Step>
-</Stepper>
+const Example = () => {
+  const [counter, setCounter] = useState(null)
+
+  return (
+    <div>
+      <div style={{ margin: '15px' }}>
+        <p>The selected step is : {counter} </p>
+      </div>
+      <Stepper onClick={setCounter}>
+        <Stepper.Step id="1" value="1">
+          <Stepper.Label>Num 1</Stepper.Label>
+        </Stepper.Step>
+        <Stepper.Step id="2" value="2">
+          <Stepper.Label>Num 2</Stepper.Label>
+        </Stepper.Step>
+        <Stepper.Step id="3" value="3">
+          <Stepper.Label>Num 3</Stepper.Label>
+        </Stepper.Step>
+      </Stepper>
+    </div>
+  )
+}
+
+render(<Example />)
 ```
 
 ## Theme

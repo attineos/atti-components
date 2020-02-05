@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 const StepperContext = React.createContext()
 const StepperDispatchContext = React.createContext()
+const StepperOnChange = React.createContext()
 
 function stepReducer(state, { type, id }) {
   switch (type) {
@@ -32,17 +33,27 @@ function useStepperDispatch() {
   }
 }
 
-const StepperProvider = ({ children }) => {
+function useOnChange() {
+  const context = useContext(StepperOnChange)
+  return context
+}
+
+const StepperProvider = ({ children, onClick }) => {
   const [stepList, dispatch] = useReducer(stepReducer, {})
 
   return (
     <StepperContext.Provider value={stepList}>
-      <StepperDispatchContext.Provider value={dispatch}>{children}</StepperDispatchContext.Provider>
+      <StepperOnChange.Provider value={onClick}>
+        <StepperDispatchContext.Provider value={dispatch}>
+          {children}
+        </StepperDispatchContext.Provider>
+      </StepperOnChange.Provider>
     </StepperContext.Provider>
   )
 }
 StepperProvider.defaultProps = {
   children: null,
+  onClick: null,
 }
 
 StepperProvider.propTypes = {
@@ -50,6 +61,10 @@ StepperProvider.propTypes = {
    * Content of the StepProvider.
    */
   children: PropTypes.any,
+  /**
+   * retrieves the current step.
+   */
+  onClick: PropTypes.any,
 }
 
-export { StepperProvider, useStepperDispatch, useStepper }
+export { StepperProvider, useStepperDispatch, useStepper, useOnChange }

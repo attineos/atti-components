@@ -1,9 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import Step from './styles/StyledStep'
 import StyledLabel from './styles/StyledLabel'
+import StyledStepper from './styles/StyledStepper'
 import { StepperProvider, useStepperDispatch, useStepper } from './hooks'
 
 /**
@@ -11,9 +11,11 @@ import { StepperProvider, useStepperDispatch, useStepper } from './hooks'
  */
 const Stepper = ({ children, onClick, stepList }) => {
   return (
-    <StepperProvider onClick={onClick} stepperList={stepList}>
-      {children}
-    </StepperProvider>
+    <StyledStepper>
+      <StepperProvider onClick={onClick} stepperList={stepList}>
+        {children}
+      </StepperProvider>
+    </StyledStepper>
   )
 }
 
@@ -44,4 +46,4 @@ Stepper.useStepList = useStepper
 Stepper.useStepDispatch = useStepperDispatch
 
 /** @component */
-export default styled(Stepper)``
+export default Stepper

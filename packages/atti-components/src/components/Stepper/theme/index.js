@@ -1,28 +1,23 @@
-import borders from '../../../themes/defaultTheme/borders'
-
 export default ({ colors, spaces, fonts, boxShadows }) => ({
   colors: {
     stepAfter: colors.primary,
     step: colors.grey,
     text: colors.black,
     midText: colors.white,
+    bar: colors.grey,
   },
   sizes: {
-    element: spaces.s4,
-    borderRadius: spaces.s3,
-    marginTopLabel: spaces.s1_5,
-
-    marginTopBar: spaces.halt,
-    topBar: 0,
-    rightBar: '-200%',
-    widthBar: '200%',
-    borderBottomBar: `${borders.widths.bw3} solid ${colors.darkerGrey}`,
-    borderMobileBar: `${borders.widths.bw2} solid ${colors.darkerGrey}`,
+    marginTopLbl: spaces.s0_5,
+    round: spaces.s3,
+    borderRadius: spaces.halt,
+    alignBar: spaces.s12,
+    topBar: spaces.halt,
+    leftBar: spaces.full,
   },
   fonts: {
     fontFamily: fonts.fontFamily.primary,
-    fontSize: fonts.fontSize.fs18,
-    fontSizeMobile: fonts.fontSize.fs16,
+    fontSize: fonts.fontSize.fs14,
+    fontSizeMobile: fonts.fontSize.fs12,
   },
   boxShadows: {
     shadow1: boxShadows.shadow1,

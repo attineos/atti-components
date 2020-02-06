@@ -3,51 +3,34 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { size, isEmpty } from 'lodash'
 
-import StyledMidLabel from './StyledMidLabel'
+import StyledRound from './StyledRound'
 import { useStepperDispatch, useStepper, useOnChange } from '../hooks'
 
-const StyledStep = styled.div`
-  position: relative;
-  display: inline-block;
-  text-align: center;
-
-  width: ${({ theme }) => theme.components.stepper.sizes.element};
-  height: ${({ theme }) => theme.components.stepper.sizes.element};
-
-  border-radius: ${({ theme }) => theme.components.stepper.sizes.borderRadius};
+const StyledStep = styled.li`
   cursor: pointer;
-  box-shadow: ${({ isActivated, theme }) =>
-    isActivated
-      ? theme.components.stepper.boxShadows.shadow1
-      : theme.components.stepper.boxShadows.shadow2};
-
-  background-color: ${({ isActivated, theme }) =>
-    isActivated ? theme.components.stepper.colors.stepAfter : theme.components.stepper.colors.step};
+  font-family: ${({ theme }) => theme.components.stepper.fonts.fontFamily};
+  color: ${({ theme }) => theme.components.stepper.colors.midText};
 
   :not(:last-child) {
-    margin-right: 100px;
+    margin-right:  ${({ theme }) => theme.components.stepper.sizes.alignBar};
   }
 
-  :not(:last-child):after {
+  hr {
     position: absolute;
-    content: '';
-    right: ${({ theme }) => theme.components.stepper.sizes.rightBar};
+    width: ${({ theme }) => theme.components.stepper.sizes.alignBar};
     top: ${({ theme }) => theme.components.stepper.sizes.topBar};
-    width: ${({ theme }) => theme.components.stepper.sizes.widthBar};
-    margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopBar};
-    border-bottom: ${({ theme }) => theme.components.stepper.sizes.borderBottomBar};
+    left: ${({ theme }) => theme.components.stepper.sizes.leftBar};
+    margin: 0;
+    border: 0.5px solid grey;
+    background:  ${({ theme }) => theme.components.stepper.colors.bar};
+  }
+
+  :last-child hr {
+    display: none;
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-    display: block;
-    margin-top: 50px;
-    :not(:last-child):after {
-      content: '';
-      left: 47%;
-      top: 50%;
-      width: 0;
-      height: 75%;
-      border: ${({ theme }) => theme.components.stepper.sizes.borderMobileBar};
+
     }
   }
 `
@@ -82,8 +65,11 @@ const Step = ({ id, children, value }) => {
   }
 
   return (
-    <StyledStep isActivated={isActive()} onClick={onClickStep}>
-      <StyledMidLabel>{value}</StyledMidLabel>
+    <StyledStep onClick={onClickStep}>
+      <StyledRound isActivated={isActive()}>
+        {value}
+        <hr />
+      </StyledRound>
       {children}
     </StyledStep>
   )

@@ -11,7 +11,7 @@ import { StepperProvider, useStepperDispatch, useStepper } from './hooks'
  */
 const Stepper = ({ children, onClick, stepList }) => {
   return (
-    <StyledStepper>
+    <StyledStepper role="navigation" aria-label="progress">
       <StepperProvider onClick={onClick} stepperList={stepList}>
         {children}
       </StepperProvider>

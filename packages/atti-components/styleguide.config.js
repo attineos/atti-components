@@ -81,7 +81,6 @@ module.exports = {
         'src/components/InputCalendar/index.js',
         'src/components/Radio/index.js',
         'src/components/Select/index.js',
-        'src/components/Stepper/index.js',
         'src/components/TextArea/index.js',
         'src/components/Toggle/index.js',
       ],
@@ -112,6 +111,7 @@ module.exports = {
         'src/components/Breadcrumb/index.js',
         'src/components/Menu/index.js',
         'src/components/Link/index.js',
+        'src/components/Stepper/index.js',
       ],
     },
     {

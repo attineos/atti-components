@@ -1,9 +1,11 @@
-import React, { useContext, useReducer } from 'react'
+import React, { useContext, useReducer, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const StepperContext = React.createContext()
 const StepperDispatchContext = React.createContext()
 const StepperOnChange = React.createContext()
+const StepperAdapt = React.createContext()
+const StepperActiveIdContext = React.createContext()
 
 function stepReducer(state, { type, id }) {
   switch (type) {
@@ -38,17 +40,33 @@ function useOnChange() {
   return context
 }
 
+function useStepperAdapt() {
+  const context = useContext(StepperAdapt)
+  return context
+}
+
+function useActiveId() {
+  const context = useContext(StepperActiveIdContext)
+  return context
+}
+
 const StepperProvider = ({ children, onClick, stepperList }) => {
   const [stepList, dispatch] = useReducer(stepReducer, stepperList)
+  const [activeId, setActiveId] = useState(null)
+  const [nbStep, setNbStep] = useState(0)
 
   return (
-    <StepperContext.Provider value={stepList}>
-      <StepperOnChange.Provider value={onClick}>
-        <StepperDispatchContext.Provider value={dispatch}>
-          {children}
-        </StepperDispatchContext.Provider>
-      </StepperOnChange.Provider>
-    </StepperContext.Provider>
+    <StepperActiveIdContext.Provider value={[activeId, setActiveId]}>
+      <StepperAdapt.Provider value={[nbStep, setNbStep]}>
+        <StepperContext.Provider value={stepList}>
+          <StepperOnChange.Provider value={onClick}>
+            <StepperDispatchContext.Provider value={dispatch}>
+              {children}
+            </StepperDispatchContext.Provider>
+          </StepperOnChange.Provider>
+        </StepperContext.Provider>
+      </StepperAdapt.Provider>
+    </StepperActiveIdContext.Provider>
   )
 }
 StepperProvider.defaultProps = {
@@ -72,4 +90,11 @@ StepperProvider.propTypes = {
   stepperList: PropTypes.object,
 }
 
-export { StepperProvider, useStepperDispatch, useStepper, useOnChange }
+export {
+  StepperProvider,
+  useActiveId,
+  useStepperDispatch,
+  useStepper,
+  useOnChange,
+  useStepperAdapt,
+}

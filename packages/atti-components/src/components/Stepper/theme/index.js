@@ -10,9 +10,13 @@ export default ({ colors, spaces, fonts, boxShadows }) => ({
     marginTopLbl: spaces.s0_5,
     round: spaces.s3,
     borderRadius: spaces.halt,
-    alignBar: spaces.s12,
+    alignBar: spaces.s8,
     topBar: spaces.halt,
     leftBar: spaces.full,
+
+    alignBarMobile: spaces.s3,
+    topBarMobile: spaces.full,
+    leftBarMobile: spaces.halt,
   },
   fonts: {
     fontFamily: fonts.fontFamily.primary,

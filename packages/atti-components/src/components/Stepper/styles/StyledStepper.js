@@ -6,6 +6,7 @@ const StyledStepper = styled.ol`
   list-style: none;
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    flex-direction: column;
   }
 `
 

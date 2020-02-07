@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 
 const StyledLabel = styled.p`
-  color: ${({ theme }) => theme.components.stepper.colors.text};
-  text-align: center;
-  margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopLbl};
   font-size: ${({ theme }) => theme.components.stepper.fonts.fontSize};
   font-family: ${({ theme }) => theme.components.stepper.fonts.fontFamily};
+  text-align: center;
+  margin-top: ${({ theme }) => theme.components.stepper.sizes.marginTopLbl};
+  color: ${({ theme }) => theme.components.stepper.colors.text};
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    position: absolute;
+    top: calc(50% - (14 / 2));
+    left: 64px;
   }
 `
-
+// use theme for top
 export default StyledLabel

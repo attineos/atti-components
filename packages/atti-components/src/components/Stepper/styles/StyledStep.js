@@ -4,9 +4,12 @@ import PropTypes from 'prop-types'
 import { size, isEmpty } from 'lodash'
 
 import StyledRound from './StyledRound'
-import { useStepperDispatch, useStepper, useOnChange } from '../hooks'
+import { useActiveId, useStepperDispatch, useStepper, useOnChange, useStepperAdapt } from '../hooks'
+
+/* get value and adapt for calculate the bar in function of size (calc() ) */
 
 const StyledStep = styled.li`
+  position: relative;
   cursor: pointer;
   font-family: ${({ theme }) => theme.components.stepper.fonts.fontFamily};
   color: ${({ theme }) => theme.components.stepper.colors.midText};
@@ -29,8 +32,18 @@ const StyledStep = styled.li`
     display: none;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {   
+      :not(:last-child) {
+        margin-right: 0;
+        margin-bottom: ${({ theme }) => theme.components.stepper.sizes.alignBarMobile}; 
+      }
 
+      hr {
+        width:0;
+        height: ${({ theme }) => theme.components.stepper.sizes.alignBarMobile};
+        top: ${({ theme }) => theme.components.stepper.sizes.topBarMobile};
+        left: ${({ theme }) => theme.components.stepper.sizes.leftBarMobile};
+      }
     }
   }
 `
@@ -39,11 +52,14 @@ const Step = ({ id, children, value }) => {
   const { register, activate, desactivate } = useStepperDispatch()
   const stepList = useStepper()
   const onClick = useOnChange()
+  const [nbStep, setNbStep] = useStepperAdapt()
+  const [activeId, setActiveId] = useActiveId()
 
   useEffect(() => {
     if (isEmpty(stepList)) {
       register(id)
     }
+    setNbStep(value++)
   }, [])
 
   const onClickStep = () => {
@@ -57,16 +73,23 @@ const Step = ({ id, children, value }) => {
         activate(i)
       }
     }
+    // forEach(stepList, (value, key) => {
+    // })
     onClick && onClick(currentStep)
+    setActiveId(id)
   }
 
-  const isActive = () => {
+  const isComplete = () => {
     return stepList[id]
   }
 
   return (
-    <StyledStep onClick={onClickStep}>
-      <StyledRound isActivated={isActive()}>
+    <StyledStep
+      onClick={onClickStep}
+      aria-current={id === activeId ? 'step' : undefined}
+      nbStep={nbStep}
+    >
+      <StyledRound isCompleted={isComplete()}>
         {value}
         <hr />
       </StyledRound>

@@ -71,9 +71,6 @@ const Navbar = () => {
         <Item as={Link} to="/select" activeClassName="active">
           Select
         </Item>
-        <Item as={Link} to="/stepper" activeClassName="active">
-          Stepper
-        </Item>
         <Item as={Link} to="/textarea" activeClassName="active">
           TextArea
         </Item>
@@ -115,6 +112,9 @@ const Navbar = () => {
         </Item>
         <Item as={Link} to="/link" activeClassName="active">
           Link
+        </Item>
+        <Item as={Link} to="/stepper" activeClassName="active">
+          Stepper
         </Item>
       </ItemGroup>
 

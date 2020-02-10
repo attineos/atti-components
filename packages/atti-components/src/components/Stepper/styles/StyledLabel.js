@@ -9,9 +9,9 @@ const StyledLabel = styled.p`
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     position: absolute;
-    top: calc(50% - (14 / 2));
-    left: 64px;
+    top: calc(50% - ${({ theme }) => theme.components.stepper.fonts.fontSize});
+    left: ${({ theme }) => theme.components.stepper.sizes.leftLbl};
   }
 `
-// use theme for top
+
 export default StyledLabel

@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { size, isEmpty } from 'lodash'
+import { isEmpty, forEach } from 'lodash'
 
 import StyledRound from './StyledRound'
 import { useActiveId, useStepperDispatch, useStepper, useOnChange, useStepperAdapt } from '../hooks'
 
-/* get value and adapt for calculate the bar in function of size (calc() ) */
+function adaptStep(nbStep, size) {
+  const reduceStep = 0.85 ** nbStep
+  return css`calc(${size} * ${reduceStep})`
+}
 
 const StyledStep = styled.li`
   position: relative;
@@ -15,16 +18,18 @@ const StyledStep = styled.li`
   color: ${({ theme }) => theme.components.stepper.colors.midText};
 
   :not(:last-child) {
-    margin-right:  ${({ theme }) => theme.components.stepper.sizes.alignBar};
+    margin-right: ${({ nbStep, theme }) =>
+      adaptStep(nbStep, theme.components.stepper.sizes.alignBar)};
   }
 
+ 
   hr {
     position: absolute;
-    width: ${({ theme }) => theme.components.stepper.sizes.alignBar};
+    width: ${({ nbStep, theme }) => adaptStep(nbStep, theme.components.stepper.sizes.alignBar)};
     top: ${({ theme }) => theme.components.stepper.sizes.topBar};
     left: ${({ theme }) => theme.components.stepper.sizes.leftBar};
     margin: 0;
-    border: 0.5px solid grey;
+    border: 0.5px solid ${({ theme }) => theme.components.stepper.colors.bar};
     background:  ${({ theme }) => theme.components.stepper.colors.bar};
   }
 
@@ -59,22 +64,22 @@ const Step = ({ id, children, value }) => {
     if (isEmpty(stepList)) {
       register(id)
     }
-    setNbStep(value++)
+    setNbStep(prevNbStep => prevNbStep + 1)
   }, [])
 
   const onClickStep = () => {
     const currentStep = id
     if (stepList[currentStep]) {
-      for (let k = currentStep; k <= size(stepList); k++) {
-        desactivate(k)
-      }
+      forEach(stepList, (_, key) => {
+        if (key > currentStep) {
+          desactivate(key)
+        }
+      })
     } else {
-      for (let i = 1; i <= currentStep; i++) {
-        activate(i)
-      }
+      forEach(stepList, (_, key) => {
+        if (key <= currentStep) activate(key)
+      })
     }
-    // forEach(stepList, (value, key) => {
-    // })
     onClick && onClick(currentStep)
     setActiveId(id)
   }
@@ -87,6 +92,7 @@ const Step = ({ id, children, value }) => {
     <StyledStep
       onClick={onClickStep}
       aria-current={id === activeId ? 'step' : undefined}
+      aria-checked={isComplete()}
       nbStep={nbStep}
     >
       <StyledRound isCompleted={isComplete()}>

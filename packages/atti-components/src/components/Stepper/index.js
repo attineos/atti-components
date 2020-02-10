@@ -9,6 +9,7 @@ import { StepperProvider, useStepperDispatch, useStepper } from './hooks'
 /**
  * A basic stepper
  */
+
 const Stepper = ({ children, onClick, stepList }) => {
   return (
     <StyledStepper role="navigation" aria-label="progress">
@@ -31,7 +32,7 @@ Stepper.propTypes = {
    */
   children: PropTypes.any.isRequired,
   /**
-   *  retrieves the current step
+   * retrieves the current step
    */
   onClick: PropTypes.any,
   /*

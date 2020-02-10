@@ -4,13 +4,16 @@ export default ({ colors, spaces, fonts, boxShadows }) => ({
     step: colors.grey,
     text: colors.black,
     midText: colors.white,
-    bar: colors.grey,
+    bar: 'grey',
   },
   sizes: {
     marginTopLbl: spaces.s0_5,
+    leftLbl: spaces.s4,
+
     round: spaces.s3,
     borderRadius: spaces.halt,
-    alignBar: spaces.s8,
+
+    alignBar: spaces.s12,
     topBar: spaces.halt,
     leftBar: spaces.full,
 

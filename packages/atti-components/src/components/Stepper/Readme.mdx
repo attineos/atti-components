@@ -9,26 +9,45 @@ Displays a stepper that can be adapted.
 ## Examples
 
 ```js
-/*stepList={{ 1: true, 2: true, 3: false }}*/
 const Example = () => {
   const [counter, setCounter] = useState(null)
 
   return (
     <div>
-      <div style={{ marginBottom: '25px' }}>
-        <p>The selected step is : {counter}</p>
+      <div>
+        <div style={{ marginBottom: '25px' }}>
+          <Header5>Exemple 1 :</Header5>
+          <br />
+          <Text>The selected step is : {counter}</Text>
+        </div>
+        <Stepper onClick={setCounter}>
+          <Stepper.Step id="1" value="1">
+            <Stepper.Label>Num 1</Stepper.Label>
+          </Stepper.Step>
+          <Stepper.Step id="2" value="2">
+            <Stepper.Label>Num 2</Stepper.Label>
+          </Stepper.Step>
+          <Stepper.Step id="3" value="3">
+            <Stepper.Label>Num 3</Stepper.Label>
+          </Stepper.Step>
+        </Stepper>
       </div>
-      <Stepper onClick={setCounter}>
-        <Stepper.Step id="1" value="1">
-          <Stepper.Label>Num 1</Stepper.Label>
-        </Stepper.Step>
-        <Stepper.Step id="2" value="2">
-          <Stepper.Label>Num 2</Stepper.Label>
-        </Stepper.Step>
-        <Stepper.Step id="3" value="3">
-          <Stepper.Label>Num 3</Stepper.Label>
-        </Stepper.Step>
-      </Stepper>
+      <div>
+        <div style={{ margin: '25px 0 25px 0' }}>
+          <Header5>Exemple 2 :</Header5>
+        </div>
+        <Stepper stepList={{ 1: true, 2: true, 3: false }}>
+          <Stepper.Step id="1" value="1">
+            <Stepper.Label>Num 1</Stepper.Label>
+          </Stepper.Step>
+          <Stepper.Step id="2" value="2">
+            <Stepper.Label>Num 2</Stepper.Label>
+          </Stepper.Step>
+          <Stepper.Step id="3" value="3">
+            <Stepper.Label>Num 3</Stepper.Label>
+          </Stepper.Step>
+        </Stepper>
+      </div>
     </div>
   )
 }

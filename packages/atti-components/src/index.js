@@ -26,6 +26,7 @@ import Modal from './components/Modal'
 import ProgressBar from './components/ProgressBar'
 import Radio from './components/Radio'
 import Select from './components/Select'
+import Stepper from './components/Stepper'
 import Table from './components/Table'
 import TextArea from './components/TextArea'
 import Toggle from './components/Toggle'
@@ -82,6 +83,7 @@ export {
   Radio,
   Select,
   SmallText,
+  Stepper,
   Table,
   Text,
   TextArea,

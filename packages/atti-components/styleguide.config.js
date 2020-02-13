@@ -111,6 +111,7 @@ module.exports = {
         'src/components/Breadcrumb/index.js',
         'src/components/Menu/index.js',
         'src/components/Link/index.js',
+        'src/components/Stepper/index.js',
       ],
     },
     {

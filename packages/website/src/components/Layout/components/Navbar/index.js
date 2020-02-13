@@ -113,6 +113,9 @@ const Navbar = () => {
         <Item as={Link} to="/link" activeClassName="active">
           Link
         </Item>
+        <Item as={Link} to="/stepper" activeClassName="active">
+          Stepper
+        </Item>
       </ItemGroup>
 
       <ItemGroup title="Notifications">

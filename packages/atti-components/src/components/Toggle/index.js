@@ -9,17 +9,7 @@ import HiddenInputToggle from './styles/HiddenInputToggle'
 /**
  * A toggle button.
  */
-const Toggle = ({
-  checked: propsChecked,
-  className,
-  id,
-  name,
-  onChange,
-  value,
-  variant,
-  click,
-  sized,
-}) => {
+const Toggle = ({ checked: propsChecked, onChange, variant, click, sized }) => {
   const [checked, setChecked] = useState(propsChecked)
 
   const handleToggleChecked = () => {
@@ -28,20 +18,11 @@ const Toggle = ({
   }
 
   return (
-    <ToggleBoxContainer
-      className={className}
-      variant={variant}
-      click={click}
-      sized={sized}
-      checked={checked}
-    >
+    <ToggleBoxContainer variant={variant} click={click} sized={sized} checked={checked}>
       <HiddenInputToggle
-        id={id}
         checked={checked}
-        name={name}
         onChange={handleToggleChecked}
         type="checkbox"
-        value={value}
         sized={sized}
       />
       <ToggleBox variant={variant} sized={sized} />
@@ -51,7 +32,6 @@ const Toggle = ({
 
 Toggle.defaultProps = {
   checked: false,
-  className: '',
   onChange: null,
   variant: 'primary',
   click: true,
@@ -64,29 +44,11 @@ Toggle.propTypes = {
    */
   checked: PropTypes.bool,
   /**
-   * Classes of the toggle.
-   */
-  className: PropTypes.string,
-  /**
-   * The id of the current element.
-   */
-  id: PropTypes.string.isRequired,
-  /**
-   * The name attribute is used to reference form data after a form is submitted.
-   * Numerous toggle with the same name value will be in the same group.
-   */
-  name: PropTypes.string.isRequired,
-  /**
    * Gets called when the value of the toggle changes.
    *
    * @param {SyntheticEvent} event The react `SyntheticEvent`
    */
   onChange: PropTypes.func,
-  /**
-   * The value attribute of the toggle. This attribute has meaning when submitting a form.
-   */
-  value: PropTypes.string.isRequired,
-
   /**
    * The type of variation to display.
    */

@@ -4,12 +4,8 @@ exports[`TitleContainer renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="TitleContainer-sc-1wmifrj-0 jbdmOp"
-    />
-  </span>
+  <div
+    className="TitleContainer-sc-1wmifrj-0 iPngJS"
+  />
 </span>
 `;

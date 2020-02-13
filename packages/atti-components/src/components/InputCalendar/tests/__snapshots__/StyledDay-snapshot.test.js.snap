@@ -4,12 +4,8 @@ exports[`StyledDay renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="StyledDay-xsawzg-0 eBWnw"
-    />
-  </span>
+  <p
+    className="Typography-csduj4-0 Text-sc-9szep3-0 StyledDay-xsawzg-0 kIykFo"
+  />
 </span>
 `;

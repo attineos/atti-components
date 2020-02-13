@@ -4,19 +4,15 @@ exports[`Select renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <select
-      className="Text-sc-9szep3-0-select Atticomponents Select-sc-1yblj4q-0 eGaeAq StyledSelect-jeqzcu-0 atti-r-css Atticomponents Select-sc-1yblj4q-0 eGaeAq blIyQY"
-      defaultValue="Atticomponents"
-      id="Atticomponents"
-      multiple={true}
-      name="Atticomponents"
-      onChange={[Function]}
-      size={42}
-      value="Atticomponents"
-    />
-  </span>
+  <select
+    className="Text-sc-9szep3-0-select StyledSelect-jeqzcu-0 UGozi Select-sc-1yblj4q-0 gziULw Atticomponents"
+    defaultValue="Atticomponents"
+    id="Atticomponents"
+    multiple={true}
+    name="Atticomponents"
+    onChange={[Function]}
+    size={42}
+    value="Atticomponents"
+  />
 </span>
 `;

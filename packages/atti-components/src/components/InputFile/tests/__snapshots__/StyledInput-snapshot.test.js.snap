@@ -4,12 +4,8 @@ exports[`StyledInput renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <input
-      className="StyledInput-sc-19gmxuz-0 cyFwFw"
-    />
-  </span>
+  <input
+    className="StyledInput-sc-19gmxuz-0 hbjEYC"
+  />
 </span>
 `;

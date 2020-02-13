@@ -4,12 +4,8 @@ exports[`StyledLoader renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="StyledLoader-d8og6-0 kmHYTc"
-    />
-  </span>
+  <div
+    className="StyledLoader-d8og6-0 dDXakA"
+  />
 </span>
 `;

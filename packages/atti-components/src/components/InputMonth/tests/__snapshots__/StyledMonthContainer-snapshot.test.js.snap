@@ -4,12 +4,8 @@ exports[`StyledMonthContainer renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="StyledMonthContainer-sc-1a80ekh-0 blYvcn"
-    />
-  </span>
+  <div
+    className="StyledMonthContainer-sc-1a80ekh-0 hMpgwM"
+  />
 </span>
 `;

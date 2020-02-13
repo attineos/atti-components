@@ -5,11 +5,7 @@ exports[`StyledBadge renders correctly 1`] = `
   className="atti-box"
 >
   <span
-    className="atti-box"
-  >
-    <span
-      className="StyledBadge-sc-14ha03a-0 hKrCPP"
-    />
-  </span>
+    className="StyledBadge-sc-14ha03a-0 gHTlDm"
+  />
 </span>
 `;

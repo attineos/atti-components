@@ -4,12 +4,8 @@ exports[`StyledTableCell renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <td
-      className="StyledTableCell-sc-1fzx577-0 hSakMf"
-    />
-  </span>
+  <td
+    className="StyledTableCell-sc-1fzx577-0 leMFT"
+  />
 </span>
 `;

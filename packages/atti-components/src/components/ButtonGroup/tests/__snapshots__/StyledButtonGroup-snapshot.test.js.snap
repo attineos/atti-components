@@ -4,12 +4,8 @@ exports[`StyledButtonGroup renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="StyledButtonGroup-ze25zo-0 eMMUmt"
-    />
-  </span>
+  <div
+    className="StyledButtonGroup-ze25zo-0 kIA-dXJ"
+  />
 </span>
 `;

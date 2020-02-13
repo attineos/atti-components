@@ -4,16 +4,12 @@ exports[`Image renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <img
-      alt="Atticomponents"
-      className="Atticomponents Image-sc-8q2lr-0 uelgk StyledImage-sc-1w567an-0 gWgWUd"
-      height="Atticomponents"
-      src="Atticomponents"
-      width="Atticomponents"
-    />
-  </span>
+  <img
+    alt="Atticomponents"
+    className="StyledImage-sc-1w567an-0 dZxvVI Image-sc-8q2lr-0 csrjbl Atticomponents"
+    height="Atticomponents"
+    src="Atticomponents"
+    width="Atticomponents"
+  />
 </span>
 `;

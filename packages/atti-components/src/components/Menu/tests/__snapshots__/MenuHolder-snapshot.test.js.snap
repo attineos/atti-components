@@ -4,12 +4,8 @@ exports[`MenuHolder renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="MenuHolder-qn10tf-0 kovkGI"
-    />
-  </span>
+  <div
+    className="MenuHolder-qn10tf-0 cIazjL"
+  />
 </span>
 `;

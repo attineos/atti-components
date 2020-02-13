@@ -5,13 +5,10 @@ exports[`Badge renders correctly 1`] = `
   className="atti-box"
 >
   <span
-    className="atti-box"
+    className="StyledBadge-sc-14ha03a-0 gHTlDm Badge-x3zjsz-0 cruqZJ Atticomponents"
+    exponent={true}
   >
-    <sup
-      className="Atticomponents Badge-x3zjsz-0 iwInqQ StyledBadge-sc-14ha03a-0 hKrCPP"
-    >
-      <div />
-    </sup>
+    <div />
   </span>
 </span>
 `;

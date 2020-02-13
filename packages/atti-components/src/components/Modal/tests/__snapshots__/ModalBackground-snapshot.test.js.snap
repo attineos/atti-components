@@ -4,12 +4,8 @@ exports[`ModalBackground renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="ModalBackground-stke3x-0 hnRWcO"
-    />
-  </span>
+  <div
+    className="ModalBackground-stke3x-0 ewNdCZ"
+  />
 </span>
 `;

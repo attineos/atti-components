@@ -1,9 +1,9 @@
 function lightenDarken(color, percent) {
   const num = parseInt(color.replace('#', ''), 16),
     amt = Math.round(2.55 * percent),
-    R = (num >> 16) + amt,
-    B = ((num >> 8) & 0x00ff) + amt,
-    G = (num & 0x0000ff) + amt
+    R = (num >> 16) + amt, //eslint-disable-line
+    B = ((num >> 8) & 0x00ff) + amt, //eslint-disable-line
+    G = (num & 0x0000ff) + amt //eslint-disable-line
 
   return `#${(
     0x1000000 +

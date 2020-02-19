@@ -22,7 +22,6 @@ const StyledStep = styled.li`
       adaptStep(nbStep, theme.components.stepper.sizes.alignBar)};
   }
 
- 
   hr {
     position: absolute;
     width: ${({ nbStep, theme }) => adaptStep(nbStep, theme.components.stepper.sizes.alignBar)};
@@ -37,10 +36,10 @@ const StyledStep = styled.li`
     display: none;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {   
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
       :not(:last-child) {
         margin-right: 0;
-        margin-bottom: ${({ theme }) => theme.components.stepper.sizes.alignBarMobile}; 
+        margin-bottom: ${({ theme }) => theme.components.stepper.sizes.alignBarMobile};
       }
 
       hr {
@@ -65,7 +64,7 @@ const Step = ({ id, children, value }) => {
       register(id)
     }
     setNbStep(prevNbStep => prevNbStep + 1)
-  }, [])
+  }, [id, register, setNbStep, stepList])
 
   const onClickStep = () => {
     const currentStep = id

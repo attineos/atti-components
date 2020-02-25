@@ -15,3 +15,7 @@ jobs:
       script: yarn build
     - stage: Test
       script: yarn test
+deploy:
+  provider: npm
+  email: "atrakeur+npm@gmail.com"
+  api_key: "NPM_API_KEY99e9f6a4-de65-46f7-81ac-a88807a7cd7d"

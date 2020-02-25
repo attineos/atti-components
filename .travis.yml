@@ -12,16 +12,16 @@ stages:
 jobs:
   include:
     - stage: Install
-      before_script:
-        - "yarn global add cross-env"
       script: yarn install
     - stage: Build library
       before_script:
         - "cd packages/atti-components"
+        - "yarn global add cross-env"
       script: "yarn build"
     - stage: Build website
       before_script:
         - "cd packages/website"
+        - "yarn global add cross-env"
       script: "yarn build"
     - stage: Test
       script: yarn test

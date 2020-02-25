@@ -4,24 +4,23 @@ node_js:
   - '12.16.1'
 cache: yarn
 stages:
-  - Install
   - Build library
   - Build website
   - Test
   - Release
 jobs:
   include:
-    - stage: Install
-      script: yarn install
     - stage: Build library
       before_script:
         - "cd packages/atti-components"
         - "yarn global add cross-env"
+        - "yarn install"
       script: "yarn build"
     - stage: Build website
       before_script:
         - "cd packages/website"
         - "yarn global add cross-env"
+        - "yarn install"
       script: "yarn build"
     - stage: Test
       script: yarn test

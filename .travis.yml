@@ -14,13 +14,13 @@ jobs:
     - stage: Install
       script: yarn install
     - stage: Build library
-        before_script:
-          - "cd packages/atti-components"
-        script: "yarn build"
+      before_script:
+        - "cd packages/atti-components"
+      script: "yarn build"
     - stage: Build website
-        before_script:
-          - "cd packages/website"
-        script: "yarn build"
+      before_script:
+        - "cd packages/website"
+      script: "yarn build"
     - stage: Test
       script: yarn test
     - stage: Release Next

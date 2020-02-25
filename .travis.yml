@@ -12,6 +12,8 @@ stages:
 jobs:
   include:
     - stage: Install
+      before_script:
+        - "yarn global add cross-env"
       script: yarn install
     - stage: Build library
       before_script:

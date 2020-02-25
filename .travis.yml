@@ -5,17 +5,30 @@ node_js:
 cache: yarn
 stages:
   - Install
-  - Build
+  - Build library
+  - Build website
   - Test
+  - Release
 jobs:
   include:
     - stage: Install
       script: yarn install
-    - stage: Build
-      script: yarn build
+    - stage: Build library
+        before_script: cd packages/atti-components
+        script: yarn build
+    - stage: Build website
+        before_script: cd packages/website
+        script: yarn build
     - stage: Test
       script: yarn test
-deploy:
-  provider: npm
-  email: "atrakeur+npm@gmail.com"
-  api_key: "NPM_API_KEY99e9f6a4-de65-46f7-81ac-a88807a7cd7d"
+    - stage: Release Next
+      script: echo "Deploying next to npm ..."
+      before_deploy:
+        - "cd packages/atti-components"
+        - "npm version $TRAVIS_TAG"
+      deploy:
+        provider: npm
+        email: "$NPM_EMAIL"
+        api_key: "$NPM_API_KEY"
+        on: deploy-npm-release
+        only: tags

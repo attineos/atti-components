@@ -15,13 +15,12 @@ jobs:
         - "cd packages/atti-components"
         - "yarn global add cross-env rollup"
         - "yarn install"
-      script: "yarn build"
+      script: "yarn run build"
     - stage: Build website
       before_script:
-        - "cd packages/website"
         - "yarn global add cross-env rollup"
         - "yarn install"
-        - "yarn run bootstrap"
+        - "yarn lerna bootstrap"
       script: "yarn run build"
     - stage: Test
       script: yarn test

@@ -21,6 +21,7 @@ jobs:
         - "cd packages/website"
         - "yarn global add cross-env rollup"
         - "yarn install"
+        - "yarn bootstrap"
       script: "yarn build"
     - stage: Test
       script: yarn test

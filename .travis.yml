@@ -29,4 +29,5 @@ jobs:
         provider: netlify
         site: atti-components
         auth: $NETLIFY_API_KEY
+        dir: packages/website/build/
         edge: true

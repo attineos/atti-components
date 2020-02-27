@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build --stream ",
     "build:documentation": "lerna bootstrap && yarn run build",
     "clean": "lerna clean",

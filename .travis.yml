@@ -1,29 +1,25 @@
 dist: trusty
 language: node_js
 node_js:
-  - '12.16.1'
-cache: yarn
+  - "12.13.1"
+cache:
+  yarn: true
+  directories:
+    - node_modules
 stages:
-  - Build library
-  - Build website
-  - Test
+  - Validate
   - Release
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.21.1
+  - export PATH="$HOME/.yarn/bin:$PATH"
 jobs:
   include:
-    - stage: Build library
-      before_script:
-        - "cd packages/atti-components"
-        - "yarn global add cross-env rollup"
-        - "yarn install"
-      script: "yarn run build"
-    - stage: Build website
-      before_script:
-        - "yarn global add cross-env rollup"
-        - "yarn install"
-        - "yarn lerna bootstrap"
-      script: "yarn run build"
-    - stage: Test
-      script: yarn test
+    - stage: Validate
+      script:
+        - yarn bootstrap
+        - yarn build --scope=atti-components
+        - yarn build --scope=atti-components-documentation
+        - yarn test
     - stage: Release Next
       script: echo "Deploying next to npm ..."
       before_deploy:

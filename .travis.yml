@@ -20,14 +20,13 @@ jobs:
         - yarn build --scope=atti-components
         - yarn build --scope=atti-components-documentation
         - yarn test
-    - stage: Release Next
-      script: echo "Deploying next to npm ..."
-      before_deploy:
-        - "cd packages/atti-components"
-        - "npm version $TRAVIS_TAG"
+    - stage: Release Doc
+      script:
+        - yarn bootstrap
+        - yarn build --scope=atti-components
+        - yarn build --scope=atti-components-documentation
       deploy:
-        provider: npm
-        email: "$NPM_EMAIL"
-        api_key: "$NPM_API_KEY"
-        on: deploy-npm-release
-        only: tags
+        provider: netlify
+        site: atti-components
+        auth: $NETLIFY_API_KEY
+        edge: true

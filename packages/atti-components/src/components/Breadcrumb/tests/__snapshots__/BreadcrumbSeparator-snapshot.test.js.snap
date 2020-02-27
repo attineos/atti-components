@@ -5,11 +5,7 @@ exports[`BreadcrumbSeparator renders correctly 1`] = `
   className="atti-box"
 >
   <span
-    className="atti-box"
-  >
-    <span
-      className="BreadcrumbSeparator-sc-5zi7iv-0 joWRDt"
-    />
-  </span>
+    className="BreadcrumbSeparator-sc-5zi7iv-0 oyEf"
+  />
 </span>
 `;

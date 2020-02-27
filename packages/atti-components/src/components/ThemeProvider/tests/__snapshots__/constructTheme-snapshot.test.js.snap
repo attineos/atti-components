@@ -4,10 +4,6 @@ exports[`constructTheme renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <constructTheme />
-  </span>
+  <constructTheme />
 </span>
 `;

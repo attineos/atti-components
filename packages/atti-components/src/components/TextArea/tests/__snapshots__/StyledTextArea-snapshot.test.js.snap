@@ -4,12 +4,8 @@ exports[`StyledTextArea renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <textarea
-      className="Text-sc-9szep3-0-textarea StyledTextArea-sc-1ciexer-0 atti-r-css  iFpgTL"
-    />
-  </span>
+  <textarea
+    className="Text-sc-9szep3-0-textarea StyledTextArea-sc-1ciexer-0 faSFJT"
+  />
 </span>
 `;

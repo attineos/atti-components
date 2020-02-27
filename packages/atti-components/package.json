@@ -26,7 +26,8 @@
     "old:dev": "yarn run start:styleguidist",
     "prettier": "prettier --write \"+(bin|src)/**/*.?(js|json|md)\"",
     "snapshots": "babel-node --presets @babel/preset-env ./bin/generateSnapshots",
-    "test": "yarn run snapshots && jest --env=jsdom"
+    "test": "jest",
+    "test:silent": "jest --silent"
   },
   "dependencies": {
     "lodash": "^4.17.10",

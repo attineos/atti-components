@@ -4,14 +4,10 @@ exports[`InputGroup renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
+  <div
+    className="StyledVerticalInputGroup-hvv0gu-0 gQZbDD InputGroup-sc-17yv7rx-0 cLVYvK Atticomponents"
   >
-    <div
-      className="Atticomponents InputGroup-sc-17yv7rx-0 foEPxx StyledVerticalInputGroup-hvv0gu-0 cHsGAU"
-    >
-      Atticomponents
-    </div>
-  </span>
+    Atticomponents
+  </div>
 </span>
 `;

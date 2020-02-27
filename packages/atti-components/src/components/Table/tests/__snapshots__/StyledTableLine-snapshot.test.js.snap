@@ -4,12 +4,8 @@ exports[`StyledTableLine renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <tr
-      className="StyledTableLine-sc-14foke7-0 dyaeKv"
-    />
-  </span>
+  <tr
+    className="StyledTableLine-sc-14foke7-0 eRUuFK"
+  />
 </span>
 `;

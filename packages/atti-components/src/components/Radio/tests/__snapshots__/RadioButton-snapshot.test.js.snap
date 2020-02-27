@@ -5,11 +5,7 @@ exports[`RadioButton renders correctly 1`] = `
   className="atti-box"
 >
   <span
-    className="atti-box"
-  >
-    <span
-      className="RadioButton-sc-8w77ik-0 eRaIuo"
-    />
-  </span>
+    className="RadioButton-sc-8w77ik-0 bwWmwY"
+  />
 </span>
 `;

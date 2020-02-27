@@ -4,22 +4,18 @@ exports[`Breadcrumb renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
+  <div
+    className="StyledBreadcrumb-sc-1vbvo7o-0 dTjeZH Breadcrumb-sc-78a0jd-0 fjoEcq"
   >
-    <div
-      className="Breadcrumb-sc-78a0jd-0 jXtORz StyledBreadcrumb-sc-1vbvo7o-0 YgfUj"
+    <a
+      className="Text-sc-9szep3-0-a StyledLink-kwdrvq-0 doxGDg Link-x5cckk-0 XZsIF"
+      href="anUrl"
+      onClick={null}
+      rel=""
+      target={null}
     >
-      <a
-        className="Text-sc-9szep3-0-a Link-x5cckk-0 jMqokw StyledLink-kwdrvq-0 atti-r-css Link-x5cckk-0 jMqokw wXEjL"
-        href="anUrl"
-        onClick={null}
-        rel=""
-        target={null}
-      >
-        anElement
-      </a>
-    </div>
-  </span>
+      anElement
+    </a>
+  </div>
 </span>
 `;

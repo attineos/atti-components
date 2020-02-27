@@ -4,12 +4,8 @@ exports[`StyledCalendarContainer renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
-  >
-    <div
-      className="StyledCalendarContainer-sc-1140779-0 cpySbm"
-    />
-  </span>
+  <div
+    className="StyledCalendarContainer-sc-1140779-0 leGRKR"
+  />
 </span>
 `;

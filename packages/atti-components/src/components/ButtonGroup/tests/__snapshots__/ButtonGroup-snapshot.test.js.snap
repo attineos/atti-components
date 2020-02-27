@@ -4,14 +4,10 @@ exports[`ButtonGroup renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
+  <div
+    className="StyledButtonGroup-ze25zo-0 kIA-dXJ ButtonGroup-sc-1lkj4qz-0 bNnEOn Atticomponents"
   >
-    <div
-      className="Atticomponents ButtonGroup-sc-1lkj4qz-0 ipZTua StyledButtonGroup-ze25zo-0 eMMUmt"
-    >
-      Atticomponents
-    </div>
-  </span>
+    Atticomponents
+  </div>
 </span>
 `;

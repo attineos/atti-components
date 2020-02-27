@@ -5,11 +5,7 @@ exports[`CurrentElement renders correctly 1`] = `
   className="atti-box"
 >
   <span
-    className="atti-box"
-  >
-    <span
-      className="CurrentElement-qaw0re-0 LDsPL"
-    />
-  </span>
+    className="CurrentElement-qaw0re-0 dYeZv"
+  />
 </span>
 `;

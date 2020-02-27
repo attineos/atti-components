@@ -4,16 +4,12 @@ exports[`Label renders correctly 1`] = `
 <span
   className="atti-box"
 >
-  <span
-    className="atti-box"
+  <label
+    className="Typography-csduj4-0-label Label-sc-13odsk3-0 dEgaKM"
+    disabled={true}
+    htmlFor="Atticomponents"
   >
-    <label
-      className="Typography-csduj4-0-label Label-sc-13odsk3-0 atti-r-css  hKeVnC"
-      disabled={true}
-      htmlFor="Atticomponents"
-    >
-      <div />
-    </label>
-  </span>
+    <div />
+  </label>
 </span>
 `;

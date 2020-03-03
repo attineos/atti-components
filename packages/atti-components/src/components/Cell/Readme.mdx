@@ -6,7 +6,9 @@ title: 'Cell'
 
 Cells work together with the Grid component. They allow you to change layout based on viewport size.
 
-Cells are mobile first so if you don't specify sizes for each breakpoint, it will be infered from previous one.
+Cells are mobile first so if you don't specify sizes for each breakpoint, it will be inferred from previous one.
+
+In order to do not show a cell on a specific device you might pass a falsy value on the related cols prop element.
 
 ## Example
 
@@ -17,7 +19,7 @@ Cells are mobile first so if you don't specify sizes for each breakpoint, it wil
       [1, 7], // Mobile
       [1, 7], // Tablet
       [1, 5], // Desktop
-      //xlDesktop is infered from previous one
+      //xlDesktop is inferred from previous one
     ]}
   >
     <Text>Cells on one line</Text>
@@ -27,6 +29,9 @@ Cells are mobile first so if you don't specify sizes for each breakpoint, it wil
   </Cell>
   <Cell cols={[[1, 7], [1, 7], [9, 13]]}>
     <Text>on mobile and tablets</Text>
+  </Cell>
+  <Cell cols={[false, null, [1, 13]]}>
+      <Text>Only on desktop cell</Text>
   </Cell>
 </Grid>
 ```

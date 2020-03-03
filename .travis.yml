@@ -27,3 +27,7 @@ jobs:
         - yarn build --scope=atti-components-documentation
         - chmod +x ./scripts/deploy_doc.sh
         - ./scripts/deploy_doc.sh
+      branches:
+        only:
+          - master
+          - develop

@@ -25,9 +25,5 @@ jobs:
         - yarn bootstrap
         - yarn build --scope=atti-components
         - yarn build --scope=atti-components-documentation
-      deploy:
-        provider: netlify
-        site: atti-components
-        auth: $NETLIFY_API_KEY
-        dir: packages/website/build/
-        edge: true
+        - chmod +x ./scripts/deploy_doc.sh
+        - ./scripts/deploy_doc.sh

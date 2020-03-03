@@ -27,7 +27,7 @@ export default () => css`
       layout.from,
       layout.to,
       `
-      ${!cols[index] ? hideCell : getColumsStyle(
+      ${!get(cols, `[${index}]`) ? hideCell : getColumsStyle(
         first(get(cols, `[${index}]`, last(cols))),
         last(get(cols, `[${index}]`, last(cols))),
       )}

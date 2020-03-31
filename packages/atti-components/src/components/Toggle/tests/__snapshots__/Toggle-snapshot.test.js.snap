@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle snapshot unit It should render Toggle 1`] = `
+<DocumentFragment>
+  <span
+    class="atti-box"
+  >
+    <span
+      class="ToggleBoxContainer-w2jbwa-0 hgMsdF"
+    >
+      <input
+        checked=""
+        class="HiddenInputToggle-uiif1e-0 ffA-dIz"
+        type="checkbox"
+      />
+      <span
+        class="ToggleBox-sc-41h7ly-0 eYSXfh"
+      />
+    </span>
+  </span>
+</DocumentFragment>
+`;

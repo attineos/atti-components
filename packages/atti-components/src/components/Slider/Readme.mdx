@@ -1,0 +1,45 @@
+---
+path: '/slider'
+name: 'Slider'
+title: 'Slider'
+---
+
+Displays a slider that allow to select a value, either an absolute one or a stepped one.
+
+## Examples
+
+```js
+const Example = () => {
+  const [value, setValue] = useState(0)
+  const [value2, setValue2] = useState(0)
+  const [value3, setValue3] = useState(0)
+  const [value4, setValue4] = useState(0)
+  return (
+    <div>
+      <div style={{marginTop: '40px'}}>
+        value: {value}
+        <Slider onValueChange={setValue}/>
+      </div>
+      <div style={{marginTop: '40px'}}>
+        value: {value2}
+        <Slider onValueChange={setValue2} step={0.1} isValueDisplayed/>
+      </div>
+      <div style={{marginTop: '40px'}}>
+        value: {value3}
+        <Slider onValueChange={setValue3} step={10} steps={[{title: 'C', position: 10}, {title: 'B', position: 40}, {title: 'A', position: 70}]} isStepRestricted/>
+      </div>
+      <div style={{marginTop: '40px'}}>
+        value: {value4}
+        <Slider onValueChange={setValue4} range={[10,60]} isValueDisplayed/>
+      </div>
+
+    </div>
+  )
+}
+
+render(<Example />)
+```
+
+## Theme
+
+<Theme name="components.slider" />

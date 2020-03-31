@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledWeek renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="StyledWeek-sc-16yhpmw-0 ffKyGv"
+  />
+</span>
+`;

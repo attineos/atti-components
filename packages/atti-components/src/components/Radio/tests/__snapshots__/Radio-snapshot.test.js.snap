@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="RadioContainer-oshlxq-0 kAZGdk Radio-sc-1ut91e7-0 GELcQ Atticomponents"
+  >
+    <input
+      checked={false}
+      className="HiddenInputRadio-sc-9a3euj-0 bhwycn"
+      id="Atticomponents"
+      name="Atticomponents"
+      onChange={[Function]}
+      type="radio"
+      value="Atticomponents"
+    />
+    <span
+      className="RadioButton-sc-8w77ik-0 bwWmwY"
+    />
+  </div>
+</span>
+`;

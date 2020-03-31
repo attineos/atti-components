@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledDay renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <p
+    className="Typography-csduj4-0 Text-sc-9szep3-0 StyledDay-xsawzg-0 kIykFo"
+  />
+</span>
+`;

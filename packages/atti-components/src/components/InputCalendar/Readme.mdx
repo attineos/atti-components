@@ -1,0 +1,30 @@
+---
+path: '/inputcalendar'
+name: 'InputCalendar'
+title: 'InputCalendar'
+---
+
+InputCalendar allows you to pick up a date.
+
+## Examples
+
+Uncontrolled component:
+
+```js
+<InputCalendar onChange={date => console.log(date)} />
+```
+
+Controlled component:
+
+```js
+const Example = () => {
+  const [date, setDate] = useState(new Date())
+  return <InputCalendar value={date} onChange={date => setDate(date)} />
+}
+
+render(<Example />)
+```
+
+## Theme
+
+<Theme name="components.inputCalendar" />

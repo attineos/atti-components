@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="StyledBadge-sc-14ha03a-0 gHTlDm Badge-x3zjsz-0 cruqZJ Atticomponents"
+    exponent={true}
+  >
+    <div />
+  </span>
+</span>
+`;

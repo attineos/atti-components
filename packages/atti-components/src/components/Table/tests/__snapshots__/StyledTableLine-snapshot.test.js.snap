@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledTableLine renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <tr
+    className="StyledTableLine-sc-14foke7-0 eRUuFK"
+  />
+</span>
+`;

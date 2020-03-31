@@ -1,0 +1,37 @@
+---
+path: '/grid'
+name: 'Grid'
+title: 'Grid'
+---
+
+Grid component works together with the Cell component. It's reponsible for displaying correctly the Cells based on the size of the viewport.
+
+Basically there are 12 columns for xlDesktop and desktop. And there are 6 columns for tablet and mobile.
+
+## Example
+
+```js
+<Grid>
+  <Cell
+    cols={[
+      [1, 7], // Mobile
+      [1, 7], // Tablet
+      [1, 5], // Desktop
+      //xlDesktop is infered from previous one
+    ]}
+  >
+    <Text>Cells on one line</Text>
+  </Cell>
+  <Cell cols={[[1, 7], [1, 7], [5, 9]]}>
+    <Text>Then goes to new line</Text>
+  </Cell>
+  <Cell cols={[[1, 7], [1, 7], [9, 13]]}>
+    <Text>on mobile and tablets</Text>
+  </Cell>
+</Grid>
+```
+
+Number of columns and breakpoints can be overriden directly in the theme
+
+<Theme name="breakpoints" />
+<Theme name="layout" />

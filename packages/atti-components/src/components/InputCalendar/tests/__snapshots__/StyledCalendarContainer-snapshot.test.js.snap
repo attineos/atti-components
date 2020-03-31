@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledCalendarContainer renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="StyledCalendarContainer-sc-1140779-0 leGRKR"
+  />
+</span>
+`;

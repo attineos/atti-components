@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <select
+    className="Text-sc-9szep3-0-select StyledSelect-jeqzcu-0 UGozi Select-sc-1yblj4q-0 gziULw Atticomponents"
+    defaultValue="Atticomponents"
+    id="Atticomponents"
+    multiple={true}
+    name="Atticomponents"
+    onChange={[Function]}
+    size={42}
+    value="Atticomponents"
+  />
+</span>
+`;

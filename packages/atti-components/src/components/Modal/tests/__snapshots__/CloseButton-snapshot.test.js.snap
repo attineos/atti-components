@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CloseButton renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <button
+    className="CloseButton-sc-1ujuxrw-0 dhyrrC"
+  />
+</span>
+`;

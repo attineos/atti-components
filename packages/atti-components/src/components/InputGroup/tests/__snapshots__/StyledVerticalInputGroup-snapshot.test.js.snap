@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledVerticalInputGroup renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="StyledVerticalInputGroup-hvv0gu-0 gQZbDD"
+  />
+</span>
+`;

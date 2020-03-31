@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HiddenInputRadio renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <input
+    className="HiddenInputRadio-sc-9a3euj-0 bhwycn"
+  />
+</span>
+`;

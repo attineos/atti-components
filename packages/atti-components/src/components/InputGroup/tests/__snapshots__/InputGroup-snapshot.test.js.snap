@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputGroup renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="StyledVerticalInputGroup-hvv0gu-0 gQZbDD InputGroup-sc-17yv7rx-0 cLVYvK Atticomponents"
+  >
+    Atticomponents
+  </div>
+</span>
+`;

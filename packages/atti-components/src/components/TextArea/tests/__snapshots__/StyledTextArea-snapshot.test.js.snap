@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledTextArea renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <textarea
+    className="Text-sc-9szep3-0-textarea StyledTextArea-sc-1ciexer-0 faSFJT"
+  />
+</span>
+`;

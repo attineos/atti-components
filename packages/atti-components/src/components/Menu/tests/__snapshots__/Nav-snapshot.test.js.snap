@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <nav
+    className="Nav-sc-1updy7x-0 blowHW"
+  />
+</span>
+`;

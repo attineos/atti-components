@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header2 renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <h2
+    className="Typography-csduj4-0-h2 Header2-iex2i2-0 cSkRWD"
+  >
+    <div />
+  </h2>
+</span>
+`;

@@ -1,9 +1,5 @@
 # atti-components
 
-[<img src="https://travis-ci.org/attineos/atti-components.svg?branch=master">](https://travis-ci.org/attineos/atti-components)
-[<img src="https://img.shields.io/npm/v/atti-components.svg">](https://www.npmjs.com/package/atti-components)
-[<img src="https://img.shields.io/npm/dm/atti-components.svg">](https://www.npmjs.com/package/atti-components)
-
 Reusable and fully customizable React components for web applications.
 
 This library aims to provide a common set of basic UI components that can be used on web applications.
@@ -39,13 +35,13 @@ In atti-components, we provide you a custom `ThemeProvider` and a basic theme th
 So the root of your application should look like something like this:
 
 ```js
-import { defaultTheme, Button, ThemeProvider } from 'atti-components'
+import { defaultTheme, Button, ThemeProvider } from "atti-components";
 
 const App = () => (
   <ThemeProvider theme={defaultTheme}>
     <Button>Click me</Button>
   </ThemeProvider>
-)
+);
 ```
 
 ## Troubleshooting
@@ -56,7 +52,7 @@ In the `defaultTheme`, the font used is Roboto. As we don't want to include it f
 For example you can add the following in one of your CSS files:
 
 ```css
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 ```
 
 If you don't want to use Roboto as your default font, you can simply override the `theme.fonts.fontFamily.primary` to any other value and include the corresponding font by yourself.
@@ -72,24 +68,6 @@ git clone https://github.com/attineos/atti-components.git
 cd atti-components
 yarn install
 ```
-
-### Yarn commands
-
-Please note that for contributing, we only support YARN for consistency.
-
-Run `yarn start` to start the styleguidist server, and let you see/test the components right in your browser.
-
-Run `yarn prettier` to run prettier on all your files. It will automatically fix them if necessary.
-
-Run `yarn snapshots` to create automatically all snapshot tests of the components.
-
-Run `yarn test` to run the tests.
-
-Run `yarn test -u` to run and update the snapshot tests if the update is validated and expected.
-
-Run `yarn preparecommit` to check if you can commit your code. The command runs `yarn snapshots`, `yarn prettier`, `yarn lint` and `yarn test` (you can add -u to run and update snapshots).
-
-Run `yarn build` to transpile and compress your components into multiple bundles formats.
 
 ### Contributing rules and help
 

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContainer renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="ModalContainer-g0jgsc-0 gMiCKp"
+  />
+</span>
+`;

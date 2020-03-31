@@ -1,0 +1,139 @@
+---
+path: '/css-helpers'
+name: 'CSS-helpers'
+title: 'CSS helpers'
+---
+
+Atti-components provides multiple CSS helpers made with styled-components to help you design better interfaces.
+
+To use them, you just have to include them in your styled-component. They are all available under `atti-components/helpers`. Once added, you can pass some new props to you component to easily customize it.
+
+```js
+const Test = styled('div'){
+  ${displays};
+}
+
+
+// In your render
+render(<Test di="b" />)
+```
+
+### cellItem
+
+```js
+import { cellItem } from 'atti-components/helpers'
+```
+
+This helper transforms a components into a `Cell` allowing you to pass it the `cols` prop (can be useful when it's complicated for you to extend the `Cell` component).
+
+### displays
+
+```sh
+import { displays } from 'atti-components/helpers'
+```
+
+| Property | Description                                                                     | Possible values                                                                                                                                                                          |
+| -------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| alc      | [align-content](https://www.w3schools.com/cssref/css3_pr_align-content.asp)     | ce <i>(center)</i><br />fs <i>(flex-start)</i><br />fe <i>(flex-end)</i><br />sb <i>(space-between)</i><br />sa <i>(space-around)</i><br />s <i>(stretch)</i><br />Any other valid value |
+| ali      | [align-items](https://www.w3schools.com/cssref/css3_pr_align-items.asp)         | ce <i>(center)</i><br />fs <i>(flex-start)</i><br />fe <i>(flex-end)</i><br />b <i>(baseline)</i><br />s <i>(stretch)</i><br />Any other valid value                                     |
+| als      | [align-self](https://www.w3schools.com/cssref/css3_pr_align-self.asp)           | ce <i>(center)</i><br />fs <i>(flex-start)</i><br />fe <i>(flex-end)</i><br />b <i>(baseline)</i><br />s <i>(stretch)</i><br />Any other valid value                                     |
+| di       | [display](https://www.w3schools.com/cssref/pr_class_display.asp)                | b <i>(block)</i><br />i <i>(inline)</i><br />ib <i>(inline-block)</i><br />if <i>(inline-flex)</i><br />f <i>(flex)</i><br />Any other valid value                                       |
+| fb       | [flex-basis](https://www.w3schools.com/cssref/css3_pr_flex-basis.asp)           | Any valid value                                                                                                                                                                          |
+| fd       | [flex-direction](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp)   | c <i>(column)</i><br />cr <i>(column-reverse)</i><br />r <i>(row)</i><br />rr <i>(row-reverse)</i><br />Any other valid value                                                            |
+| fg       | [flex-grow](https://www.w3schools.com/cssref/css3_pr_flex-grow.asp)             | Any valid value                                                                                                                                                                          |
+| fs       | [flex-shrink](https://www.w3schools.com/cssref/css3_pr_flex-shrink.asp)         | Any valid value                                                                                                                                                                          |
+| fw       | [flex-wrap](https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp)             | nw <i>(nowrap)</i><br />w <i>(wrap)</i><br />wr <i>(wrap-reverse)</i>Any other valid value<br />                                                                                         |
+| jc       | [justify-content](https://www.w3schools.com/cssref/css3_pr_justify-content.asp) | ce <i>(center)</i><br />fs <i>(flex-start)</i><br />fe <i>(flex-end)</i><br />sb <i>(space-between)</i><br />sa <i>(space-around)</i><br />Any other valid value                         |
+| or       | [order](https://www.w3schools.com/cssref/css3_pr_order.asp)                     | Any valid value                                                                                                                                                                          |
+
+### heights
+
+```sh
+import { heights } from 'atti-components/helpers'
+```
+
+| Property | Description                                                          | Possible values                                        |
+| -------- | -------------------------------------------------------------------- | ------------------------------------------------------ |
+| h        | [height](https://www.w3schools.com/cssref/pr_dim_height.asp)         | A value from `theme.spaces`<br />Any other valid value |
+| maxH     | [max-height](https://www.w3schools.com/cssref/pr_dim_max-height.asp) | A value from `theme.spaces`<br />Any other valid value |
+| minH     | [min-height](https://www.w3schools.com/cssref/pr_dim_min-height.asp) | A value from `theme.spaces`<br />Any other valid value |
+
+### line height
+
+```sh
+import { lineHeight } from 'atti-components/helpers'
+```
+
+| Property | Description                                                       | Possible values                                                                        |
+| -------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| lh       | [height](https://www.w3schools.com/cssref/pr_dim_line-height.asp) | A value from `theme.spaces`<br />Any other valid value<br />form to set to form height |
+
+### margins
+
+```sh
+import { margins } from 'atti-components/helpers'
+```
+
+| Property | Description                                                            | Possible values                                        |
+| -------- | ---------------------------------------------------------------------- | ------------------------------------------------------ |
+| mb       | [margin-bottom](https://www.w3schools.com/cssref/pr_margin-bottom.asp) | A value from `theme.spaces`<br />Any other valid value |
+| ml       | [margin-left](https://www.w3schools.com/cssref/pr_margin-left.asp)     | A value from `theme.spaces`<br />Any other valid value |
+| mr       | [margin-right](https://www.w3schools.com/cssref/pr_margin-right.asp)   | A value from `theme.spaces`<br />Any other valid value |
+| mt       | [margin-top](https://www.w3schools.com/cssref/pr_margin-top.asp)       | A value from `theme.spaces`<br />Any other valid value |
+
+### paddings
+
+```sh
+import { paddings } from 'atti-components/helpers'
+```
+
+| Property | Description                                                              | Possible values                                        |
+| -------- | ------------------------------------------------------------------------ | ------------------------------------------------------ |
+| pb       | [padding-bottom](https://www.w3schools.com/cssref/pr_padding-bottom.asp) | A value from `theme.spaces`<br />Any other valid value |
+| pl       | [padding-left](https://www.w3schools.com/cssref/pr_padding-left.asp)     | A value from `theme.spaces`<br />Any other valid value |
+| pr       | [padding-right](https://www.w3schools.com/cssref/pr_padding-right.asp)   | A value from `theme.spaces`<br />Any other valid value |
+| pt       | [padding-top](https://www.w3schools.com/cssref/pr_padding-top.asp)       | A value from `theme.spaces`<br />Any other valid value |
+
+### sizes
+
+It's a shortcut for `heights` and `widths`
+
+```sh
+import { sizes } from 'atti-components/helpers'
+```
+
+| Property | Description                                                          | Possible values                                        |
+| -------- | -------------------------------------------------------------------- | ------------------------------------------------------ |
+| h        | [height](https://www.w3schools.com/cssref/pr_dim_height.asp)         | A value from `theme.spaces`<br />Any other valid value |
+| maxH     | [max-height](https://www.w3schools.com/cssref/pr_dim_max-height.asp) | A value from `theme.spaces`<br />Any other valid value |
+| maxW     | [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp)   | A value from `theme.spaces`<br />Any other valid value |
+| minH     | [min-height](https://www.w3schools.com/cssref/pr_dim_min-height.asp) | A value from `theme.spaces`<br />Any other valid value |
+| minW     | [min-width](https://www.w3schools.com/cssref/pr_dim_min-width.asp)   | A value from `theme.spaces`<br />Any other valid value |
+| w        | [width](https://www.w3schools.com/cssref/pr_dim_width.asp)           | A value from `theme.spaces`<br />Any other valid value |
+
+### widths
+
+```sh
+import { widths } from 'atti-components/helpers'
+```
+
+| Property | Description                                                        | Possible values                                        |
+| -------- | ------------------------------------------------------------------ | ------------------------------------------------------ |
+| maxW     | [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp) | A value from `theme.spaces`<br />Any other valid value |
+| minW     | [min-width](https://www.w3schools.com/cssref/pr_dim_min-width.asp) | A value from `theme.spaces`<br />Any other valid value |
+| w        | [width](https://www.w3schools.com/cssref/pr_dim_width.asp)         | A value from `theme.spaces`<br />Any other valid value |
+
+### resetCSS
+
+Browsers inject some styles by default, usually an application want to disable that style to enable consistent styling across all browsers.
+
+With atti-components, you can inject a class in your styled-component that will reset the default style created by the browser.
+
+```sh
+import { resetCSS } from 'atti-components/helpers'
+
+const MyComponent = styled.p`
+  ${resetCSS};
+`
+
+```

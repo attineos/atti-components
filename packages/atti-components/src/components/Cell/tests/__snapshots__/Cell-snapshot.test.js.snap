@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <div
+    className="CellStyle-ytv8v6-0 goQMBc Cell-h1m9gz-0 jfUqjC Atticomponents"
+    cols={Array []}
+  >
+    <div />
+  </div>
+</span>
+`;

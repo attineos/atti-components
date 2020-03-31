@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrentElement renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="CurrentElement-qaw0re-0 dYeZv"
+  />
+</span>
+`;

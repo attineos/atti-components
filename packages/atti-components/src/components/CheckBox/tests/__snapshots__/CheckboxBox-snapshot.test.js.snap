@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBoxBox renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <span
+    className="CheckBoxBox-j9bhb-0 zdlhe"
+  />
+</span>
+`;

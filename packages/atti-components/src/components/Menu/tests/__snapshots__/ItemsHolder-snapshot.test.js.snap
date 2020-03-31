@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemsHolder renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <ul
+    className="ItemsHolder-qb0sm8-0 hLSrxY"
+  />
+</span>
+`;

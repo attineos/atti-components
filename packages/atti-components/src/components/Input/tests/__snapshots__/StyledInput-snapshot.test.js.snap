@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledInput renders correctly 1`] = `
+<span
+  className="atti-box"
+>
+  <input
+    className="Text-sc-9szep3-0-input StyledInput-sc-12an70a-0 eimNaj"
+  />
+</span>
+`;

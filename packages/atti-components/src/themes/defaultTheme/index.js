@@ -6,6 +6,7 @@ import fonts from './fonts'
 import opacities from './opacities'
 import spaces from './spaces'
 import breakpoints from './breakpoints'
+import elevations from './elevations'
 
 import componentsFactory from './componentsFactory'
 import formsFactory from './forms'
@@ -17,6 +18,7 @@ export default {
   borders,
   boxShadows,
   colors,
+  elevations,
   fonts,
   opacities,
   spaces,

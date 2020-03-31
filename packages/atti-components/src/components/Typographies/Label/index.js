@@ -33,4 +33,4 @@ Label.defaultProps = {
 }
 
 // @component
-export default Label
+export default styled(Label)``

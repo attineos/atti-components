@@ -4,9 +4,7 @@ import StyledBreadcrumb from '../styles/StyledBreadcrumb'
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer'
 
-const mock = () => {}
-
-it('StyledBreadcrumb renders correctly', () => {
+it('should render StyledBreadcrumb correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>

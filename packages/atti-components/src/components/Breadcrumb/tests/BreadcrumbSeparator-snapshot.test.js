@@ -4,9 +4,7 @@ import BreadcrumbSeparator from '../styles/BreadcrumbSeparator'
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer'
 
-const mock = () => {}
-
-it('BreadcrumbSeparator renders correctly', () => {
+it('should render BreadcrumbSeparator correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>

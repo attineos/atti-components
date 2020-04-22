@@ -1,17 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BreadcrumbElement renders correctly 1`] = `
+exports[`should render BreadcrumbElement correctly 1`] = `
 <span
   className="atti-box"
 >
-  <a
-    className="Text-sc-9szep3-0-a StyledLink-kwdrvq-0 doxGDg Link-x5cckk-0 XZsIF"
-    href="anUrl"
-    onClick={null}
-    rel=""
-    target={null}
+  <span
+    className="CurrentElement-qaw0re-0 dYeZv"
   >
-    anElement
-  </a>
+    I'm a BreadcrumbElement
+  </span>
 </span>
 `;

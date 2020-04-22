@@ -4,13 +4,11 @@ import BreadcrumbElement from '../components/BreadcrumbElement'
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer'
 
-const mock = () => {}
-
-it('BreadcrumbElement renders correctly', () => {
+it('should render BreadcrumbElement correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>
-        <BreadcrumbElement element={{ name: 'anElement', url: 'anUrl' }}></BreadcrumbElement>
+        <BreadcrumbElement url='anUrl'>I'm a BreadcrumbElement</BreadcrumbElement>
       </Wrapper>,
     )
     .toJSON()

@@ -4,9 +4,7 @@ import CurrentElement from '../styles/CurrentElement'
 import Wrapper from 'styleguide/Wrapper'
 import renderer from 'react-test-renderer'
 
-const mock = () => {}
-
-it('CurrentElement renders correctly', () => {
+it('should render CurrentElement correctly', () => {
   const tree = renderer
     .create(
       <Wrapper>

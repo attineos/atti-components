@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BreadcrumbSeparator renders correctly 1`] = `
+exports[`should render BreadcrumbSeparator correctly 1`] = `
 <span
   className="atti-box"
 >

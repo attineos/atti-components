@@ -13,8 +13,10 @@ Please beware that all version pre 1.0.0 can have major and breaking changes in 
 
 - Improve documentation regarding usage of ThemeProvider by [@akaala](https://github.com/akaala)
 - Add a new section in the global README about troubleshooting and fill it with some explanations regarding font imports by [@akaala](https://github.com/akaala)
+- Added Slider component [@KingPepito](https://github.com/KingPepito)
 - atti-components is now exported in multiple formats. Including esm that allows tree shaking. If NODE_END = "development", warnings will be displayed. By [@akaala](https://github.com/akaala)
 - **Breaking Change**: `react-native` version of the components is not supported anymore. By [@akaala](https://github.com/akaala)
+- **Breaking Change**: Compound component pattern is now used with Breadcrumb component. `elements` and `renderElement` props are not used anymore. By [@KingPepito](https://github.com/KingPepito)
 
 ## [0.1.1] - 2019-05-14
 
